@@ -70,7 +70,8 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/chroma.js',
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
-              'src/assets/js/vendor/modernizr/modernizr.js'
+              'src/assets/js/vendor/modernizr/modernizr.js',
+              'src/assets/js/vendor/fastclick.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
