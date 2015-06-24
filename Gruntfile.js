@@ -68,7 +68,8 @@ module.exports = function(grunt) {
             src: [
               'src/assets/js/vendor/underscore.js',
               'src/assets/js/vendor/json2.js',
-              'src/assets/js/vendor/flatpage_stubs.js'
+              'src/assets/js/vendor/flatpage_stubs.js',
+              'src/assets/js/vendor/modernizr/modernizr.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -82,7 +83,6 @@ module.exports = function(grunt) {
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond*'], dest: 'build/assets/css/fonts/boomerslab_cond' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_extracond/*'], dest: 'build/assets/css/fonts/boomerslab_extracond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/publico/*'], dest: 'build/assets/css/fonts/publico/' },
-          { expand: true, flatten: true, src: ['bower/modernizr/modernizr.js'], dest: 'build/assets/js/vendor/' },
           { expand: true, flatten: true, src: ['src/assets/js/vendor/flatpage_stubs.js'], dest: 'build/assets/js/vendor/' },
           { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'build/' }
         ]
@@ -252,8 +252,9 @@ module.exports = function(grunt) {
           "marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.min.js",
           "d3bb.js": "d3bb/build/d3bb.js",
-          "modernizr.js": "modernizr/modernizr.js",
           "foundation.js": "foundation/js/foundation.min.js"
+          //"modernizr.js": "modernizr/modernizr.js",
+          "modernizr.js": "foundation/js/vendor/modernizr.js",
         }
       },
       lib_styles: {
