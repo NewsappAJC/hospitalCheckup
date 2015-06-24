@@ -67,13 +67,14 @@ module.exports = function(grunt) {
             flatten: true,
             src: [
               'src/assets/js/vendor/underscore.js',
+              'src/assets/js/vendor/chroma.js',
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
               'src/assets/js/vendor/modernizr/modernizr.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
-          { expand: true, flatten: true, src: ['src/assets/css/foundation.min.css'], dest: 'build/assets/css/' },
+          { expand: true, flatten: true, src: ['src/assets/css/vendor/foundation.min.css'], dest: 'build/assets/css/vendor/' },
           { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
@@ -83,7 +84,6 @@ module.exports = function(grunt) {
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond*'], dest: 'build/assets/css/fonts/boomerslab_cond' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_extracond/*'], dest: 'build/assets/css/fonts/boomerslab_extracond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/publico/*'], dest: 'build/assets/css/fonts/publico/' },
-          { expand: true, flatten: true, src: ['src/assets/js/vendor/flatpage_stubs.js'], dest: 'build/assets/js/vendor/' },
           { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'build/' }
         ]
       }
@@ -156,9 +156,9 @@ module.exports = function(grunt) {
         },
         files: {
           'build/assets/css/app.css'       : ['src/assets/css/app.css'],
-          'build/assets/css/fonts.css'     : ['src/assets/css/fonts.css'],
-          'build/assets/css/normalize.css' : ['src/assets/css/normalize.css'],
-          'build/assets/css/foundation.css': ['src/assets/css/foundation.min.css']
+          'build/assets/css/fonts/fonts.css'     : ['src/assets/css/fonts/fonts.css'],
+          'build/assets/css/vendor/normalize.css' : ['src/assets/css/vendor/normalize.css'],
+          'build/assets/css/vendor/foundation.css': ['src/assets/css/vendor/foundation.css']
         }
       }
     },
@@ -246,15 +246,17 @@ module.exports = function(grunt) {
         },
         files: {
           "jquery.js": "jquery/dist/jquery.js",
+          "chroma.js": "chroma-js/chroma.min.js",
           "underscore.js": "underscore/underscore.js",
           "json2.js": "json2/json2.js",
           "backbone.js": "backbone/backbone.js",
           "marionette.js": "marionette/lib/backbone.marionette.js",
-          "d3.js": "d3/d3.min.js",
+          "d3.js": "d3/d3.js",
           "d3bb.js": "d3bb/build/d3bb.js",
-          "foundation.js": "foundation/js/foundation.min.js"
           //"modernizr.js": "modernizr/modernizr.js",
           "modernizr.js": "foundation/js/vendor/modernizr.js",
+          "fastclick.js": "foundation/js/vendor/fastclick.js",
+          "foundation.js": "foundation/js/foundation.js"
         }
       },
       lib_styles: {
@@ -337,4 +339,3 @@ module.exports = function(grunt) {
   grunt.registerTask('server', ['express:dev','open:dev','watch:dev','express-keepalive']);
   grunt.registerTask('server:test', ['express:test','open:test','watch:test','express-keepalive']);
 };
-
