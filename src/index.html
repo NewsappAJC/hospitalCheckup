@@ -37,7 +37,27 @@
 
 </head>
 <body>
-  <h1>AJC Hospital Checkup</h1>
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <a href="http://myajc.com" target="_blank">
+          <span id="ajc-logo"><img src="assets/img/ajc_white.svg"/></span>
+        </a>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a class="button" href="/">Home</a></li>
+        <li><a class="button" href="#infections">Infections</a></li>
+        <li><a class="button" href="#hipsknees">Surgery</a></li>
+        <li><a class="button" href="#perinatal">Labor and delivery</a></li>
+      </ul>
+    </section>
+  </nav>
+
   <div id="app-container">
     <div id="main-region" class="container">
       <p>Static content, to be replaced by our app once it starts!</p>
@@ -61,7 +81,10 @@
   <!-- build:js scripts/main.js -->
 	<script src="assets/js/main.js"></script>
   <!-- /build -->
+
   <script type="text/javascript">
+    $(document).foundation();
+
     var ContactManager = new Marionette.Application();
 
     ContactManager.StaticView = Marionette.ItemView.extend({

@@ -1,4 +1,23 @@
 h1 {
-	font-family:'Publico-Black';
-	font-size:42px;
+  font-family:'Publico-Black';
+  font-size:42px;
+}
+#ajc-logo img {
+  float: left;
+  margin: 3px;
+  width: 175px;
+}
+.top-bar {
+  background-color: #0e3968;
+  border-bottom: 4px solid #fff;
+  height: 50px;
+  padding-top: 5px;
+/*  z-index: 100;*/
+}
+.top-bar-section ul li, .top-bar.expanded .title-area, .top-bar.expanded {
+  background: #0e3968;
+}
+.top-bar-section ul li > a.button {
+  text-transform: uppercase;
+  background: none; 
 }
