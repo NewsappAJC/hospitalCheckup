@@ -14,5 +14,5 @@ Hosted here:
 
 ## Todo
 
-- [ ] Get started
-- [ ] Do some stuff
+- [ ] Resize AJC logo so it's not doing math and looking fuzzy
+- [ ] Range (popup) is the confidence interval
