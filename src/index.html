@@ -77,7 +77,8 @@
     <p>This is text that was rendered by our Marionette app</p>
   </script>
   <script type="text/template" id="infection-template">
-    <p><%- display_name %></p>
+    <!-- this is just POC, display will change later -->
+    <p><%- display_name %>- cdiff: <%- infections.cdiff.ratio %></p>
   </script>
 
   <script src="assets/js/vendor/jquery.js"></script>
@@ -100,219 +101,7 @@
   <script type="text/javascript">
     $(document).foundation();
 
-    var infections = new HospitalCheckup.Entities.InfectionCollection([
-      {
-        "address": {
-          "city": "CUMMING", 
-          "county": "FORSYTH", 
-          "state": "GA", 
-          "street": "1200 NORTHSIDE FORSYTH DRIVE", 
-          "zip": "30041"
-        }, 
-        "display_name": "Northside Hospital Forsyth", 
-        "infections": {
-          "cauti": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "3665", 
-            "lower": "0.289", 
-            "na": "0", 
-            "note": "", 
-            "observed": "4", 
-            "predicted": "4.398", 
-            "ratio": "0.91", 
-            "upper": "2.194"
-          }, 
-          "cdiff": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "39174", 
-            "lower": "0.847", 
-            "na": "0", 
-            "note": "", 
-            "observed": "35", 
-            "predicted": "28.779", 
-            "ratio": "1.216", 
-            "upper": "1.691"
-          }, 
-          "clabsi": {
-            "category": "Better than the U.S. National Benchmark", 
-            "days": "3796", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "5.685", 
-            "ratio": "0", 
-            "upper": "0.527"
-          }, 
-          "ssicolon": {
-            "category": "No Different than U.S. National Benchmark", 
-            "lower": "0.172", 
-            "na": "0", 
-            "note": "", 
-            "observed": "4", 
-            "predicted": "7.382", 
-            "procedures": "235", 
-            "ratio": "0.542", 
-            "upper": "1.307"
-          }, 
-          "ssihyst": {
-            "category": "No Different than U.S. National Benchmark", 
-            "lower": "0.212", 
-            "na": "0", 
-            "note": "", 
-            "observed": "2", 
-            "predicted": "1.578", 
-            "procedures": "173", 
-            "ratio": "1.267", 
-            "upper": "4.187"
-          }
-        }, 
-        "provider_id": "110005", 
-        "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
-      }, 
-      {
-        "address": {
-          "city": "ATHENS", 
-          "county": "CLARKE", 
-          "state": "GA", 
-          "street": "1230 BAXTER STREET", 
-          "zip": "30606"
-        }, 
-        "display_name": "Saint Mary's Hospital", 
-        "infections": {
-          "cauti": {
-            "category": "Better than the U.S. National Benchmark", 
-            "days": "1962", 
-            "lower": "0.009", 
-            "na": "0", 
-            "note": "", 
-            "observed": "1", 
-            "predicted": "5.331", 
-            "ratio": "0.188", 
-            "upper": "0.925"
-          }, 
-          "cdiff": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "18023", 
-            "lower": "0.722", 
-            "na": "0", 
-            "note": "", 
-            "observed": "15", 
-            "predicted": "11.624", 
-            "ratio": "1.29", 
-            "upper": "2.129"
-          }, 
-          "clabsi": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "1239", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "2.434", 
-            "ratio": "0", 
-            "upper": "1.231"
-          }, 
-          "ssicolon": {
-            "category": "No Different than U.S. National Benchmark", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "2.237", 
-            "procedures": "74", 
-            "ratio": "0", 
-            "upper": "1.339"
-          }, 
-          "ssihyst": {
-            "category": "Not Available", 
-            "lower": "0", 
-            "na": "1", 
-            "note": "Results cannot be calculated for this reporting period", 
-            "observed": "0", 
-            "predicted": "0.756", 
-            "procedures": "82", 
-            "ratio": "0", 
-            "upper": "0"
-          }
-        }, 
-        "provider_id": "110006", 
-        "provider_name": "ST MARY'S HOSPITAL"
-      }, 
-      {
-        "address": {
-          "city": "CANTON", 
-          "county": "CHEROKEE", 
-          "state": "GA", 
-          "street": "201 HOSPITAL ROAD", 
-          "zip": "30114"
-        }, 
-        "display_name": "Northside Hospital Cherokee", 
-        "infections": {
-          "cauti": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "1947", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "2.531", 
-            "ratio": "0", 
-            "upper": "1.184"
-          }, 
-          "cdiff": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "15184", 
-            "lower": "0.416", 
-            "na": "0", 
-            "note": "", 
-            "observed": "9", 
-            "predicted": "9.895", 
-            "ratio": "0.91", 
-            "upper": "1.727"
-          }, 
-          "clabsi": {
-            "category": "No Different than U.S. National Benchmark", 
-            "days": "1440", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "2.161", 
-            "ratio": "0", 
-            "upper": "1.386"
-          }, 
-          "ssicolon": {
-            "category": "No Different than U.S. National Benchmark", 
-            "lower": "0.241", 
-            "na": "0", 
-            "note": "", 
-            "observed": "2", 
-            "predicted": "1.394", 
-            "procedures": "43", 
-            "ratio": "1.435", 
-            "upper": "4.74"
-          }, 
-          "ssihyst": {
-            "category": "No Different than U.S. National Benchmark", 
-            "lower": "0", 
-            "na": "0", 
-            "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-            "observed": "0", 
-            "predicted": "1.378", 
-            "procedures": "129", 
-            "ratio": "0", 
-            "upper": "2.174"
-          }
-        }, 
-        "provider_id": "110008", 
-        "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
-      }
-    ]);
-
-    
-
-    HospitalCheckup.InfectionView = Marionette.ItemView.extend({
+    HospitalCheckup.InfectionItemView = Marionette.ItemView.extend({
       template: "#infection-template",
 
       events: {
@@ -329,18 +118,235 @@
       template: "#static-template"
     });
 
+    HospitalCheckup.InfectionsView = Marionette.CollectionView.extend({
+      //tagName: "ul",
+      childView: HospitalCheckup.InfectionItemView
+    });
 
     HospitalCheckup.on("start", function(){
+      var infections = new HospitalCheckup.Entities.InfectionCollection([
+        {
+          "address": {
+            "city": "CUMMING", 
+            "county": "FORSYTH", 
+            "state": "GA", 
+            "street": "1200 NORTHSIDE FORSYTH DRIVE", 
+            "zip": "30041"
+          }, 
+          "display_name": "Northside Hospital Forsyth", 
+          "infections": {
+            "cauti": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "3665", 
+              "lower": "0.289", 
+              "na": "0", 
+              "note": "", 
+              "observed": "4", 
+              "predicted": "4.398", 
+              "ratio": "0.91", 
+              "upper": "2.194"
+            }, 
+            "cdiff": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "39174", 
+              "lower": "0.847", 
+              "na": "0", 
+              "note": "", 
+              "observed": "35", 
+              "predicted": "28.779", 
+              "ratio": "1.216", 
+              "upper": "1.691"
+            }, 
+            "clabsi": {
+              "category": "Better than the U.S. National Benchmark", 
+              "days": "3796", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "5.685", 
+              "ratio": "0", 
+              "upper": "0.527"
+            }, 
+            "ssicolon": {
+              "category": "No Different than U.S. National Benchmark", 
+              "lower": "0.172", 
+              "na": "0", 
+              "note": "", 
+              "observed": "4", 
+              "predicted": "7.382", 
+              "procedures": "235", 
+              "ratio": "0.542", 
+              "upper": "1.307"
+            }, 
+            "ssihyst": {
+              "category": "No Different than U.S. National Benchmark", 
+              "lower": "0.212", 
+              "na": "0", 
+              "note": "", 
+              "observed": "2", 
+              "predicted": "1.578", 
+              "procedures": "173", 
+              "ratio": "1.267", 
+              "upper": "4.187"
+            }
+          }, 
+          "provider_id": "110005", 
+          "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
+        }, 
+        {
+          "address": {
+            "city": "ATHENS", 
+            "county": "CLARKE", 
+            "state": "GA", 
+            "street": "1230 BAXTER STREET", 
+            "zip": "30606"
+          }, 
+          "display_name": "Saint Mary's Hospital", 
+          "infections": {
+            "cauti": {
+              "category": "Better than the U.S. National Benchmark", 
+              "days": "1962", 
+              "lower": "0.009", 
+              "na": "0", 
+              "note": "", 
+              "observed": "1", 
+              "predicted": "5.331", 
+              "ratio": "0.188", 
+              "upper": "0.925"
+            }, 
+            "cdiff": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "18023", 
+              "lower": "0.722", 
+              "na": "0", 
+              "note": "", 
+              "observed": "15", 
+              "predicted": "11.624", 
+              "ratio": "1.29", 
+              "upper": "2.129"
+            }, 
+            "clabsi": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "1239", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "2.434", 
+              "ratio": "0", 
+              "upper": "1.231"
+            }, 
+            "ssicolon": {
+              "category": "No Different than U.S. National Benchmark", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "2.237", 
+              "procedures": "74", 
+              "ratio": "0", 
+              "upper": "1.339"
+            }, 
+            "ssihyst": {
+              "category": "Not Available", 
+              "lower": "0", 
+              "na": "1", 
+              "note": "Results cannot be calculated for this reporting period", 
+              "observed": "0", 
+              "predicted": "0.756", 
+              "procedures": "82", 
+              "ratio": "0", 
+              "upper": "0"
+            }
+          }, 
+          "provider_id": "110006", 
+          "provider_name": "ST MARY'S HOSPITAL"
+        }, 
+        {
+          "address": {
+            "city": "CANTON", 
+            "county": "CHEROKEE", 
+            "state": "GA", 
+            "street": "201 HOSPITAL ROAD", 
+            "zip": "30114"
+          }, 
+          "display_name": "Northside Hospital Cherokee", 
+          "infections": {
+            "cauti": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "1947", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "2.531", 
+              "ratio": "0", 
+              "upper": "1.184"
+            }, 
+            "cdiff": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "15184", 
+              "lower": "0.416", 
+              "na": "0", 
+              "note": "", 
+              "observed": "9", 
+              "predicted": "9.895", 
+              "ratio": "0.91", 
+              "upper": "1.727"
+            }, 
+            "clabsi": {
+              "category": "No Different than U.S. National Benchmark", 
+              "days": "1440", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "2.161", 
+              "ratio": "0", 
+              "upper": "1.386"
+            }, 
+            "ssicolon": {
+              "category": "No Different than U.S. National Benchmark", 
+              "lower": "0.241", 
+              "na": "0", 
+              "note": "", 
+              "observed": "2", 
+              "predicted": "1.394", 
+              "procedures": "43", 
+              "ratio": "1.435", 
+              "upper": "4.74"
+            }, 
+            "ssihyst": {
+              "category": "No Different than U.S. National Benchmark", 
+              "lower": "0", 
+              "na": "0", 
+              "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
+              "observed": "0", 
+              "predicted": "1.378", 
+              "procedures": "129", 
+              "ratio": "0", 
+              "upper": "2.174"
+            }
+          }, 
+          "provider_id": "110008", 
+          "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
+        }
+      ]);
       var infection = new HospitalCheckup.Entities.Infection({
         display_name: "Northside Hospital Forsyth",
         provider_name: "NORTHSIDE HOSPITAL FORSYTH"
       });
 
-      var infectionView = new HospitalCheckup.InfectionView({
+      var infectionView = new HospitalCheckup.InfectionItemView({
         model: infection
       });
 
-      HospitalCheckup.regions.main.show(infectionView);
+      var infectionsListView = new HospitalCheckup.InfectionsView({
+        collection: infections
+      });
+
+      HospitalCheckup.regions.main.show(infectionsListView);
       /*var welcomeView = new HospitalCheckup.WelcomeView({
         template: "#infection-template"
       });
