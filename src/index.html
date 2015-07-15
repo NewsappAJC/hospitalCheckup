@@ -76,7 +76,7 @@
   <script type="text/template" id="static-template">
     <p>This is text that was rendered by our Marionette app</p>
   </script>
-  <script type="text/template" id="infection-template">
+  <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
     <p><%- display_name %>- cdiff: <%- infections.cdiff.ratio %></p>
   </script>
@@ -96,41 +96,21 @@
   <!--TODO add these to gruntfile -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/entities/infection.js"></script>
+  <script src="assets/js/apps/infections/list/list_view.js"></script>
   <!-- /build -->
 
   <script type="text/javascript">
     $(document).foundation();
-
-    HospitalCheckup.InfectionItemView = Marionette.ItemView.extend({
-      template: "#infection-template",
-
-      events: {
-        "click p": "alertDisplayName"
-      },
-
-      alertDisplayName: function(){
-        alert(this.model.escape("display_name"));
-      }
-    });
 
     HospitalCheckup.WelcomeView = Marionette.ItemView.extend({
       //el: "#main-region",
       template: "#static-template"
     });
 
-    HospitalCheckup.InfectionsView = Marionette.CollectionView.extend({
-      //tagName: "ul",
-      childView: HospitalCheckup.InfectionItemView
-    });
-
     HospitalCheckup.on("start", function(){
       var infections = HospitalCheckup.request("infection:entities");
 
-      var infectionView = new HospitalCheckup.InfectionItemView({
-        model: infection
-      });
-
-      var infectionsListView = new HospitalCheckup.InfectionsView({
+      var infectionsListView = new HospitalCheckup.InfectionsApp.List.Infections({
         collection: infections
       });
 
