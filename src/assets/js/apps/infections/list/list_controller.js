@@ -8,6 +8,10 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         collection: infections
       });
 
+      infectionsListView.on("childview:infection:delete", function(childView, model){
+        infections.remove(model);
+      });
+
       HospitalCheckup.regions.main.show(infectionsListView);
     }
   }
