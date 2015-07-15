@@ -11,3 +11,7 @@ HospitalCheckup.on("before:start", function(){
 
   HospitalCheckup.regions = new RegionContainer();
 });
+
+HospitalCheckup.on("start", function(){
+  HospitalCheckup.InfectionsApp.List.Controller.listInfections();
+});

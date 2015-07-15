@@ -97,30 +97,11 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/entities/infection.js"></script>
   <script src="assets/js/apps/infections/list/list_view.js"></script>
+  <script src="assets/js/apps/infections/list/list_controller.js"></script>
   <!-- /build -->
 
   <script type="text/javascript">
     $(document).foundation();
-
-    HospitalCheckup.WelcomeView = Marionette.ItemView.extend({
-      //el: "#main-region",
-      template: "#static-template"
-    });
-
-    HospitalCheckup.on("start", function(){
-      var infections = HospitalCheckup.request("infection:entities");
-
-      var infectionsListView = new HospitalCheckup.InfectionsApp.List.Infections({
-        collection: infections
-      });
-
-      HospitalCheckup.regions.main.show(infectionsListView);
-      /*var welcomeView = new HospitalCheckup.WelcomeView({
-        template: "#infection-template"
-      });
-      HospitalCheckup.regions.main.show(welcomeView);*/
-      //welcomeView.render();
-    });
 
     HospitalCheckup.start();
   </script>
