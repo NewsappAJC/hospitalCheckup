@@ -16,3 +16,8 @@ Hosted here:
 
 - [ ] Resize AJC logo so it's not doing math and looking fuzzy
 - [ ] Range (popup) is the confidence interval
+- [ ] Add commas to number displays that may have a thousands place
+
+
+##Questions
+- [ ] Rate == Ratio?
