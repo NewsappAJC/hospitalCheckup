@@ -78,8 +78,13 @@
   </script>
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <p><%- display_name %>- cdiff: <%- infections.cdiff.ratio %></p>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- infections.cdiff.ratio %></td><td><%- infections.cdiff.lower %> to <%- infections.cdiff.upper %></td><td><%- infections.cdiff.days %></td><td><%- infections.cdiff.category %></td>
     <button class="button tiny js-delete">Delete</button>
+    <a href="#" class="button tiny js-show">Show</a>
+  </script>
+  <script type="text/template" id="infection-list">
+    <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
+    <tbody></tbody>
   </script>
 
   <script src="assets/js/vendor/jquery.js"></script>

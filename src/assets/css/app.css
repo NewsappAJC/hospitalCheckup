@@ -21,3 +21,6 @@ h1 {
   text-transform: uppercase;
   background: none; 
 }
+tr:not(:first-child):hover {
+    background-color: #d8d8d8;
+}
