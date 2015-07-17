@@ -78,13 +78,18 @@
   </script>
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- infections.cdiff.ratio %></td><td><%- infections.cdiff.lower %> to <%- infections.cdiff.upper %></td><td><%- infections.cdiff.days %></td><td><%- infections.cdiff.category %></td>
-    <button class="button tiny js-delete">Delete</button>
-    <a href="#" class="button tiny js-show">Show</a>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- infections.cdiff.ratio %></td><td><%- infections.cdiff.lower %> to <%- infections.cdiff.upper %></td><td><%- infections.cdiff.days %></td><td><%- infections.cdiff.category %></td><td><button class="button tiny js-delete">Delete</button></td><td><a href="#" class="button tiny js-show">Show</a></td>
+
   </script>
   <script type="text/template" id="infection-list">
     <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
     <tbody></tbody>
+  </script>
+
+  <script type="text/template" id="infection-view">
+    <h1><%- display_name %></h1>
+    <p>Number of infections predicted: <%- infections.cdiff.predicted %></p>
+    <p>Number of infections observed: <%- infections.cdiff.observed %></p>
   </script>
 
   <script src="assets/js/vendor/jquery.js"></script>
@@ -104,6 +109,8 @@
   <script src="assets/js/entities/infection.js"></script>
   <script src="assets/js/apps/infections/list/list_view.js"></script>
   <script src="assets/js/apps/infections/list/list_controller.js"></script>
+  <script src="assets/js/apps/infections/show/show_controller.js"></script>
+  <script src="assets/js/apps/infections/show/show_view.js"></script>
   <!-- /build -->
 
   <script type="text/javascript">

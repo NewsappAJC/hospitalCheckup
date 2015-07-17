@@ -12,6 +12,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         infections.remove(model);
       });
 
+      infectionsListView.on("childview:infection:show", function(childView, model){
+        HospitalCheckup.InfectionsApp.Show.Controller.showInfection(model);
+      });
       HospitalCheckup.regions.main.show(infectionsListView);
     }
   }
