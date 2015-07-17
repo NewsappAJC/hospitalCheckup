@@ -13,5 +13,12 @@ HospitalCheckup.on("before:start", function(){
 });
 
 HospitalCheckup.on("start", function(){
-  HospitalCheckup.InfectionsApp.List.Controller.listInfections();
+  if(Backbone.history){
+    Backbone.history.start();
+
+    if(Backbone.history.fragment === ""){
+      Backbone.history.navigate("infections");
+      HospitalCheckup.InfectionsApp.List.Controller.listInfections();
+    }
+  }
 });
