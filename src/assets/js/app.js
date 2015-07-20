@@ -26,8 +26,7 @@ HospitalCheckup.on("start", function(){
     Backbone.history.start();
 
     if(this.getCurrentRoute() === ""){
-      this.navigate("infections");
-      HospitalCheckup.InfectionsApp.List.Controller.listInfections();
+      HospitalCheckup.trigger("infections:list");
     }
   }
 });

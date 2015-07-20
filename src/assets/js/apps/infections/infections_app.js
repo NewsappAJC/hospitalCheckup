@@ -11,6 +11,10 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     }
   };
 
+  HospitalCheckup.on("infections:list", function(){
+    HospitalCheckup.navigate("infections");
+    API.listInfections();
+  });
   
   InfectionsApp.on("start", function(){
     new InfectionsApp.Router({
