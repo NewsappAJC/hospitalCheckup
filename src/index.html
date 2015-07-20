@@ -92,6 +92,11 @@
     <p>Number of infections observed: <%- infections.cdiff.observed %></p>
   </script>
 
+  <script type="text/template" id="missing-hospital-view">
+    <!-- triggered when you attempt to reach a hospital specific view with an ID that doesn't exist in the data -->
+    <div class="alert-box warning">This entry doesn't exist!</div>
+  </script>
+
   <script src="assets/js/vendor/jquery.js"></script>
 	<script src="assets/js/vendor/fastclick.js"></script>
   <script src="assets/js/vendor/underscore.js"></script>

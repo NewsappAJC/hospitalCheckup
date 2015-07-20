@@ -3,9 +3,14 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
     showInfection: function(id){
       var infections = HospitalCheckup.request("infection:entities");
       var model = infections.get(id);
-      var infectionView = new Show.Infection({
-        model: model
-      });
+      var infectionView;
+      if(model !== undefined){
+        infectionView = new Show.Infection({
+          model: model
+        });
+      } else {
+        infectionView = new Show.MissingHospital();
+      }
 
       HospitalCheckup.regions.main.show(infectionView);
     }
