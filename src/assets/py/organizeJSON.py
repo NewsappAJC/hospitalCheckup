@@ -12,7 +12,7 @@ tree = []
 
 for node in src:
     hospital = {}
-    hospital["provider_id"] = node["provider_id"]
+    hospital["id"] = node["provider_id"]
     hospital["provider_name"] = node["hospital_name"]
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = {

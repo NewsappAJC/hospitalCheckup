@@ -13,7 +13,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       });
 
       infectionsListView.on("childview:infection:show", function(childView, model){
-        HospitalCheckup.InfectionsApp.Show.Controller.showInfection(model);
+        HospitalCheckup.trigger("infection:show", model.get("id"));
       });
       HospitalCheckup.regions.main.show(infectionsListView);
     }
