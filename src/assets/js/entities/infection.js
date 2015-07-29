@@ -7,7 +7,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   });
 
   Entities.InfectionCollection = Backbone.Collection.extend({
-    url: "/src/assets/data/infections.json",
+    url: "/assets/data/infections.json",
     initialize: function(){
       this.model= Entities.Infection;
       this.comparator= "display_name" //sort by
