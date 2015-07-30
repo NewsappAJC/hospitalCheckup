@@ -21,3 +21,4 @@ Hosted here:
 
 ##Questions
 - [ ] Rate == Ratio?
+- [ ] Persistence? Do I need this? Should I make an API for this?

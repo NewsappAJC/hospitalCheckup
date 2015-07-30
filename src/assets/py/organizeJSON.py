@@ -31,6 +31,8 @@ for node in src:
         tmp = key.lower().split("_")
         if tmp[0] in hospital["infections"]:
             hospital["infections"][tmp[0]][tmp[1]] = node[key]
+        # if tmp[0] in keys: #for array lookup
+            #hospital["infections"][keys.index(tmp[0])][tmp[0]][tmp[1]] = node[key]
 
     tree.append(hospital)
 
