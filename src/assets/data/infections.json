@@ -9,10 +9,11 @@
     }, 
     "display_name": "Northside Hospital Forsyth", 
     "id": "110005", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3665", 
+        "infection": "cauti", 
         "lower": "0.289", 
         "na": "0", 
         "note": "", 
@@ -21,20 +22,10 @@
         "ratio": "0.91", 
         "upper": "2.194"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "39174", 
-        "lower": "0.847", 
-        "na": "0", 
-        "note": "", 
-        "observed": "35", 
-        "predicted": "28.779", 
-        "ratio": "1.216", 
-        "upper": "1.691"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "3796", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -43,8 +34,9 @@
         "ratio": "0", 
         "upper": "0.527"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.172", 
         "na": "0", 
         "note": "", 
@@ -54,8 +46,9 @@
         "ratio": "0.542", 
         "upper": "1.307"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.212", 
         "na": "0", 
         "note": "", 
@@ -64,8 +57,20 @@
         "procedures": "173", 
         "ratio": "1.267", 
         "upper": "4.187"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "39174", 
+        "infection": "cdiff", 
+        "lower": "0.847", 
+        "na": "0", 
+        "note": "", 
+        "observed": "35", 
+        "predicted": "28.779", 
+        "ratio": "1.216", 
+        "upper": "1.691"
       }
-    }, 
+    ], 
     "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
   }, 
   {
@@ -78,10 +83,11 @@
     }, 
     "display_name": "Saint Mary's Hospital", 
     "id": "110006", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "1962", 
+        "infection": "cauti", 
         "lower": "0.009", 
         "na": "0", 
         "note": "", 
@@ -90,20 +96,10 @@
         "ratio": "0.188", 
         "upper": "0.925"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "18023", 
-        "lower": "0.722", 
-        "na": "0", 
-        "note": "", 
-        "observed": "15", 
-        "predicted": "11.624", 
-        "ratio": "1.29", 
-        "upper": "2.129"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1239", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -112,8 +108,9 @@
         "ratio": "0", 
         "upper": "1.231"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -123,8 +120,9 @@
         "ratio": "0", 
         "upper": "1.339"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -133,8 +131,20 @@
         "procedures": "82", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "18023", 
+        "infection": "cdiff", 
+        "lower": "0.722", 
+        "na": "0", 
+        "note": "", 
+        "observed": "15", 
+        "predicted": "11.624", 
+        "ratio": "1.29", 
+        "upper": "2.129"
       }
-    }, 
+    ], 
     "provider_name": "ST MARY'S HOSPITAL"
   }, 
   {
@@ -147,10 +157,11 @@
     }, 
     "display_name": "Northside Hospital Cherokee", 
     "id": "110008", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1947", 
+        "infection": "cauti", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -159,20 +170,10 @@
         "ratio": "0", 
         "upper": "1.184"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "15184", 
-        "lower": "0.416", 
-        "na": "0", 
-        "note": "", 
-        "observed": "9", 
-        "predicted": "9.895", 
-        "ratio": "0.91", 
-        "upper": "1.727"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1440", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -181,8 +182,9 @@
         "ratio": "0", 
         "upper": "1.386"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.241", 
         "na": "0", 
         "note": "", 
@@ -192,8 +194,9 @@
         "ratio": "1.435", 
         "upper": "4.74"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -202,8 +205,20 @@
         "procedures": "129", 
         "ratio": "0", 
         "upper": "2.174"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "15184", 
+        "infection": "cdiff", 
+        "lower": "0.416", 
+        "na": "0", 
+        "note": "", 
+        "observed": "9", 
+        "predicted": "9.895", 
+        "ratio": "0.91", 
+        "upper": "1.727"
       }
-    }, 
+    ], 
     "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
   }, 
   {
@@ -216,10 +231,11 @@
     }, 
     "display_name": "Emory University Hospital", 
     "id": "110010", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "20691", 
+        "infection": "cauti", 
         "lower": "1.483", 
         "na": "0", 
         "note": "", 
@@ -228,20 +244,10 @@
         "ratio": "1.802", 
         "upper": "2.171"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "124431", 
-        "lower": "0.796", 
-        "na": "0", 
-        "note": "", 
-        "observed": "126", 
-        "predicted": "131.916", 
-        "ratio": "0.955", 
-        "upper": "1.137"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "21828", 
+        "infection": "clabsi", 
         "lower": "0.338", 
         "na": "0", 
         "note": "", 
@@ -250,8 +256,9 @@
         "ratio": "0.515", 
         "upper": "0.754"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.155", 
         "na": "0", 
         "note": "", 
@@ -261,8 +268,9 @@
         "ratio": "0.488", 
         "upper": "1.176"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.482", 
         "na": "0", 
         "note": "", 
@@ -271,8 +279,20 @@
         "procedures": "153", 
         "ratio": "1.896", 
         "upper": "5.161"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "124431", 
+        "infection": "cdiff", 
+        "lower": "0.796", 
+        "na": "0", 
+        "note": "", 
+        "observed": "126", 
+        "predicted": "131.916", 
+        "ratio": "0.955", 
+        "upper": "1.137"
       }
-    }, 
+    ], 
     "provider_name": "EMORY UNIVERSITY HOSPITAL"
   }, 
   {
@@ -285,10 +305,11 @@
     }, 
     "display_name": "Tanner Medical Center Carrollton", 
     "id": "110011", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1846", 
+        "infection": "cauti", 
         "lower": "0.318", 
         "na": "0", 
         "note": "", 
@@ -297,20 +318,10 @@
         "ratio": "1.25", 
         "upper": "3.402"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "22585", 
-        "lower": "0.317", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "15.108", 
-        "ratio": "0.662", 
-        "upper": "1.217"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "940", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -319,8 +330,9 @@
         "ratio": "0", 
         "upper": "2.125"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.424", 
         "na": "0", 
         "note": "", 
@@ -330,8 +342,9 @@
         "ratio": "1.336", 
         "upper": "3.222"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -340,8 +353,20 @@
         "procedures": "81", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "22585", 
+        "infection": "cdiff", 
+        "lower": "0.317", 
+        "na": "0", 
+        "note": "", 
+        "observed": "10", 
+        "predicted": "15.108", 
+        "ratio": "0.662", 
+        "upper": "1.217"
       }
-    }, 
+    ], 
     "provider_name": "TANNER MEDICAL CENTER - CARROLLTON"
   }, 
   {
@@ -354,10 +379,11 @@
     }, 
     "display_name": "Newton Medical Center", 
     "id": "110018", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1141", 
+        "infection": "cauti", 
         "lower": "0.226", 
         "na": "0", 
         "note": "", 
@@ -366,20 +392,10 @@
         "ratio": "1.349", 
         "upper": "4.456"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "13124", 
-        "lower": "0.079", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "7.801", 
-        "ratio": "0.385", 
-        "upper": "1.124"
-      }, 
-      "clabsi": {
+      {
         "category": "Not Available", 
         "days": "646", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -388,8 +404,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -399,8 +416,9 @@
         "ratio": "0", 
         "upper": "2.219"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -409,8 +427,20 @@
         "procedures": "85", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "13124", 
+        "infection": "cdiff", 
+        "lower": "0.079", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "7.801", 
+        "ratio": "0.385", 
+        "upper": "1.124"
       }
-    }, 
+    ], 
     "provider_name": "NEWTON MEDICAL CENTER"
   }, 
   {
@@ -423,10 +453,11 @@
     }, 
     "display_name": "Northeast Georgia Medical Center", 
     "id": "110029", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "10964", 
+        "infection": "cauti", 
         "lower": "0.397", 
         "na": "0", 
         "note": "", 
@@ -435,20 +466,10 @@
         "ratio": "0.733", 
         "upper": "1.246"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "128561", 
-        "lower": "0.49", 
-        "na": "0", 
-        "note": "", 
-        "observed": "53", 
-        "predicted": "81.015", 
-        "ratio": "0.654", 
-        "upper": "0.856"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "9212", 
+        "infection": "clabsi", 
         "lower": "0.003", 
         "na": "0", 
         "note": "", 
@@ -457,8 +478,9 @@
         "ratio": "0.065", 
         "upper": "0.321"
       }, 
-      "ssicolon": {
+      {
         "category": "Worse than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "1.096", 
         "na": "0", 
         "note": "", 
@@ -468,8 +490,9 @@
         "ratio": "1.792", 
         "upper": "2.778"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.149", 
         "na": "0", 
         "note": "", 
@@ -478,8 +501,20 @@
         "procedures": "485", 
         "ratio": "0.584", 
         "upper": "1.59"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "128561", 
+        "infection": "cdiff", 
+        "lower": "0.49", 
+        "na": "0", 
+        "note": "", 
+        "observed": "53", 
+        "predicted": "81.015", 
+        "ratio": "0.654", 
+        "upper": "0.856"
       }
-    }, 
+    ], 
     "provider_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC"
   }, 
   {
@@ -492,10 +527,11 @@
     }, 
     "display_name": "Cartersville Medical Center", 
     "id": "110030", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2786", 
+        "infection": "cauti", 
         "lower": "0.672", 
         "na": "0", 
         "note": "", 
@@ -504,20 +540,10 @@
         "ratio": "1.657", 
         "upper": "3.446"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "20376", 
-        "lower": "0.388", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "14.147", 
-        "ratio": "0.778", 
-        "upper": "1.391"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1751", 
+        "infection": "clabsi", 
         "lower": "0.29", 
         "na": "0", 
         "note": "", 
@@ -526,8 +552,9 @@
         "ratio": "1.142", 
         "upper": "3.108"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -537,8 +564,9 @@
         "ratio": "0", 
         "upper": "1.961"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -547,8 +575,20 @@
         "procedures": "50", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "20376", 
+        "infection": "cdiff", 
+        "lower": "0.388", 
+        "na": "0", 
+        "note": "", 
+        "observed": "11", 
+        "predicted": "14.147", 
+        "ratio": "0.778", 
+        "upper": "1.391"
       }
-    }, 
+    ], 
     "provider_name": "CARTERSVILLE MEDICAL CENTER"
   }, 
   {
@@ -561,10 +601,11 @@
     }, 
     "display_name": "Spalding Regional Hospital", 
     "id": "110031", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2489", 
+        "infection": "cauti", 
         "lower": "0.112", 
         "na": "0", 
         "note": "", 
@@ -573,20 +614,10 @@
         "ratio": "0.67", 
         "upper": "2.212"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "26115", 
-        "lower": "0.084", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "12.986", 
-        "ratio": "0.308", 
-        "upper": "0.789"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1571", 
+        "infection": "clabsi", 
         "lower": "0.142", 
         "na": "0", 
         "note": "", 
@@ -595,8 +626,9 @@
         "ratio": "0.848", 
         "upper": "2.802"
       }, 
-      "ssicolon": {
+      {
         "category": "Not Available", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -606,8 +638,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.713", 
         "na": "0", 
         "note": "", 
@@ -616,8 +649,20 @@
         "procedures": "80", 
         "ratio": "2.801", 
         "upper": "7.623"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "26115", 
+        "infection": "cdiff", 
+        "lower": "0.084", 
+        "na": "0", 
+        "note": "", 
+        "observed": "4", 
+        "predicted": "12.986", 
+        "ratio": "0.308", 
+        "upper": "0.789"
       }
-    }, 
+    ], 
     "provider_name": "SPALDING REGIONAL HOSPITAL"
   }, 
   {
@@ -630,10 +675,11 @@
     }, 
     "display_name": "Wellstar Kennestone Hospital", 
     "id": "110035", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "9622", 
+        "infection": "cauti", 
         "lower": "1.287", 
         "na": "0", 
         "note": "", 
@@ -642,20 +688,10 @@
         "ratio": "1.785", 
         "upper": "2.415"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "126149", 
-        "lower": "0.874", 
-        "na": "0", 
-        "note": "", 
-        "observed": "111", 
-        "predicted": "104.429", 
-        "ratio": "1.063", 
-        "upper": "1.28"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "8968", 
+        "infection": "clabsi", 
         "lower": "0.513", 
         "na": "0", 
         "note": "", 
@@ -664,8 +700,9 @@
         "ratio": "0.882", 
         "upper": "1.422"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.324", 
         "na": "0", 
         "note": "", 
@@ -675,8 +712,9 @@
         "ratio": "0.638", 
         "upper": "1.137"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.011", 
         "na": "0", 
         "note": "", 
@@ -685,8 +723,20 @@
         "procedures": "502", 
         "ratio": "0.222", 
         "upper": "1.094"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "126149", 
+        "infection": "cdiff", 
+        "lower": "0.874", 
+        "na": "0", 
+        "note": "", 
+        "observed": "111", 
+        "predicted": "104.429", 
+        "ratio": "1.063", 
+        "upper": "1.28"
       }
-    }, 
+    ], 
     "provider_name": "WELLSTAR KENNESTONE HOSPITAL"
   }, 
   {
@@ -699,10 +749,11 @@
     }, 
     "display_name": "Wellstar Paulding Hospital", 
     "id": "110042", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Not Available", 
         "days": "203", 
+        "infection": "cauti", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -711,20 +762,10 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3930", 
-        "lower": "0.236", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.619", 
-        "ratio": "1.145", 
-        "upper": "3.348"
-      }, 
-      "clabsi": {
+      {
         "category": "Not Available", 
         "days": "146", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -733,8 +774,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssicolon": {
+      {
         "category": "Not Available", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -744,8 +786,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -754,8 +797,20 @@
         "procedures": "1", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "3930", 
+        "infection": "cdiff", 
+        "lower": "0.236", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "2.619", 
+        "ratio": "1.145", 
+        "upper": "3.348"
       }
-    }, 
+    ], 
     "provider_name": "WELLSTAR PAULDING HOSPITAL"
   }, 
   {
@@ -768,10 +823,11 @@
     }, 
     "display_name": "Floyd Medical Center", 
     "id": "110054", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "4946", 
+        "infection": "cauti", 
         "lower": "0.047", 
         "na": "0", 
         "note": "", 
@@ -780,20 +836,10 @@
         "ratio": "0.281", 
         "upper": "0.93"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "44255", 
-        "lower": "0.291", 
-        "na": "0", 
-        "note": "", 
-        "observed": "17", 
-        "predicted": "33.998", 
-        "ratio": "0.5", 
-        "upper": "0.801"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3388", 
+        "infection": "clabsi", 
         "lower": "0.225", 
         "na": "0", 
         "note": "", 
@@ -802,8 +848,9 @@
         "ratio": "0.709", 
         "upper": "1.711"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.016", 
         "na": "0", 
         "note": "", 
@@ -813,8 +860,9 @@
         "ratio": "0.323", 
         "upper": "1.594"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.089", 
         "na": "0", 
         "note": "", 
@@ -823,8 +871,20 @@
         "procedures": "304", 
         "ratio": "0.532", 
         "upper": "1.759"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "44255", 
+        "infection": "cdiff", 
+        "lower": "0.291", 
+        "na": "0", 
+        "note": "", 
+        "observed": "17", 
+        "predicted": "33.998", 
+        "ratio": "0.5", 
+        "upper": "0.801"
       }
-    }, 
+    ], 
     "provider_name": "FLOYD MEDICAL CENTER"
   }, 
   {
@@ -837,10 +897,11 @@
     }, 
     "display_name": "Athens Regional Medical Center", 
     "id": "110074", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "5811", 
+        "infection": "cauti", 
         "lower": "1.612", 
         "na": "0", 
         "note": "", 
@@ -849,20 +910,10 @@
         "ratio": "2.6", 
         "upper": "3.984"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "62779", 
-        "lower": "0.375", 
-        "na": "0", 
-        "note": "", 
-        "observed": "27", 
-        "predicted": "47.495", 
-        "ratio": "0.568", 
-        "upper": "0.827"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3662", 
+        "infection": "clabsi", 
         "lower": "0.14", 
         "na": "0", 
         "note": "", 
@@ -871,8 +922,9 @@
         "ratio": "0.549", 
         "upper": "1.494"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.641", 
         "na": "0", 
         "note": "", 
@@ -882,8 +934,9 @@
         "ratio": "1.263", 
         "upper": "2.251"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -892,8 +945,20 @@
         "procedures": "191", 
         "ratio": "0", 
         "upper": "1.715"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "62779", 
+        "infection": "cdiff", 
+        "lower": "0.375", 
+        "na": "0", 
+        "note": "", 
+        "observed": "27", 
+        "predicted": "47.495", 
+        "ratio": "0.568", 
+        "upper": "0.827"
       }
-    }, 
+    ], 
     "provider_name": "ATHENS REGIONAL MEDICAL CENTER"
   }, 
   {
@@ -906,10 +971,11 @@
     }, 
     "display_name": "Dekalb Medical Center", 
     "id": "110076", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "6636", 
+        "infection": "cauti", 
         "lower": "0.16", 
         "na": "0", 
         "note": "", 
@@ -918,20 +984,10 @@
         "ratio": "0.502", 
         "upper": "1.212"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "68848", 
-        "lower": "0.563", 
-        "na": "0", 
-        "note": "", 
-        "observed": "32", 
-        "predicted": "38.903", 
-        "ratio": "0.823", 
-        "upper": "1.161"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "6066", 
+        "infection": "clabsi", 
         "lower": "0.201", 
         "na": "0", 
         "note": "", 
@@ -940,8 +996,9 @@
         "ratio": "0.549", 
         "upper": "1.218"
       }, 
-      "ssicolon": {
+      {
         "category": "Worse than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "1.757", 
         "na": "0", 
         "note": "", 
@@ -951,8 +1008,9 @@
         "ratio": "3.087", 
         "upper": "5.057"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.402", 
         "na": "0", 
         "note": "", 
@@ -961,8 +1019,20 @@
         "procedures": "199", 
         "ratio": "1.581", 
         "upper": "4.304"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "68848", 
+        "infection": "cdiff", 
+        "lower": "0.563", 
+        "na": "0", 
+        "note": "", 
+        "observed": "32", 
+        "predicted": "38.903", 
+        "ratio": "0.823", 
+        "upper": "1.161"
       }
-    }, 
+    ], 
     "provider_name": "DEKALB MEDICAL CENTER"
   }, 
   {
@@ -975,10 +1045,11 @@
     }, 
     "display_name": "Emory University Hospital Midtown", 
     "id": "110078", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "10993", 
+        "infection": "cauti", 
         "lower": "0.972", 
         "na": "0", 
         "note": "", 
@@ -987,20 +1058,10 @@
         "ratio": "1.361", 
         "upper": "1.856"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "82997", 
-        "lower": "0.8", 
-        "na": "0", 
-        "note": "", 
-        "observed": "78", 
-        "predicted": "77.069", 
-        "ratio": "1.012", 
-        "upper": "1.263"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "12051", 
+        "infection": "clabsi", 
         "lower": "0.579", 
         "na": "0", 
         "note": "", 
@@ -1009,8 +1070,9 @@
         "ratio": "0.892", 
         "upper": "1.317"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.356", 
         "na": "0", 
         "note": "", 
@@ -1020,8 +1082,9 @@
         "ratio": "0.972", 
         "upper": "2.155"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.86", 
         "na": "0", 
         "note": "", 
@@ -1030,8 +1093,20 @@
         "procedures": "304", 
         "ratio": "2.122", 
         "upper": "4.414"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "82997", 
+        "infection": "cdiff", 
+        "lower": "0.8", 
+        "na": "0", 
+        "note": "", 
+        "observed": "78", 
+        "predicted": "77.069", 
+        "ratio": "1.012", 
+        "upper": "1.263"
       }
-    }, 
+    ], 
     "provider_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN"
   }, 
   {
@@ -1044,10 +1119,11 @@
     }, 
     "display_name": "Grady Memorial Hospital", 
     "id": "110079", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "19107", 
+        "infection": "cauti", 
         "lower": "1.148", 
         "na": "0", 
         "note": "", 
@@ -1056,20 +1132,10 @@
         "ratio": "1.421", 
         "upper": "1.741"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "115465", 
-        "lower": "0.596", 
-        "na": "0", 
-        "note": "", 
-        "observed": "75", 
-        "predicted": "99.054", 
-        "ratio": "0.757", 
-        "upper": "0.949"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "16100", 
+        "infection": "clabsi", 
         "lower": "0.701", 
         "na": "0", 
         "note": "", 
@@ -1078,8 +1144,9 @@
         "ratio": "0.943", 
         "upper": "1.243"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.375", 
         "na": "0", 
         "note": "", 
@@ -1089,8 +1156,9 @@
         "ratio": "1.022", 
         "upper": "2.266"
       }, 
-      "ssihyst": {
+      {
         "category": "Worse than the U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "1.861", 
         "na": "0", 
         "note": "", 
@@ -1099,8 +1167,20 @@
         "procedures": "198", 
         "ratio": "4.008", 
         "upper": "7.611"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "115465", 
+        "infection": "cdiff", 
+        "lower": "0.596", 
+        "na": "0", 
+        "note": "", 
+        "observed": "75", 
+        "predicted": "99.054", 
+        "ratio": "0.757", 
+        "upper": "0.949"
       }
-    }, 
+    ], 
     "provider_name": "GRADY MEMORIAL HOSPITAL"
   }, 
   {
@@ -1113,10 +1193,11 @@
     }, 
     "display_name": "Emory Saint Joseph's Hospital", 
     "id": "110082", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "6966", 
+        "infection": "cauti", 
         "lower": "1.239", 
         "na": "0", 
         "note": "", 
@@ -1125,20 +1206,10 @@
         "ratio": "1.927", 
         "upper": "2.87"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "51748", 
-        "lower": "0.947", 
-        "na": "0", 
-        "note": "", 
-        "observed": "54", 
-        "predicted": "42.825", 
-        "ratio": "1.261", 
-        "upper": "1.645"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "6025", 
+        "infection": "clabsi", 
         "lower": "0.08", 
         "na": "0", 
         "note": "", 
@@ -1147,8 +1218,9 @@
         "ratio": "0.315", 
         "upper": "0.856"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.145", 
         "na": "0", 
         "note": "", 
@@ -1158,8 +1230,9 @@
         "ratio": "0.457", 
         "upper": "1.103"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1168,8 +1241,20 @@
         "procedures": "96", 
         "ratio": "0", 
         "upper": "2.99"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "51748", 
+        "infection": "cdiff", 
+        "lower": "0.947", 
+        "na": "0", 
+        "note": "", 
+        "observed": "54", 
+        "predicted": "42.825", 
+        "ratio": "1.261", 
+        "upper": "1.645"
       }
-    }, 
+    ], 
     "provider_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC"
   }, 
   {
@@ -1182,10 +1267,11 @@
     }, 
     "display_name": "Piedmont Hospital", 
     "id": "110083", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "14612", 
+        "infection": "cauti", 
         "lower": "1.808", 
         "na": "0", 
         "note": "", 
@@ -1194,20 +1280,10 @@
         "ratio": "2.365", 
         "upper": "3.042"
       }, 
-      "cdiff": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "104445", 
-        "lower": "1.091", 
-        "na": "0", 
-        "note": "", 
-        "observed": "118", 
-        "predicted": "89.518", 
-        "ratio": "1.318", 
-        "upper": "1.579"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "16961", 
+        "infection": "clabsi", 
         "lower": "0.878", 
         "na": "0", 
         "note": "", 
@@ -1216,8 +1292,9 @@
         "ratio": "1.242", 
         "upper": "1.708"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.562", 
         "na": "0", 
         "note": "", 
@@ -1227,8 +1304,9 @@
         "ratio": "0.988", 
         "upper": "1.618"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.438", 
         "na": "0", 
         "note": "", 
@@ -1237,8 +1315,20 @@
         "procedures": "521", 
         "ratio": "1.196", 
         "upper": "2.652"
+      }, 
+      {
+        "category": "Worse than the U.S. National Benchmark", 
+        "days": "104445", 
+        "infection": "cdiff", 
+        "lower": "1.091", 
+        "na": "0", 
+        "note": "", 
+        "observed": "118", 
+        "predicted": "89.518", 
+        "ratio": "1.318", 
+        "upper": "1.579"
       }
-    }, 
+    ], 
     "provider_name": "PIEDMONT HOSPITAL"
   }, 
   {
@@ -1251,10 +1341,11 @@
     }, 
     "display_name": "Gwinnett Medical Center", 
     "id": "110087", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "6971", 
+        "infection": "cauti", 
         "lower": "1.39", 
         "na": "0", 
         "note": "", 
@@ -1263,20 +1354,10 @@
         "ratio": "2.242", 
         "upper": "3.436"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "89940", 
-        "lower": "0.598", 
-        "na": "0", 
-        "note": "", 
-        "observed": "47", 
-        "predicted": "57.709", 
-        "ratio": "0.814", 
-        "upper": "1.083"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "8364", 
+        "infection": "clabsi", 
         "lower": "0.496", 
         "na": "0", 
         "note": "", 
@@ -1285,8 +1366,9 @@
         "ratio": "0.892", 
         "upper": "1.487"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.48", 
         "na": "0", 
         "note": "", 
@@ -1296,8 +1378,9 @@
         "ratio": "0.887", 
         "upper": "1.507"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.731", 
         "na": "0", 
         "note": "", 
@@ -1306,8 +1389,20 @@
         "procedures": "185", 
         "ratio": "2.3", 
         "upper": "5.548"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "89940", 
+        "infection": "cdiff", 
+        "lower": "0.598", 
+        "na": "0", 
+        "note": "", 
+        "observed": "47", 
+        "predicted": "57.709", 
+        "ratio": "0.814", 
+        "upper": "1.083"
       }
-    }, 
+    ], 
     "provider_name": "GWINNETT MEDICAL CENTER"
   }, 
   {
@@ -1320,10 +1415,11 @@
     }, 
     "display_name": "Rockdale Medical Center", 
     "id": "110091", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2199", 
+        "infection": "cauti", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1332,20 +1428,10 @@
         "ratio": "0", 
         "upper": "1.135"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "24638", 
-        "lower": "0.739", 
-        "na": "0", 
-        "note": "", 
-        "observed": "21", 
-        "predicted": "17.593", 
-        "ratio": "1.194", 
-        "upper": "1.825"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2740", 
+        "infection": "clabsi", 
         "lower": "0.499", 
         "na": "0", 
         "note": "", 
@@ -1354,8 +1440,9 @@
         "ratio": "1.142", 
         "upper": "2.258"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.327", 
         "na": "0", 
         "note": "", 
@@ -1365,8 +1452,9 @@
         "ratio": "1.949", 
         "upper": "6.44"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -1375,8 +1463,20 @@
         "procedures": "60", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "24638", 
+        "infection": "cdiff", 
+        "lower": "0.739", 
+        "na": "0", 
+        "note": "", 
+        "observed": "21", 
+        "predicted": "17.593", 
+        "ratio": "1.194", 
+        "upper": "1.825"
       }
-    }, 
+    ], 
     "provider_name": "ROCKDALE MEDICAL CENTER"
   }, 
   {
@@ -1389,10 +1489,11 @@
     }, 
     "display_name": "Atlanta Medical Center", 
     "id": "110115", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "12894", 
+        "infection": "cauti", 
         "lower": "0.733", 
         "na": "0", 
         "note": "", 
@@ -1401,20 +1502,10 @@
         "ratio": "1.082", 
         "upper": "1.543"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "74320", 
-        "lower": "0.668", 
-        "na": "0", 
-        "note": "", 
-        "observed": "45", 
-        "predicted": "49.122", 
-        "ratio": "0.916", 
-        "upper": "1.226"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "11863", 
+        "infection": "clabsi", 
         "lower": "0.278", 
         "na": "0", 
         "note": "", 
@@ -1423,8 +1514,9 @@
         "ratio": "0.513", 
         "upper": "0.873"
       }, 
-      "ssicolon": {
+      {
         "category": "Better than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1434,8 +1526,9 @@
         "ratio": "0", 
         "upper": "0.726"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.047", 
         "na": "0", 
         "note": "", 
@@ -1444,8 +1537,20 @@
         "procedures": "107", 
         "ratio": "0.944", 
         "upper": "4.657"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "74320", 
+        "infection": "cdiff", 
+        "lower": "0.668", 
+        "na": "0", 
+        "note": "", 
+        "observed": "45", 
+        "predicted": "49.122", 
+        "ratio": "0.916", 
+        "upper": "1.226"
       }
-    }, 
+    ], 
     "provider_name": "ATLANTA MEDICAL CENTER"
   }, 
   {
@@ -1458,10 +1563,11 @@
     }, 
     "display_name": "Wellstar Cobb Hospital", 
     "id": "110143", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "5329", 
+        "infection": "cauti", 
         "lower": "1.829", 
         "na": "0", 
         "note": "", 
@@ -1470,20 +1576,10 @@
         "ratio": "2.818", 
         "upper": "4.161"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "68959", 
-        "lower": "0.848", 
-        "na": "0", 
-        "note": "", 
-        "observed": "58", 
-        "predicted": "51.931", 
-        "ratio": "1.117", 
-        "upper": "1.444"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "5471", 
+        "infection": "clabsi", 
         "lower": "0.584", 
         "na": "0", 
         "note": "", 
@@ -1492,8 +1588,9 @@
         "ratio": "1.11", 
         "upper": "1.929"
       }, 
-      "ssicolon": {
+      {
         "category": "Better than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.009", 
         "na": "0", 
         "note": "", 
@@ -1503,8 +1600,9 @@
         "ratio": "0.189", 
         "upper": "0.932"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.501", 
         "na": "0", 
         "note": "", 
@@ -1513,8 +1611,20 @@
         "procedures": "389", 
         "ratio": "1.367", 
         "upper": "3.031"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "68959", 
+        "infection": "cdiff", 
+        "lower": "0.848", 
+        "na": "0", 
+        "note": "", 
+        "observed": "58", 
+        "predicted": "51.931", 
+        "ratio": "1.117", 
+        "upper": "1.444"
       }
-    }, 
+    ], 
     "provider_name": "WELLSTAR COBB HOSPITAL"
   }, 
   {
@@ -1527,10 +1637,11 @@
     }, 
     "display_name": "Northside Hospital", 
     "id": "110161", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "4974", 
+        "infection": "cauti", 
         "lower": "0.307", 
         "na": "0", 
         "note": "", 
@@ -1539,20 +1650,10 @@
         "ratio": "0.838", 
         "upper": "1.857"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "86668", 
-        "lower": "0.66", 
-        "na": "0", 
-        "note": "", 
-        "observed": "55", 
-        "predicted": "62.744", 
-        "ratio": "0.877", 
-        "upper": "1.141"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "8383", 
+        "infection": "clabsi", 
         "lower": "0.046", 
         "na": "0", 
         "note": "", 
@@ -1561,8 +1662,9 @@
         "ratio": "0.18", 
         "upper": "0.491"
       }, 
-      "ssicolon": {
+      {
         "category": "Better than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.144", 
         "na": "0", 
         "note": "", 
@@ -1572,8 +1674,9 @@
         "ratio": "0.394", 
         "upper": "0.874"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.222", 
         "na": "0", 
         "note": "", 
@@ -1582,8 +1685,20 @@
         "procedures": "1608", 
         "ratio": "0.508", 
         "upper": "1.004"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "86668", 
+        "infection": "cdiff", 
+        "lower": "0.66", 
+        "na": "0", 
+        "note": "", 
+        "observed": "55", 
+        "predicted": "62.744", 
+        "ratio": "0.877", 
+        "upper": "1.141"
       }
-    }, 
+    ], 
     "provider_name": "NORTHSIDE HOSPITAL"
   }, 
   {
@@ -1596,10 +1711,11 @@
     }, 
     "display_name": "Southern Regional Medical Center", 
     "id": "110165", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "5521", 
+        "infection": "cauti", 
         "lower": "0.873", 
         "na": "0", 
         "note": "", 
@@ -1608,20 +1724,10 @@
         "ratio": "1.66", 
         "upper": "2.886"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "69205", 
-        "lower": "0.34", 
-        "na": "0", 
-        "note": "", 
-        "observed": "22", 
-        "predicted": "40.567", 
-        "ratio": "0.542", 
-        "upper": "0.821"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "4263", 
+        "infection": "clabsi", 
         "lower": "0.235", 
         "na": "0", 
         "note": "", 
@@ -1630,8 +1736,9 @@
         "ratio": "0.641", 
         "upper": "1.421"
       }, 
-      "ssicolon": {
+      {
         "category": "Better than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1641,8 +1748,9 @@
         "ratio": "0", 
         "upper": "0.635"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1651,8 +1759,20 @@
         "procedures": "125", 
         "ratio": "0", 
         "upper": "2.049"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "69205", 
+        "infection": "cdiff", 
+        "lower": "0.34", 
+        "na": "0", 
+        "note": "", 
+        "observed": "22", 
+        "predicted": "40.567", 
+        "ratio": "0.542", 
+        "upper": "0.821"
       }
-    }, 
+    ], 
     "provider_name": "SOUTHERN REGIONAL MEDICAL CENTER"
   }, 
   {
@@ -1665,10 +1785,11 @@
     }, 
     "display_name": "Redmond Regional Medical Center", 
     "id": "110168", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "5229", 
+        "infection": "cauti", 
         "lower": "0.761", 
         "na": "0", 
         "note": "", 
@@ -1677,20 +1798,10 @@
         "ratio": "1.448", 
         "upper": "2.517"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "37741", 
-        "lower": "0.372", 
-        "na": "0", 
-        "note": "", 
-        "observed": "17", 
-        "predicted": "26.582", 
-        "ratio": "0.64", 
-        "upper": "1.024"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3922", 
+        "infection": "clabsi", 
         "lower": "0.476", 
         "na": "0", 
         "note": "", 
@@ -1699,8 +1810,9 @@
         "ratio": "1.089", 
         "upper": "2.155"
       }, 
-      "ssicolon": {
+      {
         "category": "Better than the U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1710,8 +1822,9 @@
         "ratio": "0", 
         "upper": "0.76"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -1720,8 +1833,20 @@
         "procedures": "60", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "37741", 
+        "infection": "cdiff", 
+        "lower": "0.372", 
+        "na": "0", 
+        "note": "", 
+        "observed": "17", 
+        "predicted": "26.582", 
+        "ratio": "0.64", 
+        "upper": "1.024"
       }
-    }, 
+    ], 
     "provider_name": "REDMOND REGIONAL MEDICAL CENTER"
   }, 
   {
@@ -1734,10 +1859,11 @@
     }, 
     "display_name": "Wellstar Douglas Hospital", 
     "id": "110184", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2038", 
+        "infection": "cauti", 
         "lower": "0.019", 
         "na": "0", 
         "note": "", 
@@ -1746,20 +1872,10 @@
         "ratio": "0.377", 
         "upper": "1.861"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "21707", 
-        "lower": "0.55", 
-        "na": "0", 
-        "note": "", 
-        "observed": "16", 
-        "predicted": "16.628", 
-        "ratio": "0.962", 
-        "upper": "1.563"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1786", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1768,8 +1884,9 @@
         "ratio": "0", 
         "upper": "1.118"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.254", 
         "na": "0", 
         "note": "", 
@@ -1779,8 +1896,9 @@
         "ratio": "0.998", 
         "upper": "2.717"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -1789,8 +1907,20 @@
         "procedures": "49", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "21707", 
+        "infection": "cdiff", 
+        "lower": "0.55", 
+        "na": "0", 
+        "note": "", 
+        "observed": "16", 
+        "predicted": "16.628", 
+        "ratio": "0.962", 
+        "upper": "1.563"
       }
-    }, 
+    ], 
     "provider_name": "WELLSTAR DOUGLAS HOSPITAL"
   }, 
   {
@@ -1803,10 +1933,11 @@
     }, 
     "display_name": "Piedmont Henry Hospital", 
     "id": "110191", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "3359", 
+        "infection": "cauti", 
         "lower": "1.26", 
         "na": "0", 
         "note": "", 
@@ -1815,20 +1946,10 @@
         "ratio": "2.48", 
         "upper": "4.421"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "42595", 
-        "lower": "0.263", 
-        "na": "0", 
-        "note": "", 
-        "observed": "14", 
-        "predicted": "29.109", 
-        "ratio": "0.481", 
-        "upper": "0.807"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3330", 
+        "infection": "clabsi", 
         "lower": "0.476", 
         "na": "0", 
         "note": "", 
@@ -1837,8 +1958,9 @@
         "ratio": "1.087", 
         "upper": "2.151"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.418", 
         "na": "0", 
         "note": "", 
@@ -1848,8 +1970,9 @@
         "ratio": "1.033", 
         "upper": "2.148"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -1858,8 +1981,20 @@
         "procedures": "268", 
         "ratio": "0", 
         "upper": "1.112"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "42595", 
+        "infection": "cdiff", 
+        "lower": "0.263", 
+        "na": "0", 
+        "note": "", 
+        "observed": "14", 
+        "predicted": "29.109", 
+        "ratio": "0.481", 
+        "upper": "0.807"
       }
-    }, 
+    ], 
     "provider_name": "PIEDMONT HENRY HOSPITAL"
   }, 
   {
@@ -1872,10 +2007,11 @@
     }, 
     "display_name": "Eastside Medical Center", 
     "id": "110192", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "4597", 
+        "infection": "cauti", 
         "lower": "0.211", 
         "na": "0", 
         "note": "", 
@@ -1884,20 +2020,10 @@
         "ratio": "0.665", 
         "upper": "1.605"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "40807", 
-        "lower": "0.857", 
-        "na": "0", 
-        "note": "", 
-        "observed": "35", 
-        "predicted": "28.447", 
-        "ratio": "1.23", 
-        "upper": "1.711"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3233", 
+        "infection": "clabsi", 
         "lower": "0.062", 
         "na": "0", 
         "note": "", 
@@ -1906,8 +2032,9 @@
         "ratio": "0.368", 
         "upper": "1.216"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.236", 
         "na": "0", 
         "note": "", 
@@ -1917,8 +2044,9 @@
         "ratio": "0.928", 
         "upper": "2.525"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.038", 
         "na": "0", 
         "note": "", 
@@ -1927,8 +2055,20 @@
         "procedures": "169", 
         "ratio": "0.751", 
         "upper": "3.703"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "40807", 
+        "infection": "cdiff", 
+        "lower": "0.857", 
+        "na": "0", 
+        "note": "", 
+        "observed": "35", 
+        "predicted": "28.447", 
+        "ratio": "1.23", 
+        "upper": "1.711"
       }
-    }, 
+    ], 
     "provider_name": "EASTSIDE MEDICAL CENTER"
   }, 
   {
@@ -1941,10 +2081,11 @@
     }, 
     "display_name": "North Fulton Hospital", 
     "id": "110198", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "3290", 
+        "infection": "cauti", 
         "lower": "0.448", 
         "na": "0", 
         "note": "", 
@@ -1953,20 +2094,10 @@
         "ratio": "0.965", 
         "upper": "1.832"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "15301", 
-        "lower": "0.692", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "7.937", 
-        "ratio": "1.386", 
-        "upper": "2.48"
-      }, 
-      "clabsi": {
+      {
         "category": "Better than the U.S. National Benchmark", 
         "days": "2341", 
+        "infection": "clabsi", 
         "lower": "0.008", 
         "na": "0", 
         "note": "", 
@@ -1975,8 +2106,9 @@
         "ratio": "0.157", 
         "upper": "0.774"
       }, 
-      "ssicolon": {
+      {
         "category": "Not Available", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -1986,8 +2118,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -1996,8 +2129,20 @@
         "procedures": "15", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "15301", 
+        "infection": "cdiff", 
+        "lower": "0.692", 
+        "na": "0", 
+        "note": "", 
+        "observed": "11", 
+        "predicted": "7.937", 
+        "ratio": "1.386", 
+        "upper": "2.48"
       }
-    }, 
+    ], 
     "provider_name": "NORTH FULTON HOSPITAL"
   }, 
   {
@@ -2010,10 +2155,11 @@
     }, 
     "display_name": "Piedmont Fayette Hospital", 
     "id": "110215", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2744", 
+        "infection": "cauti", 
         "lower": "0.094", 
         "na": "0", 
         "note": "", 
@@ -2022,20 +2168,10 @@
         "ratio": "0.561", 
         "upper": "1.852"
       }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "35927", 
-        "lower": "0.263", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "23.559", 
-        "ratio": "0.509", 
-        "upper": "0.89"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2885", 
+        "infection": "clabsi", 
         "lower": "0.349", 
         "na": "0", 
         "note": "", 
@@ -2044,8 +2180,9 @@
         "ratio": "0.953", 
         "upper": "2.113"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.174", 
         "na": "0", 
         "note": "", 
@@ -2055,8 +2192,9 @@
         "ratio": "0.547", 
         "upper": "1.319"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.1", 
         "na": "0", 
         "note": "", 
@@ -2065,8 +2203,20 @@
         "procedures": "398", 
         "ratio": "0.596", 
         "upper": "1.968"
+      }, 
+      {
+        "category": "Better than the U.S. National Benchmark", 
+        "days": "35927", 
+        "infection": "cdiff", 
+        "lower": "0.263", 
+        "na": "0", 
+        "note": "", 
+        "observed": "12", 
+        "predicted": "23.559", 
+        "ratio": "0.509", 
+        "upper": "0.89"
       }
-    }, 
+    ], 
     "provider_name": "PIEDMONT FAYETTE HOSPITAL"
   }, 
   {
@@ -2079,10 +2229,11 @@
     }, 
     "display_name": "Piedmont Mountainside Hospital", 
     "id": "110225", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "995", 
+        "infection": "cauti", 
         "lower": "0.025", 
         "na": "0", 
         "note": "", 
@@ -2091,20 +2242,10 @@
         "ratio": "0.503", 
         "upper": "2.478"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "9253", 
-        "lower": "0.152", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.158", 
-        "ratio": "0.559", 
-        "upper": "1.431"
-      }, 
-      "clabsi": {
+      {
         "category": "Not Available", 
         "days": "367", 
+        "infection": "clabsi", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -2113,8 +2254,9 @@
         "ratio": "0", 
         "upper": "0"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0", 
         "na": "0", 
         "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
@@ -2124,8 +2266,9 @@
         "ratio": "0", 
         "upper": "2.364"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -2134,8 +2277,20 @@
         "procedures": "23", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "9253", 
+        "infection": "cdiff", 
+        "lower": "0.152", 
+        "na": "0", 
+        "note": "", 
+        "observed": "4", 
+        "predicted": "7.158", 
+        "ratio": "0.559", 
+        "upper": "1.431"
       }
-    }, 
+    ], 
     "provider_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC"
   }, 
   {
@@ -2148,10 +2303,11 @@
     }, 
     "display_name": "Piedmont Newnan Hospital", 
     "id": "110229", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "2222", 
+        "infection": "cauti", 
         "lower": "0.019", 
         "na": "0", 
         "note": "", 
@@ -2160,20 +2316,10 @@
         "ratio": "0.375", 
         "upper": "1.849"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "23683", 
-        "lower": "0.389", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "15.948", 
-        "ratio": "0.752", 
-        "upper": "1.314"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1171", 
+        "infection": "clabsi", 
         "lower": "0.028", 
         "na": "0", 
         "note": "", 
@@ -2182,8 +2328,9 @@
         "ratio": "0.569", 
         "upper": "2.807"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.672", 
         "na": "0", 
         "note": "", 
@@ -2193,8 +2340,9 @@
         "ratio": "2.114", 
         "upper": "5.1"
       }, 
-      "ssihyst": {
+      {
         "category": "Not Available", 
+        "infection": "ssihyst", 
         "lower": "0", 
         "na": "1", 
         "note": "Results cannot be calculated for this reporting period", 
@@ -2203,8 +2351,20 @@
         "procedures": "56", 
         "ratio": "0", 
         "upper": "0"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "23683", 
+        "infection": "cdiff", 
+        "lower": "0.389", 
+        "na": "0", 
+        "note": "", 
+        "observed": "12", 
+        "predicted": "15.948", 
+        "ratio": "0.752", 
+        "upper": "1.314"
       }
-    }, 
+    ], 
     "provider_name": "PIEDMONT NEWNAN HOSPITAL, INC"
   }, 
   {
@@ -2217,10 +2377,11 @@
     }, 
     "display_name": "Emory Johns Creek Hospital", 
     "id": "110230", 
-    "infections": {
-      "cauti": {
+    "infections": [
+      {
         "category": "Worse than the U.S. National Benchmark", 
         "days": "1316", 
+        "infection": "cauti", 
         "lower": "1.071", 
         "na": "0", 
         "note": "", 
@@ -2229,20 +2390,10 @@
         "ratio": "2.922", 
         "upper": "6.477"
       }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "19422", 
-        "lower": "0.974", 
-        "na": "0", 
-        "note": "", 
-        "observed": "19", 
-        "predicted": "11.736", 
-        "ratio": "1.619", 
-        "upper": "2.528"
-      }, 
-      "clabsi": {
+      {
         "category": "No Different than U.S. National Benchmark", 
         "days": "1255", 
+        "infection": "clabsi", 
         "lower": "0.022", 
         "na": "0", 
         "note": "", 
@@ -2251,8 +2402,9 @@
         "ratio": "0.447", 
         "upper": "2.204"
       }, 
-      "ssicolon": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssicolon", 
         "lower": "0.371", 
         "na": "0", 
         "note": "", 
@@ -2262,8 +2414,9 @@
         "ratio": "1.168", 
         "upper": "2.816"
       }, 
-      "ssihyst": {
+      {
         "category": "No Different than U.S. National Benchmark", 
+        "infection": "ssihyst", 
         "lower": "0.676", 
         "na": "0", 
         "note": "", 
@@ -2272,8 +2425,20 @@
         "procedures": "134", 
         "ratio": "2.657", 
         "upper": "7.232"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "19422", 
+        "infection": "cdiff", 
+        "lower": "0.974", 
+        "na": "0", 
+        "note": "", 
+        "observed": "19", 
+        "predicted": "11.736", 
+        "ratio": "1.619", 
+        "upper": "2.528"
       }
-    }, 
+    ], 
     "provider_name": "EMORY JOHNS CREEK HOSPITAL"
   }
 ]
