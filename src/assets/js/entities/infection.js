@@ -10,11 +10,10 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   Entities.configureStorage("HospitalCheckup.Entities.Infection");
 
   Entities.InfectionCollection = Backbone.Collection.extend({
-    //url: "/assets/data/infections.json",
-    url: "infections",
+    url: "infections", //we could use our .json file but then we wouldn't be able to use the url for local storage
     initialize: function(){
       this.model= Entities.Infection;
-      this.comparator= "display_name" //sort by
+      this.comparator= "display_name"; //sort by
     }
   });
 
@@ -78,35 +77,40 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     infections.forEach(function(infection){
       infection.save();
     });
-    return infections;
+    return infections.models;
   }
 
   var API = {
     getInfectionEntities: function(){
-      //TODO make sure the data loads over the network, John used `defer`
       var infections = new Entities.InfectionCollection();
-      infections.fetch();
-      if(infections.length === 0){
-        return initializeInfections();
-      }
-      return infections;
-      /*if(infections === undefined){
-        infections = new Entities.InfectionCollection();
-        infections.fetch({
-          success: function(data){
-            return data
-          }
-        });
-        initializeInfections();
+      var defer = $.Deferred();
+      //check local storage to see if our data is already stored in there
+      infections.fetch({
+        success: function(data){
+          defer.resolve(data);
         }
-      return infections;*/
+      });
+      var promise = defer.promise();
+      $.when(promise).done(function(fetchedInfections){
+        if(fetchedInfections.length === 0){
+          var models = initializeInfections();
+          infections.reset(models);
+        }
+      });
+      return promise;
     },
 
     getInfectionEntity: function(infectionId){
-      console.log("get infection ENTITY", infectionId);
       var infection = new Entities.Infection({id: infectionId});
-      infection.fetch();
-      return infection;
+      var defer = $.Deferred();
+      infection.fetch({
+        success: function(data){
+          defer.resolve(data);
+        }, error: function(data){
+          defer.resolve(undefined);
+        }
+      });
+      return defer.promise();
     }
   }
 
