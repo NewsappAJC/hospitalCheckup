@@ -101,6 +101,12 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
         }
       return infections;*/
     },
+
+    getInfectionEntity: function(infectionId){
+      console.log("get infection ENTITY", infectionId);
+      var infection = new Entities.Infection({id: infectionId});
+      infection.fetch();
+      return infection;
     }
   }
 
@@ -108,4 +114,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     return API.getInfectionEntities();
   });
 
+  HospitalCheckup.reqres.setHandler("infection:entity", function(id){
+    return API.getInfectionEntity(id);
+  });
 });

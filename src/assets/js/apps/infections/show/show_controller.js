@@ -1,12 +1,11 @@
 HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
   Show.Controller = {
     showInfection: function(id){
-      var infections = HospitalCheckup.request("infection:entities");
-      var model = infections.get(id);
+      var infection = HospitalCheckup.request("infection:entity", id);
       var infectionView;
-      if(model !== undefined){
+      if(infection !== undefined){
         infectionView = new Show.Infection({
-          model: model
+          model: infection
         });
       } else {
         infectionView = new Show.MissingHospital();
