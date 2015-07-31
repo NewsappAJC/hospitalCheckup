@@ -16,7 +16,8 @@ Hosted here:
 
 - [ ] Range (popup) is the confidence interval
 - [ ] Add commas to number displays that may have a thousands place
-- [ ] I think I need to set up routes for my navigation? Maybe? It's reloading the homepage when you go home 
+- [ ] I think I need to set up routes for my navigation? Maybe? It's reloading the homepage when you go home
+- [ ] As of e8182fc it doesn't load the hospital view page from the direct URL unless it's already stored in web storage... how to fix?
 
 ##Questions
 - [ ] Rate == Ratio?
