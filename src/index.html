@@ -74,7 +74,7 @@
 
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><button class="button tiny js-delete">Delete</button></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
 
   </script>
   <script type="text/template" id="infection-list">

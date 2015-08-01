@@ -39,13 +39,12 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             type: "GET",
             success: resetModels
           });
-
-          function resetModels(models){
-            infections.reset(models);
-            infections.forEach(function(infection){
-              infection.save();
-            });
-          }
+        }
+        function resetModels(models){
+          infections.reset(models);
+          infections.forEach(function(infection){
+            infection.save();
+          });
         }
       });
       return promise;
