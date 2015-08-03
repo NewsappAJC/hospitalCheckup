@@ -64,11 +64,11 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     }
   }
 
-  HospitalCheckup.reqres.setHandler("infection:entities", function(){
+  HospitalCheckup.reqres.setHandler("infection:entities", function(){ //list infections
     return API.getInfectionEntities();
   });
 
-  HospitalCheckup.reqres.setHandler("infection:entity", function(id){
+  HospitalCheckup.reqres.setHandler("infection:entity", function(id){ //hospital selected from infection list, show hospital detail page
     return API.getInfectionEntity(id);
   });
 });

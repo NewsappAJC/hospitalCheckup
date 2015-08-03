@@ -16,12 +16,12 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){
+  HospitalCheckup.on("infections:list", function(){ //list infections
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });
 
-  HospitalCheckup.on("infection:show", function(id){
+  HospitalCheckup.on("infection:show", function(id){ //hospital selected from infection list, show hospital detail page
     HospitalCheckup.navigate("infections/" + id);
     API.showInfection(id);
   });
