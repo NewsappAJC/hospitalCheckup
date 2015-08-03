@@ -70,13 +70,12 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/chroma.js',
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
-              'src/assets/js/vendor/modernizr/modernizr.js',
+              'src/assets/js/vendor/modernizr.js',
               'src/assets/js/vendor/fastclick.js',
               'src/assets/js/vendor/backbone.localstorage.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
-          // { expand: true, flatten: true, src: ['src/assets/css/vendor/foundation.min.css'], dest: 'build/assets/css/vendor/' },
           { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
@@ -121,7 +120,6 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'build/assets/js/main.js'   : ['src/assets/js/main.js'],
           'build/assets/js/app.js'    : ['src/assets/js/app.js'],
           'build/assets/js/apps/config/storage/localstorage.js': ['src/assets/js/apps/config/storage/localstorage.js'],
           'build/assets/js/entities/infection.js': ['src/assets/js/entities/infection.js'],
@@ -157,7 +155,7 @@ module.exports = function(grunt) {
           useShortDoctype: true
         },
         files: {
-          'build/index.html'    : 'tmp/index.html'
+          'build/index.html'    : 'src/index.html' /*TODO change this back to tmp/ but right now processhtml is breaking my build*/
         }
       }
     },
@@ -169,7 +167,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/assets/css/app.css'       : ['src/assets/css/app.css'],
-          'build/assets/css/fonts/fonts.css'     : ['src/assets/css/fonts/fonts.css'],
+          'build/assets/css/fonts.css'     : ['src/assets/css/fonts.css'],
           'build/assets/css/vendor/normalize.css' : ['src/assets/css/vendor/normalize.css'],
           'build/assets/css/vendor/foundation.css': ['src/assets/css/vendor/foundation.css']
         }
@@ -263,10 +261,9 @@ module.exports = function(grunt) {
           "underscore.js": "underscore/underscore.js",
           "json2.js": "json2/json2.js",
           "backbone.js": "backbone/backbone.js",
-          "marionette.js": "marionette/lib/backbone.marionette.js",
+          "backbone.marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.js",
           "d3bb.js": "d3bb/build/d3bb.js",
-          //"modernizr.js": "modernizr/modernizr.js",
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
@@ -346,8 +343,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-open');
 
-  grunt.registerTask('default', ['bowercopy','copy','uglify','cssmin','processhtml', 'htmlmin','s3']);
-  grunt.registerTask('build', ['bowercopy','copy','uglify','cssmin','processhtml', 'htmlmin']);
+  grunt.registerTask('default', ['bowercopy','copy','uglify','cssmin', 'htmlmin','s3']);/*TODO add back processhtml*/
+  grunt.registerTask('build', ['bowercopy','copy','uglify','cssmin', 'htmlmin']);/*TODO add back processhtml*/
   grunt.registerTask('deploy', ['s3']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('server', ['express:dev','open:dev','watch:dev','express-keepalive']);
