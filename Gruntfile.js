@@ -71,11 +71,12 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
               'src/assets/js/vendor/modernizr/modernizr.js',
-              'src/assets/js/vendor/fastclick.js'
+              'src/assets/js/vendor/fastclick.js',
+              'src/assets/js/vendor/backbone.localstorage.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
-          { expand: true, flatten: true, src: ['src/assets/css/vendor/foundation.min.css'], dest: 'build/assets/css/vendor/' },
+          // { expand: true, flatten: true, src: ['src/assets/css/vendor/foundation.min.css'], dest: 'build/assets/css/vendor/' },
           { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
@@ -120,7 +121,18 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'build/assets/js/main.js'   : ['src/assets/js/main.js']
+          'build/assets/js/main.js'   : ['src/assets/js/main.js'],
+          'build/assets/js/app.js'    : ['src/assets/js/app.js'],
+          'build/assets/js/apps/config/storage/localstorage.js': ['src/assets/js/apps/config/storage/localstorage.js'],
+          'build/assets/js/entities/infection.js': ['src/assets/js/entities/infection.js'],
+          'build/assets/js/apps/infections/list/list_view.js': ['src/assets/js/apps/infections/list/list_view.js'],
+          'build/assets/js/apps/infections/list/list_controller.js': ['src/assets/js/apps/infections/list/list_controller.js'],
+          'build/assets/js/apps/infections/show/show_controller.js': ['src/assets/js/apps/infections/show/show_controller.js'],
+          'build/assets/js/apps/infections/show/show_view.js': ['src/assets/js/apps/infections/show/show_view.js'],
+          'build/assets/js/apps/infections/infections_app.js': ['src/assets/js/apps/infections/infections_app.js'],
+          'build/assets/js/apps/home/home_app.js': ['src/assets/js/apps/home/home_app.js'],
+          'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
+          'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js']
         }
       }
     },
@@ -257,7 +269,8 @@ module.exports = function(grunt) {
           //"modernizr.js": "modernizr/modernizr.js",
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
-          "foundation.js": "foundation/js/foundation.js"
+          "foundation.js": "foundation/js/foundation.js",
+          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js"
         }
       },
       lib_styles: {

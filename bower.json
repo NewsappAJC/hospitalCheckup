@@ -10,7 +10,8 @@
     "normalize-css": "~3.0.2",
     "modernizr": "latest",
     "foundation": "latest",
-    "chroma-js": "latest"
+    "chroma-js": "latest",
+    "backbone.localstorage": "latest"
   },
   "devDependencies": {
     "jasmine": "latest",
