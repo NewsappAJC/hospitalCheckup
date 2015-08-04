@@ -66,7 +66,6 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'src/assets/js/vendor/underscore.js',
               'src/assets/js/vendor/chroma.js',
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
