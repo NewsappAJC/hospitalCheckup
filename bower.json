@@ -12,6 +12,7 @@
     "foundation": "latest",
     "chroma-js": "latest",
     "backbone.localstorage": "v1.1.16",
+    "spin.js": "~2.3.2"
   },
   "devDependencies": {
     "jasmine": "latest",
