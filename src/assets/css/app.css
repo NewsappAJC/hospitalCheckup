@@ -1,0 +1,65 @@
+h1 {
+  font-family:'Publico-Black';
+  font-size:42px;
+}
+h3 {
+  font-family: Boomer;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 0;
+}
+/*nav*/
+#ajc-logo img {
+  float: left;
+  margin: 3px;
+  width: 175px;
+}
+.top-bar {
+  background-color: #0e3968;
+  border-bottom: 4px solid #fff;
+  height: 50px;
+  padding-top: 5px;
+/*  z-index: 100;*/
+}
+.top-bar-section ul li, .top-bar.expanded .title-area, .top-bar.expanded {
+  background: #0e3968;
+}
+.top-bar-section ul li > a.button {
+  text-transform: uppercase;
+  background: none; 
+}
+/*homepage*/
+#row-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 40px;
+  padding-top: 70px;
+  color: #fff;
+}
+#row-bg h1 {
+  color: #fff;
+}
+#bg-img{
+  position:fixed;
+  top:-7%;
+  left:-50px;
+  z-index:-10;
+}
+#bg-img img{
+  width:115%;
+  height:auto;
+}
+#homepage-content{
+  position:relative;
+  height:100%; 
+}
+#home-icon-row{
+  border-top:4px solid #fff;
+  height:400px; /*placeholder, prob don't need to set this once we have content here? or do it programatically*/
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color:#0E3968;
+}
+/*list views*/
+tbody tr:hover {
+  background-color: #d8d8d8;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>AJC Hospital Checkup</title>
+  <meta name="description" content="">
+  <meta name="author" content="Emily Merwin">
+
+  <!-- Social Open Graph Metas: fill these out to make your fb sharing post
+  ================================================== -->
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-touch-fullscreen" content="yes">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="assets/css/vendor/normalize.css">
+  <link rel="stylesheet" href="assets/css/vendor/foundation.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="assets/js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <a href="http://myajc.com" target="_blank">
+          <span id="ajc-logo"><img src="assets/img/ajc_white.svg"/></span>
+        </a>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a class="button" href="/">Home</a></li>
+        <li><a class="button" href="#infections">Infections</a></li>
+        <li><a class="button" href="#hipsknees">Surgery</a></li>
+        <li><a class="button" href="#perinatal">Labor and delivery</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <div id="app-container">
+    <div id="main-region" class="container"></div>
+  </div>
+
+  <script type="text/template" id="homepage-template">
+    <div id="bg-img">
+      <img src="assets/img/welcome3.png"/>
+    </div>
+    <div id="homepage-content">
+      <div id="row-bg">
+        <div class="row">
+          <div class="small-12 columns">
+            <h1>AJC Hospital Checkup</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-10 columns">
+            <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
+          </div>
+        </div>
+      </div>
+      <div id="home-icon-row"></div>
+    </div>
+  </script>
+
+  <script type="text/template" id="infection-list-item">
+    <!-- this is just POC, display will change later -->
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
+
+  </script>
+  <script type="text/template" id="infection-list">
+    <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
+    <tbody></tbody>
+  </script>
+
+  <script type="text/template" id="infection-view">
+    <h3><%- display_name %></h3>
+    <p class="address"><%- address.street %></p>
+    <hr>
+    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:"cdiff"}).predicted %></p>
+    <p>Number of infections observed: <%- _.findWhere(infections, {infection:"cdiff"}).observed %></p>
+  </script>
+
+  <script type="text/template" id="missing-hospital-view">
+    <!-- triggered when you attempt to reach a hospital specific view with an ID that doesn't exist in the data -->
+    <div class="alert-box warning">This entry doesn't exist!</div>
+  </script>
+
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/fastclick.js"></script>
+  <script src="assets/js/vendor/underscore.js"></script>
+  <script src="assets/js/vendor/backbone.js"></script>
+  <script src="assets/js/vendor/backbone.localstorage.js"></script>
+  <script src="assets/js/vendor/backbone.marionette.js"></script>
+  <script src="assets/js/vendor/d3.js"></script>
+  <script src="assets/js/vendor/d3bb.js"></script>
+  <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/vendor/flatpage_stubs.js"></script>
+
+  <!-- build:js assets/js/app.js -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/apps/config/storage/localstorage.js"></script>
+  <script src="assets/js/entities/infection.js"></script>
+  <script src="assets/js/apps/infections/list/list_view.js"></script>
+  <script src="assets/js/apps/infections/list/list_controller.js"></script>
+  <script src="assets/js/apps/infections/show/show_controller.js"></script>
+  <script src="assets/js/apps/infections/show/show_view.js"></script>
+  <script src="assets/js/apps/infections/infections_app.js"></script>
+  <script src="assets/js/apps/home/home_app.js"></script>
+  <script src="assets/js/apps/home/home_controller.js"></script>
+  <script src="assets/js/apps/home/home_view.js"></script>
+  <!-- /build -->
+  <script type="text/javascript">
+    $(document).foundation();
+
+    HospitalCheckup.start();
+  </script>
+
+</body>
+</html>
