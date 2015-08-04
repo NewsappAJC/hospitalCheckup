@@ -10,7 +10,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   Entities.configureStorage("HospitalCheckup.Entities.Infection");
 
   Entities.InfectionCollection = Backbone.Collection.extend({
-    url: "infections", //we could use our .json file but then we wouldn't be able to use the url for local storage
+    url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
     initialize: function(){
       this.model= Entities.Infection;
       this.comparator= "display_name"; //sort by
@@ -32,7 +32,9 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
       var promise = defer.promise();
       $.when(promise).done(function(fetchedInfections){
         if(fetchedInfections.length === 0){
-          //get models from file
+          //get models from file. Doing this here instead of by just setting the 
+          //collection URL to the file on initialization bc we need to use list 
+          //page URL for local storage. If we had a restful API we could use same URL for both
           $.ajax({
             dataType: "json",
             url: "/assets/data/infections.json",
@@ -43,7 +45,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
         function resetModels(models){
           infections.reset(models);
           infections.forEach(function(infection){
-            infection.save();
+            infection.save(); //to local storage
           });
         }
       });
