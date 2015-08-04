@@ -93,7 +93,9 @@
   </script>
 
   <script type="text/template" id="infection-view">
-    <h1><%- display_name %></h1>
+    <h3><%- display_name %></h3>
+    <p class="address"><%- address.street %></p>
+    <hr>
     <p>Number of infections predicted: <%- _.findWhere(infections, {infection:"cdiff"}).predicted %></p>
     <p>Number of infections observed: <%- _.findWhere(infections, {infection:"cdiff"}).observed %></p>
   </script>
