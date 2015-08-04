@@ -2,6 +2,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   List.Controller = {
     listInfections: function(){
+      var loadingView = new HospitalCheckup.Common.Views.Loading();
+      HospitalCheckup.regions.main.show(loadingView);
+
       var fetchingInfections = HospitalCheckup.request("infection:entities");
 
       $.when(fetchingInfections).done(function(infections){

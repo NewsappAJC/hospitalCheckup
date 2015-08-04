@@ -66,13 +66,14 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'src/assets/js/vendor/underscore.js',
               'src/assets/js/vendor/chroma.js',
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
               'src/assets/js/vendor/modernizr.js',
               'src/assets/js/vendor/fastclick.js',
-              'src/assets/js/vendor/backbone.localstorage.js'
+              'src/assets/js/vendor/backbone.localstorage.js',
+              'src/assets/js/vendor/jquery.spin.js',
+              'src/assets/js/vendor/spin.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -130,7 +131,8 @@ module.exports = function(grunt) {
           'build/assets/js/apps/infections/infections_app.js': ['src/assets/js/apps/infections/infections_app.js'],
           'build/assets/js/apps/home/home_app.js': ['src/assets/js/apps/home/home_app.js'],
           'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
-          'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js']
+          'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js'],
+          'build/assets/js/common/views.js': ['src/assets/js/common/views.js']
         }
       }
     },
@@ -267,7 +269,9 @@ module.exports = function(grunt) {
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
-          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js"
+          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js",
+          "spin.js": "spin.js/spin.js",
+          "jquery.spin.js": "spin.js/jquery.spin.js"
         }
       },
       lib_styles: {
