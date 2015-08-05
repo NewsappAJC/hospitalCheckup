@@ -20,8 +20,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           infectionsListLayout.listRegion.show(infectionsListView);
         });
 
-        infectionsListView.on("childview:infection:show", function(childView, model){
-          HospitalCheckup.trigger("infection:show", model.get("id"));
+        infectionsListView.on("childview:infection:show", function(childView, args){
+          HospitalCheckup.trigger("infection:show", args.model.get("id"));
         });
 
         HospitalCheckup.regions.main.show(infectionsListLayout);
