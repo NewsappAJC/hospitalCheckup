@@ -82,11 +82,13 @@
     </div>
   </script>
 
+  <!-- INFECTIONS
+  ================================================== -->
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
     <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
-
   </script>
+
   <script type="text/template" id="infection-list">
     <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
     <tbody></tbody>
@@ -120,6 +122,9 @@
       <option value="ssihyst">Surgical Site Infection from abdominal hysterectomy</option>
     </select>
   </script>
+  <!-- END INFECTIONS
+  ================================================== -->
+
   <script type="text/template" id="loading-view">
     <div id="spinner"></div>
   </script>

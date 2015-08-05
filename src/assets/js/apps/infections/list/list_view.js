@@ -16,15 +16,14 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
   List.Infection = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#infection-list-item",
-
-      events: {
-        "click .js-show": "showClicked"
-      },
-      showClicked: function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        this.trigger("infection:show", this.model);
-      }
+    events: {
+      "click .js-show": "showClicked"
+    },
+    showClicked: function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      this.trigger("infection:show", this.model);
+    }
   });
 
   List.Infections = Marionette.CompositeView.extend({
