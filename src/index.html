@@ -105,6 +105,21 @@
     <div class="alert-box warning">This entry doesn't exist!</div>
   </script>
 
+  <script type="text/template" id="infections-list-layout">
+    <div id="infections-menu-region"></div>
+    <div id="infections-list-region"></div>
+  </script>
+  
+  <script type="text/template" id="infections-menu-template">
+    <select id="js-infections-filter-criterion">
+      <option value="cdiff">Clostridium difficile (C.diff)</option>
+      <option value="mrsa">Methicillin-resistant staphylococcus sureus (MRSA)</option>
+      <option value="cauti">Catheter-associated urinary tract infections</option>
+      <option value="clabsi">Central line-associated blood stream infections</option>
+      <option value="ssicolon">Surgical Site Infection from colon surgery</option>
+      <option value="ssihyst">Surgical Site Infection from abdominal hysterectomy</option>
+    </select>
+  </script>
   <script type="text/template" id="loading-view">
     <div id="spinner"></div>
   </script>

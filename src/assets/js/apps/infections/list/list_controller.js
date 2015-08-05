@@ -7,16 +7,24 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
       var fetchingInfections = HospitalCheckup.request("infection:entities");
 
+      var infectionsListLayout = new List.Layout();
+      var infectionsListMenu = new List.Menu();
+
       $.when(fetchingInfections).done(function(infections){
         var infectionsListView = new List.Infections({
           collection: infections
+        });
+
+        infectionsListLayout.on("show", function(){
+          infectionsListLayout.menuRegion.show(infectionsListMenu);
+          infectionsListLayout.listRegion.show(infectionsListView);
         });
 
         infectionsListView.on("childview:infection:show", function(childView, model){
           HospitalCheckup.trigger("infection:show", model.get("id"));
         });
 
-        HospitalCheckup.regions.main.show(infectionsListView);
+        HospitalCheckup.regions.main.show(infectionsListLayout);
       });
     }
   }
