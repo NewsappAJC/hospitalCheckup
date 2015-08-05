@@ -24,6 +24,10 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           HospitalCheckup.trigger("infection:show", args.model.get("id"));
         });
 
+        infectionsListMenu.on("infections:filter", function(filterCriterion){
+          console.log("filter list with criterion: ", filterCriterion);
+        });
+
         HospitalCheckup.regions.main.show(infectionsListLayout);
       });
     }
