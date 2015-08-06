@@ -69,6 +69,18 @@
         "predicted": "28.779", 
         "ratio": "1.216", 
         "upper": "1.691"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "44258", 
+        "infection": "mrsa", 
+        "lower": "0.012", 
+        "na": "0", 
+        "note": "", 
+        "observed": "1", 
+        "predicted": "2.084", 
+        "ratio": "0.48", 
+        "upper": "2.674"
       }
     ], 
     "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
@@ -143,6 +155,18 @@
         "predicted": "11.624", 
         "ratio": "1.29", 
         "upper": "2.129"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "19840", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.984", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "ST MARY'S HOSPITAL"
@@ -217,6 +241,18 @@
         "predicted": "9.895", 
         "ratio": "0.91", 
         "upper": "1.727"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "17138", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.856", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
@@ -291,6 +327,18 @@
         "predicted": "131.916", 
         "ratio": "0.955", 
         "upper": "1.137"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "124431", 
+        "infection": "mrsa", 
+        "lower": "0.386", 
+        "na": "0", 
+        "note": "", 
+        "observed": "10", 
+        "predicted": "12.417", 
+        "ratio": "0.805", 
+        "upper": "1.481"
       }
     ], 
     "provider_name": "EMORY UNIVERSITY HOSPITAL"
@@ -365,6 +413,18 @@
         "predicted": "15.108", 
         "ratio": "0.662", 
         "upper": "1.217"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "24477", 
+        "infection": "mrsa", 
+        "lower": "0.15", 
+        "na": "0", 
+        "note": "", 
+        "observed": "2", 
+        "predicted": "1.613", 
+        "ratio": "1.24", 
+        "upper": "4.479"
       }
     ], 
     "provider_name": "TANNER MEDICAL CENTER - CARROLLTON"
@@ -439,6 +499,18 @@
         "predicted": "7.801", 
         "ratio": "0.385", 
         "upper": "1.124"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "15630", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.655", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "NEWTON MEDICAL CENTER"
@@ -513,6 +585,18 @@
         "predicted": "81.015", 
         "ratio": "0.654", 
         "upper": "0.856"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "135764", 
+        "infection": "mrsa", 
+        "lower": "0.653", 
+        "na": "0", 
+        "note": "", 
+        "observed": "11", 
+        "predicted": "8.404", 
+        "ratio": "1.309", 
+        "upper": "2.342"
       }
     ], 
     "provider_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC"
@@ -587,6 +671,18 @@
         "predicted": "14.147", 
         "ratio": "0.778", 
         "upper": "1.391"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "21418", 
+        "infection": "mrsa", 
+        "lower": "0.949", 
+        "na": "0", 
+        "note": "", 
+        "observed": "4", 
+        "predicted": "1.148", 
+        "ratio": "3.484", 
+        "upper": "8.921"
       }
     ], 
     "provider_name": "CARTERSVILLE MEDICAL CENTER"
@@ -661,6 +757,18 @@
         "predicted": "12.986", 
         "ratio": "0.308", 
         "upper": "0.789"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "26265", 
+        "infection": "mrsa", 
+        "lower": "0.108", 
+        "na": "0", 
+        "note": "", 
+        "observed": "2", 
+        "predicted": "2.248", 
+        "ratio": "0.89", 
+        "upper": "3.214"
       }
     ], 
     "provider_name": "SPALDING REGIONAL HOSPITAL"
@@ -735,6 +843,18 @@
         "predicted": "104.429", 
         "ratio": "1.063", 
         "upper": "1.28"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "136469", 
+        "infection": "mrsa", 
+        "lower": "0.232", 
+        "na": "0", 
+        "note": "", 
+        "observed": "6", 
+        "predicted": "9.496", 
+        "ratio": "0.632", 
+        "upper": "1.375"
       }
     ], 
     "provider_name": "WELLSTAR KENNESTONE HOSPITAL"
@@ -809,6 +929,18 @@
         "predicted": "2.619", 
         "ratio": "1.145", 
         "upper": "3.348"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "3930", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.216", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "WELLSTAR PAULDING HOSPITAL"
@@ -883,6 +1015,18 @@
         "predicted": "33.998", 
         "ratio": "0.5", 
         "upper": "0.801"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "49858", 
+        "infection": "mrsa", 
+        "lower": "0.124", 
+        "na": "0", 
+        "note": "", 
+        "observed": "2", 
+        "predicted": "1.959", 
+        "ratio": "1.021", 
+        "upper": "3.688"
       }
     ], 
     "provider_name": "FLOYD MEDICAL CENTER"
@@ -957,6 +1101,18 @@
         "predicted": "47.495", 
         "ratio": "0.568", 
         "upper": "0.827"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "68912", 
+        "infection": "mrsa", 
+        "lower": "0.079", 
+        "na": "0", 
+        "note": "", 
+        "observed": "2", 
+        "predicted": "3.085", 
+        "ratio": "0.648", 
+        "upper": "2.342"
       }
     ], 
     "provider_name": "ATHENS REGIONAL MEDICAL CENTER"
@@ -1031,6 +1187,18 @@
         "predicted": "38.903", 
         "ratio": "0.823", 
         "upper": "1.161"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "78955", 
+        "infection": "mrsa", 
+        "lower": "0.339", 
+        "na": "0", 
+        "note": "", 
+        "observed": "4", 
+        "predicted": "3.215", 
+        "ratio": "1.244", 
+        "upper": "3.186"
       }
     ], 
     "provider_name": "DEKALB MEDICAL CENTER"
@@ -1105,6 +1273,18 @@
         "predicted": "77.069", 
         "ratio": "1.012", 
         "upper": "1.263"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "96194", 
+        "infection": "mrsa", 
+        "lower": "0.29", 
+        "na": "0", 
+        "note": "", 
+        "observed": "9", 
+        "predicted": "14.21", 
+        "ratio": "0.633", 
+        "upper": "1.202"
       }
     ], 
     "provider_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN"
@@ -1179,6 +1359,18 @@
         "predicted": "99.054", 
         "ratio": "0.757", 
         "upper": "0.949"
+      }, 
+      {
+        "category": "Worse than the U.S. National Benchmark", 
+        "days": "126540", 
+        "infection": "mrsa", 
+        "lower": "1.027", 
+        "na": "0", 
+        "note": "", 
+        "observed": "17", 
+        "predicted": "9.635", 
+        "ratio": "1.764", 
+        "upper": "2.825"
       }
     ], 
     "provider_name": "GRADY MEMORIAL HOSPITAL"
@@ -1253,6 +1445,18 @@
         "predicted": "42.825", 
         "ratio": "1.261", 
         "upper": "1.645"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "51748", 
+        "infection": "mrsa", 
+        "lower": "0.848", 
+        "na": "0", 
+        "note": "", 
+        "observed": "6", 
+        "predicted": "2.597", 
+        "ratio": "2.31", 
+        "upper": "5.029"
       }
     ], 
     "provider_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC"
@@ -1327,6 +1531,18 @@
         "predicted": "89.518", 
         "ratio": "1.318", 
         "upper": "1.579"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "114750", 
+        "infection": "mrsa", 
+        "lower": "0.476", 
+        "na": "0", 
+        "note": "", 
+        "observed": "9", 
+        "predicted": "8.653", 
+        "ratio": "1.04", 
+        "upper": "1.974"
       }
     ], 
     "provider_name": "PIEDMONT HOSPITAL"
@@ -1401,6 +1617,18 @@
         "predicted": "57.709", 
         "ratio": "0.814", 
         "upper": "1.083"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "102106", 
+        "infection": "mrsa", 
+        "lower": "0.09", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "6.844", 
+        "ratio": "0.438", 
+        "upper": "1.281"
       }
     ], 
     "provider_name": "GWINNETT MEDICAL CENTER"
@@ -1475,6 +1703,18 @@
         "predicted": "17.593", 
         "ratio": "1.194", 
         "upper": "1.825"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "28666", 
+        "infection": "mrsa", 
+        "lower": "0.359", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "1.722", 
+        "ratio": "1.742", 
+        "upper": "5.091"
       }
     ], 
     "provider_name": "ROCKDALE MEDICAL CENTER"
@@ -1549,6 +1789,18 @@
         "predicted": "49.122", 
         "ratio": "0.916", 
         "upper": "1.226"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "77630", 
+        "infection": "mrsa", 
+        "lower": "0.371", 
+        "na": "0", 
+        "note": "", 
+        "observed": "7", 
+        "predicted": "7.586", 
+        "ratio": "0.923", 
+        "upper": "1.901"
       }
     ], 
     "provider_name": "ATLANTA MEDICAL CENTER"
@@ -1623,6 +1875,18 @@
         "predicted": "51.931", 
         "ratio": "1.117", 
         "upper": "1.444"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "79392", 
+        "infection": "mrsa", 
+        "lower": "0.183", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "3.386", 
+        "ratio": "0.886", 
+        "upper": "2.589"
       }
     ], 
     "provider_name": "WELLSTAR COBB HOSPITAL"
@@ -1697,6 +1961,18 @@
         "predicted": "62.744", 
         "ratio": "0.877", 
         "upper": "1.141"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "133513", 
+        "infection": "mrsa", 
+        "lower": "0.142", 
+        "na": "0", 
+        "note": "", 
+        "observed": "4", 
+        "predicted": "7.698", 
+        "ratio": "0.52", 
+        "upper": "1.33"
       }
     ], 
     "provider_name": "NORTHSIDE HOSPITAL"
@@ -1771,6 +2047,18 @@
         "predicted": "40.567", 
         "ratio": "0.542", 
         "upper": "0.821"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "69671", 
+        "infection": "mrsa", 
+        "lower": "0.248", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "2.496", 
+        "ratio": "1.202", 
+        "upper": "3.513"
       }
     ], 
     "provider_name": "SOUTHERN REGIONAL MEDICAL CENTER"
@@ -1845,6 +2133,18 @@
         "predicted": "26.582", 
         "ratio": "0.64", 
         "upper": "1.024"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "37741", 
+        "infection": "mrsa", 
+        "lower": "0.694", 
+        "na": "0", 
+        "note": "", 
+        "observed": "5", 
+        "predicted": "2.341", 
+        "ratio": "2.136", 
+        "upper": "4.984"
       }
     ], 
     "provider_name": "REDMOND REGIONAL MEDICAL CENTER"
@@ -1919,6 +2219,18 @@
         "predicted": "16.628", 
         "ratio": "0.962", 
         "upper": "1.563"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "22517", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.936", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "WELLSTAR DOUGLAS HOSPITAL"
@@ -1993,6 +2305,18 @@
         "predicted": "29.109", 
         "ratio": "0.481", 
         "upper": "0.807"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "48095", 
+        "infection": "mrsa", 
+        "lower": "0.607", 
+        "na": "0", 
+        "note": "", 
+        "observed": "5", 
+        "predicted": "2.675", 
+        "ratio": "1.869", 
+        "upper": "4.362"
       }
     ], 
     "provider_name": "PIEDMONT HENRY HOSPITAL"
@@ -2067,6 +2391,18 @@
         "predicted": "28.447", 
         "ratio": "1.23", 
         "upper": "1.711"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "44481", 
+        "infection": "mrsa", 
+        "lower": "0.292", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "2.12", 
+        "ratio": "1.415", 
+        "upper": "4.136"
       }
     ], 
     "provider_name": "EASTSIDE MEDICAL CENTER"
@@ -2141,6 +2477,18 @@
         "predicted": "7.937", 
         "ratio": "1.386", 
         "upper": "2.48"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "16095", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.979", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "NORTH FULTON HOSPITAL"
@@ -2215,6 +2563,18 @@
         "predicted": "23.559", 
         "ratio": "0.509", 
         "upper": "0.89"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "41707", 
+        "infection": "mrsa", 
+        "lower": "0.296", 
+        "na": "0", 
+        "note": "", 
+        "observed": "3", 
+        "predicted": "2.093", 
+        "ratio": "1.433", 
+        "upper": "4.189"
       }
     ], 
     "provider_name": "PIEDMONT FAYETTE HOSPITAL"
@@ -2289,6 +2649,18 @@
         "predicted": "7.158", 
         "ratio": "0.559", 
         "upper": "1.431"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "9731", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.486", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC"
@@ -2363,6 +2735,18 @@
         "predicted": "15.948", 
         "ratio": "0.752", 
         "upper": "1.314"
+      }, 
+      {
+        "category": "No Different than U.S. National Benchmark", 
+        "days": "25834", 
+        "infection": "mrsa", 
+        "lower": "0.162", 
+        "na": "0", 
+        "note": "", 
+        "observed": "2", 
+        "predicted": "1.493", 
+        "ratio": "1.34", 
+        "upper": "4.839"
       }
     ], 
     "provider_name": "PIEDMONT NEWNAN HOSPITAL, INC"
@@ -2437,6 +2821,18 @@
         "predicted": "11.736", 
         "ratio": "1.619", 
         "upper": "2.528"
+      }, 
+      {
+        "category": "Not Available", 
+        "days": "20240", 
+        "infection": "mrsa", 
+        "lower": "0", 
+        "na": "1", 
+        "note": "Results cannot be calculated for this reporting period", 
+        "observed": "0", 
+        "predicted": "0.767", 
+        "ratio": "0", 
+        "upper": "0"
       }
     ], 
     "provider_name": "EMORY JOHNS CREEK HOSPITAL"

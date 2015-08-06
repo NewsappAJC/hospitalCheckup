@@ -23,7 +23,7 @@ for node in src:
         "county" : node["county_name"]
     }
     infections = {
-        "cauti" : {"infection" : "cauti"}, "clabsi" : {"infection" : "clabsi"}, "ssicolon" : {"infection" : "ssicolon"}, "ssihyst" : {"infection" : "ssihyst"}, "cdiff" : {"infection" : "cdiff"}
+        "cauti" : {"infection" : "cauti"}, "clabsi" : {"infection" : "clabsi"}, "mrsa": { "infection" : "mrsa"}, "ssicolon" : {"infection" : "ssicolon"}, "ssihyst" : {"infection" : "ssihyst"}, "cdiff" : {"infection" : "cdiff"}
     }
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
@@ -35,7 +35,7 @@ for node in src:
             #hospital["infections"][keys.index(tmp[0])][tmp[0]][tmp[1]] = node[key]
 
     #we want to loop through an array of infection objects rather than k/v pairs
-    hospital["infections"] = [infections["cauti"], infections["clabsi"], infections["ssicolon"], infections["ssihyst"], infections["cdiff"]]
+    hospital["infections"] = [infections["cauti"], infections["clabsi"], infections["ssicolon"], infections["ssihyst"], infections["cdiff"], infections["mrsa"]]
     tree.append(hospital)
 
 f = open( '../data/infections.json', 'w')
