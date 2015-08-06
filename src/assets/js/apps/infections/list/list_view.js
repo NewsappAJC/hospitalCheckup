@@ -14,11 +14,11 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
     events: {
       //TODO I read something about IE8 not really firing change event http://www.bentedder.com/backbone-change-events-on-select-menus/
-      "change #js-infections-filter-criterion": "filterInfections"
+      "change #js-infections-filter-criterion": "filterInfections" //looks like this broke the menu's display updating
     },
 
     filterInfections: function(e){
-      e.preventDefault();
+      //e.preventDefault();
       var criterion = $(e.currentTarget).val();
       this.trigger("infections:filter", criterion);
     }

@@ -86,7 +86,7 @@
   ================================================== -->
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
   </script>
 
   <script type="text/template" id="infection-list">
@@ -98,8 +98,8 @@
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:"cdiff"}).predicted %></p>
-    <p>Number of infections observed: <%- _.findWhere(infections, {infection:"cdiff"}).observed %></p>
+    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:measure}).predicted %></p>
+    <p>Number of infections observed: <%- _.findWhere(infections, {infection:measure}).observed %></p>
   </script>
 
   <script type="text/template" id="missing-hospital-view">

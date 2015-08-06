@@ -2,7 +2,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   Entities.Infection = Backbone.Model.extend({
     defaults: {
-      display_name: "No display name found!"
+      display_name: "No display name found!",
+      //measure: "cdiff"
     },
     urlRoot: "infections"
   });
@@ -11,17 +12,37 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
-    initialize: function(){
+    initialize: function(options){
       this.model= Entities.Infection;
       this.comparator= "display_name"; //sort by
+      this.measure = options.criterion;
+      //this.on('reset', this.parse); //not called by default
+    },
+    parse: function(response){
+      var measure = this.measure
+      response.forEach(function(item){
+        item.measure = measure || "cdiff";
+      });
+      /*response.forEach(function(hospital){
+        hospital.infections.forEach(function(group){ //create collections for the different infection types, attatch them to Entities and add the rest of the collection
+          var tmp = Entities[group.infection];
+          if(tmp){
+            tmp.add(group);
+          } else {
+            Entities[group.infection] = new Entities.InfectionCollection({model: group});
+          }
+        });
+        //hospitalHospitalInfectionsCollection = new Entities.HospitalInfectionsCollection(hospital.infections);
+      });*/
+      return response;
     }
   });
 
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
   var API = {
-    getInfectionEntities: function(){
-      var infections = new Entities.InfectionCollection();
+    getInfectionEntities: function(criterion){
+      var infections = new Entities.InfectionCollection({parse:true, criterion: criterion});
       var defer = $.Deferred();
       //check local storage to see if our data is already stored in there
       infections.fetch({
@@ -43,8 +64,9 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           });
         }
         function resetModels(models){
-          infections.reset(models);
+          infections.reset(models, {parse: true});
           infections.forEach(function(infection){
+            //infection.measure = criterion || "cdiff";
             infection.save(); //to local storage
           });
         }
@@ -66,8 +88,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     }
   }
 
-  HospitalCheckup.reqres.setHandler("infection:entities", function(){ //list infections
-    return API.getInfectionEntities();
+  HospitalCheckup.reqres.setHandler("infection:entities", function(criterion){ //list infections
+    return API.getInfectionEntities(criterion);
   });
 
   HospitalCheckup.reqres.setHandler("infection:entity", function(id){ //hospital selected from infection list, show hospital detail page

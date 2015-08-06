@@ -1,16 +1,16 @@
 HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.Controller = {
-    listInfections: function(){
+    listInfections: function(criterion){
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
-      var fetchingInfections = HospitalCheckup.request("infection:entities");
+      var fetchingInfections = HospitalCheckup.request("infection:entities", criterion);
 
       var infectionsListLayout = new List.Layout();
       var infectionsListMenu = new List.Menu();
 
-      $.when(fetchingInfections).done(function(infections){
+      $.when(fetchingInfections).done(function(infections, criterion){
         var infectionsListView = new List.Infections({
           collection: infections
         });
@@ -25,7 +25,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         infectionsListMenu.on("infections:filter", function(filterCriterion){
-          console.log("filter list with criterion: ", filterCriterion);
+          HospitalCheckup.trigger("infections:filter", filterCriterion); 
         });
 
         HospitalCheckup.regions.main.show(infectionsListLayout);
