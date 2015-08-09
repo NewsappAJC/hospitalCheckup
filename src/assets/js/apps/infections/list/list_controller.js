@@ -8,7 +8,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var fetchingInfections = HospitalCheckup.request("infection:entities", criterion);
 
       var infectionsListLayout = new List.Layout();
-      var infectionsListMenu = new List.Menu();
+      var infectionsMenuView = new List.Menu();
 
       $.when(fetchingInfections).done(function(infections, criterion){
         var infectionsListView = new List.Infections({
@@ -16,7 +16,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         infectionsListLayout.on("show", function(){
-          infectionsListLayout.menuRegion.show(infectionsListMenu);
+          infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
         });
 
@@ -24,7 +24,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           HospitalCheckup.trigger("infection:show", args.model.get("id"));
         });
 
-        infectionsListMenu.on("infections:filter", function(filterCriterion){
+        infectionsMenuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); 
         });
 
