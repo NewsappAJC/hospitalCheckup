@@ -20,10 +20,19 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       "change #js-infections-filter-criterion": "filterInfections" //looks like this broke the menu's display updating
     },
 
+    ui: {
+      criterion: "#js-infections-filter-criterion"
+    },
+
     filterInfections: function(e){
       //e.preventDefault();
       var criterion = $(e.currentTarget).val();
       this.trigger("infections:filter", criterion);
+    },
+
+    onSetFilterCriterion: function(criterion){
+      var el = this.ui.criterion; //in case no filter has been selected yet we'll need the default
+      el.val(criterion || el.val());
     }
 
   });

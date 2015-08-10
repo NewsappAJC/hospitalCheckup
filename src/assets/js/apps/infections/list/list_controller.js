@@ -28,8 +28,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           HospitalCheckup.trigger("infections:filter", filterCriterion); 
         });
 
-        infectionsMenuView.on("show", function(){ //because the menu view gets re-rendered also and doesn't update by itself
-          this.$("#js-infections-filter-criterion").val(infections.measure);
+        infectionsMenuView.once("show", function(){ //because the menu view gets re-rendered also and doesn't update by itself
+          infectionsMenuView.triggerMethod("set:filter:criterion", criterion);
         });
 
         HospitalCheckup.regions.main.show(infectionsListLayout);
