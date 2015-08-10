@@ -12,17 +12,9 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
-    initialize: function(options){
-      this.model= Entities.Infection;
-      this.comparator= "display_name"; //sort by
-      this.measure = options.criterion || "cdiff"; //this is used in the `parse` func
-      //this.on('reset', this.parse); //not called by default
-    },
-    parse: function(response){
-      var measure = this.measure
-      response.forEach(function(item){
-        item.measure = measure || "cdiff";
-      });
+    model: Entities.Infection,
+    comparator: "display_name",
+    //parse: function(response){
       /*response.forEach(function(hospital){
         hospital.infections.forEach(function(group){ //create collections for the different infection types, attatch them to Entities and add the rest of the collection
           var tmp = Entities[group.infection];
@@ -34,15 +26,15 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
         });
         //hospitalHospitalInfectionsCollection = new Entities.HospitalInfectionsCollection(hospital.infections);
       });*/
-      return response;
-    }
+      //return response;
+    //}
   });
 
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
   var API = {
-    getInfectionEntities: function(criterion){
-      var infections = new Entities.InfectionCollection({parse:true, criterion: criterion});
+    getInfectionEntities: function(){
+      var infections = new Entities.InfectionCollection();
       var defer = $.Deferred();
       //check local storage to see if our data is already stored in there
       infections.fetch({
@@ -64,9 +56,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           });
         }
         function resetModels(models){
-          infections.reset(models, {parse: true});
+          infections.reset(models);
           infections.forEach(function(infection){
-            //infection.measure = criterion || "cdiff";
             infection.save(); //to local storage
           });
         }

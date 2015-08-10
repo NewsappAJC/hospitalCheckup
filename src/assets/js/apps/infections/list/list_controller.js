@@ -5,14 +5,23 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
-      var fetchingInfections = HospitalCheckup.request("infection:entities", criterion);
+      var fetchingInfections = HospitalCheckup.request("infection:entities");
 
       var infectionsListLayout = new List.Layout();
       var infectionsMenuView = new List.Menu();
 
       $.when(fetchingInfections).done(function(infections){
+        var filteredInfections = HospitalCheckup.Entities.FilteredCollection({
+          collection: infections,
+          filterFunction: function(criterion){
+            return function(infection){
+              infection.set({measure:criterion || "cdiff"}); //TODO better way to set default before menu renders?
+              return infection;
+            }
+          }
+        });
         var infectionsListView = new List.Infections({
-          collection: infections
+          collection: filteredInfections
         });
 
         infectionsListLayout.on("show", function(){
@@ -25,10 +34,11 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
-          HospitalCheckup.trigger("infections:filter", filterCriterion); 
+          HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
+          filteredInfections.filter(filterCriterion); //update collection
         });
 
-        infectionsMenuView.once("show", function(){ //because the menu view gets re-rendered also and doesn't update by itself
+        infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
           infectionsMenuView.triggerMethod("set:filter:criterion", criterion);
         });
 

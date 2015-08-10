@@ -21,7 +21,6 @@ Hosted here:
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
 - [ ] ssihyst uses procedures instead of patient days, fix it
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
-- [ ] have view listen for changes to its model and rerender on change event (see To-Do backbone example app)
 
 ##Questions
 - [ ] Rate == Ratio

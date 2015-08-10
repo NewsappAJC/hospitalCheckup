@@ -29,7 +29,6 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
 
   HospitalCheckup.on("infections:filter", function(criterion){ //filter menu changed
     HospitalCheckup.navigate("infections/filter/" + criterion);
-    API.listInfections(criterion);
   });
 
   InfectionsApp.on("start", function(){
