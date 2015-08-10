@@ -1,3 +1,4 @@
+//general ContactManager app code (defining regions, the start handler, etc.):
 var HospitalCheckup = new Marionette.Application();
 
 HospitalCheckup.navigate = function(route, options){

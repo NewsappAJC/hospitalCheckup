@@ -1,5 +1,5 @@
 HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone, Marionette, $, _){
-
+  //Entities = models and collections
   Entities.Infection = Backbone.Model.extend({
     defaults: {
       display_name: "No display name found!",
