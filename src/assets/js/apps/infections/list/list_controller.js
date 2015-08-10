@@ -10,7 +10,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var infectionsListLayout = new List.Layout();
       var infectionsMenuView = new List.Menu();
 
-      $.when(fetchingInfections).done(function(infections, criterion){
+      $.when(fetchingInfections).done(function(infections){
         var infectionsListView = new List.Infections({
           collection: infections
         });
@@ -26,6 +26,10 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); 
+        });
+
+        infectionsMenuView.on("show", function(){ //because the menu view gets re-rendered also and doesn't update by itself
+          this.$("#js-infections-filter-criterion").val(infections.measure);
         });
 
         HospitalCheckup.regions.main.show(infectionsListLayout);

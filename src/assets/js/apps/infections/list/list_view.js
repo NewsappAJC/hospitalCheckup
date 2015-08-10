@@ -6,6 +6,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     regions: {
       menuRegion: "#infections-menu-region",
       listRegion: "#infections-list-region"
+    },
+    onRender: function(){
+      console.log("RENDER LAYOUT");
     }
   });
 

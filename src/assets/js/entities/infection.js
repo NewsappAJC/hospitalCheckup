@@ -15,7 +15,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     initialize: function(options){
       this.model= Entities.Infection;
       this.comparator= "display_name"; //sort by
-      this.measure = options.criterion;
+      this.measure = options.criterion || "cdiff"; //this is used to update `menu.val()` as well as in the `parse` func
       //this.on('reset', this.parse); //not called by default
     },
     parse: function(response){
