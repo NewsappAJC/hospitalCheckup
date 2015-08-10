@@ -260,19 +260,19 @@ module.exports = function(grunt) {
         },
         files: {
           "jquery.js": "jquery/dist/jquery.js",
-          "chroma.js": "chroma-js/chroma.min.js",
+          "chroma.js": "chroma-js/chroma.min.js", //colors
           "underscore.js": "underscore/underscore.js",
           "json2.js": "json2/json2.js",
           "backbone.js": "backbone/backbone.js",
           "backbone.marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.js",
-          "d3bb.js": "d3bb/build/d3bb.js",
+          "d3bb.js": "d3bb/build/d3bb.js", //John Perry's backbone wrapper for d3
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
-          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js",
-          "spin.js": "spin.js/spin.js",
-          "jquery.spin.js": "spin.js/jquery.spin.js"
+          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
+          "spin.js": "spin.js/spin.js", //for page loading spinner
+          "jquery.spin.js": "spin.js/jquery.spin.js" //for using ^ with jquery
         }
       },
       lib_styles: {
