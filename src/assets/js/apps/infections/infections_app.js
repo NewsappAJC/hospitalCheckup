@@ -1,8 +1,8 @@
 HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup, Backbone, Marionette, $, _){
   InfectionsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
-     // "infections": "listInfections",
-      "infections/:id": "showInfection",
+      "infections(/)": "listInfections",
+      "infections/:id(/)": "showInfection",
       "infections(/filter/:criterion)": "listInfections" //dropdown infections filters
     }
   });

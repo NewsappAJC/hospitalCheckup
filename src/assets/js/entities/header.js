@@ -18,7 +18,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
       {name: "Home", url: ""},
       {name: "Infections", url: "infections"},
       {name: "Surgery", url: "hipsknees"},
-      {name: "Labor and Deliver", url: "perinatal"}
+      {name: "Labor and Delivery", url: "perinatal"}
     ]);
   };
 

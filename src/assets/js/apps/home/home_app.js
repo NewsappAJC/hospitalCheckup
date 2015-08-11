@@ -1,8 +1,7 @@
 HospitalCheckup.module("HomeApp", function(HomeApp, HospitalCheckup, Backbone, Marionette, $, _) {
   HomeApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
-      "": "showHome",
-      "home": "showHome"
+      "": "showHome"
     }
   });
 
