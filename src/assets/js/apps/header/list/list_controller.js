@@ -5,18 +5,8 @@ HospitalCheckup.module("HeaderApp.List", function(List, HospitalCheckup, Backbon
       var headers = new List.Headers({collection: links});
 
       headers.on("childview:navigate", function(childView, model){
-        var url = model.get("url");
-        if(url === ""){
-          HospitalCheckup.trigger("home:show");
-        } else if(url === "infections"){
-          HospitalCheckup.trigger("infections:list");
-        } else if(url === "hipsknees"){
-          console.log("trigger hipsknees");
-        } else if(url === "perinatal"){
-          console.log("trigger perinatal");
-        } else{
-          throw "No such sub-application: " + url;
-        }
+        var trigger = model.get("navigationTrigger");
+        HospitalCheckup.trigger(trigger);
       });
 
       HospitalCheckup.regions.header.show(headers);

@@ -15,8 +15,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   var initializeHeaders = function(){
     Entities.headers = new Entities.HeaderCollection([
-      {name: "Home", url: ""},
-      {name: "Infections", url: "infections"},
+      {name: "Home", url: "", navigationTrigger: "home:show"},
+      {name: "Infections", url: "infections", navigationTrigger: "infections:list"},
       {name: "Surgery", url: "hipsknees"},
       {name: "Labor and Delivery", url: "perinatal"}
     ]);
