@@ -36,30 +36,33 @@
 
 </head>
 <body>
-  <nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <a href="http://myajc.com" target="_blank">
-          <span id="ajc-logo"><img src="assets/img/ajc_white.svg"/></span>
-        </a>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="active"><a class="button" href="/">Home</a></li>
-        <li><a class="button" href="#infections">Infections</a></li>
-        <li><a class="button" href="#hipsknees">Surgery</a></li>
-        <li><a class="button" href="#perinatal">Labor and delivery</a></li>
-      </ul>
-    </section>
-  </nav>
 
   <div id="app-container">
+    <div id="header-region"></div>
     <div id="main-region" class="container"></div>
   </div>
+
+  <script type="text/template" id="header-template">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="logo">
+          <a href="http://myajc.com" target="_blank">
+            <span id="ajc-logo"><img src="assets/img/ajc_white.svg"/></span>
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right" id="nav"></ul>
+      </section>
+    </nav>
+  </script>
+
+  <script type="text/template" id="header-link">
+    <a class="header-link" href="#<%- url %>"><%- name %></a>
+  </script>
 
   <script type="text/template" id="homepage-template">
     <div id="bg-img">
@@ -82,11 +85,13 @@
     </div>
   </script>
 
+  <!-- INFECTIONS
+  ================================================== -->
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).ratio %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).lower %> to <%- _.findWhere(infections, {infection:"cdiff"}).upper %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).days %></td><td><%- _.findWhere(infections, {infection:"cdiff"}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
-
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
   </script>
+
   <script type="text/template" id="infection-list">
     <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
     <tbody></tbody>
@@ -96,13 +101,35 @@
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:"cdiff"}).predicted %></p>
-    <p>Number of infections observed: <%- _.findWhere(infections, {infection:"cdiff"}).observed %></p>
+    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:measure}).predicted %></p>
+    <p>Number of infections observed: <%- _.findWhere(infections, {infection:measure}).observed %></p>
   </script>
 
   <script type="text/template" id="missing-hospital-view">
     <!-- triggered when you attempt to reach a hospital specific view with an ID that doesn't exist in the data -->
     <div class="alert-box warning">This entry doesn't exist!</div>
+  </script>
+
+  <script type="text/template" id="infections-list-layout">
+    <div id="infections-menu-region"></div>
+    <div id="infections-list-region"></div>
+  </script>
+  
+  <script type="text/template" id="infections-menu-template">
+    <select id="js-infections-filter-criterion">
+      <option value="cdiff">Clostridium difficile (C.diff)</option>
+      <option value="mrsa">Methicillin-resistant staphylococcus sureus (MRSA)</option>
+      <option value="cauti">Catheter-associated urinary tract infections</option>
+      <option value="clabsi">Central line-associated blood stream infections</option>
+      <option value="ssicolon">Surgical Site Infection from colon surgery</option>
+      <option value="ssihyst">Surgical Site Infection from abdominal hysterectomy</option>
+    </select>
+  </script>
+  <!-- END INFECTIONS
+  ================================================== -->
+
+  <script type="text/template" id="loading-view">
+    <div id="spinner"></div>
   </script>
 
   <script src="assets/js/vendor/jquery.js"></script>
@@ -114,11 +141,19 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/d3bb.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/vendor/spin.js"></script>
+  <script src="assets/js/vendor/jquery.spin.js"></script>
+  <script src="assets/js/vendor/backbone.select.js"></script>
   <script src="assets/js/vendor/flatpage_stubs.js"></script>
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/apps/config/storage/localstorage.js"></script>
+  <script src="assets/js/entities/common.js"></script>
+  <script src="assets/js/entities/header.js"></script>
+  <script src="assets/js/apps/header/list/list_controller.js"></script>
+  <script src="assets/js/apps/header/list/list_view.js"></script>
+  <script src="assets/js/apps/header/header_app.js"></script>
   <script src="assets/js/entities/infection.js"></script>
   <script src="assets/js/apps/infections/list/list_view.js"></script>
   <script src="assets/js/apps/infections/list/list_controller.js"></script>
@@ -128,6 +163,7 @@
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
+  <script src="assets/js/common/views.js"></script>
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();

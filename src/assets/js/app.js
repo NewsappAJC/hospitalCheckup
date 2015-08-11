@@ -1,3 +1,4 @@
+//general ContactManager app code (defining regions, the start handler, etc.):
 var HospitalCheckup = new Marionette.Application();
 
 HospitalCheckup.navigate = function(route, options){
@@ -14,6 +15,7 @@ HospitalCheckup.on("before:start", function(){
     el: "#app-container",
 
     regions: {
+      header: "#header-region",
       main: "#main-region"
     }
   });
