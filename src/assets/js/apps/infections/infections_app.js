@@ -10,10 +10,12 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
   var API = {
     listInfections: function(criterion){
       InfectionsApp.List.Controller.listInfections(criterion);
+      HospitalCheckup.execute("set:active:header", "infections");
     },
 
     showInfection: function(id){
       InfectionsApp.Show.Controller.showInfection(id);
+      HospitalCheckup.execute("set:active:header", "infections");
     }
   };
 

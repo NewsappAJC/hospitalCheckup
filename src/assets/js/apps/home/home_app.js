@@ -9,11 +9,12 @@ HospitalCheckup.module("HomeApp", function(HomeApp, HospitalCheckup, Backbone, M
   var API = {
     showHome: function() {
       HomeApp.Controller.showHome();
+      HospitalCheckup.execute("set:active:header", "");
     }
   };
 
   HospitalCheckup.on("homeapp:home", function() {
-    HospitalCheckup.navigate("/");
+    HospitalCheckup.navigate("");
     API.showHome();
   });
 
