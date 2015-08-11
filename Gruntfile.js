@@ -73,7 +73,8 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/fastclick.js',
               'src/assets/js/vendor/backbone.localstorage.js',
               'src/assets/js/vendor/jquery.spin.js',
-              'src/assets/js/vendor/spin.js'
+              'src/assets/js/vendor/spin.js',
+              'src/assets/js/vendor/backbone.select.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -133,7 +134,8 @@ module.exports = function(grunt) {
           'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
           'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js'],
           'build/assets/js/common/views.js': ['src/assets/js/common/views.js'],
-          'build/assets/js/entities/common.js': ['src/assets/js/entities/common.js']
+          'build/assets/js/entities/common.js': ['src/assets/js/entities/common.js'],
+          'build/assets/js/entities/header.js': ['src/assets/js/entities/header.js']
         }
       }
     },
@@ -260,19 +262,20 @@ module.exports = function(grunt) {
         },
         files: {
           "jquery.js": "jquery/dist/jquery.js",
-          "chroma.js": "chroma-js/chroma.min.js",
+          "chroma.js": "chroma-js/chroma.min.js", //colors
           "underscore.js": "underscore/underscore.js",
           "json2.js": "json2/json2.js",
           "backbone.js": "backbone/backbone.js",
           "backbone.marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.js",
-          "d3bb.js": "d3bb/build/d3bb.js",
+          "d3bb.js": "d3bb/build/d3bb.js", //John Perry's backbone wrapper for d3
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
-          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js",
-          "spin.js": "spin.js/spin.js",
-          "jquery.spin.js": "spin.js/jquery.spin.js"
+          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
+          "spin.js": "spin.js/spin.js", //for page loading spinner
+          "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
+          "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options
         }
       },
       lib_styles: {

@@ -15,6 +15,7 @@ HospitalCheckup.on("before:start", function(){
     el: "#app-container",
 
     regions: {
+      header: "#header-region",
       main: "#main-region"
     }
   });
