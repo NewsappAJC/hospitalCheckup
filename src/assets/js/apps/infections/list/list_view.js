@@ -25,7 +25,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     },
 
     filterInfections: function(e){
-      //e.preventDefault();
+      e.preventDefault();
       var criterion = $(e.currentTarget).val();
       this.trigger("infections:filter", criterion);
     },
