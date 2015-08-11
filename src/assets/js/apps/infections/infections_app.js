@@ -19,7 +19,7 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){ //list infections //do I need this??
+  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });

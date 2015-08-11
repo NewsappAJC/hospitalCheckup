@@ -23,14 +23,18 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         var infectionsListView = new List.Infections({
           collection: filteredInfections
         });
+        var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital({model: filteredInfections.models[0]});
 
         infectionsListLayout.on("show", function(){
           infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
+          infectionsListLayout.hospitalRegion.show(hospitalShowView);
         });
 
         infectionsListView.on("childview:infection:show", function(childView, args){
-          HospitalCheckup.trigger("infection:show", args.model.get("id"));
+          //HospitalCheckup.trigger("infection:show", args.model.get("id"));
+          hospitalShowView.model = args.model;
+          hospitalShowView.render();
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
