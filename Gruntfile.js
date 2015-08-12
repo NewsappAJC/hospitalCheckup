@@ -74,7 +74,8 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/backbone.localstorage.js',
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
-              'src/assets/js/vendor/backbone.select.js'
+              'src/assets/js/vendor/backbone.select.js',
+              'src/assets/js/vendor/CharView.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -278,7 +279,8 @@ module.exports = function(grunt) {
           "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "spin.js": "spin.js/spin.js", //for page loading spinner
           "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
-          "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options
+          "backbone.select.js": "backbone.select/dist/backbone.select.js", //for handling selecting/deselecting menu options,
+          "ChartView.js": "chartview/ChartView.js"
         }
       },
       lib_styles: {
