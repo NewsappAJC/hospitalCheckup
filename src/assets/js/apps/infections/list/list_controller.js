@@ -1,7 +1,7 @@
 HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.Controller = {
-    listInfections: function(criterion){
+    listInfections: function(id, criterion){
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
@@ -23,14 +23,23 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         var infectionsListView = new List.Infections({
           collection: filteredInfections
         });
+        var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
+
+        if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
+          HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
+        } else { //use the first model in the list as a default
+          hospitalShowView.model = filteredInfections.models[0];
+          hospitalShowView.render();
+        }
 
         infectionsListLayout.on("show", function(){
           infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
+          infectionsListLayout.hospitalRegion.show(hospitalShowView);
         });
 
-        infectionsListView.on("childview:infection:show", function(childView, args){
-          HospitalCheckup.trigger("infection:show", args.model.get("id"));
+        infectionsListView.on("childview:hospital:change", function(childview, args){
+          HospitalCheckup.trigger("hospital:change", args.model, hospitalShowView);
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){

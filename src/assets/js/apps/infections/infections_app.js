@@ -1,32 +1,38 @@
 HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup, Backbone, Marionette, $, _){
   InfectionsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
-      "infections(/)": "listInfections",
-      "infections/:id(/)": "showInfection",
-      "infections(/filter/:criterion)": "listInfections" //dropdown infections filters
+      //"infections(/)": "listInfections",
+      "infections(/:id)(/filter/:criterion)": "listInfections" //hospital selection IDs and dropdown infections filters
     }
   });
 
   var API = {
-    listInfections: function(criterion){
-      InfectionsApp.List.Controller.listInfections(criterion);
-      HospitalCheckup.execute("set:active:header", "infections");
+    listInfections: function(id, criterion){
+      InfectionsApp.List.Controller.listInfections(id,criterion);
+      HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 
-    showInfection: function(id){
-      InfectionsApp.Show.Controller.showInfection(id);
-      HospitalCheckup.execute("set:active:header", "infections");
+    showHospital: function(id, view){  //received URL with ID parameter
+      InfectionsApp.Show.Controller.showHospital(id, view);
+    },
+
+    changeHospital: function(model, view){ //hospital selected from list
+      InfectionsApp.Show.Controller.changeHospital(model, view);
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){ //list infections //do I need this??
+  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });
 
-  HospitalCheckup.on("infection:show", function(id){ //hospital selected from infection list, show hospital detail page
-    HospitalCheckup.navigate("infections/" + id);
-    API.showInfection(id);
+  HospitalCheckup.on("hospital:show", function(id, view){ //received URL with ID parameter
+    API.showHospital(id, view);
+  });
+
+  HospitalCheckup.on("hospital:change", function(model, view){ //hospital selected from infection list
+    HospitalCheckup.navigate("infections/" + model.get("id"));
+    API.changeHospital(model, view);
   });
 
   HospitalCheckup.on("infections:filter", function(criterion){ //filter menu changed

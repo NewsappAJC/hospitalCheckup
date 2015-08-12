@@ -1,21 +1,24 @@
 HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
   Show.Controller = {
-    showInfection: function(id){
-      var loadingView = new HospitalCheckup.Common.Views.Loading();
-      HospitalCheckup.regions.main.show(loadingView);
+    showHospital: function(id, view){ //received URL with ID parameter
 
-      var fetchingInfection = HospitalCheckup.request("infection:entity", id);
-      $.when(fetchingInfection).done(function(infection){
-        var infectionView;
-        if(infection !== undefined){
-          infectionView = new Show.Infection({
-            model: infection
-          });
+      var fetchingHospital = HospitalCheckup.request("hospital:entity", id);
+      $.when(fetchingHospital).done(function(hospital){
+        if(hospital !== undefined){
+          view.model = hospital;
         } else {
-          infectionView = new Show.MissingHospital();
+           //we should only end up here if someone goes to a URL 
+          //with an ID that none of our hospitals have (that shouldn't happen);
+          view = new Show.MissingHospital();
         }
-        HospitalCheckup.regions.main.show(infectionView);
+
+        view.render();
       });
+    },
+
+    changeHospital: function(model, view){ //hospitalSelected
+      view.model = model;
+      view.render();
     }
   }
 });

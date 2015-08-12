@@ -69,4 +69,5 @@ h3 {
 /*list views*/
 tbody tr:hover {
   background-color: #d8d8d8;
+  cursor: pointer;
 }

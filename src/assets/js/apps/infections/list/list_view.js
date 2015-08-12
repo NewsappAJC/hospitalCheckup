@@ -2,10 +2,11 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   List.Layout = Marionette.LayoutView.extend({
     template: "#infections-list-layout",
-
+    className: "large-12 columns",
     regions: {
       menuRegion: "#infections-menu-region",
-      listRegion: "#infections-list-region"
+      listRegion: "#infections-list-region",
+      hospitalRegion: "#hospital-show-region"
     },
     onRender: function(){
       console.log("RENDER LAYOUT");
@@ -37,19 +38,19 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   });
 
-  List.Infection = Marionette.ItemView.extend({
+  List.Hospital = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#infection-list-item",
     triggers: {
-      "click td .js-show": "infection:show"
+      "click": "hospital:change"
     }
   });
 
   List.Infections = Marionette.CompositeView.extend({
     tagName: "table",
-    className: "columns",
+    //className: "columns",
     template: "#infection-list",
-    childView: List.Infection,
+    childView: List.Hospital,
     childViewContainer: "tbody"
   });
 });
