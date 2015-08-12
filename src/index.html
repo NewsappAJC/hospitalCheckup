@@ -89,7 +89,7 @@
   ================================================== -->
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td><td><a href="#infections/<%- id %>" class="button tiny js-show">Show</a></td>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td>
   </script>
 
   <script type="text/template" id="infection-list">
@@ -97,7 +97,7 @@
     <tbody></tbody>
   </script>
 
-  <script type="text/template" id="infection-view">
+  <script type="text/template" id="hospital-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
@@ -111,8 +111,13 @@
   </script>
 
   <script type="text/template" id="infections-list-layout">
-    <div id="infections-menu-region"></div>
-    <div id="infections-list-region"></div>
+    <div class="row">
+      <div id="infections-menu-region" class="medium-12 columns"></div>
+    </div>
+    <div class="row">
+      <div id="infections-list-region" class="medium-9 columns"></div>
+      <div id="hospital-show-region" class="medium-3 columns"></div>
+    </div>
   </script>
   
   <script type="text/template" id="infections-menu-template">

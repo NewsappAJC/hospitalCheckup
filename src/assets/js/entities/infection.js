@@ -1,6 +1,6 @@
 HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone, Marionette, $, _){
   //Entities = models and collections
-  Entities.Infection = Backbone.Model.extend({
+  Entities.Hospital = Backbone.Model.extend({
     defaults: {
       display_name: "No display name found!",
       //measure: "cdiff"
@@ -8,11 +8,11 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     urlRoot: "infections"
   });
 
-  Entities.configureStorage("HospitalCheckup.Entities.Infection");
+  Entities.configureStorage("HospitalCheckup.Entities.Hospital");
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
-    model: Entities.Infection,
+    model: Entities.Hospital,
     comparator: "display_name",
     //parse: function(response){
       /*response.forEach(function(hospital){
@@ -65,10 +65,10 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
       return promise;
     },
 
-    getInfectionEntity: function(infectionId){
-      var infection = new Entities.Infection({id: infectionId});
+    getHospitalEntity: function(hospitalId){
+      var hospital = new Entities.Hospital({id: hospitalId});
       var defer = $.Deferred();
-      infection.fetch({
+      hospital.fetch({
         success: function(data){
           defer.resolve(data);
         }, error: function(data){
@@ -83,7 +83,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     return API.getInfectionEntities(criterion);
   });
 
-  HospitalCheckup.reqres.setHandler("infection:entity", function(id){ //hospital selected from infection list, show hospital detail page
-    return API.getInfectionEntity(id);
+  HospitalCheckup.reqres.setHandler("hospital:entity", function(id){ //hospital selected from infection list, show hospital detail page
+    return API.getHospitalEntity(id);
   });
 });
