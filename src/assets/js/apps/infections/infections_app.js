@@ -8,7 +8,7 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
 
   var API = {
     listInfections: function(id, criterion){
-      InfectionsApp.List.Controller.listInfections(id,criterion);
+      InfectionsApp.List.Controller.listInfections(id, criterion);
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 

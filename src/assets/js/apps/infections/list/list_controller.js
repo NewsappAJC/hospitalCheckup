@@ -21,7 +21,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           }
         });
         var infectionsListView = new List.Infections({
-          collection: filteredInfections
+          collection: filteredInfections.filter(criterion)
         });
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
