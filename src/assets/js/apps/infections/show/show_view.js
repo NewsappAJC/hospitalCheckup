@@ -5,6 +5,6 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
   });
 
   Show.Hospital = Marionette.ItemView.extend({
-    template: "#infection-view"
+    template: "#hospital-view"
   });
 });

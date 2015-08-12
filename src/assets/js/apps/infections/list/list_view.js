@@ -38,11 +38,11 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   });
 
-  List.Infection = Marionette.ItemView.extend({
+  List.Hospital = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#infection-list-item",
     triggers: {
-      "click td .js-show": "infection:change"
+      "click td .js-show": "hospital:change"
     }
   });
 
@@ -50,7 +50,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     tagName: "table",
     className: "columns",
     template: "#infection-list",
-    childView: List.Infection,
+    childView: List.Hospital,
     childViewContainer: "tbody"
   });
 });

@@ -2,10 +2,10 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
   Show.Controller = {
     showHospital: function(id, view){ //received URL with ID parameter
 
-      var fetchingInfection = HospitalCheckup.request("infection:entity", id);
-      $.when(fetchingInfection).done(function(infection){
-        if(infection !== undefined){
-          view.model = infection;
+      var fetchingHospital = HospitalCheckup.request("hospital:entity", id);
+      $.when(fetchingHospital).done(function(hospital){
+        if(hospital !== undefined){
+          view.model = hospital;
         } else {
            //we should only end up here if someone goes to a URL 
           //with an ID that none of our hospitals have (that shouldn't happen);

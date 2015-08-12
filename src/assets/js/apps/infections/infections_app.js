@@ -26,11 +26,11 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     API.listInfections();
   });
 
-  HospitalCheckup.on("infection:show", function(id, view){ //received URL with ID parameter
+  HospitalCheckup.on("hospital:show", function(id, view){ //received URL with ID parameter
     API.showHospital(id, view);
   });
 
-  HospitalCheckup.on("infection:change", function(model, view){ //hospital selected from infection list
+  HospitalCheckup.on("hospital:change", function(model, view){ //hospital selected from infection list
     HospitalCheckup.navigate("infections/" + model.get("id"));
     API.changeHospital(model, view);
   });

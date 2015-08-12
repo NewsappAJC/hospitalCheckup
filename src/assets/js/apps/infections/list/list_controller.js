@@ -26,7 +26,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
         if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
-          HospitalCheckup.trigger("infection:show", id, hospitalShowView);
+          HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
         } else { //use the first model in the list as a default
           hospitalShowView.model = filteredInfections.models[0];
           hospitalShowView.render();
@@ -38,8 +38,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           infectionsListLayout.hospitalRegion.show(hospitalShowView);
         });
 
-        infectionsListView.on("childview:infection:change", function(childview, args){
-          HospitalCheckup.trigger("infection:change", args.model, hospitalShowView);
+        infectionsListView.on("childview:hospital:change", function(childview, args){
+          HospitalCheckup.trigger("hospital:change", args.model, hospitalShowView);
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
