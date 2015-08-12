@@ -16,6 +16,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           filterFunction: function(criterion){
             return function(infection){
               infection.set({measure:criterion || "cdiff"}); //TODO better way to set default before menu renders?
+              infection.save();
               return infection;
             }
           }
