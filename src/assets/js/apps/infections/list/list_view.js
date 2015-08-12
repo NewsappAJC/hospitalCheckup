@@ -42,7 +42,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     tagName: "tr",
     template: "#infection-list-item",
     triggers: {
-      "click td .js-show": "infection:show"
+      "click td .js-show": "infection:change"
     }
   });
 
