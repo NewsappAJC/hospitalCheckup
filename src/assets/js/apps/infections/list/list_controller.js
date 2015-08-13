@@ -16,12 +16,13 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           filterFunction: function(criterion){
             return function(infection){
               infection.set({measure:criterion || "cdiff"}); //TODO better way to set default before menu renders?
+              infection.save();
               return infection;
             }
           }
         });
         var infectionsListView = new List.Infections({
-          collection: filteredInfections
+          collection: filteredInfections.filter(criterion)
         });
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 

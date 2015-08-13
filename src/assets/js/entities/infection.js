@@ -35,15 +35,15 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   var API = {
     getInfectionEntities: function(){
       var infections = new Entities.InfectionCollection();
-      var defer = $.Deferred();
+      var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
+      var deferServer = $.Deferred(); //we might need to wait for data to be fetched from server
       //check local storage to see if our data is already stored in there
       infections.fetch({
         success: function(data){
-          defer.resolve(data);
+          deferLocal.resolve(data);
         }
       });
-      var promise = defer.promise();
-      $.when(promise).done(function(fetchedInfections){
+      $.when(deferLocal.promise()).done(function(fetchedInfections){
         if(fetchedInfections.length === 0){
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
@@ -54,15 +54,20 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             type: "GET",
             success: resetModels
           });
+
+          function resetModels(models){
+            infections.reset(models);
+            infections.forEach(function(infection){
+              infection.save(); //to local storage
+            });
+            deferServer.resolve(infections);
+          }
+        } else {
+          deferServer.resolve(fetchedInfections);
         }
-        function resetModels(models){
-          infections.reset(models);
-          infections.forEach(function(infection){
-            infection.save(); //to local storage
-          });
-        }
+
       });
-      return promise;
+      return deferServer.promise();
     },
 
     getHospitalEntity: function(hospitalId){
