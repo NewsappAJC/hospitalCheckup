@@ -21,9 +21,14 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             }
           }
         });
-        var infectionsListView = new List.Infections({
-          collection: filteredInfections.filter(criterion)
+
+        var infectionsListView = new List.InfectionsChart();
+        var infectionsChartView = new HospitalCheckup.Common.Charts.Bar({
+          el: "#infections-chart",
+          collection: filteredInfections.filter(criterion),
+          base_height: 120
         });
+
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
         if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
@@ -41,6 +46,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         infectionsListView.on("childview:hospital:change", function(childview, args){
           HospitalCheckup.trigger("hospital:change", args.model, hospitalShowView);
+        });
+        infectionsListView.on("show", function(){
+          infectionsChartView.render();
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){

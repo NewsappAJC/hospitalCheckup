@@ -97,10 +97,9 @@
     <tbody></tbody>
   </script>
 
-  <script type="text/template" id="infections-chart">
-    <div id="infections-chart-container"></div>
+  <script type="text/template" id="infections-chart-template">
   </script>
-
+<div id="infections-chart"></div>
   <script type="text/template" id="hospital-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
@@ -174,6 +173,8 @@
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
   <script src="assets/js/common/views.js"></script>
+ <script src="assets/js/common/chart_views.js"></script>
+  <script src="assets/js/common/chart_views.js"></script>
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();

@@ -38,19 +38,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   });
 
-  List.Hospital = Marionette.ItemView.extend({
-    tagName: "tr",
-    template: "#infection-list-item",
-    triggers: {
-      "click": "hospital:change"
-    }
-  });
-
-  List.Infections = Marionette.CompositeView.extend({
-    tagName: "table",
-    //className: "columns",
-    template: "#infection-list",
-    childView: List.Hospital,
-    childViewContainer: "tbody"
+  List.InfectionsChart = Marionette.ItemView.extend({
+    template: "#infections-chart-template",
+    el: "#infections-chart"
   });
 });
