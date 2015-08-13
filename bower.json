@@ -13,8 +13,7 @@
     "chroma-js": "latest",
     "backbone.localstorage": "v1.1.16",
     "spin.js": "~2.3.2",
-    "backbone.select": "~1.3.1",
-    "chartview": "https://gist.github.com/rnagle/9417950.git"
+    "backbone.select": "~1.3.1"
   },
   "devDependencies": {
     "jasmine": "latest",

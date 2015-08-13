@@ -1,7 +1,7 @@
 HospitalCheckup.module("Common.Charts", function(Charts, HospitalCheckup, Backbone, Marionette, $, _){
-  Charts.Bar = ChartView.extend({
+  Charts.Bar = ChartBaseView.extend({
     constructor: function() {
-      ChartView.apply(this, arguments);
+      ChartBaseView.apply(this, arguments);
       this.$chart_container.attr('id', 'infections-chart-container');
       return this;
     },
