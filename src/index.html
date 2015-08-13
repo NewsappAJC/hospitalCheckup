@@ -89,7 +89,7 @@
   ================================================== -->
   <script type="text/template" id="infection-list-item">
     <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td>
+    <td><%- display_name %></td><td><%- address.street %></td><td><%- infections[measure].ratio %></td><td><%- infections[measure].lower %> to <%- infections[measure].upper %></td><td><%- infections[measure].days %></td><td><%- infections[measure].category %></td>
   </script>
 
   <script type="text/template" id="infection-list">
@@ -97,12 +97,16 @@
     <tbody></tbody>
   </script>
 
+  <script type="text/template" id="infections-chart">
+    <div id="infections-chart-container"></div>
+  </script>
+
   <script type="text/template" id="hospital-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:measure}).predicted %></p>
-    <p>Number of infections observed: <%- _.findWhere(infections, {infection:measure}).observed %></p>
+    <p>Number of infections predicted: <%- infections[measure].predicted %></p>
+    <p>Number of infections observed: <%- infections[measure].observed %></p>
   </script>
 
   <script type="text/template" id="missing-hospital-view">
