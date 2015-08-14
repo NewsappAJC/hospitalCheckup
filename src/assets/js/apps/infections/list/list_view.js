@@ -39,7 +39,6 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
   });
 
   List.InfectionsChart = Marionette.ItemView.extend({
-    template: "#infections-chart-template",
-    el: "#infections-chart"
+    template: "#infections-chart-template"
   });
 });
