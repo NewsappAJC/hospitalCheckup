@@ -71,22 +71,20 @@ tbody tr:hover {
   background-color: #d8d8d8;
   cursor: pointer;
 }
-/*charts*/
-.bar-chart {
-  margin: 20px 0;
+/*Charts.BarBase*/
+.axis text {
+  font-family: Boomer;
+  font-size: 10px;
 }
-.bar-chart > div {
-  background: #144A7C;
-  color: #f1f1f1;
-  padding: 0 4px;
-  line-height: 100%;
-  display: table;
-  margin-bottom: 2px
+.base {
+  fill: #EEE;
 }
-.bar-chart > div > span {
-  display: table-cell;
-  vertical-align: middle;
+.axis path, .axis line {
+  fill: none;
+  stroke: lightgrey;
+  stroke-width: 2px;
+  shape-rendering: crispEdgeds;
 }
-.responsive-bar-chart {
-  padding: 0 0 10px 0;
+.y.axis text, .bar {
+  cursor: pointer;
 }

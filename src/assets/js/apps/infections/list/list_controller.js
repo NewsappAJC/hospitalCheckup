@@ -23,6 +23,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         var infectionsListView = new List.InfectionsChart();
+        HospitalCheckup.InfectionsApp.List.infectionsListView = infectionsListView; //store a reference so we can target it from chart_views
 
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
@@ -45,10 +46,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         //wait for #infections-chart to be rendered
         infectionsListView.on("show", function(){
-          var infectionsChartView = new HospitalCheckup.Common.Charts.Bar({
+          var infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({
             el: "#infections-chart",
             collection: filteredInfections.filter(criterion),
-            base_height: 120
+            base_height: 750,
+            bar_padding: 4,
+            margin: {left: 190, right: 70, bottom: 20, top: 25}
           });
           infectionsChartView.render();
         });
