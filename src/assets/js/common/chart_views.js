@@ -14,9 +14,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.draw_axes();//needs to be on top of bars
     },
 
+    get_xMax: function(){
+      var chart = this;
+      return d3.max(chart.data, function(d) { return d.infections[chart.options.measure].upper });
+    },
+
     get_scales: function() {
       var chart = this;
-      var xMax = d3.max(chart.data, function(d) { return d.infections[d.measure].upper });
+      
 
       chart.yScale = d3.scale.ordinal()
         .rangeBands([0, chart.dimensions.height])
@@ -24,7 +29,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.xScale = d3.scale.linear()
         .rangeRound([0, chart.dimensions.width])
-        .domain([0, xMax])
+        .domain([0, chart.get_xMax()])
         .nice(); //extend bounds to nearest round value
     },
 
@@ -90,6 +95,18 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "y axis")
         .attr("y", 6)
         .call(chart.yAxis);
+    },
+
+    onUpdateChart: function(criterion){
+      var chart = this;
+
+      chart.options.measure = criterion;
+      chart.xScale.domain([0, chart.get_xMax()]).nice();
+      chart.xAxis.scale(chart.xScale);
+      
+      chart.svg.selectAll(".x.axis")
+        .transition().duration(500).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+        .call(chart.xAxis);
     }
   });
 });

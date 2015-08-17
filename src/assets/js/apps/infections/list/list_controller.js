@@ -38,14 +38,15 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         //wait for #infections-chart to be rendered
         infectionsListView.on("show", function(){
-          var infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({
+          List.infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({ //adding it to List module so we can target it later
             el: "#infections-chart",
             collection: filteredInfections.filter(criterion),
             base_height: 750,
             bar_padding: 4,
-            margin: {left: 190, right: 70, bottom: 20, top: 25}
+            margin: {left: 190, right: 70, bottom: 20, top: 25},
+            measure: criterion || "cdiff"
           });
-          infectionsChartView.render();
+          List.infectionsChartView.render();
 
           if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
             HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
@@ -57,7 +58,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
-          filteredInfections.filter(filterCriterion); //update collection
+          Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "update:chart", filterCriterion);
         });
 
         infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
