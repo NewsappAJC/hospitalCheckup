@@ -72,6 +72,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             .attr("height", function(d) {
               return (chart.dimensions.wrapperHeight / chart.data.length) - chart.options.bar_padding; //-4 for padding between bars
               //return chart.dimensions.height - chart.yScale(d[chart.options.y_key]) - 1;
+            })
+            .on("click", function(d) {
+              HospitalCheckup.module("InfectionsApp.List.infectionsListView").triggerMethod("hospital:change", d.id);
             });
     },
 

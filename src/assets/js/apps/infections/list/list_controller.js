@@ -22,23 +22,22 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           }
         });
 
-        var infectionsListView = new List.InfectionsChart();
-        HospitalCheckup.InfectionsApp.List.infectionsListView = infectionsListView; //store a reference so we can target it from chart_views
+        List.infectionsListView = new List.InfectionsChart(); //we will target this from chart later
 
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
         infectionsListLayout.on("show", function(){
           infectionsListLayout.menuRegion.show(infectionsMenuView);
-          infectionsListLayout.listRegion.show(infectionsListView);
+          infectionsListLayout.listRegion.show(List.infectionsListView);
           infectionsListLayout.hospitalRegion.show(hospitalShowView);
         });
 
-        infectionsListView.on("childview:hospital:change", function(childview, args){
-          HospitalCheckup.trigger("hospital:change", args.model, hospitalShowView);
+        List.infectionsListView.on("hospital:change", function(id){
+          HospitalCheckup.trigger("hospital:change", id, hospitalShowView);
         });
 
         //wait for #infections-chart to be rendered
-        infectionsListView.on("show", function(){
+        List.infectionsListView.on("show", function(){
           var infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({
             el: "#infections-chart",
             collection: filteredInfections.filter(criterion),
