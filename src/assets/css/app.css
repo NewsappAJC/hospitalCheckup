@@ -90,11 +90,11 @@ tbody tr:hover {
 }
 /*charts extended*/
 rect.range-bar.normal {
-  fill: blue;
+  fill: #304968;
 }
 rect.range-bar.bad {
-  fill: red;
+  fill: #bf653c;
 }
 rect.range-bar.good {
-  fill: green;
+  fill: #489162;
 }

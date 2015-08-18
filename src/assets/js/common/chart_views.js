@@ -147,7 +147,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("width", function(d){
           return chart.xScale(d.infections[chart.options.measure].upper - d.infections[chart.options.measure].lower)
         })
-        /*.transition().each(function(d){
+        .transition().each(function(d){
           var category = d.infections[chart.options.measure].category;
           if(category === "No Different than U.S. National Benchmark"){
             d3.select(this).classed({"normal": true, "good": false, "bad": false});
@@ -158,7 +158,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           } else {
             d3.select(this).classed({"normal": false, "good": false, "bad": false});
           }
-        });*/
+        });
 
     },
 
