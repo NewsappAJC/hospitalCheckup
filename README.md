@@ -28,6 +28,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - hospitals have routes too
  - nav sub-app to handle navigation and routes properly
  - infections have standardized attributes so you don't need to reset them to a hacky default
+ - dropdown menu accurately reflects selected filter on refresh/navigate
  
 ## Todo
 

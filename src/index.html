@@ -87,16 +87,6 @@
 
   <!-- INFECTIONS
   ================================================== -->
-  <script type="text/template" id="infection-list-item">
-    <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- infections[measure].ratio %></td><td><%- infections[measure].lower %> to <%- infections[measure].upper %></td><td><%- infections[measure].days %></td><td><%- infections[measure].category %></td>
-  </script>
-
-  <script type="text/template" id="infection-list">
-    <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
-    <tbody></tbody>
-  </script>
-
   <script type="text/template" id="infections-chart-template">
     <div id="infections-chart"></div>
   </script>

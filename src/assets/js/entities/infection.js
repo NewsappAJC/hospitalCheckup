@@ -13,21 +13,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
     model: Entities.Hospital,
-    comparator: "display_name",
-    //parse: function(response){
-      /*response.forEach(function(hospital){
-        hospital.infections.forEach(function(group){ //create collections for the different infection types, attatch them to Entities and add the rest of the collection
-          var tmp = Entities[group.infection];
-          if(tmp){
-            tmp.add(group);
-          } else {
-            Entities[group.infection] = new Entities.InfectionCollection({model: group});
-          }
-        });
-        //hospitalHospitalInfectionsCollection = new Entities.HospitalInfectionsCollection(hospital.infections);
-      });*/
-      //return response;
-    //}
+    comparator: "display_name"
   });
 
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
