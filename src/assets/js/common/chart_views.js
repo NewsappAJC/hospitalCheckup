@@ -3,6 +3,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     constructor: function(options) {
       ChartBaseView.apply(this, arguments);
       this.options.bar_padding = options.bar_padding || 4;
+      this.transition_duration = 500;
       this.$chart_container.attr('id', 'infections-chart-container');
       return this;
     },
@@ -12,6 +13,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.create_svg();
       this.draw_bars();
       this.draw_axes();//needs to be on top of bars
+      this.draw_data();
     },
 
     get_xMax: function(){
@@ -95,6 +97,59 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "y axis")
         .attr("y", 6)
         .call(chart.yAxis);
+
+    draw_data: function(){
+      this.draw_range();
+
+    },
+
+    draw_range: function(){
+      var chart = this;
+
+      //enter
+      chart.svg.selectAll(".range-bar")
+        .data(chart.data)
+        .enter()
+        .append("rect")
+        .attr("class", "range-bar")
+        .attr("x", function(d) {
+          return chart.xScale(d.infections[chart.options.measure].lower);
+        })
+        .attr("y", function(d) {
+          return chart.yScale(d.display_name);
+        })
+        .attr("width", function(d){
+          return chart.xScale(d.infections[chart.options.measure].upper - d.infections[chart.options.measure].lower)
+        })
+        .attr("height", function(d) {
+          return (chart.dimensions.wrapperHeight / chart.data.length) - chart.options.bar_padding;
+        });
+
+      //update
+      d3.selectAll(".range-bar")
+        .transition()
+        .duration(chart.transition_duration)
+          .attr("x", function(d) {
+            return chart.xScale(d.infections[chart.options.measure].lower);
+          })
+          .attr("width", function(d){
+            return chart.xScale(d.infections[chart.options.measure].upper - d.infections[chart.options.measure].lower)
+          })
+        .transition().each(function(d){
+          var category = d.infections[chart.options.measure].category;
+          if(category === "No Different than U.S. National Benchmark"){
+            d3.select(this).classed({"normal": true, "good": false, "bad": false});
+          } else if (category === "Better than the U.S. National Benchmark"){
+            d3.select(this).classed({"normal": false, "good": true, "bad": false});
+          } else if (category === "Worse than the U.S. National Benchmark"){
+            d3.select(this).classed({"normal": false, "good": false, "bad": true});
+          } else {
+            d3.select(this).classed({"normal": false, "good": false, "bad": false});
+          }
+        });
+        /*range_sel.filter(function(d){
+          return d.infections[chart.options.measure].category === "No Different than U.S. National Benchmark"
+        }).classed("normal", true);*/
     },
 
     onUpdateChart: function(criterion){
@@ -105,8 +160,10 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.xAxis.scale(chart.xScale);
       
       chart.svg.selectAll(".x.axis")
-        .transition().duration(500).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+        .transition().duration(chart.transition_duration).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
         .call(chart.xAxis);
+
+        chart.draw_data();
     }
   });
 });
