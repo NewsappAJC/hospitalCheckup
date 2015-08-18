@@ -74,7 +74,7 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/backbone.localstorage.js',
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
-              'src/assets/js/vendor/backbone.select.js'
+              'src/assets/js/vendor/backbone.select.js',
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -139,6 +139,9 @@ module.exports = function(grunt) {
           'build/assets/js/apps/header/list/list_controller.js': ['src/assets/js/apps/header/list/list_controller.js'],
           'build/assets/js/apps/header/list/list_view.js': ['src/assets/js/apps/header/list/list_view.js'],
           'build/assets/js/apps/header/header_app.js': ['src/assets/js/apps/header/header_app.js'],
+          'build/assets/js/common/chart_base_view.js': ['src/assets/js/common/chart_base_view.js'],
+          'build/assets/js/common/chart_views.js': ['src/assets/js/common/chart_views.js'],
+          'build/assets/js/common/behaviors.js': ['src/assets/js/common/behaviors.js']
         }
       }
     },
@@ -235,7 +238,8 @@ module.exports = function(grunt) {
       },
       build: {
         cwd: "build/",
-        src: "**"
+        src: "**",
+        dest:"2015/staging/hospital-checkup/"
       }
     },
 
@@ -278,7 +282,7 @@ module.exports = function(grunt) {
           "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "spin.js": "spin.js/spin.js", //for page loading spinner
           "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
-          "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options
+          "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options,
         }
       },
       lib_styles: {

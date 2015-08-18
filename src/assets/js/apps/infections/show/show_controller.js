@@ -14,11 +14,6 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
 
         view.render();
       });
-    },
-
-    changeHospital: function(model, view){ //hospitalSelected
-      view.model = model;
-      view.render();
     }
   }
 });
