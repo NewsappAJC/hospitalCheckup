@@ -8,7 +8,7 @@
   ================================================== -->
   <meta charset="utf-8">
   <title>AJC Hospital Checkup</title>
-  <meta name="description" content="">
+  <meta name="description" content="Explore hospital quality data for Atlanta area hospitals.">
   <meta name="author" content="Emily Merwin">
 
   <!-- Social Open Graph Metas: fill these out to make your fb sharing post
@@ -87,22 +87,16 @@
 
   <!-- INFECTIONS
   ================================================== -->
-  <script type="text/template" id="infection-list-item">
-    <!-- this is just POC, display will change later -->
-    <td><%- display_name %></td><td><%- address.street %></td><td><%- _.findWhere(infections, {infection:measure}).ratio %></td><td><%- _.findWhere(infections, {infection:measure}).lower %> to <%- _.findWhere(infections, {infection:measure}).upper %></td><td><%- _.findWhere(infections, {infection:measure}).days %></td><td><%- _.findWhere(infections, {infection:measure}).category %></td>
+  <script type="text/template" id="infections-chart-template">
+    <div id="infections-chart"></div>
   </script>
-
-  <script type="text/template" id="infection-list">
-    <thead><tr><th>Name</th><th>Address</th><th>Rate</th><th>Range</th><th>Patient days</th><th>Status</th></tr></thead>
-    <tbody></tbody>
-  </script>
-
+  
   <script type="text/template" id="hospital-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of infections predicted: <%- _.findWhere(infections, {infection:measure}).predicted %></p>
-    <p>Number of infections observed: <%- _.findWhere(infections, {infection:measure}).observed %></p>
+    <p>Number of infections predicted: <%- infections[measure].predicted %></p>
+    <p>Number of infections observed: <%- infections[measure].observed %></p>
   </script>
 
   <script type="text/template" id="missing-hospital-view">
@@ -169,6 +163,9 @@
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
   <script src="assets/js/common/views.js"></script>
+  <script src="assets/js/common/chart_base_view.js"></script>
+  <script src="assets/js/common/chart_views.js"></script>
+  <script src="assets/js/common/behaviors.js"></script>
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();

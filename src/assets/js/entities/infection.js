@@ -13,21 +13,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
     model: Entities.Hospital,
-    comparator: "display_name",
-    //parse: function(response){
-      /*response.forEach(function(hospital){
-        hospital.infections.forEach(function(group){ //create collections for the different infection types, attatch them to Entities and add the rest of the collection
-          var tmp = Entities[group.infection];
-          if(tmp){
-            tmp.add(group);
-          } else {
-            Entities[group.infection] = new Entities.InfectionCollection({model: group});
-          }
-        });
-        //hospitalHospitalInfectionsCollection = new Entities.HospitalInfectionsCollection(hospital.infections);
-      });*/
-      //return response;
-    //}
+    comparator: "display_name"
   });
 
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
@@ -35,34 +21,40 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   var API = {
     getInfectionEntities: function(){
       var infections = new Entities.InfectionCollection();
-      var defer = $.Deferred();
+      var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
+      var deferServer = $.Deferred(); //we might need to wait for data to be fetched from server
       //check local storage to see if our data is already stored in there
       infections.fetch({
         success: function(data){
-          defer.resolve(data);
+          deferLocal.resolve(data);
         }
       });
-      var promise = defer.promise();
-      $.when(promise).done(function(fetchedInfections){
+      $.when(deferLocal.promise()).done(function(fetchedInfections){
         if(fetchedInfections.length === 0){
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
+          function resetModels(models){
+            infections.reset(models);
+            infections.forEach(function(infection){
+              infection.save(); //to local storage
+            });
+            deferServer.resolve(infections);
+          }
+
           $.ajax({
             dataType: "json",
             url: "/assets/data/infections.json",
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json"
             type: "GET",
             success: resetModels
           });
+        } else {
+          deferServer.resolve(fetchedInfections);
         }
-        function resetModels(models){
-          infections.reset(models);
-          infections.forEach(function(infection){
-            infection.save(); //to local storage
-          });
-        }
+
       });
-      return promise;
+      return deferServer.promise();
     },
 
     getHospitalEntity: function(hospitalId){

@@ -71,3 +71,30 @@ tbody tr:hover {
   background-color: #d8d8d8;
   cursor: pointer;
 }
+/*Charts.BarBase*/
+.axis text {
+  font-family: Boomer;
+  font-size: 10px;
+}
+.base {
+  fill: #EEE;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: lightgrey;
+  stroke-width: 2px;
+  shape-rendering: crispEdgeds;
+}
+.y.axis text, .bar, .range-bar {
+  cursor: pointer;
+}
+/*charts extended*/
+rect.range-bar.normal {
+  fill: #304968;
+}
+rect.range-bar.bad {
+  fill: #bf653c;
+}
+rect.range-bar.good {
+  fill: #489162;
+}
