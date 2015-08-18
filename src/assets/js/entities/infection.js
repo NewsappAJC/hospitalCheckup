@@ -34,14 +34,6 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
-          $.ajax({
-            dataType: "json",
-            url: "/assets/data/infections.json",
-            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json"
-            type: "GET",
-            success: resetModels
-          });
-
           function resetModels(models){
             infections.reset(models);
             infections.forEach(function(infection){
@@ -49,6 +41,14 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             });
             deferServer.resolve(infections);
           }
+
+          $.ajax({
+            dataType: "json",
+            url: "/assets/data/infections.json",
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json"
+            type: "GET",
+            success: resetModels
+          });
         } else {
           deferServer.resolve(fetchedInfections);
         }
