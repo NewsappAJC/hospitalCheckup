@@ -238,7 +238,8 @@ module.exports = function(grunt) {
       },
       build: {
         cwd: "build/",
-        src: "**"
+        src: "**",
+        dest:"2015/staging/hospital-checkup/"
       }
     },
 
