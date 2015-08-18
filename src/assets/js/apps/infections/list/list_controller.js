@@ -41,9 +41,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           List.infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({ //adding it to List module so we can target it later
             el: "#infections-chart",
             collection: filteredInfections.filter(criterion),
-            base_height: 750,
+            base_height: 700,
             bar_padding: 4,
-            margin: {left: 190, right: 70, bottom: 20, top: 25},
+            margin: {left: 190, right: 30, bottom: 20, top: 25},
             measure: criterion || "cdiff"
           });
           List.infectionsChartView.render();
