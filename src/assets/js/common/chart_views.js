@@ -5,7 +5,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.bar_padding = options.bar_padding || 4;
       this.transition_duration = 500;
       this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
-      this.$chart_container.attr('id', 'infections-chart-container');
+      this.$chart_container.attr('id', this.el.id+"-container");
       return this;
     },
     draw: function() {
@@ -114,6 +114,21 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_data: function(data){
+      return this;
+    },
+
+    onUpdateChart: function(criterion){
+      return this;
+    }
+  });
+
+  Chart.BarRangeDot = Chart.BarBase.extend({
+    constructor: function(options) {
+      Chart.BarBase.apply(this, arguments);
+      return this;
+    },
+
+    draw_data(data){
       this.draw_range_bars(data);
       this.draw_context_lines(data);
     },
@@ -162,7 +177,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             d3.select(this).classed({"normal": false, "good": false, "bad": false});
           }
         });
-
     },
 
     draw_context_lines: function(data){
