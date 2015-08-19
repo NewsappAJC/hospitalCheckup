@@ -85,7 +85,7 @@ tbody tr:hover {
   stroke-width: 2px;
   shape-rendering: crispEdgeds;
 }
-.y.axis text, .bar, .range-bar {
+.y.axis text, .bar, .range-bar, .ratio-circle {
   cursor: pointer;
 }
 /*charts extended*/
