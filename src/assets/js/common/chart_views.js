@@ -119,7 +119,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_range_bars: function(data){
-      var chart = this;
+      var chart = this,
+      measure = chart.options.measure;
+
       var rangeBars = chart.svg.selectAll(".range-bar")
           .data(data);
 
@@ -129,13 +131,13 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .append("rect")
       .attr("class", "range-bar")
       .attr("x", function(d) {
-        return chart.xScale(d.infections[chart.options.measure].lower);
+        return chart.xScale(d.infections[measure].lower);
       })
       .attr("y", function(d) {
         return chart.yScale(d.display_name);
       })
       .attr("width", function(d){
-        return chart.xScale(d.infections[chart.options.measure].upper - d.infections[chart.options.measure].lower)
+        return chart.xScale(d.infections[measure].upper - d.infections[measure].lower)
       })
       .attr("height", chart.bar_height);
 
@@ -143,13 +145,13 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       rangeBars.transition()
         .duration(chart.transition_duration)
         .attr("x", function(d) {
-          return chart.xScale(d.infections[chart.options.measure].lower);
+          return chart.xScale(d.infections[measure].lower);
         })
         .attr("width", function(d){
-          return chart.xScale(d.infections[chart.options.measure].upper - d.infections[chart.options.measure].lower)
+          return chart.xScale(d.infections[measure].upper - d.infections[measure].lower)
         })
         .transition().each(function(d){
-          var category = d.infections[chart.options.measure].category;
+          var category = d.infections[measure].category;
           if(category === "No Different than U.S. National Benchmark"){
             d3.select(this).classed({"normal": true, "good": false, "bad": false});
           } else if (category === "Better than the U.S. National Benchmark"){
@@ -164,11 +166,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_context_lines: function(data){
-      var chart = this;
+      var chart = this,
+      height = chart.get_currentHeight(data);
 
       chart.svg.append("line")
         .attr("y1", 0)
-        .attr("y2", chart.get_currentHeight(data))
+        .attr("y2", height)
         .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
         .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
         .attr("stroke", "darkgrey")
@@ -179,23 +182,24 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     onUpdateChart: function(criterion){
       var chart = this;
-      chart.options.measure = criterion;
-      var filtered = chart.filter_data();
-      var chartHeight = chart.get_currentHeight(filtered);
+      chart.options.measure = criterion,
+      filtered = chart.filter_data(),
+      height = chart.get_currentHeight(filtered),
+      duration = chart.transition_duration;
 
       chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
       chart.xAxis.scale(chart.xScale);
 
       chart.svg.selectAll(".x.axis")
-        .transition().duration(chart.transition_duration)
+        .transition().duration(duration)
         .ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-        .attr("transform", "translate(0," + chartHeight + ")") //TODO looks weird bc it shouldn't start at 0
+        .attr("transform", "translate(0," + height + ")") //TODO looks weird bc it shouldn't start at 0
         .call(chart.xAxis);
 
-      chart.yScale.rangeBands([0, chartHeight]).domain(_.map(filtered, function(d) { return d.display_name; }));
+      chart.yScale.rangeBands([0, height]).domain(_.map(filtered, function(d) { return d.display_name; }));
 
       chart.svg.selectAll(".y.axis")
-        .transition().duration(chart.transition_duration)
+        .transition().duration(duration)
         .ease("sin-in-out")
         .call(chart.yAxis);
 
@@ -206,8 +210,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       // var $tmp = $("#averageLine").detach();
       // $("svg").append($tmp);
 
-      var avgLine = d3.select("#averageLine").transition().duration(chart.transition_duration)
-        .attr("y2", chart.get_currentHeight(filtered))
+      d3.select("#averageLine").transition().duration(duration)
+        .attr("y2", height)
         .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
         .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
     }
