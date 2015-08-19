@@ -49,7 +49,7 @@ src = json.load(ft)
 ft.close()
 
 infDict = {"HAI_1_SIR" : "clabsi", "HAI_2_SIR" : "cauti", "HAI_3_SIR" : "ssicolon", "HAI_4_SIR" : "ssihyst", "HAI_5_SIR" : "mrsa", "HAI_6_SIR" : "cdiff"}
-totals = {}
+totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
 
 def rounded(n):
     return round(decimal.Decimal(n), 3)

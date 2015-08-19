@@ -22,6 +22,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   var API = {
     getInfectionEntities: function(){
+      Entities.averages = new Entities.StateAverages(); //attach to Entities so chart can get at it
       var infections = new Entities.InfectionCollection();
       var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
       var deferServer = $.Deferred(); //we might need to wait for data to be fetched from server
@@ -37,9 +38,9 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
           function resetModels(data){
-            Entities.averages = new Entities.StateAverages(data.averages);
-            Entities.averages.set("id", Entities.averages.cid); //backbone expects models to have ids, also local storage uses it
+            Entities.averages.set(data.averages);
             Entities.averages.save();
+
             infections.reset(data.hospitals);
             infections.forEach(function(infection){
               infection.save(); //to local storage
@@ -55,8 +56,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             success: resetModels
           });
         } else {
-          Entities.averages = new Entities.StateAverages();
           Entities.averages.fetch();
+          Entities.averages.attributes = Entities.averages.attributes[0]; //I don't know why but fetching was nesting them instide another object and I couldn't get to them
           deferServer.resolve(fetchedInfections);
         }
 
