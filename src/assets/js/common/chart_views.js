@@ -15,6 +15,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.get_scales(data);
       this.create_axes();
       this.create_svg();
+      this.create_svg_containers();
       this.draw_base_bars(data);
       this.draw_data(data);
       this.draw_axes(data);//needs to be on top of bars
@@ -76,9 +77,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("transform", "translate(" + chart.options.margin.left + ", " + chart.options.margin.top + ")");
     },
 
+    create_svg_containers: function(){
+      //extend this
+      return this;
+    },
+
     draw_base_bars: function(data) {
       var chart = this;
-      var bars = chart.svg.selectAll(".base.bar")
+      var bars = chart.svg.select("#baseBars").selectAll(".base.bar")
         .data(data);
 
       bars.exit().remove();
@@ -149,6 +155,17 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       return this;
     },
 
+    //create containers so that entering items stay layered at the correct depth
+    create_svg_containers: function(){
+      var chart = this,
+      ids = ["baseBars", "rangeBars"];
+
+      for(var i=0; i<ids.length; i++){
+        chart.svg.append("g")
+          .attr("id", ids[i])
+      }
+    },
+
     draw_data(data){
       this.draw_range_bars(data);
       this.draw_context_lines(data);
@@ -158,7 +175,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       measure = chart.options.measure;
 
-      var rangeBars = chart.svg.selectAll(".range-bar")
+      var rangeBars = chart.svg.select("#rangeBars").selectAll(".range-bar")
         .data(data);
 
       rangeBars.exit().remove()
@@ -232,10 +249,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
       chart.draw_range_bars(filtered);
-
-      //SVG does not support Z-index, so in order to get this element on top it needs to be moved up in the DOM
-      // var $tmp = $("#averageLine").detach();
-      // $("svg").append($tmp);
 
       //update context lines
       d3.select("#averageLine").transition().duration(chart.duration)
