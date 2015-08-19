@@ -21,6 +21,7 @@ Explore hospital quality data for Atlanta area hospitals.
 
 ## Notes
 - Rate == Ratio
+- Range (popup) is the confidence interval
 
 ##Improvements on original hospital quality app
  - Active menu item is highlighted
@@ -29,10 +30,10 @@ Explore hospital quality data for Atlanta area hospitals.
  - nav sub-app to handle navigation and routes properly
  - infections have standardized attributes so you don't need to reset them to a hacky default
  - dropdown menu accurately reflects selected filter on refresh/navigate
+ - state average no longer hard-coded into the view
  
 ## Todo
-
-- [ ] Range (popup) is the confidence interval
+- [ ] Clear local storage on first load in case there's new stuff
 - [ ] Add commas to number displays that may have a thousands place
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
 - [ ] ssihyst uses procedures instead of patient days, fix it
@@ -42,6 +43,10 @@ Explore hospital quality data for Atlanta area hospitals.
 
 ##How to update
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
-- To update state totals, run `grunt sql_bakery`
+- To update state totals, run `grunt sql_bakery`, which runs this query:
+  `CREATE VIEW hospital_totals_web AS
+  SELECT measure,AVG(score) FROM hai_state_20140523
+  WHERE measure LIKE "HAI_%_SIR" AND score > 0
+  GROUP BY measure`
 - TODO add view for main data sets
 
