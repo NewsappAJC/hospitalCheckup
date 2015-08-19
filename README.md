@@ -39,3 +39,9 @@ Explore hospital quality data for Atlanta area hospitals.
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
 - [ ] If someone clicks on already active nav item it shouldn't reload the layout
+
+##How to update
+- open the "hospital_compare" table on the interanet data server (add new data if necessary)
+- To update state totals, run `grunt sql_bakery`
+- TODO add view for main data sets
+

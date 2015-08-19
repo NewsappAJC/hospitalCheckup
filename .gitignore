@@ -18,4 +18,5 @@ bower
 npm-debug.log
 node_modules
 aws.json
+sql.json
 .DS_Store
