@@ -2,7 +2,8 @@ HospitalCheckup.Behaviors = {
   HospitalSelect: Marionette.Behavior.extend({
     events: {
       "click .bar": "displayHospital",
-      "click .range-bar": "displayHospital"
+      "click .range-bar": "displayHospital",
+      "click .ratio-circle": "displayHospital"
     },
 
     displayHospital: function(e){

@@ -26,7 +26,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         //wait for #infections-chart to be rendered
         infectionsListView.on("show", function(){
-          List.infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({ //adding it to List module so we can target it later
+          List.infectionsChartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
             el: "#infections-chart",
             collection: infections,
             base_height: 700,

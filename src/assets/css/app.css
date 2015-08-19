@@ -85,7 +85,7 @@ tbody tr:hover {
   stroke-width: 2px;
   shape-rendering: crispEdgeds;
 }
-.y.axis text, .bar, .range-bar {
+.y.axis text, .bar, .range-bar, .ratio-circle {
   cursor: pointer;
 }
 /*charts extended*/
@@ -97,4 +97,13 @@ rect.range-bar.bad {
 }
 rect.range-bar.good {
   fill: #489162;
+}
+#contextLines line {
+  stroke-width: 3;
+}
+line#averageLine {
+  stroke: darkgray;
+}
+line#benchmarkLine {
+  stroke: white;
 }

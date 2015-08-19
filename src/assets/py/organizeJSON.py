@@ -43,27 +43,20 @@ for node in src:
 
     tree.append(hospital)
 
-f = open( '../data/infections.json', 'w')
-f.write(json.dumps(tree, indent=2, sort_keys=True))
-f.close()
-print "hospital infections JSON saved!"
-
-
 #rename unintuitive ratio keys and round the averages
 ft = open( '../data/src/hospital_totals_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 
 infDict = {"HAI_1_SIR" : "clabsi", "HAI_2_SIR" : "cauti", "HAI_3_SIR" : "ssicolon", "HAI_4_SIR" : "ssihyst", "HAI_5_SIR" : "mrsa", "HAI_6_SIR" : "cdiff"}
-totals = {}
-
-def rounded(n):
-    return round(decimal.Decimal(n), 3)
+totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
 
 for node in src:
-    totals[infDict[node["measure"]]] = rounded(node["AVG(score)"])
+    totals[infDict[node["measure"]]] = node["score"]
 
-ft = open( '../data/infection_stateAvg.json', 'w')
-ft.write(json.dumps(totals, indent=2, sort_keys=True))
-ft.close()
+f = open( '../data/infections.json', 'w')
+f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
+f.close()
+
+print "hospital infections JSON saved!"
 print "infection state avg JSON saved!"
