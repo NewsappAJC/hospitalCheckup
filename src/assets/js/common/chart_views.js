@@ -1,9 +1,11 @@
 HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone, Marionette, $, _){
+
+  //all the common elements that all list charts in hospital app will share
   Chart.BarBase = ChartBaseView.extend({
     constructor: function(options) {
       ChartBaseView.apply(this, arguments);
       this.options.bar_padding = options.bar_padding || 4;
-      this.transition_duration = 500;
+      this.duration = 500;
       this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
       this.$chart_container.attr('id', this.el.id+"-container");
       return this;
@@ -117,8 +119,27 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       return this;
     },
 
-    onUpdateChart: function(criterion){
-      return this;
+    onUpdateChart: function(filtered, height){
+      var chart = this;
+
+      //update scales and axes
+      chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
+      chart.xAxis.scale(chart.xScale);
+
+      chart.svg.selectAll(".x.axis")
+        .transition().duration(chart.duration)
+        .ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+        .attr("transform", "translate(0," + height + ")") //TODO looks weird bc it shouldn't start at 0
+        .call(chart.xAxis);
+
+      chart.yScale.rangeBands([0, height]).domain(_.map(filtered, function(d) { return d.display_name; }));
+
+      chart.svg.selectAll(".y.axis")
+        .transition().duration(chart.duration)
+        .ease("sin-in-out")
+        .call(chart.yAxis);
+
+      chart.draw_base_bars(filtered);
     }
   });
 
@@ -158,7 +179,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       //update
       rangeBars.transition()
-        .duration(chart.transition_duration)
+        .duration(chart.duration)
         .attr("x", function(d) {
           return chart.xScale(d.infections[measure].lower);
         })
@@ -203,41 +224,26 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     onUpdateChart: function(criterion){
-      var chart = this;
-      chart.options.measure = criterion,
+      this.options.measure = criterion;
+      var chart = this,
       filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered),
-      duration = chart.transition_duration;
+      height = chart.get_currentHeight(filtered);
 
-      chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
-      chart.xAxis.scale(chart.xScale);
+      Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
-      chart.svg.selectAll(".x.axis")
-        .transition().duration(duration)
-        .ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-        .attr("transform", "translate(0," + height + ")") //TODO looks weird bc it shouldn't start at 0
-        .call(chart.xAxis);
-
-      chart.yScale.rangeBands([0, height]).domain(_.map(filtered, function(d) { return d.display_name; }));
-
-      chart.svg.selectAll(".y.axis")
-        .transition().duration(duration)
-        .ease("sin-in-out")
-        .call(chart.yAxis);
-
-      chart.draw_base_bars(filtered);
       chart.draw_range_bars(filtered);
 
       //SVG does not support Z-index, so in order to get this element on top it needs to be moved up in the DOM
       // var $tmp = $("#averageLine").detach();
       // $("svg").append($tmp);
 
-      d3.select("#averageLine").transition().duration(duration)
+      //update context lines
+      d3.select("#averageLine").transition().duration(chart.duration)
         .attr("y2", height)
-        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
-        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
+        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
 
-      d3.select("#benchmarkLine").transition().duration(duration)
+      d3.select("#benchmarkLine").transition().duration(chart.duration)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
