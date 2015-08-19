@@ -227,8 +227,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("y2", height)
         .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
         .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
-        .attr("stroke", "darkgrey")
-        .attr("stroke-width", 3)
         .attr("id", "averageLine");
 
       chart.svg.select("#contextLines").append("line")
@@ -236,8 +234,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
-        .attr("stroke", "white")
-        .attr("stroke-width", 3)
         .attr("id", "benchmarkLine");
     },
 

@@ -98,3 +98,12 @@ rect.range-bar.bad {
 rect.range-bar.good {
   fill: #489162;
 }
+#contextLines line {
+  stroke-width: 3;
+}
+line#averageLine {
+  stroke: darkgray;
+}
+line#benchmarkLine {
+  stroke: white;
+}
