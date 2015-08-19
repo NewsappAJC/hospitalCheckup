@@ -123,7 +123,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       measure = chart.options.measure;
 
       var rangeBars = chart.svg.selectAll(".range-bar")
-          .data(data);
+        .data(data);
 
       rangeBars.exit().remove()
 
@@ -181,7 +181,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.svg.append("line")
         .attr("y1", 0)
         .attr("y2", height)
-        .attr("x1", chart.xScale(1)) //benchmark is always 1, right???
+        .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
         .attr("stroke", "white")
         .attr("stroke-width", 3)
@@ -225,7 +225,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       d3.select("#benchmarkLine").transition().duration(duration)
         .attr("y2", height)
-        .attr("x1", chart.xScale(1)) //benchmark is always 1, right???
+        .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
     }
   });

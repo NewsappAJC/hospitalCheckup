@@ -51,11 +51,8 @@ ft.close()
 infDict = {"HAI_1_SIR" : "clabsi", "HAI_2_SIR" : "cauti", "HAI_3_SIR" : "ssicolon", "HAI_4_SIR" : "ssihyst", "HAI_5_SIR" : "mrsa", "HAI_6_SIR" : "cdiff"}
 totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
 
-def rounded(n):
-    return round(decimal.Decimal(n), 3)
-
 for node in src:
-    totals[infDict[node["measure"]]] = rounded(node["AVG(score)"])
+    totals[infDict[node["measure"]]] = node["score"]
 
 f = open( '../data/infections.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))

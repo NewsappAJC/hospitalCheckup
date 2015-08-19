@@ -22,7 +22,6 @@ Explore hospital quality data for Atlanta area hospitals.
 ## Notes
 - Rate == Ratio
 - Range (popup) is the confidence interval
-- "State Average" - I calculated national average (by state)... that's what we want right?
 - Need to explain the benchmark is always 1 (right???)
 
 ##Improvements on original hospital quality app
@@ -47,9 +46,12 @@ Explore hospital quality data for Atlanta area hospitals.
 ##How to update
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
 - To update state totals, run `grunt sql_bakery`, which runs this query:
-  `CREATE VIEW hospital_totals_web AS
-  SELECT measure,AVG(score) FROM hai_state_20140523
-  WHERE measure LIKE "HAI_%_SIR" AND score > 0
-  GROUP BY measure`
+  ```
+  ALTER VIEW hospital_totals_web AS
+  SELECT state,measure,score FROM hai_state_20140523
+  WHERE state = "GA" AND measure LIKE "HAI_%_SIR"
+  ```
 - TODO add view for main data sets
+- Timely and effective care table for surgeries (I don't see anything in there about complications or readmissions though)
+- Labor and delivery comes from two separate data sources, one is the HQI_HOSPI_TEC_PC table (right now it's empty)
 

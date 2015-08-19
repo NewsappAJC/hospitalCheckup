@@ -1,26 +1,32 @@
 [
     {
+        "state": "GA",
         "measure": "HAI_1_SIR",
-        "AVG(score)": 0.6013396
+        "score": 0.683
     },
     {
+        "state": "GA",
         "measure": "HAI_2_SIR",
-        "AVG(score)": 1.2225
+        "score": 1.161
     },
     {
+        "state": "GA",
         "measure": "HAI_3_SIR",
-        "AVG(score)": 0.9501176
+        "score": 0.811
     },
     {
+        "state": "GA",
         "measure": "HAI_4_SIR",
-        "AVG(score)": 0.9418039
+        "score": 0.785
     },
     {
+        "state": "GA",
         "measure": "HAI_5_SIR",
-        "AVG(score)": 0.8481923
+        "score": 1.068
     },
     {
+        "state": "GA",
         "measure": "HAI_6_SIR",
-        "AVG(score)": 0.8661887
+        "score": 0.831
     }
 ]
