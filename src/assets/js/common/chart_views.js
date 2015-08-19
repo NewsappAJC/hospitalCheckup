@@ -178,6 +178,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("stroke-width", 3)
         .attr("id", "averageLine");
 
+      chart.svg.append("line")
+        .attr("y1", 0)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(1)) //benchmark is always 1, right???
+        .attr("x2", chart.xScale(1))
+        .attr("stroke", "white")
+        .attr("stroke-width", 3)
+        .attr("id", "benchmarkLine");
     },
 
     onUpdateChart: function(criterion){
@@ -214,6 +222,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("y2", height)
         .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
         .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+
+      d3.select("#benchmarkLine").transition().duration(duration)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(1)) //benchmark is always 1, right???
+        .attr("x2", chart.xScale(1))
     }
   });
 });
