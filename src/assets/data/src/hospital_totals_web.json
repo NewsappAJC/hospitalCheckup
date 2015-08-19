@@ -1,0 +1,26 @@
+[
+    {
+        "measure": "HAI_1_SIR",
+        "AVG(score)": 0.6013396
+    },
+    {
+        "measure": "HAI_2_SIR",
+        "AVG(score)": 1.2225
+    },
+    {
+        "measure": "HAI_3_SIR",
+        "AVG(score)": 0.9501176
+    },
+    {
+        "measure": "HAI_4_SIR",
+        "AVG(score)": 0.9418039
+    },
+    {
+        "measure": "HAI_5_SIR",
+        "AVG(score)": 0.8481923
+    },
+    {
+        "measure": "HAI_6_SIR",
+        "AVG(score)": 0.8661887
+    }
+]
