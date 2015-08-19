@@ -7,15 +7,17 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     },
     urlRoot: "infections"
   });
-
   Entities.configureStorage("HospitalCheckup.Entities.Hospital");
+
+  Entities.StateAverages = Backbone.Model.extend({
+    localStorage: new Backbone.LocalStorage("infections-state-avg") //using this instead of a URL!
+  });
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
     model: Entities.Hospital,
     comparator: "display_name"
   });
-
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
   var API = {
@@ -34,8 +36,11 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
-          function resetModels(models){
-            infections.reset(models);
+          function resetModels(data){
+            Entities.averages = new Entities.StateAverages(data.averages);
+            Entities.averages.set("id", Entities.averages.cid); //backbone expects models to have ids, also local storage uses it
+            Entities.averages.save();
+            infections.reset(data.hospitals);
             infections.forEach(function(infection){
               infection.save(); //to local storage
             });
@@ -50,6 +55,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             success: resetModels
           });
         } else {
+          Entities.averages = new Entities.StateAverages();
+          Entities.averages.fetch();
           deferServer.resolve(fetchedInfections);
         }
 

@@ -43,12 +43,6 @@ for node in src:
 
     tree.append(hospital)
 
-f = open( '../data/infections.json', 'w')
-f.write(json.dumps(tree, indent=2, sort_keys=True))
-f.close()
-print "hospital infections JSON saved!"
-
-
 #rename unintuitive ratio keys and round the averages
 ft = open( '../data/src/hospital_totals_web.json', 'rU')
 src = json.load(ft)
@@ -63,7 +57,9 @@ def rounded(n):
 for node in src:
     totals[infDict[node["measure"]]] = rounded(node["AVG(score)"])
 
-ft = open( '../data/infection_stateAvg.json', 'w')
-ft.write(json.dumps(totals, indent=2, sort_keys=True))
-ft.close()
+f = open( '../data/infections.json', 'w')
+f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
+f.close()
+
+print "hospital infections JSON saved!"
 print "infection state avg JSON saved!"

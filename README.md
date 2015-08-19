@@ -22,6 +22,7 @@ Explore hospital quality data for Atlanta area hospitals.
 ## Notes
 - Rate == Ratio
 - Range (popup) is the confidence interval
+- "State Average" - I calculated national average (by state)... that's what we want right?
 
 ##Improvements on original hospital quality app
  - Active menu item is highlighted
