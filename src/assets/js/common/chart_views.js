@@ -14,8 +14,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.create_axes();
       this.create_svg();
       this.draw_base_bars(data);
-      this.draw_axes(data);//needs to be on top of bars
       this.draw_data(data);
+      this.draw_axes(data);//needs to be on top of bars
     },
 
     //remove items with no data and sort by ratio
@@ -115,6 +115,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     draw_data: function(data){
       this.draw_range_bars(data);
+      this.draw_context_lines(data);
     },
 
     draw_range_bars: function(data){
@@ -162,6 +163,20 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     },
 
+    draw_context_lines: function(data){
+      var chart = this;
+
+      chart.svg.append("line")
+        .attr("y1", 0)
+        .attr("y2", chart.get_currentHeight(data))
+        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("stroke", "darkgrey")
+        .attr("stroke-width", 3)
+        .attr("id", "averageLine");
+
+    },
+
     onUpdateChart: function(criterion){
       var chart = this;
       chart.options.measure = criterion;
@@ -185,7 +200,16 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
 
       chart.draw_base_bars(filtered);
-      chart.draw_data(filtered);
+      chart.draw_range_bars(filtered);
+
+      //SVG does not support Z-index, so in order to get this element on top it needs to be moved up in the DOM
+      // var $tmp = $("#averageLine").detach();
+      // $("svg").append($tmp);
+
+      var avgLine = d3.select("#averageLine").transition().duration(chart.transition_duration)
+        .attr("y2", chart.get_currentHeight(filtered))
+        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
     }
   });
 });
