@@ -107,3 +107,6 @@ line#averageLine {
 line#benchmarkLine {
   stroke: white;
 }
+.label {
+  font-size: 9px;
+}

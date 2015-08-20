@@ -166,7 +166,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       }
     },
 
-    draw_data(data){
+    draw_data: function(data){
       this.draw_range_bars(data);
       this.draw_context_lines(data);
       this.draw_ratio_circles(data);
@@ -220,21 +220,41 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     draw_context_lines: function(data){
       var chart = this,
-      height = chart.get_currentHeight(data);
+      height = chart.get_currentHeight(data),
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
 
-      chart.svg.select("#contextLines").append("line")
+      var contextLines = chart.svg.select("#contextLines");
+      
+      contextLines.append("line")
         .attr("y1", 0)
         .attr("y2", height)
-        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
-        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg))
         .attr("id", "averageLine");
 
-      chart.svg.select("#contextLines").append("line")
+      contextLines.append("text")
+        .text("State avg.: " + avg)
+        .attr("text-anchor", "start")
+        .attr("class", "label")
+        .attr("id", "avgTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(avg))
+        .attr("y", -5);
+
+      contextLines.append("line")
         .attr("y1", 0)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
         .attr("id", "benchmarkLine");
+
+      contextLines.append("text")
+        .text("Benchmark")
+        .attr("text-anchor", "end")
+        .attr("class", "label")
+        .attr("id", "benchmarkTxt")
+        .attr("x", chart.xScale(1))
+        .attr("y", -5);
     },
 
     draw_ratio_circles: function(data){
@@ -272,7 +292,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.measure = criterion;
       var chart = this,
       filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered);
+      height = chart.get_currentHeight(filtered),
+      avg = HospitalCheckup.Entities.averages.get(criterion);
 
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
@@ -280,15 +301,26 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.draw_ratio_circles(filtered);
 
       //update context lines
-      d3.select("#averageLine").transition().duration(chart.duration)
+      chart.svg.select("#averageLine")
+        .transition().duration(chart.duration)
         .attr("y2", height)
-        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
-        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg))
 
-      d3.select("#benchmarkLine").transition().duration(chart.duration)
+      chart.svg.select("#avgTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(avg))
+        .text("State avg.: " + avg)
+
+      chart.svg.select("#benchmarkLine")
+        .transition().duration(chart.duration)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
+
+      chart.svg.select("#benchmarkTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(1))
     }
   });
 });
