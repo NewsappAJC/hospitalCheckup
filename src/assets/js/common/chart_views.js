@@ -234,7 +234,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       contextLines.append("text")
         .text("State avg.: " + avg)
-        .attr("text-anchor", "start")
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        })
         .attr("class", "label")
         .attr("id", "avgTxt")
         .transition().duration(chart.duration)
@@ -250,7 +254,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       contextLines.append("text")
         .text("Benchmark")
-        .attr("text-anchor", "end")
+        .attr("text-anchor", function(){ //figure out which side the line is on
+          if(avg < 1){
+            return "start"
+          } return "end"
+        })
         .attr("class", "label")
         .attr("id", "benchmarkTxt")
         .attr("x", chart.xScale(1))
@@ -311,6 +319,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .transition().duration(chart.duration)
         .attr("x", chart.xScale(avg))
         .text("State avg.: " + avg)
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        });
 
       chart.svg.select("#benchmarkLine")
         .transition().duration(chart.duration)
@@ -321,6 +334,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.svg.select("#benchmarkTxt")
         .transition().duration(chart.duration)
         .attr("x", chart.xScale(1))
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "start"
+          } return "end"
+        });
     }
   });
 });
