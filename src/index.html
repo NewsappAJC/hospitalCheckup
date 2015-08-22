@@ -90,7 +90,17 @@
   <script type="text/template" id="infections-chart-template">
     <div id="infections-chart"></div>
   </script>
-  
+
+  <script type="text/template" id="tooltip-template">
+    <div id="ttip" class="ttip container">
+      <p>
+        <b>Rate:</b> <%= infections[measure].ratio %><br>
+        <b>Range:</b> <%= infections[measure].lower %> <b>to</b> <%= infections[measure].upper %><br>
+        <b>Patient days:</b> <%= infections[measure].days %><br>
+        <b>Rating:</b> <%- infections[measure].category %>
+      </p>
+    </div>
+  </script>
   <script type="text/template" id="hospital-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>

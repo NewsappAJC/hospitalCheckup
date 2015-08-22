@@ -146,6 +146,25 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
 
       chart.draw_base_bars(filtered);
+    },
+
+    set_tooltip: function(chart, obj, measure){
+      obj.on("mouseover", function(d) {
+        chart.attach_tooltip(d, measure);
+      })
+      .on("mouseout", function() {
+        $("#ttip").remove();
+      })
+    },
+
+    attach_tooltip: function(data, measure) {
+      data.measure = measure;
+
+      var tmpl = _.template($("#tooltip-template").html());
+      var tt = $(tmpl(data));
+      tt.css("top", (parseFloat(d3.event.pageY) - 220) + "px");
+      tt.css("left", (parseFloat(d3.event.pageX) - 50) + "px");
+      this.$el.append(tt);
     }
   });
 
@@ -194,6 +213,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return chart.xScale(d.infections[measure].upper - d.infections[measure].lower)
       })
       .attr("height", chart.bar_height);
+      chart.set_tooltip(chart, rangeBars, measure);
 
       //update
       rangeBars.transition()
@@ -283,7 +303,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .attr("cy", function(d) {
         return chart.yScale(d.display_name)+chart.bar_height/2;
       })
-      .attr("r", 6)
+      .attr("r", 6);
+      chart.set_tooltip(chart, circles, measure);
 
       //update
       circles.transition()
@@ -329,7 +350,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .transition().duration(chart.duration)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
-        .attr("x2", chart.xScale(1))
+        .attr("x2", chart.xScale(1));
 
       chart.svg.select("#benchmarkTxt")
         .transition().duration(chart.duration)
