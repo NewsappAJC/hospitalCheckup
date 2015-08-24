@@ -1,4 +1,3 @@
-@@ -0,0 +1,62 @@
 #! /usr/bin/env python
 
 #This script takes the awkward result of a SQL statement and gives it a logical object schema so we can refer to common properties instead of having to target them directly
@@ -6,7 +5,7 @@
 import json
 import decimal #for rounding totals
 
-f = open( '../data/src/HAI_transposed.json', 'rU' )
+f = open( '../src/assets/data/src/HAI_transposed.json', 'rU' )
 src = json.load(f)
 f.close()
 
@@ -45,7 +44,7 @@ for node in src:
     tree.append(hospital)
 
 #rename unintuitive ratio keys and round the averages
-ft = open( '../data/src/hospital_totals_web.json', 'rU')
+ft = open( '../src/assets/data/src/hospital_totals_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 
@@ -55,9 +54,9 @@ totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local sto
 for node in src:
     totals[infDict[node["measure"]]] = node["score"]
 
-f = open( '../data/infections.json', 'w')
+f = open( '../src/assets/data/infections.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 
 print "hospital infections JSON saved!"
-print "infection state avg JSON saved!" 
+print "infection state avg JSON saved!"

@@ -10,6 +10,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - [Node.js](https://nodejs.org/)
  - [Grunt CLI](http://gruntjs.com/getting-started)
  - [Bower](http://bower.io/)
+ - [Sql-bakery](https://github.com/NewsappAJC/sql-bakery)
  
 ##Plugins
  - [underscore]()
@@ -46,13 +47,12 @@ Explore hospital quality data for Atlanta area hospitals.
 
 ##How to update
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
-- To update state totals, run `grunt sql_bakery`, which runs this query:
-  ```
-  ALTER VIEW hospital_totals_web AS
-  SELECT state,measure,score FROM hai_state_20140523
-  WHERE state = "GA" AND measure LIKE "HAI_%_SIR"
-  ```
-- TODO add view for main data sets
+- To update:
+  - upload new data to the database (Carrie or John usually does this)
+  - make sure all views/tables specified in config/sql.json are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string)
+  - run `grunt sql_bakery`
+  - run py/organizeJSON.py to create the restructured JSON files
+
 - Timely and effective care table for surgeries (I don't see anything in there about complications or readmissions though)
 - Labor and delivery comes from two separate data sources, one is the HQI_HOSPI_TEC_PC table (right now it's empty)
 
