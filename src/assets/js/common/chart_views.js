@@ -99,7 +99,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           return chart.yScale(d.display_name);
         })
         .attr("width", chart.dimensions.width)
-        .attr("height", chart.bar_height)
+        .attr("height", chart.bar_height);
     },
 
     draw_axes: function(data) {
@@ -146,6 +146,25 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
 
       chart.draw_base_bars(filtered);
+    },
+
+    set_tooltip: function(chart, obj, measure){
+      obj.on("mouseover", function(d) {
+        chart.attach_tooltip(d, measure);
+      })
+      .on("mouseout", function() {
+        $("#ttip").remove();
+      });
+    },
+
+    attach_tooltip: function(data, measure) {
+      data.measure = measure; //template needs access
+
+      var tmpl = _.template($("#tooltip-template").html());
+      var tt = $(tmpl(data));
+      tt.css("top", (parseFloat(d3.event.pageY) - 220) + "px");
+      tt.css("left", (parseFloat(d3.event.pageX) - 50) + "px");
+      this.$el.append(tt);
     }
   });
 
@@ -161,12 +180,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       ids = ["baseBars", "rangeBars", "axes", "contextLines", "ratioCircles"];
 
       for(var i=0; i<ids.length; i++){
-        chart.svg.append("g")
-          .attr("id", ids[i])
+        chart.svg.append("g").attr("id", ids[i]);
       }
     },
 
-    draw_data(data){
+    draw_data: function(data){
       this.draw_range_bars(data);
       this.draw_context_lines(data);
       this.draw_ratio_circles(data);
@@ -179,7 +197,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var rangeBars = chart.svg.select("#rangeBars").selectAll(".range-bar")
         .data(data);
 
-      rangeBars.exit().remove()
+      rangeBars.exit().remove();
 
       rangeBars.enter()
       .append("rect")
@@ -194,6 +212,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return chart.xScale(d.infections[measure].upper - d.infections[measure].lower)
       })
       .attr("height", chart.bar_height);
+      chart.set_tooltip(chart, rangeBars, measure);
 
       //update
       rangeBars.transition()
@@ -202,7 +221,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           return chart.xScale(d.infections[measure].lower);
         })
         .attr("width", function(d){
-          return chart.xScale(d.infections[measure].upper - d.infections[measure].lower)
+          return chart.xScale(d.infections[measure].upper - d.infections[measure].lower);
         })
         .transition().each(function(d){
           var category = d.infections[measure].category;
@@ -220,21 +239,49 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     draw_context_lines: function(data){
       var chart = this,
-      height = chart.get_currentHeight(data);
+      height = chart.get_currentHeight(data),
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
 
-      chart.svg.select("#contextLines").append("line")
+      var contextLines = chart.svg.select("#contextLines");
+      
+      contextLines.append("line")
         .attr("y1", 0)
         .attr("y2", height)
-        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
-        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(chart.options.measure)))
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg))
         .attr("id", "averageLine");
 
-      chart.svg.select("#contextLines").append("line")
+      contextLines.append("text")
+        .text("State avg.: " + avg)
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        })
+        .attr("class", "label")
+        .attr("id", "avgTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(avg))
+        .attr("y", -5);
+
+      contextLines.append("line")
         .attr("y1", 0)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1))
         .attr("id", "benchmarkLine");
+
+      contextLines.append("text")
+        .text("Benchmark")
+        .attr("text-anchor", function(){ //figure out which side the line is on
+          if(avg < 1){
+            return "start"
+          } return "end"
+        })
+        .attr("class", "label")
+        .attr("id", "benchmarkTxt")
+        .attr("x", chart.xScale(1))
+        .attr("y", -5);
     },
 
     draw_ratio_circles: function(data){
@@ -244,18 +291,18 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var circles = chart.svg.select("#ratioCircles").selectAll(".ratio-circle")
         .data(data);
 
-      circles.exit().remove()
+      circles.exit().remove();
 
-      circles.enter()
-      .append("circle")
-      .attr("class", "ratio-circle")
-      .attr("cx", function(d) {
-        return chart.xScale(d.infections[measure].ratio);
-      })
-      .attr("cy", function(d) {
-        return chart.yScale(d.display_name)+chart.bar_height/2;
-      })
-      .attr("r", 6)
+      circles.enter().append("circle")
+        .attr("class", "ratio-circle")
+        .attr("cx", function(d) {
+          return chart.xScale(d.infections[measure].ratio);
+        })
+        .attr("cy", function(d) {
+          return chart.yScale(d.display_name)+chart.bar_height/2;
+        })
+        .attr("r", 6);
+        chart.set_tooltip(chart, circles, measure);
 
       //update
       circles.transition()
@@ -265,14 +312,15 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         })
         .attr("y", function(d) {
           return chart.yScale(d.display_name)+chart.bar_height/2;
-        })
+        });
     },
 
     onUpdateChart: function(criterion){
       this.options.measure = criterion;
       var chart = this,
       filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered);
+      height = chart.get_currentHeight(filtered),
+      avg = HospitalCheckup.Entities.averages.get(criterion);
 
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
@@ -280,15 +328,36 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.draw_ratio_circles(filtered);
 
       //update context lines
-      d3.select("#averageLine").transition().duration(chart.duration)
+      chart.svg.select("#averageLine")
+        .transition().duration(chart.duration)
         .attr("y2", height)
-        .attr("x1", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
-        .attr("x2", chart.xScale(HospitalCheckup.Entities.averages.get(criterion)))
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg));
 
-      d3.select("#benchmarkLine").transition().duration(chart.duration)
+      chart.svg.select("#avgTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(avg))
+        .text("State avg.: " + avg)
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        });
+
+      chart.svg.select("#benchmarkLine")
+        .transition().duration(chart.duration)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
-        .attr("x2", chart.xScale(1))
+        .attr("x2", chart.xScale(1));
+
+      chart.svg.select("#benchmarkTxt")
+        .transition().duration(chart.duration)
+        .attr("x", chart.xScale(1))
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "start"
+          } return "end"
+        });
     }
   });
 });

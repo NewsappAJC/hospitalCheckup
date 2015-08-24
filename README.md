@@ -42,6 +42,7 @@ Explore hospital quality data for Atlanta area hospitals.
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
 - [ ] If someone clicks on already active nav item it shouldn't reload the layout
 - [ ] What if local storage is disabled?
+- [ ] Option to keep hospitals in same order so you can compare how they rate across categories
 
 ##How to update
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)

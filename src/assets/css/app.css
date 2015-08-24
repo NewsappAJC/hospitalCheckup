@@ -107,3 +107,19 @@ line#averageLine {
 line#benchmarkLine {
   stroke: white;
 }
+.label {
+  font-size: 9px;
+}
+div.ttip {
+  position: absolute;
+  width: 270px;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 101;
+}
+div.ttip p{
+  font-size:12px;
+  margin:0px;
+}
