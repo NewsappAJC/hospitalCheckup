@@ -22,7 +22,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 3971, 
+          "incidents": "3,971", 
           "incidents_label": "Patient days", 
           "lower": 0.011, 
           "na": 0, 
@@ -34,7 +34,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 59801, 
+          "incidents": "59,801", 
           "incidents_label": "Patient days", 
           "lower": 0.507, 
           "na": 0, 
@@ -46,7 +46,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 4460, 
+          "incidents": "4,460", 
           "incidents_label": "Patient days", 
           "lower": 0.048, 
           "na": 0, 
@@ -58,7 +58,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 69677, 
+          "incidents": "69,677", 
           "incidents_label": "Patient days", 
           "lower": 0.014, 
           "na": 0, 
@@ -108,7 +108,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1826, 
+          "incidents": "1,826", 
           "incidents_label": "Patient days", 
           "lower": 0.153, 
           "na": 0, 
@@ -120,7 +120,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 26599, 
+          "incidents": "26,599", 
           "incidents_label": "Patient days", 
           "lower": 0.892, 
           "na": 0, 
@@ -132,7 +132,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1037, 
+          "incidents": "1,037", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -144,7 +144,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 28821, 
+          "incidents": "28,821", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -194,7 +194,7 @@
       "infections": {
         "cauti": {
           "category": "Better than the National Benchmark", 
-          "incidents": 2366, 
+          "incidents": "2,366", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -206,7 +206,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 26271, 
+          "incidents": "26,271", 
           "incidents_label": "Patient days", 
           "lower": 0.99, 
           "na": 0, 
@@ -218,7 +218,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1792, 
+          "incidents": "1,792", 
           "incidents_label": "Patient days", 
           "lower": 0.019, 
           "na": 0, 
@@ -230,7 +230,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 28889, 
+          "incidents": "28,889", 
           "incidents_label": "Patient days", 
           "lower": 0.033, 
           "na": 0, 
@@ -280,7 +280,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 18145, 
+          "incidents": "18,145", 
           "incidents_label": "Patient days", 
           "lower": 1.069, 
           "na": 0, 
@@ -292,7 +292,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 160848, 
+          "incidents": "160,848", 
           "incidents_label": "Patient days", 
           "lower": 0.918, 
           "na": 0, 
@@ -304,7 +304,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 20066, 
+          "incidents": "20,066", 
           "incidents_label": "Patient days", 
           "lower": 0.292, 
           "na": 0, 
@@ -316,7 +316,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 160851, 
+          "incidents": "160,851", 
           "incidents_label": "Patient days", 
           "lower": 0.67, 
           "na": 0, 
@@ -366,7 +366,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1770, 
+          "incidents": "1,770", 
           "incidents_label": "Patient days", 
           "lower": 0.146, 
           "na": 0, 
@@ -378,7 +378,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 34544, 
+          "incidents": "34,544", 
           "incidents_label": "Patient days", 
           "lower": 0.358, 
           "na": 0, 
@@ -390,7 +390,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 868, 
+          "incidents": "868", 
           "incidents_label": "Patient days", 
           "lower": 0.038, 
           "na": 0, 
@@ -402,7 +402,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 37198, 
+          "incidents": "37,198", 
           "incidents_label": "Patient days", 
           "lower": 0.642, 
           "na": 0, 
@@ -452,7 +452,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 868, 
+          "incidents": "868", 
           "incidents_label": "Patient days", 
           "lower": 0.677, 
           "na": 0, 
@@ -464,7 +464,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 15295, 
+          "incidents": "15,295", 
           "incidents_label": "Patient days", 
           "lower": 0.199, 
           "na": 0, 
@@ -476,7 +476,7 @@
         }, 
         "clabsi": {
           "category": "Not Available", 
-          "incidents": 501, 
+          "incidents": "501", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -488,7 +488,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 18244, 
+          "incidents": "18,244", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -538,7 +538,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 13550, 
+          "incidents": "13,550", 
           "incidents_label": "Patient days", 
           "lower": 0.675, 
           "na": 0, 
@@ -550,7 +550,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 188899, 
+          "incidents": "188,899", 
           "incidents_label": "Patient days", 
           "lower": 0.587, 
           "na": 0, 
@@ -562,7 +562,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 10825, 
+          "incidents": "10,825", 
           "incidents_label": "Patient days", 
           "lower": 0.042, 
           "na": 0, 
@@ -574,7 +574,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 198246, 
+          "incidents": "198,246", 
           "incidents_label": "Patient days", 
           "lower": 0.579, 
           "na": 0, 
@@ -624,7 +624,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2481, 
+          "incidents": "2,481", 
           "incidents_label": "Patient days", 
           "lower": 0.949, 
           "na": 0, 
@@ -636,7 +636,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 30641, 
+          "incidents": "30,641", 
           "incidents_label": "Patient days", 
           "lower": 0.261, 
           "na": 0, 
@@ -648,7 +648,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1829, 
+          "incidents": "1,829", 
           "incidents_label": "Patient days", 
           "lower": 0.122, 
           "na": 0, 
@@ -660,7 +660,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 32097, 
+          "incidents": "32,097", 
           "incidents_label": "Patient days", 
           "lower": 0.26, 
           "na": 0, 
@@ -710,7 +710,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 3169, 
+          "incidents": "3,169", 
           "incidents_label": "Patient days", 
           "lower": 1.521, 
           "na": 0, 
@@ -722,7 +722,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 35895, 
+          "incidents": "35,895", 
           "incidents_label": "Patient days", 
           "lower": 0.281, 
           "na": 0, 
@@ -734,7 +734,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1680, 
+          "incidents": "1,680", 
           "incidents_label": "Patient days", 
           "lower": 0.727, 
           "na": 0, 
@@ -746,7 +746,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 36372, 
+          "incidents": "36,372", 
           "incidents_label": "Patient days", 
           "lower": 0.946, 
           "na": 0, 
@@ -796,7 +796,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 16336, 
+          "incidents": "16,336", 
           "incidents_label": "Patient days", 
           "lower": 1.187, 
           "na": 0, 
@@ -808,7 +808,7 @@
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 165555, 
+          "incidents": "165,555", 
           "incidents_label": "Patient days", 
           "lower": 1.027, 
           "na": 0, 
@@ -820,7 +820,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 13791, 
+          "incidents": "13,791", 
           "incidents_label": "Patient days", 
           "lower": 0.146, 
           "na": 0, 
@@ -832,7 +832,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 184976, 
+          "incidents": "184,976", 
           "incidents_label": "Patient days", 
           "lower": 0.415, 
           "na": 0, 
@@ -882,7 +882,7 @@
       "infections": {
         "cauti": {
           "category": "Not Available", 
-          "incidents": 457, 
+          "incidents": "457", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -894,7 +894,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 10388, 
+          "incidents": "10,388", 
           "incidents_label": "Patient days", 
           "lower": 0.615, 
           "na": 0, 
@@ -906,7 +906,7 @@
         }, 
         "clabsi": {
           "category": "Not Available", 
-          "incidents": 363, 
+          "incidents": "363", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -918,7 +918,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 10388, 
+          "incidents": "10,388", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -968,7 +968,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 4605, 
+          "incidents": "4,605", 
           "incidents_label": "Patient days", 
           "lower": 0.103, 
           "na": 0, 
@@ -980,7 +980,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 69649, 
+          "incidents": "69,649", 
           "incidents_label": "Patient days", 
           "lower": 0.493, 
           "na": 0, 
@@ -992,7 +992,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 3330, 
+          "incidents": "3,330", 
           "incidents_label": "Patient days", 
           "lower": 0.128, 
           "na": 0, 
@@ -1004,7 +1004,7 @@
         }, 
         "mrsa": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 78262, 
+          "incidents": "78,262", 
           "incidents_label": "Patient days", 
           "lower": 1.89, 
           "na": 0, 
@@ -1054,7 +1054,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 6609, 
+          "incidents": "6,609", 
           "incidents_label": "Patient days", 
           "lower": 1.543, 
           "na": 0, 
@@ -1066,7 +1066,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 87929, 
+          "incidents": "87,929", 
           "incidents_label": "Patient days", 
           "lower": 0.784, 
           "na": 0, 
@@ -1078,7 +1078,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 4003, 
+          "incidents": "4,003", 
           "incidents_label": "Patient days", 
           "lower": 0.212, 
           "na": 0, 
@@ -1090,7 +1090,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 97176, 
+          "incidents": "97,176", 
           "incidents_label": "Patient days", 
           "lower": 0.01, 
           "na": 0, 
@@ -1140,7 +1140,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 6273, 
+          "incidents": "6,273", 
           "incidents_label": "Patient days", 
           "lower": 1.258, 
           "na": 0, 
@@ -1152,7 +1152,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 97166, 
+          "incidents": "97,166", 
           "incidents_label": "Patient days", 
           "lower": 0.599, 
           "na": 0, 
@@ -1164,7 +1164,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 5402, 
+          "incidents": "5,402", 
           "incidents_label": "Patient days", 
           "lower": 0.3, 
           "na": 0, 
@@ -1176,7 +1176,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 107160, 
+          "incidents": "107,160", 
           "incidents_label": "Patient days", 
           "lower": 0.138, 
           "na": 0, 
@@ -1226,7 +1226,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 9894, 
+          "incidents": "9,894", 
           "incidents_label": "Patient days", 
           "lower": 0.869, 
           "na": 0, 
@@ -1238,7 +1238,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 114203, 
+          "incidents": "114,203", 
           "incidents_label": "Patient days", 
           "lower": 0.865, 
           "na": 0, 
@@ -1250,7 +1250,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 11948, 
+          "incidents": "11,948", 
           "incidents_label": "Patient days", 
           "lower": 0.513, 
           "na": 0, 
@@ -1262,7 +1262,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 130913, 
+          "incidents": "130,913", 
           "incidents_label": "Patient days", 
           "lower": 0.623, 
           "na": 0, 
@@ -1312,7 +1312,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 19729, 
+          "incidents": "19,729", 
           "incidents_label": "Patient days", 
           "lower": 0.987, 
           "na": 0, 
@@ -1324,7 +1324,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 159232, 
+          "incidents": "159,232", 
           "incidents_label": "Patient days", 
           "lower": 0.585, 
           "na": 0, 
@@ -1336,7 +1336,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 15321, 
+          "incidents": "15,321", 
           "incidents_label": "Patient days", 
           "lower": 0.769, 
           "na": 0, 
@@ -1348,7 +1348,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 174919, 
+          "incidents": "174,919", 
           "incidents_label": "Patient days", 
           "lower": 0.4, 
           "na": 0, 
@@ -1398,7 +1398,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 7357, 
+          "incidents": "7,357", 
           "incidents_label": "Patient days", 
           "lower": 0.879, 
           "na": 0, 
@@ -1410,7 +1410,7 @@
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 66803, 
+          "incidents": "66,803", 
           "incidents_label": "Patient days", 
           "lower": 1.321, 
           "na": 0, 
@@ -1422,7 +1422,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 6426, 
+          "incidents": "6,426", 
           "incidents_label": "Patient days", 
           "lower": 0.126, 
           "na": 0, 
@@ -1434,7 +1434,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 66803, 
+          "incidents": "66,803", 
           "incidents_label": "Patient days", 
           "lower": 0.503, 
           "na": 0, 
@@ -1484,7 +1484,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 12710, 
+          "incidents": "12,710", 
           "incidents_label": "Patient days", 
           "lower": 1.989, 
           "na": 0, 
@@ -1496,7 +1496,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 133907, 
+          "incidents": "133,907", 
           "incidents_label": "Patient days", 
           "lower": 0.954, 
           "na": 0, 
@@ -1508,7 +1508,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 15724, 
+          "incidents": "15,724", 
           "incidents_label": "Patient days", 
           "lower": 0.511, 
           "na": 0, 
@@ -1520,7 +1520,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 146948, 
+          "incidents": "146,948", 
           "incidents_label": "Patient days", 
           "lower": 0.593, 
           "na": 0, 
@@ -1570,7 +1570,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 6856, 
+          "incidents": "6,856", 
           "incidents_label": "Patient days", 
           "lower": 0.956, 
           "na": 0, 
@@ -1582,7 +1582,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 120960, 
+          "incidents": "120,960", 
           "incidents_label": "Patient days", 
           "lower": 0.641, 
           "na": 0, 
@@ -1594,7 +1594,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 9680, 
+          "incidents": "9,680", 
           "incidents_label": "Patient days", 
           "lower": 0.22, 
           "na": 0, 
@@ -1606,7 +1606,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 139513, 
+          "incidents": "139,513", 
           "incidents_label": "Patient days", 
           "lower": 0.653, 
           "na": 0, 
@@ -1656,7 +1656,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1736, 
+          "incidents": "1,736", 
           "incidents_label": "Patient days", 
           "lower": 0.61, 
           "na": 0, 
@@ -1668,7 +1668,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 35058, 
+          "incidents": "35,058", 
           "incidents_label": "Patient days", 
           "lower": 0.662, 
           "na": 0, 
@@ -1680,7 +1680,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2217, 
+          "incidents": "2,217", 
           "incidents_label": "Patient days", 
           "lower": 0.704, 
           "na": 0, 
@@ -1692,7 +1692,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 40352, 
+          "incidents": "40,352", 
           "incidents_label": "Patient days", 
           "lower": 0.527, 
           "na": 0, 
@@ -1742,7 +1742,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 14879, 
+          "incidents": "14,879", 
           "incidents_label": "Patient days", 
           "lower": 2.021, 
           "na": 0, 
@@ -1754,7 +1754,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 103945, 
+          "incidents": "103,945", 
           "incidents_label": "Patient days", 
           "lower": 0.72, 
           "na": 0, 
@@ -1766,7 +1766,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 12747, 
+          "incidents": "12,747", 
           "incidents_label": "Patient days", 
           "lower": 0.519, 
           "na": 0, 
@@ -1778,7 +1778,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 110523, 
+          "incidents": "110,523", 
           "incidents_label": "Patient days", 
           "lower": 0.338, 
           "na": 0, 
@@ -1828,7 +1828,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 5381, 
+          "incidents": "5,381", 
           "incidents_label": "Patient days", 
           "lower": 1.206, 
           "na": 0, 
@@ -1840,7 +1840,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 88728, 
+          "incidents": "88,728", 
           "incidents_label": "Patient days", 
           "lower": 0.714, 
           "na": 0, 
@@ -1852,7 +1852,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 5147, 
+          "incidents": "5,147", 
           "incidents_label": "Patient days", 
           "lower": 0.137, 
           "na": 0, 
@@ -1864,7 +1864,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 101498, 
+          "incidents": "101,498", 
           "incidents_label": "Patient days", 
           "lower": 0.272, 
           "na": 0, 
@@ -1914,7 +1914,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 4614, 
+          "incidents": "4,614", 
           "incidents_label": "Patient days", 
           "lower": 0.138, 
           "na": 0, 
@@ -1926,7 +1926,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 123631, 
+          "incidents": "123,631", 
           "incidents_label": "Patient days", 
           "lower": 0.569, 
           "na": 0, 
@@ -1938,7 +1938,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 7546, 
+          "incidents": "7,546", 
           "incidents_label": "Patient days", 
           "lower": 0.086, 
           "na": 0, 
@@ -1950,7 +1950,7 @@
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
-          "incidents": 186014, 
+          "incidents": "186,014", 
           "incidents_label": "Patient days", 
           "lower": 0.076, 
           "na": 0, 
@@ -2000,7 +2000,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 3809, 
+          "incidents": "3,809", 
           "incidents_label": "Patient days", 
           "lower": 0.532, 
           "na": 0, 
@@ -2012,7 +2012,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 62206, 
+          "incidents": "62,206", 
           "incidents_label": "Patient days", 
           "lower": 0.232, 
           "na": 0, 
@@ -2024,7 +2024,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2085, 
+          "incidents": "2,085", 
           "incidents_label": "Patient days", 
           "lower": 0.978, 
           "na": 0, 
@@ -2036,7 +2036,7 @@
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
-          "incidents": 62206, 
+          "incidents": "62,206", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2086,7 +2086,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 5336, 
+          "incidents": "5,336", 
           "incidents_label": "Patient days", 
           "lower": 0.864, 
           "na": 0, 
@@ -2098,7 +2098,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 52627, 
+          "incidents": "52,627", 
           "incidents_label": "Patient days", 
           "lower": 0.474, 
           "na": 0, 
@@ -2110,7 +2110,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 4193, 
+          "incidents": "4,193", 
           "incidents_label": "Patient days", 
           "lower": 0.272, 
           "na": 0, 
@@ -2122,7 +2122,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 52627, 
+          "incidents": "52,627", 
           "incidents_label": "Patient days", 
           "lower": 0.554, 
           "na": 0, 
@@ -2172,7 +2172,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1815, 
+          "incidents": "1,815", 
           "incidents_label": "Patient days", 
           "lower": 0.558, 
           "na": 0, 
@@ -2184,7 +2184,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 27232, 
+          "incidents": "27,232", 
           "incidents_label": "Patient days", 
           "lower": 0.667, 
           "na": 0, 
@@ -2196,7 +2196,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1573, 
+          "incidents": "1,573", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2208,7 +2208,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 28105, 
+          "incidents": "28,105", 
           "incidents_label": "Patient days", 
           "lower": 0.039, 
           "na": 0, 
@@ -2258,7 +2258,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 3189, 
+          "incidents": "3,189", 
           "incidents_label": "Patient days", 
           "lower": 0.332, 
           "na": 0, 
@@ -2270,7 +2270,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 58812, 
+          "incidents": "58,812", 
           "incidents_label": "Patient days", 
           "lower": 0.517, 
           "na": 0, 
@@ -2282,7 +2282,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2910, 
+          "incidents": "2,910", 
           "incidents_label": "Patient days", 
           "lower": 0.064, 
           "na": 0, 
@@ -2294,7 +2294,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 66063, 
+          "incidents": "66,063", 
           "incidents_label": "Patient days", 
           "lower": 0.718, 
           "na": 0, 
@@ -2344,7 +2344,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 2989, 
+          "incidents": "2,989", 
           "incidents_label": "Patient days", 
           "lower": 1.036, 
           "na": 0, 
@@ -2356,7 +2356,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 54649, 
+          "incidents": "54,649", 
           "incidents_label": "Patient days", 
           "lower": 0.761, 
           "na": 0, 
@@ -2368,7 +2368,7 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": 3316, 
+          "incidents": "3,316", 
           "incidents_label": "Patient days", 
           "lower": 0.009, 
           "na": 0, 
@@ -2380,7 +2380,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 59558, 
+          "incidents": "59,558", 
           "incidents_label": "Patient days", 
           "lower": 0.675, 
           "na": 0, 
@@ -2430,7 +2430,7 @@
       "infections": {
         "cauti": {
           "category": "Better than the National Benchmark", 
-          "incidents": 2873, 
+          "incidents": "2,873", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2442,7 +2442,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 30414, 
+          "incidents": "30,414", 
           "incidents_label": "Patient days", 
           "lower": 0.411, 
           "na": 0, 
@@ -2454,7 +2454,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2494, 
+          "incidents": "2,494", 
           "incidents_label": "Patient days", 
           "lower": 0.09, 
           "na": 0, 
@@ -2466,7 +2466,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 31989, 
+          "incidents": "31,989", 
           "incidents_label": "Patient days", 
           "lower": 0.168, 
           "na": 0, 
@@ -2516,7 +2516,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2461, 
+          "incidents": "2,461", 
           "incidents_label": "Patient days", 
           "lower": 0.016, 
           "na": 0, 
@@ -2528,7 +2528,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 52087, 
+          "incidents": "52,087", 
           "incidents_label": "Patient days", 
           "lower": 0.412, 
           "na": 0, 
@@ -2540,7 +2540,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 3088, 
+          "incidents": "3,088", 
           "incidents_label": "Patient days", 
           "lower": 0.055, 
           "na": 0, 
@@ -2552,7 +2552,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 60900, 
+          "incidents": "60,900", 
           "incidents_label": "Patient days", 
           "lower": 0.109, 
           "na": 0, 
@@ -2602,7 +2602,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1257, 
+          "incidents": "1,257", 
           "incidents_label": "Patient days", 
           "lower": 0.02, 
           "na": 0, 
@@ -2614,7 +2614,7 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "incidents": 18282, 
+          "incidents": "18,282", 
           "incidents_label": "Patient days", 
           "lower": 0.098, 
           "na": 0, 
@@ -2626,7 +2626,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 529, 
+          "incidents": "529", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2638,7 +2638,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 18983, 
+          "incidents": "18,983", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -2688,7 +2688,7 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": 2333, 
+          "incidents": "2,333", 
           "incidents_label": "Patient days", 
           "lower": 0.273, 
           "na": 0, 
@@ -2700,7 +2700,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 31178, 
+          "incidents": "31,178", 
           "incidents_label": "Patient days", 
           "lower": 0.442, 
           "na": 0, 
@@ -2712,7 +2712,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1519, 
+          "incidents": "1,519", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2724,7 +2724,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 32560, 
+          "incidents": "32,560", 
           "incidents_label": "Patient days", 
           "lower": 0.15, 
           "na": 0, 
@@ -2774,7 +2774,7 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "incidents": 1275, 
+          "incidents": "1,275", 
           "incidents_label": "Patient days", 
           "lower": 1.845, 
           "na": 0, 
@@ -2786,7 +2786,7 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "incidents": 26988, 
+          "incidents": "26,988", 
           "incidents_label": "Patient days", 
           "lower": 0.426, 
           "na": 0, 
@@ -2798,7 +2798,7 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": 1162, 
+          "incidents": "1,162", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
@@ -2810,7 +2810,7 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "incidents": 28941, 
+          "incidents": "28,941", 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 

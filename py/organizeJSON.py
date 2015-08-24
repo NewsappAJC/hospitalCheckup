@@ -40,7 +40,7 @@ for node in src:
             #how are incidents being calculated?
             if(param == "days"):
                 hospital["infections"][tmp[0]]["incidents_label"] = "Patient days"
-                hospital["infections"][tmp[0]]["incidents"] = node[key]
+                hospital["infections"][tmp[0]]["incidents"] = "{:,d}".format(node[key])
                 del hospital["infections"][tmp[0]][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][tmp[0]]["incidents_label"] = "Procedures"
