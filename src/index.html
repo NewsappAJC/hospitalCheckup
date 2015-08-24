@@ -96,7 +96,7 @@
       <p>
         <b>Rate:</b> <%= infections[measure].ratio %><br>
         <b>Range:</b> <%= infections[measure].lower %> <b>to</b> <%= infections[measure].upper %><br>
-        <b>Patient days:</b> <%= infections[measure].days %><br>
+        <b><%- infections[measure].incidents_label %>:</b> <%= infections[measure].incidents %><br>
         <b>Rating:</b> <%- infections[measure].category %>
       </p>
     </div>

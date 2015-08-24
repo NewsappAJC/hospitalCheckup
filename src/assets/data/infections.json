@@ -22,7 +22,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 3971, 
+          "incidents": 3971, 
+          "incidents_label": "Patient days", 
           "lower": 0.011, 
           "na": 0, 
           "note": null, 
@@ -33,7 +34,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 59801, 
+          "incidents": 59801, 
+          "incidents_label": "Patient days", 
           "lower": 0.507, 
           "na": 0, 
           "note": null, 
@@ -44,7 +46,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 4460, 
+          "incidents": 4460, 
+          "incidents_label": "Patient days", 
           "lower": 0.048, 
           "na": 0, 
           "note": null, 
@@ -55,7 +58,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 69677, 
+          "incidents": 69677, 
+          "incidents_label": "Patient days", 
           "lower": 0.014, 
           "na": 0, 
           "note": null, 
@@ -66,23 +70,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 207, 
+          "incidents_label": "Procedures", 
           "lower": 0.051, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 6.56, 
-          "procedures": 207, 
           "ratio": 0.305, 
           "upper": 1.007
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 257, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.256, 
-          "procedures": 257, 
           "ratio": 0, 
           "upper": 1.328
         }
@@ -102,7 +108,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 1826, 
+          "incidents": 1826, 
+          "incidents_label": "Patient days", 
           "lower": 0.153, 
           "na": 0, 
           "note": null, 
@@ -113,7 +120,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 26599, 
+          "incidents": 26599, 
+          "incidents_label": "Patient days", 
           "lower": 0.892, 
           "na": 0, 
           "note": null, 
@@ -124,7 +132,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1037, 
+          "incidents": 1037, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -135,7 +144,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 28821, 
+          "incidents": 28821, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -146,23 +156,25 @@
         }, 
         "ssicolon": {
           "category": "Better than the National Benchmark", 
+          "incidents": 118, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 3.662, 
-          "procedures": 118, 
           "ratio": 0, 
           "upper": 0.818
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 63, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.552, 
-          "procedures": 63, 
           "ratio": null, 
           "upper": null
         }
@@ -182,7 +194,8 @@
       "infections": {
         "cauti": {
           "category": "Better than the National Benchmark", 
-          "days": 2366, 
+          "incidents": 2366, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -193,7 +206,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 26271, 
+          "incidents": 26271, 
+          "incidents_label": "Patient days", 
           "lower": 0.99, 
           "na": 0, 
           "note": null, 
@@ -204,7 +218,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1792, 
+          "incidents": 1792, 
+          "incidents_label": "Patient days", 
           "lower": 0.019, 
           "na": 0, 
           "note": null, 
@@ -215,7 +230,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 28889, 
+          "incidents": 28889, 
+          "incidents_label": "Patient days", 
           "lower": 0.033, 
           "na": 0, 
           "note": null, 
@@ -226,23 +242,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 87, 
+          "incidents_label": "Procedures", 
           "lower": 0.019, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 2.662, 
-          "procedures": 87, 
           "ratio": 0.376, 
           "upper": 1.853
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 143, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.381, 
-          "procedures": 143, 
           "ratio": 0, 
           "upper": 2.169
         }
@@ -262,7 +280,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 18145, 
+          "incidents": 18145, 
+          "incidents_label": "Patient days", 
           "lower": 1.069, 
           "na": 0, 
           "note": null, 
@@ -273,7 +292,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 160848, 
+          "incidents": 160848, 
+          "incidents_label": "Patient days", 
           "lower": 0.918, 
           "na": 0, 
           "note": null, 
@@ -284,7 +304,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 20066, 
+          "incidents": 20066, 
+          "incidents_label": "Patient days", 
           "lower": 0.292, 
           "na": 0, 
           "note": null, 
@@ -295,7 +316,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 160851, 
+          "incidents": 160851, 
+          "incidents_label": "Patient days", 
           "lower": 0.67, 
           "na": 0, 
           "note": null, 
@@ -306,23 +328,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 258, 
+          "incidents_label": "Procedures", 
           "lower": 0.138, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
           "predicted": 9.201, 
-          "procedures": 258, 
           "ratio": 0.435, 
           "upper": 1.049
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 140, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.365, 
-          "procedures": 140, 
           "ratio": 0, 
           "upper": 2.195
         }
@@ -342,7 +366,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 1770, 
+          "incidents": 1770, 
+          "incidents_label": "Patient days", 
           "lower": 0.146, 
           "na": 0, 
           "note": null, 
@@ -353,7 +378,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 34544, 
+          "incidents": 34544, 
+          "incidents_label": "Patient days", 
           "lower": 0.358, 
           "na": 0, 
           "note": null, 
@@ -364,7 +390,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 868, 
+          "incidents": 868, 
+          "incidents_label": "Patient days", 
           "lower": 0.038, 
           "na": 0, 
           "note": null, 
@@ -375,7 +402,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 37198, 
+          "incidents": 37198, 
+          "incidents_label": "Patient days", 
           "lower": 0.642, 
           "na": 0, 
           "note": null, 
@@ -386,23 +414,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 107, 
+          "incidents_label": "Procedures", 
           "lower": 0.211, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 3.611, 
-          "procedures": 107, 
           "ratio": 0.831, 
           "upper": 2.261
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 118, 
+          "incidents_label": "Procedures", 
           "lower": 0.042, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 1.189, 
-          "procedures": 118, 
           "ratio": 0.841, 
           "upper": 4.148
         }
@@ -422,7 +452,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 868, 
+          "incidents": 868, 
+          "incidents_label": "Patient days", 
           "lower": 0.677, 
           "na": 0, 
           "note": null, 
@@ -433,7 +464,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 15295, 
+          "incidents": 15295, 
+          "incidents_label": "Patient days", 
           "lower": 0.199, 
           "na": 0, 
           "note": null, 
@@ -444,7 +476,8 @@
         }, 
         "clabsi": {
           "category": "Not Available", 
-          "days": 501, 
+          "incidents": 501, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -455,7 +488,8 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "days": 18244, 
+          "incidents": 18244, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -466,23 +500,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 45, 
+          "incidents_label": "Procedures", 
           "lower": 0.232, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 1.445, 
-          "procedures": 45, 
           "ratio": 1.384, 
           "upper": 4.573
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 71, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.666, 
-          "procedures": 71, 
           "ratio": null, 
           "upper": null
         }
@@ -502,7 +538,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 13550, 
+          "incidents": 13550, 
+          "incidents_label": "Patient days", 
           "lower": 0.675, 
           "na": 0, 
           "note": null, 
@@ -513,7 +550,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 188899, 
+          "incidents": 188899, 
+          "incidents_label": "Patient days", 
           "lower": 0.587, 
           "na": 0, 
           "note": null, 
@@ -524,7 +562,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 10825, 
+          "incidents": 10825, 
+          "incidents_label": "Patient days", 
           "lower": 0.042, 
           "na": 0, 
           "note": null, 
@@ -535,7 +574,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 198246, 
+          "incidents": 198246, 
+          "incidents_label": "Patient days", 
           "lower": 0.579, 
           "na": 0, 
           "note": null, 
@@ -546,23 +586,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 294, 
+          "incidents_label": "Procedures", 
           "lower": 0.599, 
           "na": 0, 
           "note": null, 
           "observed": 11, 
           "predicted": 9.654, 
-          "procedures": 294, 
           "ratio": 1.139, 
           "upper": 1.98
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 552, 
+          "incidents_label": "Procedures", 
           "lower": 0.124, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 6.139, 
-          "procedures": 552, 
           "ratio": 0.489, 
           "upper": 1.33
         }
@@ -582,7 +624,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 2481, 
+          "incidents": 2481, 
+          "incidents_label": "Patient days", 
           "lower": 0.949, 
           "na": 0, 
           "note": null, 
@@ -593,7 +636,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 30641, 
+          "incidents": 30641, 
+          "incidents_label": "Patient days", 
           "lower": 0.261, 
           "na": 0, 
           "note": null, 
@@ -604,7 +648,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1829, 
+          "incidents": 1829, 
+          "incidents_label": "Patient days", 
           "lower": 0.122, 
           "na": 0, 
           "note": null, 
@@ -615,7 +660,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 32097, 
+          "incidents": 32097, 
+          "incidents_label": "Patient days", 
           "lower": 0.26, 
           "na": 0, 
           "note": null, 
@@ -626,23 +672,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 61, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.795, 
-          "procedures": 61, 
           "ratio": 0, 
           "upper": 1.669
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 70, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.554, 
-          "procedures": 70, 
           "ratio": null, 
           "upper": null
         }
@@ -662,7 +710,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 3169, 
+          "incidents": 3169, 
+          "incidents_label": "Patient days", 
           "lower": 1.521, 
           "na": 0, 
           "note": null, 
@@ -673,7 +722,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 35895, 
+          "incidents": 35895, 
+          "incidents_label": "Patient days", 
           "lower": 0.281, 
           "na": 0, 
           "note": null, 
@@ -684,7 +734,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1680, 
+          "incidents": 1680, 
+          "incidents_label": "Patient days", 
           "lower": 0.727, 
           "na": 0, 
           "note": null, 
@@ -695,7 +746,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 36372, 
+          "incidents": 36372, 
+          "incidents_label": "Patient days", 
           "lower": 0.946, 
           "na": 0, 
           "note": null, 
@@ -706,23 +758,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 43, 
+          "incidents_label": "Procedures", 
           "lower": 0.032, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 1.541, 
-          "procedures": 43, 
           "ratio": 0.649, 
           "upper": 3.2
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 45, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 2, 
           "predicted": 0.593, 
-          "procedures": 45, 
           "ratio": null, 
           "upper": null
         }
@@ -742,7 +796,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 16336, 
+          "incidents": 16336, 
+          "incidents_label": "Patient days", 
           "lower": 1.187, 
           "na": 0, 
           "note": null, 
@@ -753,7 +808,8 @@
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
-          "days": 165555, 
+          "incidents": 165555, 
+          "incidents_label": "Patient days", 
           "lower": 1.027, 
           "na": 0, 
           "note": null, 
@@ -764,7 +820,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 13791, 
+          "incidents": 13791, 
+          "incidents_label": "Patient days", 
           "lower": 0.146, 
           "na": 0, 
           "note": null, 
@@ -775,7 +832,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 184976, 
+          "incidents": 184976, 
+          "incidents_label": "Patient days", 
           "lower": 0.415, 
           "na": 0, 
           "note": null, 
@@ -786,23 +844,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 345, 
+          "incidents_label": "Procedures", 
           "lower": 0.829, 
           "na": 0, 
           "note": null, 
           "observed": 16, 
           "predicted": 11.424, 
-          "procedures": 345, 
           "ratio": 1.401, 
           "upper": 2.226
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 526, 
+          "incidents_label": "Procedures", 
           "lower": 0.268, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
           "predicted": 4.742, 
-          "procedures": 526, 
           "ratio": 0.844, 
           "upper": 2.035
         }
@@ -822,7 +882,8 @@
       "infections": {
         "cauti": {
           "category": "Not Available", 
-          "days": 457, 
+          "incidents": 457, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -833,7 +894,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 10388, 
+          "incidents": 10388, 
+          "incidents_label": "Patient days", 
           "lower": 0.615, 
           "na": 0, 
           "note": null, 
@@ -844,7 +906,8 @@
         }, 
         "clabsi": {
           "category": "Not Available", 
-          "days": 363, 
+          "incidents": 363, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -855,7 +918,8 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "days": 10388, 
+          "incidents": 10388, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -866,23 +930,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 35, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.044, 
-          "procedures": 35, 
           "ratio": 0, 
           "upper": 2.869
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 1, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.007, 
-          "procedures": 1, 
           "ratio": null, 
           "upper": null
         }
@@ -902,7 +968,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 4605, 
+          "incidents": 4605, 
+          "incidents_label": "Patient days", 
           "lower": 0.103, 
           "na": 0, 
           "note": null, 
@@ -913,7 +980,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 69649, 
+          "incidents": 69649, 
+          "incidents_label": "Patient days", 
           "lower": 0.493, 
           "na": 0, 
           "note": null, 
@@ -924,7 +992,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 3330, 
+          "incidents": 3330, 
+          "incidents_label": "Patient days", 
           "lower": 0.128, 
           "na": 0, 
           "note": null, 
@@ -935,7 +1004,8 @@
         }, 
         "mrsa": {
           "category": "Worse than the National Benchmark", 
-          "days": 78262, 
+          "incidents": 78262, 
+          "incidents_label": "Patient days", 
           "lower": 1.89, 
           "na": 0, 
           "note": null, 
@@ -946,23 +1016,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 132, 
+          "incidents_label": "Procedures", 
           "lower": 0.011, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 4.508, 
-          "procedures": 132, 
           "ratio": 0.222, 
           "upper": 1.094
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 318, 
+          "incidents_label": "Procedures", 
           "lower": 0.013, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 3.914, 
-          "procedures": 318, 
           "ratio": 0.255, 
           "upper": 1.26
         }
@@ -982,7 +1054,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 6609, 
+          "incidents": 6609, 
+          "incidents_label": "Patient days", 
           "lower": 1.543, 
           "na": 0, 
           "note": null, 
@@ -993,7 +1066,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 87929, 
+          "incidents": 87929, 
+          "incidents_label": "Patient days", 
           "lower": 0.784, 
           "na": 0, 
           "note": null, 
@@ -1004,7 +1078,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 4003, 
+          "incidents": 4003, 
+          "incidents_label": "Patient days", 
           "lower": 0.212, 
           "na": 0, 
           "note": null, 
@@ -1015,7 +1090,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 97176, 
+          "incidents": 97176, 
+          "incidents_label": "Patient days", 
           "lower": 0.01, 
           "na": 0, 
           "note": null, 
@@ -1026,23 +1102,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 221, 
+          "incidents_label": "Procedures", 
           "lower": 0.416, 
           "na": 0, 
           "note": null, 
           "observed": 7, 
           "predicted": 7.368, 
-          "procedures": 221, 
           "ratio": 0.95, 
           "upper": 1.879
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 199, 
+          "incidents_label": "Procedures", 
           "lower": 0.386, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 1.977, 
-          "procedures": 199, 
           "ratio": 1.517, 
           "upper": 4.13
         }
@@ -1062,7 +1140,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 6273, 
+          "incidents": 6273, 
+          "incidents_label": "Patient days", 
           "lower": 1.258, 
           "na": 0, 
           "note": null, 
@@ -1073,7 +1152,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 97166, 
+          "incidents": 97166, 
+          "incidents_label": "Patient days", 
           "lower": 0.599, 
           "na": 0, 
           "note": null, 
@@ -1084,7 +1164,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 5402, 
+          "incidents": 5402, 
+          "incidents_label": "Patient days", 
           "lower": 0.3, 
           "na": 0, 
           "note": null, 
@@ -1095,7 +1176,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 107160, 
+          "incidents": 107160, 
+          "incidents_label": "Patient days", 
           "lower": 0.138, 
           "na": 0, 
           "note": null, 
@@ -1106,23 +1188,25 @@
         }, 
         "ssicolon": {
           "category": "Worse than the National Benchmark", 
+          "incidents": 162, 
+          "incidents_label": "Procedures", 
           "lower": 1.078, 
           "na": 0, 
           "note": null, 
           "observed": 11, 
           "predicted": 5.368, 
-          "procedures": 162, 
           "ratio": 2.049, 
           "upper": 3.562
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 296, 
+          "incidents_label": "Procedures", 
           "lower": 0.895, 
           "na": 0, 
           "note": null, 
           "observed": 6, 
           "predicted": 2.717, 
-          "procedures": 296, 
           "ratio": 2.208, 
           "upper": 4.593
         }
@@ -1142,7 +1226,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 9894, 
+          "incidents": 9894, 
+          "incidents_label": "Patient days", 
           "lower": 0.869, 
           "na": 0, 
           "note": null, 
@@ -1153,7 +1238,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 114203, 
+          "incidents": 114203, 
+          "incidents_label": "Patient days", 
           "lower": 0.865, 
           "na": 0, 
           "note": null, 
@@ -1164,7 +1250,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 11948, 
+          "incidents": 11948, 
+          "incidents_label": "Patient days", 
           "lower": 0.513, 
           "na": 0, 
           "note": null, 
@@ -1175,7 +1262,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 130913, 
+          "incidents": 130913, 
+          "incidents_label": "Patient days", 
           "lower": 0.623, 
           "na": 0, 
           "note": null, 
@@ -1186,23 +1274,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 181, 
+          "incidents_label": "Procedures", 
           "lower": 0.705, 
           "na": 0, 
           "note": null, 
           "observed": 9, 
           "predicted": 6.223, 
-          "procedures": 181, 
           "ratio": 1.446, 
           "upper": 2.654
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 268, 
+          "incidents_label": "Procedures", 
           "lower": 0.303, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 2.52, 
-          "procedures": 268, 
           "ratio": 1.19, 
           "upper": 3.24
         }
@@ -1222,7 +1312,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 19729, 
+          "incidents": 19729, 
+          "incidents_label": "Patient days", 
           "lower": 0.987, 
           "na": 0, 
           "note": null, 
@@ -1233,7 +1324,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 159232, 
+          "incidents": 159232, 
+          "incidents_label": "Patient days", 
           "lower": 0.585, 
           "na": 0, 
           "note": null, 
@@ -1244,7 +1336,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 15321, 
+          "incidents": 15321, 
+          "incidents_label": "Patient days", 
           "lower": 0.769, 
           "na": 0, 
           "note": null, 
@@ -1255,7 +1348,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 174919, 
+          "incidents": 174919, 
+          "incidents_label": "Patient days", 
           "lower": 0.4, 
           "na": 0, 
           "note": null, 
@@ -1266,23 +1360,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 153, 
+          "incidents_label": "Procedures", 
           "lower": 0.454, 
           "na": 0, 
           "note": null, 
           "observed": 6, 
           "predicted": 5.362, 
-          "procedures": 153, 
           "ratio": 1.119, 
           "upper": 2.327
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 219, 
+          "incidents_label": "Procedures", 
           "lower": 0.616, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
           "predicted": 2.063, 
-          "procedures": 219, 
           "ratio": 1.939, 
           "upper": 4.677
         }
@@ -1302,7 +1398,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 7357, 
+          "incidents": 7357, 
+          "incidents_label": "Patient days", 
           "lower": 0.879, 
           "na": 0, 
           "note": null, 
@@ -1313,7 +1410,8 @@
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
-          "days": 66803, 
+          "incidents": 66803, 
+          "incidents_label": "Patient days", 
           "lower": 1.321, 
           "na": 0, 
           "note": null, 
@@ -1324,7 +1422,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 6426, 
+          "incidents": 6426, 
+          "incidents_label": "Patient days", 
           "lower": 0.126, 
           "na": 0, 
           "note": null, 
@@ -1335,7 +1434,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 66803, 
+          "incidents": 66803, 
+          "incidents_label": "Patient days", 
           "lower": 0.503, 
           "na": 0, 
           "note": null, 
@@ -1346,23 +1446,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 261, 
+          "incidents_label": "Procedures", 
           "lower": 0.544, 
           "na": 0, 
           "note": null, 
           "observed": 9, 
           "predicted": 8.072, 
-          "procedures": 261, 
           "ratio": 1.115, 
           "upper": 2.046
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 38, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.34, 
-          "procedures": 38, 
           "ratio": null, 
           "upper": null
         }
@@ -1382,7 +1484,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 12710, 
+          "incidents": 12710, 
+          "incidents_label": "Patient days", 
           "lower": 1.989, 
           "na": 0, 
           "note": null, 
@@ -1393,7 +1496,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 133907, 
+          "incidents": 133907, 
+          "incidents_label": "Patient days", 
           "lower": 0.954, 
           "na": 0, 
           "note": null, 
@@ -1404,7 +1508,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 15724, 
+          "incidents": 15724, 
+          "incidents_label": "Patient days", 
           "lower": 0.511, 
           "na": 0, 
           "note": null, 
@@ -1415,7 +1520,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 146948, 
+          "incidents": 146948, 
+          "incidents_label": "Patient days", 
           "lower": 0.593, 
           "na": 0, 
           "note": null, 
@@ -1426,23 +1532,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 481, 
+          "incidents_label": "Procedures", 
           "lower": 0.642, 
           "na": 0, 
           "note": null, 
           "observed": 16, 
           "predicted": 14.742, 
-          "procedures": 481, 
           "ratio": 1.085, 
           "upper": 1.725
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 447, 
+          "incidents_label": "Procedures", 
           "lower": 0.872, 
           "na": 0, 
           "note": null, 
           "observed": 7, 
           "predicted": 3.509, 
-          "procedures": 447, 
           "ratio": 1.995, 
           "upper": 3.946
         }
@@ -1462,7 +1570,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 6856, 
+          "incidents": 6856, 
+          "incidents_label": "Patient days", 
           "lower": 0.956, 
           "na": 0, 
           "note": null, 
@@ -1473,7 +1582,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 120960, 
+          "incidents": 120960, 
+          "incidents_label": "Patient days", 
           "lower": 0.641, 
           "na": 0, 
           "note": null, 
@@ -1484,7 +1594,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 9680, 
+          "incidents": 9680, 
+          "incidents_label": "Patient days", 
           "lower": 0.22, 
           "na": 0, 
           "note": null, 
@@ -1495,7 +1606,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 139513, 
+          "incidents": 139513, 
+          "incidents_label": "Patient days", 
           "lower": 0.653, 
           "na": 0, 
           "note": null, 
@@ -1506,23 +1618,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 371, 
+          "incidents_label": "Procedures", 
           "lower": 0.607, 
           "na": 0, 
           "note": null, 
           "observed": 13, 
           "predicted": 11.921, 
-          "procedures": 371, 
           "ratio": 1.091, 
           "upper": 1.818
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 166, 
+          "incidents_label": "Procedures", 
           "lower": 0.491, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 1.553, 
-          "procedures": 166, 
           "ratio": 1.932, 
           "upper": 5.257
         }
@@ -1542,7 +1656,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 1736, 
+          "incidents": 1736, 
+          "incidents_label": "Patient days", 
           "lower": 0.61, 
           "na": 0, 
           "note": null, 
@@ -1553,7 +1668,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 35058, 
+          "incidents": 35058, 
+          "incidents_label": "Patient days", 
           "lower": 0.662, 
           "na": 0, 
           "note": null, 
@@ -1564,7 +1680,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 2217, 
+          "incidents": 2217, 
+          "incidents_label": "Patient days", 
           "lower": 0.704, 
           "na": 0, 
           "note": null, 
@@ -1575,7 +1692,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 40352, 
+          "incidents": 40352, 
+          "incidents_label": "Patient days", 
           "lower": 0.527, 
           "na": 0, 
           "note": null, 
@@ -1586,23 +1704,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 55, 
+          "incidents_label": "Procedures", 
           "lower": 0.028, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 1.766, 
-          "procedures": 55, 
           "ratio": 0.566, 
           "upper": 2.793
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 72, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 3, 
           "predicted": 0.677, 
-          "procedures": 72, 
           "ratio": null, 
           "upper": null
         }
@@ -1622,7 +1742,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 14879, 
+          "incidents": 14879, 
+          "incidents_label": "Patient days", 
           "lower": 2.021, 
           "na": 0, 
           "note": null, 
@@ -1633,7 +1754,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 103945, 
+          "incidents": 103945, 
+          "incidents_label": "Patient days", 
           "lower": 0.72, 
           "na": 0, 
           "note": null, 
@@ -1644,7 +1766,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 12747, 
+          "incidents": 12747, 
+          "incidents_label": "Patient days", 
           "lower": 0.519, 
           "na": 0, 
           "note": null, 
@@ -1655,7 +1778,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 110523, 
+          "incidents": 110523, 
+          "incidents_label": "Patient days", 
           "lower": 0.338, 
           "na": 0, 
           "note": null, 
@@ -1666,23 +1790,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 65, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.381, 
-          "procedures": 65, 
           "ratio": 0, 
           "upper": 1.258
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 81, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.841, 
-          "procedures": 81, 
           "ratio": null, 
           "upper": null
         }
@@ -1702,7 +1828,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 5381, 
+          "incidents": 5381, 
+          "incidents_label": "Patient days", 
           "lower": 1.206, 
           "na": 0, 
           "note": null, 
@@ -1713,7 +1840,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 88728, 
+          "incidents": 88728, 
+          "incidents_label": "Patient days", 
           "lower": 0.714, 
           "na": 0, 
           "note": null, 
@@ -1724,7 +1852,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 5147, 
+          "incidents": 5147, 
+          "incidents_label": "Patient days", 
           "lower": 0.137, 
           "na": 0, 
           "note": null, 
@@ -1735,7 +1864,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 101498, 
+          "incidents": 101498, 
+          "incidents_label": "Patient days", 
           "lower": 0.272, 
           "na": 0, 
           "note": null, 
@@ -1746,23 +1876,25 @@
         }, 
         "ssicolon": {
           "category": "Better than the National Benchmark", 
+          "incidents": 173, 
+          "incidents_label": "Procedures", 
           "lower": 0.009, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
           "predicted": 5.661, 
-          "procedures": 173, 
           "ratio": 0.177, 
           "upper": 0.871
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 465, 
+          "incidents_label": "Procedures", 
           "lower": 0.558, 
           "na": 0, 
           "note": null, 
           "observed": 6, 
           "predicted": 4.355, 
-          "procedures": 465, 
           "ratio": 1.378, 
           "upper": 2.866
         }
@@ -1782,7 +1914,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 4614, 
+          "incidents": 4614, 
+          "incidents_label": "Patient days", 
           "lower": 0.138, 
           "na": 0, 
           "note": null, 
@@ -1793,7 +1926,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 123631, 
+          "incidents": 123631, 
+          "incidents_label": "Patient days", 
           "lower": 0.569, 
           "na": 0, 
           "note": null, 
@@ -1804,7 +1938,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 7546, 
+          "incidents": 7546, 
+          "incidents_label": "Patient days", 
           "lower": 0.086, 
           "na": 0, 
           "note": null, 
@@ -1815,7 +1950,8 @@
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
-          "days": 186014, 
+          "incidents": 186014, 
+          "incidents_label": "Patient days", 
           "lower": 0.076, 
           "na": 0, 
           "note": null, 
@@ -1826,23 +1962,25 @@
         }, 
         "ssicolon": {
           "category": "Better than the National Benchmark", 
+          "incidents": 434, 
+          "incidents_label": "Procedures", 
           "lower": 0.025, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 13.664, 
-          "procedures": 434, 
           "ratio": 0.146, 
           "upper": 0.484
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 1848, 
+          "incidents_label": "Procedures", 
           "lower": 0.314, 
           "na": 0, 
           "note": null, 
           "observed": 10, 
           "predicted": 16.164, 
-          "procedures": 1848, 
           "ratio": 0.619, 
           "upper": 1.103
         }
@@ -1862,7 +2000,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 3809, 
+          "incidents": 3809, 
+          "incidents_label": "Patient days", 
           "lower": 0.532, 
           "na": 0, 
           "note": null, 
@@ -1873,7 +2012,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 62206, 
+          "incidents": 62206, 
+          "incidents_label": "Patient days", 
           "lower": 0.232, 
           "na": 0, 
           "note": null, 
@@ -1884,7 +2024,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 2085, 
+          "incidents": 2085, 
+          "incidents_label": "Patient days", 
           "lower": 0.978, 
           "na": 0, 
           "note": null, 
@@ -1895,7 +2036,8 @@
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
-          "days": 62206, 
+          "incidents": 62206, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -1906,23 +2048,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 128, 
+          "incidents_label": "Procedures", 
           "lower": 0.183, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 4.177, 
-          "procedures": 128, 
           "ratio": 0.718, 
           "upper": 1.955
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 198, 
+          "incidents_label": "Procedures", 
           "lower": 0.362, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 2.109, 
-          "procedures": 198, 
           "ratio": 1.422, 
           "upper": 3.871
         }
@@ -1942,7 +2086,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 5336, 
+          "incidents": 5336, 
+          "incidents_label": "Patient days", 
           "lower": 0.864, 
           "na": 0, 
           "note": null, 
@@ -1953,7 +2098,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 52627, 
+          "incidents": 52627, 
+          "incidents_label": "Patient days", 
           "lower": 0.474, 
           "na": 0, 
           "note": null, 
@@ -1964,7 +2110,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 4193, 
+          "incidents": 4193, 
+          "incidents_label": "Patient days", 
           "lower": 0.272, 
           "na": 0, 
           "note": null, 
@@ -1975,7 +2122,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 52627, 
+          "incidents": 52627, 
+          "incidents_label": "Patient days", 
           "lower": 0.554, 
           "na": 0, 
           "note": null, 
@@ -1986,23 +2134,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 114, 
+          "incidents_label": "Procedures", 
           "lower": 0.5, 
           "na": 0, 
           "note": null, 
           "observed": 5, 
           "predicted": 3.662, 
-          "procedures": 114, 
           "ratio": 1.365, 
           "upper": 3.026
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 58, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.499, 
-          "procedures": 58, 
           "ratio": null, 
           "upper": null
         }
@@ -2022,7 +2172,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 1815, 
+          "incidents": 1815, 
+          "incidents_label": "Patient days", 
           "lower": 0.558, 
           "na": 0, 
           "note": null, 
@@ -2033,7 +2184,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 27232, 
+          "incidents": 27232, 
+          "incidents_label": "Patient days", 
           "lower": 0.667, 
           "na": 0, 
           "note": null, 
@@ -2044,7 +2196,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1573, 
+          "incidents": 1573, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2055,7 +2208,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 28105, 
+          "incidents": 28105, 
+          "incidents_label": "Patient days", 
           "lower": 0.039, 
           "na": 0, 
           "note": null, 
@@ -2066,23 +2220,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 92, 
+          "incidents_label": "Procedures", 
           "lower": 0.104, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 3.234, 
-          "procedures": 92, 
           "ratio": 0.618, 
           "upper": 2.043
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 29, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.323, 
-          "procedures": 29, 
           "ratio": null, 
           "upper": null
         }
@@ -2102,7 +2258,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 3189, 
+          "incidents": 3189, 
+          "incidents_label": "Patient days", 
           "lower": 0.332, 
           "na": 0, 
           "note": null, 
@@ -2113,7 +2270,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 58812, 
+          "incidents": 58812, 
+          "incidents_label": "Patient days", 
           "lower": 0.517, 
           "na": 0, 
           "note": null, 
@@ -2124,7 +2282,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 2910, 
+          "incidents": 2910, 
+          "incidents_label": "Patient days", 
           "lower": 0.064, 
           "na": 0, 
           "note": null, 
@@ -2135,7 +2294,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 66063, 
+          "incidents": 66063, 
+          "incidents_label": "Patient days", 
           "lower": 0.718, 
           "na": 0, 
           "note": null, 
@@ -2146,23 +2306,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 183, 
+          "incidents_label": "Procedures", 
           "lower": 0.614, 
           "na": 0, 
           "note": null, 
           "observed": 8, 
           "predicted": 6.055, 
-          "procedures": 183, 
           "ratio": 1.321, 
           "upper": 2.509
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 247, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.408, 
-          "procedures": 247, 
           "ratio": 0, 
           "upper": 1.244
         }
@@ -2182,7 +2344,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 2989, 
+          "incidents": 2989, 
+          "incidents_label": "Patient days", 
           "lower": 1.036, 
           "na": 0, 
           "note": null, 
@@ -2193,7 +2356,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 54649, 
+          "incidents": 54649, 
+          "incidents_label": "Patient days", 
           "lower": 0.761, 
           "na": 0, 
           "note": null, 
@@ -2204,7 +2368,8 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "days": 3316, 
+          "incidents": 3316, 
+          "incidents_label": "Patient days", 
           "lower": 0.009, 
           "na": 0, 
           "note": null, 
@@ -2215,7 +2380,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 59558, 
+          "incidents": 59558, 
+          "incidents_label": "Patient days", 
           "lower": 0.675, 
           "na": 0, 
           "note": null, 
@@ -2226,23 +2392,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 82, 
+          "incidents_label": "Procedures", 
           "lower": 0.493, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
           "predicted": 2.578, 
-          "procedures": 82, 
           "ratio": 1.552, 
           "upper": 3.743
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 151, 
+          "incidents_label": "Procedures", 
           "lower": 0.273, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 1.227, 
-          "procedures": 151, 
           "ratio": 1.63, 
           "upper": 5.385
         }
@@ -2262,7 +2430,8 @@
       "infections": {
         "cauti": {
           "category": "Better than the National Benchmark", 
-          "days": 2873, 
+          "incidents": 2873, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2273,7 +2442,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 30414, 
+          "incidents": 30414, 
+          "incidents_label": "Patient days", 
           "lower": 0.411, 
           "na": 0, 
           "note": null, 
@@ -2284,7 +2454,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 2494, 
+          "incidents": 2494, 
+          "incidents_label": "Patient days", 
           "lower": 0.09, 
           "na": 0, 
           "note": null, 
@@ -2295,7 +2466,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 31989, 
+          "incidents": 31989, 
+          "incidents_label": "Patient days", 
           "lower": 0.168, 
           "na": 0, 
           "note": null, 
@@ -2306,23 +2478,25 @@
         }, 
         "ssicolon": {
           "category": "Not Available", 
+          "incidents": 15, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.497, 
-          "procedures": 15, 
           "ratio": null, 
           "upper": null
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 9, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.083, 
-          "procedures": 9, 
           "ratio": null, 
           "upper": null
         }
@@ -2342,7 +2516,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 2461, 
+          "incidents": 2461, 
+          "incidents_label": "Patient days", 
           "lower": 0.016, 
           "na": 0, 
           "note": null, 
@@ -2353,7 +2528,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 52087, 
+          "incidents": 52087, 
+          "incidents_label": "Patient days", 
           "lower": 0.412, 
           "na": 0, 
           "note": null, 
@@ -2364,7 +2540,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 3088, 
+          "incidents": 3088, 
+          "incidents_label": "Patient days", 
           "lower": 0.055, 
           "na": 0, 
           "note": null, 
@@ -2375,7 +2552,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 60900, 
+          "incidents": 60900, 
+          "incidents_label": "Patient days", 
           "lower": 0.109, 
           "na": 0, 
           "note": null, 
@@ -2386,23 +2564,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 258, 
+          "incidents_label": "Procedures", 
           "lower": 0.159, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
           "predicted": 7.99, 
-          "procedures": 258, 
           "ratio": 0.501, 
           "upper": 1.208
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 325, 
+          "incidents_label": "Procedures", 
           "lower": 0.121, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
           "predicted": 2.769, 
-          "procedures": 325, 
           "ratio": 0.722, 
           "upper": 2.386
         }
@@ -2422,7 +2602,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 1257, 
+          "incidents": 1257, 
+          "incidents_label": "Patient days", 
           "lower": 0.02, 
           "na": 0, 
           "note": null, 
@@ -2433,7 +2614,8 @@
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
-          "days": 18282, 
+          "incidents": 18282, 
+          "incidents_label": "Patient days", 
           "lower": 0.098, 
           "na": 0, 
           "note": null, 
@@ -2444,7 +2626,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 529, 
+          "incidents": 529, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2455,7 +2638,8 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "days": 18983, 
+          "incidents": 18983, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
@@ -2466,23 +2650,25 @@
         }, 
         "ssicolon": {
           "category": "Not Available", 
+          "incidents": 31, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.981, 
-          "procedures": 31, 
           "ratio": null, 
           "upper": null
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 5, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.042, 
-          "procedures": 5, 
           "ratio": null, 
           "upper": null
         }
@@ -2502,7 +2688,8 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "days": 2333, 
+          "incidents": 2333, 
+          "incidents_label": "Patient days", 
           "lower": 0.273, 
           "na": 0, 
           "note": null, 
@@ -2513,7 +2700,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 31178, 
+          "incidents": 31178, 
+          "incidents_label": "Patient days", 
           "lower": 0.442, 
           "na": 0, 
           "note": null, 
@@ -2524,7 +2712,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1519, 
+          "incidents": 1519, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2535,7 +2724,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 32560, 
+          "incidents": 32560, 
+          "incidents_label": "Patient days", 
           "lower": 0.15, 
           "na": 0, 
           "note": null, 
@@ -2546,23 +2736,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 67, 
+          "incidents_label": "Procedures", 
           "lower": 0.342, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
           "predicted": 2.229, 
-          "procedures": 67, 
           "ratio": 1.346, 
           "upper": 3.663
         }, 
         "ssihyst": {
           "category": "Not Available", 
+          "incidents": 74, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.738, 
-          "procedures": 74, 
           "ratio": null, 
           "upper": null
         }
@@ -2582,7 +2774,8 @@
       "infections": {
         "cauti": {
           "category": "Worse than the National Benchmark", 
-          "days": 1275, 
+          "incidents": 1275, 
+          "incidents_label": "Patient days", 
           "lower": 1.845, 
           "na": 0, 
           "note": null, 
@@ -2593,7 +2786,8 @@
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
-          "days": 26988, 
+          "incidents": 26988, 
+          "incidents_label": "Patient days", 
           "lower": 0.426, 
           "na": 0, 
           "note": null, 
@@ -2604,7 +2798,8 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "days": 1162, 
+          "incidents": 1162, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2615,7 +2810,8 @@
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
-          "days": 28941, 
+          "incidents": 28941, 
+          "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
@@ -2626,23 +2822,25 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
+          "incidents": 128, 
+          "incidents_label": "Procedures", 
           "lower": 0.932, 
           "na": 0, 
           "note": null, 
           "observed": 8, 
           "predicted": 3.985, 
-          "procedures": 128, 
           "ratio": 2.008, 
           "upper": 3.812
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
+          "incidents": 136, 
+          "incidents_label": "Procedures", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.097, 
-          "procedures": 136, 
           "ratio": 0, 
           "upper": 2.731
         }

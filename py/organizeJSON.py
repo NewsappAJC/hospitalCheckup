@@ -31,10 +31,21 @@ for node in src:
     for key in node.keys():
         tmp = key.lower().split("_")
         if tmp[0] in hospital["infections"]:
-            hospital["infections"][tmp[0]][tmp[1]] = node[key]
+            param = tmp[1]
+            hospital["infections"][tmp[0]][param] = node[key]
 
-            if(tmp[1] == "lower" and node[key] is None):
-                hospital["infections"][tmp[0]][tmp[1]] = 0
+            if(param == "lower" and node[key] is None):
+                hospital["infections"][tmp[0]][param] = 0
+
+            #how are incidents being calculated?
+            if(param == "days"):
+                hospital["infections"][tmp[0]]["incidents_label"] = "Patient days"
+                hospital["infections"][tmp[0]]["incidents"] = node[key]
+                del hospital["infections"][tmp[0]][param] #just added this above but whatever
+            elif(param == "procedures"):
+                hospital["infections"][tmp[0]]["incidents_label"] = "Procedures"
+                hospital["infections"][tmp[0]]["incidents"] = node[key]
+                del hospital["infections"][tmp[0]][param]
         # if tmp[0] in keys: #for array lookup
         #if tmp[0] in infections:
             #infections[tmp[0]][tmp[1]] = node[key]
