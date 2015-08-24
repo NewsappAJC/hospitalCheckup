@@ -7,19 +7,22 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     },
     urlRoot: "infections"
   });
-
   Entities.configureStorage("HospitalCheckup.Entities.Hospital");
+
+  Entities.StateAverages = Backbone.Model.extend({
+    localStorage: new Backbone.LocalStorage("infections-state-avg") //using this instead of a URL!
+  });
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
     model: Entities.Hospital,
     comparator: "display_name"
   });
-
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
   var API = {
     getInfectionEntities: function(){
+      Entities.averages = new Entities.StateAverages(); //attach to Entities so chart can get at it
       var infections = new Entities.InfectionCollection();
       var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
       var deferServer = $.Deferred(); //we might need to wait for data to be fetched from server
@@ -34,8 +37,11 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
-          function resetModels(models){
-            infections.reset(models);
+          function resetModels(data){
+            Entities.averages.set(data.averages);
+            Entities.averages.save();
+
+            infections.reset(data.hospitals);
             infections.forEach(function(infection){
               infection.save(); //to local storage
             });
@@ -50,6 +56,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             success: resetModels
           });
         } else {
+          Entities.averages.fetch();
+          Entities.averages.attributes = Entities.averages.attributes[0]; //I don't know why but fetching was nesting them instide another object and I couldn't get to them
           deferServer.resolve(fetchedInfections);
         }
 

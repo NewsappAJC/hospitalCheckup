@@ -1,0 +1,32 @@
+[
+    {
+        "state": "GA",
+        "measure": "HAI_1_SIR",
+        "score": 0.683
+    },
+    {
+        "state": "GA",
+        "measure": "HAI_2_SIR",
+        "score": 1.161
+    },
+    {
+        "state": "GA",
+        "measure": "HAI_3_SIR",
+        "score": 0.811
+    },
+    {
+        "state": "GA",
+        "measure": "HAI_4_SIR",
+        "score": 0.785
+    },
+    {
+        "state": "GA",
+        "measure": "HAI_5_SIR",
+        "score": 1.068
+    },
+    {
+        "state": "GA",
+        "measure": "HAI_6_SIR",
+        "score": 0.831
+    }
+]

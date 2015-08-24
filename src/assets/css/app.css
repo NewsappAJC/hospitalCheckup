@@ -85,10 +85,13 @@ tbody tr:hover {
   stroke-width: 2px;
   shape-rendering: crispEdgeds;
 }
-.y.axis text, .bar, .range-bar {
+.y.axis text, .bar, .range-bar, .ratio-circle {
   cursor: pointer;
 }
 /*charts extended*/
+rect.range-bar {
+  fill: #ABABAB;
+}
 rect.range-bar.normal {
   fill: #304968;
 }
@@ -97,4 +100,29 @@ rect.range-bar.bad {
 }
 rect.range-bar.good {
   fill: #489162;
+}
+#contextLines line {
+  stroke-width: 3;
+}
+line#averageLine {
+  stroke: darkgray;
+}
+line#benchmarkLine {
+  stroke: white;
+}
+.label {
+  font-size: 9px;
+}
+div.ttip {
+  position: absolute;
+  width: 270px;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 101;
+}
+div.ttip p{
+  font-size:12px;
+  margin:0px;
 }

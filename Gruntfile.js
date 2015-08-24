@@ -158,6 +158,20 @@ module.exports = function(grunt) {
       }
     },
 
+    sql: grunt.file.readJSON('config/sql.json'),
+        sql_bakery: {
+          db: {
+            options: {
+              host: '<%= sql.host %>',
+              database: '<%= sql.db %>',
+              user: '<%= sql.user %>',
+              password: '<%= sql.pw %>',
+              tables: '<%= sql.tables %>',
+              output_path: 'src/assets/data/src'
+            }
+          }
+        },
+
     htmlmin: {
       build: {
         options: {
@@ -357,6 +371,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-sql-bakery');
 
   grunt.registerTask('default', ['bowercopy','copy','uglify','cssmin', 'htmlmin','s3']);/*TODO add back processhtml*/
   grunt.registerTask('build', ['bowercopy','copy','uglify','cssmin', 'htmlmin']);/*TODO add back processhtml*/

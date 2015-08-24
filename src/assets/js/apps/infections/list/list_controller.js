@@ -11,19 +11,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var infectionsMenuView = new List.Menu();
 
       $.when(fetchingInfections).done(function(infections){
-        var filteredInfections = HospitalCheckup.Entities.FilteredCollection({
-          collection: infections,
-          filterFunction: function(criterion){
-            return function(infection){
-              infection.set({measure:criterion || "cdiff"}); //TODO better way to set default before menu renders?
-              infection.save();
-              return infection;
-            }
-          }
-        });
-
         var infectionsListView = new List.InfectionsChart();
-
         var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
         infectionsListLayout.on("show", function(){
@@ -38,12 +26,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         //wait for #infections-chart to be rendered
         infectionsListView.on("show", function(){
-          List.infectionsChartView = new HospitalCheckup.Common.Chart.BarBase({ //adding it to List module so we can target it later
+          List.infectionsChartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
             el: "#infections-chart",
-            collection: filteredInfections.filter(criterion),
-            base_height: 750,
+            collection: infections,
+            base_height: 700,
             bar_padding: 4,
-            margin: {left: 190, right: 70, bottom: 20, top: 25},
+            margin: {left: 190, right: 30, bottom: 20, top: 25},
             measure: criterion || "cdiff"
           });
           List.infectionsChartView.render();
@@ -51,7 +39,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
             HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
           } else { //use the first model in the list as a default
-            hospitalShowView.model = filteredInfections.models[0];
+            hospitalShowView.model = infections.models[0];
             //hospitalShowView.render();
           }
         });

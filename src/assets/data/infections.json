@@ -1,2642 +1,2851 @@
-[
-  {
-    "address": {
-      "city": "CUMMING", 
-      "county": "FORSYTH", 
-      "state": "GA", 
-      "street": "1200 NORTHSIDE FORSYTH DRIVE", 
-      "zip": "30041"
-    }, 
-    "display_name": "Northside Hospital Forsyth", 
-    "id": "110005", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3665", 
-        "lower": "0.289", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "4.398", 
-        "ratio": "0.91", 
-        "upper": "2.194"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "39174", 
-        "lower": "0.847", 
-        "na": "0", 
-        "note": "", 
-        "observed": "35", 
-        "predicted": "28.779", 
-        "ratio": "1.216", 
-        "upper": "1.691"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "3796", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "5.685", 
-        "ratio": "0", 
-        "upper": "0.527"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "44258", 
-        "lower": "0.012", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "2.084", 
-        "ratio": "0.48", 
-        "upper": "2.674"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.172", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.382", 
-        "procedures": "235", 
-        "ratio": "0.542", 
-        "upper": "1.307"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.212", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.578", 
-        "procedures": "173", 
-        "ratio": "1.267", 
-        "upper": "4.187"
-      }
-    }, 
-    "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
+{
+  "averages": {
+    "cauti": 1.161, 
+    "cdiff": 0.831, 
+    "clabsi": 0.683, 
+    "id": "infectionsStateAverages", 
+    "mrsa": 1.068, 
+    "ssicolon": 0.811, 
+    "ssihyst": 0.785
   }, 
-  {
-    "address": {
-      "city": "ATHENS", 
-      "county": "CLARKE", 
-      "state": "GA", 
-      "street": "1230 BAXTER STREET", 
-      "zip": "30606"
-    }, 
-    "display_name": "Saint Mary's Hospital", 
-    "id": "110006", 
-    "infections": {
-      "cauti": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "1962", 
-        "lower": "0.009", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "5.331", 
-        "ratio": "0.188", 
-        "upper": "0.925"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "18023", 
-        "lower": "0.722", 
-        "na": "0", 
-        "note": "", 
-        "observed": "15", 
-        "predicted": "11.624", 
-        "ratio": "1.29", 
-        "upper": "2.129"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1239", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.434", 
-        "ratio": "0", 
-        "upper": "1.231"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "19840", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.984", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.237", 
-        "procedures": "74", 
-        "ratio": "0", 
-        "upper": "1.339"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.756", 
-        "procedures": "82", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "ST MARY'S HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "CANTON", 
-      "county": "CHEROKEE", 
-      "state": "GA", 
-      "street": "201 HOSPITAL ROAD", 
-      "zip": "30114"
-    }, 
-    "display_name": "Northside Hospital Cherokee", 
-    "id": "110008", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1947", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.531", 
-        "ratio": "0", 
-        "upper": "1.184"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "15184", 
-        "lower": "0.416", 
-        "na": "0", 
-        "note": "", 
-        "observed": "9", 
-        "predicted": "9.895", 
-        "ratio": "0.91", 
-        "upper": "1.727"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1440", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.161", 
-        "ratio": "0", 
-        "upper": "1.386"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "17138", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.856", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.241", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.394", 
-        "procedures": "43", 
-        "ratio": "1.435", 
-        "upper": "4.74"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.378", 
-        "procedures": "129", 
-        "ratio": "0", 
-        "upper": "2.174"
-      }
-    }, 
-    "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "DEKALB", 
-      "state": "GA", 
-      "street": "1364 CLIFTON ROAD, NE", 
-      "zip": "30322"
-    }, 
-    "display_name": "Emory University Hospital", 
-    "id": "110010", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "20691", 
-        "lower": "1.483", 
-        "na": "0", 
-        "note": "", 
-        "observed": "106", 
-        "predicted": "58.814", 
-        "ratio": "1.802", 
-        "upper": "2.171"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "124431", 
-        "lower": "0.796", 
-        "na": "0", 
-        "note": "", 
-        "observed": "126", 
-        "predicted": "131.916", 
-        "ratio": "0.955", 
-        "upper": "1.137"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "21828", 
-        "lower": "0.338", 
-        "na": "0", 
-        "note": "", 
-        "observed": "24", 
-        "predicted": "46.612", 
-        "ratio": "0.515", 
-        "upper": "0.754"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "124431", 
-        "lower": "0.386", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "12.417", 
-        "ratio": "0.805", 
-        "upper": "1.481"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.155", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "8.204", 
-        "procedures": "236", 
-        "ratio": "0.488", 
-        "upper": "1.176"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.482", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "1.582", 
-        "procedures": "153", 
-        "ratio": "1.896", 
-        "upper": "5.161"
-      }
-    }, 
-    "provider_name": "EMORY UNIVERSITY HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "CARROLLTON", 
-      "county": "CARROLL", 
-      "state": "GA", 
-      "street": "705 DIXIE STREET", 
-      "zip": "30117"
-    }, 
-    "display_name": "Tanner Medical Center Carrollton", 
-    "id": "110011", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1846", 
-        "lower": "0.318", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.4", 
-        "ratio": "1.25", 
-        "upper": "3.402"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "22585", 
-        "lower": "0.317", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "15.108", 
-        "ratio": "0.662", 
-        "upper": "1.217"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "940", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.41", 
-        "ratio": "0", 
-        "upper": "2.125"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "24477", 
-        "lower": "0.15", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.613", 
-        "ratio": "1.24", 
-        "upper": "4.479"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.424", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "2.995", 
-        "procedures": "89", 
-        "ratio": "1.336", 
-        "upper": "3.222"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.759", 
-        "procedures": "81", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "TANNER MEDICAL CENTER - CARROLLTON"
-  }, 
-  {
-    "address": {
-      "city": "COVINGTON", 
-      "county": "NEWTON", 
-      "state": "GA", 
-      "street": "5126 HOSPITAL DRIVE NE", 
-      "zip": "30014"
-    }, 
-    "display_name": "Newton Medical Center", 
-    "id": "110018", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1141", 
-        "lower": "0.226", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.483", 
-        "ratio": "1.349", 
-        "upper": "4.456"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "13124", 
-        "lower": "0.079", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "7.801", 
-        "ratio": "0.385", 
-        "upper": "1.124"
-      }, 
-      "clabsi": {
-        "category": "Not Available", 
-        "days": "646", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "1", 
-        "predicted": "0.993", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "15630", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.655", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.35", 
-        "procedures": "43", 
-        "ratio": "0", 
-        "upper": "2.219"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.792", 
-        "procedures": "85", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "NEWTON MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "GAINESVILLE", 
-      "county": "HALL", 
-      "state": "GA", 
-      "street": "743 SPRING STREET", 
-      "zip": "30501"
-    }, 
-    "display_name": "Northeast Georgia Medical Center", 
-    "id": "110029", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "10964", 
-        "lower": "0.397", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "16.375", 
-        "ratio": "0.733", 
-        "upper": "1.246"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "128561", 
-        "lower": "0.49", 
-        "na": "0", 
-        "note": "", 
-        "observed": "53", 
-        "predicted": "81.015", 
-        "ratio": "0.654", 
-        "upper": "0.856"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "9212", 
-        "lower": "0.003", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "15.384", 
-        "ratio": "0.065", 
-        "upper": "0.321"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "135764", 
-        "lower": "0.653", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "8.404", 
-        "ratio": "1.309", 
-        "upper": "2.342"
-      }, 
-      "ssicolon": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "lower": "1.096", 
-        "na": "0", 
-        "note": "", 
-        "observed": "18", 
-        "predicted": "10.042", 
-        "procedures": "315", 
-        "ratio": "1.792", 
-        "upper": "2.778"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.149", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "5.134", 
-        "procedures": "485", 
-        "ratio": "0.584", 
-        "upper": "1.59"
-      }
-    }, 
-    "provider_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC"
-  }, 
-  {
-    "address": {
-      "city": "CARTERSVILLE", 
-      "county": "BARTOW", 
-      "state": "GA", 
-      "street": "960 JOE FRANK HARRIS PARKWAY", 
-      "zip": "30120"
-    }, 
-    "display_name": "Cartersville Medical Center", 
-    "id": "110030", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2786", 
-        "lower": "0.672", 
-        "na": "0", 
-        "note": "", 
-        "observed": "6", 
-        "predicted": "3.621", 
-        "ratio": "1.657", 
-        "upper": "3.446"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "20376", 
-        "lower": "0.388", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "14.147", 
-        "ratio": "0.778", 
-        "upper": "1.391"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1751", 
-        "lower": "0.29", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.627", 
-        "ratio": "1.142", 
-        "upper": "3.108"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "21418", 
-        "lower": "0.949", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "1.148", 
-        "ratio": "3.484", 
-        "upper": "8.921"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.528", 
-        "procedures": "53", 
-        "ratio": "0", 
-        "upper": "1.961"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.389", 
-        "procedures": "50", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "CARTERSVILLE MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "GRIFFIN", 
-      "county": "SPALDING", 
-      "state": "GA", 
-      "street": "601 SOUTH 8TH STREET", 
-      "zip": "30223"
-    }, 
-    "display_name": "Spalding Regional Hospital", 
-    "id": "110031", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2489", 
-        "lower": "0.112", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "2.987", 
-        "ratio": "0.67", 
-        "upper": "2.212"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "26115", 
-        "lower": "0.084", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "12.986", 
-        "ratio": "0.308", 
-        "upper": "0.789"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1571", 
-        "lower": "0.142", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "2.358", 
-        "ratio": "0.848", 
-        "upper": "2.802"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "26265", 
-        "lower": "0.108", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "2.248", 
-        "ratio": "0.89", 
-        "upper": "3.214"
-      }, 
-      "ssicolon": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "1", 
-        "predicted": "0.983", 
-        "procedures": "29", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.713", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "1.071", 
-        "procedures": "80", 
-        "ratio": "2.801", 
-        "upper": "7.623"
-      }
-    }, 
-    "provider_name": "SPALDING REGIONAL HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "MARIETTA", 
-      "county": "COBB", 
-      "state": "GA", 
-      "street": "677 CHURCH STREET", 
-      "zip": "30060"
-    }, 
-    "display_name": "Wellstar Kennestone Hospital", 
-    "id": "110035", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "9622", 
-        "lower": "1.287", 
-        "na": "0", 
-        "note": "", 
-        "observed": "39", 
-        "predicted": "21.853", 
-        "ratio": "1.785", 
-        "upper": "2.415"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "126149", 
-        "lower": "0.874", 
-        "na": "0", 
-        "note": "", 
-        "observed": "111", 
-        "predicted": "104.429", 
-        "ratio": "1.063", 
-        "upper": "1.28"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "8968", 
-        "lower": "0.513", 
-        "na": "0", 
-        "note": "", 
-        "observed": "15", 
-        "predicted": "17.007", 
-        "ratio": "0.882", 
-        "upper": "1.422"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "136469", 
-        "lower": "0.232", 
-        "na": "0", 
-        "note": "", 
-        "observed": "6", 
-        "predicted": "9.496", 
-        "ratio": "0.632", 
-        "upper": "1.375"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.324", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "15.683", 
-        "procedures": "498", 
-        "ratio": "0.638", 
-        "upper": "1.137"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.011", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "4.507", 
-        "procedures": "502", 
-        "ratio": "0.222", 
-        "upper": "1.094"
-      }
-    }, 
-    "provider_name": "WELLSTAR KENNESTONE HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "HIRAM", 
-      "county": "PAULDING", 
-      "state": "GA", 
-      "street": "148 BILL CARRUTH PARKWAY", 
-      "zip": "30141"
-    }, 
-    "display_name": "Wellstar Paulding Hospital", 
-    "id": "110042", 
-    "infections": {
-      "cauti": {
-        "category": "Not Available", 
-        "days": "203", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.263", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3930", 
-        "lower": "0.236", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.619", 
-        "ratio": "1.145", 
-        "upper": "3.348"
-      }, 
-      "clabsi": {
-        "category": "Not Available", 
-        "days": "146", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.219", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "3930", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.216", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.696", 
-        "procedures": "20", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.017", 
-        "procedures": "1", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "WELLSTAR PAULDING HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "ROME", 
-      "county": "FLOYD", 
-      "state": "GA", 
-      "street": "304 TURNER MCCALL BLVD P O BOX 233", 
-      "zip": "30162"
-    }, 
-    "display_name": "Floyd Medical Center", 
-    "id": "110054", 
-    "infections": {
-      "cauti": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "4946", 
-        "lower": "0.047", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "7.106", 
-        "ratio": "0.281", 
-        "upper": "0.93"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "44255", 
-        "lower": "0.291", 
-        "na": "0", 
-        "note": "", 
-        "observed": "17", 
-        "predicted": "33.998", 
-        "ratio": "0.5", 
-        "upper": "0.801"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3388", 
-        "lower": "0.225", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "5.639", 
-        "ratio": "0.709", 
-        "upper": "1.711"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "49858", 
-        "lower": "0.124", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.959", 
-        "ratio": "1.021", 
-        "upper": "3.688"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.016", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "3.095", 
-        "procedures": "94", 
-        "ratio": "0.323", 
-        "upper": "1.594"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.089", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "3.757", 
-        "procedures": "304", 
-        "ratio": "0.532", 
-        "upper": "1.759"
-      }
-    }, 
-    "provider_name": "FLOYD MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "ATHENS", 
-      "county": "CLARKE", 
-      "state": "GA", 
-      "street": "1199 PRINCE AVENUE", 
-      "zip": "30606"
-    }, 
-    "display_name": "Athens Regional Medical Center", 
-    "id": "110074", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "5811", 
-        "lower": "1.612", 
-        "na": "0", 
-        "note": "", 
-        "observed": "19", 
-        "predicted": "7.309", 
-        "ratio": "2.6", 
-        "upper": "3.984"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "62779", 
-        "lower": "0.375", 
-        "na": "0", 
-        "note": "", 
-        "observed": "27", 
-        "predicted": "47.495", 
-        "ratio": "0.568", 
-        "upper": "0.827"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3662", 
-        "lower": "0.14", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "5.466", 
-        "ratio": "0.549", 
-        "upper": "1.494"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "68912", 
-        "lower": "0.079", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "3.085", 
-        "ratio": "0.648", 
-        "upper": "2.342"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.641", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "7.919", 
-        "procedures": "243", 
-        "ratio": "1.263", 
-        "upper": "2.251"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.747", 
-        "procedures": "191", 
-        "ratio": "0", 
-        "upper": "1.715"
-      }
-    }, 
-    "provider_name": "ATHENS REGIONAL MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "DECATUR", 
-      "county": "DEKALB", 
-      "state": "GA", 
-      "street": "2701 N DECATUR ROAD", 
-      "zip": "30033"
-    }, 
-    "display_name": "Dekalb Medical Center", 
-    "id": "110076", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "6636", 
-        "lower": "0.16", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.964", 
-        "ratio": "0.502", 
-        "upper": "1.212"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "68848", 
-        "lower": "0.563", 
-        "na": "0", 
-        "note": "", 
-        "observed": "32", 
-        "predicted": "38.903", 
-        "ratio": "0.823", 
-        "upper": "1.161"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "6066", 
-        "lower": "0.201", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "9.1", 
-        "ratio": "0.549", 
-        "upper": "1.218"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "78955", 
-        "lower": "0.339", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "3.215", 
-        "ratio": "1.244", 
-        "upper": "3.186"
-      }, 
-      "ssicolon": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "lower": "1.757", 
-        "na": "0", 
-        "note": "", 
-        "observed": "14", 
-        "predicted": "4.535", 
-        "procedures": "129", 
-        "ratio": "3.087", 
-        "upper": "5.057"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.402", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "1.897", 
-        "procedures": "199", 
-        "ratio": "1.581", 
-        "upper": "4.304"
-      }
-    }, 
-    "provider_name": "DEKALB MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "550 PEACHTREE ST NE", 
-      "zip": "30308"
-    }, 
-    "display_name": "Emory University Hospital Midtown", 
-    "id": "110078", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "10993", 
-        "lower": "0.972", 
-        "na": "0", 
-        "note": "", 
-        "observed": "37", 
-        "predicted": "27.195", 
-        "ratio": "1.361", 
-        "upper": "1.856"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "82997", 
-        "lower": "0.8", 
-        "na": "0", 
-        "note": "", 
-        "observed": "78", 
-        "predicted": "77.069", 
-        "ratio": "1.012", 
-        "upper": "1.263"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "12051", 
-        "lower": "0.579", 
-        "na": "0", 
-        "note": "", 
-        "observed": "23", 
-        "predicted": "25.781", 
-        "ratio": "0.892", 
-        "upper": "1.317"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "96194", 
-        "lower": "0.29", 
-        "na": "0", 
-        "note": "", 
-        "observed": "9", 
-        "predicted": "14.21", 
-        "ratio": "0.633", 
-        "upper": "1.202"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.356", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "5.142", 
-        "procedures": "155", 
-        "ratio": "0.972", 
-        "upper": "2.155"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.86", 
-        "na": "0", 
-        "note": "", 
-        "observed": "6", 
-        "predicted": "2.827", 
-        "procedures": "304", 
-        "ratio": "2.122", 
-        "upper": "4.414"
-      }
-    }, 
-    "provider_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "80 JESSE HILL, JR DRIVE SE", 
-      "zip": "30303"
-    }, 
-    "display_name": "Grady Memorial Hospital", 
-    "id": "110079", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "19107", 
-        "lower": "1.148", 
-        "na": "0", 
-        "note": "", 
-        "observed": "89", 
-        "predicted": "62.611", 
-        "ratio": "1.421", 
-        "upper": "1.741"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "115465", 
-        "lower": "0.596", 
-        "na": "0", 
-        "note": "", 
-        "observed": "75", 
-        "predicted": "99.054", 
-        "ratio": "0.757", 
-        "upper": "0.949"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "16100", 
-        "lower": "0.701", 
-        "na": "0", 
-        "note": "", 
-        "observed": "47", 
-        "predicted": "49.861", 
-        "ratio": "0.943", 
-        "upper": "1.243"
-      }, 
-      "mrsa": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "126540", 
-        "lower": "1.027", 
-        "na": "0", 
-        "note": "", 
-        "observed": "17", 
-        "predicted": "9.635", 
-        "ratio": "1.764", 
-        "upper": "2.825"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.375", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "4.891", 
-        "procedures": "134", 
-        "ratio": "1.022", 
-        "upper": "2.266"
-      }, 
-      "ssihyst": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "lower": "1.861", 
-        "na": "0", 
-        "note": "", 
-        "observed": "8", 
-        "predicted": "1.996", 
-        "procedures": "198", 
-        "ratio": "4.008", 
-        "upper": "7.611"
-      }
-    }, 
-    "provider_name": "GRADY MEMORIAL HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "5665 PEACHTREE DUNWOODY ROAD", 
-      "zip": "30342"
-    }, 
-    "display_name": "Emory Saint Joseph's Hospital", 
-    "id": "110082", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "6966", 
-        "lower": "1.239", 
-        "na": "0", 
-        "note": "", 
-        "observed": "22", 
-        "predicted": "11.414", 
-        "ratio": "1.927", 
-        "upper": "2.87"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "51748", 
-        "lower": "0.947", 
-        "na": "0", 
-        "note": "", 
-        "observed": "54", 
-        "predicted": "42.825", 
-        "ratio": "1.261", 
-        "upper": "1.645"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "6025", 
-        "lower": "0.08", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "9.535", 
-        "ratio": "0.315", 
-        "upper": "0.856"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "51748", 
-        "lower": "0.848", 
-        "na": "0", 
-        "note": "", 
-        "observed": "6", 
-        "predicted": "2.597", 
-        "ratio": "2.31", 
-        "upper": "5.029"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.145", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "8.744", 
-        "procedures": "270", 
-        "ratio": "0.457", 
-        "upper": "1.103"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.002", 
-        "procedures": "96", 
-        "ratio": "0", 
-        "upper": "2.99"
-      }
-    }, 
-    "provider_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "1968 PEACHTREE RD NW", 
-      "zip": "30309"
-    }, 
-    "display_name": "Piedmont Hospital", 
-    "id": "110083", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "14612", 
-        "lower": "1.808", 
-        "na": "0", 
-        "note": "", 
-        "observed": "57", 
-        "predicted": "24.101", 
-        "ratio": "2.365", 
-        "upper": "3.042"
-      }, 
-      "cdiff": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "104445", 
-        "lower": "1.091", 
-        "na": "0", 
-        "note": "", 
-        "observed": "118", 
-        "predicted": "89.518", 
-        "ratio": "1.318", 
-        "upper": "1.579"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "16961", 
-        "lower": "0.878", 
-        "na": "0", 
-        "note": "", 
-        "observed": "35", 
-        "predicted": "28.191", 
-        "ratio": "1.242", 
-        "upper": "1.708"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "114750", 
-        "lower": "0.476", 
-        "na": "0", 
-        "note": "", 
-        "observed": "9", 
-        "predicted": "8.653", 
-        "ratio": "1.04", 
-        "upper": "1.974"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.562", 
-        "na": "0", 
-        "note": "", 
-        "observed": "14", 
-        "predicted": "14.177", 
-        "procedures": "453", 
-        "ratio": "0.988", 
-        "upper": "1.618"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.438", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "4.179", 
-        "procedures": "521", 
-        "ratio": "1.196", 
-        "upper": "2.652"
-      }
-    }, 
-    "provider_name": "PIEDMONT HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "LAWRENCEVILLE", 
-      "county": "GWINNETT", 
-      "state": "GA", 
-      "street": "1000 MEDICAL CENTER BOULEVARD", 
-      "zip": "30045"
-    }, 
-    "display_name": "Gwinnett Medical Center", 
-    "id": "110087", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "6971", 
-        "lower": "1.39", 
-        "na": "0", 
-        "note": "", 
-        "observed": "19", 
-        "predicted": "8.476", 
-        "ratio": "2.242", 
-        "upper": "3.436"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "89940", 
-        "lower": "0.598", 
-        "na": "0", 
-        "note": "", 
-        "observed": "47", 
-        "predicted": "57.709", 
-        "ratio": "0.814", 
-        "upper": "1.083"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "8364", 
-        "lower": "0.496", 
-        "na": "0", 
-        "note": "", 
-        "observed": "13", 
-        "predicted": "14.57", 
-        "ratio": "0.892", 
-        "upper": "1.487"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "102106", 
-        "lower": "0.09", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "6.844", 
-        "ratio": "0.438", 
-        "upper": "1.281"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.48", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "13.536", 
-        "procedures": "412", 
-        "ratio": "0.887", 
-        "upper": "1.507"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.731", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "1.739", 
-        "procedures": "185", 
-        "ratio": "2.3", 
-        "upper": "5.548"
-      }
-    }, 
-    "provider_name": "GWINNETT MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "CONYERS", 
-      "county": "ROCKDALE", 
-      "state": "GA", 
-      "street": "1412 MILSTEAD AVENUE, NE", 
-      "zip": "30012"
-    }, 
-    "display_name": "Rockdale Medical Center", 
-    "id": "110091", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2199", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.639", 
-        "ratio": "0", 
-        "upper": "1.135"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "24638", 
-        "lower": "0.739", 
-        "na": "0", 
-        "note": "", 
-        "observed": "21", 
-        "predicted": "17.593", 
-        "ratio": "1.194", 
-        "upper": "1.825"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2740", 
-        "lower": "0.499", 
-        "na": "0", 
-        "note": "", 
-        "observed": "7", 
-        "predicted": "6.131", 
-        "ratio": "1.142", 
-        "upper": "2.258"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "28666", 
-        "lower": "0.359", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "1.722", 
-        "ratio": "1.742", 
-        "upper": "5.091"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.327", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.026", 
-        "procedures": "31", 
-        "ratio": "1.949", 
-        "upper": "6.44"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "3", 
-        "predicted": "0.629", 
-        "procedures": "60", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "ROCKDALE MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "303 PARKWAY DR NE", 
-      "zip": "30312"
-    }, 
-    "display_name": "Atlanta Medical Center", 
-    "id": "110115", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "12894", 
-        "lower": "0.733", 
-        "na": "0", 
-        "note": "", 
-        "observed": "28", 
-        "predicted": "25.882", 
-        "ratio": "1.082", 
-        "upper": "1.543"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "74320", 
-        "lower": "0.668", 
-        "na": "0", 
-        "note": "", 
-        "observed": "45", 
-        "predicted": "49.122", 
-        "ratio": "0.916", 
-        "upper": "1.226"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "11863", 
-        "lower": "0.278", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "23.379", 
-        "ratio": "0.513", 
-        "upper": "0.873"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "77630", 
-        "lower": "0.371", 
-        "na": "0", 
-        "note": "", 
-        "observed": "7", 
-        "predicted": "7.586", 
-        "ratio": "0.923", 
-        "upper": "1.901"
-      }, 
-      "ssicolon": {
-        "category": "Better than the U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "4.124", 
-        "procedures": "116", 
-        "ratio": "0", 
-        "upper": "0.726"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.047", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "1.059", 
-        "procedures": "107", 
-        "ratio": "0.944", 
-        "upper": "4.657"
-      }
-    }, 
-    "provider_name": "ATLANTA MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "AUSTELL", 
-      "county": "COBB", 
-      "state": "GA", 
-      "street": "3950 AUSTELL RD", 
-      "zip": "30106"
-    }, 
-    "display_name": "Wellstar Cobb Hospital", 
-    "id": "110143", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "5329", 
-        "lower": "1.829", 
-        "na": "0", 
-        "note": "", 
-        "observed": "23", 
-        "predicted": "8.163", 
-        "ratio": "2.818", 
-        "upper": "4.161"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "68959", 
-        "lower": "0.848", 
-        "na": "0", 
-        "note": "", 
-        "observed": "58", 
-        "predicted": "51.931", 
-        "ratio": "1.117", 
-        "upper": "1.444"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "5471", 
-        "lower": "0.584", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "9.913", 
-        "ratio": "1.11", 
-        "upper": "1.929"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "79392", 
-        "lower": "0.183", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "3.386", 
-        "ratio": "0.886", 
-        "upper": "2.589"
-      }, 
-      "ssicolon": {
-        "category": "Better than the U.S. National Benchmark", 
-        "lower": "0.009", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "5.29", 
-        "procedures": "158", 
-        "ratio": "0.189", 
-        "upper": "0.932"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.501", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "3.657", 
-        "procedures": "389", 
-        "ratio": "1.367", 
-        "upper": "3.031"
-      }
-    }, 
-    "provider_name": "WELLSTAR COBB HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "ATLANTA", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "1000 JOHNSON FERRY ROAD, NE", 
-      "zip": "30342"
-    }, 
-    "display_name": "Northside Hospital", 
-    "id": "110161", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "4974", 
-        "lower": "0.307", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "5.969", 
-        "ratio": "0.838", 
-        "upper": "1.857"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "86668", 
-        "lower": "0.66", 
-        "na": "0", 
-        "note": "", 
-        "observed": "55", 
-        "predicted": "62.744", 
-        "ratio": "0.877", 
-        "upper": "1.141"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "8383", 
-        "lower": "0.046", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "16.643", 
-        "ratio": "0.18", 
-        "upper": "0.491"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "133513", 
-        "lower": "0.142", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.698", 
-        "ratio": "0.52", 
-        "upper": "1.33"
-      }, 
-      "ssicolon": {
-        "category": "Better than the U.S. National Benchmark", 
-        "lower": "0.144", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "12.682", 
-        "procedures": "409", 
-        "ratio": "0.394", 
-        "upper": "0.874"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.222", 
-        "na": "0", 
-        "note": "", 
-        "observed": "7", 
-        "predicted": "13.793", 
-        "procedures": "1608", 
-        "ratio": "0.508", 
-        "upper": "1.004"
-      }
-    }, 
-    "provider_name": "NORTHSIDE HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "RIVERDALE", 
-      "county": "CLAYTON", 
-      "state": "GA", 
-      "street": "11 UPPER RIVERDALE ROAD, SW", 
-      "zip": "30274"
-    }, 
-    "display_name": "Southern Regional Medical Center", 
-    "id": "110165", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "5521", 
-        "lower": "0.873", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "6.625", 
-        "ratio": "1.66", 
-        "upper": "2.886"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "69205", 
-        "lower": "0.34", 
-        "na": "0", 
-        "note": "", 
-        "observed": "22", 
-        "predicted": "40.567", 
-        "ratio": "0.542", 
-        "upper": "0.821"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "4263", 
-        "lower": "0.235", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "7.797", 
-        "ratio": "0.641", 
-        "upper": "1.421"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "69671", 
-        "lower": "0.248", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.496", 
-        "ratio": "1.202", 
-        "upper": "3.513"
-      }, 
-      "ssicolon": {
-        "category": "Better than the U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "4.717", 
-        "procedures": "140", 
-        "ratio": "0", 
-        "upper": "0.635"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.462", 
-        "procedures": "125", 
-        "ratio": "0", 
-        "upper": "2.049"
-      }
-    }, 
-    "provider_name": "SOUTHERN REGIONAL MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "ROME", 
-      "county": "FLOYD", 
-      "state": "GA", 
-      "street": "501 REDMOND ROAD", 
-      "zip": "30165"
-    }, 
-    "display_name": "Redmond Regional Medical Center", 
-    "id": "110168", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "5229", 
-        "lower": "0.761", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "7.597", 
-        "ratio": "1.448", 
-        "upper": "2.517"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "37741", 
-        "lower": "0.372", 
-        "na": "0", 
-        "note": "", 
-        "observed": "17", 
-        "predicted": "26.582", 
-        "ratio": "0.64", 
-        "upper": "1.024"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3922", 
-        "lower": "0.476", 
-        "na": "0", 
-        "note": "", 
-        "observed": "7", 
-        "predicted": "6.425", 
-        "ratio": "1.089", 
-        "upper": "2.155"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "37741", 
-        "lower": "0.694", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "2.341", 
-        "ratio": "2.136", 
-        "upper": "4.984"
-      }, 
-      "ssicolon": {
-        "category": "Better than the U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "3.941", 
-        "procedures": "124", 
-        "ratio": "0", 
-        "upper": "0.76"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.568", 
-        "procedures": "60", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "REDMOND REGIONAL MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "DOUGLASVILLE", 
-      "county": "DOUGLAS", 
-      "state": "GA", 
-      "street": "8954 HOSPITAL DRIVE", 
-      "zip": "30134"
-    }, 
-    "display_name": "Wellstar Douglas Hospital", 
-    "id": "110184", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2038", 
-        "lower": "0.019", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "2.65", 
-        "ratio": "0.377", 
-        "upper": "1.861"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "21707", 
-        "lower": "0.55", 
-        "na": "0", 
-        "note": "", 
-        "observed": "16", 
-        "predicted": "16.628", 
-        "ratio": "0.962", 
-        "upper": "1.563"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1786", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.68", 
-        "ratio": "0", 
-        "upper": "1.118"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "22517", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.936", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.254", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "3.005", 
-        "procedures": "84", 
-        "ratio": "0.998", 
-        "upper": "2.717"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.468", 
-        "procedures": "49", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "WELLSTAR DOUGLAS HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "STOCKBRIDGE", 
-      "county": "HENRY", 
-      "state": "GA", 
-      "street": "1133 EAGLE'S LANDING PARKWAY", 
-      "zip": "30281"
-    }, 
-    "display_name": "Piedmont Henry Hospital", 
-    "id": "110191", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "3359", 
-        "lower": "1.26", 
-        "na": "0", 
-        "note": "", 
-        "observed": "10", 
-        "predicted": "4.032", 
-        "ratio": "2.48", 
-        "upper": "4.421"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "42595", 
-        "lower": "0.263", 
-        "na": "0", 
-        "note": "", 
-        "observed": "14", 
-        "predicted": "29.109", 
-        "ratio": "0.481", 
-        "upper": "0.807"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3330", 
-        "lower": "0.476", 
-        "na": "0", 
-        "note": "", 
-        "observed": "7", 
-        "predicted": "6.438", 
-        "ratio": "1.087", 
-        "upper": "2.151"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "48095", 
-        "lower": "0.607", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "2.675", 
-        "ratio": "1.869", 
-        "upper": "4.362"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.418", 
-        "na": "0", 
-        "note": "", 
-        "observed": "6", 
-        "predicted": "5.811", 
-        "procedures": "171", 
-        "ratio": "1.033", 
-        "upper": "2.148"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "2.693", 
-        "procedures": "268", 
-        "ratio": "0", 
-        "upper": "1.112"
-      }
-    }, 
-    "provider_name": "PIEDMONT HENRY HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "SNELLVILLE", 
-      "county": "GWINNETT", 
-      "state": "GA", 
-      "street": "1700 MEDICAL WAY", 
-      "zip": "30078"
-    }, 
-    "display_name": "Eastside Medical Center", 
-    "id": "110192", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "4597", 
-        "lower": "0.211", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "6.012", 
-        "ratio": "0.665", 
-        "upper": "1.605"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "40807", 
-        "lower": "0.857", 
-        "na": "0", 
-        "note": "", 
-        "observed": "35", 
-        "predicted": "28.447", 
-        "ratio": "1.23", 
-        "upper": "1.711"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3233", 
-        "lower": "0.062", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "5.432", 
-        "ratio": "0.368", 
-        "upper": "1.216"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "44481", 
-        "lower": "0.292", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.12", 
-        "ratio": "1.415", 
-        "upper": "4.136"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.236", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "3.233", 
-        "procedures": "101", 
-        "ratio": "0.928", 
-        "upper": "2.525"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.038", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "1.332", 
-        "procedures": "169", 
-        "ratio": "0.751", 
-        "upper": "3.703"
-      }
-    }, 
-    "provider_name": "EASTSIDE MEDICAL CENTER"
-  }, 
-  {
-    "address": {
-      "city": "ROSWELL", 
-      "county": "FULTON", 
-      "state": "GA", 
-      "street": "3000 HOSPITAL BOULEVARD", 
-      "zip": "30076"
-    }, 
-    "display_name": "North Fulton Hospital", 
-    "id": "110198", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "3290", 
-        "lower": "0.448", 
-        "na": "0", 
-        "note": "", 
-        "observed": "8", 
-        "predicted": "8.291", 
-        "ratio": "0.965", 
-        "upper": "1.832"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "15301", 
-        "lower": "0.692", 
-        "na": "0", 
-        "note": "", 
-        "observed": "11", 
-        "predicted": "7.937", 
-        "ratio": "1.386", 
-        "upper": "2.48"
-      }, 
-      "clabsi": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "2341", 
-        "lower": "0.008", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "6.372", 
-        "ratio": "0.157", 
-        "upper": "0.774"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "16095", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.979", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.591", 
-        "procedures": "19", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "1", 
-        "predicted": "0.14", 
-        "procedures": "15", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "NORTH FULTON HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "FAYETTEVILLE", 
-      "county": "FAYETTE", 
-      "state": "GA", 
-      "street": "1255 HIGHWAY 54 WEST", 
-      "zip": "30214"
-    }, 
-    "display_name": "Piedmont Fayette Hospital", 
-    "id": "110215", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2744", 
-        "lower": "0.094", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "3.567", 
-        "ratio": "0.561", 
-        "upper": "1.852"
-      }, 
-      "cdiff": {
-        "category": "Better than the U.S. National Benchmark", 
-        "days": "35927", 
-        "lower": "0.263", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "23.559", 
-        "ratio": "0.509", 
-        "upper": "0.89"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2885", 
-        "lower": "0.349", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "5.244", 
-        "ratio": "0.953", 
-        "upper": "2.113"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "41707", 
-        "lower": "0.296", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "2.093", 
-        "ratio": "1.433", 
-        "upper": "4.189"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.174", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.317", 
-        "procedures": "238", 
-        "ratio": "0.547", 
-        "upper": "1.319"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.1", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "3.357", 
-        "procedures": "398", 
-        "ratio": "0.596", 
-        "upper": "1.968"
-      }
-    }, 
-    "provider_name": "PIEDMONT FAYETTE HOSPITAL"
-  }, 
-  {
-    "address": {
-      "city": "JASPER", 
-      "county": "PICKENS", 
-      "state": "GA", 
-      "street": "1266 HIGHWAY 515 SOUTH", 
-      "zip": "30143"
-    }, 
-    "display_name": "Piedmont Mountainside Hospital", 
-    "id": "110225", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "995", 
-        "lower": "0.025", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "1.99", 
-        "ratio": "0.503", 
-        "upper": "2.478"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "9253", 
-        "lower": "0.152", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "7.158", 
-        "ratio": "0.559", 
-        "upper": "1.431"
-      }, 
-      "clabsi": {
-        "category": "Not Available", 
-        "days": "367", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.697", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "9731", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.486", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0", 
-        "na": "0", 
-        "note": "The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero", 
-        "observed": "0", 
-        "predicted": "1.267", 
-        "procedures": "42", 
-        "ratio": "0", 
-        "upper": "2.364"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.245", 
-        "procedures": "23", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC"
-  }, 
-  {
-    "address": {
-      "city": "NEWNAN", 
-      "county": "COWETA", 
-      "state": "GA", 
-      "street": "745 POPLAR ROAD", 
-      "zip": "30265"
-    }, 
-    "display_name": "Piedmont Newnan Hospital", 
-    "id": "110229", 
-    "infections": {
-      "cauti": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "2222", 
-        "lower": "0.019", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "2.667", 
-        "ratio": "0.375", 
-        "upper": "1.849"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "23683", 
-        "lower": "0.389", 
-        "na": "0", 
-        "note": "", 
-        "observed": "12", 
-        "predicted": "15.948", 
-        "ratio": "0.752", 
-        "upper": "1.314"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1171", 
-        "lower": "0.028", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "1.757", 
-        "ratio": "0.569", 
-        "upper": "2.807"
-      }, 
-      "mrsa": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "25834", 
-        "lower": "0.162", 
-        "na": "0", 
-        "note": "", 
-        "observed": "2", 
-        "predicted": "1.493", 
-        "ratio": "1.34", 
-        "upper": "4.839"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.672", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "1.892", 
-        "procedures": "60", 
-        "ratio": "2.114", 
-        "upper": "5.1"
-      }, 
-      "ssihyst": {
-        "category": "Not Available", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "1", 
-        "predicted": "0.601", 
-        "procedures": "56", 
-        "ratio": "0", 
-        "upper": "0"
-      }
-    }, 
-    "provider_name": "PIEDMONT NEWNAN HOSPITAL, INC"
-  }, 
-  {
-    "address": {
-      "city": "JOHNS CREEK", 
-      "county": "CHATTOOGA", 
-      "state": "GA", 
-      "street": "6325 HOSPITAL PARKWAY", 
-      "zip": "30097"
-    }, 
-    "display_name": "Emory Johns Creek Hospital", 
-    "id": "110230", 
-    "infections": {
-      "cauti": {
-        "category": "Worse than the U.S. National Benchmark", 
-        "days": "1316", 
-        "lower": "1.071", 
-        "na": "0", 
-        "note": "", 
-        "observed": "5", 
-        "predicted": "1.711", 
-        "ratio": "2.922", 
-        "upper": "6.477"
-      }, 
-      "cdiff": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "19422", 
-        "lower": "0.974", 
-        "na": "0", 
-        "note": "", 
-        "observed": "19", 
-        "predicted": "11.736", 
-        "ratio": "1.619", 
-        "upper": "2.528"
-      }, 
-      "clabsi": {
-        "category": "No Different than U.S. National Benchmark", 
-        "days": "1255", 
-        "lower": "0.022", 
-        "na": "0", 
-        "note": "", 
-        "observed": "1", 
-        "predicted": "2.238", 
-        "ratio": "0.447", 
-        "upper": "2.204"
-      }, 
-      "mrsa": {
-        "category": "Not Available", 
-        "days": "20240", 
-        "lower": "0", 
-        "na": "1", 
-        "note": "Results cannot be calculated for this reporting period", 
-        "observed": "0", 
-        "predicted": "0.767", 
-        "ratio": "0", 
-        "upper": "0"
-      }, 
-      "ssicolon": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.371", 
-        "na": "0", 
-        "note": "", 
-        "observed": "4", 
-        "predicted": "3.426", 
-        "procedures": "105", 
-        "ratio": "1.168", 
-        "upper": "2.816"
-      }, 
-      "ssihyst": {
-        "category": "No Different than U.S. National Benchmark", 
-        "lower": "0.676", 
-        "na": "0", 
-        "note": "", 
-        "observed": "3", 
-        "predicted": "1.129", 
-        "procedures": "134", 
-        "ratio": "2.657", 
-        "upper": "7.232"
-      }
-    }, 
-    "provider_name": "EMORY JOHNS CREEK HOSPITAL"
-  }
-]
+  "hospitals": [
+    {
+      "address": {
+        "city": "CUMMING", 
+        "county": "FORSYTH", 
+        "state": "GA", 
+        "street": "1200 NORTHSIDE FORSYTH DRIVE", 
+        "zip": "30041"
+      }, 
+      "display_name": "Northside Hospital Forsyth", 
+      "id": "110005", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,971", 
+          "incidents_label": "Patient days", 
+          "lower": 0.011, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 4.765, 
+          "ratio": 0.21, 
+          "upper": 1.035
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "59,801", 
+          "incidents_label": "Patient days", 
+          "lower": 0.507, 
+          "na": 0, 
+          "note": null, 
+          "observed": 32, 
+          "predicted": 43.91, 
+          "ratio": 0.729, 
+          "upper": 1.016
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "4,460", 
+          "incidents_label": "Patient days", 
+          "lower": 0.048, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 7.035, 
+          "ratio": 0.284, 
+          "upper": 0.939
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "69,677", 
+          "incidents_label": "Patient days", 
+          "lower": 0.014, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 3.497, 
+          "ratio": 0.286, 
+          "upper": 1.41
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 207, 
+          "incidents_label": "Procedures", 
+          "lower": 0.051, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 6.56, 
+          "ratio": 0.305, 
+          "upper": 1.007
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 257, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.256, 
+          "ratio": 0, 
+          "upper": 1.328
+        }
+      }, 
+      "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
+    }, 
+    {
+      "address": {
+        "city": "ATHENS", 
+        "county": "CLARKE", 
+        "state": "GA", 
+        "street": "1230 BAXTER STREET", 
+        "zip": "30606"
+      }, 
+      "display_name": "Saint Mary's Hospital", 
+      "id": "110006", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,826", 
+          "incidents_label": "Patient days", 
+          "lower": 0.153, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 4.974, 
+          "ratio": 0.603, 
+          "upper": 1.641
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "26,599", 
+          "incidents_label": "Patient days", 
+          "lower": 0.892, 
+          "na": 0, 
+          "note": null, 
+          "observed": 21, 
+          "predicted": 14.961, 
+          "ratio": 1.404, 
+          "upper": 2.109
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,037", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.056, 
+          "ratio": 0, 
+          "upper": 1.457
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "28,821", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.751, 
+          "ratio": 0, 
+          "upper": 1.711
+        }, 
+        "ssicolon": {
+          "category": "Better than the National Benchmark", 
+          "incidents": 118, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.662, 
+          "ratio": 0, 
+          "upper": 0.818
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 63, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.552, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "ST MARY'S HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "CANTON", 
+        "county": "CHEROKEE", 
+        "state": "GA", 
+        "street": "201 HOSPITAL ROAD", 
+        "zip": "30114"
+      }, 
+      "display_name": "Northside Hospital Cherokee", 
+      "id": "110008", 
+      "infections": {
+        "cauti": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,366", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.076, 
+          "ratio": 0, 
+          "upper": 0.974
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "26,271", 
+          "incidents_label": "Patient days", 
+          "lower": 0.99, 
+          "na": 0, 
+          "note": null, 
+          "observed": 26, 
+          "predicted": 17.53, 
+          "ratio": 1.483, 
+          "upper": 2.142
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,792", 
+          "incidents_label": "Patient days", 
+          "lower": 0.019, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 2.689, 
+          "ratio": 0.372, 
+          "upper": 1.834
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "28,889", 
+          "incidents_label": "Patient days", 
+          "lower": 0.033, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.494, 
+          "ratio": 0.669, 
+          "upper": 3.301
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 87, 
+          "incidents_label": "Procedures", 
+          "lower": 0.019, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 2.662, 
+          "ratio": 0.376, 
+          "upper": 1.853
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 143, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.381, 
+          "ratio": 0, 
+          "upper": 2.169
+        }
+      }, 
+      "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "DEKALB", 
+        "state": "GA", 
+        "street": "1364 CLIFTON ROAD, NE", 
+        "zip": "30322"
+      }, 
+      "display_name": "Emory University Hospital", 
+      "id": "110010", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "18,145", 
+          "incidents_label": "Patient days", 
+          "lower": 1.069, 
+          "na": 0, 
+          "note": null, 
+          "observed": 72, 
+          "predicted": 53.067, 
+          "ratio": 1.357, 
+          "upper": 1.699
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "160,848", 
+          "incidents_label": "Patient days", 
+          "lower": 0.918, 
+          "na": 0, 
+          "note": null, 
+          "observed": 167, 
+          "predicted": 99.999, 
+          "ratio": 1.072, 
+          "upper": 1.244
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "20,066", 
+          "incidents_label": "Patient days", 
+          "lower": 0.292, 
+          "na": 0, 
+          "note": null, 
+          "observed": 20, 
+          "predicted": 43.068, 
+          "ratio": 0.464, 
+          "upper": 0.704
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "160,851", 
+          "incidents_label": "Patient days", 
+          "lower": 0.67, 
+          "na": 0, 
+          "note": null, 
+          "observed": 19, 
+          "predicted": 17.583, 
+          "ratio": 1.081, 
+          "upper": 1.656
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 258, 
+          "incidents_label": "Procedures", 
+          "lower": 0.138, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 9.201, 
+          "ratio": 0.435, 
+          "upper": 1.049
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 140, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.365, 
+          "ratio": 0, 
+          "upper": 2.195
+        }
+      }, 
+      "provider_name": "EMORY UNIVERSITY HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "CARROLLTON", 
+        "county": "CARROLL", 
+        "state": "GA", 
+        "street": "705 DIXIE STREET", 
+        "zip": "30117"
+      }, 
+      "display_name": "Tanner Medical Center Carrollton", 
+      "id": "110011", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,770", 
+          "incidents_label": "Patient days", 
+          "lower": 0.146, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 2.3, 
+          "ratio": 0.87, 
+          "upper": 2.873
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "34,544", 
+          "incidents_label": "Patient days", 
+          "lower": 0.358, 
+          "na": 0, 
+          "note": null, 
+          "observed": 14, 
+          "predicted": 22.248, 
+          "ratio": 0.629, 
+          "upper": 1.031
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "868", 
+          "incidents_label": "Patient days", 
+          "lower": 0.038, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.303, 
+          "ratio": 0.767, 
+          "upper": 3.785
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "37,198", 
+          "incidents_label": "Patient days", 
+          "lower": 0.642, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 1.979, 
+          "ratio": 2.021, 
+          "upper": 4.875
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 107, 
+          "incidents_label": "Procedures", 
+          "lower": 0.211, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 3.611, 
+          "ratio": 0.831, 
+          "upper": 2.261
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 118, 
+          "incidents_label": "Procedures", 
+          "lower": 0.042, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.189, 
+          "ratio": 0.841, 
+          "upper": 4.148
+        }
+      }, 
+      "provider_name": "TANNER MEDICAL CENTER - CARROLLTON"
+    }, 
+    {
+      "address": {
+        "city": "COVINGTON", 
+        "county": "NEWTON", 
+        "state": "GA", 
+        "street": "5126 HOSPITAL DRIVE NE", 
+        "zip": "30014"
+      }, 
+      "display_name": "Newton Medical Center", 
+      "id": "110018", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "868", 
+          "incidents_label": "Patient days", 
+          "lower": 0.677, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 1.128, 
+          "ratio": 2.66, 
+          "upper": 7.238
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "15,295", 
+          "incidents_label": "Patient days", 
+          "lower": 0.199, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 9.186, 
+          "ratio": 0.544, 
+          "upper": 1.206
+        }, 
+        "clabsi": {
+          "category": "Not Available", 
+          "incidents": "501", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.826, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "mrsa": {
+          "category": "Not Available", 
+          "incidents": "18,244", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.777, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 45, 
+          "incidents_label": "Procedures", 
+          "lower": 0.232, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 1.445, 
+          "ratio": 1.384, 
+          "upper": 4.573
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 71, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.666, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "NEWTON MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "GAINESVILLE", 
+        "county": "HALL", 
+        "state": "GA", 
+        "street": "743 SPRING STREET", 
+        "zip": "30501"
+      }, 
+      "display_name": "Northeast Georgia Medical Center", 
+      "id": "110029", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "13,550", 
+          "incidents_label": "Patient days", 
+          "lower": 0.675, 
+          "na": 0, 
+          "note": null, 
+          "observed": 22, 
+          "predicted": 20.934, 
+          "ratio": 1.051, 
+          "upper": 1.565
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "188,899", 
+          "incidents_label": "Patient days", 
+          "lower": 0.587, 
+          "na": 0, 
+          "note": null, 
+          "observed": 101, 
+          "predicted": 99.999, 
+          "ratio": 0.718, 
+          "upper": 0.868
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "10,825", 
+          "incidents_label": "Patient days", 
+          "lower": 0.042, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 18.102, 
+          "ratio": 0.166, 
+          "upper": 0.451
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "198,246", 
+          "incidents_label": "Patient days", 
+          "lower": 0.579, 
+          "na": 0, 
+          "note": null, 
+          "observed": 13, 
+          "predicted": 12.494, 
+          "ratio": 1.041, 
+          "upper": 1.735
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 294, 
+          "incidents_label": "Procedures", 
+          "lower": 0.599, 
+          "na": 0, 
+          "note": null, 
+          "observed": 11, 
+          "predicted": 9.654, 
+          "ratio": 1.139, 
+          "upper": 1.98
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 552, 
+          "incidents_label": "Procedures", 
+          "lower": 0.124, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 6.139, 
+          "ratio": 0.489, 
+          "upper": 1.33
+        }
+      }, 
+      "provider_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC"
+    }, 
+    {
+      "address": {
+        "city": "CARTERSVILLE", 
+        "county": "BARTOW", 
+        "state": "GA", 
+        "street": "960 JOE FRANK HARRIS PARKWAY", 
+        "zip": "30120"
+      }, 
+      "display_name": "Cartersville Medical Center", 
+      "id": "110030", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,481", 
+          "incidents_label": "Patient days", 
+          "lower": 0.949, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 3.225, 
+          "ratio": 2.171, 
+          "upper": 4.294
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "30,641", 
+          "incidents_label": "Patient days", 
+          "lower": 0.261, 
+          "na": 0, 
+          "note": null, 
+          "observed": 11, 
+          "predicted": 22.121, 
+          "ratio": 0.497, 
+          "upper": 0.864
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,829", 
+          "incidents_label": "Patient days", 
+          "lower": 0.122, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 2.744, 
+          "ratio": 0.729, 
+          "upper": 2.408
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "32,097", 
+          "incidents_label": "Patient days", 
+          "lower": 0.26, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 1.291, 
+          "ratio": 1.549, 
+          "upper": 5.117
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 61, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.795, 
+          "ratio": 0, 
+          "upper": 1.669
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 70, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 1, 
+          "predicted": 0.554, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "CARTERSVILLE MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "GRIFFIN", 
+        "county": "SPALDING", 
+        "state": "GA", 
+        "street": "601 SOUTH 8TH STREET", 
+        "zip": "30223"
+      }, 
+      "display_name": "Spalding Regional Hospital", 
+      "id": "110031", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "3,169", 
+          "incidents_label": "Patient days", 
+          "lower": 1.521, 
+          "na": 0, 
+          "note": null, 
+          "observed": 11, 
+          "predicted": 3.803, 
+          "ratio": 2.892, 
+          "upper": 5.027
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "35,895", 
+          "incidents_label": "Patient days", 
+          "lower": 0.281, 
+          "na": 0, 
+          "note": null, 
+          "observed": 10, 
+          "predicted": 18.097, 
+          "ratio": 0.553, 
+          "upper": 0.985
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,680", 
+          "incidents_label": "Patient days", 
+          "lower": 0.727, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 2.521, 
+          "ratio": 1.983, 
+          "upper": 4.396
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "36,372", 
+          "incidents_label": "Patient days", 
+          "lower": 0.946, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 1.937, 
+          "ratio": 2.581, 
+          "upper": 5.721
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 43, 
+          "incidents_label": "Procedures", 
+          "lower": 0.032, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.541, 
+          "ratio": 0.649, 
+          "upper": 3.2
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 45, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 2, 
+          "predicted": 0.593, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "SPALDING REGIONAL HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "MARIETTA", 
+        "county": "COBB", 
+        "state": "GA", 
+        "street": "677 CHURCH STREET", 
+        "zip": "30060"
+      }, 
+      "display_name": "Wellstar Kennestone Hospital", 
+      "id": "110035", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "16,336", 
+          "incidents_label": "Patient days", 
+          "lower": 1.187, 
+          "na": 0, 
+          "note": null, 
+          "observed": 57, 
+          "predicted": 36.697, 
+          "ratio": 1.553, 
+          "upper": 1.998
+        }, 
+        "cdiff": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "165,555", 
+          "incidents_label": "Patient days", 
+          "lower": 1.027, 
+          "na": 0, 
+          "note": null, 
+          "observed": 147, 
+          "predicted": 99.999, 
+          "ratio": 1.211, 
+          "upper": 1.419
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "13,791", 
+          "incidents_label": "Patient days", 
+          "lower": 0.146, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 25.519, 
+          "ratio": 0.313, 
+          "upper": 0.595
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "184,976", 
+          "incidents_label": "Patient days", 
+          "lower": 0.415, 
+          "na": 0, 
+          "note": null, 
+          "observed": 10, 
+          "predicted": 12.242, 
+          "ratio": 0.817, 
+          "upper": 1.456
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 345, 
+          "incidents_label": "Procedures", 
+          "lower": 0.829, 
+          "na": 0, 
+          "note": null, 
+          "observed": 16, 
+          "predicted": 11.424, 
+          "ratio": 1.401, 
+          "upper": 2.226
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 526, 
+          "incidents_label": "Procedures", 
+          "lower": 0.268, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 4.742, 
+          "ratio": 0.844, 
+          "upper": 2.035
+        }
+      }, 
+      "provider_name": "WELLSTAR KENNESTONE HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "HIRAM", 
+        "county": "PAULDING", 
+        "state": "GA", 
+        "street": "2518 JIMMY LEE SMITH PARKWAY", 
+        "zip": "30141"
+      }, 
+      "display_name": "Wellstar Paulding Hospital", 
+      "id": "110042", 
+      "infections": {
+        "cauti": {
+          "category": "Not Available", 
+          "incidents": "457", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 1, 
+          "predicted": 0.595, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "10,388", 
+          "incidents_label": "Patient days", 
+          "lower": 0.615, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 6.045, 
+          "ratio": 1.323, 
+          "upper": 2.513
+        }, 
+        "clabsi": {
+          "category": "Not Available", 
+          "incidents": "363", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 1, 
+          "predicted": 0.546, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "mrsa": {
+          "category": "Not Available", 
+          "incidents": "10,388", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 1, 
+          "predicted": 0.372, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 35, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.044, 
+          "ratio": 0, 
+          "upper": 2.869
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 1, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.007, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "WELLSTAR PAULDING HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "ROME", 
+        "county": "FLOYD", 
+        "state": "GA", 
+        "street": "304 TURNER MCCALL BLVD P O BOX 233", 
+        "zip": "30162"
+      }, 
+      "display_name": "Floyd Medical Center", 
+      "id": "110054", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "4,605", 
+          "incidents_label": "Patient days", 
+          "lower": 0.103, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 7.407, 
+          "ratio": 0.405, 
+          "upper": 1.102
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "69,649", 
+          "incidents_label": "Patient days", 
+          "lower": 0.493, 
+          "na": 0, 
+          "note": null, 
+          "observed": 39, 
+          "predicted": 57.058, 
+          "ratio": 0.684, 
+          "upper": 0.925
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,330", 
+          "incidents_label": "Patient days", 
+          "lower": 0.128, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 5.957, 
+          "ratio": 0.504, 
+          "upper": 1.371
+        }, 
+        "mrsa": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "78,262", 
+          "incidents_label": "Patient days", 
+          "lower": 1.89, 
+          "na": 0, 
+          "note": null, 
+          "observed": 16, 
+          "predicted": 5.011, 
+          "ratio": 3.193, 
+          "upper": 5.074
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 132, 
+          "incidents_label": "Procedures", 
+          "lower": 0.011, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 4.508, 
+          "ratio": 0.222, 
+          "upper": 1.094
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 318, 
+          "incidents_label": "Procedures", 
+          "lower": 0.013, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 3.914, 
+          "ratio": 0.255, 
+          "upper": 1.26
+        }
+      }, 
+      "provider_name": "FLOYD MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "ATHENS", 
+        "county": "CLARKE", 
+        "state": "GA", 
+        "street": "1199 PRINCE AVENUE", 
+        "zip": "30606"
+      }, 
+      "display_name": "Athens Regional Medical Center", 
+      "id": "110074", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "6,609", 
+          "incidents_label": "Patient days", 
+          "lower": 1.543, 
+          "na": 0, 
+          "note": null, 
+          "observed": 20, 
+          "predicted": 8.137, 
+          "ratio": 2.458, 
+          "upper": 3.729
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "87,929", 
+          "incidents_label": "Patient days", 
+          "lower": 0.784, 
+          "na": 0, 
+          "note": null, 
+          "observed": 66, 
+          "predicted": 65.616, 
+          "ratio": 1.006, 
+          "upper": 1.272
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "4,003", 
+          "incidents_label": "Patient days", 
+          "lower": 0.212, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 6.006, 
+          "ratio": 0.666, 
+          "upper": 1.606
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "97,176", 
+          "incidents_label": "Patient days", 
+          "lower": 0.01, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 4.781, 
+          "ratio": 0.209, 
+          "upper": 1.032
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 221, 
+          "incidents_label": "Procedures", 
+          "lower": 0.416, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 7.368, 
+          "ratio": 0.95, 
+          "upper": 1.879
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 199, 
+          "incidents_label": "Procedures", 
+          "lower": 0.386, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 1.977, 
+          "ratio": 1.517, 
+          "upper": 4.13
+        }
+      }, 
+      "provider_name": "ATHENS REGIONAL MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "DECATUR", 
+        "county": "DEKALB", 
+        "state": "GA", 
+        "street": "2701 N DECATUR ROAD", 
+        "zip": "30033"
+      }, 
+      "display_name": "Dekalb Medical Center", 
+      "id": "110076", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "6,273", 
+          "incidents_label": "Patient days", 
+          "lower": 1.258, 
+          "na": 0, 
+          "note": null, 
+          "observed": 16, 
+          "predicted": 7.527, 
+          "ratio": 2.126, 
+          "upper": 3.378
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "97,166", 
+          "incidents_label": "Patient days", 
+          "lower": 0.599, 
+          "na": 0, 
+          "note": null, 
+          "observed": 54, 
+          "predicted": 68.34, 
+          "ratio": 0.79, 
+          "upper": 1.023
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "5,402", 
+          "incidents_label": "Patient days", 
+          "lower": 0.3, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 8.104, 
+          "ratio": 0.74, 
+          "upper": 1.54
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "107,160", 
+          "incidents_label": "Patient days", 
+          "lower": 0.138, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 5.52, 
+          "ratio": 0.543, 
+          "upper": 1.479
+        }, 
+        "ssicolon": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": 162, 
+          "incidents_label": "Procedures", 
+          "lower": 1.078, 
+          "na": 0, 
+          "note": null, 
+          "observed": 11, 
+          "predicted": 5.368, 
+          "ratio": 2.049, 
+          "upper": 3.562
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 296, 
+          "incidents_label": "Procedures", 
+          "lower": 0.895, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 2.717, 
+          "ratio": 2.208, 
+          "upper": 4.593
+        }
+      }, 
+      "provider_name": "DEKALB MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "550 PEACHTREE ST NE", 
+        "zip": "30308"
+      }, 
+      "display_name": "Emory University Hospital Midtown", 
+      "id": "110078", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "9,894", 
+          "incidents_label": "Patient days", 
+          "lower": 0.869, 
+          "na": 0, 
+          "note": null, 
+          "observed": 31, 
+          "predicted": 24.656, 
+          "ratio": 1.257, 
+          "upper": 1.763
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "114,203", 
+          "incidents_label": "Patient days", 
+          "lower": 0.865, 
+          "na": 0, 
+          "note": null, 
+          "observed": 105, 
+          "predicted": 99.832, 
+          "ratio": 1.052, 
+          "upper": 1.268
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "11,948", 
+          "incidents_label": "Patient days", 
+          "lower": 0.513, 
+          "na": 0, 
+          "note": null, 
+          "observed": 21, 
+          "predicted": 26.002, 
+          "ratio": 0.808, 
+          "upper": 1.213
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "130,913", 
+          "incidents_label": "Patient days", 
+          "lower": 0.623, 
+          "na": 0, 
+          "note": null, 
+          "observed": 13, 
+          "predicted": 11.603, 
+          "ratio": 1.12, 
+          "upper": 1.868
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 181, 
+          "incidents_label": "Procedures", 
+          "lower": 0.705, 
+          "na": 0, 
+          "note": null, 
+          "observed": 9, 
+          "predicted": 6.223, 
+          "ratio": 1.446, 
+          "upper": 2.654
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 268, 
+          "incidents_label": "Procedures", 
+          "lower": 0.303, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 2.52, 
+          "ratio": 1.19, 
+          "upper": 3.24
+        }
+      }, 
+      "provider_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "80 JESSE HILL, JR DRIVE SE", 
+        "zip": "30303"
+      }, 
+      "display_name": "Grady Memorial Hospital", 
+      "id": "110079", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "19,729", 
+          "incidents_label": "Patient days", 
+          "lower": 0.987, 
+          "na": 0, 
+          "note": null, 
+          "observed": 80, 
+          "predicted": 64.728, 
+          "ratio": 1.236, 
+          "upper": 1.53
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "159,232", 
+          "incidents_label": "Patient days", 
+          "lower": 0.585, 
+          "na": 0, 
+          "note": null, 
+          "observed": 79, 
+          "predicted": 99.999, 
+          "ratio": 0.734, 
+          "upper": 0.91
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "15,321", 
+          "incidents_label": "Patient days", 
+          "lower": 0.769, 
+          "na": 0, 
+          "note": null, 
+          "observed": 48, 
+          "predicted": 46.568, 
+          "ratio": 1.031, 
+          "upper": 1.355
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "174,919", 
+          "incidents_label": "Patient days", 
+          "lower": 0.4, 
+          "na": 0, 
+          "note": null, 
+          "observed": 10, 
+          "predicted": 12.703, 
+          "ratio": 0.787, 
+          "upper": 1.403
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 153, 
+          "incidents_label": "Procedures", 
+          "lower": 0.454, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 5.362, 
+          "ratio": 1.119, 
+          "upper": 2.327
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 219, 
+          "incidents_label": "Procedures", 
+          "lower": 0.616, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 2.063, 
+          "ratio": 1.939, 
+          "upper": 4.677
+        }
+      }, 
+      "provider_name": "GRADY MEMORIAL HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "5665 PEACHTREE DUNWOODY ROAD", 
+        "zip": "30342"
+      }, 
+      "display_name": "Emory Saint Joseph's Hospital", 
+      "id": "110082", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "7,357", 
+          "incidents_label": "Patient days", 
+          "lower": 0.879, 
+          "na": 0, 
+          "note": null, 
+          "observed": 17, 
+          "predicted": 11.638, 
+          "ratio": 1.461, 
+          "upper": 2.291
+        }, 
+        "cdiff": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "66,803", 
+          "incidents_label": "Patient days", 
+          "lower": 1.321, 
+          "na": 0, 
+          "note": null, 
+          "observed": 86, 
+          "predicted": 52.401, 
+          "ratio": 1.641, 
+          "upper": 2.017
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "6,426", 
+          "incidents_label": "Patient days", 
+          "lower": 0.126, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 10.054, 
+          "ratio": 0.398, 
+          "upper": 0.96
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "66,803", 
+          "incidents_label": "Patient days", 
+          "lower": 0.503, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 3.644, 
+          "ratio": 1.372, 
+          "upper": 3.041
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 261, 
+          "incidents_label": "Procedures", 
+          "lower": 0.544, 
+          "na": 0, 
+          "note": null, 
+          "observed": 9, 
+          "predicted": 8.072, 
+          "ratio": 1.115, 
+          "upper": 2.046
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 38, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.34, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "1968 PEACHTREE RD NW", 
+        "zip": "30309"
+      }, 
+      "display_name": "Piedmont Hospital", 
+      "id": "110083", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "12,710", 
+          "incidents_label": "Patient days", 
+          "lower": 1.989, 
+          "na": 0, 
+          "note": null, 
+          "observed": 53, 
+          "predicted": 20.164, 
+          "ratio": 2.628, 
+          "upper": 3.412
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "133,907", 
+          "incidents_label": "Patient days", 
+          "lower": 0.954, 
+          "na": 0, 
+          "note": null, 
+          "observed": 127, 
+          "predicted": 99.999, 
+          "ratio": 1.14, 
+          "upper": 1.351
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "15,724", 
+          "incidents_label": "Patient days", 
+          "lower": 0.511, 
+          "na": 0, 
+          "note": null, 
+          "observed": 21, 
+          "predicted": 26.131, 
+          "ratio": 0.804, 
+          "upper": 1.208
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "146,948", 
+          "incidents_label": "Patient days", 
+          "lower": 0.593, 
+          "na": 0, 
+          "note": null, 
+          "observed": 12, 
+          "predicted": 10.967, 
+          "ratio": 1.094, 
+          "upper": 1.86
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 481, 
+          "incidents_label": "Procedures", 
+          "lower": 0.642, 
+          "na": 0, 
+          "note": null, 
+          "observed": 16, 
+          "predicted": 14.742, 
+          "ratio": 1.085, 
+          "upper": 1.725
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 447, 
+          "incidents_label": "Procedures", 
+          "lower": 0.872, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 3.509, 
+          "ratio": 1.995, 
+          "upper": 3.946
+        }
+      }, 
+      "provider_name": "PIEDMONT HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "LAWRENCEVILLE", 
+        "county": "GWINNETT", 
+        "state": "GA", 
+        "street": "1000 MEDICAL CENTER BOULEVARD", 
+        "zip": "30045"
+      }, 
+      "display_name": "Gwinnett Medical Center", 
+      "id": "110087", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "6,856", 
+          "incidents_label": "Patient days", 
+          "lower": 0.956, 
+          "na": 0, 
+          "note": null, 
+          "observed": 14, 
+          "predicted": 8.34, 
+          "ratio": 1.679, 
+          "upper": 2.75
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "120,960", 
+          "incidents_label": "Patient days", 
+          "lower": 0.641, 
+          "na": 0, 
+          "note": null, 
+          "observed": 74, 
+          "predicted": 91.292, 
+          "ratio": 0.811, 
+          "upper": 1.012
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "9,680", 
+          "incidents_label": "Patient days", 
+          "lower": 0.22, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 16.919, 
+          "ratio": 0.473, 
+          "upper": 0.898
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "139,513", 
+          "incidents_label": "Patient days", 
+          "lower": 0.653, 
+          "na": 0, 
+          "note": null, 
+          "observed": 12, 
+          "predicted": 9.955, 
+          "ratio": 1.205, 
+          "upper": 2.049
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 371, 
+          "incidents_label": "Procedures", 
+          "lower": 0.607, 
+          "na": 0, 
+          "note": null, 
+          "observed": 13, 
+          "predicted": 11.921, 
+          "ratio": 1.091, 
+          "upper": 1.818
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 166, 
+          "incidents_label": "Procedures", 
+          "lower": 0.491, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 1.553, 
+          "ratio": 1.932, 
+          "upper": 5.257
+        }
+      }, 
+      "provider_name": "GWINNETT MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "CONYERS", 
+        "county": "ROCKDALE", 
+        "state": "GA", 
+        "street": "1412 MILSTEAD AVENUE, NE", 
+        "zip": "30012"
+      }, 
+      "display_name": "Rockdale Medical Center", 
+      "id": "110091", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,736", 
+          "incidents_label": "Patient days", 
+          "lower": 0.61, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 2.083, 
+          "ratio": 1.92, 
+          "upper": 4.632
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "35,058", 
+          "incidents_label": "Patient days", 
+          "lower": 0.662, 
+          "na": 0, 
+          "note": null, 
+          "observed": 25, 
+          "predicted": 24.997, 
+          "ratio": 1, 
+          "upper": 1.455
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,217", 
+          "incidents_label": "Patient days", 
+          "lower": 0.704, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 4.351, 
+          "ratio": 1.609, 
+          "upper": 3.182
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "40,352", 
+          "incidents_label": "Patient days", 
+          "lower": 0.527, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 2.411, 
+          "ratio": 1.659, 
+          "upper": 4.001
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 55, 
+          "incidents_label": "Procedures", 
+          "lower": 0.028, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.766, 
+          "ratio": 0.566, 
+          "upper": 2.793
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 72, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 3, 
+          "predicted": 0.677, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "ROCKDALE MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "303 PARKWAY DR NE", 
+        "zip": "30312"
+      }, 
+      "display_name": "Atlanta Medical Center", 
+      "id": "110115", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "14,879", 
+          "incidents_label": "Patient days", 
+          "lower": 2.021, 
+          "na": 0, 
+          "note": null, 
+          "observed": 50, 
+          "predicted": 18.557, 
+          "ratio": 2.694, 
+          "upper": 3.524
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "103,945", 
+          "incidents_label": "Patient days", 
+          "lower": 0.72, 
+          "na": 0, 
+          "note": null, 
+          "observed": 61, 
+          "predicted": 65.394, 
+          "ratio": 0.933, 
+          "upper": 1.19
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "12,747", 
+          "incidents_label": "Patient days", 
+          "lower": 0.519, 
+          "na": 0, 
+          "note": null, 
+          "observed": 17, 
+          "predicted": 19.719, 
+          "ratio": 0.862, 
+          "upper": 1.352
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "110,523", 
+          "incidents_label": "Patient days", 
+          "lower": 0.338, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 7.196, 
+          "ratio": 0.834, 
+          "upper": 1.734
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 65, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.381, 
+          "ratio": 0, 
+          "upper": 1.258
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 81, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.841, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "ATLANTA MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "AUSTELL", 
+        "county": "COBB", 
+        "state": "GA", 
+        "street": "3950 AUSTELL RD", 
+        "zip": "30106"
+      }, 
+      "display_name": "Wellstar Cobb Hospital", 
+      "id": "110143", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "5,381", 
+          "incidents_label": "Patient days", 
+          "lower": 1.206, 
+          "na": 0, 
+          "note": null, 
+          "observed": 17, 
+          "predicted": 8.485, 
+          "ratio": 2.004, 
+          "upper": 3.143
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "88,728", 
+          "incidents_label": "Patient days", 
+          "lower": 0.714, 
+          "na": 0, 
+          "note": null, 
+          "observed": 61, 
+          "predicted": 65.907, 
+          "ratio": 0.926, 
+          "upper": 1.181
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "5,147", 
+          "incidents_label": "Patient days", 
+          "lower": 0.137, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 9.309, 
+          "ratio": 0.43, 
+          "upper": 1.036
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "101,498", 
+          "incidents_label": "Patient days", 
+          "lower": 0.272, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 4.669, 
+          "ratio": 0.857, 
+          "upper": 2.067
+        }, 
+        "ssicolon": {
+          "category": "Better than the National Benchmark", 
+          "incidents": 173, 
+          "incidents_label": "Procedures", 
+          "lower": 0.009, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 5.661, 
+          "ratio": 0.177, 
+          "upper": 0.871
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 465, 
+          "incidents_label": "Procedures", 
+          "lower": 0.558, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 4.355, 
+          "ratio": 1.378, 
+          "upper": 2.866
+        }
+      }, 
+      "provider_name": "WELLSTAR COBB HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "ATLANTA", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "1000 JOHNSON FERRY ROAD, NE", 
+        "zip": "30342"
+      }, 
+      "display_name": "Northside Hospital", 
+      "id": "110161", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "4,614", 
+          "incidents_label": "Patient days", 
+          "lower": 0.138, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 5.536, 
+          "ratio": 0.542, 
+          "upper": 1.475
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "123,631", 
+          "incidents_label": "Patient days", 
+          "lower": 0.569, 
+          "na": 0, 
+          "note": null, 
+          "observed": 63, 
+          "predicted": 85.798, 
+          "ratio": 0.734, 
+          "upper": 0.933
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "7,546", 
+          "incidents_label": "Patient days", 
+          "lower": 0.086, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 14.746, 
+          "ratio": 0.271, 
+          "upper": 0.654
+        }, 
+        "mrsa": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "186,014", 
+          "incidents_label": "Patient days", 
+          "lower": 0.076, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 10.098, 
+          "ratio": 0.297, 
+          "upper": 0.809
+        }, 
+        "ssicolon": {
+          "category": "Better than the National Benchmark", 
+          "incidents": 434, 
+          "incidents_label": "Procedures", 
+          "lower": 0.025, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 13.664, 
+          "ratio": 0.146, 
+          "upper": 0.484
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 1848, 
+          "incidents_label": "Procedures", 
+          "lower": 0.314, 
+          "na": 0, 
+          "note": null, 
+          "observed": 10, 
+          "predicted": 16.164, 
+          "ratio": 0.619, 
+          "upper": 1.103
+        }
+      }, 
+      "provider_name": "NORTHSIDE HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "RIVERDALE", 
+        "county": "CLAYTON", 
+        "state": "GA", 
+        "street": "11 UPPER RIVERDALE ROAD, SW", 
+        "zip": "30274"
+      }, 
+      "display_name": "Southern Regional Medical Center", 
+      "id": "110165", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,809", 
+          "incidents_label": "Patient days", 
+          "lower": 0.532, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 4.57, 
+          "ratio": 1.313, 
+          "upper": 2.731
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "62,206", 
+          "incidents_label": "Patient days", 
+          "lower": 0.232, 
+          "na": 0, 
+          "note": null, 
+          "observed": 17, 
+          "predicted": 44.02, 
+          "ratio": 0.386, 
+          "upper": 0.606
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,085", 
+          "incidents_label": "Patient days", 
+          "lower": 0.978, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 3.129, 
+          "ratio": 2.237, 
+          "upper": 4.425
+        }, 
+        "mrsa": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "62,206", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.024, 
+          "ratio": 0, 
+          "upper": 0.991
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 128, 
+          "incidents_label": "Procedures", 
+          "lower": 0.183, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 4.177, 
+          "ratio": 0.718, 
+          "upper": 1.955
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 198, 
+          "incidents_label": "Procedures", 
+          "lower": 0.362, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 2.109, 
+          "ratio": 1.422, 
+          "upper": 3.871
+        }
+      }, 
+      "provider_name": "SOUTHERN REGIONAL MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "ROME", 
+        "county": "FLOYD", 
+        "state": "GA", 
+        "street": "501 REDMOND ROAD", 
+        "zip": "30165"
+      }, 
+      "display_name": "Redmond Regional Medical Center", 
+      "id": "110168", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "5,336", 
+          "incidents_label": "Patient days", 
+          "lower": 0.864, 
+          "na": 0, 
+          "note": null, 
+          "observed": 12, 
+          "predicted": 7.524, 
+          "ratio": 1.595, 
+          "upper": 2.711
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "52,627", 
+          "incidents_label": "Patient days", 
+          "lower": 0.474, 
+          "na": 0, 
+          "note": null, 
+          "observed": 25, 
+          "predicted": 34.91, 
+          "ratio": 0.716, 
+          "upper": 1.042
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "4,193", 
+          "incidents_label": "Patient days", 
+          "lower": 0.272, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 6.727, 
+          "ratio": 0.743, 
+          "upper": 1.647
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "52,627", 
+          "incidents_label": "Patient days", 
+          "lower": 0.554, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 3.309, 
+          "ratio": 1.511, 
+          "upper": 3.35
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 114, 
+          "incidents_label": "Procedures", 
+          "lower": 0.5, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 3.662, 
+          "ratio": 1.365, 
+          "upper": 3.026
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 58, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.499, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "REDMOND REGIONAL MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "DOUGLASVILLE", 
+        "county": "DOUGLAS", 
+        "state": "GA", 
+        "street": "8954 HOSPITAL DRIVE", 
+        "zip": "30134"
+      }, 
+      "display_name": "Wellstar Douglas Hospital", 
+      "id": "110184", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,815", 
+          "incidents_label": "Patient days", 
+          "lower": 0.558, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 2.279, 
+          "ratio": 1.755, 
+          "upper": 4.234
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "27,232", 
+          "incidents_label": "Patient days", 
+          "lower": 0.667, 
+          "na": 0, 
+          "note": null, 
+          "observed": 20, 
+          "predicted": 18.836, 
+          "ratio": 1.062, 
+          "upper": 1.611
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,573", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.361, 
+          "ratio": 0, 
+          "upper": 1.269
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "28,105", 
+          "incidents_label": "Patient days", 
+          "lower": 0.039, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.282, 
+          "ratio": 0.78, 
+          "upper": 3.847
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 92, 
+          "incidents_label": "Procedures", 
+          "lower": 0.104, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 3.234, 
+          "ratio": 0.618, 
+          "upper": 2.043
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 29, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.323, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "WELLSTAR DOUGLAS HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "STOCKBRIDGE", 
+        "county": "HENRY", 
+        "state": "GA", 
+        "street": "1133 EAGLE'S LANDING PARKWAY", 
+        "zip": "30281"
+      }, 
+      "display_name": "Piedmont Henry Hospital", 
+      "id": "110191", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,189", 
+          "incidents_label": "Patient days", 
+          "lower": 0.332, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 3.826, 
+          "ratio": 1.045, 
+          "upper": 2.522
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "58,812", 
+          "incidents_label": "Patient days", 
+          "lower": 0.517, 
+          "na": 0, 
+          "note": null, 
+          "observed": 29, 
+          "predicted": 38.27, 
+          "ratio": 0.758, 
+          "upper": 1.074
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,910", 
+          "incidents_label": "Patient days", 
+          "lower": 0.064, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 5.277, 
+          "ratio": 0.379, 
+          "upper": 1.252
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "66,063", 
+          "incidents_label": "Patient days", 
+          "lower": 0.718, 
+          "na": 0, 
+          "note": null, 
+          "observed": 6, 
+          "predicted": 3.385, 
+          "ratio": 1.772, 
+          "upper": 3.686
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 183, 
+          "incidents_label": "Procedures", 
+          "lower": 0.614, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 6.055, 
+          "ratio": 1.321, 
+          "upper": 2.509
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 247, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.408, 
+          "ratio": 0, 
+          "upper": 1.244
+        }
+      }, 
+      "provider_name": "PIEDMONT HENRY HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "SNELLVILLE", 
+        "county": "GWINNETT", 
+        "state": "GA", 
+        "street": "1700 MEDICAL WAY", 
+        "zip": "30078"
+      }, 
+      "display_name": "Eastside Medical Center", 
+      "id": "110192", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "2,989", 
+          "incidents_label": "Patient days", 
+          "lower": 1.036, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 3.587, 
+          "ratio": 2.23, 
+          "upper": 4.235
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "54,649", 
+          "incidents_label": "Patient days", 
+          "lower": 0.761, 
+          "na": 0, 
+          "note": null, 
+          "observed": 41, 
+          "predicted": 39.187, 
+          "ratio": 1.046, 
+          "upper": 1.406
+        }, 
+        "clabsi": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "3,316", 
+          "incidents_label": "Patient days", 
+          "lower": 0.009, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 5.322, 
+          "ratio": 0.188, 
+          "upper": 0.927
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "59,558", 
+          "incidents_label": "Patient days", 
+          "lower": 0.675, 
+          "na": 0, 
+          "note": null, 
+          "observed": 5, 
+          "predicted": 2.713, 
+          "ratio": 1.843, 
+          "upper": 4.084
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 82, 
+          "incidents_label": "Procedures", 
+          "lower": 0.493, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 2.578, 
+          "ratio": 1.552, 
+          "upper": 3.743
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 151, 
+          "incidents_label": "Procedures", 
+          "lower": 0.273, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 1.227, 
+          "ratio": 1.63, 
+          "upper": 5.385
+        }
+      }, 
+      "provider_name": "EASTSIDE MEDICAL CENTER"
+    }, 
+    {
+      "address": {
+        "city": "ROSWELL", 
+        "county": "FULTON", 
+        "state": "GA", 
+        "street": "3000 HOSPITAL BOULEVARD", 
+        "zip": "30076"
+      }, 
+      "display_name": "North Fulton Hospital", 
+      "id": "110198", 
+      "infections": {
+        "cauti": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,873", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.447, 
+          "ratio": 0, 
+          "upper": 0.869
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "30,414", 
+          "incidents_label": "Patient days", 
+          "lower": 0.411, 
+          "na": 0, 
+          "note": null, 
+          "observed": 12, 
+          "predicted": 15.807, 
+          "ratio": 0.759, 
+          "upper": 1.291
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,494", 
+          "incidents_label": "Patient days", 
+          "lower": 0.09, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 3.741, 
+          "ratio": 0.535, 
+          "upper": 1.766
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "31,989", 
+          "incidents_label": "Patient days", 
+          "lower": 0.168, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 2.001, 
+          "ratio": 0.999, 
+          "upper": 3.302
+        }, 
+        "ssicolon": {
+          "category": "Not Available", 
+          "incidents": 15, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.497, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 9, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.083, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "NORTH FULTON HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "FAYETTEVILLE", 
+        "county": "FAYETTE", 
+        "state": "GA", 
+        "street": "1255 HIGHWAY 54 WEST", 
+        "zip": "30214"
+      }, 
+      "display_name": "Piedmont Fayette Hospital", 
+      "id": "110215", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,461", 
+          "incidents_label": "Patient days", 
+          "lower": 0.016, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 3.2, 
+          "ratio": 0.313, 
+          "upper": 1.541
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "52,087", 
+          "incidents_label": "Patient days", 
+          "lower": 0.412, 
+          "na": 0, 
+          "note": null, 
+          "observed": 22, 
+          "predicted": 34.351, 
+          "ratio": 0.64, 
+          "upper": 0.954
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,088", 
+          "incidents_label": "Patient days", 
+          "lower": 0.055, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 6.119, 
+          "ratio": 0.327, 
+          "upper": 1.08
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "60,900", 
+          "incidents_label": "Patient days", 
+          "lower": 0.109, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 3.078, 
+          "ratio": 0.65, 
+          "upper": 2.147
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 258, 
+          "incidents_label": "Procedures", 
+          "lower": 0.159, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 7.99, 
+          "ratio": 0.501, 
+          "upper": 1.208
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 325, 
+          "incidents_label": "Procedures", 
+          "lower": 0.121, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 2.769, 
+          "ratio": 0.722, 
+          "upper": 2.386
+        }
+      }, 
+      "provider_name": "PIEDMONT FAYETTE HOSPITAL"
+    }, 
+    {
+      "address": {
+        "city": "JASPER", 
+        "county": "PICKENS", 
+        "state": "GA", 
+        "street": "1266 HIGHWAY 515 SOUTH", 
+        "zip": "30143"
+      }, 
+      "display_name": "Piedmont Mountainside Hospital", 
+      "id": "110225", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,257", 
+          "incidents_label": "Patient days", 
+          "lower": 0.02, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 2.514, 
+          "ratio": 0.398, 
+          "upper": 1.962
+        }, 
+        "cdiff": {
+          "category": "Better than the National Benchmark", 
+          "incidents": "18,282", 
+          "incidents_label": "Patient days", 
+          "lower": 0.098, 
+          "na": 0, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 12.99, 
+          "ratio": 0.308, 
+          "upper": 0.743
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "529", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.006, 
+          "ratio": 0, 
+          "upper": 2.978
+        }, 
+        "mrsa": {
+          "category": "Not Available", 
+          "incidents": "18,983", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.972, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "ssicolon": {
+          "category": "Not Available", 
+          "incidents": 31, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.981, 
+          "ratio": null, 
+          "upper": null
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 5, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 0, 
+          "predicted": 0.042, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC"
+    }, 
+    {
+      "address": {
+        "city": "NEWNAN", 
+        "county": "COWETA", 
+        "state": "GA", 
+        "street": "745 POPLAR ROAD", 
+        "zip": "30265"
+      }, 
+      "display_name": "Piedmont Newnan Hospital", 
+      "id": "110229", 
+      "infections": {
+        "cauti": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "2,333", 
+          "incidents_label": "Patient days", 
+          "lower": 0.273, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 2.799, 
+          "ratio": 1.072, 
+          "upper": 2.917
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "31,178", 
+          "incidents_label": "Patient days", 
+          "lower": 0.442, 
+          "na": 0, 
+          "note": null, 
+          "observed": 16, 
+          "predicted": 21.442, 
+          "ratio": 0.746, 
+          "upper": 1.186
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,519", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 2.28, 
+          "ratio": 0, 
+          "upper": 1.314
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "32,560", 
+          "incidents_label": "Patient days", 
+          "lower": 0.15, 
+          "na": 0, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 2.236, 
+          "ratio": 0.894, 
+          "upper": 2.955
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 67, 
+          "incidents_label": "Procedures", 
+          "lower": 0.342, 
+          "na": 0, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 2.229, 
+          "ratio": 1.346, 
+          "upper": 3.663
+        }, 
+        "ssihyst": {
+          "category": "Not Available", 
+          "incidents": 74, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 1, 
+          "note": "13 - Results cannot be calculated for this reporting period.", 
+          "observed": 1, 
+          "predicted": 0.738, 
+          "ratio": null, 
+          "upper": null
+        }
+      }, 
+      "provider_name": "PIEDMONT NEWNAN HOSPITAL, INC"
+    }, 
+    {
+      "address": {
+        "city": "JOHNS CREEK", 
+        "county": "CHATTOOGA", 
+        "state": "GA", 
+        "street": "6325 HOSPITAL PARKWAY", 
+        "zip": "30097"
+      }, 
+      "display_name": "Emory Johns Creek Hospital", 
+      "id": "110230", 
+      "infections": {
+        "cauti": {
+          "category": "Worse than the National Benchmark", 
+          "incidents": "1,275", 
+          "incidents_label": "Patient days", 
+          "lower": 1.845, 
+          "na": 0, 
+          "note": null, 
+          "observed": 7, 
+          "predicted": 1.659, 
+          "ratio": 4.219, 
+          "upper": 8.346
+        }, 
+        "cdiff": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "26,988", 
+          "incidents_label": "Patient days", 
+          "lower": 0.426, 
+          "na": 0, 
+          "note": null, 
+          "observed": 14, 
+          "predicted": 18.693, 
+          "ratio": 0.749, 
+          "upper": 1.227
+        }, 
+        "clabsi": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "1,162", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.96, 
+          "ratio": 0, 
+          "upper": 1.528
+        }, 
+        "mrsa": {
+          "category": "No Different than National Benchmark", 
+          "incidents": "28,941", 
+          "incidents_label": "Patient days", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.257, 
+          "ratio": 0, 
+          "upper": 2.383
+        }, 
+        "ssicolon": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 128, 
+          "incidents_label": "Procedures", 
+          "lower": 0.932, 
+          "na": 0, 
+          "note": null, 
+          "observed": 8, 
+          "predicted": 3.985, 
+          "ratio": 2.008, 
+          "upper": 3.812
+        }, 
+        "ssihyst": {
+          "category": "No Different than National Benchmark", 
+          "incidents": 136, 
+          "incidents_label": "Procedures", 
+          "lower": 0, 
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.097, 
+          "ratio": 0, 
+          "upper": 2.731
+        }
+      }, 
+      "provider_name": "EMORY JOHNS CREEK HOSPITAL"
+    }
+  ]
+}
