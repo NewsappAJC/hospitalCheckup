@@ -25,7 +25,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     filter_data: function(){
       var chart = this;
       var filtered = chart.data.filter(function(d){
-        return d.infections[chart.options.measure].category != "Not Available";
+        return d.infections[chart.options.measure].na != 1;
       });
       filtered.sort(function(a,b){
         return d3.ascending(a.infections[chart.options.measure].ratio, b.infections[chart.options.measure].ratio);
