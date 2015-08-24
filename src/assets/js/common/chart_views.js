@@ -225,11 +225,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         })
         .transition().each(function(d){
           var category = d.infections[measure].category;
-          if(category === "No Different than U.S. National Benchmark"){
+          if(category === "No Different than National Benchmark"){
             d3.select(this).classed({"normal": true, "good": false, "bad": false});
-          } else if (category === "Better than the U.S. National Benchmark"){
+          } else if (category === "Better than the National Benchmark"){
             d3.select(this).classed({"normal": false, "good": true, "bad": false});
-          } else if (category === "Worse than the U.S. National Benchmark"){
+          } else if (category === "Worse than the National Benchmark"){
             d3.select(this).classed({"normal": false, "good": false, "bad": true});
           } else {
             d3.select(this).classed({"normal": false, "good": false, "bad": false});
