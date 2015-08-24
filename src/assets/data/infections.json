@@ -77,7 +77,7 @@
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -125,7 +125,7 @@
         "clabsi": {
           "category": "No Different than National Benchmark", 
           "days": 1037, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -136,7 +136,7 @@
         "mrsa": {
           "category": "No Different than National Benchmark", 
           "days": 28821, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -146,7 +146,7 @@
         }, 
         "ssicolon": {
           "category": "Better than the National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -157,7 +157,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -183,7 +183,7 @@
         "cauti": {
           "category": "Better than the National Benchmark", 
           "days": 2366, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -237,7 +237,7 @@
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -317,7 +317,7 @@
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -445,7 +445,7 @@
         "clabsi": {
           "category": "Not Available", 
           "days": 501, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -456,7 +456,7 @@
         "mrsa": {
           "category": "Not Available", 
           "days": 18244, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -477,7 +477,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -626,7 +626,7 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -637,7 +637,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
@@ -717,7 +717,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 2, 
@@ -823,7 +823,7 @@
         "cauti": {
           "category": "Not Available", 
           "days": 457, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
@@ -845,7 +845,7 @@
         "clabsi": {
           "category": "Not Available", 
           "days": 363, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
@@ -856,7 +856,7 @@
         "mrsa": {
           "category": "Not Available", 
           "days": 10388, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
@@ -866,7 +866,7 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -877,7 +877,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -1357,7 +1357,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -1597,7 +1597,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 3, 
@@ -1666,7 +1666,7 @@
         }, 
         "ssicolon": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -1677,7 +1677,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -1896,7 +1896,7 @@
         "mrsa": {
           "category": "Better than the National Benchmark", 
           "days": 62206, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -1997,7 +1997,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2045,7 +2045,7 @@
         "clabsi": {
           "category": "No Different than National Benchmark", 
           "days": 1573, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2077,7 +2077,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2157,7 +2157,7 @@
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2263,7 +2263,7 @@
         "cauti": {
           "category": "Better than the National Benchmark", 
           "days": 2873, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2306,7 +2306,7 @@
         }, 
         "ssicolon": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2317,7 +2317,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2445,7 +2445,7 @@
         "clabsi": {
           "category": "No Different than National Benchmark", 
           "days": 529, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2456,7 +2456,7 @@
         "mrsa": {
           "category": "Not Available", 
           "days": 18983, 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2466,7 +2466,7 @@
         }, 
         "ssicolon": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2477,7 +2477,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
@@ -2525,7 +2525,7 @@
         "clabsi": {
           "category": "No Different than National Benchmark", 
           "days": 1519, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2557,7 +2557,7 @@
         }, 
         "ssihyst": {
           "category": "Not Available", 
-          "lower": null, 
+          "lower": 0, 
           "na": 1, 
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
@@ -2605,7 +2605,7 @@
         "clabsi": {
           "category": "No Different than National Benchmark", 
           "days": 1162, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2616,7 +2616,7 @@
         "mrsa": {
           "category": "No Different than National Benchmark", 
           "days": 28941, 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
@@ -2637,7 +2637,7 @@
         }, 
         "ssihyst": {
           "category": "No Different than National Benchmark", 
-          "lower": null, 
+          "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 

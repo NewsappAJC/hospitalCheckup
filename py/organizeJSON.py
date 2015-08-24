@@ -32,6 +32,9 @@ for node in src:
         tmp = key.lower().split("_")
         if tmp[0] in hospital["infections"]:
             hospital["infections"][tmp[0]][tmp[1]] = node[key]
+
+            if(tmp[1] == "lower" and node[key] is None):
+                hospital["infections"][tmp[0]][tmp[1]] = 0
         # if tmp[0] in keys: #for array lookup
         #if tmp[0] in infections:
             #infections[tmp[0]][tmp[1]] = node[key]
