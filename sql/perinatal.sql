@@ -1,9 +1,11 @@
 /*
-Create data table for pregnency/delivery site.
-State Hospital Survey Data available at https://dch.georgia.gov/health-planning-databases
+Create perinatal data table for pregnency/delivery site.
+Data available at https://dch.georgia.gov/health-planning-databases
 (Annual Hospital Questionaire - 2000 to 2014)
 */
-select b.uid, b.Medicare_Provider_No,
+
+CREATE TABLE hospital_compare.perinatal
+SELECT b.uid, b.Medicare_Provider_No,
        c.HospitalName,
        a.Delivery_Rms,
        a.Birthing_Rms,
@@ -14,7 +16,7 @@ select b.uid, b.Medicare_Provider_No,
        a.Total_Births,
        a.Total_Deliveries,
        a.Beds_New_Born,
-       a.Beds_Inter7mediate,
+       a.Beds_Intermediate,
        a.Beds_Intensive,
        a.Adms_New_Born,
        a.Adms_Intermediate,
@@ -28,18 +30,18 @@ select b.uid, b.Medicare_Provider_No,
        d.medicare_births,
        d.early_births,
        d.footnote
-from ahq.perinatal a
-join ahq.lu_id b using(uid)
-join hospital_compare.hospital_names c
-  on c.providerNumber = b.Medicare_Provider_No
-left join (
-  select provider_id,
+FROM ahq.perinatal a
+JOIN ahq.lu_id b using(uid)
+JOIN hospital_compare.hospital_names c
+  ON c.providerNumber = b.Medicare_Provider_No
+LEFT JOIN (
+  SELECT provider_id,
          score as early_births,
          sample as medicare_births,
          footnote
-  from hospital_compare.HQI_HOSP_TimelyEffectiveCare
-  where measure_id = 'PC_01'
-) d on b.Medicare_Provider_No = d.provider_id
-where a.year = 2013
-  and a.Total_Deliveries > 0
-having a.C_Sect / a.Total_Births < 1
+  FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare
+  WHERE measure_id = 'PC_01'
+) d ON b.Medicare_Provider_No = d.provider_id
+WHERE a.year = 2013
+  AND a.Total_Deliveries > 0
+HAVING a.C_Sect / a.Total_Births < 1
