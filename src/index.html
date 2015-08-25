@@ -105,8 +105,22 @@
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of cdiff infections predicted: <%- infections.cdiff.predicted %></p>
-    <p>Number of cdiff infections observed: <%- infections.cdiff.observed %></p>
+    <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
+    <div id="hospital-charts"></div>
+  </script>
+
+  <script type="text/template" id="hospital-chart-template">
+    <h4><%= measure %></h4>
+    <% if (category === "Not Available") {%>
+      <p><%= category %></p>
+    <% } else { %>
+      <p>
+        Standardized infection Ratio: <%= ratio %><br>
+        <%= incidents_label %>: <%= incidents %><br>
+        <%= category %>
+      </p>
+    <% } %>
+    
   </script>
 
   <script type="text/template" id="missing-hospital-view">

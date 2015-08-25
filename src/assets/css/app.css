@@ -126,3 +126,8 @@ div.ttip p{
   font-size:12px;
   margin:0px;
 }
+/*hospital view*/
+#hospital-charts p {
+  margin-bottom: 5px;
+  line-height: 1em;
+}
