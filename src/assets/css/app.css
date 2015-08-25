@@ -2,11 +2,18 @@ h1 {
   font-family:'Publico-Black';
   font-size:42px;
 }
-h3 {
+h3, h4 {
   font-family: Boomer;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.3em;
   margin-bottom: 0;
+  margin-top: 15px;
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  font-family: Boomer-Light;
 }
 /*nav*/
 .logo {
@@ -127,7 +134,7 @@ div.ttip p{
   margin:0px;
 }
 /*hospital view*/
-#hospital-charts p {
+#hospital-show-region p {
   margin-bottom: 5px;
   line-height: 1em;
 }
