@@ -33,12 +33,10 @@ Explore hospital quality data for Atlanta area hospitals.
  - infections have standardized attributes so you don't need to reset them to a hacky default
  - dropdown menu accurately reflects selected filter on refresh/navigate
  - state average no longer hard-coded into the view
+ - Comma formatted patient days
  
 ## Todo
-- [ ] Clear local storage on first load in case there's new stuff
-- [ ] Add commas to number displays that may have a thousands place
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
-- [ ] ssihyst uses procedures instead of patient days, fix it
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
 - [ ] If someone clicks on already active nav item it shouldn't reload the layout
