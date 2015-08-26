@@ -6,8 +6,18 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
 
   Show.Hospital = Marionette.ItemView.extend({
     template: "#hospital-view",
+    initialize: function(){
+      this.chartCollection = new Backbone.Collection();
+      this.charts = new Show.HospitalChartList({
+        collection: this.chartCollection
+      });
+    },
     onDomRefresh: function(){ //render won't work because we need our parent template to render the #hospital-charts div
       //add hospital charts to Show.Hospital's child #hospital-charts
+      this.chartCollection.reset(this.get_hospital_models(this.model));
+      this.charts.setElement(this.$('#hospital-charts')).render(); //which child element to render view in
+    },
+    get_hospital_models: function(model){
       var dataArr = [];
 
       //we need unnamed, top-level objects for the collection
@@ -16,12 +26,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
         var detail = new Backbone.Model(values);
         dataArr.push(detail);
       });
-
-      var chartCollection = new Backbone.Collection(dataArr);
-
-      var charts = new Show.HospitalChartList({
-        collection: chartCollection
-      }).render();
+      return dataArr;
     }
   });
 
@@ -32,5 +37,5 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
   Show.HospitalChartList = Marionette.CollectionView.extend({
     el: "#hospital-charts",
     childView: Show.HospitalChart
-  })
+  });
 });
