@@ -7,21 +7,23 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
       var fetchingInfections = HospitalCheckup.request("infection:entities");
 
-      var infectionsListLayout = new List.Layout();
-      var infectionsMenuView = new List.Menu();
+      var infectionsListLayout = new List.Layout(),
+      hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
+      infectionsMenuView = new List.Menu(),
+      infectionsListView = new List.InfectionsChart(),
+      hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
+      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalChartList({collection: new Backbone.Collection()});
 
       $.when(fetchingInfections).done(function(infections){
-        var infectionsListView = new List.InfectionsChart();
-        var hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital();
 
         infectionsListLayout.on("show", function(){
           infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
-          infectionsListLayout.hospitalRegion.show(hospitalShowView);
+          infectionsListLayout.hospitalRegion.show(hospitalLayout);
         });
 
         infectionsListView.on("hospital:change", function(id){
-          HospitalCheckup.trigger("hospital:change", id, hospitalShowView);
+          HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalChartsView);
         });
 
         //wait for #infections-chart to be rendered
@@ -35,12 +37,6 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             measure: criterion || "cdiff"
           });
           List.infectionsChartView.render(); //for some reason this breaks filtering when chained with initialization above
-
-          if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
-            HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
-          } else { //use the first model in the list as a default
-            hospitalShowView.model = infections.models[0];
-          }
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
@@ -50,6 +46,17 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
           infectionsMenuView.triggerMethod("set:filter:criterion", criterion);
+        });
+
+        hospitalLayout.on("show", function(){
+          if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
+            HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView);
+          } else { //use the first model in the list as a default
+            hospitalShowView.model = infections.models[0];
+            hospitalChartsView.collection.reset(hospitalChartsView.get_hospital_models(infections.models[0]));
+          }
+          hospitalLayout.topRegion.show(hospitalShowView);
+          hospitalLayout.chartRegion.show(hospitalChartsView);
         });
 
         HospitalCheckup.regions.main.show(infectionsListLayout);

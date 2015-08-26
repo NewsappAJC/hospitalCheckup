@@ -106,7 +106,10 @@
     <p class="address"><%- address.street %></p>
     <hr>
     <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
-    <div id="hospital-charts"></div>
+  </script>
+
+  <script type="text/template" id="hospital-chart-holder">
+
   </script>
 
   <script type="text/template" id="hospital-chart-template">
@@ -120,6 +123,7 @@
         <%= category %>
       </p>
     <% } %>
+    <div class="chart" id="<%= measure + '-chart' %>"></div>
     <hr>
   </script>
 
@@ -135,6 +139,16 @@
     <div class="row">
       <div id="infections-list-region" class="medium-7 columns"></div>
       <div id="hospital-show-region" class="medium-5 columns"></div>
+    </div>
+  </script>
+
+
+  <script type="text/template" id="hospital-layout">
+    <div class="row">
+      <div id="hospital-top-region" class="medium-12 columns"></div>
+    </div>
+    <div class="row">
+      <div id="hospital-chart-region" class="medium-12 columns"></div>
     </div>
   </script>
   
