@@ -14,14 +14,10 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
 
     showHospital: function(id, view){  //received URL with ID parameter
       InfectionsApp.Show.Controller.showHospital(id, view);
-    },
-
-    changeHospital: function(model, view){ //hospital selected from list
-      InfectionsApp.Show.Controller.changeHospital(model, view);
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav
+  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav or click on viz
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });

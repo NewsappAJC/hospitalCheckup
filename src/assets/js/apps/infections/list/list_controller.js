@@ -34,13 +34,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             margin: {left: 190, right: 30, bottom: 20, top: 25},
             measure: criterion || "cdiff"
           });
-          List.infectionsChartView.render();
+          List.infectionsChartView.render(); //for some reason this breaks filtering when chained with initialization above
 
           if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
             HospitalCheckup.trigger("hospital:show", id, hospitalShowView);
           } else { //use the first model in the list as a default
             hospitalShowView.model = infections.models[0];
-            //hospitalShowView.render();
           }
         });
 

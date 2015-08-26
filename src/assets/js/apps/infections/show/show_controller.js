@@ -1,6 +1,6 @@
 HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
   Show.Controller = {
-    showHospital: function(id, view){ //received URL with ID parameter
+    showHospital: function(id, view){ //received URL with ID parameter, or selected from viz
 
       var fetchingHospital = HospitalCheckup.request("hospital:entity", id);
       $.when(fetchingHospital).done(function(hospital){
