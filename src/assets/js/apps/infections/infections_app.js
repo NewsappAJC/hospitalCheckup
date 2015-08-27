@@ -12,27 +12,23 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 
-    showHospital: function(id, view){  //received URL with ID parameter
-      InfectionsApp.Show.Controller.showHospital(id, view);
-    },
-
-    changeHospital: function(model, view){ //hospital selected from list
-      InfectionsApp.Show.Controller.changeHospital(model, view);
+    showHospital: function(id, aboutView, chartsView){  //received URL with ID parameter
+      InfectionsApp.Show.Controller.showHospital(id, aboutView, chartsView);
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav
+  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav or click on viz
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });
 
-  HospitalCheckup.on("hospital:show", function(id, view){ //received URL with ID parameter
-    API.showHospital(id, view);
+  HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView){ //received URL with ID parameter
+    API.showHospital(id, aboutView, chartsView);
   });
 
-  HospitalCheckup.on("hospital:change", function(id, view){ //hospital selected from infection list
+  HospitalCheckup.on("hospital:change", function(id, aboutView, chartsView){ //hospital selected from infection list
     HospitalCheckup.navigate("infections/" + id);
-    API.showHospital(id, view);
+    API.showHospital(id, aboutView, chartsView);
   });
 
   HospitalCheckup.on("infections:filter", function(criterion){ //filter menu changed
