@@ -140,8 +140,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       var tmpl = _.template($("#tooltip-template").html());
       var tt = $(tmpl(data));
-      tt.css("top", (parseFloat(d3.event.pageY) - 220) + "px");
-      tt.css("left", (parseFloat(d3.event.pageX) - 50) + "px");
+      tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
+      tt.css("left", (parseFloat(d3.event.layerX + 25)) + "px");
       this.$el.append(tt);
     }
   });

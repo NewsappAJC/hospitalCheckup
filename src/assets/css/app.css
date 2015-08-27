@@ -122,8 +122,8 @@ line#benchmarkLine {
   stroke: white;
 }
 .chart-label {
-  font-size: 9px;
-  font-family: Boomer-Light;
+  font-size: 10px;
+  font-family: Boomer-Book;
 }
 div.ttip {
   font-family: Boomer-Book;
