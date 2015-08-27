@@ -93,20 +93,36 @@
 
   <script type="text/template" id="tooltip-template">
     <div id="ttip" class="ttip container">
-      <p>
-        <b>Rate:</b> <%= infections[measure].ratio %><br>
-        <b>Range:</b> <%= infections[measure].lower %> <b>to</b> <%= infections[measure].upper %><br>
-        <b><%- infections[measure].incidents_label %>:</b> <%= infections[measure].incidents %><br>
-        <b>Rating:</b> <%- infections[measure].category %>
-      </p>
+        <strong>Rate:</strong> <%= infections[measure].ratio %><br>
+        <strong>Range:</strong> <%= infections[measure].lower %> <strong>to</strong> <%= infections[measure].upper %><br>
+        <strong><%- infections[measure].incidents_label %>:</strong> <%= infections[measure].incidents %><br>
+        <strong>Rating:</strong> <%- infections[measure].category %>
     </div>
   </script>
-  <script type="text/template" id="hospital-view">
+  <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>Number of cdiff infections predicted: <%- infections.cdiff.predicted %></p>
-    <p>Number of cdiff infections observed: <%- infections.cdiff.observed %></p>
+    <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
+  </script>
+
+  <script type="text/template" id="hospital-chart-holder">
+
+  </script>
+
+  <script type="text/template" id="hospital-chart-template">
+    <h4><%= label %></h4>
+    <% if (category === "Not Available") {%>
+      <p><%= category %></p>
+    <% } else { %>
+      <p>
+        Standardized infection Ratio: <%= ratio %><br>
+        <%= incidents_label %>: <%= incidents %><br>
+        <%= category %>
+      </p>
+    <% } %>
+    <div class="chart" id="<%= measure + '-chart' %>"></div>
+    <hr>
   </script>
 
   <script type="text/template" id="missing-hospital-view">
@@ -119,20 +135,25 @@
       <div id="infections-menu-region" class="medium-12 columns"></div>
     </div>
     <div class="row">
-      <div id="infections-list-region" class="medium-8 columns"></div>
-      <div id="hospital-show-region" class="medium-4 columns"></div>
+      <div id="infections-list-region" class="medium-7 columns"></div>
+      <div id="hospital-show-region" class="medium-5 columns"></div>
+    </div>
+  </script>
+
+
+  <script type="text/template" id="hospital-layout">
+    <div class="row">
+      <div id="hospital-top-region" class="medium-12 columns"></div>
+    </div>
+    <div class="row">
+      <div id="hospital-chart-region" class="medium-12 columns"></div>
     </div>
   </script>
   
   <script type="text/template" id="infections-menu-template">
-    <select id="js-infections-filter-criterion">
-      <option value="cdiff">Clostridium difficile (C.diff)</option>
-      <option value="mrsa">Methicillin-resistant staphylococcus sureus (MRSA)</option>
-      <option value="cauti">Catheter-associated urinary tract infections</option>
-      <option value="clabsi">Central line-associated blood stream infections</option>
-      <option value="ssicolon">Surgical Site Infection from colon surgery</option>
-      <option value="ssihyst">Surgical Site Infection from abdominal hysterectomy</option>
-    </select>
+      <% _.each(items, function(item){ %>
+        <option value="<%= item.key %>"><%= item.label %></option>
+      <% }) %>
   </script>
   <!-- END INFECTIONS
   ================================================== -->

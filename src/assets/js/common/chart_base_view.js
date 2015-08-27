@@ -111,5 +111,23 @@ var ChartBaseView = Backbone.View.extend({
   },
   d3: function() {
     return (typeof d3 !== 'undefined');
+  },
+/*Hospital App specific methods*/
+
+  create_svg: function() {
+    var chart = this;
+    //create new svg for the bar chart
+    chart.svg = d3.select(chart.el).append("svg")
+      .attr("width", chart.dimensions.wrapperWidth)
+      .attr("height", chart.dimensions.wrapperHeight)
+      .attr("class", "chart")
+    .append("g")
+      .attr("transform", "translate(" + chart.options.margin.left + ", " + chart.options.margin.top + ")");
+  },
+
+  create_axis: function(axis, orientation) {
+    this[axis+"Axis"] = d3.svg.axis()
+      .scale(this[axis+"Scale"])
+      .orient(orientation);
   }
 });

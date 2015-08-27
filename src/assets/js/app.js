@@ -24,6 +24,7 @@ HospitalCheckup.on("before:start", function(){
 });
 
 HospitalCheckup.on("start", function(){
+  window.localStorage.clear(); //we want fresh data which we will persist during this session
   if(Backbone.history){
     Backbone.history.start();
 

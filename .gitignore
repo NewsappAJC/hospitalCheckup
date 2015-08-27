@@ -19,4 +19,5 @@ npm-debug.log
 node_modules
 aws.json
 sql.json
+fonts
 .DS_Store

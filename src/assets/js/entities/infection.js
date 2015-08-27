@@ -20,6 +20,15 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   });
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
+  Entities.InfectionLabels = new Backbone.Collection([
+    {label: "Clostridium difficile (C.diff)", key: "cdiff"},
+    {label: "Methicillin-resistant staphylococcus sureus (MRSA)", key: "mrsa"},
+    {label: "Catheter-associated urinary tract infections", key: "cauti"},
+    {label: "Central line-associated blood stream infections", key: "clabsi"},
+    {label: "Surgical Site Infection from colon surgery", key: "ssicolon"},
+    {label: "Surgical Site Infection from abdominal hysterectomy", key: "ssihyst"}
+  ]);
+
   var API = {
     getInfectionEntities: function(){
       Entities.averages = new Entities.StateAverages(); //attach to Entities so chart can get at it
@@ -51,7 +60,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           $.ajax({
             dataType: "json",
             url: "/assets/data/infections.json",
-            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json"
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json",
             type: "GET",
             success: resetModels
           });
