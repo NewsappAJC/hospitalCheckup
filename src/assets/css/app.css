@@ -42,6 +42,11 @@ p {
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
 }
+/*override fonts.css*/
+section {
+  border-bottom: none;
+  padding: 0
+}
 /*homepage*/
 #row-bg {
   background-color: rgba(0, 0, 0, 0.7);
@@ -80,7 +85,7 @@ tbody tr:hover {
 }
 /*Charts.BarBase*/
 .axis text {
-  font-family: Boomer;
+  font-family: Boomer-Book;
   font-size: 10px;
 }
 .base {
@@ -117,45 +122,52 @@ line#averageLine {
 line#benchmarkLine {
   stroke: white;
 }
-.label {
+.chart-label {
   font-size: 9px;
+  font-family: Boomer-Light;
 }
 div.ttip {
+  font-family: Boomer-Book;
+  font-size: 12px;
   position: absolute;
   width: 270px;
   padding: 5px 10px;
+  margin: 0px;
   background-color: white;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
   pointer-events: none;
   z-index: 101;
 }
-div.ttip p{
-  font-size:12px;
-  margin:0px;
+div.ttip strong {
+  font-family: Boomer;
+  font-weight: bold;
 }
 /*hospital view*/
-#hospital-show-region p {
+.hospital-info p {
   margin-bottom: 5px;
   line-height: 1em;
 }
-
+.hospital-list p {
+  font-size: .9em;
+  line-height: 1.3em;
+  margin-bottom: 0;
+}
+.hospital-list hr {
+  margin-bottom: 10px;
+}
+.hospital-list-item {
+  margin-top: 10px;
+}
 /*hospital charts*/
 .predicted {
   stroke: darkgray;
   stroke-width: 3;
 }
-.predicted-text {
-  font-size: 12px;
-  stroke: darkgray;
-}
 .observed {
   stroke: black;
   stroke-width: 3;
 }
-.observed-text {
+.chart-label.txt { /*labels for the observed and predicted lines*/
   font-size: 12px;
-  stroke: black;
-}
-.detail-item hr {
-  margin-bottom: 10px;
+  stroke-width: 1;
 }

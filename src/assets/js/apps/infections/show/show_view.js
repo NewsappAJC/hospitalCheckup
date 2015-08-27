@@ -14,12 +14,13 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
   });
 
   Show.Hospital = Marionette.ItemView.extend({
-    template: "#hospital-view"
+    template: "#hospital-info-view",
+    className: "hospital-info"
   });
 
   Show.HospitalChart = Marionette.ItemView.extend({
     template: "#hospital-chart-template",
-    className: "detail-item",
+    className: "hospital-list-item",
     onShow: function(){
       if(!this.model.get("na")){
         var detail = new HospitalCheckup.Common.Chart.HospitalDetail({
@@ -34,6 +35,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
 
   Show.HospitalChartList = Marionette.CollectionView.extend({
     template: "#hospital-chart-holder",
+    className: "hospital-list",
     childView: Show.HospitalChart,
     get_hospital_models: function(data){
       var dataArr = [];

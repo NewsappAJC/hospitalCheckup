@@ -236,7 +236,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             return "end"
           } return "start"
         })
-        .attr("class", "label")
+        .attr("class", "chart-label")
         .attr("id", "avgTxt")
         .transition().duration(chart.duration)
         .attr("x", chart.xScale(avg))
@@ -256,7 +256,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             return "start"
           } return "end"
         })
-        .attr("class", "label")
+        .attr("class", "chart-label")
         .attr("id", "benchmarkTxt")
         .attr("x", chart.xScale(1))
         .attr("y", -5);
@@ -385,7 +385,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("x2", this.xScale(num))
 
       this.svg.append("text").text(d3.round(num, rounder(num)))
-      .attr("class", str+"-text")
+      .attr("class", str+" chart-label txt")
       .attr("text-anchor", "middle")
       .attr("x", this.xScale(num))
       .attr("y", function(){

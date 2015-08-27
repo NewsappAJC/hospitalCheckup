@@ -93,15 +93,13 @@
 
   <script type="text/template" id="tooltip-template">
     <div id="ttip" class="ttip container">
-      <p>
-        <b>Rate:</b> <%= infections[measure].ratio %><br>
-        <b>Range:</b> <%= infections[measure].lower %> <b>to</b> <%= infections[measure].upper %><br>
-        <b><%- infections[measure].incidents_label %>:</b> <%= infections[measure].incidents %><br>
-        <b>Rating:</b> <%- infections[measure].category %>
-      </p>
+        <strong>Rate:</strong> <%= infections[measure].ratio %><br>
+        <strong>Range:</strong> <%= infections[measure].lower %> <strong>to</strong> <%= infections[measure].upper %><br>
+        <strong><%- infections[measure].incidents_label %>:</strong> <%= infections[measure].incidents %><br>
+        <strong>Rating:</strong> <%- infections[measure].category %>
     </div>
   </script>
-  <script type="text/template" id="hospital-view">
+  <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
