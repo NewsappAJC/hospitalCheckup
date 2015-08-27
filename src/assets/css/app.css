@@ -14,6 +14,10 @@ h4 {
 p {
   font-family: Boomer-Light;
 }
+p strong {
+  font-family: Boomer;
+  font-weight: bold;
+}
 /*nav*/
 .logo {
   padding-top: 5px;
@@ -138,8 +142,7 @@ div.ttip {
   z-index: 101;
 }
 div.ttip strong {
-  font-family: Boomer;
-  font-weight: bold;
+  font-family: BoomerCond;
 }
 /*hospital view*/
 .hospital-info p {
@@ -151,11 +154,24 @@ div.ttip strong {
   line-height: 1.3em;
   margin-bottom: 0;
 }
-.hospital-list hr {
-  margin-bottom: 10px;
+.hospital-list .hospital-list-item hr {
+  margin-top: 5px;
 }
 .hospital-list-item {
+  margin-top: 35px;
+}
+.hospital-list-item.not-available {
+  color: darkgray;
+}
+.hospital-list-item:not(.not-available) p {
   margin-top: 10px;
+}
+.hospital-list-item p strong {
+  font-family: BoomerCond;
+  font-weight: normal;
+}
+.hospital-list-item h4 {
+  font-family: BoomerCond;
 }
 /*hospital charts*/
 .predicted {

@@ -25,8 +25,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     {label: "Methicillin-resistant staphylococcus sureus (MRSA)", key: "mrsa"},
     {label: "Catheter-associated urinary tract infections", key: "cauti"},
     {label: "Central line-associated blood stream infections", key: "clabsi"},
-    {label: "Surgical Site Infection from colon surgery", key: "ssicolon"},
-    {label: "Surgical Site Infection from abdominal hysterectomy", key: "ssihyst"}
+    {label: "Surgical site infection from colon surgery", key: "ssicolon"},
+    {label: "Surgical site infection from abdominal hysterectomy", key: "ssihyst"}
   ]);
 
   var API = {

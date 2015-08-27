@@ -230,7 +230,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("id", "averageLine");
 
       contextLines.append("text")
-        .text("State avg.: " + avg)
+        .text("State SIR: " + avg)
         .attr("text-anchor", function(){
           if(avg < 1){
             return "end"
@@ -315,7 +315,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.svg.select("#avgTxt")
         .transition().duration(chart.duration)
         .attr("x", chart.xScale(avg))
-        .text("State avg.: " + avg)
+        .text("State SIR: " + avg)
         .attr("text-anchor", function(){
           if(avg < 1){
             return "end"
@@ -390,7 +390,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .attr("x", this.xScale(num))
       .attr("y", function(){
         //if the lables might overlap, bump up the predicted one
-        if(str==="observed" | Math.abs(chart.xScale(num) - chart.xScale(chart.data.observed)) >= 20){
+        if(str==="observed" | Math.abs(chart.xScale(num) - chart.xScale(chart.data.observed)) >= 21){
           return -5
         }
         return -18

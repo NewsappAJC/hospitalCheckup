@@ -29,6 +29,8 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
           margin: {left: 15, right: 15, bottom: 25, top: 30},
           base_height: 70
         }).render();
+      } else {
+        this.$el.addClass("not-available");
       }
     }
   });

@@ -116,9 +116,9 @@
       <p><%= category %></p>
     <% } else { %>
       <p>
-        Standardized infection Ratio: <%= ratio %><br>
-        <%= incidents_label %>: <%= incidents %><br>
-        <%= category %>
+        <strong>Standardized infection Ratio:</strong> <%= ratio %><br>
+        <strong><%= incidents_label %>:</strong> <%= incidents %><br>
+        <strong>Rating:</strong> <%= category %>
       </p>
     <% } %>
     <div class="chart" id="<%= measure + '-chart' %>"></div>
