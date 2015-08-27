@@ -138,3 +138,21 @@ div.ttip p{
   margin-bottom: 5px;
   line-height: 1em;
 }
+
+/*hospital charts*/
+.predicted {
+  stroke: lightgray;
+  stroke-width: 5;
+}
+.predicted-text {
+  font-size: 12px;
+  stroke: lightgray;
+}
+.observed {
+  stroke: black;
+  stroke-width: 5;
+}
+.observed-text {
+  font-size: 12px;
+  stroke: black;
+}

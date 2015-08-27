@@ -18,7 +18,15 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
   });
 
   Show.HospitalChart = Marionette.ItemView.extend({
-    template: "#hospital-chart-template"
+    template: "#hospital-chart-template",
+    onShow: function(){
+      var detail = new HospitalCheckup.Common.Chart.HospitalDetail({
+        el: "#"+this.model.get("measure")+"-chart",
+        data: this.model.toJSON(),
+        margin: {left: 15, right: 15, bottom: 25, top: 20},
+        base_height: 60
+      }).render();
+    }
   });
 
   Show.HospitalChartList = Marionette.CollectionView.extend({
@@ -30,8 +38,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
       //we need unnamed, top-level objects for the collection
       _.each(data.get("infections"), function(values, key, collection){
         values.measure = key; //TODO need the full name
-        var detail = new Backbone.Model(values);
-        dataArr.push(detail);
+        dataArr.push(values);
       });
       return dataArr;
     }

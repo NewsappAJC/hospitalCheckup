@@ -13,8 +13,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     draw: function() {
       var data = this.filter_data(this.data);
       this.get_scales(data);
-      this.create_axes();
-      this.create_svg();
+      this.create_axis("x", "bottom"); //super
+      this.create_axis("y", "left"); //super
+      this.create_svg(); //super
       this.create_svg_containers();
       this.draw_base_bars(data);
       this.draw_data(data);
@@ -52,29 +53,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .rangeRound([0, chart.dimensions.width])
         .domain([0, chart.get_xMax(data)])
         .nice(); //extend bounds to nearest round value
-    },
-
-    create_axes: function() {
-      var chart = this;
-      chart.xAxis = d3.svg.axis()
-        .scale(chart.xScale)
-        .orient("bottom");
-
-      chart.yAxis = d3.svg.axis()
-        .scale(chart.yScale)
-        //.ticks(( $(chart.el).width() <= 550 )? 5:9 )
-        .orient("left");
-    },
-
-    create_svg: function() {
-      var chart = this;
-      //create new svg for the bar chart
-      chart.svg = d3.select(chart.el).append("svg")
-        .attr("width", chart.dimensions.wrapperWidth)
-        .attr("height", chart.dimensions.wrapperHeight)
-        .attr("class", "chart")
-      .append("g")
-        .attr("transform", "translate(" + chart.options.margin.left + ", " + chart.options.margin.top + ")");
     },
 
     create_svg_containers: function(){
@@ -358,6 +336,65 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             return "start"
           } return "end"
         });
+    }
+  });
+
+  Chart.HospitalDetail = ChartBaseView.extend({
+    constructor: function(options) {
+      ChartBaseView.apply(this, arguments);
+      return this;
+    },
+    draw: function(){
+      this.get_scales(this.data);
+      this.create_axis("x", "bottom"); //super
+      this.create_svg(); //super
+      this.draw_axes(this.data);
+      this.draw_data();
+
+    },
+
+    get_scales: function(data) {
+      this.xScale = d3.scale.linear()
+        .rangeRound([0, this.dimensions.width])
+      .domain([0, d3.max([data.predicted, data.observed])])
+        .nice(); //extend bounds to nearest round value
+    },
+
+    draw_axes: function(data) {
+      //create and set x axis position
+      this.svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + this.dimensions.height + ")")
+        .call(this.xAxis);
+    },
+
+    draw_data: function(){
+      this.draw_lines("predicted");
+      this.draw_lines("observed");
+    },
+
+    draw_lines: function(str){
+      var num = this.data[str];
+
+      this.svg.append("line")
+        .attr("class", str)
+        .attr("y1", 0)
+        .attr("y2", this.dimensions.height)
+        .attr("x1", this.xScale(num))
+        .attr("x2", this.xScale(num))
+
+      .attr("y", -5)
+
+      //round display text relative to its value
+      function rounder(num){
+        if (num > .1){
+          return 1
+        } else if (num > .01){
+          return 2
+        } else {
+          return 3
+        }
+      }
     }
   });
 });
