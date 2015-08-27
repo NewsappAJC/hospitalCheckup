@@ -15,10 +15,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
   List.Menu = Marionette.ItemView.extend({
     template: "#infections-menu-template",
+    tagName: "select",
+    id: "js-infections-filter-criterion",
 
     events: {
       //TODO I read something about IE8 not really firing change event http://www.bentedder.com/backbone-change-events-on-select-menus/
-      "change #js-infections-filter-criterion": "filterInfections" //looks like this broke the menu's display updating
+      "change": "filterInfections" //looks like this broke the menu's display updating
     },
 
     ui: {

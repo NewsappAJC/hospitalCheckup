@@ -9,7 +9,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
       var infectionsListLayout = new List.Layout(),
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
-      infectionsMenuView = new List.Menu(),
+      infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels}),
       infectionsListView = new List.InfectionsChart(),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
       hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalChartList({collection: new Backbone.Collection()});

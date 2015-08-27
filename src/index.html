@@ -111,7 +111,7 @@
   </script>
 
   <script type="text/template" id="hospital-chart-template">
-    <h4><%= measure %></h4>
+    <h4><%= label %></h4>
     <% if (category === "Not Available") {%>
       <p><%= category %></p>
     <% } else { %>
@@ -151,14 +151,9 @@
   </script>
   
   <script type="text/template" id="infections-menu-template">
-    <select id="js-infections-filter-criterion">
-      <option value="cdiff">Clostridium difficile (C.diff)</option>
-      <option value="mrsa">Methicillin-resistant staphylococcus sureus (MRSA)</option>
-      <option value="cauti">Catheter-associated urinary tract infections</option>
-      <option value="clabsi">Central line-associated blood stream infections</option>
-      <option value="ssicolon">Surgical Site Infection from colon surgery</option>
-      <option value="ssihyst">Surgical Site Infection from abdominal hysterectomy</option>
-    </select>
+      <% _.each(items, function(item){ %>
+        <option value="<%= item.key %>"><%= item.label %></option>
+      <% }) %>
   </script>
   <!-- END INFECTIONS
   ================================================== -->
