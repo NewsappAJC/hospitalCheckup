@@ -374,7 +374,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_lines: function(str){
-      var num = this.data[str];
+      var num = this.data[str],
+      chart = this;
 
       this.svg.append("line")
         .attr("class", str)
@@ -383,7 +384,17 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("x1", this.xScale(num))
         .attr("x2", this.xScale(num))
 
-      .attr("y", -5)
+      this.svg.append("text").text(d3.round(num, rounder(num)))
+      .attr("class", str+"-text")
+      .attr("text-anchor", "middle")
+      .attr("x", this.xScale(num))
+      .attr("y", function(){
+        //if the lables might overlap, bump up the predicted one
+        if(str==="observed" | Math.abs(chart.xScale(num) - chart.xScale(chart.data.observed)) >= 20){
+          return -5
+        }
+        return -18
+      })
 
       //round display text relative to its value
       function rounder(num){

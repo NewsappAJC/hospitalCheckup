@@ -141,18 +141,21 @@ div.ttip p{
 
 /*hospital charts*/
 .predicted {
-  stroke: lightgray;
-  stroke-width: 5;
+  stroke: darkgray;
+  stroke-width: 3;
 }
 .predicted-text {
   font-size: 12px;
-  stroke: lightgray;
+  stroke: darkgray;
 }
 .observed {
   stroke: black;
-  stroke-width: 5;
+  stroke-width: 3;
 }
 .observed-text {
   font-size: 12px;
   stroke: black;
+}
+.detail-item hr {
+  margin-bottom: 10px;
 }

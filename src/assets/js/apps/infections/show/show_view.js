@@ -19,13 +19,16 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
 
   Show.HospitalChart = Marionette.ItemView.extend({
     template: "#hospital-chart-template",
+    className: "detail-item",
     onShow: function(){
-      var detail = new HospitalCheckup.Common.Chart.HospitalDetail({
-        el: "#"+this.model.get("measure")+"-chart",
-        data: this.model.toJSON(),
-        margin: {left: 15, right: 15, bottom: 25, top: 20},
-        base_height: 60
-      }).render();
+      if(!this.model.get("na")){
+        var detail = new HospitalCheckup.Common.Chart.HospitalDetail({
+          el: "#"+this.model.get("measure")+"-chart",
+          data: this.model.toJSON(),
+          margin: {left: 15, right: 15, bottom: 25, top: 30},
+          base_height: 70
+        }).render();
+      }
     }
   });
 
