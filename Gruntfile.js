@@ -308,7 +308,15 @@ module.exports = function(grunt) {
           "foundation.css": "foundation/css/foundation.min.css"
         }
       },
-
+      fonts: {
+        options: {
+          destPrefix: "src/assets/css/"
+        },
+        files: {
+          "fonts.css": "ajc-design/build/style/fonts.css",
+          "fonts": "ajc-design/build/style/fonts"
+        }
+      }
     },
 
     express: {
