@@ -41,7 +41,8 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
       var dataArr = [];
 
       //we need unnamed, top-level objects for the collection
-      _.each(data.get("infections"), function(values, key, collection){
+      _.each(data.get("infections"), function(values, key, collection){ //TODO do this on the model instead
+        values.label = HospitalCheckup.Entities.InfectionLabels.findWhere({ key: key }).get("label"); //look up the display name for the current infection
         values.measure = key; //TODO need the full name
         dataArr.push(values);
       });
