@@ -5,6 +5,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     constructor: function(options) {
       ChartBaseView.apply(this, arguments);
       this.options.bar_padding = options.bar_padding || 4;
+      this.options.section = options.section || "infections";
       this.duration = 500;
       this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
       this.$chart_container.attr('id', this.el.id+"-container");
@@ -134,7 +135,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     attach_tooltip: function(data, measure) {
       data.measure = measure; //template needs access
 
-      var tmpl = _.template($("#tooltip-template").html());
+      var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));
       tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
       tt.css("left", (parseFloat(d3.event.layerX + 25)) + "px");

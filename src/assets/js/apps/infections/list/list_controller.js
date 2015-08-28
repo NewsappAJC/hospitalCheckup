@@ -9,14 +9,17 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
       var infectionsListLayout = new List.Layout(),
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
-      infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels}),
+      infectionsIntroView = new List.Intro({headline: "Healthcare-associated infections"}),
+      infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
       infectionsListView = new List.InfectionsChart(),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
-      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalChartList({collection: new Backbone.Collection()});
+      hospitalLegendView = new HospitalCheckup.InfectionsApp.Show.Legend(),
+      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"});
 
       $.when(fetchingInfections).done(function(infections){
 
         infectionsListLayout.on("show", function(){
+          infectionsListLayout.introRegion.show(infectionsIntroView);
           infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
           infectionsListLayout.hospitalRegion.show(hospitalLayout);
@@ -26,15 +29,16 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalChartsView);
         });
 
-        //wait for #infections-chart to be rendered
+        //wait for #main-chart to be rendered
         infectionsListView.on("show", function(){
           List.infectionsChartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
-            el: "#infections-chart",
+            el: "#main-chart",
             collection: infections,
             base_height: 700,
             bar_padding: 4,
             margin: {left: 190, right: 30, bottom: 20, top: 25},
-            measure: criterion || "cdiff"
+            measure: criterion || "cdiff",
+            section: "infections",
           });
           List.infectionsChartView.render(); //for some reason this breaks filtering when chained with initialization above
         });
@@ -56,6 +60,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             hospitalChartsView.collection.reset(hospitalChartsView.get_hospital_models(infections.models[0]));
           }
           hospitalLayout.topRegion.show(hospitalShowView);
+          hospitalLayout.legendRegion.show(hospitalLegendView);
           hospitalLayout.chartRegion.show(hospitalChartsView);
         });
 
