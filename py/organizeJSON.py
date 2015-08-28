@@ -30,22 +30,28 @@ for node in src:
     #loop through keys looking for the infection substrings and create objects to hold their common properties
     for key in node.keys():
         tmp = key.lower().split("_")
-        if tmp[0] in hospital["infections"]:
+        inf = tmp[0]
+        if inf in hospital["infections"]:
             param = tmp[1]
-            hospital["infections"][tmp[0]][param] = node[key]
+            hospital["infections"][inf][param] = node[key]
 
             if(param == "lower" and node[key] is None):
-                hospital["infections"][tmp[0]][param] = 0
+                hospital["infections"][inf][param] = 0
 
             #how are incidents being calculated?
             if(param == "days"):
-                hospital["infections"][tmp[0]]["incidents_label"] = "Patient days"
-                hospital["infections"][tmp[0]]["incidents"] = "{:,d}".format(node[key])
-                del hospital["infections"][tmp[0]][param] #just added this above but whatever
+                if(inf == "cauti"):
+                    hospital["infections"][inf]["incidents_label"] = "Urinary catheter days"
+                elif(inf == "clabsi"):
+                    hospital["infections"][inf]["incidents_label"] = "Central line days"
+                elif(inf == "mrsa" or inf == "cdiff"):
+                    hospital["infections"][inf]["incidents_label"] = "Patient days"
+                hospital["infections"][inf]["incidents"] = "{:,d}".format(node[key])
+                del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
-                hospital["infections"][tmp[0]]["incidents_label"] = "Procedures"
-                hospital["infections"][tmp[0]]["incidents"] = node[key]
-                del hospital["infections"][tmp[0]][param]
+                hospital["infections"][inf]["incidents_label"] = "Procedures"
+                hospital["infections"][inf]["incidents"] = node[key]
+                del hospital["infections"][inf][param]
         # if tmp[0] in keys: #for array lookup
         #if tmp[0] in infections:
             #infections[tmp[0]][tmp[1]] = node[key]
