@@ -39,6 +39,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             margin: {left: 190, right: 30, bottom: 20, top: 25},
             measure: criterion || "cdiff",
             section: "infections",
+            stat: "ratio"
           });
           List.infectionsChartView.render(); //for some reason this breaks filtering when chained with initialization above
         });
