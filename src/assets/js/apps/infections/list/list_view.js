@@ -43,10 +43,6 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       "change": "filterList" //looks like this broke the menu's display updating
     },
 
-    ui: {
-      criterion: "#js-filter-criterion"
-    },
-
     filterList: function(e){
       e.preventDefault();
       var criterion = $(e.currentTarget).val();
@@ -54,10 +50,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     },
 
     onSetFilterCriterion: function(criterion){
-      var el = this.ui.criterion; //in case no filter has been selected yet we'll need the default
-      el.val(criterion || el.val());
+      this.$el.val(criterion || this.$el.val());
     }
-
   });
 
   List.InfectionsChart = Marionette.ItemView.extend({
