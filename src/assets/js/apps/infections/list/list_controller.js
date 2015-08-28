@@ -5,7 +5,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
-      var fetchingInfections = HospitalCheckup.request("infection:entities");
+      var fetchingInfections = HospitalCheckup.request("chart:entities", "Infection", "infections");
 
       var infectionsListLayout = new List.Layout(),
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),

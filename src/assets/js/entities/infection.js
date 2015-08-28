@@ -25,19 +25,19 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   ]);
 
   var API = {
-    getInfectionEntities: function(){
+    getChartEntities: function(entityID, fileID){
       Entities.averages = new Entities.StateAverages(); //attach to Entities so chart can get at it
-      var infections = new Entities.InfectionCollection();
+      var entities = new Entities[entityID+"Collection"]();
       var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
       var deferServer = $.Deferred(); //we might need to wait for data to be fetched from server
       //check local storage to see if our data is already stored in there
-      infections.fetch({
+      entities.fetch({
         success: function(data){
           deferLocal.resolve(data);
         }
       });
-      $.when(deferLocal.promise()).done(function(fetchedInfections){
-        if(fetchedInfections.length === 0){
+      $.when(deferLocal.promise()).done(function(fetchedEntities){
+        if(fetchedEntities.length === 0){
           //get models from file. Doing this here instead of by just setting the 
           //collection URL to the file on initialization bc we need to use list 
           //page URL for local storage. If we had a restful API we could use same URL for both
@@ -45,16 +45,16 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
             Entities.averages.set(data.averages);
             Entities.averages.save();
 
-            infections.reset(data.hospitals);
-            infections.forEach(function(infection){
-              infection.save(); //to local storage
+            entities.reset(data.hospitals);
+            entities.forEach(function(entity){
+              entity.save(); //to local storage
             });
-            deferServer.resolve(infections);
+            deferServer.resolve(entities);
           }
 
           $.ajax({
             dataType: "json",
-            url: "/assets/data/infections.json",
+            url: "/assets/data/"+fileID+".json",
             //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json",
             type: "GET",
             success: resetModels
@@ -62,7 +62,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
         } else {
           Entities.averages.fetch();
           Entities.averages.attributes = Entities.averages.attributes[0]; //I don't know why but fetching was nesting them instide another object and I couldn't get to them
-          deferServer.resolve(fetchedInfections);
+          deferServer.resolve(fetchedEntities);
         }
 
       });
@@ -83,8 +83,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     }
   }
 
-  HospitalCheckup.reqres.setHandler("infection:entities", function(){ //list infections
-    return API.getInfectionEntities();
+  HospitalCheckup.reqres.setHandler("chart:entities", function(entityID, fileID){ //list infections
+    return API.getChartEntities(entityID, fileID);
   });
 
   HospitalCheckup.reqres.setHandler("hospital:entity", function(id){ //hospital selected from infection list, show hospital detail page
