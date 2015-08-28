@@ -9,9 +9,11 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
       var infectionsListLayout = new List.Layout(),
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
-      infectionsIntroView = new List.Intro({headline: "Healthcare-associated infections"}),
+      infectionsHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
+      infectionsIntroView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
       infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
       infectionsListView = new List.InfectionsChart(),
+      infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
       hospitalLegendView = new HospitalCheckup.InfectionsApp.Show.Legend(),
       hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"});
@@ -19,10 +21,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       $.when(fetchingInfections).done(function(infections){
 
         infectionsListLayout.on("show", function(){
+          infectionsListLayout.headlineRegion.show(infectionsHeadlineView);
           infectionsListLayout.introRegion.show(infectionsIntroView);
           infectionsListLayout.menuRegion.show(infectionsMenuView);
           infectionsListLayout.listRegion.show(infectionsListView);
           infectionsListLayout.hospitalRegion.show(hospitalLayout);
+          infectionsListLayout.bottomRegion.show(infectionsBottomView);
         });
 
         infectionsListView.on("hospital:change", function(id){

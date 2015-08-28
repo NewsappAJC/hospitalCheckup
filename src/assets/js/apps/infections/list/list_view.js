@@ -4,28 +4,28 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     template: "#section-layout",
     className: "large-12 columns",
     regions: {
+      headlineRegion: "#section-headline-region",
       introRegion: "#section-intro-region",
       menuRegion: "#filter-menu-region",
       listRegion: "#main-chart-region",
-      hospitalRegion: "#hospital-show-region"
+      hospitalRegion: "#hospital-show-region",
+      bottomRegion: "#bottom-region"
     },
     onRender: function(){
       console.log("RENDER LAYOUT");
     }
   });
 
-  List.Intro = Marionette.ItemView.extend({
-    template: "#section-intro-template",
+  List.TextBlock = Marionette.ItemView.extend({
+    template: "#text-block-template",
     initialize: function(options){
       var options = options || {};
-      this.headline = options.headline || "Headline",
-      this.intro_text = options.intro_text || "intro text"
+      this.text = options.text
     },
 
     serializeData: function(){
       return {
-        headline: this.headline,
-        intro_text: this.intro_text
+        text: this.text
       }
     }
   });

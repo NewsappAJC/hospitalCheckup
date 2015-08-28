@@ -95,7 +95,7 @@
 
   <script type="text/template" id="infections-tooltip-template">
     <div id="ttip" class="ttip container">
-        <strong>Rate:</strong> <%= infections[measure].ratio %><br>
+        <strong>SIR:</strong> <%= infections[measure].ratio %><br>
         <strong>Range:</strong> <%= infections[measure].lower %> <strong>to</strong> <%= infections[measure].upper %><br>
         <strong><%- infections[measure].incidents_label %>:</strong> <%= infections[measure].incidents %><br>
         <strong>Rating:</strong> <%- infections[measure].category %>
@@ -114,7 +114,7 @@
       <p><%= category %></p>
     <% } else { %>
       <p>
-        <strong>Standardized infection Ratio:</strong> <%= ratio %><br>
+        <strong>Standardized infection ratio:</strong> <%= ratio %><br>
         <strong><%= incidents_label %>:</strong> <%= incidents %><br>
         <strong>Rating:</strong> <%= category %>
         <div class="chart" id="<%= measure + '-chart' %>"></div>
@@ -130,20 +130,21 @@
 
   <script type="text/template" id="section-layout">
     <div class="row">
+      <div id="section-headline-region" class="medium-12 columns"></div>
       <div id="section-intro-region" class="medium-12 columns"></div>
     </div>
     <div class="row">
-      <div id="filter-menu-region" class="medium-12 columns"></div>
-    </div>
-    <div class="row">
-      <div id="main-chart-region" class="medium-7 columns"></div>
+      <div class="medium-7 columns">
+        <div id="filter-menu-region"></div>
+        <div id="main-chart-region"></div>
+        <div id="bottom-region"></div>
+      </div>
       <div id="hospital-show-region" class="medium-5 columns"></div>
     </div>
   </script>
 
-  <script type="text/template" id="section-intro-template">
-    <h1><%= headline %></h1>
-    <p><%= intro_text %></p>
+  <script type="text/template" id="text-block-template">
+    <%= text %>
   </script>
 
   <script type="text/template" id="hospital-layout">
@@ -191,7 +192,7 @@
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/apps/config/storage/localstorage.js"></script>
-  <script src="assets/js/entities/common.js"></script>
+  <script src="assets/js/entities/common.js"></script><!--currently empty-->
   <script src="assets/js/entities/header.js"></script>
   <script src="assets/js/apps/header/list/list_controller.js"></script>
   <script src="assets/js/apps/header/list/list_view.js"></script>
@@ -209,6 +210,7 @@
   <script src="assets/js/common/chart_base_view.js"></script>
   <script src="assets/js/common/chart_views.js"></script>
   <script src="assets/js/common/behaviors.js"></script>
+  <script src="assets/js/entities/text.js"></script>
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();
