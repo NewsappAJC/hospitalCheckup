@@ -69,10 +69,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       bars.enter().append("rect")
         .attr("class", "base bar")
-        //.attr("text-anchor", "middle")
-        /*.attr("x", function(d) {
-          return chart.xScale(d.infections[d.measure].upper);
-        })*/
         .attr("y", function(d) {
           return chart.yScale(d.display_name);
         })

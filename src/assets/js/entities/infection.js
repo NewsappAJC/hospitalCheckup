@@ -1,10 +1,6 @@
 HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone, Marionette, $, _){
   //Entities = models and collections
   Entities.Hospital = Backbone.Model.extend({
-    defaults: {
-      display_name: "No display name found!",
-      //measure: "cdiff"
-    },
     urlRoot: "infections"
   });
   Entities.configureStorage("HospitalCheckup.Entities.Hospital");
@@ -15,8 +11,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   Entities.InfectionCollection = Backbone.Collection.extend({
     url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
-    model: Entities.Hospital,
-    comparator: "display_name"
+    model: Entities.Hospital
   });
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
@@ -88,8 +83,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     }
   }
 
-  HospitalCheckup.reqres.setHandler("infection:entities", function(criterion){ //list infections
-    return API.getInfectionEntities(criterion);
+  HospitalCheckup.reqres.setHandler("infection:entities", function(){ //list infections
+    return API.getInfectionEntities();
   });
 
   HospitalCheckup.reqres.setHandler("hospital:entity", function(id){ //hospital selected from infection list, show hospital detail page
