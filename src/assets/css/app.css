@@ -50,8 +50,7 @@ p strong, li strong {
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
 }
-/*override fonts.css*/
-section {
+section {/*override fonts.css*/
   border-bottom: none;
   padding: 0
 }
@@ -88,11 +87,6 @@ option {
   padding-top:20px;
   padding-bottom:20px;
   background-color:#0E3968;
-}
-/*list views*/
-tbody tr:hover {
-  background-color: #d8d8d8;
-  cursor: pointer;
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {
@@ -225,9 +219,6 @@ select#js-filter-criterion {
 }
 .legend-svg line {
   stroke-width: 5px;
-}
-.hospital-list-item:first-child {
-  margin-top: 10px;
 }
 .legend-margin {
   margin-left: 10px;

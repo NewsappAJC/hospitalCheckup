@@ -15,7 +15,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   });
   Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
 
-  Entities.InfectionLabels = new Backbone.Collection([
+  Entities.InfectionLabels = new Backbone.Collection([ /*TODO I think I might be using entities wrong and they should be used for classes not instances*/
     {label: "Clostridium difficile (C.diff)", key: "cdiff"},
     {label: "Methicillin-resistant staphylococcus sureus (MRSA)", key: "mrsa"},
     {label: "Catheter-associated urinary tract infections", key: "cauti"},
