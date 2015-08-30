@@ -5,16 +5,24 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
       var fetchingHospital = HospitalCheckup.request("hospital:entity", id);
       $.when(fetchingHospital).done(function(hospital){
         if(hospital !== undefined){
-          aboutView.model = hospital;
-          chartsView.collection.reset(chartsView.get_hospital_models(hospital));
+          if(aboutView.model){
+            if(aboutView.model.get("id") !== hospital.get("id")){ //don't rerender if active hospital clicked again
+              changeModels();
+            }
+          } else {
+            changeModels();
+          }
         } else {
            //we should only end up here if someone goes to a URL 
           //with an ID that none of our hospitals have (that shouldn't happen);
-          aboutView = new Show.MissingHospital();
+          aboutView = new Show.MissingHospital().render();
         }
 
-        aboutView.render();
-        chartsView.render();
+        function changeModels(){
+          aboutView.model = hospital;
+          chartsView.collection.reset(chartsView.get_hospital_models(hospital));
+          aboutView.render();
+        }
       });
     }
   }
