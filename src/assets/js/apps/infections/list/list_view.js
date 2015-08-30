@@ -7,6 +7,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       headlineRegion: "#section-headline-region",
       introRegion: "#section-intro-region",
       menuRegion: "#filter-menu-region",
+      legendRegion: "#legend-region",
       listRegion: "#main-chart-region",
       hospitalRegion: "#hospital-show-region",
       bottomRegion: "#bottom-region"
@@ -52,6 +53,10 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     onSetFilterCriterion: function(criterion){
       this.$el.val(criterion || this.$el.val());
     }
+  });
+
+  List.Legend = Marionette.ItemView.extend({
+    template: "#main-legend"
   });
 
   List.InfectionsChart = Marionette.ItemView.extend({

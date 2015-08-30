@@ -12,6 +12,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       infectionsHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
       infectionsIntroView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
       infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
+      infectionsLegendView = new List.Legend(),
       infectionsListView = new List.InfectionsChart(),
       infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
@@ -24,6 +25,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           infectionsListLayout.headlineRegion.show(infectionsHeadlineView);
           infectionsListLayout.introRegion.show(infectionsIntroView);
           infectionsListLayout.menuRegion.show(infectionsMenuView);
+          infectionsListLayout.legendRegion.show(infectionsLegendView);
           infectionsListLayout.listRegion.show(infectionsListView);
           infectionsListLayout.hospitalRegion.show(hospitalLayout);
           infectionsListLayout.bottomRegion.show(infectionsBottomView);
