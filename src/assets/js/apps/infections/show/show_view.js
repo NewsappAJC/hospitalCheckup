@@ -1,9 +1,5 @@
 HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
 
-  Show.MissingHospital = Marionette.ItemView.extend({
-    template: "#missing-hospital-view"
-  });
-
   Show.HospitalLayout = Marionette.LayoutView.extend({
     template: "#hospital-layout",
     className: "large-12 columns",

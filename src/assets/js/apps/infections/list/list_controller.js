@@ -58,12 +58,8 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         hospitalLayout.on("show", function(){
-          if(id){ //if we were passed a hospital ID through the URL (i.e. bookmark)
-            HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView);
-          } else { //use the first model in the list as a default
-            hospitalShowView.model = infections.models[0];
-            hospitalChartsView.collection.reset(hospitalChartsView.get_hospital_models(infections.models[0]));
-          }
+          var defaultModel = infections.models[0];
+          HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView, defaultModel);
           hospitalLayout.topRegion.show(hospitalShowView);
           hospitalLayout.legendRegion.show(hospitalLegendView);
           hospitalLayout.chartRegion.show(hospitalChartsView);

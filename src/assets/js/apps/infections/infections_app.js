@@ -12,8 +12,8 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 
-    showHospital: function(id, aboutView, chartsView){  //received URL with ID parameter
-      InfectionsApp.Show.Controller.showHospital(id, aboutView, chartsView);
+    showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
+      InfectionsApp.Show.Controller.showHospital(id, aboutView, chartsView, defaultModel);
     }
   };
 
@@ -22,8 +22,8 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     API.listInfections();
   });
 
-  HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView){ //received URL with ID parameter
-    API.showHospital(id, aboutView, chartsView);
+  HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
+    API.showHospital(id, aboutView, chartsView, defaultModel);
   });
 
   HospitalCheckup.on("hospital:change", function(id, aboutView, chartsView){ //hospital selected from infection list
