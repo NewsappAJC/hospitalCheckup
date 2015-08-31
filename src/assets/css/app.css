@@ -110,12 +110,12 @@ rect.range-bar {
   fill: #ABABAB;
 }
 rect.range-bar.normal, #legend-region li.normal {
-  fill: #304968;
-  background-color: #304968;
+  fill: #49709F;
+  background-color: #49709F;
 }
 rect.range-bar.bad, #legend-region li.bad {
-  fill: #bf653c;
-  background-color: #bf653c;
+  fill: #BF653C;
+  background-color: #BF653C;
 }
 rect.range-bar.good, #legend-region li.good {
   fill: #489162;
@@ -225,4 +225,8 @@ select#js-filter-criterion {
 }
 #detail-legend .chart-label {
   margin-left: -3px;
+}
+#legend-region .chart-label:not(:last-child){
+  font-family: Boomer;
+  font-weight: bold;
 }
