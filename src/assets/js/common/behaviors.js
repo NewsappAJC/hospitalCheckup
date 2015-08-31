@@ -3,7 +3,8 @@ HospitalCheckup.Behaviors = {
     events: {
       "click .bar": "displayHospital",
       "click .range-bar": "displayHospital",
-      "click .stat-circle": "displayHospital"
+      "click .stat-circle": "displayHospital",
+      "click .hospital-label": "displayHospital"
     },
 
     displayHospital: function(e){
