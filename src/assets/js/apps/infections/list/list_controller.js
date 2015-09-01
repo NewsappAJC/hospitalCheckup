@@ -60,7 +60,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         hospitalLayout.on("show", function(){
-          var defaultModel = infections.models[0];
+          var defaultModel = infections.at(0);
           HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView, defaultModel);
           hospitalLayout.topRegion.show(hospitalShowView);
           hospitalLayout.legendRegion.show(hospitalLegendView);
