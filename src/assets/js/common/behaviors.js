@@ -3,11 +3,18 @@ HospitalCheckup.Behaviors = {
     events: {
       "click .bar": "displayHospital",
       "click .range-bar": "displayHospital",
-      "click .ratio-circle": "displayHospital"
+      "click .stat-circle": "displayHospital",
+      "click .y.axis text": "displayHospital"
     },
 
     displayHospital: function(e){
-      this.view.trigger("hospital:change", d3.selectAll(e.currentTarget)[0].__data__.id );
+      var data = d3.selectAll(e.currentTarget)[0].__data__;
+      if(!data.id){ //clicks on hospital label text won't register ID, tried everything to attach it to DOM but failed
+        data = HospitalCheckup.InfectionsApp.List.infectionsChartView.collection.findWhere({ display_name: data }).get("id");
+      } else {
+        data = data.id;
+      }
+      this.view.trigger("hospital:change", data);
     }
   })
 }

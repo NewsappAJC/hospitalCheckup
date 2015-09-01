@@ -87,70 +87,96 @@
 
   <!-- INFECTIONS
   ================================================== -->
-  <script type="text/template" id="infections-chart-template">
-    <div id="infections-chart"></div>
+  <script type="text/template" id="main-chart-template">
+    <div id="main-chart"></div>
   </script>
 
-  <script type="text/template" id="tooltip-template">
+  <script type="text/template" id="empty-template"></script>
+
+  <script type="text/template" id="infections-tooltip-template">
     <div id="ttip" class="ttip container">
-        <strong>Rate:</strong> <%= infections[measure].ratio %><br>
+        <strong>SIR:</strong> <%= infections[measure].ratio %><br>
         <strong>Range:</strong> <%= infections[measure].lower %> <strong>to</strong> <%= infections[measure].upper %><br>
         <strong><%- infections[measure].incidents_label %>:</strong> <%= infections[measure].incidents %><br>
         <strong>Rating:</strong> <%- infections[measure].category %>
     </div>
   </script>
+
   <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address.street %></p>
     <hr>
-    <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
   </script>
 
-  <script type="text/template" id="hospital-chart-holder">
-
-  </script>
-
-  <script type="text/template" id="hospital-chart-template">
+  <script type="text/template" id="hospital-item-template">
     <h4><%= label %></h4>
     <% if (category === "Not Available") {%>
       <p><%= category %></p>
     <% } else { %>
       <p>
-        Standardized infection Ratio: <%= ratio %><br>
-        <%= incidents_label %>: <%= incidents %><br>
-        <%= category %>
+        <strong>Standardized infection ratio:</strong> <%= ratio %><br>
+        <strong><%= incidents_label %>:</strong> <%= incidents %><br>
+        <strong>Rating:</strong> <%= category %>
+        <div class="chart" id="<%= measure + '-chart' %>"></div>
       </p>
     <% } %>
-    <div class="chart" id="<%= measure + '-chart' %>"></div>
     <hr>
   </script>
 
-  <script type="text/template" id="missing-hospital-view">
-    <!-- triggered when you attempt to reach a hospital specific view with an ID that doesn't exist in the data -->
-    <div class="alert-box warning">This entry doesn't exist!</div>
-  </script>
-
-  <script type="text/template" id="infections-list-layout">
+  <script type="text/template" id="section-layout">
     <div class="row">
-      <div id="infections-menu-region" class="medium-12 columns"></div>
+      <div id="section-headline-region" class="medium-12 columns"></div>
+      <div id="section-intro-region" class="medium-12 columns"></div>
     </div>
     <div class="row">
-      <div id="infections-list-region" class="medium-7 columns"></div>
+      <div class="medium-7 columns">
+        <div id="filter-menu-region"></div>
+        <div id="legend-region"></div>
+        <div id="main-chart-region"></div>
+        <div id="bottom-region"></div>
+      </div>
       <div id="hospital-show-region" class="medium-5 columns"></div>
     </div>
   </script>
 
+  <script type="text/template" id="text-block-template">
+    <%= text %>
+  </script>
 
   <script type="text/template" id="hospital-layout">
     <div class="row">
       <div id="hospital-top-region" class="medium-12 columns"></div>
     </div>
     <div class="row">
-      <div id="hospital-chart-region" class="medium-12 columns"></div>
+      <div id="hospital-region-1" class="medium-12 columns"></div>
+    </div>
+    <div class="row">
+      <div id="hospital-region-2" class="medium-12 columns"></div>
     </div>
   </script>
-  
-  <script type="text/template" id="infections-menu-template">
+
+  <script type="text/template" id="hospital-legend-template">
+    <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
+    <div id="detail-legend">
+      <svg class="legend-svg"><line class="predicted" y1="0" y2="15" x1="0"></line></svg>
+      <span class="chart-label">Predicted</span>
+      <span class="legend-margin">
+        <svg class="legend-svg"><line class="observed" y1="0" y2="15" x1="0"></line></svg>
+        <span class="chart-label">Observed</span>
+      </span>
+    </div>
+  </script>
+
+  <script type="text/template" id="main-legend">
+    <ul>
+      <li class="good chart-label">Better</li>
+      <li class="normal chart-label">No Different</li>
+      <li class="bad chart-label">Worse</li>
+      <li class="chart-label">than national benchmark</li>
+    </ul>
+  </script>
+
+  <script type="text/template" id="filter-menu-template">
       <% _.each(items, function(item){ %>
         <option value="<%= item.key %>"><%= item.label %></option>
       <% }) %>
@@ -179,7 +205,7 @@
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/apps/config/storage/localstorage.js"></script>
-  <script src="assets/js/entities/common.js"></script>
+  <script src="assets/js/entities/common.js"></script><!--currently empty-->
   <script src="assets/js/entities/header.js"></script>
   <script src="assets/js/apps/header/list/list_controller.js"></script>
   <script src="assets/js/apps/header/list/list_view.js"></script>
@@ -197,6 +223,7 @@
   <script src="assets/js/common/chart_base_view.js"></script>
   <script src="assets/js/common/chart_views.js"></script>
   <script src="assets/js/common/behaviors.js"></script>
+  <script src="assets/js/entities/text.js"></script>
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();

@@ -1,47 +1,66 @@
 HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.Layout = Marionette.LayoutView.extend({
-    template: "#infections-list-layout",
+    template: "#section-layout",
     className: "large-12 columns",
     regions: {
-      menuRegion: "#infections-menu-region",
-      listRegion: "#infections-list-region",
-      hospitalRegion: "#hospital-show-region"
+      headlineRegion: "#section-headline-region",
+      introRegion: "#section-intro-region",
+      menuRegion: "#filter-menu-region",
+      legendRegion: "#legend-region",
+      listRegion: "#main-chart-region",
+      hospitalRegion: "#hospital-show-region",
+      bottomRegion: "#bottom-region"
     },
     onRender: function(){
       console.log("RENDER LAYOUT");
     }
   });
 
+  List.TextBlock = Marionette.ItemView.extend({
+    template: "#text-block-template",
+    initialize: function(options){
+      var options = options || {};
+      this.text = options.text
+    },
+
+    serializeData: function(){
+      return {
+        text: this.text
+      }
+    }
+  });
+
   List.Menu = Marionette.ItemView.extend({
-    template: "#infections-menu-template",
+    template: "#filter-menu-template",
     tagName: "select",
-    id: "js-infections-filter-criterion",
+    initialize: function(options){
+      this.options = options; //expecting `section`
+    },
+    id: "js-filter-criterion",
 
     events: {
       //TODO I read something about IE8 not really firing change event http://www.bentedder.com/backbone-change-events-on-select-menus/
-      "change": "filterInfections" //looks like this broke the menu's display updating
+      "change": "filterList" //looks like this broke the menu's display updating
     },
 
-    ui: {
-      criterion: "#js-infections-filter-criterion"
-    },
-
-    filterInfections: function(e){
+    filterList: function(e){
       e.preventDefault();
       var criterion = $(e.currentTarget).val();
-      this.trigger("infections:filter", criterion);
+      this.trigger(this.options.section+":filter", criterion);
     },
 
     onSetFilterCriterion: function(criterion){
-      var el = this.ui.criterion; //in case no filter has been selected yet we'll need the default
-      el.val(criterion || el.val());
+      this.$el.val(criterion || this.$el.val());
     }
+  });
 
+  List.Legend = Marionette.ItemView.extend({
+    template: "#main-legend"
   });
 
   List.InfectionsChart = Marionette.ItemView.extend({
-    template: "#infections-chart-template",
+    template: "#main-chart-template",
     behaviors: {
       HospitalSelect:{
         event: "hospital:change"

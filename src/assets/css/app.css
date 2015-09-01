@@ -1,3 +1,6 @@
+#app-container {
+  font-family: Boomer-Light;
+}
 h1 {
   font-family:'Publico-Black';
   font-size:42px;
@@ -13,6 +16,12 @@ h4 {
 }
 p {
   font-family: Boomer-Light;
+  font-size: 16px;
+  line-height: 1.6;
+}
+p strong, li strong {
+  font-family: Boomer;
+  font-weight: bold;
 }
 /*nav*/
 .logo {
@@ -41,10 +50,12 @@ p {
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
 }
-/*override fonts.css*/
-section {
+section {/*override fonts.css*/
   border-bottom: none;
   padding: 0
+}
+option {
+  font-family: Boomer;
 }
 /*homepage*/
 #row-bg {
@@ -77,13 +88,8 @@ section {
   padding-bottom:20px;
   background-color:#0E3968;
 }
-/*list views*/
-tbody tr:hover {
-  background-color: #d8d8d8;
-  cursor: pointer;
-}
 /*Charts.BarBase*/
-.axis text {
+.axis text, .chart-label {
   font-family: Boomer-Book;
   font-size: 10px;
 }
@@ -96,21 +102,25 @@ tbody tr:hover {
   stroke-width: 2px;
   shape-rendering: crispEdgeds;
 }
-.y.axis text, .bar, .range-bar, .ratio-circle {
+.y.axis text, .bar, .stat-circle {
   cursor: pointer;
 }
+.y.axis text.active {
+  font-family: Boomer;
+  font-weight: bold;
+}
 /*charts extended*/
-rect.range-bar {
-  fill: #ABABAB;
+rect.range.normal, #legend-region li.normal {
+  fill: #49709F;
+  background-color: #49709F;
 }
-rect.range-bar.normal {
-  fill: #304968;
+rect.range.bad, #legend-region li.bad {
+  fill: #BF653C;
+  background-color: #BF653C;
 }
-rect.range-bar.bad {
-  fill: #bf653c;
-}
-rect.range-bar.good {
+rect.range.good, #legend-region li.good {
   fill: #489162;
+  background-color: #489162;
 }
 #contextLines line {
   stroke-width: 3;
@@ -120,10 +130,6 @@ line#averageLine {
 }
 line#benchmarkLine {
   stroke: white;
-}
-.chart-label {
-  font-size: 10px;
-  font-family: Boomer-Book;
 }
 div.ttip {
   font-family: Boomer-Book;
@@ -138,24 +144,61 @@ div.ttip {
   z-index: 101;
 }
 div.ttip strong {
-  font-family: Boomer;
-  font-weight: bold;
+  font-family: BoomerCond;
+}
+#main-chart-region {
+  padding-bottom: 15px;
+}
+#legend-region li {
+  display: inline;
+  padding: 6px;
+}
+#legend-region li:last-child {
+  padding-left: 0;
+}
+#legend-region ul {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+select#js-filter-criterion {
+  margin-bottom: 0;
 }
 /*hospital view*/
+.hospital-info h3 {
+  font-family: BoomerCondBlack;;
+  margin-top: 0;
+}
 .hospital-info p {
   margin-bottom: 5px;
   line-height: 1em;
+}
+.address {
+  font-family: BoomerSlab-Light;
+  font-size: .9em;
+}
+.hospital-list h4 {
+  font-family: BoomerCond;
 }
 .hospital-list p {
   font-size: .9em;
   line-height: 1.3em;
   margin-bottom: 0;
 }
-.hospital-list hr {
-  margin-bottom: 10px;
+.hospital-list .hospital-list-item hr {
+  margin-top: 5px;
 }
 .hospital-list-item {
+  margin-top: 35px;
+}
+.hospital-list-item.not-available {
+  color: darkgray;
+}
+.hospital-list-item:not(.not-available) p {
   margin-top: 10px;
+}
+.hospital-list-item p strong {
+  font-family: BoomerCond;
+  font-weight: normal;
 }
 /*hospital charts*/
 .predicted {
@@ -169,4 +212,22 @@ div.ttip strong {
 .chart-label.txt { /*labels for the observed and predicted lines*/
   font-size: 12px;
   stroke-width: 1;
+}
+.legend-svg {
+  vertical-align: middle;
+  height: 15px;
+  width: 5px;
+}
+.legend-svg line {
+  stroke-width: 5px;
+}
+.legend-margin {
+  margin-left: 10px;
+}
+#detail-legend .chart-label {
+  margin-left: -3px;
+}
+#legend-region .chart-label:not(:last-child){
+  font-family: Boomer;
+  font-weight: bold;
 }

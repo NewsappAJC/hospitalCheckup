@@ -34,6 +34,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - dropdown menu accurately reflects selected filter on refresh/navigate
  - state average no longer hard-coded into the view
  - Comma formatted patient days
+ - selected hospital stays highlighted if it re-enters after exiting due to filters
  
 ## Todo
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
@@ -42,6 +43,7 @@ Explore hospital quality data for Atlanta area hospitals.
 - [ ] If someone clicks on already active nav item it shouldn't reload the layout
 - [ ] What if local storage is disabled?
 - [ ] Option to keep hospitals in same order so you can compare how they rate across categories
+- [ ] [Marionette.TemplateCache](https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.templatecache.md) for faster rendering  using 
 
 ##How to update
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)

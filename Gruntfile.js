@@ -141,7 +141,8 @@ module.exports = function(grunt) {
           'build/assets/js/apps/header/header_app.js': ['src/assets/js/apps/header/header_app.js'],
           'build/assets/js/common/chart_base_view.js': ['src/assets/js/common/chart_base_view.js'],
           'build/assets/js/common/chart_views.js': ['src/assets/js/common/chart_views.js'],
-          'build/assets/js/common/behaviors.js': ['src/assets/js/common/behaviors.js']
+          'build/assets/js/common/behaviors.js': ['src/assets/js/common/behaviors.js'],
+          'build/assets/js/entities/text.js': ['src/assets/js/entities/text.js']
         }
       }
     },
