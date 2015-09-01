@@ -68,17 +68,23 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     draw_base_bars: function(data) {
       var chart = this;
       var bars = chart.svg.select("#baseBars").selectAll(".base.bar")
-        .data(data);
+        .data(data, function(d){ return d.id });
 
-      bars.exit().remove();
+      bars.exit().transition().duration(chart.duration)
+        .style("opacity", 0).remove();
 
       bars.enter().append("rect")
         .attr("class", "base bar")
+        .style("opacity", 0)
         .attr("y", function(d) {
           return chart.yScale(d.display_name);
         })
         .attr("width", chart.dimensions.width)
         .attr("height", chart.bar_height);
+
+      bars.transition().duration(chart.duration)
+        .style("opacity", 1)
+        .attr("y", function(d){ return chart.yScale(d.display_name); })
     },
 
     draw_axes: function(data) {
@@ -175,14 +181,15 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       measure = chart.options.measure,
       section = chart.options.section;
 
-      var rangeBars = chart.svg.select("#rangeBars").selectAll(".range-bar")
-        .data(data);
+      var rangeBars = chart.svg.select("#rangeBars").selectAll(".range.bar")
+        .data(data, function(d){ return d.id });
 
-      rangeBars.exit().remove();
+      rangeBars.exit().transition().duration(chart.duration)
+        .style("opacity", 0).remove();
 
       rangeBars.enter()
       .append("rect")
-      .attr("class", "range-bar")
+      .attr("class", "range bar")
       .attr("x", function(d) {
         return chart.xScale(d[section][measure].lower);
       })
@@ -198,8 +205,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //update
       rangeBars.transition()
         .duration(chart.duration)
+        .style("opacity", 1)
         .attr("x", function(d) {
           return chart.xScale(d[section][measure].lower);
+        })
+        .attr("y", function(d) {
+          return chart.yScale(d.display_name);
         })
         .attr("width", function(d){
           return chart.xScale(d[section][measure].upper - d[section][measure].lower);
@@ -272,11 +283,13 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       stat = chart.options.stat;
 
       var circles = chart.svg.select("#statCircles").selectAll(".stat-circle")
-        .data(data);
+        .data(data, function(d){ return d.id });
 
-      circles.exit().remove();
+      circles.exit().transition().duration(chart.duration)
+        .style("opacity", 0).remove();;
 
       circles.enter().append("circle")
+        .style("opacity", 0)
         .attr("class", "stat-circle")
         .attr("cx", function(d) {
           return chart.xScale(d[section][measure][stat]);
@@ -290,10 +303,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //update
       circles.transition()
         .duration(chart.duration)
+        .style("opacity", 1)
         .attr("cx", function(d) {
           return chart.xScale(d[section][measure][stat]);
         })
-        .attr("y", function(d) {
+        .attr("cy", function(d) {
           return chart.yScale(d.display_name)+chart.bar_height/2;
         });
     },
