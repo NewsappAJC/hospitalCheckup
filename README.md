@@ -34,6 +34,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - dropdown menu accurately reflects selected filter on refresh/navigate
  - state average no longer hard-coded into the view
  - Comma formatted patient days
+ - selected hospital stays highlighted if it re-enters after exiting due to filters
  
 ## Todo
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in

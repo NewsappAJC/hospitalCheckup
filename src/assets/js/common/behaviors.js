@@ -4,7 +4,7 @@ HospitalCheckup.Behaviors = {
       "click .bar": "displayHospital",
       "click .range-bar": "displayHospital",
       "click .stat-circle": "displayHospital",
-      "click .hospital-label": "displayHospital"
+      "click .y.axis text": "displayHospital"
     },
 
     displayHospital: function(e){

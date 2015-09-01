@@ -105,7 +105,7 @@ option {
 .y.axis text, .bar, .stat-circle {
   cursor: pointer;
 }
-.hospital-label.active {
+.y.axis text.active {
   font-family: Boomer;
   font-weight: bold;
 }

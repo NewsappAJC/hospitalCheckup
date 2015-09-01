@@ -105,9 +105,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "y axis")
         .attr("y", 6)
         .call(chart.yAxis);
-
-      gy.selectAll("text")
-        .classed("hospital-label", true);
     },
 
     draw_data: function(data){
@@ -135,12 +132,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
 
       chart.draw_base_bars(filtered);
+      chart.onSelectHospital(chart.selected);
     },
 
-    onSelectHospital: function(label){ //triggered by show controller when hospital model changes
-      d3.selectAll(".hospital-label").classed("active", function(d){
+    onSelectHospital: function(label){
+      d3.selectAll(".y.axis text").classed("active", function(d){
         return d === label
       });
+      this.selected = label; //store it so we can check for it when new labels enter
     },
 
     set_tooltip: function(chart, obj, measure){
