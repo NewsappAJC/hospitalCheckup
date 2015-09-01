@@ -74,6 +74,13 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     initialize: function(options){
       //recieved from childViewOptions, template needs it
       this.model.set("measure", options.measure);
+    },
+    templateHelpers: function () {
+      return {
+        clip: function(num){
+          return d3.round(num, 2);
+        }
+      };
     }
   });
 
@@ -97,7 +104,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     onInfectionsFilter: function(criterion){
       this.measure = criterion;
       this.children.each(function(view){
-        view.model.set("measure", criterion)
+        view.model.set("measure", criterion);
       });
       this.render();
     }

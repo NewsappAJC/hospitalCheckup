@@ -10,6 +10,7 @@ src = json.load(f)
 f.close()
 
 tree = []
+ratingClasses = {"No Different than National Benchmark":"normal", "Better than the National Benchmark":"good", "Worse than the National Benchmark":"bad", "Not Available": ""}
 
 for node in src:
     hospital = {}
@@ -31,11 +32,12 @@ for node in src:
     for key in node.keys():
         tmp = key.lower().split("_")
         inf = tmp[0]
+        val = node[key]
         if inf in hospital["infections"]:
             param = tmp[1]
-            hospital["infections"][inf][param] = node[key]
+            hospital["infections"][inf][param] = val
 
-            if(param == "lower" and node[key] is None):
+            if(param == "lower" and val is None):
                 hospital["infections"][inf][param] = 0
 
             #how are incidents being calculated?
@@ -46,17 +48,20 @@ for node in src:
                     hospital["infections"][inf]["incidents_label"] = "Central line days"
                 elif(inf == "mrsa" or inf == "cdiff"):
                     hospital["infections"][inf]["incidents_label"] = "Patient days"
-                hospital["infections"][inf]["incidents"] = "{:,d}".format(node[key])
+                hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"
-                hospital["infections"][inf]["incidents"] = node[key]
+                hospital["infections"][inf]["incidents"] = val
                 del hospital["infections"][inf][param]
+
+            if(param == "category"):
+                hospital["infections"][inf]["ratingClass"] = ratingClasses[val]
         # if tmp[0] in keys: #for array lookup
         #if tmp[0] in infections:
-            #infections[tmp[0]][tmp[1]] = node[key]
+            #infections[tmp[0]][tmp[1]] = val
         #if tmp[0] in keys: #for array lookup
-            #hospital["infections"][keys.index(tmp[0])][tmp[0]][tmp[1]] = node[key]
+            #hospital["infections"][keys.index(tmp[0])][tmp[0]][tmp[1]] = val
 
     #we want to loop through an array of infection objects rather than k/v pairs
     #hospital["infections"] = [infections["cauti"], infections["clabsi"], infections["ssicolon"], infections["ssihyst"], infections["cdiff"], infections["mrsa"]]
