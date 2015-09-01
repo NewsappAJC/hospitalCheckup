@@ -233,9 +233,14 @@ select#js-filter-criterion {
 }
 
 /*mobile*/
-.mobile-rating {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin: 0 auto;
+@media (max-width: 405px){
+  .mobile-rating {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+  }
+  #hospital-show-region {
+    display: none;
+  }
 }
