@@ -31,7 +31,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           infectionsListLayout.bottomRegion.show(infectionsBottomView);
         });
 
-        infectionsListView.on("hospital:change", function(id){
+        infectionsListView.on("hospital:change", function(id){ //triggered by behaviors
           HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalChartsView);
         });
 
@@ -42,7 +42,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             collection: infections,
             base_height: 700,
             bar_padding: 4,
-            margin: {left: 195, right: 30, bottom: 20, top: 25},
+            margin: {left: 195, right: 10, bottom: 20, top: 25},
             measure: criterion || "cdiff",
             section: "infections",
             stat: "ratio"

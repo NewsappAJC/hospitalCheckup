@@ -3,7 +3,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
     showHospital: function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
 
       if(id){
-        if(!aboutView.model || aboutView.model.get("id") !== id){ //if the view is empty or the model has changed
+        if(!aboutView.model || aboutView.model.get("id") !== id){ //if the view is empty or the model has changed i.e. unless selected item clicked again
           var fetchingHospital = HospitalCheckup.request("hospital:entity", id);
           $.when(fetchingHospital).done(function(hospital){
             if(hospital !== undefined){
@@ -21,7 +21,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
         aboutView.model = model;
         chartsView.collection.reset(chartsView.get_hospital_models(model)); //collection will rerender itself when model is reset
         aboutView.render();
-        Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "select:hospital", model.get("display_name")); //add active class to chart label
+        Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "select:hospital", model.get("display_name")); //add active class to chart hospital label
       }
     }
   }

@@ -1,7 +1,7 @@
 # Hospital Checkup
 Explore hospital quality data for Atlanta area hospitals.
 
-- Published: by Sept. 1!
+- Published: by Sept. 15!
 - Lives here:
 - Hosted here:
 
@@ -23,7 +23,7 @@ Explore hospital quality data for Atlanta area hospitals.
 ## Notes
 - Rate == Ratio
 - Range (popup) is the confidence interval
-- Need to explain the benchmark is always 1 (right???)
+- Need to explain the benchmark is always 1
 
 ##Improvements on original hospital quality app
  - Active menu item is highlighted
@@ -37,6 +37,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - selected hospital stays highlighted if it re-enters after exiting due to filters
  
 ## Todo
+- [ ] Spell out infection names in infection bottom text
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
