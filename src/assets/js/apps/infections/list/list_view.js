@@ -67,4 +67,39 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       }
     }
   });
+
+  List.MobileRow = Marionette.ItemView.extend({
+    tagName: "tr",
+    template: "#mobile-tr-template",
+    initialize: function(options){
+      //recieved from childViewOptions, template needs it
+      this.model.set("measure", options.measure);
+    }
+  });
+
+  List.MobileList = Marionette.CompositeView.extend({
+    tagName: "table",
+    className: "columns",
+    id: "mobile-list",
+    template: "#mobile-table-template",
+    childView: List.MobileRow,
+    childViewContainer: "tbody",
+    initialize: function(options){
+      this.measure = options.measure;
+    },
+    childViewOptions: function(model, index) {
+      return { measure: this.measure }
+    },
+    filter: function(child, index, collection){
+      //don't show items will null ratios
+      return !child.get("infections")[this.measure].na
+    },
+    onInfectionsFilter: function(criterion){
+      this.measure = criterion;
+      this.children.each(function(view){
+        view.model.set("measure", criterion)
+      });
+      this.render();
+    }
+  });
 });
