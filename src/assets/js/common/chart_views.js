@@ -106,8 +106,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
 
       gy.selectAll("text")
-      .classed("hospital-label", true)
-        .data(_.map(data, function(d) { return { id: d.id }})) //using the filtered data so it should be in same order as labels but this is risky, can't use key function to match it up bc the labels don't have keys in their data. Couldn't find any other way to attatch additional data to the axis labels
+        .classed("hospital-label", true);
     },
 
     draw_data: function(data){
@@ -137,9 +136,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.draw_base_bars(filtered);
     },
 
-    onSelectHospital: function(id){ //triggered by show controller when hospital model changes
+    onSelectHospital: function(label){ //triggered by show controller when hospital model changes
       d3.selectAll(".hospital-label").classed("active", function(d){
-        return d.id === id
+        return d === label
       });
     },
 
