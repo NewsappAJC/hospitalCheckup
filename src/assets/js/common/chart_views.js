@@ -225,7 +225,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("width", function(d){
           return chart.xScale(d[section][measure].upper - d[section][measure].lower);
         })
-        .transition().each(function(d){
+        .each(function(d){
           var category = d[section][measure].category;
           if(category === "No Different than National Benchmark"){
             d3.select(this).classed({"normal": true, "good": false, "bad": false});
