@@ -69,7 +69,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     draw_base_bars: function(data) {
       var chart = this;
       var bars = chart.svg.select("#baseBars").selectAll(".base.bar")
-        .data(data, function(d){ return d.id });
+        .data(data);
+        //.data(data, function(d){ return d.id });
 
       bars.exit().transition().duration(chart.duration)
         .ease(chart.easing)
@@ -87,7 +88,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       bars.transition().duration(chart.duration)
         .ease(chart.easing)
         .style("opacity", 1)
-        .attr("y", function(d){ return chart.yScale(d.display_name); })
+        //.attr("y", function(d){ return chart.yScale(d.display_name); })
     },
 
     draw_axes: function(data) {
