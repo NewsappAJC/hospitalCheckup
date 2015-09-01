@@ -8,6 +8,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.section = options.section || "infections";
       this.options.stat = options.stat || "ratio";
       this.duration = 500;
+      this.easing = "sin-in-out"; // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
       this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
       this.$chart_container.attr('id', this.el.id+"-container");
       return this;
@@ -71,6 +72,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .data(data, function(d){ return d.id });
 
       bars.exit().transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 0).remove();
 
       bars.enter().append("rect")
@@ -83,6 +85,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("height", chart.bar_height);
 
       bars.transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 1)
         .attr("y", function(d){ return chart.yScale(d.display_name); })
     },
@@ -120,15 +123,15 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.svg.select("#axes").selectAll(".x.axis")
         .transition().duration(chart.duration)
-        .ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-        .attr("transform", "translate(0," + height + ")") //TODO looks weird bc it shouldn't start at 0
+        .ease(chart.easing)  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+        .attr("transform", "translate(0," + height + ")")
         .call(chart.xAxis);
 
       chart.yScale.rangeBands([0, height]).domain(_.map(filtered, function(d) { return d.display_name; }));
 
       chart.svg.select("#axes").selectAll(".y.axis")
         .transition().duration(chart.duration)
-        .ease("sin-in-out")
+        .ease(chart.easing)
         .call(chart.yAxis);
 
       chart.draw_base_bars(filtered);
@@ -185,11 +188,13 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .data(data, function(d){ return d.id });
 
       rangeBars.exit().transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 0).remove();
 
       rangeBars.enter()
       .append("rect")
       .attr("class", "range bar")
+        .style("opacity", 0)
       .attr("x", function(d) {
         return chart.xScale(d[section][measure].lower);
       })
@@ -203,8 +208,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.set_tooltip(chart, rangeBars, measure);
 
       //update
-      rangeBars.transition()
-        .duration(chart.duration)
+      rangeBars.transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 1)
         .attr("x", function(d) {
           return chart.xScale(d[section][measure].lower);
@@ -253,6 +258,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "chart-label")
         .attr("id", "avgTxt")
         .transition().duration(chart.duration)
+        .ease(chart.easing)
         .attr("x", chart.xScale(avg))
         .attr("y", -5);
 
@@ -286,6 +292,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .data(data, function(d){ return d.id });
 
       circles.exit().transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 0).remove();;
 
       circles.enter().append("circle")
@@ -301,8 +308,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         chart.set_tooltip(chart, circles, measure);
 
       //update
-      circles.transition()
-        .duration(chart.duration)
+      circles.transition().duration(chart.duration)
+        .ease(chart.easing)
         .style("opacity", 1)
         .attr("cx", function(d) {
           return chart.xScale(d[section][measure][stat]);
@@ -327,12 +334,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //update context lines
       chart.svg.select("#averageLine")
         .transition().duration(chart.duration)
+        .ease(chart.easing)
         .attr("y2", height)
         .attr("x1", chart.xScale(avg))
         .attr("x2", chart.xScale(avg));
 
       chart.svg.select("#avgTxt")
         .transition().duration(chart.duration)
+        .ease(chart.easing)
         .attr("x", chart.xScale(avg))
         .text("State SIR: " + avg)
         .attr("text-anchor", function(){
@@ -343,12 +352,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.svg.select("#benchmarkLine")
         .transition().duration(chart.duration)
+        .ease(chart.easing)
         .attr("y2", height)
         .attr("x1", chart.xScale(1)) //benchmark is always 1
         .attr("x2", chart.xScale(1));
 
       chart.svg.select("#benchmarkTxt")
         .transition().duration(chart.duration)
+        .ease(chart.easing)
         .attr("x", chart.xScale(1))
         .attr("text-anchor", function(){
           if(avg < 1){
