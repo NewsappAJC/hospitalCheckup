@@ -105,6 +105,10 @@ option {
 .y.axis text, .bar, .stat-circle {
   cursor: pointer;
 }
+.hospital-label.active {
+  font-family: Boomer;
+  font-weight: bold;
+}
 /*charts extended*/
 rect.range.normal, #legend-region li.normal {
   fill: #49709F;

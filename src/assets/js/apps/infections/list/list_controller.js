@@ -42,7 +42,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
             collection: infections,
             base_height: 700,
             bar_padding: 4,
-            margin: {left: 190, right: 30, bottom: 20, top: 25},
+            margin: {left: 195, right: 30, bottom: 20, top: 25},
             measure: criterion || "cdiff",
             section: "infections",
             stat: "ratio"

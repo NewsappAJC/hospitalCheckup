@@ -137,6 +137,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.draw_base_bars(filtered);
     },
 
+    onSelectHospital: function(id){ //triggered by show controller when hospital model changes
+      d3.selectAll(".hospital-label").classed("active", function(d){
+        return d.id === id
+      });
+    },
+
     set_tooltip: function(chart, obj, measure){
       obj.on("mouseover", function(d) {
         chart.attach_tooltip(d, measure);

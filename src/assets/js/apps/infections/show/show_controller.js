@@ -21,6 +21,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
         aboutView.model = model;
         chartsView.collection.reset(chartsView.get_hospital_models(model)); //collection will rerender itself when model is reset
         aboutView.render();
+        Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "select:hospital", model.get("id")); //add active class to chart label
       }
     }
   }
