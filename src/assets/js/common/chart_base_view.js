@@ -129,5 +129,10 @@ var ChartBaseView = Backbone.View.extend({
     this[axis+"Axis"] = d3.svg.axis()
       .scale(this[axis+"Scale"])
       .orient(orientation);
+
+    //too many ticks on tablets
+    if(this.dimensions.wrapperWidth < 410 && axis === "x"){
+      this.xAxis.ticks(5)
+    }
   }
 });
