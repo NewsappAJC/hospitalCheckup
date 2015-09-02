@@ -16,11 +16,11 @@ var ChartBaseView = Backbone.View.extend({
   constructor: function(options) {
     this.default_options = {
       base_height: 320,
-      breakpoints: {
+      /*breakpoints: {
         // width->height multiplier
         "768": 0.9,
         "420": 0.7
-      },
+      },*/
       margin: {
         top: 20,
         right: 30,
@@ -32,10 +32,10 @@ var ChartBaseView = Backbone.View.extend({
 
     this.options = $.extend(true, this.default_options, options);
 
-    var breakpoints = _.pairs(this.options.breakpoints);
+    /*var breakpoints = _.pairs(this.options.breakpoints);
     this.options.breakpoints = _.sortBy(breakpoints, function(item) {
       return Number(item[0]);
-    });
+    });*/
 
     // Fallback if d3 is unavailable, add some formatters otherwise.
     if (!this.d3) {
@@ -68,7 +68,7 @@ var ChartBaseView = Backbone.View.extend({
     var width = wrapperWidth - this.options.margin.left - this.options.margin.right;
     var height = this.options.base_height - this.options.margin.bottom - this.options.margin.top;
 
-    _.every(this.options.breakpoints, _.bind(function(breakpoint) {
+    /*_.every(this.options.breakpoints, _.bind(function(breakpoint) {
       var width = breakpoint[0];
       if (window_width <= width) {
         var multiplier = breakpoint[1];
@@ -76,7 +76,7 @@ var ChartBaseView = Backbone.View.extend({
         return false;
       }
       return true;
-    }, this));
+    }, this));*/
 
     wrapperHeight = height + this.options.margin.top + this.options.margin.bottom;
 
