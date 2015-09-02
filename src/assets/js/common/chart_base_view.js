@@ -60,7 +60,10 @@ var ChartBaseView = Backbone.View.extend({
     else if (this.options.data)
       this.data = this.options.data;
 
-    $(window).on("resize", _.debounce(_.bind(this.render, this), 100));
+    //$(window).on("resize", _.debounce(_.bind(this.render, this), 100));
+    if(Modernizr.touch){
+      window.addEventListener("orientationchange", _.debounce(_.bind(this.render, this), 100), false);
+    }
   },
   get_dimensions: function() {
     var window_width = $(window).width();
