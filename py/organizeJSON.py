@@ -14,15 +14,9 @@ tree = []
 for node in src:
     hospital = {}
     hospital["id"] = node["provider_id"]
-    hospital["provider_name"] = node["hospital_name"]
+    #hospital["provider_name"] = node["hospital_name"]
     hospital["display_name"] = node["ajc_hospital_name"]
-    hospital["address"] = {
-        "street" : node["address"],
-        "city" : node["city"],
-        "state" : node["state"],
-        "zip" : node["zip_code"],
-        "county" : node["county_name"]
-    }
+    hospital["address"] = node["address"]
     hospital["infections"] = {
             "cauti" : {}, "clabsi" : {}, "mrsa" : {}, "ssicolon" : {}, "ssihyst" : {}, "cdiff" : {}
     }

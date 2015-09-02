@@ -10,13 +10,7 @@
   }, 
   "hospitals": [
     {
-      "address": {
-        "city": "CUMMING", 
-        "county": "FORSYTH", 
-        "state": "GA", 
-        "street": "1200 NORTHSIDE FORSYTH DRIVE", 
-        "zip": "30041"
-      }, 
+      "address": "1200 NORTHSIDE FORSYTH DRIVE", 
       "display_name": "Northside Hospital Forsyth", 
       "id": "110005", 
       "infections": {
@@ -92,17 +86,10 @@
           "ratio": 0, 
           "upper": 1.328
         }
-      }, 
-      "provider_name": "NORTHSIDE HOSPITAL FORSYTH"
+      }
     }, 
     {
-      "address": {
-        "city": "ATHENS", 
-        "county": "CLARKE", 
-        "state": "GA", 
-        "street": "1230 BAXTER STREET", 
-        "zip": "30606"
-      }, 
+      "address": "1230 BAXTER STREET", 
       "display_name": "Saint Mary's Hospital", 
       "id": "110006", 
       "infections": {
@@ -178,17 +165,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "ST MARY'S HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "CANTON", 
-        "county": "CHEROKEE", 
-        "state": "GA", 
-        "street": "201 HOSPITAL ROAD", 
-        "zip": "30114"
-      }, 
+      "address": "201 HOSPITAL ROAD", 
       "display_name": "Northside Hospital Cherokee", 
       "id": "110008", 
       "infections": {
@@ -264,17 +244,10 @@
           "ratio": 0, 
           "upper": 2.169
         }
-      }, 
-      "provider_name": "NORTHSIDE HOSPITAL CHEROKEE"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "DEKALB", 
-        "state": "GA", 
-        "street": "1364 CLIFTON ROAD, NE", 
-        "zip": "30322"
-      }, 
+      "address": "1364 CLIFTON ROAD, NE", 
       "display_name": "Emory University Hospital", 
       "id": "110010", 
       "infections": {
@@ -350,17 +323,10 @@
           "ratio": 0, 
           "upper": 2.195
         }
-      }, 
-      "provider_name": "EMORY UNIVERSITY HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "CARROLLTON", 
-        "county": "CARROLL", 
-        "state": "GA", 
-        "street": "705 DIXIE STREET", 
-        "zip": "30117"
-      }, 
+      "address": "705 DIXIE STREET", 
       "display_name": "Tanner Medical Center Carrollton", 
       "id": "110011", 
       "infections": {
@@ -436,17 +402,10 @@
           "ratio": 0.841, 
           "upper": 4.148
         }
-      }, 
-      "provider_name": "TANNER MEDICAL CENTER - CARROLLTON"
+      }
     }, 
     {
-      "address": {
-        "city": "COVINGTON", 
-        "county": "NEWTON", 
-        "state": "GA", 
-        "street": "5126 HOSPITAL DRIVE NE", 
-        "zip": "30014"
-      }, 
+      "address": "5126 HOSPITAL DRIVE NE", 
       "display_name": "Newton Medical Center", 
       "id": "110018", 
       "infections": {
@@ -522,17 +481,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "NEWTON MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "GAINESVILLE", 
-        "county": "HALL", 
-        "state": "GA", 
-        "street": "743 SPRING STREET", 
-        "zip": "30501"
-      }, 
+      "address": "743 SPRING STREET", 
       "display_name": "Northeast Georgia Medical Center", 
       "id": "110029", 
       "infections": {
@@ -608,17 +560,10 @@
           "ratio": 0.489, 
           "upper": 1.33
         }
-      }, 
-      "provider_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC"
+      }
     }, 
     {
-      "address": {
-        "city": "CARTERSVILLE", 
-        "county": "BARTOW", 
-        "state": "GA", 
-        "street": "960 JOE FRANK HARRIS PARKWAY", 
-        "zip": "30120"
-      }, 
+      "address": "960 JOE FRANK HARRIS PARKWAY", 
       "display_name": "Cartersville Medical Center", 
       "id": "110030", 
       "infections": {
@@ -694,17 +639,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "CARTERSVILLE MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "GRIFFIN", 
-        "county": "SPALDING", 
-        "state": "GA", 
-        "street": "601 SOUTH 8TH STREET", 
-        "zip": "30223"
-      }, 
+      "address": "601 SOUTH 8TH STREET", 
       "display_name": "Spalding Regional Hospital", 
       "id": "110031", 
       "infections": {
@@ -780,17 +718,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "SPALDING REGIONAL HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "MARIETTA", 
-        "county": "COBB", 
-        "state": "GA", 
-        "street": "677 CHURCH STREET", 
-        "zip": "30060"
-      }, 
+      "address": "677 CHURCH STREET", 
       "display_name": "Wellstar Kennestone Hospital", 
       "id": "110035", 
       "infections": {
@@ -866,17 +797,10 @@
           "ratio": 0.844, 
           "upper": 2.035
         }
-      }, 
-      "provider_name": "WELLSTAR KENNESTONE HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "HIRAM", 
-        "county": "PAULDING", 
-        "state": "GA", 
-        "street": "2518 JIMMY LEE SMITH PARKWAY", 
-        "zip": "30141"
-      }, 
+      "address": "2518 JIMMY LEE SMITH PARKWAY", 
       "display_name": "Wellstar Paulding Hospital", 
       "id": "110042", 
       "infections": {
@@ -952,17 +876,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "WELLSTAR PAULDING HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "ROME", 
-        "county": "FLOYD", 
-        "state": "GA", 
-        "street": "304 TURNER MCCALL BLVD P O BOX 233", 
-        "zip": "30162"
-      }, 
+      "address": "304 TURNER MCCALL BLVD P O BOX 233", 
       "display_name": "Floyd Medical Center", 
       "id": "110054", 
       "infections": {
@@ -1038,17 +955,10 @@
           "ratio": 0.255, 
           "upper": 1.26
         }
-      }, 
-      "provider_name": "FLOYD MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "ATHENS", 
-        "county": "CLARKE", 
-        "state": "GA", 
-        "street": "1199 PRINCE AVENUE", 
-        "zip": "30606"
-      }, 
+      "address": "1199 PRINCE AVENUE", 
       "display_name": "Athens Regional Medical Center", 
       "id": "110074", 
       "infections": {
@@ -1124,17 +1034,10 @@
           "ratio": 1.517, 
           "upper": 4.13
         }
-      }, 
-      "provider_name": "ATHENS REGIONAL MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "DECATUR", 
-        "county": "DEKALB", 
-        "state": "GA", 
-        "street": "2701 N DECATUR ROAD", 
-        "zip": "30033"
-      }, 
+      "address": "2701 N DECATUR ROAD", 
       "display_name": "Dekalb Medical Center", 
       "id": "110076", 
       "infections": {
@@ -1210,17 +1113,10 @@
           "ratio": 2.208, 
           "upper": 4.593
         }
-      }, 
-      "provider_name": "DEKALB MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "550 PEACHTREE ST NE", 
-        "zip": "30308"
-      }, 
+      "address": "550 PEACHTREE ST NE", 
       "display_name": "Emory University Hospital Midtown", 
       "id": "110078", 
       "infections": {
@@ -1296,17 +1192,10 @@
           "ratio": 1.19, 
           "upper": 3.24
         }
-      }, 
-      "provider_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "80 JESSE HILL, JR DRIVE SE", 
-        "zip": "30303"
-      }, 
+      "address": "80 JESSE HILL, JR DRIVE SE", 
       "display_name": "Grady Memorial Hospital", 
       "id": "110079", 
       "infections": {
@@ -1382,17 +1271,10 @@
           "ratio": 1.939, 
           "upper": 4.677
         }
-      }, 
-      "provider_name": "GRADY MEMORIAL HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "5665 PEACHTREE DUNWOODY ROAD", 
-        "zip": "30342"
-      }, 
+      "address": "5665 PEACHTREE DUNWOODY ROAD", 
       "display_name": "Emory Saint Joseph's Hospital", 
       "id": "110082", 
       "infections": {
@@ -1468,17 +1350,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "1968 PEACHTREE RD NW", 
-        "zip": "30309"
-      }, 
+      "address": "1968 PEACHTREE RD NW", 
       "display_name": "Piedmont Hospital", 
       "id": "110083", 
       "infections": {
@@ -1554,17 +1429,10 @@
           "ratio": 1.995, 
           "upper": 3.946
         }
-      }, 
-      "provider_name": "PIEDMONT HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "LAWRENCEVILLE", 
-        "county": "GWINNETT", 
-        "state": "GA", 
-        "street": "1000 MEDICAL CENTER BOULEVARD", 
-        "zip": "30045"
-      }, 
+      "address": "1000 MEDICAL CENTER BOULEVARD", 
       "display_name": "Gwinnett Medical Center", 
       "id": "110087", 
       "infections": {
@@ -1640,17 +1508,10 @@
           "ratio": 1.932, 
           "upper": 5.257
         }
-      }, 
-      "provider_name": "GWINNETT MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "CONYERS", 
-        "county": "ROCKDALE", 
-        "state": "GA", 
-        "street": "1412 MILSTEAD AVENUE, NE", 
-        "zip": "30012"
-      }, 
+      "address": "1412 MILSTEAD AVENUE, NE", 
       "display_name": "Rockdale Medical Center", 
       "id": "110091", 
       "infections": {
@@ -1726,17 +1587,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "ROCKDALE MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "303 PARKWAY DR NE", 
-        "zip": "30312"
-      }, 
+      "address": "303 PARKWAY DR NE", 
       "display_name": "Atlanta Medical Center", 
       "id": "110115", 
       "infections": {
@@ -1812,17 +1666,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "ATLANTA MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "AUSTELL", 
-        "county": "COBB", 
-        "state": "GA", 
-        "street": "3950 AUSTELL RD", 
-        "zip": "30106"
-      }, 
+      "address": "3950 AUSTELL RD", 
       "display_name": "Wellstar Cobb Hospital", 
       "id": "110143", 
       "infections": {
@@ -1898,17 +1745,10 @@
           "ratio": 1.378, 
           "upper": 2.866
         }
-      }, 
-      "provider_name": "WELLSTAR COBB HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "ATLANTA", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "1000 JOHNSON FERRY ROAD, NE", 
-        "zip": "30342"
-      }, 
+      "address": "1000 JOHNSON FERRY ROAD, NE", 
       "display_name": "Northside Hospital", 
       "id": "110161", 
       "infections": {
@@ -1984,17 +1824,10 @@
           "ratio": 0.619, 
           "upper": 1.103
         }
-      }, 
-      "provider_name": "NORTHSIDE HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "RIVERDALE", 
-        "county": "CLAYTON", 
-        "state": "GA", 
-        "street": "11 UPPER RIVERDALE ROAD, SW", 
-        "zip": "30274"
-      }, 
+      "address": "11 UPPER RIVERDALE ROAD, SW", 
       "display_name": "Southern Regional Medical Center", 
       "id": "110165", 
       "infections": {
@@ -2070,17 +1903,10 @@
           "ratio": 1.422, 
           "upper": 3.871
         }
-      }, 
-      "provider_name": "SOUTHERN REGIONAL MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "ROME", 
-        "county": "FLOYD", 
-        "state": "GA", 
-        "street": "501 REDMOND ROAD", 
-        "zip": "30165"
-      }, 
+      "address": "501 REDMOND ROAD", 
       "display_name": "Redmond Regional Medical Center", 
       "id": "110168", 
       "infections": {
@@ -2156,17 +1982,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "REDMOND REGIONAL MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "DOUGLASVILLE", 
-        "county": "DOUGLAS", 
-        "state": "GA", 
-        "street": "8954 HOSPITAL DRIVE", 
-        "zip": "30134"
-      }, 
+      "address": "8954 HOSPITAL DRIVE", 
       "display_name": "Wellstar Douglas Hospital", 
       "id": "110184", 
       "infections": {
@@ -2242,17 +2061,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "WELLSTAR DOUGLAS HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "STOCKBRIDGE", 
-        "county": "HENRY", 
-        "state": "GA", 
-        "street": "1133 EAGLE'S LANDING PARKWAY", 
-        "zip": "30281"
-      }, 
+      "address": "1133 EAGLE'S LANDING PARKWAY", 
       "display_name": "Piedmont Henry Hospital", 
       "id": "110191", 
       "infections": {
@@ -2328,17 +2140,10 @@
           "ratio": 0, 
           "upper": 1.244
         }
-      }, 
-      "provider_name": "PIEDMONT HENRY HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "SNELLVILLE", 
-        "county": "GWINNETT", 
-        "state": "GA", 
-        "street": "1700 MEDICAL WAY", 
-        "zip": "30078"
-      }, 
+      "address": "1700 MEDICAL WAY", 
       "display_name": "Eastside Medical Center", 
       "id": "110192", 
       "infections": {
@@ -2414,17 +2219,10 @@
           "ratio": 1.63, 
           "upper": 5.385
         }
-      }, 
-      "provider_name": "EASTSIDE MEDICAL CENTER"
+      }
     }, 
     {
-      "address": {
-        "city": "ROSWELL", 
-        "county": "FULTON", 
-        "state": "GA", 
-        "street": "3000 HOSPITAL BOULEVARD", 
-        "zip": "30076"
-      }, 
+      "address": "3000 HOSPITAL BOULEVARD", 
       "display_name": "North Fulton Hospital", 
       "id": "110198", 
       "infections": {
@@ -2500,17 +2298,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "NORTH FULTON HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "FAYETTEVILLE", 
-        "county": "FAYETTE", 
-        "state": "GA", 
-        "street": "1255 HIGHWAY 54 WEST", 
-        "zip": "30214"
-      }, 
+      "address": "1255 HIGHWAY 54 WEST", 
       "display_name": "Piedmont Fayette Hospital", 
       "id": "110215", 
       "infections": {
@@ -2586,17 +2377,10 @@
           "ratio": 0.722, 
           "upper": 2.386
         }
-      }, 
-      "provider_name": "PIEDMONT FAYETTE HOSPITAL"
+      }
     }, 
     {
-      "address": {
-        "city": "JASPER", 
-        "county": "PICKENS", 
-        "state": "GA", 
-        "street": "1266 HIGHWAY 515 SOUTH", 
-        "zip": "30143"
-      }, 
+      "address": "1266 HIGHWAY 515 SOUTH", 
       "display_name": "Piedmont Mountainside Hospital", 
       "id": "110225", 
       "infections": {
@@ -2672,17 +2456,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC"
+      }
     }, 
     {
-      "address": {
-        "city": "NEWNAN", 
-        "county": "COWETA", 
-        "state": "GA", 
-        "street": "745 POPLAR ROAD", 
-        "zip": "30265"
-      }, 
+      "address": "745 POPLAR ROAD", 
       "display_name": "Piedmont Newnan Hospital", 
       "id": "110229", 
       "infections": {
@@ -2758,17 +2535,10 @@
           "ratio": null, 
           "upper": null
         }
-      }, 
-      "provider_name": "PIEDMONT NEWNAN HOSPITAL, INC"
+      }
     }, 
     {
-      "address": {
-        "city": "JOHNS CREEK", 
-        "county": "CHATTOOGA", 
-        "state": "GA", 
-        "street": "6325 HOSPITAL PARKWAY", 
-        "zip": "30097"
-      }, 
+      "address": "6325 HOSPITAL PARKWAY", 
       "display_name": "Emory Johns Creek Hospital", 
       "id": "110230", 
       "infections": {
@@ -2844,8 +2614,7 @@
           "ratio": 0, 
           "upper": 2.731
         }
-      }, 
-      "provider_name": "EMORY JOHNS CREEK HOSPITAL"
+      }
     }
   ]
 }
