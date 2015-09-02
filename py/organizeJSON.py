@@ -74,3 +74,38 @@ f.close()
 
 print "hospital infections JSON saved!"
 print "infection state avg JSON saved!"
+
+f = open( '../src/assets/data/src/hip_knee.json', 'rU' )
+src = json.load(f)
+f.close()
+
+tree = []
+
+for node in src:
+    hospital = {}
+    hospital["id"] = node["ProviderNumber"]
+    hospital["display_name"] = node["HospitalName"]
+    hospital["address"] = node["Adress"]
+    hospital["measures"] = {
+            "readmission" : {}, "cd" : {}
+    }
+
+    #loop through keys looking for the infection substrings and create objects to hold their common properties
+    for key in node.keys():
+        tmp = key.lower().split("_")
+        measure = tmp[0]
+        if measure in hospital["measures"]:
+            param = tmp[1]
+
+            if(param == "rsrr" or param == "rscr"):
+                hospital["measures"][measure]["rate"] = node[key]
+            elif(param != "notes"):
+                hospital["measures"][measure][param] = node[key]
+
+    tree.append(hospital)
+
+f = open( '../src/assets/data/hipknee.json', 'w')
+f.write(json.dumps(tree, indent=2, sort_keys=True))
+f.close()
+
+print "hospital hipknee JSON saved!"

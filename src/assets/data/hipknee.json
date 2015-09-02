@@ -1,0 +1,662 @@
+[
+  {
+    "address": "1200 NORTHSIDE FORSYTH DRIVE", 
+    "display_name": "Northside Hospital Forsyth", 
+    "id": "110005", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.2, 
+        "patients": 410, 
+        "rate": 3.3, 
+        "upper": 4.7
+      }, 
+      "readmission": {
+        "lower": 3.1, 
+        "patients": 414, 
+        "rate": 4.2, 
+        "upper": 5.8
+      }
+    }
+  }, 
+  {
+    "address": "1230 BAXTER STREET", 
+    "display_name": "Saint Mary's Hospital", 
+    "id": "110006", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.2, 
+        "patients": 1237, 
+        "rate": 2.9, 
+        "upper": 4
+      }, 
+      "readmission": {
+        "lower": 3.2, 
+        "patients": 1309, 
+        "rate": 4, 
+        "upper": 5
+      }
+    }
+  }, 
+  {
+    "address": "201 HOSPITAL ROAD", 
+    "display_name": "Northside Hospital Cherokee", 
+    "id": "110008", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.3, 
+        "patients": 174, 
+        "rate": 3.6, 
+        "upper": 5.7
+      }, 
+      "readmission": {
+        "lower": 3.3, 
+        "patients": 181, 
+        "rate": 4.7, 
+        "upper": 6.7
+      }
+    }
+  }, 
+  {
+    "address": "1364 CLIFTON ROAD, NE", 
+    "display_name": "Emory University Hospital", 
+    "id": "110010", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.8, 
+        "patients": 858, 
+        "rate": 2.6, 
+        "upper": 3.5
+      }, 
+      "readmission": {
+        "lower": 2.5, 
+        "patients": 896, 
+        "rate": 3.4, 
+        "upper": 4.4
+      }
+    }
+  }, 
+  {
+    "address": "705 DIXIE STREET", 
+    "display_name": "Tanner Medical Center Carrollton", 
+    "id": "110011", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.3, 
+        "patients": 295, 
+        "rate": 3.5, 
+        "upper": 5.2
+      }, 
+      "readmission": {
+        "lower": 3.1, 
+        "patients": 300, 
+        "rate": 4.4, 
+        "upper": 6.1
+      }
+    }
+  }, 
+  {
+    "address": "5126 HOSPITAL DRIVE NE", 
+    "display_name": "Newton Medical Center", 
+    "id": "110018", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.7, 
+        "patients": 137, 
+        "rate": 2.8, 
+        "upper": 4.6
+      }, 
+      "readmission": {
+        "lower": 3.7, 
+        "patients": 137, 
+        "rate": 5.3, 
+        "upper": 7.5
+      }
+    }
+  }, 
+  {
+    "address": "743 SPRING STREET", 
+    "display_name": "Northeast Georgia Medical Center", 
+    "id": "110029", 
+    "measures": {
+      "cd": {
+        "category": "Better than the National Rate", 
+        "lower": 1.5, 
+        "patients": 1188, 
+        "rate": 2.1, 
+        "upper": 2.9
+      }, 
+      "readmission": {
+        "lower": 4, 
+        "patients": 1270, 
+        "rate": 5, 
+        "upper": 6.1
+      }
+    }
+  }, 
+  {
+    "address": "960 JOE FRANK HARRIS PARKWAY", 
+    "display_name": "Cartersville Medical Center", 
+    "id": "110030", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.2, 
+        "patients": 233, 
+        "rate": 3.5, 
+        "upper": 5.4
+      }, 
+      "readmission": {
+        "lower": 3.4, 
+        "patients": 234, 
+        "rate": 4.9, 
+        "upper": 6.8
+      }
+    }
+  }, 
+  {
+    "address": "601 SOUTH 8TH STREET", 
+    "display_name": "Spalding Regional Hospital", 
+    "id": "110031", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.6, 
+        "patients": 138, 
+        "rate": 4.1, 
+        "upper": 6.4
+      }, 
+      "readmission": {
+        "lower": 3.9, 
+        "patients": 141, 
+        "rate": 5.7, 
+        "upper": 8.1
+      }
+    }
+  }, 
+  {
+    "address": "677 CHURCH STREET", 
+    "display_name": "Wellstar Kennestone Hospital", 
+    "id": "110035", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2, 
+        "patients": 881, 
+        "rate": 2.8, 
+        "upper": 3.9
+      }, 
+      "readmission": {
+        "lower": 4.2, 
+        "patients": 937, 
+        "rate": 5.2, 
+        "upper": 6.6
+      }
+    }
+  }, 
+  {
+    "address": "2518 JIMMY LEE SMITH PARKWAY", 
+    "display_name": "Wellstar Paulding Hospital", 
+    "id": "110042", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2, 
+        "patients": 62, 
+        "rate": 3.4, 
+        "upper": 5.7
+      }, 
+      "readmission": {
+        "lower": 3.4, 
+        "patients": 70, 
+        "rate": 5, 
+        "upper": 7.4
+      }
+    }
+  }, 
+  {
+    "address": "304 TURNER MCCALL BLVD P O BOX 233", 
+    "display_name": "Floyd Medical Center", 
+    "id": "110054", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.1, 
+        "patients": 279, 
+        "rate": 3.3, 
+        "upper": 5
+      }, 
+      "readmission": {
+        "lower": 3.8, 
+        "patients": 288, 
+        "rate": 5.3, 
+        "upper": 7.1
+      }
+    }
+  }, 
+  {
+    "address": "1199 PRINCE AVENUE", 
+    "display_name": "Athens Regional Medical Center", 
+    "id": "110074", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.8, 
+        "patients": 147, 
+        "rate": 4.4, 
+        "upper": 6.8
+      }, 
+      "readmission": {
+        "lower": 4.2, 
+        "patients": 147, 
+        "rate": 5.9, 
+        "upper": 8.1
+      }
+    }
+  }, 
+  {
+    "address": "2701 N DECATUR ROAD", 
+    "display_name": "Dekalb Medical Center", 
+    "id": "110076", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.5, 
+        "patients": 490, 
+        "rate": 2.4, 
+        "upper": 3.5
+      }, 
+      "readmission": {
+        "lower": 3.7, 
+        "patients": 518, 
+        "rate": 4.9, 
+        "upper": 6.4
+      }
+    }
+  }, 
+  {
+    "address": "550 PEACHTREE ST NE", 
+    "display_name": "Emory University Hospital Midtown", 
+    "id": "110078", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2, 
+        "patients": 275, 
+        "rate": 2.9, 
+        "upper": 4.4
+      }, 
+      "readmission": {
+        "lower": 3.2, 
+        "patients": 287, 
+        "rate": 4.5, 
+        "upper": 6.2
+      }
+    }
+  }, 
+  {
+    "address": "80 JESSE HILL, JR DRIVE SE", 
+    "display_name": "Grady Memorial Hospital", 
+    "id": "110079", 
+    "measures": {
+      "cd": {
+        "category": "Number of Cases Too Small", 
+        "lower": 0, 
+        "patients": 0, 
+        "rate": 0, 
+        "upper": 0
+      }, 
+      "readmission": {
+        "lower": 0, 
+        "patients": 0, 
+        "rate": 0, 
+        "upper": 0
+      }
+    }
+  }, 
+  {
+    "address": "5665 PEACHTREE DUNWOODY ROAD", 
+    "display_name": "Emory Saint Joseph's Hospital", 
+    "id": "110082", 
+    "measures": {
+      "cd": {
+        "category": "Better than the National Rate", 
+        "lower": 1, 
+        "patients": 1293, 
+        "rate": 1.4, 
+        "upper": 2.1
+      }, 
+      "readmission": {
+        "lower": 2.6, 
+        "patients": 1359, 
+        "rate": 3.3, 
+        "upper": 4.2
+      }
+    }
+  }, 
+  {
+    "address": "1968 PEACHTREE RD NW", 
+    "display_name": "Piedmont Hospital", 
+    "id": "110083", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.7, 
+        "patients": 991, 
+        "rate": 3.6, 
+        "upper": 4.7
+      }, 
+      "readmission": {
+        "lower": 4.1, 
+        "patients": 1051, 
+        "rate": 5.2, 
+        "upper": 6.5
+      }
+    }
+  }, 
+  {
+    "address": "1000 MEDICAL CENTER BOULEVARD", 
+    "display_name": "Gwinnett Medical Center", 
+    "id": "110087", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 3, 
+        "patients": 630, 
+        "rate": 4, 
+        "upper": 5.4
+      }, 
+      "readmission": {
+        "lower": 3.2, 
+        "patients": 660, 
+        "rate": 4.3, 
+        "upper": 5.6
+      }
+    }
+  }, 
+  {
+    "address": "1412 MILSTEAD AVENUE, NE", 
+    "display_name": "Rockdale Medical Center", 
+    "id": "110091", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.1, 
+        "patients": 104, 
+        "rate": 3.4, 
+        "upper": 5.5
+      }, 
+      "readmission": {
+        "lower": 3.8, 
+        "patients": 106, 
+        "rate": 5.6, 
+        "upper": 7.9
+      }
+    }
+  }, 
+  {
+    "address": "303 PARKWAY DR NE", 
+    "display_name": "Atlanta Medical Center", 
+    "id": "110115", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2, 
+        "patients": 77, 
+        "rate": 3.4, 
+        "upper": 5.6
+      }, 
+      "readmission": {
+        "lower": 3, 
+        "patients": 88, 
+        "rate": 4.6, 
+        "upper": 6.7
+      }
+    }
+  }, 
+  {
+    "address": "3950 AUSTELL RD", 
+    "display_name": "Wellstar Cobb Hospital", 
+    "id": "110143", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.7, 
+        "patients": 355, 
+        "rate": 2.6, 
+        "upper": 4
+      }, 
+      "readmission": {
+        "lower": 3.1, 
+        "patients": 377, 
+        "rate": 4.3, 
+        "upper": 5.8
+      }
+    }
+  }, 
+  {
+    "address": "1000 JOHNSON FERRY ROAD, NE", 
+    "display_name": "Northside Hospital", 
+    "id": "110161", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.7, 
+        "patients": 346, 
+        "rate": 2.7, 
+        "upper": 4.3
+      }, 
+      "readmission": {
+        "lower": 2.8, 
+        "patients": 356, 
+        "rate": 4, 
+        "upper": 5.7
+      }
+    }
+  }, 
+  {
+    "address": "11 UPPER RIVERDALE ROAD, SW", 
+    "display_name": "Southern Regional Medical Center", 
+    "id": "110165", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.1, 
+        "patients": 91, 
+        "rate": 3.4, 
+        "upper": 5.8
+      }, 
+      "readmission": {
+        "lower": 4.3, 
+        "patients": 92, 
+        "rate": 6.4, 
+        "upper": 9.3
+      }
+    }
+  }, 
+  {
+    "address": "501 REDMOND ROAD", 
+    "display_name": "Redmond Regional Medical Center", 
+    "id": "110168", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.4, 
+        "patients": 419, 
+        "rate": 3.4, 
+        "upper": 5.1
+      }, 
+      "readmission": {
+        "lower": 4.9, 
+        "patients": 427, 
+        "rate": 6.4, 
+        "upper": 8.5
+      }
+    }
+  }, 
+  {
+    "address": "8954 HOSPITAL DRIVE", 
+    "display_name": "Wellstar Douglas Hospital", 
+    "id": "110184", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.9, 
+        "patients": 120, 
+        "rate": 3.1, 
+        "upper": 5.1
+      }, 
+      "readmission": {
+        "lower": 3.2, 
+        "patients": 125, 
+        "rate": 4.6, 
+        "upper": 6.7
+      }
+    }
+  }, 
+  {
+    "address": "1133 EAGLE'S LANDING PARKWAY", 
+    "display_name": "Piedmont Henry Hospital", 
+    "id": "110191", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.2, 
+        "patients": 408, 
+        "rate": 3.2, 
+        "upper": 4.7
+      }, 
+      "readmission": {
+        "lower": 4.8, 
+        "patients": 434, 
+        "rate": 6.3, 
+        "upper": 8.3
+      }
+    }
+  }, 
+  {
+    "address": "1700 MEDICAL WAY", 
+    "display_name": "Eastside Medical Center", 
+    "id": "110192", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.1, 
+        "patients": 224, 
+        "rate": 3.3, 
+        "upper": 5.2
+      }, 
+      "readmission": {
+        "lower": 4, 
+        "patients": 247, 
+        "rate": 5.7, 
+        "upper": 7.8
+      }
+    }
+  }, 
+  {
+    "address": "3000 HOSPITAL BOULEVARD", 
+    "display_name": "North Fulton Hospital", 
+    "id": "110198", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.4, 
+        "patients": 191, 
+        "rate": 3.8, 
+        "upper": 5.9
+      }, 
+      "readmission": {
+        "lower": 3.3, 
+        "patients": 194, 
+        "rate": 4.7, 
+        "upper": 6.6
+      }
+    }
+  }, 
+  {
+    "address": "1255 HIGHWAY 54 WEST", 
+    "display_name": "Piedmont Fayette Hospital", 
+    "id": "110215", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.7, 
+        "patients": 611, 
+        "rate": 3.8, 
+        "upper": 5.3
+      }, 
+      "readmission": {
+        "lower": 3.8, 
+        "patients": 630, 
+        "rate": 5, 
+        "upper": 6.5
+      }
+    }
+  }, 
+  {
+    "address": "1266 HIGHWAY 515 SOUTH", 
+    "display_name": "Piedmont Mountainside Hospital", 
+    "id": "110225", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.5, 
+        "patients": 177, 
+        "rate": 3.9, 
+        "upper": 6.2
+      }, 
+      "readmission": {
+        "lower": 2.8, 
+        "patients": 179, 
+        "rate": 4.2, 
+        "upper": 6.1
+      }
+    }
+  }, 
+  {
+    "address": "745 POPLAR ROAD", 
+    "display_name": "Piedmont Newnan Hospital", 
+    "id": "110229", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 1.5, 
+        "patients": 194, 
+        "rate": 2.4, 
+        "upper": 3.9
+      }, 
+      "readmission": {
+        "lower": 2.9, 
+        "patients": 210, 
+        "rate": 4.1, 
+        "upper": 6
+      }
+    }
+  }, 
+  {
+    "address": "6325 HOSPITAL PARKWAY", 
+    "display_name": "Emory Johns Creek Hospital", 
+    "id": "110230", 
+    "measures": {
+      "cd": {
+        "category": "No different than the National Rate", 
+        "lower": 2.1, 
+        "patients": 72, 
+        "rate": 3.7, 
+        "upper": 6.3
+      }, 
+      "readmission": {
+        "lower": 3.7, 
+        "patients": 76, 
+        "rate": 5.5, 
+        "upper": 8.1
+      }
+    }
+  }
+]

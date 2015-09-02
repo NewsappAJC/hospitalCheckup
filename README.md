@@ -38,6 +38,7 @@ Explore hospital quality data for Atlanta area hospitals.
  
 ## Todo
 - [ ] Spell out infection names in infection bottom text
+- [ ] Clean up hipknee sql to fix typos and for consistency with infections
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
