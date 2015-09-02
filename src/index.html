@@ -91,6 +91,14 @@
     <div id="main-chart"></div>
   </script>
 
+  <script type="text/template" id="mobile-tr-template">
+    <td><%- display_name %></td><td><span class="mobile-rating <%-infections[measure].ratingClass %>"></span></td><td><%- clip(infections[measure].ratio) %></td>
+  </script>
+  <script type="text/template" id="mobile-table-template">
+    <thead><tr><th>Name</th><th>Rating</th><th>SIR</th></tr></thead>
+    <tbody></tbody>
+  </script>
+
   <script type="text/template" id="empty-template"></script>
 
   <script type="text/template" id="infections-tooltip-template">

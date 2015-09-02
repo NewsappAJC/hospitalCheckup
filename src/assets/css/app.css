@@ -110,15 +110,15 @@ option {
   font-weight: bold;
 }
 /*charts extended*/
-rect.range.normal, #legend-region li.normal {
+rect.range.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
   fill: #49709F;
   background-color: #49709F;
 }
-rect.range.bad, #legend-region li.bad {
+rect.range.bad, #legend-region li.bad, #mobile-list .mobile-rating.bad {
   fill: #BF653C;
   background-color: #BF653C;
 }
-rect.range.good, #legend-region li.good {
+rect.range.good, #legend-region li.good, #mobile-list .mobile-rating.good {
   fill: #489162;
   background-color: #489162;
 }
@@ -230,4 +230,17 @@ select#js-filter-criterion {
 #legend-region .chart-label:not(:last-child){
   font-family: Boomer;
   font-weight: bold;
+}
+
+/*mobile*/
+@media (max-width: 405px){
+  .mobile-rating {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+  }
+  #hospital-show-region {
+    display: none;
+  }
 }

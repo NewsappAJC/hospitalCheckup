@@ -23,6 +23,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 4.765, 
+          "ratingClass": "normal", 
           "ratio": 0.21, 
           "upper": 1.035
         }, 
@@ -35,6 +36,7 @@
           "note": null, 
           "observed": 32, 
           "predicted": 43.91, 
+          "ratingClass": "normal", 
           "ratio": 0.729, 
           "upper": 1.016
         }, 
@@ -47,6 +49,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 7.035, 
+          "ratingClass": "good", 
           "ratio": 0.284, 
           "upper": 0.939
         }, 
@@ -59,6 +62,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 3.497, 
+          "ratingClass": "normal", 
           "ratio": 0.286, 
           "upper": 1.41
         }, 
@@ -71,6 +75,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 6.56, 
+          "ratingClass": "normal", 
           "ratio": 0.305, 
           "upper": 1.007
         }, 
@@ -83,6 +88,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.256, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.328
         }
@@ -102,6 +108,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 4.974, 
+          "ratingClass": "normal", 
           "ratio": 0.603, 
           "upper": 1.641
         }, 
@@ -114,6 +121,7 @@
           "note": null, 
           "observed": 21, 
           "predicted": 14.961, 
+          "ratingClass": "normal", 
           "ratio": 1.404, 
           "upper": 2.109
         }, 
@@ -126,6 +134,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.056, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.457
         }, 
@@ -138,6 +147,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.751, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.711
         }, 
@@ -150,6 +160,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 3.662, 
+          "ratingClass": "good", 
           "ratio": 0, 
           "upper": 0.818
         }, 
@@ -162,6 +173,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.552, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -181,6 +193,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 3.076, 
+          "ratingClass": "good", 
           "ratio": 0, 
           "upper": 0.974
         }, 
@@ -193,6 +206,7 @@
           "note": null, 
           "observed": 26, 
           "predicted": 17.53, 
+          "ratingClass": "normal", 
           "ratio": 1.483, 
           "upper": 2.142
         }, 
@@ -205,6 +219,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 2.689, 
+          "ratingClass": "normal", 
           "ratio": 0.372, 
           "upper": 1.834
         }, 
@@ -217,6 +232,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.494, 
+          "ratingClass": "normal", 
           "ratio": 0.669, 
           "upper": 3.301
         }, 
@@ -229,6 +245,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 2.662, 
+          "ratingClass": "normal", 
           "ratio": 0.376, 
           "upper": 1.853
         }, 
@@ -241,6 +258,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.381, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.169
         }
@@ -260,6 +278,7 @@
           "note": null, 
           "observed": 72, 
           "predicted": 53.067, 
+          "ratingClass": "bad", 
           "ratio": 1.357, 
           "upper": 1.699
         }, 
@@ -272,6 +291,7 @@
           "note": null, 
           "observed": 167, 
           "predicted": 99.999, 
+          "ratingClass": "normal", 
           "ratio": 1.072, 
           "upper": 1.244
         }, 
@@ -284,6 +304,7 @@
           "note": null, 
           "observed": 20, 
           "predicted": 43.068, 
+          "ratingClass": "good", 
           "ratio": 0.464, 
           "upper": 0.704
         }, 
@@ -296,6 +317,7 @@
           "note": null, 
           "observed": 19, 
           "predicted": 17.583, 
+          "ratingClass": "normal", 
           "ratio": 1.081, 
           "upper": 1.656
         }, 
@@ -308,6 +330,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 9.201, 
+          "ratingClass": "normal", 
           "ratio": 0.435, 
           "upper": 1.049
         }, 
@@ -320,6 +343,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.365, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.195
         }
@@ -339,6 +363,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 2.3, 
+          "ratingClass": "normal", 
           "ratio": 0.87, 
           "upper": 2.873
         }, 
@@ -351,6 +376,7 @@
           "note": null, 
           "observed": 14, 
           "predicted": 22.248, 
+          "ratingClass": "normal", 
           "ratio": 0.629, 
           "upper": 1.031
         }, 
@@ -363,6 +389,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.303, 
+          "ratingClass": "normal", 
           "ratio": 0.767, 
           "upper": 3.785
         }, 
@@ -375,6 +402,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 1.979, 
+          "ratingClass": "normal", 
           "ratio": 2.021, 
           "upper": 4.875
         }, 
@@ -387,6 +415,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 3.611, 
+          "ratingClass": "normal", 
           "ratio": 0.831, 
           "upper": 2.261
         }, 
@@ -399,6 +428,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.189, 
+          "ratingClass": "normal", 
           "ratio": 0.841, 
           "upper": 4.148
         }
@@ -418,6 +448,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 1.128, 
+          "ratingClass": "normal", 
           "ratio": 2.66, 
           "upper": 7.238
         }, 
@@ -430,6 +461,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 9.186, 
+          "ratingClass": "normal", 
           "ratio": 0.544, 
           "upper": 1.206
         }, 
@@ -442,6 +474,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.826, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -454,6 +487,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.777, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -466,6 +500,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 1.445, 
+          "ratingClass": "normal", 
           "ratio": 1.384, 
           "upper": 4.573
         }, 
@@ -478,6 +513,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.666, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -497,6 +533,7 @@
           "note": null, 
           "observed": 22, 
           "predicted": 20.934, 
+          "ratingClass": "normal", 
           "ratio": 1.051, 
           "upper": 1.565
         }, 
@@ -509,6 +546,7 @@
           "note": null, 
           "observed": 101, 
           "predicted": 99.999, 
+          "ratingClass": "good", 
           "ratio": 0.718, 
           "upper": 0.868
         }, 
@@ -521,6 +559,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 18.102, 
+          "ratingClass": "good", 
           "ratio": 0.166, 
           "upper": 0.451
         }, 
@@ -533,6 +572,7 @@
           "note": null, 
           "observed": 13, 
           "predicted": 12.494, 
+          "ratingClass": "normal", 
           "ratio": 1.041, 
           "upper": 1.735
         }, 
@@ -545,6 +585,7 @@
           "note": null, 
           "observed": 11, 
           "predicted": 9.654, 
+          "ratingClass": "normal", 
           "ratio": 1.139, 
           "upper": 1.98
         }, 
@@ -557,6 +598,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 6.139, 
+          "ratingClass": "normal", 
           "ratio": 0.489, 
           "upper": 1.33
         }
@@ -576,6 +618,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 3.225, 
+          "ratingClass": "normal", 
           "ratio": 2.171, 
           "upper": 4.294
         }, 
@@ -588,6 +631,7 @@
           "note": null, 
           "observed": 11, 
           "predicted": 22.121, 
+          "ratingClass": "good", 
           "ratio": 0.497, 
           "upper": 0.864
         }, 
@@ -600,6 +644,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 2.744, 
+          "ratingClass": "normal", 
           "ratio": 0.729, 
           "upper": 2.408
         }, 
@@ -612,6 +657,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 1.291, 
+          "ratingClass": "normal", 
           "ratio": 1.549, 
           "upper": 5.117
         }, 
@@ -624,6 +670,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.795, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.669
         }, 
@@ -636,6 +683,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.554, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -655,6 +703,7 @@
           "note": null, 
           "observed": 11, 
           "predicted": 3.803, 
+          "ratingClass": "bad", 
           "ratio": 2.892, 
           "upper": 5.027
         }, 
@@ -667,6 +716,7 @@
           "note": null, 
           "observed": 10, 
           "predicted": 18.097, 
+          "ratingClass": "good", 
           "ratio": 0.553, 
           "upper": 0.985
         }, 
@@ -679,6 +729,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 2.521, 
+          "ratingClass": "normal", 
           "ratio": 1.983, 
           "upper": 4.396
         }, 
@@ -691,6 +742,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 1.937, 
+          "ratingClass": "normal", 
           "ratio": 2.581, 
           "upper": 5.721
         }, 
@@ -703,6 +755,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.541, 
+          "ratingClass": "normal", 
           "ratio": 0.649, 
           "upper": 3.2
         }, 
@@ -715,6 +768,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 2, 
           "predicted": 0.593, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -734,6 +788,7 @@
           "note": null, 
           "observed": 57, 
           "predicted": 36.697, 
+          "ratingClass": "bad", 
           "ratio": 1.553, 
           "upper": 1.998
         }, 
@@ -746,6 +801,7 @@
           "note": null, 
           "observed": 147, 
           "predicted": 99.999, 
+          "ratingClass": "bad", 
           "ratio": 1.211, 
           "upper": 1.419
         }, 
@@ -758,6 +814,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 25.519, 
+          "ratingClass": "good", 
           "ratio": 0.313, 
           "upper": 0.595
         }, 
@@ -770,6 +827,7 @@
           "note": null, 
           "observed": 10, 
           "predicted": 12.242, 
+          "ratingClass": "normal", 
           "ratio": 0.817, 
           "upper": 1.456
         }, 
@@ -782,6 +840,7 @@
           "note": null, 
           "observed": 16, 
           "predicted": 11.424, 
+          "ratingClass": "normal", 
           "ratio": 1.401, 
           "upper": 2.226
         }, 
@@ -794,6 +853,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 4.742, 
+          "ratingClass": "normal", 
           "ratio": 0.844, 
           "upper": 2.035
         }
@@ -813,6 +873,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.595, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -825,6 +886,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 6.045, 
+          "ratingClass": "normal", 
           "ratio": 1.323, 
           "upper": 2.513
         }, 
@@ -837,6 +899,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.546, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -849,6 +912,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.372, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -861,6 +925,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.044, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.869
         }, 
@@ -873,6 +938,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.007, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -892,6 +958,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 7.407, 
+          "ratingClass": "normal", 
           "ratio": 0.405, 
           "upper": 1.102
         }, 
@@ -904,6 +971,7 @@
           "note": null, 
           "observed": 39, 
           "predicted": 57.058, 
+          "ratingClass": "good", 
           "ratio": 0.684, 
           "upper": 0.925
         }, 
@@ -916,6 +984,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 5.957, 
+          "ratingClass": "normal", 
           "ratio": 0.504, 
           "upper": 1.371
         }, 
@@ -928,6 +997,7 @@
           "note": null, 
           "observed": 16, 
           "predicted": 5.011, 
+          "ratingClass": "bad", 
           "ratio": 3.193, 
           "upper": 5.074
         }, 
@@ -940,6 +1010,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 4.508, 
+          "ratingClass": "normal", 
           "ratio": 0.222, 
           "upper": 1.094
         }, 
@@ -952,6 +1023,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 3.914, 
+          "ratingClass": "normal", 
           "ratio": 0.255, 
           "upper": 1.26
         }
@@ -971,6 +1043,7 @@
           "note": null, 
           "observed": 20, 
           "predicted": 8.137, 
+          "ratingClass": "bad", 
           "ratio": 2.458, 
           "upper": 3.729
         }, 
@@ -983,6 +1056,7 @@
           "note": null, 
           "observed": 66, 
           "predicted": 65.616, 
+          "ratingClass": "normal", 
           "ratio": 1.006, 
           "upper": 1.272
         }, 
@@ -995,6 +1069,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 6.006, 
+          "ratingClass": "normal", 
           "ratio": 0.666, 
           "upper": 1.606
         }, 
@@ -1007,6 +1082,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 4.781, 
+          "ratingClass": "normal", 
           "ratio": 0.209, 
           "upper": 1.032
         }, 
@@ -1019,6 +1095,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 7.368, 
+          "ratingClass": "normal", 
           "ratio": 0.95, 
           "upper": 1.879
         }, 
@@ -1031,6 +1108,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 1.977, 
+          "ratingClass": "normal", 
           "ratio": 1.517, 
           "upper": 4.13
         }
@@ -1050,6 +1128,7 @@
           "note": null, 
           "observed": 16, 
           "predicted": 7.527, 
+          "ratingClass": "bad", 
           "ratio": 2.126, 
           "upper": 3.378
         }, 
@@ -1062,6 +1141,7 @@
           "note": null, 
           "observed": 54, 
           "predicted": 68.34, 
+          "ratingClass": "normal", 
           "ratio": 0.79, 
           "upper": 1.023
         }, 
@@ -1074,6 +1154,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 8.104, 
+          "ratingClass": "normal", 
           "ratio": 0.74, 
           "upper": 1.54
         }, 
@@ -1086,6 +1167,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 5.52, 
+          "ratingClass": "normal", 
           "ratio": 0.543, 
           "upper": 1.479
         }, 
@@ -1098,6 +1180,7 @@
           "note": null, 
           "observed": 11, 
           "predicted": 5.368, 
+          "ratingClass": "bad", 
           "ratio": 2.049, 
           "upper": 3.562
         }, 
@@ -1110,6 +1193,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 2.717, 
+          "ratingClass": "normal", 
           "ratio": 2.208, 
           "upper": 4.593
         }
@@ -1129,6 +1213,7 @@
           "note": null, 
           "observed": 31, 
           "predicted": 24.656, 
+          "ratingClass": "normal", 
           "ratio": 1.257, 
           "upper": 1.763
         }, 
@@ -1141,6 +1226,7 @@
           "note": null, 
           "observed": 105, 
           "predicted": 99.832, 
+          "ratingClass": "normal", 
           "ratio": 1.052, 
           "upper": 1.268
         }, 
@@ -1153,6 +1239,7 @@
           "note": null, 
           "observed": 21, 
           "predicted": 26.002, 
+          "ratingClass": "normal", 
           "ratio": 0.808, 
           "upper": 1.213
         }, 
@@ -1165,6 +1252,7 @@
           "note": null, 
           "observed": 13, 
           "predicted": 11.603, 
+          "ratingClass": "normal", 
           "ratio": 1.12, 
           "upper": 1.868
         }, 
@@ -1177,6 +1265,7 @@
           "note": null, 
           "observed": 9, 
           "predicted": 6.223, 
+          "ratingClass": "normal", 
           "ratio": 1.446, 
           "upper": 2.654
         }, 
@@ -1189,6 +1278,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 2.52, 
+          "ratingClass": "normal", 
           "ratio": 1.19, 
           "upper": 3.24
         }
@@ -1208,6 +1298,7 @@
           "note": null, 
           "observed": 80, 
           "predicted": 64.728, 
+          "ratingClass": "normal", 
           "ratio": 1.236, 
           "upper": 1.53
         }, 
@@ -1220,6 +1311,7 @@
           "note": null, 
           "observed": 79, 
           "predicted": 99.999, 
+          "ratingClass": "good", 
           "ratio": 0.734, 
           "upper": 0.91
         }, 
@@ -1232,6 +1324,7 @@
           "note": null, 
           "observed": 48, 
           "predicted": 46.568, 
+          "ratingClass": "normal", 
           "ratio": 1.031, 
           "upper": 1.355
         }, 
@@ -1244,6 +1337,7 @@
           "note": null, 
           "observed": 10, 
           "predicted": 12.703, 
+          "ratingClass": "normal", 
           "ratio": 0.787, 
           "upper": 1.403
         }, 
@@ -1256,6 +1350,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 5.362, 
+          "ratingClass": "normal", 
           "ratio": 1.119, 
           "upper": 2.327
         }, 
@@ -1268,6 +1363,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 2.063, 
+          "ratingClass": "normal", 
           "ratio": 1.939, 
           "upper": 4.677
         }
@@ -1287,6 +1383,7 @@
           "note": null, 
           "observed": 17, 
           "predicted": 11.638, 
+          "ratingClass": "normal", 
           "ratio": 1.461, 
           "upper": 2.291
         }, 
@@ -1299,6 +1396,7 @@
           "note": null, 
           "observed": 86, 
           "predicted": 52.401, 
+          "ratingClass": "bad", 
           "ratio": 1.641, 
           "upper": 2.017
         }, 
@@ -1311,6 +1409,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 10.054, 
+          "ratingClass": "good", 
           "ratio": 0.398, 
           "upper": 0.96
         }, 
@@ -1323,6 +1422,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 3.644, 
+          "ratingClass": "normal", 
           "ratio": 1.372, 
           "upper": 3.041
         }, 
@@ -1335,6 +1435,7 @@
           "note": null, 
           "observed": 9, 
           "predicted": 8.072, 
+          "ratingClass": "normal", 
           "ratio": 1.115, 
           "upper": 2.046
         }, 
@@ -1347,6 +1448,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.34, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -1366,6 +1468,7 @@
           "note": null, 
           "observed": 53, 
           "predicted": 20.164, 
+          "ratingClass": "bad", 
           "ratio": 2.628, 
           "upper": 3.412
         }, 
@@ -1378,6 +1481,7 @@
           "note": null, 
           "observed": 127, 
           "predicted": 99.999, 
+          "ratingClass": "normal", 
           "ratio": 1.14, 
           "upper": 1.351
         }, 
@@ -1390,6 +1494,7 @@
           "note": null, 
           "observed": 21, 
           "predicted": 26.131, 
+          "ratingClass": "normal", 
           "ratio": 0.804, 
           "upper": 1.208
         }, 
@@ -1402,6 +1507,7 @@
           "note": null, 
           "observed": 12, 
           "predicted": 10.967, 
+          "ratingClass": "normal", 
           "ratio": 1.094, 
           "upper": 1.86
         }, 
@@ -1414,6 +1520,7 @@
           "note": null, 
           "observed": 16, 
           "predicted": 14.742, 
+          "ratingClass": "normal", 
           "ratio": 1.085, 
           "upper": 1.725
         }, 
@@ -1426,6 +1533,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 3.509, 
+          "ratingClass": "normal", 
           "ratio": 1.995, 
           "upper": 3.946
         }
@@ -1445,6 +1553,7 @@
           "note": null, 
           "observed": 14, 
           "predicted": 8.34, 
+          "ratingClass": "normal", 
           "ratio": 1.679, 
           "upper": 2.75
         }, 
@@ -1457,6 +1566,7 @@
           "note": null, 
           "observed": 74, 
           "predicted": 91.292, 
+          "ratingClass": "normal", 
           "ratio": 0.811, 
           "upper": 1.012
         }, 
@@ -1469,6 +1579,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 16.919, 
+          "ratingClass": "good", 
           "ratio": 0.473, 
           "upper": 0.898
         }, 
@@ -1481,6 +1592,7 @@
           "note": null, 
           "observed": 12, 
           "predicted": 9.955, 
+          "ratingClass": "normal", 
           "ratio": 1.205, 
           "upper": 2.049
         }, 
@@ -1493,6 +1605,7 @@
           "note": null, 
           "observed": 13, 
           "predicted": 11.921, 
+          "ratingClass": "normal", 
           "ratio": 1.091, 
           "upper": 1.818
         }, 
@@ -1505,6 +1618,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 1.553, 
+          "ratingClass": "normal", 
           "ratio": 1.932, 
           "upper": 5.257
         }
@@ -1524,6 +1638,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 2.083, 
+          "ratingClass": "normal", 
           "ratio": 1.92, 
           "upper": 4.632
         }, 
@@ -1536,6 +1651,7 @@
           "note": null, 
           "observed": 25, 
           "predicted": 24.997, 
+          "ratingClass": "normal", 
           "ratio": 1, 
           "upper": 1.455
         }, 
@@ -1548,6 +1664,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 4.351, 
+          "ratingClass": "normal", 
           "ratio": 1.609, 
           "upper": 3.182
         }, 
@@ -1560,6 +1677,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 2.411, 
+          "ratingClass": "normal", 
           "ratio": 1.659, 
           "upper": 4.001
         }, 
@@ -1572,6 +1690,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.766, 
+          "ratingClass": "normal", 
           "ratio": 0.566, 
           "upper": 2.793
         }, 
@@ -1584,6 +1703,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 3, 
           "predicted": 0.677, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -1603,6 +1723,7 @@
           "note": null, 
           "observed": 50, 
           "predicted": 18.557, 
+          "ratingClass": "bad", 
           "ratio": 2.694, 
           "upper": 3.524
         }, 
@@ -1615,6 +1736,7 @@
           "note": null, 
           "observed": 61, 
           "predicted": 65.394, 
+          "ratingClass": "normal", 
           "ratio": 0.933, 
           "upper": 1.19
         }, 
@@ -1627,6 +1749,7 @@
           "note": null, 
           "observed": 17, 
           "predicted": 19.719, 
+          "ratingClass": "normal", 
           "ratio": 0.862, 
           "upper": 1.352
         }, 
@@ -1639,6 +1762,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 7.196, 
+          "ratingClass": "normal", 
           "ratio": 0.834, 
           "upper": 1.734
         }, 
@@ -1651,6 +1775,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.381, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.258
         }, 
@@ -1663,6 +1788,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.841, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -1682,6 +1808,7 @@
           "note": null, 
           "observed": 17, 
           "predicted": 8.485, 
+          "ratingClass": "bad", 
           "ratio": 2.004, 
           "upper": 3.143
         }, 
@@ -1694,6 +1821,7 @@
           "note": null, 
           "observed": 61, 
           "predicted": 65.907, 
+          "ratingClass": "normal", 
           "ratio": 0.926, 
           "upper": 1.181
         }, 
@@ -1706,6 +1834,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 9.309, 
+          "ratingClass": "normal", 
           "ratio": 0.43, 
           "upper": 1.036
         }, 
@@ -1718,6 +1847,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 4.669, 
+          "ratingClass": "normal", 
           "ratio": 0.857, 
           "upper": 2.067
         }, 
@@ -1730,6 +1860,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 5.661, 
+          "ratingClass": "good", 
           "ratio": 0.177, 
           "upper": 0.871
         }, 
@@ -1742,6 +1873,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 4.355, 
+          "ratingClass": "normal", 
           "ratio": 1.378, 
           "upper": 2.866
         }
@@ -1761,6 +1893,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 5.536, 
+          "ratingClass": "normal", 
           "ratio": 0.542, 
           "upper": 1.475
         }, 
@@ -1773,6 +1906,7 @@
           "note": null, 
           "observed": 63, 
           "predicted": 85.798, 
+          "ratingClass": "good", 
           "ratio": 0.734, 
           "upper": 0.933
         }, 
@@ -1785,6 +1919,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 14.746, 
+          "ratingClass": "good", 
           "ratio": 0.271, 
           "upper": 0.654
         }, 
@@ -1797,6 +1932,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 10.098, 
+          "ratingClass": "good", 
           "ratio": 0.297, 
           "upper": 0.809
         }, 
@@ -1809,6 +1945,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 13.664, 
+          "ratingClass": "good", 
           "ratio": 0.146, 
           "upper": 0.484
         }, 
@@ -1821,6 +1958,7 @@
           "note": null, 
           "observed": 10, 
           "predicted": 16.164, 
+          "ratingClass": "normal", 
           "ratio": 0.619, 
           "upper": 1.103
         }
@@ -1840,6 +1978,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 4.57, 
+          "ratingClass": "normal", 
           "ratio": 1.313, 
           "upper": 2.731
         }, 
@@ -1852,6 +1991,7 @@
           "note": null, 
           "observed": 17, 
           "predicted": 44.02, 
+          "ratingClass": "good", 
           "ratio": 0.386, 
           "upper": 0.606
         }, 
@@ -1864,6 +2004,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 3.129, 
+          "ratingClass": "normal", 
           "ratio": 2.237, 
           "upper": 4.425
         }, 
@@ -1876,6 +2017,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 3.024, 
+          "ratingClass": "good", 
           "ratio": 0, 
           "upper": 0.991
         }, 
@@ -1888,6 +2030,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 4.177, 
+          "ratingClass": "normal", 
           "ratio": 0.718, 
           "upper": 1.955
         }, 
@@ -1900,6 +2043,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 2.109, 
+          "ratingClass": "normal", 
           "ratio": 1.422, 
           "upper": 3.871
         }
@@ -1919,6 +2063,7 @@
           "note": null, 
           "observed": 12, 
           "predicted": 7.524, 
+          "ratingClass": "normal", 
           "ratio": 1.595, 
           "upper": 2.711
         }, 
@@ -1931,6 +2076,7 @@
           "note": null, 
           "observed": 25, 
           "predicted": 34.91, 
+          "ratingClass": "normal", 
           "ratio": 0.716, 
           "upper": 1.042
         }, 
@@ -1943,6 +2089,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 6.727, 
+          "ratingClass": "normal", 
           "ratio": 0.743, 
           "upper": 1.647
         }, 
@@ -1955,6 +2102,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 3.309, 
+          "ratingClass": "normal", 
           "ratio": 1.511, 
           "upper": 3.35
         }, 
@@ -1967,6 +2115,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 3.662, 
+          "ratingClass": "normal", 
           "ratio": 1.365, 
           "upper": 3.026
         }, 
@@ -1979,6 +2128,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.499, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -1998,6 +2148,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 2.279, 
+          "ratingClass": "normal", 
           "ratio": 1.755, 
           "upper": 4.234
         }, 
@@ -2010,6 +2161,7 @@
           "note": null, 
           "observed": 20, 
           "predicted": 18.836, 
+          "ratingClass": "normal", 
           "ratio": 1.062, 
           "upper": 1.611
         }, 
@@ -2022,6 +2174,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.361, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.269
         }, 
@@ -2034,6 +2187,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 1.282, 
+          "ratingClass": "normal", 
           "ratio": 0.78, 
           "upper": 3.847
         }, 
@@ -2046,6 +2200,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 3.234, 
+          "ratingClass": "normal", 
           "ratio": 0.618, 
           "upper": 2.043
         }, 
@@ -2058,6 +2213,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.323, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -2077,6 +2233,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 3.826, 
+          "ratingClass": "normal", 
           "ratio": 1.045, 
           "upper": 2.522
         }, 
@@ -2089,6 +2246,7 @@
           "note": null, 
           "observed": 29, 
           "predicted": 38.27, 
+          "ratingClass": "normal", 
           "ratio": 0.758, 
           "upper": 1.074
         }, 
@@ -2101,6 +2259,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 5.277, 
+          "ratingClass": "normal", 
           "ratio": 0.379, 
           "upper": 1.252
         }, 
@@ -2113,6 +2272,7 @@
           "note": null, 
           "observed": 6, 
           "predicted": 3.385, 
+          "ratingClass": "normal", 
           "ratio": 1.772, 
           "upper": 3.686
         }, 
@@ -2125,6 +2285,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 6.055, 
+          "ratingClass": "normal", 
           "ratio": 1.321, 
           "upper": 2.509
         }, 
@@ -2137,6 +2298,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.408, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.244
         }
@@ -2156,6 +2318,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 3.587, 
+          "ratingClass": "bad", 
           "ratio": 2.23, 
           "upper": 4.235
         }, 
@@ -2168,6 +2331,7 @@
           "note": null, 
           "observed": 41, 
           "predicted": 39.187, 
+          "ratingClass": "normal", 
           "ratio": 1.046, 
           "upper": 1.406
         }, 
@@ -2180,6 +2344,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 5.322, 
+          "ratingClass": "good", 
           "ratio": 0.188, 
           "upper": 0.927
         }, 
@@ -2192,6 +2357,7 @@
           "note": null, 
           "observed": 5, 
           "predicted": 2.713, 
+          "ratingClass": "normal", 
           "ratio": 1.843, 
           "upper": 4.084
         }, 
@@ -2204,6 +2370,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 2.578, 
+          "ratingClass": "normal", 
           "ratio": 1.552, 
           "upper": 3.743
         }, 
@@ -2216,6 +2383,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 1.227, 
+          "ratingClass": "normal", 
           "ratio": 1.63, 
           "upper": 5.385
         }
@@ -2235,6 +2403,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 3.447, 
+          "ratingClass": "good", 
           "ratio": 0, 
           "upper": 0.869
         }, 
@@ -2247,6 +2416,7 @@
           "note": null, 
           "observed": 12, 
           "predicted": 15.807, 
+          "ratingClass": "normal", 
           "ratio": 0.759, 
           "upper": 1.291
         }, 
@@ -2259,6 +2429,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 3.741, 
+          "ratingClass": "normal", 
           "ratio": 0.535, 
           "upper": 1.766
         }, 
@@ -2271,6 +2442,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 2.001, 
+          "ratingClass": "normal", 
           "ratio": 0.999, 
           "upper": 3.302
         }, 
@@ -2283,6 +2455,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.497, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -2295,6 +2468,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.083, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -2314,6 +2488,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 3.2, 
+          "ratingClass": "normal", 
           "ratio": 0.313, 
           "upper": 1.541
         }, 
@@ -2326,6 +2501,7 @@
           "note": null, 
           "observed": 22, 
           "predicted": 34.351, 
+          "ratingClass": "good", 
           "ratio": 0.64, 
           "upper": 0.954
         }, 
@@ -2338,6 +2514,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 6.119, 
+          "ratingClass": "normal", 
           "ratio": 0.327, 
           "upper": 1.08
         }, 
@@ -2350,6 +2527,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 3.078, 
+          "ratingClass": "normal", 
           "ratio": 0.65, 
           "upper": 2.147
         }, 
@@ -2362,6 +2540,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 7.99, 
+          "ratingClass": "normal", 
           "ratio": 0.501, 
           "upper": 1.208
         }, 
@@ -2374,6 +2553,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 2.769, 
+          "ratingClass": "normal", 
           "ratio": 0.722, 
           "upper": 2.386
         }
@@ -2393,6 +2573,7 @@
           "note": null, 
           "observed": 1, 
           "predicted": 2.514, 
+          "ratingClass": "normal", 
           "ratio": 0.398, 
           "upper": 1.962
         }, 
@@ -2405,6 +2586,7 @@
           "note": null, 
           "observed": 4, 
           "predicted": 12.99, 
+          "ratingClass": "good", 
           "ratio": 0.308, 
           "upper": 0.743
         }, 
@@ -2417,6 +2599,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.006, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.978
         }, 
@@ -2429,6 +2612,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.972, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -2441,6 +2625,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.981, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }, 
@@ -2453,6 +2638,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 0, 
           "predicted": 0.042, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -2472,6 +2658,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 2.799, 
+          "ratingClass": "normal", 
           "ratio": 1.072, 
           "upper": 2.917
         }, 
@@ -2484,6 +2671,7 @@
           "note": null, 
           "observed": 16, 
           "predicted": 21.442, 
+          "ratingClass": "normal", 
           "ratio": 0.746, 
           "upper": 1.186
         }, 
@@ -2496,6 +2684,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 2.28, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.314
         }, 
@@ -2508,6 +2697,7 @@
           "note": null, 
           "observed": 2, 
           "predicted": 2.236, 
+          "ratingClass": "normal", 
           "ratio": 0.894, 
           "upper": 2.955
         }, 
@@ -2520,6 +2710,7 @@
           "note": null, 
           "observed": 3, 
           "predicted": 2.229, 
+          "ratingClass": "normal", 
           "ratio": 1.346, 
           "upper": 3.663
         }, 
@@ -2532,6 +2723,7 @@
           "note": "13 - Results cannot be calculated for this reporting period.", 
           "observed": 1, 
           "predicted": 0.738, 
+          "ratingClass": "", 
           "ratio": null, 
           "upper": null
         }
@@ -2551,6 +2743,7 @@
           "note": null, 
           "observed": 7, 
           "predicted": 1.659, 
+          "ratingClass": "bad", 
           "ratio": 4.219, 
           "upper": 8.346
         }, 
@@ -2563,6 +2756,7 @@
           "note": null, 
           "observed": 14, 
           "predicted": 18.693, 
+          "ratingClass": "normal", 
           "ratio": 0.749, 
           "upper": 1.227
         }, 
@@ -2575,6 +2769,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.96, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 1.528
         }, 
@@ -2587,6 +2782,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.257, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.383
         }, 
@@ -2599,6 +2795,7 @@
           "note": null, 
           "observed": 8, 
           "predicted": 3.985, 
+          "ratingClass": "normal", 
           "ratio": 2.008, 
           "upper": 3.812
         }, 
@@ -2611,6 +2808,7 @@
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
           "predicted": 1.097, 
+          "ratingClass": "normal", 
           "ratio": 0, 
           "upper": 2.731
         }
