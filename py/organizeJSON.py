@@ -85,14 +85,18 @@ src = json.load(f)
 f.close()
 
 tree = []
+ratingClasses = {"No different than the National Rate":"normal", "Better than the National Rate":"good", "Worse than the National Rate":"bad", "Number of Cases Too Small": ""}
+
+def isNA(string):
+    return int(string == "Number of Cases Too Small")
 
 for node in src:
     hospital = {}
-    hospital["id"] = node["ProviderNumber"]
-    hospital["display_name"] = node["HospitalName"]
-    hospital["address"] = node["Adress"]
+    hospital["id"] = node["provider_id"]
+    hospital["display_name"] = node["ajc_hospital_name"]
+    hospital["address"] = node["address"]
     hospital["measures"] = {
-            "readmission" : {}, "cd" : {}
+        "readmission" : {}, "complication" : {}
     }
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
@@ -102,10 +106,11 @@ for node in src:
         if measure in hospital["measures"]:
             param = tmp[1]
 
-            if(param == "rsrr" or param == "rscr"):
-                hospital["measures"][measure]["rate"] = node[key]
-            elif(param != "notes"):
+            if(param != "notes"):
                 hospital["measures"][measure][param] = node[key]
+            if(param == "category"):
+                hospital["measures"][measure]["na"] = isNA(node[key])
+                hospital["measures"][measure]["ratingClass"] = ratingClasses[node[key]]
 
     tree.append(hospital)
 

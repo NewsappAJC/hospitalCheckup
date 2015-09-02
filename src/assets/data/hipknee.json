@@ -4,17 +4,22 @@
     "display_name": "Northside Hospital Forsyth", 
     "id": "110005", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.2, 
+        "na": 0, 
         "patients": 410, 
         "rate": 3.3, 
+        "ratingClass": "normal", 
         "upper": 4.7
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.1, 
+        "na": 0, 
         "patients": 414, 
         "rate": 4.2, 
+        "ratingClass": "normal", 
         "upper": 5.8
       }
     }
@@ -24,17 +29,22 @@
     "display_name": "Saint Mary's Hospital", 
     "id": "110006", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.2, 
+        "na": 0, 
         "patients": 1237, 
         "rate": 2.9, 
+        "ratingClass": "normal", 
         "upper": 4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.2, 
+        "na": 0, 
         "patients": 1309, 
         "rate": 4, 
+        "ratingClass": "normal", 
         "upper": 5
       }
     }
@@ -44,17 +54,22 @@
     "display_name": "Northside Hospital Cherokee", 
     "id": "110008", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.3, 
+        "na": 0, 
         "patients": 174, 
         "rate": 3.6, 
+        "ratingClass": "normal", 
         "upper": 5.7
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.3, 
+        "na": 0, 
         "patients": 181, 
         "rate": 4.7, 
+        "ratingClass": "normal", 
         "upper": 6.7
       }
     }
@@ -64,17 +79,22 @@
     "display_name": "Emory University Hospital", 
     "id": "110010", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.8, 
+        "na": 0, 
         "patients": 858, 
         "rate": 2.6, 
+        "ratingClass": "normal", 
         "upper": 3.5
       }, 
       "readmission": {
+        "category": "Better than the National Rate", 
         "lower": 2.5, 
+        "na": 0, 
         "patients": 896, 
         "rate": 3.4, 
+        "ratingClass": "good", 
         "upper": 4.4
       }
     }
@@ -84,17 +104,22 @@
     "display_name": "Tanner Medical Center Carrollton", 
     "id": "110011", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.3, 
+        "na": 0, 
         "patients": 295, 
         "rate": 3.5, 
+        "ratingClass": "normal", 
         "upper": 5.2
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.1, 
+        "na": 0, 
         "patients": 300, 
         "rate": 4.4, 
+        "ratingClass": "normal", 
         "upper": 6.1
       }
     }
@@ -104,17 +129,22 @@
     "display_name": "Newton Medical Center", 
     "id": "110018", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.7, 
+        "na": 0, 
         "patients": 137, 
         "rate": 2.8, 
+        "ratingClass": "normal", 
         "upper": 4.6
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.7, 
+        "na": 0, 
         "patients": 137, 
         "rate": 5.3, 
+        "ratingClass": "normal", 
         "upper": 7.5
       }
     }
@@ -124,17 +154,22 @@
     "display_name": "Northeast Georgia Medical Center", 
     "id": "110029", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "Better than the National Rate", 
         "lower": 1.5, 
+        "na": 0, 
         "patients": 1188, 
         "rate": 2.1, 
+        "ratingClass": "good", 
         "upper": 2.9
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4, 
+        "na": 0, 
         "patients": 1270, 
         "rate": 5, 
+        "ratingClass": "normal", 
         "upper": 6.1
       }
     }
@@ -144,17 +179,22 @@
     "display_name": "Cartersville Medical Center", 
     "id": "110030", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.2, 
+        "na": 0, 
         "patients": 233, 
         "rate": 3.5, 
+        "ratingClass": "normal", 
         "upper": 5.4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.4, 
+        "na": 0, 
         "patients": 234, 
         "rate": 4.9, 
+        "ratingClass": "normal", 
         "upper": 6.8
       }
     }
@@ -164,17 +204,22 @@
     "display_name": "Spalding Regional Hospital", 
     "id": "110031", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.6, 
+        "na": 0, 
         "patients": 138, 
         "rate": 4.1, 
+        "ratingClass": "normal", 
         "upper": 6.4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.9, 
+        "na": 0, 
         "patients": 141, 
         "rate": 5.7, 
+        "ratingClass": "normal", 
         "upper": 8.1
       }
     }
@@ -184,17 +229,22 @@
     "display_name": "Wellstar Kennestone Hospital", 
     "id": "110035", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2, 
+        "na": 0, 
         "patients": 881, 
         "rate": 2.8, 
+        "ratingClass": "normal", 
         "upper": 3.9
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4.2, 
+        "na": 0, 
         "patients": 937, 
         "rate": 5.2, 
+        "ratingClass": "normal", 
         "upper": 6.6
       }
     }
@@ -204,17 +254,22 @@
     "display_name": "Wellstar Paulding Hospital", 
     "id": "110042", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2, 
+        "na": 0, 
         "patients": 62, 
         "rate": 3.4, 
+        "ratingClass": "normal", 
         "upper": 5.7
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.4, 
+        "na": 0, 
         "patients": 70, 
         "rate": 5, 
+        "ratingClass": "normal", 
         "upper": 7.4
       }
     }
@@ -224,17 +279,22 @@
     "display_name": "Floyd Medical Center", 
     "id": "110054", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.1, 
+        "na": 0, 
         "patients": 279, 
         "rate": 3.3, 
+        "ratingClass": "normal", 
         "upper": 5
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.8, 
+        "na": 0, 
         "patients": 288, 
         "rate": 5.3, 
+        "ratingClass": "normal", 
         "upper": 7.1
       }
     }
@@ -244,17 +304,22 @@
     "display_name": "Athens Regional Medical Center", 
     "id": "110074", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.8, 
+        "na": 0, 
         "patients": 147, 
         "rate": 4.4, 
+        "ratingClass": "normal", 
         "upper": 6.8
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4.2, 
+        "na": 0, 
         "patients": 147, 
         "rate": 5.9, 
+        "ratingClass": "normal", 
         "upper": 8.1
       }
     }
@@ -264,17 +329,22 @@
     "display_name": "Dekalb Medical Center", 
     "id": "110076", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.5, 
+        "na": 0, 
         "patients": 490, 
         "rate": 2.4, 
+        "ratingClass": "normal", 
         "upper": 3.5
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.7, 
+        "na": 0, 
         "patients": 518, 
         "rate": 4.9, 
+        "ratingClass": "normal", 
         "upper": 6.4
       }
     }
@@ -284,17 +354,22 @@
     "display_name": "Emory University Hospital Midtown", 
     "id": "110078", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2, 
+        "na": 0, 
         "patients": 275, 
         "rate": 2.9, 
+        "ratingClass": "normal", 
         "upper": 4.4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.2, 
+        "na": 0, 
         "patients": 287, 
         "rate": 4.5, 
+        "ratingClass": "normal", 
         "upper": 6.2
       }
     }
@@ -304,17 +379,22 @@
     "display_name": "Grady Memorial Hospital", 
     "id": "110079", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "Number of Cases Too Small", 
         "lower": 0, 
+        "na": 1, 
         "patients": 0, 
         "rate": 0, 
+        "ratingClass": "", 
         "upper": 0
       }, 
       "readmission": {
+        "category": "Number of Cases Too Small", 
         "lower": 0, 
+        "na": 1, 
         "patients": 0, 
         "rate": 0, 
+        "ratingClass": "", 
         "upper": 0
       }
     }
@@ -324,17 +404,22 @@
     "display_name": "Emory Saint Joseph's Hospital", 
     "id": "110082", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "Better than the National Rate", 
         "lower": 1, 
+        "na": 0, 
         "patients": 1293, 
         "rate": 1.4, 
+        "ratingClass": "good", 
         "upper": 2.1
       }, 
       "readmission": {
+        "category": "Better than the National Rate", 
         "lower": 2.6, 
+        "na": 0, 
         "patients": 1359, 
         "rate": 3.3, 
+        "ratingClass": "good", 
         "upper": 4.2
       }
     }
@@ -344,17 +429,22 @@
     "display_name": "Piedmont Hospital", 
     "id": "110083", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.7, 
+        "na": 0, 
         "patients": 991, 
         "rate": 3.6, 
+        "ratingClass": "normal", 
         "upper": 4.7
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4.1, 
+        "na": 0, 
         "patients": 1051, 
         "rate": 5.2, 
+        "ratingClass": "normal", 
         "upper": 6.5
       }
     }
@@ -364,17 +454,22 @@
     "display_name": "Gwinnett Medical Center", 
     "id": "110087", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 3, 
+        "na": 0, 
         "patients": 630, 
         "rate": 4, 
+        "ratingClass": "normal", 
         "upper": 5.4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.2, 
+        "na": 0, 
         "patients": 660, 
         "rate": 4.3, 
+        "ratingClass": "normal", 
         "upper": 5.6
       }
     }
@@ -384,17 +479,22 @@
     "display_name": "Rockdale Medical Center", 
     "id": "110091", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.1, 
+        "na": 0, 
         "patients": 104, 
         "rate": 3.4, 
+        "ratingClass": "normal", 
         "upper": 5.5
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.8, 
+        "na": 0, 
         "patients": 106, 
         "rate": 5.6, 
+        "ratingClass": "normal", 
         "upper": 7.9
       }
     }
@@ -404,17 +504,22 @@
     "display_name": "Atlanta Medical Center", 
     "id": "110115", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2, 
+        "na": 0, 
         "patients": 77, 
         "rate": 3.4, 
+        "ratingClass": "normal", 
         "upper": 5.6
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3, 
+        "na": 0, 
         "patients": 88, 
         "rate": 4.6, 
+        "ratingClass": "normal", 
         "upper": 6.7
       }
     }
@@ -424,17 +529,22 @@
     "display_name": "Wellstar Cobb Hospital", 
     "id": "110143", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.7, 
+        "na": 0, 
         "patients": 355, 
         "rate": 2.6, 
+        "ratingClass": "normal", 
         "upper": 4
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.1, 
+        "na": 0, 
         "patients": 377, 
         "rate": 4.3, 
+        "ratingClass": "normal", 
         "upper": 5.8
       }
     }
@@ -444,17 +554,22 @@
     "display_name": "Northside Hospital", 
     "id": "110161", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.7, 
+        "na": 0, 
         "patients": 346, 
         "rate": 2.7, 
+        "ratingClass": "normal", 
         "upper": 4.3
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 2.8, 
+        "na": 0, 
         "patients": 356, 
         "rate": 4, 
+        "ratingClass": "normal", 
         "upper": 5.7
       }
     }
@@ -464,17 +579,22 @@
     "display_name": "Southern Regional Medical Center", 
     "id": "110165", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.1, 
+        "na": 0, 
         "patients": 91, 
         "rate": 3.4, 
+        "ratingClass": "normal", 
         "upper": 5.8
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4.3, 
+        "na": 0, 
         "patients": 92, 
         "rate": 6.4, 
+        "ratingClass": "normal", 
         "upper": 9.3
       }
     }
@@ -484,17 +604,22 @@
     "display_name": "Redmond Regional Medical Center", 
     "id": "110168", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.4, 
+        "na": 0, 
         "patients": 419, 
         "rate": 3.4, 
+        "ratingClass": "normal", 
         "upper": 5.1
       }, 
       "readmission": {
+        "category": "Worse than the National Rate", 
         "lower": 4.9, 
+        "na": 0, 
         "patients": 427, 
         "rate": 6.4, 
+        "ratingClass": "bad", 
         "upper": 8.5
       }
     }
@@ -504,17 +629,22 @@
     "display_name": "Wellstar Douglas Hospital", 
     "id": "110184", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.9, 
+        "na": 0, 
         "patients": 120, 
         "rate": 3.1, 
+        "ratingClass": "normal", 
         "upper": 5.1
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.2, 
+        "na": 0, 
         "patients": 125, 
         "rate": 4.6, 
+        "ratingClass": "normal", 
         "upper": 6.7
       }
     }
@@ -524,17 +654,22 @@
     "display_name": "Piedmont Henry Hospital", 
     "id": "110191", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.2, 
+        "na": 0, 
         "patients": 408, 
         "rate": 3.2, 
+        "ratingClass": "normal", 
         "upper": 4.7
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4.8, 
+        "na": 0, 
         "patients": 434, 
         "rate": 6.3, 
+        "ratingClass": "normal", 
         "upper": 8.3
       }
     }
@@ -544,17 +679,22 @@
     "display_name": "Eastside Medical Center", 
     "id": "110192", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.1, 
+        "na": 0, 
         "patients": 224, 
         "rate": 3.3, 
+        "ratingClass": "normal", 
         "upper": 5.2
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 4, 
+        "na": 0, 
         "patients": 247, 
         "rate": 5.7, 
+        "ratingClass": "normal", 
         "upper": 7.8
       }
     }
@@ -564,17 +704,22 @@
     "display_name": "North Fulton Hospital", 
     "id": "110198", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.4, 
+        "na": 0, 
         "patients": 191, 
         "rate": 3.8, 
+        "ratingClass": "normal", 
         "upper": 5.9
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.3, 
+        "na": 0, 
         "patients": 194, 
         "rate": 4.7, 
+        "ratingClass": "normal", 
         "upper": 6.6
       }
     }
@@ -584,17 +729,22 @@
     "display_name": "Piedmont Fayette Hospital", 
     "id": "110215", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.7, 
+        "na": 0, 
         "patients": 611, 
         "rate": 3.8, 
+        "ratingClass": "normal", 
         "upper": 5.3
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.8, 
+        "na": 0, 
         "patients": 630, 
         "rate": 5, 
+        "ratingClass": "normal", 
         "upper": 6.5
       }
     }
@@ -604,17 +754,22 @@
     "display_name": "Piedmont Mountainside Hospital", 
     "id": "110225", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.5, 
+        "na": 0, 
         "patients": 177, 
         "rate": 3.9, 
+        "ratingClass": "normal", 
         "upper": 6.2
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 2.8, 
+        "na": 0, 
         "patients": 179, 
         "rate": 4.2, 
+        "ratingClass": "normal", 
         "upper": 6.1
       }
     }
@@ -624,17 +779,22 @@
     "display_name": "Piedmont Newnan Hospital", 
     "id": "110229", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 1.5, 
+        "na": 0, 
         "patients": 194, 
         "rate": 2.4, 
+        "ratingClass": "normal", 
         "upper": 3.9
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 2.9, 
+        "na": 0, 
         "patients": 210, 
         "rate": 4.1, 
+        "ratingClass": "normal", 
         "upper": 6
       }
     }
@@ -644,17 +804,22 @@
     "display_name": "Emory Johns Creek Hospital", 
     "id": "110230", 
     "measures": {
-      "cd": {
+      "complication": {
         "category": "No different than the National Rate", 
         "lower": 2.1, 
+        "na": 0, 
         "patients": 72, 
         "rate": 3.7, 
+        "ratingClass": "normal", 
         "upper": 6.3
       }, 
       "readmission": {
+        "category": "No different than the National Rate", 
         "lower": 3.7, 
+        "na": 0, 
         "patients": 76, 
         "rate": 5.5, 
+        "ratingClass": "normal", 
         "upper": 8.1
       }
     }
