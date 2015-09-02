@@ -5,8 +5,9 @@ Data available at https://dch.georgia.gov/health-planning-databases
 */
 
 CREATE TABLE hospital_compare.perinatal
-SELECT b.uid, b.Medicare_Provider_No,
-       c.HospitalName,
+SELECT b.uid,
+       b.Medicare_Provider_No as provider_id,
+       c.HospitalName as ajc_hospital_name,
        a.Delivery_Rms,
        a.Birthing_Rms,
        a.LDR_Rms,

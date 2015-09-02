@@ -1,29 +1,29 @@
 DROP VIEW IF EXISTS hospital_compare.hip_knee;
 
 CREATE VIEW hip_knee AS
-SELECT a.ProviderNumber,
-       a.HospitalName,
-       b.address as Adress,
-       b.City,
-       b.State,
-       b.zip_code as zipCode,
-       b.county_name as CountyName,
+SELECT a.ProviderNumber as provider_id,
+       a.HospitalName as ajc_hospital_name,
+       b.address,
+       b.City as city,
+       b.State as state,
+       b.zip_code,
+       b.county_name,
 
        /* Rate of readmission after hip/knee surgery */
-       b.compared_to_national as readmissions_category,
+       b.compared_to_national as readmission_category,
        b.footnote as readmission_notes,
        b.denominator as readmission_patients,
-       b.score as readmission_rsrr,
+       b.score as readmission_rate,
        b.lower_estimate as readmission_lower,
        b.higher_estimate as readmission_upper,
 
        /* Rate of complications for hip/knee replacement patients */
-       c.compared_to_national as cd_category,
-       c.footnote as cd_notes,
-       c.denominator as cd_patients,
-       c.score as cd_rscr,
-       c.lower_estimate as cd_lower,
-       c.higher_estimate as cd_upper
+       c.compared_to_national as complication_category,
+       c.footnote as complication_notes,
+       c.denominator as complication_patients,
+       c.score as complication_rate,
+       c.lower_estimate as complication_lower,
+       c.higher_estimate as complication_upper
 
 FROM hospital_compare.hospital_names a
 
