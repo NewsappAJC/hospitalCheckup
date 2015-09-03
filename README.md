@@ -56,3 +56,4 @@ Explore hospital quality data for Atlanta area hospitals.
   - run `grunt sql_bakery`
   - run py/organizeJSON.py to create the restructured JSON files
 
+- Perinatal comes from AHQ database as well as hospital_compare. State level data is in AHQ and needs to be averaged manually.
