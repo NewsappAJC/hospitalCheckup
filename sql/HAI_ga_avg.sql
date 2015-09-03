@@ -12,11 +12,18 @@ WHERE state = "GA" AND measure LIKE "HAI_%_SIR"
 
 
 /*PERINATAL STATE AVERAGES*/
-SELECT round(AVG(C_Sect / Total_Deliveries)*100,0) as avgC_SectPct, #John had this as Total_Births but sometimes that is lower than C_Sect?
-       AVG(Avg_Delivery_Charge),
-       AVG(Avg_Premature_Delivery_Charge),
-       AVG(Total_Deliveries),
-       AVG(score) as early_births,
-       AVG(sample) as medicare_births
-FROM ahq.perinatal, hospital_compare.HQI_HOSP_TimelyEffectiveCare
-WHERE Year = 2014 AND Total_Deliveries > 0 AND (C_Sect / Total_Deliveries) < 1 AND state = "GA" AND measure_id = 'PC_01'
+SELECT round(AVG(C_Sect / Total_Deliveries)*100,0) as avgC_SectPct, /*Use Total_Deliveries or Total_Births?*/
+       SUM(Avg_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries) as avgDeliveryCharge,
+       SUM(Avg_Premature_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries) as avgPrematureCharge,
+       AVG(Total_Deliveries) as avgDeliveries,
+       SUM(c.early_births * Total_Deliveries)/SUM(Total_Deliveries) as avgEarlyPct
+FROM ahq.perinatal a
+JOIN ahq.lu_id b using(uid)
+LEFT JOIN (
+  SELECT provider_id,
+         score as early_births,
+         sample as medicare_births /*This might actually be the sample the score is based on? In that case should probably weight average based on this instead of Total_Deliveries*/
+  FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare
+  WHERE measure_id = "PC_01" AND state = "GA"
+) c ON b.Medicare_Provider_No = c.provider_id
+WHERE Year = 2014 AND Total_Deliveries > 0 AND (C_Sect / Total_Deliveries) < 1
