@@ -52,7 +52,7 @@ Explore hospital quality data for Atlanta area hospitals.
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
 - To update:
   - upload new data to the database (Carrie or John usually does this)
-  - make sure all views/tables specified in config/sql.json (should be "hospital_totals_web", "HAI_transposed", "hip_knee", "perinatal") are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string)
+  - make sure all views/tables specified in config/sql.json (should be "hospital_totals_web", "HAI_transposed", "hip_knee", "perinatal") are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string) and queries referencing dates/years have been updated
   - run `grunt sql_bakery`
   - run py/organizeJSON.py to create the restructured JSON files
 
