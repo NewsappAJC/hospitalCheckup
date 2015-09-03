@@ -14,11 +14,11 @@ WHERE state = "GA" AND measure LIKE "HAI_%_SIR"
 /*PERINATAL STATE AVERAGES*/
 ALTER VIEW perinatal_state_avgs_web AS
 SELECT round(AVG(C_Sect / Total_Deliveries)*100,0) as avgC_SectPct, /*Use Total_Deliveries or Total_Births?*/
-       SUM(Avg_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries) as avgDeliveryCharge,
-       SUM(Avg_Premature_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries) as avgPrematureCharge,
-       AVG(Total_Deliveries) as avgDeliveries,
+       round(SUM(Avg_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries), 0) as avgDeliveryCharge,
+       round(SUM(Avg_Premature_Delivery_Charge*Total_Deliveries)/SUM(Total_Deliveries), 0) as avgPrematureCharge,
+       round(AVG(Total_Deliveries), 0) as avgDeliveries,
        /*'sample' might actually be the sample the score is based on? In that case should probably weight average based on that instead of Total_Deliveries, especially since the sample is 0 in many cases*/
-       SUM(c.score * Total_Deliveries)/SUM(Total_Deliveries) as avgEarlyPct
+       round(SUM(c.score * Total_Deliveries)/SUM(Total_Deliveries), 2) as avgEarlyPct
 FROM ahq.perinatal a
 JOIN ahq.lu_id b using(uid)
 LEFT JOIN hospital_compare.HQI_HOSP_TimelyEffectiveCare c
