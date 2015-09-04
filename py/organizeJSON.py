@@ -114,8 +114,20 @@ for node in src:
 
     tree.append(hospital)
 
+ft = open( '../src/assets/data/src/hipknee_avgs_web.json', 'rU')
+src = json.load(ft)
+ft.close()
+
+#would be easy to do this in sql but I was the view to be easy to understand
+hipkneeDict = {"ga_readm_avg" : "readmission", "ga_comp_avg" : "complication"}
+totals = {"id": "hipkneeStateAverages"} #backbone expects an ID and local storage uses it too
+
+for node in src:
+    for key in node.keys():
+        totals[hipkneeDict[key]] = node[key]
+
 f = open( '../src/assets/data/hipknee.json', 'w')
-f.write(json.dumps(tree, indent=2, sort_keys=True))
+f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 
 print "hospital hipknee JSON saved!"
