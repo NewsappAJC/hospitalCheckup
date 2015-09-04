@@ -17,12 +17,12 @@ SELECT b.uid,
        a.C_Sect,
        a.Live_Births,
        a.Total_Births,
-       round(a.C_Sect / a.Total_Births * 100, 0) as csection_pct,
+       round(a.C_Sect / a.Total_Births * 100, 0) as C_Sect_pct,
        a.Avg_Delivery_Charge,
        a.Avg_Premature_Delivery_Charge,
        d.medicare_births, -- this might actually be sample size
-       d.early_births,
-       d.footnote,
+       d.early_births_pct,
+       d.early_footnote,
        -- not currently using any of these but for now grabbing them anyway in case we want them historically later
        a.Total_Deliveries, -- includes abortions
        a.Beds_New_Born,
@@ -40,9 +40,9 @@ JOIN hospital_compare.hospital_names c
   ON c.providerNumber = b.Medicare_Provider_No
 LEFT JOIN (
   SELECT provider_id,
-         score as early_births,
+         score as early_births_pct,
          sample as medicare_births, /*check on what this is, might be sample size*/
-         footnote
+         footnote as early_footnote
   FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare
   WHERE measure_id = 'PC_01'
 ) d ON b.Medicare_Provider_No = d.provider_id
