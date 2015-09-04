@@ -63,7 +63,7 @@ for node in src:
     tree.append(hospital)
 
 #rename unintuitive ratio keys and round the averages
-ft = open( '../src/assets/data/src/hospital_totals_web.json', 'rU')
+ft = open( '../src/assets/data/src/infection_avgs_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 

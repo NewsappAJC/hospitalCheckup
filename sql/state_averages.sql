@@ -3,7 +3,7 @@
 */
 
 /*INFECTIONS STATE AVERAGES*/
-ALTER VIEW hospital_totals_web AS
+ALTER VIEW infection_avgs_web AS
 SELECT state,
        measure,
        score
@@ -30,7 +30,7 @@ LEFT JOIN hospital_compare.complications_hosp c
 
 
 /*PERINATAL STATE AVERAGES*/
-ALTER VIEW perinatal_state_avgs_web AS
+ALTER VIEW perinatal_avgs_web AS
 SELECT round(AVG(C_Sect / Total_Births)*100,0) as avgC_SectPct,
        round(SUM(Avg_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgDeliveryCharge,
        round(SUM(Avg_Premature_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgPrematureCharge,
