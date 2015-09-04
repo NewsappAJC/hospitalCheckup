@@ -3,6 +3,8 @@ Create perinatal data table for pregnency/delivery site.
 Data available at https://dch.georgia.gov/health-planning-databases
 (Annual Hospital Questionaire - 2000 to 2014)
 */
+
+/*NOTES: Total_Deliveries includes abortions so don't use it. State uses Total_Births (which does include late term miscariages)*/
 DROP TABLE IF EXISTS hospital_compare.perinatal; -- if it says table already exists run this by itself first
 CREATE TABLE hospital_compare.perinatal
 SELECT b.uid,
@@ -15,7 +17,7 @@ SELECT b.uid,
        a.C_Sect,
        a.Live_Births,
        a.Total_Births,
-       a.Total_Deliveries,
+       a.Total_Deliveries, -- includes abortions
        a.Beds_New_Born,
        a.Beds_Intermediate,
        a.Beds_Intensive,
@@ -44,5 +46,5 @@ LEFT JOIN (
   WHERE measure_id = 'PC_01'
 ) d ON b.Medicare_Provider_No = d.provider_id
 WHERE a.year = 2014
-  AND a.Total_Deliveries > 0
+  AND a.Total_Births > 0 -- in some cases this metric is messed up
 HAVING a.C_Sect / a.Total_Births < 1

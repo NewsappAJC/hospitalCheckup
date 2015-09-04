@@ -1,9 +1,9 @@
 [
     {
-        "avgC_SectPct": 32,
-        "avgDeliveryCharge": 11294,
-        "avgPrematureCharge": 21023,
-        "avgDeliveries": 1660,
-        "avgEarlyPct": 2.95
+        "avgC_SectPct": 33,
+        "avgDeliveryCharge": 11332,
+        "avgPrematureCharge": 21335,
+        "avgBirths": 1639,
+        "avgEarlyPct": 2.96
     }
 ]
