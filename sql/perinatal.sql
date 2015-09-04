@@ -3,7 +3,7 @@ Create perinatal data table for pregnency/delivery site.
 Data available at https://dch.georgia.gov/health-planning-databases
 (Annual Hospital Questionaire - 2000 to 2014)
 */
-
+DROP TABLE IF EXISTS hospital_compare.perinatal; -- if it says table already exists run this by itself first
 CREATE TABLE hospital_compare.perinatal
 SELECT b.uid,
        b.Medicare_Provider_No as provider_id,
@@ -43,6 +43,6 @@ LEFT JOIN (
   FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare
   WHERE measure_id = 'PC_01'
 ) d ON b.Medicare_Provider_No = d.provider_id
-WHERE a.year = 2013
+WHERE a.year = 2014
   AND a.Total_Deliveries > 0
 HAVING a.C_Sect / a.Total_Births < 1
