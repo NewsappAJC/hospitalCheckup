@@ -17,6 +17,13 @@ SELECT b.uid,
        a.C_Sect,
        a.Live_Births,
        a.Total_Births,
+       round(a.C_Sect / a.Total_Births * 100, 0) as csection_pct,
+       a.Avg_Delivery_Charge,
+       a.Avg_Premature_Delivery_Charge,
+       d.medicare_births, -- this might actually be sample size
+       d.early_births,
+       d.footnote,
+       -- not currently using any of these but for now grabbing them anyway in case we want them historically later
        a.Total_Deliveries, -- includes abortions
        a.Beds_New_Born,
        a.Beds_Intermediate,
@@ -26,13 +33,7 @@ SELECT b.uid,
        a.Adms_Intensive,
        a.Days_New_Born,
        a.Days_Intermediate,
-       a.Days_Intensive,
-       round(a.C_Sect / a.Total_Births * 100, 0) as csection_pct,
-       a.Avg_Delivery_Charge,
-       a.Avg_Premature_Delivery_Charge,
-       d.medicare_births,
-       d.early_births,
-       d.footnote
+       a.Days_Intensive
 FROM ahq.perinatal a
 JOIN ahq.lu_id b using(uid)
 JOIN hospital_compare.hospital_names c
@@ -40,7 +41,7 @@ JOIN hospital_compare.hospital_names c
 LEFT JOIN (
   SELECT provider_id,
          score as early_births,
-         sample as medicare_births,
+         sample as medicare_births, /*check on what this is, might be sample size*/
          footnote
   FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare
   WHERE measure_id = 'PC_01'
