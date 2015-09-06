@@ -88,7 +88,7 @@ for node in src:
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = node["address"]
-    hospital["measures"] = {
+    hospital["surgery"] = {
         "readmission" : {}, "complication" : {}
     }
 
@@ -96,14 +96,14 @@ for node in src:
     for key in node.keys():
         tmp = key.lower().split("_")
         measure = tmp[0]
-        if measure in hospital["measures"]:
+        if measure in hospital["surgery"]:
             param = tmp[1]
 
             if(param != "notes"):
-                hospital["measures"][measure][param] = node[key]
+                hospital["surgery"][measure][param] = node[key]
             if(param == "category"):
-                hospital["measures"][measure]["na"] = isNA(node[key])
-                hospital["measures"][measure]["ratingClass"] = ratingClasses[node[key]]
+                hospital["surgery"][measure]["na"] = isNA(node[key])
+                hospital["surgery"][measure]["ratingClass"] = ratingClasses[node[key]]
 
     tree.append(hospital)
 
@@ -119,7 +119,7 @@ for node in src:
     for key in node.keys():
         totals[hipkneeDict[key]] = node[key]
 
-f = open( '../src/assets/data/hipknee.json', 'w')
+f = open( '../src/assets/data/surgery.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 

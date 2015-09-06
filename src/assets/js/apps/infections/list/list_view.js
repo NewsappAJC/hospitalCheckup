@@ -59,7 +59,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
     template: "#main-legend"
   });
 
-  List.InfectionsChart = Marionette.ItemView.extend({
+  List.MainChart = Marionette.ItemView.extend({
     template: "#main-chart-template",
     behaviors: {
       HospitalSelect:{
@@ -101,7 +101,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       //don't show items will null ratios
       return !child.get("infections")[this.measure].na
     },
-    onInfectionsFilter: function(criterion){
+    onFilter: function(criterion){//TODO update naming
       this.measure = criterion;
       this.children.each(function(view){
         view.model.set("measure", criterion);

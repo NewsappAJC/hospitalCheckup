@@ -1,13 +1,13 @@
 HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
-  List.Controller = {
+  List.InfectionsController = {
     listInfections: function(id, criterion){
       var isMobile = document.body.clientWidth < 405,
       defaultMeasure = "cdiff";
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
-      var fetchingInfections = HospitalCheckup.request("chart:entities", "Infection", "infections");
+      var fetchingData = HospitalCheckup.request("chart:entities", "Infection", "infections");
 
       var infectionsListLayout = new List.Layout(),
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
@@ -17,17 +17,17 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       infectionsLegendView = new List.Legend(),
       infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
-      hospitalLegendView = new HospitalCheckup.InfectionsApp.Show.Legend(),
-      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
+      hospitalLegendView = new HospitalCheckup.InfectionsApp.Show.InfectionLegend(),
+      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
       infectionsListView;
 
-      $.when(fetchingInfections).done(function(infections){
+      $.when(fetchingData).done(function(infections){
 
         if(!isMobile){
-          infectionsListView = new List.InfectionsChart();
+          infectionsListView = new List.MainChart();
         } else {
           infectionsListView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure });
-          infectionsListView.listenTo(infectionsMenuView, "infections:filter", infectionsListView.onInfectionsFilter);
+          infectionsListView.listenTo(infectionsMenuView, "infections:filter", infectionsListView.onFilter);
         }
 
         infectionsListLayout.on("show", function(){
