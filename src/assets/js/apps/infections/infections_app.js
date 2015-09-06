@@ -2,7 +2,8 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
   InfectionsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
       //"infections(/)": "listInfections",
-      "infections(/:id)(/filter/:criterion)": "listInfections" //hospital selection IDs and dropdown infections filters
+      "infections(/:id)(/filter/:criterion)": "listInfections", //hospital selection IDs and dropdown infections filters
+      "surgery(/:id)(/filter/:criterion)": "listSurgeries"
     }
   });
 
@@ -10,6 +11,11 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     listInfections: function(id, criterion){
       InfectionsApp.List.InfectionsController.listInfections(id, criterion);
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
+    },
+
+    listSurgeries: function(id, criterion){
+      InfectionsApp.List.SurgeriesController.listSurgeries(id, criterion);
+      HospitalCheckup.execute("set:active:header", "surgery"); //update navigation toolbar
     },
 
     showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
@@ -20,6 +26,11 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
   HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav or click on viz
     HospitalCheckup.navigate("infections");
     API.listInfections();
+  });
+
+  HospitalCheckup.on("surgeries:list", function(){ //list infections, triggered from nav or click on viz
+    HospitalCheckup.navigate("surgery");
+    API.listSurgeries();
   });
 
   HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
@@ -33,6 +44,10 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
 
   HospitalCheckup.on("infections:filter", function(criterion){ //filter menu changed
     HospitalCheckup.navigate("infections/filter/" + criterion);
+  });
+
+  HospitalCheckup.on("surgery:filter", function(criterion){ //filter menu changed
+    HospitalCheckup.navigate("surgery/filter/" + criterion);
   });
 
   InfectionsApp.on("start", function(){

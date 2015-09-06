@@ -127,6 +127,7 @@ module.exports = function(grunt) {
           'build/assets/js/entities/infection.js': ['src/assets/js/entities/infection.js'],
           'build/assets/js/apps/infections/list/list_view.js': ['src/assets/js/apps/infections/list/list_view.js'],
           'build/assets/js/apps/infections/list/list_controller.js': ['src/assets/js/apps/infections/list/infections_controller.js'],
+          'build/assets/js/apps/infections/list/list_controller.js': ['src/assets/js/apps/infections/list/surgeries_controller.js'],
           'build/assets/js/apps/infections/show/show_controller.js': ['src/assets/js/apps/infections/show/show_controller.js'],
           'build/assets/js/apps/infections/show/show_view.js': ['src/assets/js/apps/infections/show/show_view.js'],
           'build/assets/js/apps/infections/infections_app.js': ['src/assets/js/apps/infections/infections_app.js'],

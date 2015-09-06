@@ -247,7 +247,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("id", "averageLine");
 
       contextLines.append("text")
-        .text("State SIR: " + avg)
+        .text("State avg.")
         .attr("text-anchor", function(){
           if(avg < 1){
             return "end"
@@ -341,7 +341,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .transition().duration(chart.duration)
         .ease(chart.easing)
         .attr("x", chart.xScale(avg))
-        .text("State SIR: " + avg)
         .attr("text-anchor", function(){
           if(avg < 1){
             return "end"
