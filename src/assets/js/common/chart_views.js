@@ -260,24 +260,26 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("x", chart.xScale(avg))
         .attr("y", -5);
 
-      contextLines.append("line")
-        .attr("y1", 0)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(1)) //benchmark is always 1
-        .attr("x2", chart.xScale(1))
-        .attr("id", "benchmarkLine");
+      if(chart.options.section === "infections"){
+        contextLines.append("line")
+          .attr("y1", 0)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1))
+          .attr("id", "benchmarkLine");
 
-      contextLines.append("text")
-        .text("Benchmark")
-        .attr("text-anchor", function(){ //figure out which side the line is on
-          if(avg < 1){
-            return "start"
-          } return "end"
-        })
-        .attr("class", "chart-label")
-        .attr("id", "benchmarkTxt")
-        .attr("x", chart.xScale(1))
-        .attr("y", -5);
+        contextLines.append("text")
+          .text("Benchmark")
+          .attr("text-anchor", function(){ //figure out which side the line is on
+            if(avg < 1){
+              return "start"
+            } return "end"
+          })
+          .attr("class", "chart-label")
+          .attr("id", "benchmarkTxt")
+          .attr("x", chart.xScale(1))
+          .attr("y", -5);
+      }
     },
 
     draw_stat_circles: function(data){
@@ -347,22 +349,24 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           } return "start"
         });
 
-      chart.svg.select("#benchmarkLine")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(1)) //benchmark is always 1
-        .attr("x2", chart.xScale(1));
+      if(chart.options.section === "infections"){
+        chart.svg.select("#benchmarkLine")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1));
 
-      chart.svg.select("#benchmarkTxt")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("x", chart.xScale(1))
-        .attr("text-anchor", function(){
-          if(avg < 1){
-            return "start"
-          } return "end"
-        });
+        chart.svg.select("#benchmarkTxt")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("x", chart.xScale(1))
+          .attr("text-anchor", function(){
+            if(avg < 1){
+              return "start"
+            } return "end"
+          });
+      }
     }
   });
 
