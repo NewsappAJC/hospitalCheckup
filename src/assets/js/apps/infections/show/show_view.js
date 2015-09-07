@@ -50,7 +50,26 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
       //we need unnamed, top-level objects for the collection
       _.each(data.get(options.section), function(values, key, collection){ //TODO do this on the model instead
         values.label = HospitalCheckup.Entities[options.labelArr+"Labels"].findWhere({ key: key }).get("label"); //look up the display name for the current infection
-        values.measure = key; //TODO need the full name
+        values.measure = key;
+        dataArr.push(values);
+      });
+      return dataArr;
+    }
+  });
+
+  Show.HospitalSurgeryDetailItem = Marionette.ItemView.extend({
+    template: "#hospital-surgery-item-template",
+    className: "hospital-list-item"
+  });
+
+  Show.HospitalSurgeryDetails = Marionette.CollectionView.extend({
+    template: "#empty-template",
+    className: "hospital-list",
+    childView: Show.HospitalSurgeryDetailItem,
+    get_hospital_models: function(data){
+      var dataArr = [];
+      _.each(data.get("surgery"), function(values, key, collection){
+        values.measure = key;
         dataArr.push(values);
       });
       return dataArr;

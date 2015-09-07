@@ -140,6 +140,17 @@
     <hr>
   </script>
 
+  <script type="text/template" id="hospital-surgery-item-template">
+    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %>s</h4>
+    <p>
+      <strong>Patients included:</strong> <%= patients %><br>
+      <strong>Rate:</strong> <%= rate %>%<br>
+      <strong>Rate range:</strong> <%= upper %>% <strong>to</strong> <%= lower %>%<br>
+      <strong>Rating:</strong> <%= category %>
+    </p>
+    <hr>
+  </script>
+
   <script type="text/template" id="section-layout">
     <div class="row">
       <div id="section-headline-region" class="medium-12 columns"></div>

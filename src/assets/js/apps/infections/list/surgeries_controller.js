@@ -16,7 +16,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),//TODO rename section
       surgeriesLegendView = new List.Legend(),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
-      //hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
+      hospitalMeasuresView = new HospitalCheckup.InfectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
       surgeriesListView;
 
       $.when(fetchingData).done(function(surgeries){
@@ -37,9 +37,9 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           surgeriesListLayout.hospitalRegion.show(hospitalLayout);
         });
 
-        // surgeriesListView.on("hospital:change", function(id){ //triggered by behaviors
-        //   HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalChartsView);
-        // });
+        surgeriesListView.on("hospital:change", function(id){ //triggered by behaviors
+          HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalMeasuresView);
+        });
 
         //wait for #main-chart to be rendered
         surgeriesListView.on("show", function(){
@@ -67,13 +67,12 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           surgeriesMenuView.triggerMethod("set:filter:criterion", criterion);
         });
 
-        // hospitalLayout.on("show", function(){
-        //   var defaultModel = surgeries.at(0);
-        //   HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView, defaultModel);
-        //   hospitalLayout.topRegion.show(hospitalShowView);
-        //   hospitalLayout.legendRegion.show(hospitalLegendView);
-        //   hospitalLayout.chartRegion.show(hospitalChartsView);
-        // });
+        hospitalLayout.on("show", function(){
+          var defaultModel = surgeries.at(0);
+          HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalMeasuresView, defaultModel);
+          hospitalLayout.topRegion.show(hospitalShowView);
+          hospitalLayout.chartRegion.show(hospitalMeasuresView);
+        });
 
         HospitalCheckup.regions.main.show(surgeriesListLayout);
       });
