@@ -41,13 +41,13 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
         });
 
         infectionsListView.on("hospital:change", function(id){ //triggered by behaviors
-          HospitalCheckup.trigger("hospital:change", id, hospitalShowView, hospitalChartsView);
+          HospitalCheckup.trigger("hospital:change", id, "infections", hospitalShowView, hospitalChartsView);
         });
 
         //wait for #main-chart to be rendered
         infectionsListView.on("show", function(){
           if(!isMobile){
-            List.infectionsChartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
+            List.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
               el: "#main-chart",
               collection: infections,
               base_height: 700,
@@ -57,13 +57,13 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
               section: "infections",
               stat: "ratio"
             });
-            List.infectionsChartView.render(); //for some reason this breaks filtering when chained with initialization above
+            List.chartView.render(); //for some reason this breaks filtering when chained with initialization above
           }
         });
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
-          Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "update:chart", filterCriterion);
+          Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
 
         infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL

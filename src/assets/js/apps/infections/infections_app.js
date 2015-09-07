@@ -37,8 +37,8 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     API.showHospital(id, aboutView, chartsView, defaultModel);
   });
 
-  HospitalCheckup.on("hospital:change", function(id, aboutView, chartsView){ //hospital selected from infection list
-    HospitalCheckup.navigate("infections/" + id);
+  HospitalCheckup.on("hospital:change", function(id, app, aboutView, chartsView){ //hospital selected from infection list
+    HospitalCheckup.navigate(app+"/" + id);
     API.showHospital(id, aboutView, chartsView);
   });
 
