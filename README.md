@@ -21,9 +21,8 @@ Explore hospital quality data for Atlanta area hospitals.
  - [spin.js](http://spin.js.org/) for loading spinner
 
 ## Notes
-- Rate == Ratio
+- Rate = Ratio
 - Range (popup) is the confidence interval
-- Need to explain the benchmark is always 1
 
 ##Improvements on original hospital quality app
  - Active menu item is highlighted
@@ -35,9 +34,11 @@ Explore hospital quality data for Atlanta area hospitals.
  - state average no longer hard-coded into the view
  - Comma formatted patient days
  - selected hospital stays highlighted if it re-enters after exiting due to filters
+ - Mobile hospital table much better looking!
  
 ## Todo
 - [ ] Spell out infection names in infection bottom text
+- [ ] Fix tooltips on tablets
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
 - [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
@@ -50,10 +51,8 @@ Explore hospital quality data for Atlanta area hospitals.
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
 - To update:
   - upload new data to the database (Carrie or John usually does this)
-  - make sure all views/tables specified in config/sql.json are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string)
+  - make sure all views/tables specified in config/sql.json (should be "hospital_totals_web", "HAI_transposed", "hip_knee", "perinatal") are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string, year string needs to be change in perinatal.sql) and queries referencing dates/years have been updated
   - run `grunt sql_bakery`
   - run py/organizeJSON.py to create the restructured JSON files
 
-- Timely and effective care table for surgeries (I don't see anything in there about complications or readmissions though)
-- Labor and delivery comes from two separate data sources, one is the HQI_HOSPI_TEC_PC table (right now it's empty)
-
+- Perinatal comes from AHQ database as well as hospital_compare. State level data is in AHQ and needs to be averaged manually (perinatal_state_avgs_web is set up to do this, remember to change the year in the query if necessary).

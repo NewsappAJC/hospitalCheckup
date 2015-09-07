@@ -1,4 +1,4 @@
-HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
   Show.Controller = {
     showHospital: function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
 
@@ -21,7 +21,7 @@ HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Bac
         aboutView.model = model;
         chartsView.collection.reset(chartsView.get_hospital_models(model)); //collection will rerender itself when model is reset
         aboutView.render();
-        Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.infectionsChartView"), "select:hospital", model.get("display_name")); //add active class to chart hospital label
+        Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "select:hospital", model.get("display_name")); //add active class to chart hospital label
       }
     }
   }

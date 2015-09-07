@@ -5,6 +5,7 @@
 import json
 import decimal #for rounding totals
 
+##### HOSPITAL ASSOCIATED INFECTIONS #####
 f = open( '../src/assets/data/src/HAI_transposed.json', 'rU' )
 src = json.load(f)
 f.close()
@@ -15,15 +16,8 @@ ratingClasses = {"No Different than National Benchmark":"normal", "Better than t
 for node in src:
     hospital = {}
     hospital["id"] = node["provider_id"]
-    hospital["provider_name"] = node["hospital_name"]
     hospital["display_name"] = node["ajc_hospital_name"]
-    hospital["address"] = {
-        "street" : node["address"],
-        "city" : node["city"],
-        "state" : node["state"],
-        "zip" : node["zip_code"],
-        "county" : node["county_name"]
-    }
+    hospital["address"] = node["address"]
     hospital["infections"] = {
             "cauti" : {}, "clabsi" : {}, "mrsa" : {}, "ssicolon" : {}, "ssihyst" : {}, "cdiff" : {}
     }
@@ -57,19 +51,13 @@ for node in src:
 
             if(param == "category"):
                 hospital["infections"][inf]["ratingClass"] = ratingClasses[val]
-        # if tmp[0] in keys: #for array lookup
-        #if tmp[0] in infections:
-            #infections[tmp[0]][tmp[1]] = val
-        #if tmp[0] in keys: #for array lookup
-            #hospital["infections"][keys.index(tmp[0])][tmp[0]][tmp[1]] = val
-
-    #we want to loop through an array of infection objects rather than k/v pairs
-    #hospital["infections"] = [infections["cauti"], infections["clabsi"], infections["ssicolon"], infections["ssihyst"], infections["cdiff"], infections["mrsa"]]
 
     tree.append(hospital)
 
+
+##### HIP/KNEE SURGERIES #####
 #rename unintuitive ratio keys and round the averages
-ft = open( '../src/assets/data/src/hospital_totals_web.json', 'rU')
+ft = open( '../src/assets/data/src/infection_avgs_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 
@@ -84,4 +72,104 @@ f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=
 f.close()
 
 print "hospital infections JSON saved!"
-print "infection state avg JSON saved!"
+
+f = open( '../src/assets/data/src/hip_knee.json', 'rU' )
+src = json.load(f)
+f.close()
+
+tree = []
+ratingClasses = {"No different than the National Rate":"normal", "Better than the National Rate":"good", "Worse than the National Rate":"bad", "Number of Cases Too Small": ""}
+
+def isNA(string):
+    return int(string == "Number of Cases Too Small")
+
+for node in src:
+    hospital = {}
+    hospital["id"] = node["provider_id"]
+    hospital["display_name"] = node["ajc_hospital_name"]
+    hospital["address"] = node["address"]
+    hospital["surgery"] = {
+        "readmission" : {}, "complication" : {}
+    }
+
+    #loop through keys looking for the infection substrings and create objects to hold their common properties
+    for key in node.keys():
+        tmp = key.lower().split("_")
+        measure = tmp[0]
+        if measure in hospital["surgery"]:
+            param = tmp[1]
+
+            if(param != "notes"):
+                hospital["surgery"][measure][param] = node[key]
+            if(param == "category"):
+                hospital["surgery"][measure]["na"] = isNA(node[key])
+                hospital["surgery"][measure]["ratingClass"] = ratingClasses[node[key]]
+
+    tree.append(hospital)
+
+ft = open( '../src/assets/data/src/hipknee_avgs_web.json', 'rU')
+src = json.load(ft)
+ft.close()
+
+#would be easy to do this in sql but I was the view to be easy to understand
+hipkneeDict = {"ga_readm_avg" : "readmission", "ga_comp_avg" : "complication"}
+totals = {"id": "hipkneeStateAverages"} #backbone expects an ID and local storage uses it too
+
+for node in src:
+    for key in node.keys():
+        totals[hipkneeDict[key]] = node[key]
+
+f = open( '../src/assets/data/surgery.json', 'w')
+f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
+f.close()
+
+print "hospital hipknee JSON saved!"
+
+
+##### PERINATAL #####
+f = open( '../src/assets/data/src/perinatal.json', 'rU' )
+src = json.load(f)
+f.close()
+
+tree = []
+#there's a bunch of stuff in the data not being used in the app, just grab the stuff that will be displayed
+names = ["Delivery_Rms", "Birthing_Rms", "LDR_Rms", "LDRP_Rms", "C_Sect", "Live_Births", "Total_Births", "C_Sect_pct", "Avg_Delivery_Charge", "Avg_Premature_Delivery_Charge", "early_births_pct"]
+
+for node in src:
+    hospital = {}
+    hospital["id"] = node["provider_id"]
+    hospital["display_name"] = node["ajc_hospital_name"]
+    #hospital["address"] = node["address"] TODO get the addresses into the data
+
+    #loop through keys looking for the infection substrings and create objects to hold their common properties
+    for key in node.keys():
+        if key in names:
+            val = node[key]
+            if(key == "C_Sect_pct" or key == "early_births_pct"):
+                val = str(val)+"%"
+            elif(val):
+                val = "{:,d}".format(val)
+                if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
+                    val = "$"+str(val)
+
+            hospital[key] = val
+
+    tree.append(hospital)
+
+ft = open( '../src/assets/data/src/perinatal_avgs_web.json', 'rU')
+src = json.load(ft)
+ft.close()
+
+#would be easy to do this in sql but I was the view to be easy to understand
+hipkneeDict = {"avgC_SectPct" : "C_Sect_Pct", "avgDeliveryCharge" : "Avg_Delivery_Charge", "avgPrematureCharge": "Avg_Premature_Charge", "avgBirths": "Total_Births", "avgEarlyPct": "early_births_pct"}
+totals = {"id": "perinatalStateAverages"} #backbone expects an ID and local storage uses it too
+
+for node in src:
+    for key in node.keys():
+        totals[hipkneeDict[key]] = node[key]
+
+f = open( '../src/assets/data/perinatal.json', 'w')
+f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
+f.close()
+
+print "hospital perinatal JSON saved!"

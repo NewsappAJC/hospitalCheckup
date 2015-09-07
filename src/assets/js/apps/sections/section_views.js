@@ -1,4 +1,4 @@
-HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.Layout = Marionette.LayoutView.extend({
     template: "#section-layout",
@@ -56,10 +56,20 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
   });
 
   List.Legend = Marionette.ItemView.extend({
-    template: "#main-legend"
+    template: "#main-legend",
+    initialize: function(options){
+      var options = options || {};
+      this.label = options.label;
+    },
+
+    serializeData: function(){
+      return {
+        label: this.label
+      }
+    }
   });
 
-  List.InfectionsChart = Marionette.ItemView.extend({
+  List.MainChart = Marionette.ItemView.extend({
     template: "#main-chart-template",
     behaviors: {
       HospitalSelect:{
@@ -101,7 +111,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       //don't show items will null ratios
       return !child.get("infections")[this.measure].na
     },
-    onInfectionsFilter: function(criterion){
+    onFilter: function(criterion){
       this.measure = criterion;
       this.children.each(function(view){
         view.model.set("measure", criterion);

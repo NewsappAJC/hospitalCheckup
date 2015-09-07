@@ -1,31 +1,23 @@
 HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone, Marionette, $, _){
   //Entities = models and collections
-  Entities.Hospital = Backbone.Model.extend({
-    urlRoot: "infections"
-  });
-  Entities.configureStorage("HospitalCheckup.Entities.Hospital");
-
-  Entities.StateAverages = Backbone.Model.extend({
-    localStorage: new Backbone.LocalStorage("infections-state-avg") //using this instead of a URL!
-  });
-
-  Entities.InfectionCollection = Backbone.Collection.extend({
-    url: "infections", //we could use our .json file but then we wouldn't be able to use this url for local storage
-    model: Entities.Hospital
-  });
-  Entities.configureStorage("HospitalCheckup.Entities.InfectionCollection");
-
-  Entities.InfectionLabels = new Backbone.Collection([ /*TODO I think I might be using entities wrong and they should be used for classes not instances*/
-    {label: "Clostridium difficile (C.diff)", key: "cdiff"},
-    {label: "Methicillin-resistant staphylococcus sureus (MRSA)", key: "mrsa"},
-    {label: "Catheter-associated urinary tract infections", key: "cauti"},
-    {label: "Central line-associated blood stream infections", key: "clabsi"},
-    {label: "Surgical site infection from colon surgery", key: "ssicolon"},
-    {label: "Surgical site infection from abdominal hysterectomy", key: "ssihyst"}
-  ]);
 
   var API = {
     getChartEntities: function(entityID, fileID){
+      Entities.StateAverages = Backbone.Model.extend({
+        localStorage: new Backbone.LocalStorage(fileID+"-state-avg") //using this instead of a URL!
+      });
+
+      Entities.Hospital = Backbone.Model.extend({
+        urlRoot: fileID
+      });
+      Entities.configureStorage("HospitalCheckup.Entities.Hospital");
+
+      Entities[entityID+"Collection"] = Backbone.Collection.extend({
+        url: fileID, //we could use our .json file but then we wouldn't be able to use this url for local storage
+        model: Entities.Hospital
+      });
+      Entities.configureStorage("HospitalCheckup.Entities."+entityID+"Collection");
+
       Entities.averages = new Entities.StateAverages(); //attach to Entities so chart can get at it
       var entities = new Entities[entityID+"Collection"]();
       var deferLocal = $.Deferred(); //wait for localStorage data to be fetched
@@ -55,7 +47,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           $.ajax({
             dataType: "json",
             url: "/assets/data/"+fileID+".json",
-            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json",
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/"+fileID+".json",
             type: "GET",
             success: resetModels
           });
