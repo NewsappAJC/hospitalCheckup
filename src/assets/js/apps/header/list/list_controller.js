@@ -9,6 +9,9 @@ HospitalCheckup.module("HeaderApp.List", function(List, HospitalCheckup, Backbon
         HospitalCheckup.trigger(trigger);
       });
 
+      //for mobile menu functionality
+      headers.on("show", function(){$(document).foundation('topbar', 'reflow');})
+
       HospitalCheckup.regions.header.show(headers);
     },
 

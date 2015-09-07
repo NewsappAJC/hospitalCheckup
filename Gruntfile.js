@@ -75,6 +75,7 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
               'src/assets/js/vendor/backbone.select.js',
+              'src/assets/js/vendor/foundation.topbar.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -295,6 +296,7 @@ module.exports = function(grunt) {
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
+          "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
           "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "spin.js": "spin.js/spin.js", //for page loading spinner
           "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
