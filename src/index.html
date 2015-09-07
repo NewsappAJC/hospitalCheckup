@@ -110,13 +110,22 @@
     </div>
   </script>
 
+  <script type="text/template" id="surgery-tooltip-template">
+    <div id="ttip" class="ttip container">
+        <strong>Rate:</strong> <%= surgery[measure].rate %><br>
+        <strong>Rate range:</strong> <%= surgery[measure].lower %> <strong>to</strong> <%= surgery[measure].upper %><br>
+        <strong>Patients included:</strong> <%= surgery[measure].patients %><br>
+        <strong>Rating:</strong> <%- surgery[measure].category %>
+    </div>
+  </script>
+
   <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address %></p>
     <hr>
   </script>
 
-  <script type="text/template" id="hospital-item-template">
+  <script type="text/template" id="hospital-infection-item-template">
     <h4><%= label %></h4>
     <% if (category === "Not Available") {%>
       <p><%= category %></p>
@@ -128,6 +137,17 @@
         <div class="chart" id="<%= measure + '-chart' %>"></div>
       </p>
     <% } %>
+    <hr>
+  </script>
+
+  <script type="text/template" id="hospital-surgery-item-template">
+    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %>s</h4>
+    <p>
+      <strong>Patients included:</strong> <%= patients %><br>
+      <strong>Rate:</strong> <%= rate %>%<br>
+      <strong>Rate range:</strong> <%= upper %>% <strong>to</strong> <%= lower %>%<br>
+      <strong>Rating:</strong> <%= category %>
+    </p>
     <hr>
   </script>
 
@@ -180,7 +200,7 @@
       <li class="good chart-label">Better</li>
       <li class="normal chart-label">No Different</li>
       <li class="bad chart-label">Worse</li>
-      <li class="chart-label">than national benchmark</li>
+      <li class="chart-label"><%- label %></li>
     </ul>
   </script>
 
@@ -218,19 +238,20 @@
   <script src="assets/js/apps/header/list/list_controller.js"></script>
   <script src="assets/js/apps/header/list/list_view.js"></script>
   <script src="assets/js/apps/header/header_app.js"></script>
-  <script src="assets/js/entities/infection.js"></script>
-  <script src="assets/js/apps/infections/list/list_view.js"></script>
-  <script src="assets/js/apps/infections/list/list_controller.js"></script>
-  <script src="assets/js/apps/infections/show/show_controller.js"></script>
-  <script src="assets/js/apps/infections/show/show_view.js"></script>
-  <script src="assets/js/apps/infections/infections_app.js"></script>
+  <script src="assets/js/entities/section.js"></script>
+  <script src="assets/js/apps/sections/section_views.js"></script>
+  <script src="assets/js/apps/sections/infections_controller.js"></script>
+  <script src="assets/js/apps/sections/surgeries_controller.js"></script>
+  <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
+  <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
+  <script src="assets/js/apps/sections/sections_app.js"></script>
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
-  <script src="assets/js/common/views.js"></script>
-  <script src="assets/js/common/chart_base_view.js"></script>
-  <script src="assets/js/common/chart_views.js"></script>
+  <script src="assets/js/apps/sections/chart/chart_base_view.js"></script>
+  <script src="assets/js/apps/sections/chart/chart_views.js"></script>
   <script src="assets/js/common/behaviors.js"></script>
+  <script src="assets/js/common/views.js"></script>
   <script src="assets/js/entities/text.js"></script>
   <!-- /build -->
   <script type="text/javascript">

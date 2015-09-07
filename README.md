@@ -21,9 +21,8 @@ Explore hospital quality data for Atlanta area hospitals.
  - [spin.js](http://spin.js.org/) for loading spinner
 
 ## Notes
-- Rate == Ratio
+- Rate = Ratio
 - Range (popup) is the confidence interval
-- Need to explain the benchmark is always 1
 
 ##Improvements on original hospital quality app
  - Active menu item is highlighted

@@ -9,7 +9,7 @@
       "address": "1200 NORTHSIDE FORSYTH DRIVE", 
       "display_name": "Northside Hospital Forsyth", 
       "id": "110005", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
@@ -34,7 +34,7 @@
       "address": "1230 BAXTER STREET", 
       "display_name": "Saint Mary's Hospital", 
       "id": "110006", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
@@ -59,7 +59,7 @@
       "address": "201 HOSPITAL ROAD", 
       "display_name": "Northside Hospital Cherokee", 
       "id": "110008", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.3, 
@@ -84,7 +84,7 @@
       "address": "1364 CLIFTON ROAD, NE", 
       "display_name": "Emory University Hospital", 
       "id": "110010", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.8, 
@@ -109,7 +109,7 @@
       "address": "705 DIXIE STREET", 
       "display_name": "Tanner Medical Center Carrollton", 
       "id": "110011", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.3, 
@@ -134,7 +134,7 @@
       "address": "5126 HOSPITAL DRIVE NE", 
       "display_name": "Newton Medical Center", 
       "id": "110018", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
@@ -159,7 +159,7 @@
       "address": "743 SPRING STREET", 
       "display_name": "Northeast Georgia Medical Center", 
       "id": "110029", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "Better than the National Rate", 
           "lower": 1.5, 
@@ -184,7 +184,7 @@
       "address": "960 JOE FRANK HARRIS PARKWAY", 
       "display_name": "Cartersville Medical Center", 
       "id": "110030", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
@@ -209,7 +209,7 @@
       "address": "601 SOUTH 8TH STREET", 
       "display_name": "Spalding Regional Hospital", 
       "id": "110031", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.6, 
@@ -234,7 +234,7 @@
       "address": "677 CHURCH STREET", 
       "display_name": "Wellstar Kennestone Hospital", 
       "id": "110035", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2, 
@@ -259,7 +259,7 @@
       "address": "2518 JIMMY LEE SMITH PARKWAY", 
       "display_name": "Wellstar Paulding Hospital", 
       "id": "110042", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2, 
@@ -284,7 +284,7 @@
       "address": "304 TURNER MCCALL BLVD P O BOX 233", 
       "display_name": "Floyd Medical Center", 
       "id": "110054", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
@@ -309,7 +309,7 @@
       "address": "1199 PRINCE AVENUE", 
       "display_name": "Athens Regional Medical Center", 
       "id": "110074", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.8, 
@@ -334,7 +334,7 @@
       "address": "2701 N DECATUR ROAD", 
       "display_name": "Dekalb Medical Center", 
       "id": "110076", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.5, 
@@ -359,7 +359,7 @@
       "address": "550 PEACHTREE ST NE", 
       "display_name": "Emory University Hospital Midtown", 
       "id": "110078", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2, 
@@ -384,7 +384,7 @@
       "address": "80 JESSE HILL, JR DRIVE SE", 
       "display_name": "Grady Memorial Hospital", 
       "id": "110079", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "Number of Cases Too Small", 
           "lower": 0, 
@@ -409,7 +409,7 @@
       "address": "5665 PEACHTREE DUNWOODY ROAD", 
       "display_name": "Emory Saint Joseph's Hospital", 
       "id": "110082", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "Better than the National Rate", 
           "lower": 1, 
@@ -434,7 +434,7 @@
       "address": "1968 PEACHTREE RD NW", 
       "display_name": "Piedmont Hospital", 
       "id": "110083", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.7, 
@@ -459,7 +459,7 @@
       "address": "1000 MEDICAL CENTER BOULEVARD", 
       "display_name": "Gwinnett Medical Center", 
       "id": "110087", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 3, 
@@ -484,7 +484,7 @@
       "address": "1412 MILSTEAD AVENUE, NE", 
       "display_name": "Rockdale Medical Center", 
       "id": "110091", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
@@ -509,7 +509,7 @@
       "address": "303 PARKWAY DR NE", 
       "display_name": "Atlanta Medical Center", 
       "id": "110115", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2, 
@@ -534,7 +534,7 @@
       "address": "3950 AUSTELL RD", 
       "display_name": "Wellstar Cobb Hospital", 
       "id": "110143", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
@@ -559,7 +559,7 @@
       "address": "1000 JOHNSON FERRY ROAD, NE", 
       "display_name": "Northside Hospital", 
       "id": "110161", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
@@ -584,7 +584,7 @@
       "address": "11 UPPER RIVERDALE ROAD, SW", 
       "display_name": "Southern Regional Medical Center", 
       "id": "110165", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
@@ -609,7 +609,7 @@
       "address": "501 REDMOND ROAD", 
       "display_name": "Redmond Regional Medical Center", 
       "id": "110168", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.4, 
@@ -634,7 +634,7 @@
       "address": "8954 HOSPITAL DRIVE", 
       "display_name": "Wellstar Douglas Hospital", 
       "id": "110184", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.9, 
@@ -659,7 +659,7 @@
       "address": "1133 EAGLE'S LANDING PARKWAY", 
       "display_name": "Piedmont Henry Hospital", 
       "id": "110191", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
@@ -684,7 +684,7 @@
       "address": "1700 MEDICAL WAY", 
       "display_name": "Eastside Medical Center", 
       "id": "110192", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
@@ -709,7 +709,7 @@
       "address": "3000 HOSPITAL BOULEVARD", 
       "display_name": "North Fulton Hospital", 
       "id": "110198", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.4, 
@@ -734,7 +734,7 @@
       "address": "1255 HIGHWAY 54 WEST", 
       "display_name": "Piedmont Fayette Hospital", 
       "id": "110215", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.7, 
@@ -759,7 +759,7 @@
       "address": "1266 HIGHWAY 515 SOUTH", 
       "display_name": "Piedmont Mountainside Hospital", 
       "id": "110225", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.5, 
@@ -784,7 +784,7 @@
       "address": "745 POPLAR ROAD", 
       "display_name": "Piedmont Newnan Hospital", 
       "id": "110229", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 1.5, 
@@ -809,7 +809,7 @@
       "address": "6325 HOSPITAL PARKWAY", 
       "display_name": "Emory Johns Creek Hospital", 
       "id": "110230", 
-      "measures": {
+      "surgery": {
         "complication": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
