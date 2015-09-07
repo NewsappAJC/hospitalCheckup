@@ -1,4 +1,4 @@
-HospitalCheckup.module("InfectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
 
   Show.HospitalLayout = Marionette.LayoutView.extend({
     template: "#hospital-layout",

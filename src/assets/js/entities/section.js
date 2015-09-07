@@ -3,7 +3,6 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
   var API = {
     getChartEntities: function(entityID, fileID){
-
       Entities.StateAverages = Backbone.Model.extend({
         localStorage: new Backbone.LocalStorage(fileID+"-state-avg") //using this instead of a URL!
       });
@@ -48,7 +47,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
           $.ajax({
             dataType: "json",
             url: "/assets/data/"+fileID+".json",
-            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/infections.json",
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/"+fileID+".json",
             type: "GET",
             success: resetModels
           });

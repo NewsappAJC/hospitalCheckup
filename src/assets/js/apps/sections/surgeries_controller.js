@@ -1,4 +1,4 @@
-HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.SurgeriesController = {
     listSurgeries: function(id, criterion){
@@ -10,13 +10,13 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var fetchingData = HospitalCheckup.request("chart:entities", "Surgery", "surgery");
 
       var surgeriesListLayout = new List.Layout(),
-      hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
+      hospitalLayout = new HospitalCheckup.SectionsApp.Show.HospitalLayout(),
       surgeriesHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["headline"]}),
       surgeriesIntroView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["intro_text"]}),
       surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),
       surgeriesLegendView = new List.Legend(),
-      hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
-      hospitalMeasuresView = new HospitalCheckup.InfectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
+      hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
       surgeriesListView;
 
       $.when(fetchingData).done(function(surgeries){
@@ -60,7 +60,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         surgeriesMenuView.on("surgery:filter", function(filterCriterion){
           HospitalCheckup.trigger("surgery:filter", filterCriterion); //update routes
-          Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.chartView"), "update:chart", filterCriterion);
+          Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
 
         surgeriesMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL

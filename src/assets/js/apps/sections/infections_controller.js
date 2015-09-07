@@ -1,4 +1,4 @@
-HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
 
   List.InfectionsController = {
     listInfections: function(id, criterion){
@@ -10,15 +10,15 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       var fetchingData = HospitalCheckup.request("chart:entities", "Infection", "infections");
 
       var infectionsListLayout = new List.Layout(),
-      hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
+      hospitalLayout = new HospitalCheckup.SectionsApp.Show.HospitalLayout(),
       infectionsHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
       infectionsIntroView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
       infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
       infectionsLegendView = new List.Legend(),
       infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
-      hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
-      hospitalLegendView = new HospitalCheckup.InfectionsApp.Show.InfectionLegend(),
-      hospitalChartsView = new HospitalCheckup.InfectionsApp.Show.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
+      hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
+      hospitalLegendView = new HospitalCheckup.SectionsApp.Show.InfectionLegend(),
+      hospitalChartsView = new HospitalCheckup.SectionsApp.Show.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
       infectionsListView;
 
       $.when(fetchingData).done(function(infections){
@@ -63,7 +63,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
 
         infectionsMenuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
-          Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.chartView"), "update:chart", filterCriterion);
+          Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
 
         infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL

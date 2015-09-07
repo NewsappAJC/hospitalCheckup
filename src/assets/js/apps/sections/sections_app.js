@@ -1,5 +1,5 @@
-HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup, Backbone, Marionette, $, _){
-  InfectionsApp.Router = Marionette.AppRouter.extend({
+HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Backbone, Marionette, $, _){
+  SectionsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
       //"infections(/)": "listInfections",
       "infections(/:id)(/filter/:criterion)": "listInfections", //hospital selection IDs and dropdown infections filters
@@ -9,17 +9,17 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
 
   var API = {
     listInfections: function(id, criterion){
-      InfectionsApp.List.InfectionsController.listInfections(id, criterion);
+      SectionsApp.List.InfectionsController.listInfections(id, criterion);
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 
     listSurgeries: function(id, criterion){
-      InfectionsApp.List.SurgeriesController.listSurgeries(id, criterion);
+      SectionsApp.List.SurgeriesController.listSurgeries(id, criterion);
       HospitalCheckup.execute("set:active:header", "surgery"); //update navigation toolbar
     },
 
     showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
-      InfectionsApp.Show.Controller.showHospital(id, aboutView, chartsView, defaultModel);
+      SectionsApp.Show.Controller.showHospital(id, aboutView, chartsView, defaultModel);
     }
   };
 
@@ -50,8 +50,8 @@ HospitalCheckup.module("InfectionsApp", function(InfectionsApp, HospitalCheckup,
     HospitalCheckup.navigate("surgery/filter/" + criterion);
   });
 
-  InfectionsApp.on("start", function(){
-    new InfectionsApp.Router({
+  SectionsApp.on("start", function(){
+    new SectionsApp.Router({
       controller: API
     });
   });
