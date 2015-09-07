@@ -56,7 +56,17 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
   });
 
   List.Legend = Marionette.ItemView.extend({
-    template: "#main-legend"
+    template: "#main-legend",
+    initialize: function(options){
+      var options = options || {};
+      this.label = options.label;
+    },
+
+    serializeData: function(){
+      return {
+        label: this.label
+      }
+    }
   });
 
   List.MainChart = Marionette.ItemView.extend({

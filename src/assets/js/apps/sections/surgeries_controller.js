@@ -14,7 +14,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
       surgeriesHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["headline"]}),
       surgeriesIntroView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["intro_text"]}),
       surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),
-      surgeriesLegendView = new List.Legend(),
+      surgeriesLegendView = new List.Legend({label: "than national rate"}),
       hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
       hospitalMeasuresView = new HospitalCheckup.SectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
       surgeriesListView;

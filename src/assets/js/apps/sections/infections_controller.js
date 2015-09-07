@@ -14,7 +14,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
       infectionsHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
       infectionsIntroView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
       infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
-      infectionsLegendView = new List.Legend(),
+      infectionsLegendView = new List.Legend({label: "than national benchmark"}),
       infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
       hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
       hospitalLegendView = new HospitalCheckup.SectionsApp.Show.InfectionLegend(),
