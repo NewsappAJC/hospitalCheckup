@@ -101,7 +101,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       //don't show items will null ratios
       return !child.get("infections")[this.measure].na
     },
-    onFilter: function(criterion){//TODO update naming
+    onFilter: function(criterion){
       this.measure = criterion;
       this.children.each(function(view){
         view.model.set("measure", criterion);

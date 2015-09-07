@@ -235,7 +235,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     draw_context_lines: function(data){
       var chart = this,
       height = chart.get_currentHeight(data),
-      avg = HospitalCheckup.Entities.averages.get(chart.options.measure); //TODO this is only for infections, need the others soon
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
 
       var contextLines = chart.svg.select("#contextLines");
       
@@ -324,7 +324,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       filtered = chart.filter_data(),
       height = chart.get_currentHeight(filtered),
-      avg = HospitalCheckup.Entities.averages.get(criterion); //TODO need other sections soon
+      avg = HospitalCheckup.Entities.averages.get(criterion);
 
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 

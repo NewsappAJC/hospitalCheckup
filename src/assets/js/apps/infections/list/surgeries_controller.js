@@ -13,7 +13,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
       hospitalLayout = new HospitalCheckup.InfectionsApp.Show.HospitalLayout(),
       surgeriesHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["headline"]}),
       surgeriesIntroView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["intro_text"]}),
-      surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),//TODO rename section
+      surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),
       surgeriesLegendView = new List.Legend(),
       hospitalShowView = new HospitalCheckup.InfectionsApp.Show.Hospital(),
       hospitalMeasuresView = new HospitalCheckup.InfectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
@@ -25,7 +25,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           surgeriesListView = new List.MainChart();
         } else {
           surgeriesListView = new List.MobileList({collection: surgeries, measure: criterion || defaultMeasure });
-          surgeriesListView.listenTo(surgeriesMenuView, "surgery:filter", surgeriesListView.onFilter);//TODO updating event naming
+          surgeriesListView.listenTo(surgeriesMenuView, "surgery:filter", surgeriesListView.onFilter);
         }
 
         surgeriesListLayout.on("show", function(){
@@ -58,7 +58,7 @@ HospitalCheckup.module("InfectionsApp.List", function(List, HospitalCheckup, Bac
           }
         });
 
-        surgeriesMenuView.on("surgery:filter", function(filterCriterion){//TODO update mobile trigger
+        surgeriesMenuView.on("surgery:filter", function(filterCriterion){
           HospitalCheckup.trigger("surgery:filter", filterCriterion); //update routes
           Marionette.triggerMethodOn(HospitalCheckup.module("InfectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
