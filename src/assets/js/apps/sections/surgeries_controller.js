@@ -24,7 +24,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
         if(!isMobile){
           surgeriesListView = new List.MainChart();
         } else {
-          surgeriesListView = new List.MobileList({collection: surgeries, measure: criterion || defaultMeasure });
+          surgeriesListView = new List.MobileList({collection: surgeries, measure: criterion || defaultMeasure, section: "surgery", stat: "rate" });
           surgeriesListView.listenTo(surgeriesMenuView, "surgery:filter", surgeriesListView.onFilter);
         }
 

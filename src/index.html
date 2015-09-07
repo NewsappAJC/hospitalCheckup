@@ -92,10 +92,10 @@
   </script>
 
   <script type="text/template" id="mobile-tr-template">
-    <td><%- display_name %></td><td><span class="mobile-rating <%-infections[measure].ratingClass %>"></span></td><td><%- clip(infections[measure].ratio) %></td>
+    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- clip(obj[section][measure][stat]) %></td>
   </script>
   <script type="text/template" id="mobile-table-template">
-    <thead><tr><th>Hospital</th><th>Rating</th><th>SIR</th></tr></thead>
+    <thead><tr><th>Hospital</th><th>Rating</th><th>Rate</th></tr></thead>
     <tbody></tbody>
   </script>
 

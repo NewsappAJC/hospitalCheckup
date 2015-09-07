@@ -26,7 +26,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
         if(!isMobile){
           infectionsListView = new List.MainChart();
         } else {
-          infectionsListView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure });
+          infectionsListView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure, section: "infections", stat: "ratio" });
           infectionsListView.listenTo(infectionsMenuView, "infections:filter", infectionsListView.onFilter);
         }
 

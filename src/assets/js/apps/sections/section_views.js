@@ -84,6 +84,8 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     initialize: function(options){
       //recieved from childViewOptions, template needs it
       this.model.set("measure", options.measure);
+      this.model.set("section", options.section);
+      this.model.set("stat", options.stat);
     },
     templateHelpers: function () {
       return {
@@ -103,13 +105,15 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     childViewContainer: "tbody",
     initialize: function(options){
       this.measure = options.measure;
+      this.section = options.section;
+      this.stat = options.stat;
     },
     childViewOptions: function(model, index) {
-      return { measure: this.measure }
+      return { measure: this.measure, section: this.section, stat: this.stat }
     },
     filter: function(child, index, collection){
-      //don't show items will null ratios
-      return !child.get("infections")[this.measure].na
+      //don't show items with null ratios
+      return !child.get(this.section)[this.measure].na
     },
     onFilter: function(criterion){
       this.measure = criterion;
