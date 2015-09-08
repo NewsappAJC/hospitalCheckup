@@ -10,6 +10,7 @@ CREATE TABLE hospital_compare.perinatal
 SELECT b.uid,
        b.Medicare_Provider_No as provider_id,
        c.HospitalName as ajc_hospital_name,
+       d.address,
        a.Delivery_Rms,
        a.Birthing_Rms,
        a.LDR_Rms,
@@ -40,6 +41,7 @@ JOIN hospital_compare.hospital_names c
   ON c.providerNumber = b.Medicare_Provider_No
 LEFT JOIN (
   SELECT provider_id,
+  		 address,
          score as early_births_pct,
          sample as medicare_births, /*check on what this is, might be sample size*/
          footnote as early_footnote

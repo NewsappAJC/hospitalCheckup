@@ -35,6 +35,7 @@ Explore hospital quality data for Atlanta area hospitals.
  - Comma formatted patient days
  - selected hospital stays highlighted if it re-enters after exiting due to filters
  - Mobile hospital table much better looking!
+ - Display hospital address on all sections that show hospital detail view (consistency)
  
 ## Todo
 - [ ] Spell out infection names in infection bottom text

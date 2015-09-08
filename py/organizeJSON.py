@@ -139,6 +139,7 @@ for node in src:
     hospital = {}
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
+    hospital["address"] = node["address"]
     #hospital["address"] = node["address"] TODO get the addresses into the data
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
