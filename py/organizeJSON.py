@@ -162,7 +162,7 @@ src = json.load(ft)
 ft.close()
 
 #would be easy to do this in sql but I was the view to be easy to understand
-hipkneeDict = {"avgC_SectPct" : "C_Sect_Pct", "avgDeliveryCharge" : "Avg_Delivery_Charge", "avgPrematureCharge": "Avg_Premature_Charge", "avgBirths": "Total_Births", "avgEarlyPct": "early_births_pct"}
+hipkneeDict = {"avgC_SectPct" : "C_Sect_Pct", "avgDeliveryCharge" : "Avg_Delivery_Charge", "avgPrematureCharge": "Avg_Premature_Charge", "avgBirths": "Total_Births", "earlyPct": "early_births_pct"}
 totals = {"id": "perinatalStateAverages"} #backbone expects an ID and local storage uses it too
 
 for node in src:

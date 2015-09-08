@@ -49,5 +49,5 @@ LEFT JOIN (
   WHERE measure_id = 'PC_01'
 ) d ON b.Medicare_Provider_No = d.provider_id
 WHERE a.year = 2014
-  AND a.Total_Births > 0 -- in some cases this metric is messed up
+  AND a.Total_Births > 0 -- in some cases this metric is messed up but it's what the state uses
 HAVING a.C_Sect / a.Total_Births < 1

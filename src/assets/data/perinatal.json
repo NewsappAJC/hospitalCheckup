@@ -1,10 +1,10 @@
 {
   "averages": {
-    "Avg_Delivery_Charge": 11332, 
-    "Avg_Premature_Charge": 21335, 
+    "Avg_Delivery_Charge": 11253, 
+    "Avg_Premature_Charge": 21199, 
     "C_Sect_Pct": 33, 
-    "Total_Births": 1639, 
-    "early_births_pct": 2.96, 
+    "Total_Births": 1652, 
+    "early_births_pct": "3", 
     "id": "perinatalStateAverages"
   }, 
   "hospitals": [
