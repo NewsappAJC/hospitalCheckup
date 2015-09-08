@@ -27,7 +27,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfo(),
       hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital["Hospital"+entityID+"ItemList"]({collection: new Backbone.Collection(), section: sectionID, labelArr: entityID}),
       listView;
-      if(sectionID === "infections"){
+      if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
       }
 
@@ -57,7 +57,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         //wait for #main-chart to be rendered
         listView.on("show", function(){
           if(!isMobile){
-            Section.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
+            Section.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to Section module so we can target it later
               el: "#main-chart",
               collection: collection,
               base_height: 700,
@@ -76,7 +76,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
           Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.Section.chartView"), "update:chart", filterCriterion);
         });
 
-        menuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
+        menuView.once("show", function(){
           menuView.triggerMethod("set:filter:criterion", criterion);
         });
 
