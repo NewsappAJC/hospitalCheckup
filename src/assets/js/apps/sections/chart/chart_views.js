@@ -25,24 +25,19 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.draw_axes(data);//needs to be on top of bars
     },
 
-    //remove items with no data and sort by stat
-    filter_data: function(){
-      var chart = this,
-      section = chart.options.section,
-      stat = chart.options.stat;
-
-      var filtered = chart.data.filter(function(d){
-        return d[section][chart.options.measure].na != 1;
-      });
-      filtered.sort(function(a,b){
-        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
-      });
-      return filtered;
+    filter_data: function(data){
+      //meant to be extended
+      return data;
     },
 
     get_xMax: function(data){
       var chart = this;
-      return d3.max(data, function(d) { return d[chart.options.section][chart.options.measure].upper });
+      return d3.max(data, function(d) {
+        if(chart.nested){ //check if data nested inside another array
+          return d[chart.nested][chart.options.measure].upper
+        }
+        return d[chart.options.measure]
+      });
     },
 
     get_currentHeight: function(data){
@@ -61,9 +56,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .nice(); //extend bounds to nearest round value
     },
 
-    create_svg_containers: function(){
-      //extend this
-      return this;
+    create_svg_containers: function(ids){
+      var chart = this;
+
+      for(var i=0; i<ids.length; i++){
+        chart.svg.append("g").attr("id", ids[i]);
+      }
     },
 
     draw_base_bars: function(data) {
@@ -164,18 +162,31 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
   Chart.BarRangeDot = Chart.BarBase.extend({
     constructor: function(options) {
+      this.nested = options.section; //data is nested inside this.section
       Chart.BarBase.apply(this, arguments);
       return this;
     },
 
     //create containers so that entering items stay layered at the correct depth
-    create_svg_containers: function(){
-      var chart = this,
-      ids = ["baseBars", "rangeBars", "axes", "contextLines", "statCircles"];
+    create_svg_containers: function(ids){
+      var ids = ["baseBars", "rangeBars", "axes", "contextLines", "statCircles"];
 
-      for(var i=0; i<ids.length; i++){
-        chart.svg.append("g").attr("id", ids[i]);
-      }
+      Chart.BarBase.prototype.create_svg_containers.call(this, ids);
+    },
+
+    //remove items with no data and sort by stat
+    filter_data: function(){
+      var chart = this,
+      section = chart.options.section,
+      stat = chart.options.stat;
+
+      var filtered = chart.data.filter(function(d){
+        return d[section][chart.options.measure].na != 1;
+      });
+      filtered.sort(function(a,b){
+        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
+      });
+      return filtered;
     },
 
     draw_data: function(data){
@@ -367,6 +378,39 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             } return "end"
           });
       }
+    }
+  });
+
+  Chart.BarLeft = Chart.BarBase.extend({
+    constructor: function(options) {
+      Chart.BarBase.apply(this, arguments);
+      return this;
+    },
+
+    create_svg_containers: function(){
+      var ids = ["baseBars", "rangeBars", "axes", "contextLines"]
+
+      Chart.BarBase.prototype.create_svg_containers.call(this, ids);
+    },
+
+    filter_data: function(){
+      var chart = this,
+      measure = chart.options.measure;
+
+      var filtered = chart.data.sort(function(a,b){
+        return d3.ascending(a[measure], b[measure]);
+      });
+      return filtered;
+    },
+
+    onUpdateChart: function(criterion){
+      this.options.measure = criterion;
+      var chart = this,
+      filtered = chart.filter_data(),
+      height = chart.get_currentHeight(filtered),
+      avg = HospitalCheckup.Entities.averages.get(criterion);
+
+      Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
     }
   });
 
