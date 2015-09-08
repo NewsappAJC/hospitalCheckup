@@ -19,7 +19,7 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     },
 
     showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
-      SectionsApp.Show.Controller.showHospital(id, aboutView, chartsView, defaultModel);
+      SectionsApp.Hospital.Controller.showHospital(id, aboutView, chartsView, defaultModel);
     }
   };
 

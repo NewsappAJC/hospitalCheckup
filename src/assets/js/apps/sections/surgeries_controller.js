@@ -9,40 +9,40 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
 
       var fetchingData = HospitalCheckup.request("chart:entities", "Surgery", "surgery");
 
-      var surgeriesListLayout = new List.Layout(),
-      hospitalLayout = new HospitalCheckup.SectionsApp.Show.HospitalLayout(),
-      surgeriesHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["headline"]}),
-      surgeriesIntroView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["intro_text"]}),
-      surgeriesMenuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),
-      surgeriesLegendView = new List.Legend({label: "than national rate"}),
-      hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
-      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Show.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
-      surgeriesListView;
+      var listLayout = new List.Layout(),
+      hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.HospitalLayout(),
+      headlineView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["headline"]}),
+      introView = new List.TextBlock({text: HospitalCheckup.Entities.SurgeriesIntroTxt["intro_text"]}),
+      menuView = new List.Menu({collection: HospitalCheckup.Entities.SurgeriesLabels, section: "surgery"}),
+      legendView = new List.Legend({label: "than national rate"}),
+      hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfo(),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital.HospitalSurgeryDetails({collection: new Backbone.Collection()}),
+      listView;
 
       $.when(fetchingData).done(function(surgeries){
 
         if(!isMobile){
-          surgeriesListView = new List.MainChart();
+          listView = new List.MainChart();
         } else {
-          surgeriesListView = new List.MobileList({collection: surgeries, measure: criterion || defaultMeasure, section: "surgery", stat: "rate" });
-          surgeriesListView.listenTo(surgeriesMenuView, "surgery:filter", surgeriesListView.onFilter);
+          listView = new List.MobileList({collection: surgeries, measure: criterion || defaultMeasure, section: "surgery", stat: "rate" });
+          listView.listenTo(menuView, "surgery:filter", listView.onFilter);
         }
 
-        surgeriesListLayout.on("show", function(){
-          surgeriesListLayout.headlineRegion.show(surgeriesHeadlineView);
-          surgeriesListLayout.introRegion.show(surgeriesIntroView);
-          surgeriesListLayout.menuRegion.show(surgeriesMenuView);
-          surgeriesListLayout.legendRegion.show(surgeriesLegendView);
-          surgeriesListLayout.listRegion.show(surgeriesListView);
-          surgeriesListLayout.hospitalRegion.show(hospitalLayout);
+        listLayout.on("show", function(){
+          listLayout.headlineRegion.show(headlineView);
+          listLayout.introRegion.show(introView);
+          listLayout.menuRegion.show(menuView);
+          listLayout.legendRegion.show(legendView);
+          listLayout.listRegion.show(listView);
+          listLayout.hospitalRegion.show(hospitalLayout);
         });
 
-        surgeriesListView.on("hospital:change", function(id){ //triggered by behaviors
-          HospitalCheckup.trigger("hospital:change", id, "surgery", hospitalShowView, hospitalMeasuresView);
+        listView.on("hospital:change", function(id){ //triggered by behaviors
+          HospitalCheckup.trigger("hospital:change", id, "surgery", hospitalInfoView, hospitalMeasuresView);
         });
 
         //wait for #main-chart to be rendered
-        surgeriesListView.on("show", function(){
+        listView.on("show", function(){
           if(!isMobile){
             List.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
               el: "#main-chart",
@@ -58,23 +58,23 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
           }
         });
 
-        surgeriesMenuView.on("surgery:filter", function(filterCriterion){
+        menuView.on("surgery:filter", function(filterCriterion){
           HospitalCheckup.trigger("surgery:filter", filterCriterion); //update routes
           Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
 
-        surgeriesMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
-          surgeriesMenuView.triggerMethod("set:filter:criterion", criterion);
+        menuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
+          menuView.triggerMethod("set:filter:criterion", criterion);
         });
 
         hospitalLayout.on("show", function(){
           var defaultModel = surgeries.at(0);
-          HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalMeasuresView, defaultModel);
-          hospitalLayout.topRegion.show(hospitalShowView);
+          HospitalCheckup.trigger("hospital:show", id, hospitalInfoView, hospitalMeasuresView, defaultModel);
+          hospitalLayout.topRegion.show(hospitalInfoView);
           hospitalLayout.chartRegion.show(hospitalMeasuresView);
         });
 
-        HospitalCheckup.regions.main.show(surgeriesListLayout);
+        HospitalCheckup.regions.main.show(listLayout);
       });
     }
   }

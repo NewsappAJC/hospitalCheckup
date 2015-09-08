@@ -1,5 +1,5 @@
-HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
-  Show.Controller = {
+HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalCheckup, Backbone, Marionette, $, _){
+  Hospital.Controller = {
     showHospital: function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
 
       if(id){

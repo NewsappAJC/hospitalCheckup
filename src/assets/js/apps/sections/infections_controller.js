@@ -9,43 +9,43 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
 
       var fetchingData = HospitalCheckup.request("chart:entities", "Infection", "infections");
 
-      var infectionsListLayout = new List.Layout(),
-      hospitalLayout = new HospitalCheckup.SectionsApp.Show.HospitalLayout(),
-      infectionsHeadlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
-      infectionsIntroView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
-      infectionsMenuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
-      infectionsLegendView = new List.Legend({label: "than national benchmark"}),
-      infectionsBottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
-      hospitalShowView = new HospitalCheckup.SectionsApp.Show.Hospital(),
-      hospitalLegendView = new HospitalCheckup.SectionsApp.Show.InfectionLegend(),
-      hospitalChartsView = new HospitalCheckup.SectionsApp.Show.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
+      var listLayout = new List.Layout(),
+      hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.HospitalLayout(),
+      headlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
+      introView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
+      menuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
+      legendView = new List.Legend({label: "than national benchmark"}),
+      bottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
+      hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfo(),
+      hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend(),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
       infectionsListView;
 
       $.when(fetchingData).done(function(infections){
 
         if(!isMobile){
-          infectionsListView = new List.MainChart();
+          listView = new List.MainChart();
         } else {
-          infectionsListView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure, section: "infections", stat: "ratio" });
-          infectionsListView.listenTo(infectionsMenuView, "infections:filter", infectionsListView.onFilter);
+          listView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure });
+          listView.listenTo(menuView, "infections:filter", listView.onFilter);
         }
 
-        infectionsListLayout.on("show", function(){
-          infectionsListLayout.headlineRegion.show(infectionsHeadlineView);
-          infectionsListLayout.introRegion.show(infectionsIntroView);
-          infectionsListLayout.menuRegion.show(infectionsMenuView);
-          infectionsListLayout.legendRegion.show(infectionsLegendView);
-          infectionsListLayout.listRegion.show(infectionsListView);
-          infectionsListLayout.hospitalRegion.show(hospitalLayout);
-          infectionsListLayout.bottomRegion.show(infectionsBottomView);
+        listLayout.on("show", function(){
+          listLayout.headlineRegion.show(headlineView);
+          listLayout.introRegion.show(introView);
+          listLayout.menuRegion.show(menuView);
+          listLayout.legendRegion.show(legendView);
+          listLayout.listRegion.show(listView);
+          listLayout.hospitalRegion.show(hospitalLayout);
+          listLayout.bottomRegion.show(bottomView);
         });
 
-        infectionsListView.on("hospital:change", function(id){ //triggered by behaviors
-          HospitalCheckup.trigger("hospital:change", id, "infections", hospitalShowView, hospitalChartsView);
+        listView.on("hospital:change", function(id){ //triggered by behaviors
+          HospitalCheckup.trigger("hospital:change", id, "infections", hospitalInfoView, hospitalMeasuresView);
         });
 
         //wait for #main-chart to be rendered
-        infectionsListView.on("show", function(){
+        listView.on("show", function(){
           if(!isMobile){
             List.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
               el: "#main-chart",
@@ -61,24 +61,24 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
           }
         });
 
-        infectionsMenuView.on("infections:filter", function(filterCriterion){
+        menuView.on("infections:filter", function(filterCriterion){
           HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
           Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "update:chart", filterCriterion);
         });
 
-        infectionsMenuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
-          infectionsMenuView.triggerMethod("set:filter:criterion", criterion);
+        menuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
+          menuView.triggerMethod("set:filter:criterion", criterion);
         });
 
         hospitalLayout.on("show", function(){
           var defaultModel = infections.at(0);
-          HospitalCheckup.trigger("hospital:show", id, hospitalShowView, hospitalChartsView, defaultModel);
-          hospitalLayout.topRegion.show(hospitalShowView);
+          HospitalCheckup.trigger("hospital:show", id, hospitalInfoView, hospitalMeasuresView, defaultModel);
+          hospitalLayout.topRegion.show(hospitalInfoView);
           hospitalLayout.legendRegion.show(hospitalLegendView);
-          hospitalLayout.chartRegion.show(hospitalChartsView);
+          hospitalLayout.chartRegion.show(hospitalMeasuresView);
         });
 
-        HospitalCheckup.regions.main.show(infectionsListLayout);
+        HospitalCheckup.regions.main.show(listLayout);
       });
     }
   }

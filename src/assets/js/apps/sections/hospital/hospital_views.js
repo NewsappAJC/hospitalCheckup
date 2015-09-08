@@ -1,6 +1,6 @@
-HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalCheckup, Backbone, Marionette, $, _){
 
-  Show.HospitalLayout = Marionette.LayoutView.extend({
+  Hospital.HospitalLayout = Marionette.LayoutView.extend({
     template: "#hospital-layout",
     className: "large-12 columns",
     regions: {
@@ -10,17 +10,17 @@ HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backb
     }
   });
 
-  Show.Hospital = Marionette.ItemView.extend({
+  Hospital.HospitalInfo = Marionette.ItemView.extend({
     template: "#hospital-info-view",
     className: "hospital-info"
   });
 
-  Show.InfectionLegend = Marionette.ItemView.extend({
+  Hospital.InfectionLegend = Marionette.ItemView.extend({
     template: "#hospital-legend-template",
     className: "hospital-info"
   });
 
-  Show.HospitalInfectionItem = Marionette.ItemView.extend({
+  Hospital.HospitalInfectionItem = Marionette.ItemView.extend({
     template: "#hospital-infection-item-template",
     className: "hospital-list-item",
     onShow: function(){
@@ -37,10 +37,10 @@ HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backb
     }
   });
 
-  Show.HospitalInfectionItemList = Marionette.CollectionView.extend({
+  Hospital.HospitalInfectionItemList = Marionette.CollectionView.extend({
     template: "#empty-template",
     className: "hospital-list",
-    childView: Show.HospitalInfectionItem,
+    childView: Hospital.HospitalInfectionItem,
     initialize: function(options){ //TODO may or may not actually need this function outside infections app
       this.options = options; //expecting `section` and `labelArr`
     },
@@ -57,15 +57,15 @@ HospitalCheckup.module("SectionsApp.Show", function(Show, HospitalCheckup, Backb
     }
   });
 
-  Show.HospitalSurgeryDetailItem = Marionette.ItemView.extend({
+  Hospital.HospitalSurgeryDetailItem = Marionette.ItemView.extend({
     template: "#hospital-surgery-item-template",
     className: "hospital-list-item"
   });
 
-  Show.HospitalSurgeryDetails = Marionette.CollectionView.extend({
+  Hospital.HospitalSurgeryDetails = Marionette.CollectionView.extend({
     template: "#empty-template",
     className: "hospital-list",
-    childView: Show.HospitalSurgeryDetailItem,
+    childView: Hospital.HospitalSurgeryDetailItem,
     get_hospital_models: function(data){
       var dataArr = [];
       _.each(data.get("surgery"), function(values, key, collection){
