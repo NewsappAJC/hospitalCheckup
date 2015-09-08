@@ -7,11 +7,11 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
 
     listSurgeries: function(id, criterion){
-      this.buildLayout(id, criterion, "complication", "Surgery", "surgery", "BarRangeDot", "than national rate", "rate");
+      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national rate", "rate");
     },
 
     listPerinatal: function(id, criterion){
-      this.buildLayout(id, criterion, "C_Sect_pct", "Perinatal", "perinatal", "BarLeft");
+      this.buildLayout(id, criterion, "csect_pct", "Perinatal", "perinatal", "BarLeft");
     },
 
     buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, stat){

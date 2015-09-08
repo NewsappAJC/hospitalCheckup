@@ -25,8 +25,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   };
 
   Entities.SurgeryLabels = new Backbone.Collection([
-    {label: "Complications", key: "complication"},
-    {label: "Readmissions", key: "readmission"}
+    {label: "Complications", key: "complications"},
+    {label: "Readmissions", key: "readmissions"}
   ]);
 
 
@@ -38,10 +38,10 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   };
 
   Entities.PerinatalLabels = new Backbone.Collection([
-    {label: "Percent of births performed by C-section", key: "C_Sect_pct"},
+    {label: "Percent of births performed by C-section", key: "csect_pct"},
     {label: "Rate of early elective deliveries", key: "early_births_pct"},
-    {label: "Average delivery charge", key: "Avg_Delivery_Charge"},
-    {label: "Average premature delivery charge", key: "Avg_Premature_Delivery_Charge"},
-    {label: "Total number of births in 2014", key: "Total_Births"}
+    {label: "Average delivery charge", key: "avg_delivery_charge"},
+    {label: "Average premature delivery charge", key: "avg_premature_charge"},
+    {label: "Total number of births in 2014", key: "total_births"}
   ]);
 });

@@ -1,8 +1,8 @@
 {
   "averages": {
-    "complication": 2.92, 
+    "complications": 2.92, 
     "id": "hipkneeStateAverages", 
-    "readmission": 4.63
+    "readmissions": 4.63
   }, 
   "hospitals": [
     {
@@ -10,7 +10,7 @@
       "display_name": "Northside Hospital Forsyth", 
       "id": "110005", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
           "na": 0, 
@@ -19,7 +19,7 @@
           "ratingClass": "normal", 
           "upper": 4.7
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.1, 
           "na": 0, 
@@ -35,7 +35,7 @@
       "display_name": "Saint Mary's Hospital", 
       "id": "110006", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
           "na": 0, 
@@ -44,7 +44,7 @@
           "ratingClass": "normal", 
           "upper": 4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.2, 
           "na": 0, 
@@ -60,7 +60,7 @@
       "display_name": "Northside Hospital Cherokee", 
       "id": "110008", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.3, 
           "na": 0, 
@@ -69,7 +69,7 @@
           "ratingClass": "normal", 
           "upper": 5.7
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.3, 
           "na": 0, 
@@ -85,7 +85,7 @@
       "display_name": "Emory University Hospital", 
       "id": "110010", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.8, 
           "na": 0, 
@@ -94,7 +94,7 @@
           "ratingClass": "normal", 
           "upper": 3.5
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "Better than the National Rate", 
           "lower": 2.5, 
           "na": 0, 
@@ -110,7 +110,7 @@
       "display_name": "Tanner Medical Center Carrollton", 
       "id": "110011", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.3, 
           "na": 0, 
@@ -119,7 +119,7 @@
           "ratingClass": "normal", 
           "upper": 5.2
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.1, 
           "na": 0, 
@@ -135,7 +135,7 @@
       "display_name": "Newton Medical Center", 
       "id": "110018", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
           "na": 0, 
@@ -144,7 +144,7 @@
           "ratingClass": "normal", 
           "upper": 4.6
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.7, 
           "na": 0, 
@@ -160,7 +160,7 @@
       "display_name": "Northeast Georgia Medical Center", 
       "id": "110029", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "Better than the National Rate", 
           "lower": 1.5, 
           "na": 0, 
@@ -169,7 +169,7 @@
           "ratingClass": "good", 
           "upper": 2.9
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4, 
           "na": 0, 
@@ -185,7 +185,7 @@
       "display_name": "Cartersville Medical Center", 
       "id": "110030", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
           "na": 0, 
@@ -194,7 +194,7 @@
           "ratingClass": "normal", 
           "upper": 5.4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.4, 
           "na": 0, 
@@ -210,7 +210,7 @@
       "display_name": "Spalding Regional Hospital", 
       "id": "110031", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.6, 
           "na": 0, 
@@ -219,7 +219,7 @@
           "ratingClass": "normal", 
           "upper": 6.4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.9, 
           "na": 0, 
@@ -235,7 +235,7 @@
       "display_name": "Wellstar Kennestone Hospital", 
       "id": "110035", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2, 
           "na": 0, 
@@ -244,7 +244,7 @@
           "ratingClass": "normal", 
           "upper": 3.9
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4.2, 
           "na": 0, 
@@ -260,7 +260,7 @@
       "display_name": "Wellstar Paulding Hospital", 
       "id": "110042", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2, 
           "na": 0, 
@@ -269,7 +269,7 @@
           "ratingClass": "normal", 
           "upper": 5.7
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.4, 
           "na": 0, 
@@ -285,7 +285,7 @@
       "display_name": "Floyd Medical Center", 
       "id": "110054", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
           "na": 0, 
@@ -294,7 +294,7 @@
           "ratingClass": "normal", 
           "upper": 5
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.8, 
           "na": 0, 
@@ -310,7 +310,7 @@
       "display_name": "Athens Regional Medical Center", 
       "id": "110074", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.8, 
           "na": 0, 
@@ -319,7 +319,7 @@
           "ratingClass": "normal", 
           "upper": 6.8
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4.2, 
           "na": 0, 
@@ -335,7 +335,7 @@
       "display_name": "Dekalb Medical Center", 
       "id": "110076", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.5, 
           "na": 0, 
@@ -344,7 +344,7 @@
           "ratingClass": "normal", 
           "upper": 3.5
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.7, 
           "na": 0, 
@@ -360,7 +360,7 @@
       "display_name": "Emory University Hospital Midtown", 
       "id": "110078", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2, 
           "na": 0, 
@@ -369,7 +369,7 @@
           "ratingClass": "normal", 
           "upper": 4.4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.2, 
           "na": 0, 
@@ -385,7 +385,7 @@
       "display_name": "Grady Memorial Hospital", 
       "id": "110079", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "Number of Cases Too Small", 
           "lower": 0, 
           "na": 1, 
@@ -394,7 +394,7 @@
           "ratingClass": "", 
           "upper": 0
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "Number of Cases Too Small", 
           "lower": 0, 
           "na": 1, 
@@ -410,7 +410,7 @@
       "display_name": "Emory Saint Joseph's Hospital", 
       "id": "110082", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "Better than the National Rate", 
           "lower": 1, 
           "na": 0, 
@@ -419,7 +419,7 @@
           "ratingClass": "good", 
           "upper": 2.1
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "Better than the National Rate", 
           "lower": 2.6, 
           "na": 0, 
@@ -435,7 +435,7 @@
       "display_name": "Piedmont Hospital", 
       "id": "110083", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.7, 
           "na": 0, 
@@ -444,7 +444,7 @@
           "ratingClass": "normal", 
           "upper": 4.7
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4.1, 
           "na": 0, 
@@ -460,7 +460,7 @@
       "display_name": "Gwinnett Medical Center", 
       "id": "110087", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 3, 
           "na": 0, 
@@ -469,7 +469,7 @@
           "ratingClass": "normal", 
           "upper": 5.4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.2, 
           "na": 0, 
@@ -485,7 +485,7 @@
       "display_name": "Rockdale Medical Center", 
       "id": "110091", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
           "na": 0, 
@@ -494,7 +494,7 @@
           "ratingClass": "normal", 
           "upper": 5.5
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.8, 
           "na": 0, 
@@ -510,7 +510,7 @@
       "display_name": "Atlanta Medical Center", 
       "id": "110115", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2, 
           "na": 0, 
@@ -519,7 +519,7 @@
           "ratingClass": "normal", 
           "upper": 5.6
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3, 
           "na": 0, 
@@ -535,7 +535,7 @@
       "display_name": "Wellstar Cobb Hospital", 
       "id": "110143", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
           "na": 0, 
@@ -544,7 +544,7 @@
           "ratingClass": "normal", 
           "upper": 4
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.1, 
           "na": 0, 
@@ -560,7 +560,7 @@
       "display_name": "Northside Hospital", 
       "id": "110161", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.7, 
           "na": 0, 
@@ -569,7 +569,7 @@
           "ratingClass": "normal", 
           "upper": 4.3
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 2.8, 
           "na": 0, 
@@ -585,7 +585,7 @@
       "display_name": "Southern Regional Medical Center", 
       "id": "110165", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
           "na": 0, 
@@ -594,7 +594,7 @@
           "ratingClass": "normal", 
           "upper": 5.8
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4.3, 
           "na": 0, 
@@ -610,7 +610,7 @@
       "display_name": "Redmond Regional Medical Center", 
       "id": "110168", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.4, 
           "na": 0, 
@@ -619,7 +619,7 @@
           "ratingClass": "normal", 
           "upper": 5.1
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "Worse than the National Rate", 
           "lower": 4.9, 
           "na": 0, 
@@ -635,7 +635,7 @@
       "display_name": "Wellstar Douglas Hospital", 
       "id": "110184", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.9, 
           "na": 0, 
@@ -644,7 +644,7 @@
           "ratingClass": "normal", 
           "upper": 5.1
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.2, 
           "na": 0, 
@@ -660,7 +660,7 @@
       "display_name": "Piedmont Henry Hospital", 
       "id": "110191", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.2, 
           "na": 0, 
@@ -669,7 +669,7 @@
           "ratingClass": "normal", 
           "upper": 4.7
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4.8, 
           "na": 0, 
@@ -685,7 +685,7 @@
       "display_name": "Eastside Medical Center", 
       "id": "110192", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
           "na": 0, 
@@ -694,7 +694,7 @@
           "ratingClass": "normal", 
           "upper": 5.2
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 4, 
           "na": 0, 
@@ -710,7 +710,7 @@
       "display_name": "North Fulton Hospital", 
       "id": "110198", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.4, 
           "na": 0, 
@@ -719,7 +719,7 @@
           "ratingClass": "normal", 
           "upper": 5.9
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.3, 
           "na": 0, 
@@ -735,7 +735,7 @@
       "display_name": "Piedmont Fayette Hospital", 
       "id": "110215", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.7, 
           "na": 0, 
@@ -744,7 +744,7 @@
           "ratingClass": "normal", 
           "upper": 5.3
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.8, 
           "na": 0, 
@@ -760,7 +760,7 @@
       "display_name": "Piedmont Mountainside Hospital", 
       "id": "110225", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.5, 
           "na": 0, 
@@ -769,7 +769,7 @@
           "ratingClass": "normal", 
           "upper": 6.2
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 2.8, 
           "na": 0, 
@@ -785,7 +785,7 @@
       "display_name": "Piedmont Newnan Hospital", 
       "id": "110229", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 1.5, 
           "na": 0, 
@@ -794,7 +794,7 @@
           "ratingClass": "normal", 
           "upper": 3.9
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 2.9, 
           "na": 0, 
@@ -810,7 +810,7 @@
       "display_name": "Emory Johns Creek Hospital", 
       "id": "110230", 
       "surgery": {
-        "complication": {
+        "complications": {
           "category": "No different than the National Rate", 
           "lower": 2.1, 
           "na": 0, 
@@ -819,7 +819,7 @@
           "ratingClass": "normal", 
           "upper": 6.3
         }, 
-        "readmission": {
+        "readmissions": {
           "category": "No different than the National Rate", 
           "lower": 3.7, 
           "na": 0, 
