@@ -78,6 +78,18 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
 
   Hospital.Perinatal = Marionette.ItemView.extend({
     template: "#hospital-perinatal-template",
-    className: "hospital-list"
+    className: "hospital-list hospital-list-item",
+    templateHelpers: function () {
+      return {
+        formatMoney: function(num){
+          var format = d3.format("$,");
+          return format(num);
+        },
+        formatCommas: function(num){
+          var format = d3.format(",");
+          return format(num);
+        }
+      };
+    }
   })
 });

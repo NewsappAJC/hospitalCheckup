@@ -24,8 +24,8 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
       HospitalCheckup.execute("set:active:header", "perinatal"); //update navigation toolbar
     },
 
-    showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
-      SectionsApp.Hospital.Controller.showHospital(id, aboutView, chartsView, defaultModel);
+    showHospital: function(id, aboutView, measuresView, defaultModel){  //received URL with ID parameter
+      SectionsApp.Hospital.Controller.showHospital(id, aboutView, measuresView, defaultModel);
     }
   };
 
@@ -44,13 +44,13 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     API.listPerinatal();
   });
 
-  HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
-    API.showHospital(id, aboutView, chartsView, defaultModel);
+  HospitalCheckup.on("hospital:show", function(id, aboutView, measuresView, defaultModel){ //received URL with ID parameter
+    API.showHospital(id, aboutView, measuresView, defaultModel);
   });
 
-  HospitalCheckup.on("hospital:change", function(id, app, aboutView, chartsView){ //hospital selected from infection list
+  HospitalCheckup.on("hospital:change", function(id, app, aboutView, measuresView){ //hospital selected from infection list
     HospitalCheckup.navigate(app+"/" + id);
-    API.showHospital(id, aboutView, chartsView);
+    API.showHospital(id, aboutView, measuresView);
   });
 
   HospitalCheckup.on("infections:filter", function(criterion){ //filter menu changed

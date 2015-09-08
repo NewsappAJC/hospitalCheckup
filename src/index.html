@@ -152,7 +152,31 @@
   </script>
 
   <script type="text/template" id="hospital-perinatal-template">
-    Placeholder text
+    <h4>Facilities</h4>
+    <p>
+      <strong>Birthing rooms:</strong> <%= Birthing_Rms %><br>
+      <strong>Delivery rooms:</strong> <%= Delivery_Rms %><br>
+      <strong>Labor, delivery and recovery rooms:</strong> <%= LDR_Rms %><br>
+      <strong>Labor, delivery, recovery & postpartum rooms:</strong> <%= LDRP_Rms %><br>
+      <strong>Newborn beds:</strong> <%= Beds_New_Born %><br>
+      <strong>Intermediate care beds:</strong> <%= Beds_Intermediate %><br>
+      <strong>Intensive care beds:</strong> <%= Beds_Intensive %>
+    </p>
+    <hr>
+    <h4>Costs</h4>
+    <p>
+      <strong>Average delivery charge:</strong> <%= formatMoney(avg_delivery_charge) %><br>
+      <strong>Average premature delivery charge:</strong> <%= formatMoney(avg_premature_charge) %>
+    </p>
+    <hr>
+    <h4>Outcomes</h4>
+    <p>
+      <strong>Total births:</strong> <%= formatCommas(total_births) %><br>
+      <strong>Live births:</strong> <%= formatCommas(Live_Births) %><br>
+      <strong>C-Sections:</strong> <%= formatCommas(C_Sect) %><br>
+      <strong>Early elective delivery rate:</strong> <%= early_births_pct %>%
+    </p>
+    <hr>
   </script>
 
   <script type="text/template" id="section-layout">

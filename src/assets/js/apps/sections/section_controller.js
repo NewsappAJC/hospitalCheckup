@@ -28,13 +28,14 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
       bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.Info(),
-      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID]({collection: new Backbone.Collection(), section: sectionID, labelArr: entityID}),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID]({section: sectionID, labelArr: entityID}),
       listView;
       if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
       }
       if (sectionID !== "perinatal"){
         var legendView = new Section.Legend({label: legendLabel});
+        hospitalMeasuresView.collection = new Backbone.Collection()
       }
 
       $.when(fetchingData).done(function(collection){
