@@ -133,7 +133,7 @@ f.close()
 
 tree = []
 #there's a bunch of stuff in the data not being used in the app, just grab the stuff that will be displayed
-names = ["Delivery_Rms", "Birthing_Rms", "LDR_Rms", "LDRP_Rms", "C_Sect", "Live_Births", "total_births", "csect_pct", "avg_delivery_charge", "avg_premature_charge", "early_births_pct"]
+names = ["Delivery_Rms", "Birthing_Rms", "LDR_Rms", "LDRP_Rms", "C_Sect", "Live_Births", "total_births", "csect_pct", "avg_delivery_charge", "avg_premature_charge", "early_births_pct", "Beds_New_Born", "Beds_Intermediate", "Beds_Intensive"]
 
 for node in src:
     hospital = {}
