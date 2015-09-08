@@ -95,7 +95,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.svg.select("#axes").append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + chart.get_currentHeight(data) + ")")
-        //.attr("text-anchor", "middle")
         .call(chart.xAxis);
 
       //create and set y axis positions
@@ -403,13 +402,31 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       return filtered;
     },
 
+    draw_axes: function(data){
+      var chart = this;
+      this.xAxis.tickFormat(this.get_tick_format(chart.options.measure));
+      Chart.BarBase.prototype.draw_axes.call(this, data);
+    },
+
+    get_tick_format: function(measure){
+      if(measure.indexOf("charge") >= 0){
+        return d3.format("$s");
+      } else if (measure.indexOf("pct") >= 0){
+        return function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
+      } else if (measure.indexOf("total") >= 0){
+        return d3.format("s");
+      } else {
+        console.log("no matching format");
+      }
+    },
+
     onUpdateChart: function(criterion){
       this.options.measure = criterion;
       var chart = this,
       filtered = chart.filter_data(),
       height = chart.get_currentHeight(filtered),
       avg = HospitalCheckup.Entities.averages.get(criterion);
-
+      this.xAxis.tickFormat(this.get_tick_format(criterion));
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
     }
   });

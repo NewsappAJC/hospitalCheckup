@@ -70,7 +70,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
               collection: collection,
               base_height: 700,
               bar_padding: 4,
-              margin: {left: 195, right: 10, bottom: 20, top: 25},
+              margin: {left: 195, right: 13, bottom: 20, top: 25},
               measure: criterion || defaultMeasure,
               section: sectionID,
               stat: stat
