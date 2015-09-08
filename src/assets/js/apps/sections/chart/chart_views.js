@@ -387,7 +387,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     create_svg_containers: function(){
-      var ids = ["baseBars", "rangeBars", "axes", "contextLines"]
+      var ids = ["baseBars", "bars", "axes", "contextLines"]
 
       Chart.BarBase.prototype.create_svg_containers.call(this, ids);
     },
@@ -420,6 +420,45 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       }
     },
 
+    draw_data: function(data){
+      var chart = this,
+      measure = chart.options.measure,
+      section = chart.options.section;
+
+      var bars = chart.svg.select("#bars").selectAll(".bar")
+        .data(data, function(d){ return d.id });
+
+      bars.exit().transition().duration(chart.duration)
+        .ease(chart.easing)
+        .style("opacity", 0).remove();
+
+      bars.enter()
+      .append("rect")
+      .attr("class", "bar normal")
+        .style("opacity", 0)
+      .attr("x", 0)
+      .attr("y", function(d) {
+        return chart.yScale(d.display_name);
+      })
+      .attr("width", function(d){
+        return chart.xScale(d[measure])
+      })
+      .attr("height", chart.bar_height);
+      chart.set_tooltip(chart, bars, measure);
+
+      //update
+      bars.transition().duration(chart.duration)
+        .ease(chart.easing)
+        .style("opacity", 1)
+        .attr("x", 0)
+        .attr("y", function(d) {
+          return chart.yScale(d.display_name);
+        })
+        .attr("width", function(d){
+          return chart.xScale(d[measure]);
+        });
+    },
+
     onUpdateChart: function(criterion){
       this.options.measure = criterion;
       var chart = this,
@@ -428,6 +467,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       avg = HospitalCheckup.Entities.averages.get(criterion);
       this.xAxis.tickFormat(this.get_tick_format(criterion));
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
+
+      chart.draw_data(filtered);
     }
   });
 

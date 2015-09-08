@@ -106,7 +106,7 @@ option {
   font-weight: bold;
 }
 /*charts extended*/
-rect.range.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
+rect.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
   fill: #49709F;
   background-color: #49709F;
 }
