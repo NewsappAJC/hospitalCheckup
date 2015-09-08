@@ -146,12 +146,12 @@ for node in src:
     for key in node.keys():
         if key in names:
             val = node[key]
-            if(key == "C_Sect_pct" or key == "early_births_pct"):
-                val = str(val)+"%"
-            elif(val):
-                val = "{:,d}".format(val)
-                if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
-                    val = "$"+str(val)
+            # if(key == "C_Sect_pct" or key == "early_births_pct"):
+            #     val = str(val)+"%"
+            # elif(val):
+            #     val = "{:,d}".format(val)
+            #     if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
+            #         val = "$"+str(val)
 
             hospital[key] = val
 
