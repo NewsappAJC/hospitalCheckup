@@ -3,7 +3,8 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     appRoutes: {
       //"infections(/)": "listInfections",
       "infections(/:id)(/filter/:criterion)": "listInfections", //hospital selection IDs and dropdown infections filters
-      "surgery(/:id)(/filter/:criterion)": "listSurgeries"
+      "surgery(/:id)(/filter/:criterion)": "listSurgeries",
+      "perinatal(/:id)(/filter/:criterion)": "listPerinatal"
     }
   });
 
@@ -16,6 +17,11 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     listSurgeries: function(id, criterion){
       SectionsApp.Section.Controller.listSurgeries(id, criterion);
       HospitalCheckup.execute("set:active:header", "surgery"); //update navigation toolbar
+    },
+
+    listPerinatal: function(id, criterion){
+      SectionsApp.Section.Controller.listPerinatal(id, criterion);
+      HospitalCheckup.execute("set:active:header", "perinatal"); //update navigation toolbar
     },
 
     showHospital: function(id, aboutView, chartsView, defaultModel){  //received URL with ID parameter
@@ -33,6 +39,11 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     API.listSurgeries();
   });
 
+  HospitalCheckup.on("perinatal:list", function(){ //list infections, triggered from nav or click on viz
+    HospitalCheckup.navigate("perinatal");
+    API.listPerinatal();
+  });
+
   HospitalCheckup.on("hospital:show", function(id, aboutView, chartsView, defaultModel){ //received URL with ID parameter
     API.showHospital(id, aboutView, chartsView, defaultModel);
   });
@@ -48,6 +59,10 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
 
   HospitalCheckup.on("surgery:filter", function(criterion){ //filter menu changed
     HospitalCheckup.navigate("surgery/filter/" + criterion);
+  });
+
+  HospitalCheckup.on("perinatal:filter", function(criterion){ //filter menu changed
+    HospitalCheckup.navigate("perinatal/filter/" + criterion);
   });
 
   SectionsApp.on("start", function(){

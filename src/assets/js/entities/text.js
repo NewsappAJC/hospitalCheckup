@@ -32,7 +32,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
 /* ----- PERINATAL ----- */
   Entities.PerinatalIntroTxt = {
-    headlien: "<h1>Labor & Delivery</h1>",
+    headline: "<h1>Labor & Delivery</h1>",
     intro_text: "<p>If your family is getting ready to welcome a new baby into the world, you may want to know more about the hospital that will handle the delivery.</p><p>The Atlanta Journal-Constitution has analyzed public reports to provide you with some key facts, including rates for C-sections and early elective deliveries, along with the hospital’s typical fee for handling a birth.  We can also tell you how many babies a hospital delivers.</p><p>C-sections have increased significantly in recent years and experts are calling for less reliance on these procedures, which generally put a mother at risk for future C-sections. Experts also want doctors to cut back on elective early deliveries. Some early deliveries are medically necessary and others happen when a mother goes into labor early. Those can’t be avoided. But other babies are born early when doctors induce labor or deliver by C-section as a convenience to themselves or at the request of the baby’s parents.</p>",
     bottom_text: ""
   };

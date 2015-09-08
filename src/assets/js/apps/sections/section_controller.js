@@ -3,14 +3,18 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.Controller = {
 
     listInfections: function(id, criterion){
-      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "than national benchmark", "ratio");
+      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "BarRangeDot", "than national benchmark", "ratio");
     },
 
     listSurgeries: function(id, criterion){
-      this.buildLayout(id, criterion, "complication", "Surgery", "surgery", "than national rate", "rate");
+      this.buildLayout(id, criterion, "complication", "Surgery", "surgery", "BarRangeDot", "than national rate", "rate");
     },
 
-    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, legendLabel, stat){
+    listPerinatal: function(id, criterion){
+      this.buildLayout(id, criterion, "C_Sect_pct", "Perinatal", "perinatal", "BarLeft");
+    },
+
+    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, stat){
       var isMobile = document.body.clientWidth < 405;
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
@@ -18,17 +22,19 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       var fetchingData = HospitalCheckup.request("chart:entities", entityID, sectionID);
 
       var listLayout = new Section.Layout(),
-      hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.HospitalLayout(),
+      hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.Layout(),
       headlineView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["headline"]}),
       introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"]}),
       menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
-      legendView = new Section.Legend({label: legendLabel}),
       bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
-      hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfo(),
-      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital["Hospital"+entityID+"ItemList"]({collection: new Backbone.Collection(), section: sectionID, labelArr: entityID}),
+      hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.Info(),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID]({collection: new Backbone.Collection(), section: sectionID, labelArr: entityID}),
       listView;
       if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
+      }
+      if (sectionID !== "perinatal"){
+        var legendView = new Section.Legend({label: legendLabel});
       }
 
       $.when(fetchingData).done(function(collection){
@@ -44,7 +50,9 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
           listLayout.headlineRegion.show(headlineView);
           listLayout.introRegion.show(introView);
           listLayout.menuRegion.show(menuView);
-          listLayout.legendRegion.show(legendView);
+          if(legendView){
+            listLayout.legendRegion.show(legendView);
+          }
           listLayout.listRegion.show(listView);
           listLayout.hospitalRegion.show(hospitalLayout);
           listLayout.bottomRegion.show(bottomView); //currently only infections has bottomView, the others are empty string placeholders
@@ -57,7 +65,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         //wait for #main-chart to be rendered
         listView.on("show", function(){
           if(!isMobile){
-            Section.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to Section module so we can target it later
+            Section.chartView = new HospitalCheckup.Common.Chart[chartType]({ //adding it to Section module so we can target it later
               el: "#main-chart",
               collection: collection,
               base_height: 700,

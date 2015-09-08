@@ -1,6 +1,6 @@
 HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalCheckup, Backbone, Marionette, $, _){
 
-  Hospital.HospitalLayout = Marionette.LayoutView.extend({
+  Hospital.Layout = Marionette.LayoutView.extend({
     template: "#hospital-layout",
     className: "large-12 columns",
     regions: {
@@ -10,7 +10,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     }
   });
 
-  Hospital.HospitalInfo = Marionette.ItemView.extend({
+  Hospital.Info = Marionette.ItemView.extend({
     template: "#hospital-info-view",
     className: "hospital-info"
   });
@@ -20,7 +20,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     className: "hospital-info"
   });
 
-  Hospital.HospitalInfectionItem = Marionette.ItemView.extend({
+  Hospital.InfectionItem = Marionette.ItemView.extend({
     template: "#hospital-infection-item-template",
     className: "hospital-list-item",
     onShow: function(){
@@ -37,16 +37,16 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     }
   });
 
-  Hospital.HospitalInfectionItemList = Marionette.CollectionView.extend({
+  Hospital.Infection = Marionette.CollectionView.extend({
     template: "#empty-template",
     className: "hospital-list",
-    childView: Hospital.HospitalInfectionItem,
+    childView: Hospital.InfectionItem,
     initialize: function(options){ //TODO may or may not actually need this function outside infections app
       this.options = options; //expecting `section` and `labelArr`
     },
     get_hospital_models: function(data){
       var dataArr = [];
-      var options = this.options;
+      var options = this.options; //TODO this only gets called by infections so it doesn't really need the options
       //we need unnamed, top-level objects for the collection
       _.each(data.get(options.section), function(values, key, collection){ //TODO do this on the model instead
         values.label = HospitalCheckup.Entities[options.labelArr+"Labels"].findWhere({ key: key }).get("label"); //look up the display name for the current infection
@@ -57,15 +57,15 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     }
   });
 
-  Hospital.HospitalSurgeryItem = Marionette.ItemView.extend({
+  Hospital.SurgeryItem = Marionette.ItemView.extend({
     template: "#hospital-surgery-item-template",
     className: "hospital-list-item"
   });
 
-  Hospital.HospitalSurgeryItemList = Marionette.CollectionView.extend({
+  Hospital.Surgery = Marionette.CollectionView.extend({
     template: "#empty-template",
     className: "hospital-list",
-    childView: Hospital.HospitalSurgeryItem,
+    childView: Hospital.SurgeryItem,
     get_hospital_models: function(data){
       var dataArr = [];
       _.each(data.get("surgery"), function(values, key, collection){
@@ -75,4 +75,9 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
       return dataArr;
     }
   });
+
+  Hospital.Perinatal = Marionette.ItemView.extend({
+    template: "#hospital-perinatal-template",
+    className: "hospital-list"
+  })
 });
