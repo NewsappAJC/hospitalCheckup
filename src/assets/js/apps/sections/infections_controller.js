@@ -1,33 +1,43 @@
-HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup, Backbone, Marionette, $, _){
 
-  List.InfectionsController = {
+  Section.Controller = {
+
     listInfections: function(id, criterion){
-      var isMobile = document.body.clientWidth < 405,
-      defaultMeasure = "cdiff";
+      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "than national benchmark", "ratio");
+    },
+
+    listSurgeries: function(id, criterion){
+      this.buildLayout(id, criterion, "complication", "Surgery", "surgery", "than national rate", "rate");
+    },
+
+    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, legendLabel, stat){
+      var isMobile = document.body.clientWidth < 405;
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
 
-      var fetchingData = HospitalCheckup.request("chart:entities", "Infection", "infections");
+      var fetchingData = HospitalCheckup.request("chart:entities", entityID, sectionID);
 
-      var listLayout = new List.Layout(),
+      var listLayout = new Section.Layout(),
       hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.HospitalLayout(),
-      headlineView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["headline"]}),
-      introView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["intro_text"]}),
-      menuView = new List.Menu({collection: HospitalCheckup.Entities.InfectionLabels, section: "infections"}),
-      legendView = new List.Legend({label: "than national benchmark"}),
-      bottomView = new List.TextBlock({text: HospitalCheckup.Entities.InfectionsIntroTxt["bottom_text"]}),
+      headlineView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["headline"]}),
+      introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"]}),
+      menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
+      legendView = new Section.Legend({label: legendLabel}),
+      bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfo(),
-      hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend(),
-      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital.HospitalInfectionItemList({collection: new Backbone.Collection(), section: "infections", labelArr: "Infection"}),
-      infectionsListView;
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital["Hospital"+entityID+"ItemList"]({collection: new Backbone.Collection(), section: sectionID, labelArr: entityID}),
+      listView;
+      if(sectionID === "infections"){
+        var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
+      }
 
-      $.when(fetchingData).done(function(infections){
+      $.when(fetchingData).done(function(collection){
 
         if(!isMobile){
-          listView = new List.MainChart();
+          listView = new Section.MainChart();
         } else {
-          listView = new List.MobileList({collection: infections, measure: criterion || defaultMeasure });
-          listView.listenTo(menuView, "infections:filter", listView.onFilter);
+          listView = new Section.MobileList({collection: collection, measure: criterion || defaultMeasure });
+          listView.listenTo(menuView, sectiondID+":filter", listView.onFilter);
         }
 
         listLayout.on("show", function(){
@@ -37,33 +47,33 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
           listLayout.legendRegion.show(legendView);
           listLayout.listRegion.show(listView);
           listLayout.hospitalRegion.show(hospitalLayout);
-          listLayout.bottomRegion.show(bottomView);
+          listLayout.bottomRegion.show(bottomView); //currently only infections has bottomView, the others are empty string placeholders
         });
 
         listView.on("hospital:change", function(id){ //triggered by behaviors
-          HospitalCheckup.trigger("hospital:change", id, "infections", hospitalInfoView, hospitalMeasuresView);
+          HospitalCheckup.trigger("hospital:change", id, sectionID, hospitalInfoView, hospitalMeasuresView);
         });
 
         //wait for #main-chart to be rendered
         listView.on("show", function(){
           if(!isMobile){
-            List.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
+            Section.chartView = new HospitalCheckup.Common.Chart.BarRangeDot({ //adding it to List module so we can target it later
               el: "#main-chart",
-              collection: infections,
+              collection: collection,
               base_height: 700,
               bar_padding: 4,
               margin: {left: 195, right: 10, bottom: 20, top: 25},
               measure: criterion || defaultMeasure,
-              section: "infections",
-              stat: "ratio"
+              section: sectionID,
+              stat: stat
             });
-            List.chartView.render(); //for some reason this breaks filtering when chained with initialization above
+            Section.chartView.render(); //for some reason this breaks filtering when chained with initialization above
           }
         });
 
-        menuView.on("infections:filter", function(filterCriterion){
-          HospitalCheckup.trigger("infections:filter", filterCriterion); //update routes
-          Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "update:chart", filterCriterion);
+        menuView.on(sectionID+":filter", function(filterCriterion){
+          HospitalCheckup.trigger(sectionID+":filter", filterCriterion); //update routes
+          Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.Section.chartView"), "update:chart", filterCriterion);
         });
 
         menuView.once("show", function(){ //TODO we only need to do this manually when user enters the page via a filter URL
@@ -71,11 +81,13 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
         });
 
         hospitalLayout.on("show", function(){
-          var defaultModel = infections.at(0);
+          var defaultModel = collection.at(0);
           HospitalCheckup.trigger("hospital:show", id, hospitalInfoView, hospitalMeasuresView, defaultModel);
           hospitalLayout.topRegion.show(hospitalInfoView);
-          hospitalLayout.legendRegion.show(hospitalLegendView);
-          hospitalLayout.chartRegion.show(hospitalMeasuresView);
+          if(sectionID === "infections"){
+            hospitalLayout.legendRegion.show(hospitalLegendView);
+          }
+          hospitalLayout.measuresRegion.show(hospitalMeasuresView);
         });
 
         HospitalCheckup.regions.main.show(listLayout);

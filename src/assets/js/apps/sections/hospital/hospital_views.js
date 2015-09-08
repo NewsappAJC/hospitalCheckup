@@ -6,7 +6,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     regions: {
       topRegion: "#hospital-top-region",
       legendRegion: "#hospital-region-1",
-      chartRegion: "#hospital-region-2"
+      measuresRegion: "#hospital-region-2"
     }
   });
 
@@ -57,15 +57,15 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     }
   });
 
-  Hospital.HospitalSurgeryDetailItem = Marionette.ItemView.extend({
+  Hospital.HospitalSurgeryItem = Marionette.ItemView.extend({
     template: "#hospital-surgery-item-template",
     className: "hospital-list-item"
   });
 
-  Hospital.HospitalSurgeryDetails = Marionette.CollectionView.extend({
+  Hospital.HospitalSurgeryItemList = Marionette.CollectionView.extend({
     template: "#empty-template",
     className: "hospital-list",
-    childView: Hospital.HospitalSurgeryDetailItem,
+    childView: Hospital.HospitalSurgeryItem,
     get_hospital_models: function(data){
       var dataArr = [];
       _.each(data.get("surgery"), function(values, key, collection){

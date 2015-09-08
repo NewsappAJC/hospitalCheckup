@@ -9,12 +9,12 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
 
   var API = {
     listInfections: function(id, criterion){
-      SectionsApp.List.InfectionsController.listInfections(id, criterion);
+      SectionsApp.Section.Controller.listInfections(id, criterion);
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
     },
 
     listSurgeries: function(id, criterion){
-      SectionsApp.List.SurgeriesController.listSurgeries(id, criterion);
+      SectionsApp.Section.Controller.listSurgeries(id, criterion);
       HospitalCheckup.execute("set:active:header", "surgery"); //update navigation toolbar
     },
 

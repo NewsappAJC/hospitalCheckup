@@ -128,7 +128,6 @@ module.exports = function(grunt) {
           'build/assets/js/entities/section.js': ['src/assets/js/entities/section.js'],
           'build/assets/js/apps/sections/section_views.js': ['src/assets/js/apps/sections/section_views.js'],
           'build/assets/js/apps/sections/infections_controller.js': ['src/assets/js/apps/sections/infections_controller.js'],
-          'build/assets/js/apps/sections/surgeries_controller.js': ['src/assets/js/apps/sections/surgeries_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_controller.js': ['src/assets/js/apps/sections/hospital/hospital_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_views.js': ['src/assets/js/apps/sections/hospital/hospital_views.js'],
           'build/assets/js/apps/sections/sections_app.js': ['src/assets/js/apps/sections/sections_app.js'],

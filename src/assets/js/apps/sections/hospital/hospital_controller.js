@@ -21,7 +21,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
         aboutView.model = model;
         chartsView.collection.reset(chartsView.get_hospital_models(model)); //collection will rerender itself when model is reset
         aboutView.render();
-        Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.List.chartView"), "select:hospital", model.get("display_name")); //add active class to chart hospital label
+        Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.Section.chartView"), "select:hospital", model.get("display_name")); //add active class to chart hospital label
       }
     }
   }
