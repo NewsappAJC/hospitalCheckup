@@ -71,7 +71,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
               collection: collection,
               base_height: 700,
               bar_padding: 4,
-              margin: {left: 195, right: 13, bottom: 20, top: 25},
+              margin: {left: 195, right: 15, bottom: 20, top: 25}, //right padding needed to protect chart labels that extend past axis
               measure: criterion || defaultMeasure,
               section: sectionID,
               stat: stat

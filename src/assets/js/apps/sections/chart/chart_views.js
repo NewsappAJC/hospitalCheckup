@@ -107,12 +107,63 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
     },
 
+    draw_context_lines: function(data){
+      var chart = this,
+      height = chart.get_currentHeight(data),
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
+
+      var contextLines = chart.svg.select("#contextLines");
+      
+      contextLines.append("line")
+        .attr("y1", 0)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg))
+        .attr("id", "averageLine");
+
+      contextLines.append("text")
+        .text("State avg.")
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        })
+        .attr("class", "chart-label")
+        .attr("id", "avgTxt")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("x", chart.xScale(avg))
+        .attr("y", -5);
+
+      if(chart.options.section === "infections"){
+        contextLines.append("line")
+          .attr("y1", 0)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1))
+          .attr("id", "benchmarkLine");
+
+        contextLines.append("text")
+          .text("Benchmark")
+          .attr("text-anchor", function(){ //figure out which side the line is on
+            if(avg < 1){
+              return "start"
+            } return "end"
+          })
+          .attr("class", "chart-label")
+          .attr("id", "benchmarkTxt")
+          .attr("x", chart.xScale(1))
+          .attr("y", -5);
+      }
+    },
+
     draw_data: function(data){
       return this;
     },
 
     onUpdateChart: function(filtered, height){
-      var chart = this;
+      var chart = this,
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
 
       //update scales and axes
       chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
@@ -133,6 +184,43 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.draw_base_bars(filtered);
       chart.onSelectHospital(chart.selected);
+
+      //update context lines
+      chart.svg.select("#averageLine")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg));
+
+      chart.svg.select("#avgTxt")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("x", chart.xScale(avg))
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        });
+
+      if(chart.options.section === "infections"){
+        chart.svg.select("#benchmarkLine")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1));
+
+        chart.svg.select("#benchmarkTxt")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("x", chart.xScale(1))
+          .attr("text-anchor", function(){
+            if(avg < 1){
+              return "start"
+            } return "end"
+          });
+      }
     },
 
     onSelectHospital: function(label){
@@ -251,56 +339,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         });
     },
 
-    draw_context_lines: function(data){
-      var chart = this,
-      height = chart.get_currentHeight(data),
-      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
-
-      var contextLines = chart.svg.select("#contextLines");
-      
-      contextLines.append("line")
-        .attr("y1", 0)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(avg))
-        .attr("x2", chart.xScale(avg))
-        .attr("id", "averageLine");
-
-      contextLines.append("text")
-        .text("State avg.")
-        .attr("text-anchor", function(){
-          if(avg < 1){
-            return "end"
-          } return "start"
-        })
-        .attr("class", "chart-label")
-        .attr("id", "avgTxt")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("x", chart.xScale(avg))
-        .attr("y", -5);
-
-      if(chart.options.section === "infections"){
-        contextLines.append("line")
-          .attr("y1", 0)
-          .attr("y2", height)
-          .attr("x1", chart.xScale(1)) //benchmark is always 1
-          .attr("x2", chart.xScale(1))
-          .attr("id", "benchmarkLine");
-
-        contextLines.append("text")
-          .text("Benchmark")
-          .attr("text-anchor", function(){ //figure out which side the line is on
-            if(avg < 1){
-              return "start"
-            } return "end"
-          })
-          .attr("class", "chart-label")
-          .attr("id", "benchmarkTxt")
-          .attr("x", chart.xScale(1))
-          .attr("y", -5);
-      }
-    },
-
     draw_stat_circles: function(data){
       var chart = this,
       measure = chart.options.measure,
@@ -342,50 +380,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.measure = criterion;
       var chart = this,
       filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered),
-      avg = HospitalCheckup.Entities.averages.get(criterion);
+      height = chart.get_currentHeight(filtered);
 
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
       chart.draw_range_bars(filtered);
       chart.draw_stat_circles(filtered);
-
-      //update context lines
-      chart.svg.select("#averageLine")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(avg))
-        .attr("x2", chart.xScale(avg));
-
-      chart.svg.select("#avgTxt")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("x", chart.xScale(avg))
-        .attr("text-anchor", function(){
-          if(avg < 1){
-            return "end"
-          } return "start"
-        });
-
-      if(chart.options.section === "infections"){
-        chart.svg.select("#benchmarkLine")
-          .transition().duration(chart.duration)
-          .ease(chart.easing)
-          .attr("y2", height)
-          .attr("x1", chart.xScale(1)) //benchmark is always 1
-          .attr("x2", chart.xScale(1));
-
-        chart.svg.select("#benchmarkTxt")
-          .transition().duration(chart.duration)
-          .ease(chart.easing)
-          .attr("x", chart.xScale(1))
-          .attr("text-anchor", function(){
-            if(avg < 1){
-              return "start"
-            } return "end"
-          });
-      }
     }
   });
 
@@ -436,6 +436,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_data: function(data){
+      this.draw_context_lines(data);
+      this.draw_bars(data);
+    },
+
+    draw_bars: function(data){
       var chart = this,
       measure = chart.options.measure,
       section = chart.options.section;
@@ -483,7 +488,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.xAxis.tickFormat(this.get_format(criterion, true));
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
-      chart.draw_data(filtered);
+      chart.draw_bars(filtered);
     }
   });
 
