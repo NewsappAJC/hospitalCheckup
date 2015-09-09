@@ -149,11 +149,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     attach_tooltip: function(data, measure) {
-      data.measure = measure; //template needs access
       if(this.options.section === "perinatal"){
-        data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
+        if(data.measure !== measure){ //don't re-process it on subsequent hovers
+          data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
+          var format = this.get_format(measure);
+          data.formatted = format(data[measure]);
+        }
       }
-
+      data.measure = measure; //template needs access
       var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));
       tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
@@ -407,17 +410,23 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     draw_axes: function(data){
       var chart = this;
-      this.xAxis.tickFormat(this.get_tick_format(chart.options.measure));
+      this.xAxis.tickFormat(this.get_format(chart.options.measure, true));
       Chart.BarBase.prototype.draw_axes.call(this, data);
     },
 
-    get_tick_format: function(measure){
+    get_format: function(measure, isAxis){
       if(measure.indexOf("charge") >= 0){
-        return d3.format("$s");
+        if(isAxis){
+          return d3.format("$s")
+        }
+        return d3.format("$,")
       } else if (measure.indexOf("pct") >= 0){
         return function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
       } else if (measure.indexOf("total") >= 0){
-        return d3.format("s");
+        if(isAxis){
+          return d3.format("s")
+        }
+        return d3.format(",");
       } else {
         console.log("no matching format");
       }
@@ -468,7 +477,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       filtered = chart.filter_data(),
       height = chart.get_currentHeight(filtered),
       avg = HospitalCheckup.Entities.averages.get(criterion);
-      this.xAxis.tickFormat(this.get_tick_format(criterion));
+      this.xAxis.tickFormat(this.get_format(criterion, true));
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
       chart.draw_data(filtered);
