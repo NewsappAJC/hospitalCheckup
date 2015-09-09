@@ -32,6 +32,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     get_xMax: function(data){
       var chart = this;
+      if(chart.options.measure.indexOf("pct") >= 0){
+        return 100
+      }
       return d3.max(data, function(d) {
         if(chart.nested){ //check if data nested inside another array
           return d[chart.nested][chart.options.measure].upper

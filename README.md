@@ -36,8 +36,13 @@ Explore hospital quality data for Atlanta area hospitals.
  - selected hospital stays highlighted if it re-enters after exiting due to filters
  - Mobile hospital table much better looking!
  - Display hospital address on all sections that show hospital detail view (consistency)
+ - Perinatal axis labels formatting (currency, %, SI-prefixed)
+ - Bars reflecting percentages are on a scale of 100
  
 ## Todo
+- [ ] Any way to get more consistency between the explanations of the range/confidence interval between the infections and surgery sections?
+- [ ] Sources for perinatal - "public reports" is probably not sufficient
+- [ ] "Percent of births performed by C-Section"/"Rate of early elective deliveries" - Can we call rate percent?
 - [ ] Spell out infection names in infection bottom text
 - [ ] Fix tooltips on tablets
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in

@@ -134,7 +134,7 @@ var ChartBaseView = Backbone.View.extend({
       .orient(orientation);
 
     //too many ticks on tablets
-    if(this.dimensions.wrapperWidth < 450 && axis === "x"){
+    if(this.dimensions.wrapperWidth < 475 && axis === "x"){
       this.xAxis.ticks(5)
     }
   }
