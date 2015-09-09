@@ -41,6 +41,7 @@ Explore hospital quality data for Atlanta area hospitals.
  
 ## Todo
 - [ ] Any way to get more consistency between the explanations of the range/confidence interval between the infections and surgery sections?
+- [ ] Surgeries rate - percentage?
 - [ ] Sources for perinatal - "public reports" is probably not sufficient
 - [ ] "Percent of births performed by C-Section"/"Rate of early elective deliveries" - Can we call rate percent?
 - [ ] Spell out infection names in infection bottom text
