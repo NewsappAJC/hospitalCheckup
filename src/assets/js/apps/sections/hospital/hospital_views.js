@@ -41,14 +41,10 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     template: "#empty-template",
     className: "hospital-list",
     childView: Hospital.InfectionItem,
-    initialize: function(options){ //TODO may or may not actually need this function outside infections app
-      this.options = options; //expecting `section` and `labelArr`
-    },
     get_hospital_models: function(data){
       var dataArr = [];
-      var options = this.options; //TODO this only gets called by infections so it doesn't really need the options
       //we need unnamed, top-level objects for the collection
-      _.each(data.get(options.section), function(values, key, collection){ //TODO do this on the model instead
+      _.each(data.get("infections"), function(values, key, collection){ //TODO do this on the model instead
         values.label = HospitalCheckup.Entities.InfectionLabels.findWhere({ key: key }).get("label"); //look up the display name for the current infection
         values.measure = key;
         dataArr.push(values);
@@ -66,7 +62,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     template: "#empty-template",
     className: "hospital-list",
     childView: Hospital.SurgeryItem,
-    get_hospital_models: function(data){
+    get_hospital_models: function(data){ //can this be a behavior? used by Hospital.Surgery and Hospital.Infection
       var dataArr = [];
       _.each(data.get("surgery"), function(values, key, collection){
         values.measure = key;
