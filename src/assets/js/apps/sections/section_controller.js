@@ -69,7 +69,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
             Section.chartView = new HospitalCheckup.Common.Chart[chartType]({ //adding it to Section module so we can target it later
               el: "#main-chart",
               collection: collection,
-              base_height: 700,
+              base_height: 705,
               bar_padding: 4,
               margin: {left: 195, right: 15, bottom: 20, top: 25}, //right padding needed to protect chart labels that extend past axis
               measure: criterion || defaultMeasure,

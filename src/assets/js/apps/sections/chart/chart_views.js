@@ -9,7 +9,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.stat = options.stat || "ratio";
       this.duration = 500;
       this.easing = "sin-in-out"; // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-      this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
+      //this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
+      this.bar_height = 16; //TODO perinatal collection is much smaller and don't have a way to make it consistent right now
       this.$chart_container.attr('id', this.el.id+"-container");
       return this;
     },
