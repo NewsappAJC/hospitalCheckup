@@ -106,7 +106,7 @@ option {
   font-weight: bold;
 }
 /*charts extended*/
-rect.range.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
+rect.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
   fill: #49709F;
   background-color: #49709F;
 }
@@ -132,7 +132,7 @@ div.ttip {
   font-size: 12px;
   position: absolute;
   width: 270px;
-  padding: 5px 10px;
+  padding: 5px;
   margin: 0px;
   background-color: white;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
@@ -183,7 +183,7 @@ select#js-filter-criterion {
 .hospital-list .hospital-list-item hr {
   margin-top: 5px;
 }
-.hospital-list-item {
+.hospital-list-item:not(:first-child) {
   margin-top: 35px;
 }
 .hospital-list-item.not-available {
@@ -195,6 +195,9 @@ select#js-filter-criterion {
 .hospital-list-item p strong {
   font-family: BoomerCond;
   font-weight: normal;
+}
+#hospital-region-1 #detail-legend {
+  margin-bottom: 20px;
 }
 /*hospital charts*/
 .predicted {

@@ -35,12 +35,8 @@ SELECT round(AVG(C_Sect / Total_Births)*100,0) as avgC_SectPct,
        round(SUM(Avg_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgDeliveryCharge,
        round(SUM(Avg_Premature_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgPrematureCharge,
        round(AVG(Total_Births), 0) as avgBirths,
-       /*'sample' might actually be the sample the score is based on? In that case should probably weight average based on that instead of Total_Births, especially since the sample is 0 in many cases*/
-       round(SUM(c.score * Total_Births)/SUM(Total_Births), 2) as avgEarlyPct
-FROM ahq.perinatal a
-JOIN ahq.lu_id b using(uid)
-LEFT JOIN hospital_compare.HQI_HOSP_TimelyEffectiveCare c
-  ON b.Medicare_Provider_No = c.provider_id
+       score as earlyPct
+FROM ahq.perinatal, hospital_compare.State_TimelyEffectiveCare
 WHERE Year = 2014 AND Total_Births > 0 AND (C_Sect / Total_Births) < 1 AND measure_id = "PC_01" AND state = "GA"
 
 

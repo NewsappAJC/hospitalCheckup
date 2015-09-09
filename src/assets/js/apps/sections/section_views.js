@@ -1,6 +1,6 @@
-HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup, Backbone, Marionette, $, _){
 
-  List.Layout = Marionette.LayoutView.extend({
+  Section.Layout = Marionette.LayoutView.extend({
     template: "#section-layout",
     className: "large-12 columns",
     regions: {
@@ -17,7 +17,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.TextBlock = Marionette.ItemView.extend({
+  Section.TextBlock = Marionette.ItemView.extend({
     template: "#text-block-template",
     initialize: function(options){
       var options = options || {};
@@ -31,7 +31,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.Menu = Marionette.ItemView.extend({
+  Section.Menu = Marionette.ItemView.extend({
     template: "#filter-menu-template",
     tagName: "select",
     initialize: function(options){
@@ -55,7 +55,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.Legend = Marionette.ItemView.extend({
+  Section.Legend = Marionette.ItemView.extend({
     template: "#main-legend",
     initialize: function(options){
       var options = options || {};
@@ -69,7 +69,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MainChart = Marionette.ItemView.extend({
+  Section.MainChart = Marionette.ItemView.extend({
     template: "#main-chart-template",
     behaviors: {
       HospitalSelect:{
@@ -78,7 +78,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MobileRow = Marionette.ItemView.extend({
+  Section.MobileRow = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#mobile-tr-template",
     initialize: function(options){
@@ -96,12 +96,12 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MobileList = Marionette.CompositeView.extend({
+  Section.MobileList = Marionette.CompositeView.extend({
     tagName: "table",
     className: "columns",
     id: "mobile-list",
     template: "#mobile-table-template",
-    childView: List.MobileRow,
+    childView: Section.MobileRow,
     childViewContainer: "tbody",
     initialize: function(options){
       this.measure = options.measure;

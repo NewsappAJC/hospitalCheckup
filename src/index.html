@@ -112,10 +112,16 @@
 
   <script type="text/template" id="surgery-tooltip-template">
     <div id="ttip" class="ttip container">
-        <strong>Rate:</strong> <%= surgery[measure].rate %><br>
-        <strong>Rate range:</strong> <%= surgery[measure].lower %> <strong>to</strong> <%= surgery[measure].upper %><br>
+        <strong>Rate:</strong> <%= surgery[measure].rate %>%<br>
+        <strong>Rate range:</strong> <%= surgery[measure].lower %>% <strong>to</strong> <%= surgery[measure].upper %>%<br>
         <strong>Patients included:</strong> <%= surgery[measure].patients %><br>
         <strong>Rating:</strong> <%- surgery[measure].category %>
+    </div>
+  </script>
+
+  <script type="text/template" id="perinatal-tooltip-template">
+    <div id="ttip" class="ttip container">
+        <strong><%= label %></strong>: <%= formatted %>
     </div>
   </script>
 
@@ -141,12 +147,40 @@
   </script>
 
   <script type="text/template" id="hospital-surgery-item-template">
-    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %>s</h4>
+    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %></h4>
     <p>
       <strong>Patients included:</strong> <%= patients %><br>
       <strong>Rate:</strong> <%= rate %>%<br>
       <strong>Rate range:</strong> <%= upper %>% <strong>to</strong> <%= lower %>%<br>
       <strong>Rating:</strong> <%= category %>
+    </p>
+    <hr>
+  </script>
+
+  <script type="text/template" id="hospital-perinatal-template">
+    <h4>Facilities</h4>
+    <p>
+      <strong>Birthing rooms:</strong> <%= Birthing_Rms %><br>
+      <strong>Delivery rooms:</strong> <%= Delivery_Rms %><br>
+      <strong>Labor, delivery and recovery rooms:</strong> <%= LDR_Rms %><br>
+      <strong>Labor, delivery, recovery & postpartum rooms:</strong> <%= LDRP_Rms %><br>
+      <strong>Newborn beds:</strong> <%= Beds_New_Born %><br>
+      <strong>Intermediate care beds:</strong> <%= Beds_Intermediate %><br>
+      <strong>Intensive care beds:</strong> <%= Beds_Intensive %>
+    </p>
+    <hr>
+    <h4>Costs</h4>
+    <p>
+      <strong>Average delivery charge:</strong> <%= formatMoney(avg_delivery_charge) %><br>
+      <strong>Average premature delivery charge:</strong> <%= formatMoney(avg_premature_charge) %>
+    </p>
+    <hr>
+    <h4>Outcomes</h4>
+    <p>
+      <strong>Total births:</strong> <%= formatCommas(total_births) %><br>
+      <strong>Live births:</strong> <%= formatCommas(Live_Births) %><br>
+      <strong>C-Sections:</strong> <%= formatCommas(C_Sect) %><br>
+      <strong>Early elective delivery rate:</strong> <%= early_births_pct %>%
     </p>
     <hr>
   </script>
@@ -241,11 +275,10 @@
   <script src="assets/js/apps/header/header_app.js"></script>
   <script src="assets/js/entities/section.js"></script>
   <script src="assets/js/apps/sections/section_views.js"></script>
-  <script src="assets/js/apps/sections/infections_controller.js"></script>
-  <script src="assets/js/apps/sections/surgeries_controller.js"></script>
+  <script src="assets/js/apps/sections/section_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
-  <script src="assets/js/apps/sections/sections_app.js"></script>
+  <script src="assets/js/apps/sections/section_app.js"></script>
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>

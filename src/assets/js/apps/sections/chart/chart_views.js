@@ -9,7 +9,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.stat = options.stat || "ratio";
       this.duration = 500;
       this.easing = "sin-in-out"; // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-      this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
+      //this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
+      this.bar_height = 16; //TODO perinatal collection is much smaller and don't have a way to make it consistent right now
       this.$chart_container.attr('id', this.el.id+"-container");
       return this;
     },
@@ -25,24 +26,22 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.draw_axes(data);//needs to be on top of bars
     },
 
-    //remove items with no data and sort by stat
-    filter_data: function(){
-      var chart = this,
-      section = chart.options.section,
-      stat = chart.options.stat;
-
-      var filtered = chart.data.filter(function(d){
-        return d[section][chart.options.measure].na != 1;
-      });
-      filtered.sort(function(a,b){
-        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
-      });
-      return filtered;
+    filter_data: function(data){
+      //meant to be extended
+      return data;
     },
 
     get_xMax: function(data){
       var chart = this;
-      return d3.max(data, function(d) { return d[chart.options.section][chart.options.measure].upper });
+      if(chart.options.measure.indexOf("pct") >= 0){
+        return 100
+      }
+      return d3.max(data, function(d) {
+        if(chart.nested){ //check if data nested inside another array
+          return d[chart.nested][chart.options.measure].upper
+        }
+        return d[chart.options.measure]
+      });
     },
 
     get_currentHeight: function(data){
@@ -61,9 +60,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .nice(); //extend bounds to nearest round value
     },
 
-    create_svg_containers: function(){
-      //extend this
-      return this;
+    create_svg_containers: function(ids){
+      var chart = this;
+
+      for(var i=0; i<ids.length; i++){
+        chart.svg.append("g").attr("id", ids[i]);
+      }
     },
 
     draw_base_bars: function(data) {
@@ -97,7 +99,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.svg.select("#axes").append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + chart.get_currentHeight(data) + ")")
-        //.attr("text-anchor", "middle")
         .call(chart.xAxis);
 
       //create and set y axis positions
@@ -107,12 +108,63 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.yAxis);
     },
 
+    draw_context_lines: function(data){
+      var chart = this,
+      height = chart.get_currentHeight(data),
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
+
+      var contextLines = chart.svg.select("#contextLines");
+      
+      contextLines.append("line")
+        .attr("y1", 0)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg))
+        .attr("id", "averageLine");
+
+      contextLines.append("text")
+        .text("State avg.")
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        })
+        .attr("class", "chart-label")
+        .attr("id", "avgTxt")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("x", chart.xScale(avg))
+        .attr("y", -5);
+
+      if(chart.options.section === "infections"){
+        contextLines.append("line")
+          .attr("y1", 0)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1))
+          .attr("id", "benchmarkLine");
+
+        contextLines.append("text")
+          .text("Benchmark")
+          .attr("text-anchor", function(){ //figure out which side the line is on
+            if(avg < 1){
+              return "start"
+            } return "end"
+          })
+          .attr("class", "chart-label")
+          .attr("id", "benchmarkTxt")
+          .attr("x", chart.xScale(1))
+          .attr("y", -5);
+      }
+    },
+
     draw_data: function(data){
       return this;
     },
 
     onUpdateChart: function(filtered, height){
-      var chart = this;
+      var chart = this,
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
 
       //update scales and axes
       chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
@@ -133,6 +185,43 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.draw_base_bars(filtered);
       chart.onSelectHospital(chart.selected);
+
+      //update context lines
+      chart.svg.select("#averageLine")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("y2", height)
+        .attr("x1", chart.xScale(avg))
+        .attr("x2", chart.xScale(avg));
+
+      chart.svg.select("#avgTxt")
+        .transition().duration(chart.duration)
+        .ease(chart.easing)
+        .attr("x", chart.xScale(avg))
+        .attr("text-anchor", function(){
+          if(avg < 1){
+            return "end"
+          } return "start"
+        });
+
+      if(chart.options.section === "infections"){
+        chart.svg.select("#benchmarkLine")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("y2", height)
+          .attr("x1", chart.xScale(1)) //benchmark is always 1
+          .attr("x2", chart.xScale(1));
+
+        chart.svg.select("#benchmarkTxt")
+          .transition().duration(chart.duration)
+          .ease(chart.easing)
+          .attr("x", chart.xScale(1))
+          .attr("text-anchor", function(){
+            if(avg < 1){
+              return "start"
+            } return "end"
+          });
+      }
     },
 
     onSelectHospital: function(label){
@@ -152,8 +241,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     attach_tooltip: function(data, measure) {
+      if(this.options.section === "perinatal"){
+        if(data.measure !== measure){ //don't re-process it on subsequent hovers
+          data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
+          var format = this.get_format(measure);
+          data.formatted = format(data[measure]);
+        }
+      }
       data.measure = measure; //template needs access
-
       var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));
       tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
@@ -164,18 +259,31 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
   Chart.BarRangeDot = Chart.BarBase.extend({
     constructor: function(options) {
+      this.nested = options.section; //data is nested inside this.section
       Chart.BarBase.apply(this, arguments);
       return this;
     },
 
     //create containers so that entering items stay layered at the correct depth
-    create_svg_containers: function(){
-      var chart = this,
-      ids = ["baseBars", "rangeBars", "axes", "contextLines", "statCircles"];
+    create_svg_containers: function(ids){
+      var ids = ["baseBars", "rangeBars", "axes", "contextLines", "statCircles"];
 
-      for(var i=0; i<ids.length; i++){
-        chart.svg.append("g").attr("id", ids[i]);
-      }
+      Chart.BarBase.prototype.create_svg_containers.call(this, ids);
+    },
+
+    //remove items with no data and sort by stat
+    filter_data: function(){
+      var chart = this,
+      section = chart.options.section,
+      stat = chart.options.stat;
+
+      var filtered = chart.data.filter(function(d){
+        return d[section][chart.options.measure].na != 1;
+      });
+      filtered.sort(function(a,b){
+        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
+      });
+      return filtered;
     },
 
     draw_data: function(data){
@@ -232,56 +340,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         });
     },
 
-    draw_context_lines: function(data){
-      var chart = this,
-      height = chart.get_currentHeight(data),
-      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
-
-      var contextLines = chart.svg.select("#contextLines");
-      
-      contextLines.append("line")
-        .attr("y1", 0)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(avg))
-        .attr("x2", chart.xScale(avg))
-        .attr("id", "averageLine");
-
-      contextLines.append("text")
-        .text("State avg.")
-        .attr("text-anchor", function(){
-          if(avg < 1){
-            return "end"
-          } return "start"
-        })
-        .attr("class", "chart-label")
-        .attr("id", "avgTxt")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("x", chart.xScale(avg))
-        .attr("y", -5);
-
-      if(chart.options.section === "infections"){
-        contextLines.append("line")
-          .attr("y1", 0)
-          .attr("y2", height)
-          .attr("x1", chart.xScale(1)) //benchmark is always 1
-          .attr("x2", chart.xScale(1))
-          .attr("id", "benchmarkLine");
-
-        contextLines.append("text")
-          .text("Benchmark")
-          .attr("text-anchor", function(){ //figure out which side the line is on
-            if(avg < 1){
-              return "start"
-            } return "end"
-          })
-          .attr("class", "chart-label")
-          .attr("id", "benchmarkTxt")
-          .attr("x", chart.xScale(1))
-          .attr("y", -5);
-      }
-    },
-
     draw_stat_circles: function(data){
       var chart = this,
       measure = chart.options.measure,
@@ -323,50 +381,115 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.options.measure = criterion;
       var chart = this,
       filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered),
-      avg = HospitalCheckup.Entities.averages.get(criterion);
+      height = chart.get_currentHeight(filtered);
 
       Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
 
       chart.draw_range_bars(filtered);
       chart.draw_stat_circles(filtered);
+    }
+  });
 
-      //update context lines
-      chart.svg.select("#averageLine")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("y2", height)
-        .attr("x1", chart.xScale(avg))
-        .attr("x2", chart.xScale(avg));
+  Chart.BarLeft = Chart.BarBase.extend({
+    constructor: function(options) {
+      Chart.BarBase.apply(this, arguments);
+      return this;
+    },
 
-      chart.svg.select("#avgTxt")
-        .transition().duration(chart.duration)
-        .ease(chart.easing)
-        .attr("x", chart.xScale(avg))
-        .attr("text-anchor", function(){
-          if(avg < 1){
-            return "end"
-          } return "start"
-        });
+    create_svg_containers: function(){
+      var ids = ["baseBars", "bars", "axes", "contextLines"]
 
-      if(chart.options.section === "infections"){
-        chart.svg.select("#benchmarkLine")
-          .transition().duration(chart.duration)
-          .ease(chart.easing)
-          .attr("y2", height)
-          .attr("x1", chart.xScale(1)) //benchmark is always 1
-          .attr("x2", chart.xScale(1));
+      Chart.BarBase.prototype.create_svg_containers.call(this, ids);
+    },
 
-        chart.svg.select("#benchmarkTxt")
-          .transition().duration(chart.duration)
-          .ease(chart.easing)
-          .attr("x", chart.xScale(1))
-          .attr("text-anchor", function(){
-            if(avg < 1){
-              return "start"
-            } return "end"
-          });
+    filter_data: function(){
+      var chart = this,
+      measure = chart.options.measure;
+
+      var filtered = chart.data.sort(function(a,b){
+        return d3.ascending(a[measure], b[measure]);
+      });
+      return filtered;
+    },
+
+    draw_axes: function(data){
+      var chart = this;
+      this.xAxis.tickFormat(this.get_format(chart.options.measure, true));
+      Chart.BarBase.prototype.draw_axes.call(this, data);
+    },
+
+    get_format: function(measure, isAxis){
+      if(measure.indexOf("charge") >= 0){
+        if(isAxis){
+          return d3.format("$s")
+        }
+        return d3.format("$,")
+      } else if (measure.indexOf("pct") >= 0){
+        return function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
+      } else if (measure.indexOf("total") >= 0){
+        if(isAxis){
+          return d3.format("s")
+        }
+        return d3.format(",");
+      } else {
+        console.log("no matching format");
       }
+    },
+
+    draw_data: function(data){
+      this.draw_context_lines(data);
+      this.draw_bars(data);
+    },
+
+    draw_bars: function(data){
+      var chart = this,
+      measure = chart.options.measure,
+      section = chart.options.section;
+
+      var bars = chart.svg.select("#bars").selectAll(".bar")
+        .data(data, function(d){ return d.id });
+
+      bars.exit().transition().duration(chart.duration)
+        .ease(chart.easing)
+        .style("opacity", 0).remove();
+
+      bars.enter()
+      .append("rect")
+      .attr("class", "bar normal")
+        .style("opacity", 0)
+      .attr("x", 0)
+      .attr("y", function(d) {
+        return chart.yScale(d.display_name);
+      })
+      .attr("width", function(d){
+        return chart.xScale(d[measure])
+      })
+      .attr("height", chart.bar_height);
+      chart.set_tooltip(chart, bars, measure);
+
+      //update
+      bars.transition().duration(chart.duration)
+        .ease(chart.easing)
+        .style("opacity", 1)
+        .attr("x", 0)
+        .attr("y", function(d) {
+          return chart.yScale(d.display_name);
+        })
+        .attr("width", function(d){
+          return chart.xScale(d[measure]);
+        });
+    },
+
+    onUpdateChart: function(criterion){
+      this.options.measure = criterion;
+      var chart = this,
+      filtered = chart.filter_data(),
+      height = chart.get_currentHeight(filtered),
+      avg = HospitalCheckup.Entities.averages.get(criterion);
+      this.xAxis.tickFormat(this.get_format(criterion, true));
+      Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
+
+      chart.draw_bars(filtered);
     }
   });
 
