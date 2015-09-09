@@ -49,7 +49,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
       var options = this.options; //TODO this only gets called by infections so it doesn't really need the options
       //we need unnamed, top-level objects for the collection
       _.each(data.get(options.section), function(values, key, collection){ //TODO do this on the model instead
-        values.label = HospitalCheckup.Entities[options.labelArr+"Labels"].findWhere({ key: key }).get("label"); //look up the display name for the current infection
+        values.label = HospitalCheckup.Entities.InfectionLabels.findWhere({ key: key }).get("label"); //look up the display name for the current infection
         values.measure = key;
         dataArr.push(values);
       });

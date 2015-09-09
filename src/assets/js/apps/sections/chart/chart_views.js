@@ -150,6 +150,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     attach_tooltip: function(data, measure) {
       data.measure = measure; //template needs access
+      if(this.options.section === "perinatal"){
+        data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
+      }
 
       var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));

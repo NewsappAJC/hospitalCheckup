@@ -28,7 +28,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
       bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.Info(),
-      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID]({section: sectionID, labelArr: entityID}),
+      hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID]({section: sectionID}),
       listView;
       if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
@@ -85,7 +85,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
           Marionette.triggerMethodOn(HospitalCheckup.module("SectionsApp.Section.chartView"), "update:chart", filterCriterion);
         });
 
-        menuView.once("show", function(){
+        menuView.once("show", function(){ //if filtering via URL, updated the select menu to reflect filter state
           menuView.triggerMethod("set:filter:criterion", criterion);
         });
 
