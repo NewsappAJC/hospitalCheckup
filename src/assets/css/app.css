@@ -96,7 +96,6 @@ option {
   font-size: 22px;
 }
 #home-icon-row h3 a {
-
   color: white;
 }
 /*Charts.BarBase*/
@@ -259,5 +258,42 @@ select#js-filter-criterion {
   }
   #hospital-show-region {
     display: none;
+  }
+  #homepage-content p {
+    font-size: 14px;
+  }
+  #bg-img {
+    top: 0px;
+    left: -400px;
+  }
+  #bg-img img {
+    max-width: 1000px;
+    width: auto;
+  }
+  #row-bg {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #row-bg h1, h1 {
+    font-size: 30px;
+  }
+  #home-icon-row img {
+    width: 40px;
+  }
+  #home-icon-row h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 998px) and (min-width: 406px){
+  #bg-img {
+    top: -200px;
+    left: -700px;
+  }
+  #bg-img img {
+    max-width: 1500px;
+    width: auto;
+  }
+  #row-bg {
+    padding: 20px 15px 20px 15px;
   }
 }
