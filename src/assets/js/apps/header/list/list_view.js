@@ -10,6 +10,7 @@ HospitalCheckup.module("HeaderApp.List", function(List, HospitalCheckup, Backbon
     navigate: function(e){
       e.preventDefault();
       this.trigger("navigate", this.model);
+      $('.toggle-topbar').click(); //collapse the menu on mobile
     },
 
     onRender: function(){
