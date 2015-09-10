@@ -43,8 +43,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         if(!isMobile){
           listView = new Section.MainChart();
         } else {
-          listView = new Section.MobileList({collection: collection, measure: criterion || defaultMeasure });
-          listView.listenTo(menuView, sectiondID+":filter", listView.onFilter);
+          listView = new Section.MobileList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
+          listView.listenTo(menuView, sectionID+":filter", listView.onFilter);
         }
 
         listLayout.on("show", function(){
