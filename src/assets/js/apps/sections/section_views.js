@@ -123,4 +123,51 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       this.render();
     }
   });
+
+  Section.MobilePerinatalRow = Marionette.ItemView.extend({
+    tagName: "tr",
+    template: "#mobile-tr-perinatal-template",
+    initialize: function(options){
+      //recieved from childViewOptions, template needs it
+      this.model.set("measure", options.measure);
+    },
+    templateHelpers: function(){
+      return {
+        format: function(num, measure){ //TODO make a behavior out of this, using it in chart too
+          var formatter;
+          if(measure.indexOf("charge") >= 0){
+            formatter = d3.format("$,")
+          } else if (measure.indexOf("pct") >= 0){
+            formatter = function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
+          } else if (measure.indexOf("total") >= 0){
+            formatter = d3.format(",");
+          }
+          return formatter(num);
+        }
+      }
+    }
+  });
+
+  Section.MobilePerinatalList = Marionette.CompositeView.extend({
+    tagName: "table",
+    className: "columns",
+    id: "mobile-list",
+    template: "#mobile-perinatal-table-template",
+    childView: Section.MobilePerinatalRow,
+    childViewContainer: "tbody",
+    initialize: function(options){
+      this.measure = options.measure;
+    },
+    childViewOptions: function(model, index) {
+      return { measure: this.measure }
+    },
+    onFilter: function(criterion){
+      this.measure = criterion;
+      this.children.each(function(view){
+        view.model.set("measure", criterion);
+      });
+      this.render();
+    }
+  });
+
 });
