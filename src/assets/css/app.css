@@ -62,27 +62,46 @@ option {
 }
 #row-bg h1 {
   color: #fff;
+  font-size: 52px;
 }
-#bg-img{
-  position:fixed;
-  top:-7%;
-  left:-50px;
-  z-index:-10;
+#bg-img {
+  position: fixed;
+  top: -7%;
+  left: -50px;
+  z-index: -10;
 }
-#bg-img img{
-  width:115%;
-  height:auto;
+#bg-img img {
+  width: 115%;
+  height: auto;
 }
-#homepage-content{
-  position:relative;
-  height:100%; 
+#homepage-content {
+  position: relative;
+/*  height: 100%;*/
 }
-#home-icon-row{
-  border-top:4px solid #fff;
-  height:400px; /*placeholder, prob don't need to set this once we have content here? or do it programatically*/
-  padding-top:20px;
-  padding-bottom:20px;
+#homepage-content p {
+  font-size: 20px;
+}
+.background {
+  border-top: 4px solid #fff;
   background-color:#0E3968;
+}
+#home-icon-row {
+  padding: 40px 0;
+  background-color: #0E3968;
+  text-align: center;
+}
+#home-icon-row img {
+  width: 70px;
+}
+#home-icon-row h3 {
+  margin-top: 10px;
+  font-family: Boomer-Book;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+#home-icon-row h3 a {
+
+  color: white;
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {

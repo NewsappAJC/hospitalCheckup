@@ -64,6 +64,11 @@
     <a class="header-link" href="#<%- url %>"><%- name %></a>
   </script>
 
+  <script type="text/template" id="homepage-icon-link">
+    <a href="#<%-url %>"><img src="assets/img/<%- icon %>.svg"></a>
+    <h3><a href="#<%-url %>"><%- name %></a></h3>
+  </script>
+
   <script type="text/template" id="homepage-template">
     <div id="bg-img">
       <img src="assets/img/welcome3.png"/>
@@ -71,17 +76,19 @@
     <div id="homepage-content">
       <div id="row-bg">
         <div class="row">
-          <div class="small-12 columns">
+          <div class="small-12 small-centered columns">
             <h1>AJC Hospital Checkup</h1>
           </div>
         </div>
         <div class="row">
-          <div class="medium-10 columns">
+          <div class="small-12 small-centered columns">
             <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
           </div>
         </div>
       </div>
-      <div id="home-icon-row"></div>
+      <div class="background">
+        <div class="row" id="home-icon-row"></div>
+      </div>
     </div>
   </script>
 
