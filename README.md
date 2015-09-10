@@ -47,7 +47,6 @@ Explore hospital quality data for Atlanta area hospitals.
 - [ ] Spell out infection names in infection bottom text
 - [ ] Fix tooltips on tablets
 - [ ] Figure out what's wrong with `processhtml` grunt task and add it back in
-- [ ] trigger selection of cdiff rather than setting it as default all over the place
 - [ ] fix filter URLs so you can provide multiple filter parameters (i.e. hospital and infection)
 - [ ] If someone clicks on already active nav item it shouldn't reload the layout
 - [ ] What if local storage is disabled?
