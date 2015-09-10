@@ -18,6 +18,7 @@ for node in src:
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = node["address"]
+    hospital["city"] = node["city"]
     hospital["infections"] = {
             "cauti" : {}, "clabsi" : {}, "mrsa" : {}, "ssicolon" : {}, "ssihyst" : {}, "cdiff" : {}
     }
@@ -88,6 +89,7 @@ for node in src:
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = node["address"]
+    hospital["city"] = node["city"]
     hospital["surgery"] = {
         "readmissions" : {}, "complications" : {}
     }
@@ -140,7 +142,7 @@ for node in src:
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = node["address"]
-    #hospital["address"] = node["address"] TODO get the addresses into the data
+    hospital["city"] = node["city"]
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
     for key in node.keys():
