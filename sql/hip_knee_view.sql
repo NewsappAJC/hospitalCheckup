@@ -10,20 +10,20 @@ SELECT a.ProviderNumber as provider_id,
        b.county_name,
 
        /* Rate of readmission after hip/knee surgery */
-       b.compared_to_national as readmission_category,
-       b.footnote as readmission_notes,
-       b.denominator as readmission_patients,
-       b.score as readmission_rate,
-       b.lower_estimate as readmission_lower,
-       b.higher_estimate as readmission_upper,
+       b.compared_to_national as readmissions_category,
+       b.footnote as readmissions_notes,
+       b.denominator as readmissions_patients,
+       b.score as readmissions_rate,
+       b.lower_estimate as readmissions_lower,
+       b.higher_estimate as readmissions_upper,
 
        /* Rate of complications for hip/knee replacement patients */
-       c.compared_to_national as complication_category,
-       c.footnote as complication_notes,
-       c.denominator as complication_patients,
-       c.score as complication_rate,
-       c.lower_estimate as complication_lower,
-       c.higher_estimate as complication_upper
+       c.compared_to_national as complications_category,
+       c.footnote as complications_notes,
+       c.denominator as complications_patients,
+       c.score as complications_rate,
+       c.lower_estimate as complications_lower,
+       c.higher_estimate as complications_upper
 
 FROM hospital_compare.hospital_names a
 

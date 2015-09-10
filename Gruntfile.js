@@ -75,6 +75,7 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
               'src/assets/js/vendor/backbone.select.js',
+              'src/assets/js/vendor/foundation.topbar.js'
             ],
             dest: 'build/assets/js/vendor/'
           },
@@ -126,11 +127,10 @@ module.exports = function(grunt) {
           'build/assets/js/apps/config/storage/localstorage.js': ['src/assets/js/apps/config/storage/localstorage.js'],
           'build/assets/js/entities/section.js': ['src/assets/js/entities/section.js'],
           'build/assets/js/apps/sections/section_views.js': ['src/assets/js/apps/sections/section_views.js'],
-          'build/assets/js/apps/sections/infections_controller.js': ['src/assets/js/apps/sections/infections_controller.js'],
-          'build/assets/js/apps/sections/surgeries_controller.js': ['src/assets/js/apps/sections/surgeries_controller.js'],
+          'build/assets/js/apps/sections/section_controller.js': ['src/assets/js/apps/sections/section_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_controller.js': ['src/assets/js/apps/sections/hospital/hospital_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_views.js': ['src/assets/js/apps/sections/hospital/hospital_views.js'],
-          'build/assets/js/apps/sections/sections_app.js': ['src/assets/js/apps/sections/sections_app.js'],
+          'build/assets/js/apps/sections/section_app.js': ['src/assets/js/apps/sections/section_app.js'],
           'build/assets/js/apps/home/home_app.js': ['src/assets/js/apps/home/home_app.js'],
           'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
           'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js'],
@@ -295,6 +295,7 @@ module.exports = function(grunt) {
           "modernizr.js": "foundation/js/vendor/modernizr.js",
           "fastclick.js": "foundation/js/vendor/fastclick.js",
           "foundation.js": "foundation/js/foundation.js",
+          "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
           "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "spin.js": "spin.js/spin.js", //for page loading spinner
           "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,

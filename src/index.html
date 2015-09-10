@@ -45,9 +45,9 @@
   <script type="text/template" id="header-template">
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
-        <li class="logo">
+        <li class="name">
           <a href="http://myajc.com" target="_blank">
-            <span id="ajc-logo"><img src="assets/img/ajc_white.svg"/></span>
+            <img src="assets/img/ajc_white.svg"/>
           </a>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -64,6 +64,11 @@
     <a class="header-link" href="#<%- url %>"><%- name %></a>
   </script>
 
+  <script type="text/template" id="homepage-icon-link">
+    <a href="#<%-url %>"><img src="assets/img/<%- icon %>.svg"></a>
+    <h3><a href="#<%-url %>"><%- name %></a></h3>
+  </script>
+
   <script type="text/template" id="homepage-template">
     <div id="bg-img">
       <img src="assets/img/welcome3.png"/>
@@ -71,17 +76,19 @@
     <div id="homepage-content">
       <div id="row-bg">
         <div class="row">
-          <div class="small-12 columns">
+          <div class="small-12 small-centered columns">
             <h1>AJC Hospital Checkup</h1>
           </div>
         </div>
         <div class="row">
-          <div class="medium-10 columns">
+          <div class="small-12 small-centered columns">
             <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
           </div>
         </div>
       </div>
-      <div id="home-icon-row"></div>
+      <div id="homepage-bottom">
+        <div class="row" id="home-icon-row"></div>
+      </div>
     </div>
   </script>
 
@@ -92,10 +99,18 @@
   </script>
 
   <script type="text/template" id="mobile-tr-template">
-    <td><%- display_name %></td><td><span class="mobile-rating <%-infections[measure].ratingClass %>"></span></td><td><%- clip(infections[measure].ratio) %></td>
+    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- clip(obj[section][measure][stat]) %></td>
   </script>
   <script type="text/template" id="mobile-table-template">
-    <thead><tr><th>Hospital</th><th>Rating</th><th>SIR</th></tr></thead>
+    <thead><tr><th>Hospital</th><th>Rating</th><th>Rate</th></tr></thead>
+    <tbody></tbody>
+  </script>
+
+  <script type="text/template" id="mobile-tr-perinatal-template">
+    <td><%- display_name %></td><td><%- format(obj[measure], measure) %></td>
+  </script>
+  <script type="text/template" id="mobile-perinatal-table-template">
+    <thead><tr><th>Hospital</th><th>Value</th></tr></thead>
     <tbody></tbody>
   </script>
 
@@ -112,10 +127,16 @@
 
   <script type="text/template" id="surgery-tooltip-template">
     <div id="ttip" class="ttip container">
-        <strong>Rate:</strong> <%= surgery[measure].rate %><br>
-        <strong>Rate range:</strong> <%= surgery[measure].lower %> <strong>to</strong> <%= surgery[measure].upper %><br>
+        <strong>Rate:</strong> <%= surgery[measure].rate %>%<br>
+        <strong>Rate range:</strong> <%= surgery[measure].lower %>% <strong>to</strong> <%= surgery[measure].upper %>%<br>
         <strong>Patients included:</strong> <%= surgery[measure].patients %><br>
         <strong>Rating:</strong> <%- surgery[measure].category %>
+    </div>
+  </script>
+
+  <script type="text/template" id="perinatal-tooltip-template">
+    <div id="ttip" class="ttip container">
+        <strong><%= label %></strong>: <%= formatted %>
     </div>
   </script>
 
@@ -141,12 +162,40 @@
   </script>
 
   <script type="text/template" id="hospital-surgery-item-template">
-    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %>s</h4>
+    <h4><%- measure.charAt(0).toUpperCase() + measure.substring(1).toLowerCase() %></h4>
     <p>
       <strong>Patients included:</strong> <%= patients %><br>
       <strong>Rate:</strong> <%= rate %>%<br>
       <strong>Rate range:</strong> <%= upper %>% <strong>to</strong> <%= lower %>%<br>
       <strong>Rating:</strong> <%= category %>
+    </p>
+    <hr>
+  </script>
+
+  <script type="text/template" id="hospital-perinatal-template">
+    <h4>Facilities</h4>
+    <p>
+      <strong>Birthing rooms:</strong> <%= Birthing_Rms %><br>
+      <strong>Delivery rooms:</strong> <%= Delivery_Rms %><br>
+      <strong>Labor, delivery and recovery rooms:</strong> <%= LDR_Rms %><br>
+      <strong>Labor, delivery, recovery & postpartum rooms:</strong> <%= LDRP_Rms %><br>
+      <strong>Newborn beds:</strong> <%= Beds_New_Born %><br>
+      <strong>Intermediate care beds:</strong> <%= Beds_Intermediate %><br>
+      <strong>Intensive care beds:</strong> <%= Beds_Intensive %>
+    </p>
+    <hr>
+    <h4>Costs</h4>
+    <p>
+      <strong>Average delivery charge:</strong> <%= formatMoney(avg_delivery_charge) %><br>
+      <strong>Average premature delivery charge:</strong> <%= formatMoney(avg_premature_charge) %>
+    </p>
+    <hr>
+    <h4>Outcomes</h4>
+    <p>
+      <strong>Total births:</strong> <%= formatCommas(total_births) %><br>
+      <strong>Live births:</strong> <%= formatCommas(Live_Births) %><br>
+      <strong>C-Sections:</strong> <%= formatCommas(C_Sect) %><br>
+      <strong>Early elective delivery rate:</strong> <%= early_births_pct %>%
     </p>
     <hr>
   </script>
@@ -225,10 +274,11 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/d3bb.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/vendor/foundation.topbar.js"></script>
   <script src="assets/js/vendor/spin.js"></script>
   <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
-  <script src="assets/js/vendor/flatpage_stubs.js"></script>
+  <script src="assets/js/vendor/flatpage_stubs.js"></script><!-- TODO add script -->
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
@@ -240,11 +290,10 @@
   <script src="assets/js/apps/header/header_app.js"></script>
   <script src="assets/js/entities/section.js"></script>
   <script src="assets/js/apps/sections/section_views.js"></script>
-  <script src="assets/js/apps/sections/infections_controller.js"></script>
-  <script src="assets/js/apps/sections/surgeries_controller.js"></script>
+  <script src="assets/js/apps/sections/section_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
-  <script src="assets/js/apps/sections/sections_app.js"></script>
+  <script src="assets/js/apps/sections/section_app.js"></script>
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>

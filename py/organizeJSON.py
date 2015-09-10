@@ -89,7 +89,7 @@ for node in src:
     hospital["display_name"] = node["ajc_hospital_name"]
     hospital["address"] = node["address"]
     hospital["surgery"] = {
-        "readmission" : {}, "complication" : {}
+        "readmissions" : {}, "complications" : {}
     }
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
@@ -112,7 +112,7 @@ src = json.load(ft)
 ft.close()
 
 #would be easy to do this in sql but I was the view to be easy to understand
-hipkneeDict = {"ga_readm_avg" : "readmission", "ga_comp_avg" : "complication"}
+hipkneeDict = {"ga_readm_avg" : "readmissions", "ga_comp_avg" : "complications"}
 totals = {"id": "hipkneeStateAverages"} #backbone expects an ID and local storage uses it too
 
 for node in src:
@@ -133,24 +133,25 @@ f.close()
 
 tree = []
 #there's a bunch of stuff in the data not being used in the app, just grab the stuff that will be displayed
-names = ["Delivery_Rms", "Birthing_Rms", "LDR_Rms", "LDRP_Rms", "C_Sect", "Live_Births", "Total_Births", "C_Sect_pct", "Avg_Delivery_Charge", "Avg_Premature_Delivery_Charge", "early_births_pct"]
+names = ["Delivery_Rms", "Birthing_Rms", "LDR_Rms", "LDRP_Rms", "C_Sect", "Live_Births", "total_births", "csect_pct", "avg_delivery_charge", "avg_premature_charge", "early_births_pct", "Beds_New_Born", "Beds_Intermediate", "Beds_Intensive"]
 
 for node in src:
     hospital = {}
     hospital["id"] = node["provider_id"]
     hospital["display_name"] = node["ajc_hospital_name"]
+    hospital["address"] = node["address"]
     #hospital["address"] = node["address"] TODO get the addresses into the data
 
     #loop through keys looking for the infection substrings and create objects to hold their common properties
     for key in node.keys():
         if key in names:
             val = node[key]
-            if(key == "C_Sect_pct" or key == "early_births_pct"):
-                val = str(val)+"%"
-            elif(val):
-                val = "{:,d}".format(val)
-                if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
-                    val = "$"+str(val)
+            # if(key == "C_Sect_pct" or key == "early_births_pct"):
+            #     val = str(val)+"%"
+            # elif(val):
+            #     val = "{:,d}".format(val)
+            #     if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
+            #         val = "$"+str(val)
 
             hospital[key] = val
 
@@ -161,12 +162,12 @@ src = json.load(ft)
 ft.close()
 
 #would be easy to do this in sql but I was the view to be easy to understand
-hipkneeDict = {"avgC_SectPct" : "C_Sect_Pct", "avgDeliveryCharge" : "Avg_Delivery_Charge", "avgPrematureCharge": "Avg_Premature_Charge", "avgBirths": "Total_Births", "avgEarlyPct": "early_births_pct"}
+perinatalDict = {"avgC_SectPct" : "csect_pct", "avgDeliveryCharge" : "avg_delivery_charge", "avgPrematureCharge": "avg_premature_charge", "avgBirths": "total_births", "earlyPct": "early_births_pct"}
 totals = {"id": "perinatalStateAverages"} #backbone expects an ID and local storage uses it too
 
 for node in src:
     for key in node.keys():
-        totals[hipkneeDict[key]] = node[key]
+        totals[perinatalDict[key]] = node[key]
 
 f = open( '../src/assets/data/perinatal.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))

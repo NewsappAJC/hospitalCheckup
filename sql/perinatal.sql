@@ -10,16 +10,17 @@ CREATE TABLE hospital_compare.perinatal
 SELECT b.uid,
        b.Medicare_Provider_No as provider_id,
        c.HospitalName as ajc_hospital_name,
+       d.address,
        a.Delivery_Rms,
        a.Birthing_Rms,
        a.LDR_Rms,
        a.LDRP_Rms,
        a.C_Sect,
        a.Live_Births,
-       a.Total_Births,
-       round(a.C_Sect / a.Total_Births * 100, 0) as C_Sect_pct,
-       a.Avg_Delivery_Charge,
-       a.Avg_Premature_Delivery_Charge,
+       a.Total_Births as total_births,
+       round(a.C_Sect / a.Total_Births * 100, 0) as csect_pct,
+       a.Avg_Delivery_Charge as avg_delivery_charge,
+       a.Avg_Premature_Delivery_Charge as avg_premature_charge,
        d.medicare_births, -- this might actually be sample size
        d.early_births_pct,
        d.early_footnote,
@@ -40,6 +41,7 @@ JOIN hospital_compare.hospital_names c
   ON c.providerNumber = b.Medicare_Provider_No
 LEFT JOIN (
   SELECT provider_id,
+  		 address,
          score as early_births_pct,
          sample as medicare_births, /*check on what this is, might be sample size*/
          footnote as early_footnote
@@ -47,5 +49,5 @@ LEFT JOIN (
   WHERE measure_id = 'PC_01'
 ) d ON b.Medicare_Provider_No = d.provider_id
 WHERE a.year = 2014
-  AND a.Total_Births > 0 -- in some cases this metric is messed up
+  AND a.Total_Births > 0 -- in some cases this metric is messed up but it's what the state uses
 HAVING a.C_Sect / a.Total_Births < 1

@@ -2,14 +2,17 @@ HospitalCheckup.module("HeaderApp.List", function(List, HospitalCheckup, Backbon
   List.Controller = {
     listHeader: function(){
       var links = HospitalCheckup.request("header:entities");
-      var headers = new List.Headers({collection: links});
+      List.headers = new List.Headers({collection: links});
 
-      headers.on("childview:navigate", function(childView, model){
+      List.headers.on("childview:navigate", function(childView, model){
         var trigger = model.get("navigationTrigger");
         HospitalCheckup.trigger(trigger);
       });
 
-      HospitalCheckup.regions.header.show(headers);
+      //for mobile menu functionality
+      List.headers.on("show", function(){$(document).foundation('topbar', 'reflow');})
+
+      HospitalCheckup.regions.header.show(List.headers);
     },
 
     setActiveHeader: function(headerUrl){

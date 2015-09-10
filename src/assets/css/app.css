@@ -24,11 +24,8 @@ p strong, li strong {
   font-weight: bold;
 }
 /*nav*/
-.logo {
+.name {
   padding-top: 5px;
-}
-#ajc-logo img {
-  float: left;
   margin: 3px;
   width: 175px;
 }
@@ -36,7 +33,6 @@ p strong, li strong {
   background-color: #0e3968;
   border-bottom: 4px solid #fff;
   height: 50px;
-
 }
 .top-bar-section ul li, .top-bar.expanded .title-area, .top-bar.expanded {
   background-color: #0e3968;
@@ -66,27 +62,41 @@ option {
 }
 #row-bg h1 {
   color: #fff;
+  font-size: 52px;
 }
-#bg-img{
-  position:fixed;
-  top:-7%;
-  left:-50px;
-  z-index:-10;
+#bg-img {
+  position: fixed;
+  top: -7%;
+  left: -50px;
+  z-index: -10;
 }
-#bg-img img{
-  width:115%;
-  height:auto;
+#bg-img img {
+  width: 115%;
+  height: auto;
 }
-#homepage-content{
-  position:relative;
-  height:100%; 
+#homepage-content p {
+  font-size: 20px;
 }
-#home-icon-row{
-  border-top:4px solid #fff;
-  height:400px; /*placeholder, prob don't need to set this once we have content here? or do it programatically*/
-  padding-top:20px;
-  padding-bottom:20px;
+#homepage-bottom {
+  border-top: 4px solid #fff;
   background-color:#0E3968;
+}
+#home-icon-row {
+  padding: 40px 0;
+  background-color: #0E3968;
+  text-align: center;
+}
+#home-icon-row img {
+  width: 70px;
+}
+#home-icon-row h3 {
+  margin-top: 10px;
+  font-family: Boomer-Book;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+#home-icon-row h3 a {
+  color: white;
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {
@@ -110,7 +120,7 @@ option {
   font-weight: bold;
 }
 /*charts extended*/
-rect.range.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
+rect.normal, #legend-region li.normal, #mobile-list .mobile-rating.normal {
   fill: #49709F;
   background-color: #49709F;
 }
@@ -136,7 +146,7 @@ div.ttip {
   font-size: 12px;
   position: absolute;
   width: 270px;
-  padding: 5px 10px;
+  padding: 5px;
   margin: 0px;
   background-color: white;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
@@ -187,7 +197,7 @@ select#js-filter-criterion {
 .hospital-list .hospital-list-item hr {
   margin-top: 5px;
 }
-.hospital-list-item {
+.hospital-list-item:not(:first-child) {
   margin-top: 35px;
 }
 .hospital-list-item.not-available {
@@ -199,6 +209,9 @@ select#js-filter-criterion {
 .hospital-list-item p strong {
   font-family: BoomerCond;
   font-weight: normal;
+}
+#hospital-region-1 #detail-legend {
+  margin-bottom: 20px;
 }
 /*hospital charts*/
 .predicted {
@@ -234,6 +247,9 @@ select#js-filter-criterion {
 
 /*mobile*/
 @media (max-width: 405px){
+  .name {
+    padding-bottom: 5px;
+  }
   .mobile-rating {
     display: block;
     width: 20px;
@@ -242,5 +258,42 @@ select#js-filter-criterion {
   }
   #hospital-show-region {
     display: none;
+  }
+  #homepage-content p {
+    font-size: 14px;
+  }
+  #bg-img {
+    top: 0px;
+    left: -400px;
+  }
+  #bg-img img {
+    max-width: 1000px;
+    width: auto;
+  }
+  #row-bg {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #row-bg h1, h1 {
+    font-size: 30px;
+  }
+  #home-icon-row img {
+    width: 40px;
+  }
+  #home-icon-row h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 998px) and (min-width: 406px){
+  #bg-img {
+    top: -200px;
+    left: -700px;
+  }
+  #bg-img img {
+    max-width: 1500px;
+    width: auto;
+  }
+  #row-bg {
+    padding: 20px 15px 20px 15px;
   }
 }

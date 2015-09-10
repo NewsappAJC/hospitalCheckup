@@ -2,18 +2,18 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   //Entities = models and collections
 
   var API = {
-    getChartEntities: function(entityID, fileID){
+    getChartEntities: function(entityID, sectionID){
       Entities.StateAverages = Backbone.Model.extend({
-        localStorage: new Backbone.LocalStorage(fileID+"-state-avg") //using this instead of a URL!
+        localStorage: new Backbone.LocalStorage(sectionID+"-state-avg") //using this instead of a URL!
       });
 
       Entities.Hospital = Backbone.Model.extend({
-        urlRoot: fileID
+        urlRoot: sectionID
       });
       Entities.configureStorage("HospitalCheckup.Entities.Hospital");
 
       Entities[entityID+"Collection"] = Backbone.Collection.extend({
-        url: fileID, //we could use our .json file but then we wouldn't be able to use this url for local storage
+        url: sectionID, //we could use our .json file but then we wouldn't be able to use this url for local storage
         model: Entities.Hospital
       });
       Entities.configureStorage("HospitalCheckup.Entities."+entityID+"Collection");
@@ -46,8 +46,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
           $.ajax({
             dataType: "json",
-            url: "/assets/data/"+fileID+".json",
-            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/"+fileID+".json",
+            url: "/assets/data/"+sectionID+".json",
+            //url: "//ajcnewsapps.s3-website-us-east-1.amazonaws.com/2015/staging/hospital-checkup/assets/data/"+sectionID+".json",
             type: "GET",
             success: resetModels
           });
@@ -75,8 +75,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     }
   }
 
-  HospitalCheckup.reqres.setHandler("chart:entities", function(entityID, fileID){ //list infections
-    return API.getChartEntities(entityID, fileID);
+  HospitalCheckup.reqres.setHandler("chart:entities", function(entityID, sectionID){ //list infections
+    return API.getChartEntities(entityID, sectionID);
   });
 
   HospitalCheckup.reqres.setHandler("hospital:entity", function(id){ //hospital selected from infection list, show hospital detail page

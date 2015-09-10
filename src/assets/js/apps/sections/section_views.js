@@ -1,6 +1,6 @@
-HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backbone, Marionette, $, _){
+HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup, Backbone, Marionette, $, _){
 
-  List.Layout = Marionette.LayoutView.extend({
+  Section.Layout = Marionette.LayoutView.extend({
     template: "#section-layout",
     className: "large-12 columns",
     regions: {
@@ -17,7 +17,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.TextBlock = Marionette.ItemView.extend({
+  Section.TextBlock = Marionette.ItemView.extend({
     template: "#text-block-template",
     initialize: function(options){
       var options = options || {};
@@ -31,7 +31,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.Menu = Marionette.ItemView.extend({
+  Section.Menu = Marionette.ItemView.extend({
     template: "#filter-menu-template",
     tagName: "select",
     initialize: function(options){
@@ -55,7 +55,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.Legend = Marionette.ItemView.extend({
+  Section.Legend = Marionette.ItemView.extend({
     template: "#main-legend",
     initialize: function(options){
       var options = options || {};
@@ -69,7 +69,7 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MainChart = Marionette.ItemView.extend({
+  Section.MainChart = Marionette.ItemView.extend({
     template: "#main-chart-template",
     behaviors: {
       HospitalSelect:{
@@ -78,12 +78,14 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MobileRow = Marionette.ItemView.extend({
+  Section.MobileRow = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#mobile-tr-template",
     initialize: function(options){
       //recieved from childViewOptions, template needs it
       this.model.set("measure", options.measure);
+      this.model.set("section", options.section);
+      this.model.set("stat", options.stat);
     },
     templateHelpers: function () {
       return {
@@ -94,22 +96,24 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
     }
   });
 
-  List.MobileList = Marionette.CompositeView.extend({
+  Section.MobileList = Marionette.CompositeView.extend({
     tagName: "table",
     className: "columns",
     id: "mobile-list",
     template: "#mobile-table-template",
-    childView: List.MobileRow,
+    childView: Section.MobileRow,
     childViewContainer: "tbody",
     initialize: function(options){
       this.measure = options.measure;
+      this.section = options.section;
+      this.stat = options.stat;
     },
     childViewOptions: function(model, index) {
-      return { measure: this.measure }
+      return { measure: this.measure, section: this.section, stat: this.stat }
     },
     filter: function(child, index, collection){
-      //don't show items will null ratios
-      return !child.get("infections")[this.measure].na
+      //don't show items with null ratios
+      return !child.get(this.section)[this.measure].na
     },
     onFilter: function(criterion){
       this.measure = criterion;
@@ -119,4 +123,51 @@ HospitalCheckup.module("SectionsApp.List", function(List, HospitalCheckup, Backb
       this.render();
     }
   });
+
+  Section.MobilePerinatalRow = Marionette.ItemView.extend({
+    tagName: "tr",
+    template: "#mobile-tr-perinatal-template",
+    initialize: function(options){
+      //recieved from childViewOptions, template needs it
+      this.model.set("measure", options.measure);
+    },
+    templateHelpers: function(){
+      return {
+        format: function(num, measure){ //TODO make a behavior out of this, using it in chart too
+          var formatter;
+          if(measure.indexOf("charge") >= 0){
+            formatter = d3.format("$,")
+          } else if (measure.indexOf("pct") >= 0){
+            formatter = function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
+          } else if (measure.indexOf("total") >= 0){
+            formatter = d3.format(",");
+          }
+          return formatter(num);
+        }
+      }
+    }
+  });
+
+  Section.MobilePerinatalList = Marionette.CompositeView.extend({
+    tagName: "table",
+    className: "columns",
+    id: "mobile-list",
+    template: "#mobile-perinatal-table-template",
+    childView: Section.MobilePerinatalRow,
+    childViewContainer: "tbody",
+    initialize: function(options){
+      this.measure = options.measure;
+    },
+    childViewOptions: function(model, index) {
+      return { measure: this.measure }
+    },
+    onFilter: function(criterion){
+      this.measure = criterion;
+      this.children.each(function(view){
+        view.model.set("measure", criterion);
+      });
+      this.render();
+    }
+  });
+
 });
