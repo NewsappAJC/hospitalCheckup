@@ -2,7 +2,7 @@
 Explore hospital quality data for Atlanta area hospitals.
 
 - Published: by Sept. 15!
-- Lives here:
+- Lives here: http://hospitals.myajc.com/
 - Hosted here:
 
 ## Dependencies
