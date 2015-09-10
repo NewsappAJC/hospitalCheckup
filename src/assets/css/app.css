@@ -74,14 +74,10 @@ option {
   width: 115%;
   height: auto;
 }
-#homepage-content {
-  position: relative;
-/*  height: 100%;*/
-}
 #homepage-content p {
   font-size: 20px;
 }
-.background {
+#homepage-bottom {
   border-top: 4px solid #fff;
   background-color:#0E3968;
 }
