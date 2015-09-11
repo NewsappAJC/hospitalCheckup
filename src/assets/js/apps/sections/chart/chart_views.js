@@ -12,7 +12,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
       this.bar_height = 16; //TODO perinatal collection is much smaller and don't have a way to make it consistent right now
       this.$chart_container.attr('id', this.el.id+"-container");
-      return this;
+      return this
     },
     draw: function() {
       var data = this.filter_data(this.data);
@@ -23,7 +23,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.create_svg_containers();
       this.draw_base_bars(data);
       this.draw_data(data);
-      this.draw_axes(data);//needs to be on top of bars
+      this.draw_axes(data); //needs to be on top of bars
     },
 
     filter_data: function(data){
@@ -45,7 +45,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     get_currentHeight: function(data){
-      return (this.options.bar_padding + this.bar_height) * data.length;
+      return (this.options.bar_padding + this.bar_height) * data.length
     },
 
     get_scales: function(data) {
@@ -82,15 +82,15 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "base bar")
         .style("opacity", 0)
         .attr("y", function(d) {
-          return chart.yScale(d.display_name);
+          return chart.yScale(d.display_name)
         })
         .attr("width", chart.dimensions.width)
         .attr("height", chart.bar_height);
 
       bars.transition().duration(chart.duration)
         .ease(chart.easing)
-        .style("opacity", 1)
-        //.attr("y", function(d){ return chart.yScale(d.display_name); })
+        .style("opacity", 1);
+
     },
 
     draw_axes: function(data) {
@@ -155,9 +155,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       chart.contextLines.selectAll("line")
         .transition().duration(chart.duration)
-          .attr("y2", height)
-          .attr("x1", function(d){ return chart.xScale(d.scale) })
-          .attr("x2", function(d){ return chart.xScale(d.scale) });
+        .attr("y2", height)
+        .attr("x1", function(d){ return chart.xScale(d.scale) })
+        .attr("x2", function(d){ return chart.xScale(d.scale) });
 
       chart.contextLines.selectAll("text.chart-label")
         .transition().duration(chart.duration)//.ease(chart.easing)
@@ -524,7 +524,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.create_svg(); //super
       this.draw_axes(this.data);
       this.draw_data();
-
     },
 
     get_scales: function(data) {
@@ -556,7 +555,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("y1", 0)
         .attr("y2", this.dimensions.height)
         .attr("x1", this.xScale(num))
-        .attr("x2", this.xScale(num))
+        .attr("x2", this.xScale(num));
 
       this.svg.append("text").text(d3.round(num, rounder(num)))
       .attr("class", str+" chart-label txt")
@@ -568,7 +567,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           return -5
         }
         return -18
-      })
+      });
 
       //round display text relative to its value
       function rounder(num){
