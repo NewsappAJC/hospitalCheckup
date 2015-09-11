@@ -139,7 +139,7 @@ line#averageLine {
   stroke: darkgray;
 }
 line#benchmarkLine {
-  stroke: white;
+  stroke: #DDDDDD;
 }
 div.ttip {
   font-family: Boomer-Book;
