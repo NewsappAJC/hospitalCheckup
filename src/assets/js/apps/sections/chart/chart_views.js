@@ -94,7 +94,15 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_axes: function(data) {
-      var chart = this;
+      var chart = this,
+      section = chart.options.section;
+
+      if(section === "surgery"){
+        chart.xAxis.tickFormat(function(d){ return d + "%" });
+      } else if (section === "perinatal"){
+        chart.xAxis.tickFormat(chart.get_format(chart.options.measure, true));
+      }
+
       //create and set x axis position
       chart.svg.select("#axes").append("g")
         .attr("class", "x axis")
@@ -121,7 +129,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .data(chart.linesToMark)
       .enter()
       .append("line")
-        .attr("y1", -13) //extend it up to the label
+        .attr("y1", -15) //extend it up to the label
         .attr("id", function(d){ return d.id + "Line"})
         .attr("marker-start", function(d){ return "url(#"+d.id+"Line_marker)" });
 
@@ -149,7 +157,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     transition_context_lines: function(data){
       var chart = this,
       height = chart.get_currentHeight(data),
-      avg = HospitalCheckup.Entities.averages.get(chart.options.measure);
+      avg = HospitalCheckup.Entities.averages.get(chart.options.measure),
+      section = chart.options.section;
 
       chart.linesToMark[0].scale = avg;
 
@@ -164,7 +173,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .text(function(d){
           var label = d.label;
           if(d.id === "average"){
-            label = label + " ("+avg+")";
+            var val = avg;
+            if(section === "perinatal"){
+              var format = chart.get_format(chart.options.measure);
+              val = format(val);
+            } else if(section === "surgery"){
+              val = val+"%";
+            }
+            label = label + " ("+val+")";
           }
           return label
         })
@@ -180,7 +196,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           };
           return chart.xScale(d.scale)+(10*plusminus())
         })
-        .attr("y", -5);
+        .attr("y", -7);
 
       chart.defs.selectAll("marker")
         .attr('orient', function(d, i){ //which direction should the arrow point
@@ -432,12 +448,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       return filtered;
     },
 
-    draw_axes: function(data){
-      var chart = this;
-      this.xAxis.tickFormat(this.get_format(chart.options.measure, true));
-      Chart.BarBase.prototype.draw_axes.call(this, data);
-    },
-
     get_format: function(measure, isAxis){
       if(measure.indexOf("charge") >= 0){
         if(isAxis){
@@ -506,8 +516,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       filtered = chart.filter_data(),
       height = chart.get_currentHeight(filtered),
       avg = HospitalCheckup.Entities.averages.get(criterion);
-      this.xAxis.tickFormat(this.get_format(criterion, true));
-      Chart.BarBase.prototype.onUpdateChart.call(this, filtered, height); //am I doing this right?
+      chart.xAxis.tickFormat(chart.get_format(criterion, true));
+      Chart.BarBase.prototype.onUpdateChart.call(chart, filtered, height); //am I doing this right?
 
       chart.draw_bars(filtered);
     }
