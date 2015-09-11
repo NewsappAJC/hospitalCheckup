@@ -14,11 +14,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.$chart_container.attr('id', this.el.id+"-container");
       //set up axis and label formatters
       if(options.section === "surgery"){
-        this.formatter = function(){ return function(d){ return d + "%" } };
+        this.formatter = function(){ return function(d){ return d + "%" }; };
       } else if (options.section === "perinatal"){
-        this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis) };
+        this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis); };
       }
-      return this
+      return this;
     },
     draw: function() {
       var data = this.filter_data(this.data);
@@ -40,18 +40,18 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     get_xMax: function(data){
       var chart = this;
       if(chart.options.measure.indexOf("pct") >= 0){
-        return 100
+        return 100;
       }
       return d3.max(data, function(d) {
         if(chart.nested){ //check if data nested inside another array
           return d[chart.nested][chart.options.measure].upper
         }
-        return d[chart.options.measure]
+        return d[chart.options.measure];
       });
     },
 
     get_currentHeight: function(data){
-      return (this.options.bar_padding + this.bar_height) * data.length
+      return (this.options.bar_padding + this.bar_height) * data.length;
     },
 
     get_scales: function(data) {
@@ -78,7 +78,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this;
       var bars = chart.svg.select("#baseBars").selectAll(".base.bar")
         .data(data);
-        //.data(data, function(d){ return d.id });
+        //.data(data, function(d){ return d.id; });
 
       bars.exit().transition().duration(chart.duration)
         .ease(chart.easing)
@@ -88,7 +88,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("class", "base bar")
         .style("opacity", 0)
         .attr("y", function(d) {
-          return chart.yScale(d.display_name)
+          return chart.yScale(d.display_name);
         })
         .attr("width", chart.dimensions.width)
         .attr("height", chart.bar_height);
@@ -105,7 +105,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
       if(chart.formatter){
         var format = chart.formatter(true);
-        chart.xAxis.tickFormat(function(d){ return format(d) });
+        chart.xAxis.tickFormat(function(d){ return format(d); });
       }
 
       //create and set x axis position
@@ -135,21 +135,21 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .enter()
       .append("line")
         .attr("y1", -15) //extend it up to the label
-        .attr("id", function(d){ return d.id + "Line"})
-        .attr("marker-start", function(d){ return "url(#"+d.id+"Line_marker)" });
+        .attr("id", function(d){ return d.id + "Line"; })
+        .attr("marker-start", function(d){ return "url(#"+d.id+"Line_marker)"; });
 
       chart.contextLines.selectAll("text.chart-label")
         .data(chart.linesToMark)
         .enter()
         .append("text")
         .attr("class", "chart-label")
-        .attr("id", function(d){ return d.id+"Txt" });
+        .attr("id", function(d){ return d.id+"Txt"; });
 
       chart.markers = chart.defs.selectAll("marker")
         .data(chart.linesToMark)
         .enter()
         .append('svg:marker')
-        .attr('id', function(d){ return d.id+"Line_marker" })
+        .attr('id', function(d){ return d.id+"Line_marker"; })
         .attr('markerHeight', 3)
         .attr('markerWidth', 3)
         .attr('markerUnits', 'strokeWidth')
@@ -170,8 +170,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.contextLines.selectAll("line")
         .transition().duration(chart.duration)
         .attr("y2", height)
-        .attr("x1", function(d){ return chart.xScale(d.scale) })
-        .attr("x2", function(d){ return chart.xScale(d.scale) });
+        .attr("x1", function(d){ return chart.xScale(d.scale); })
+        .attr("x2", function(d){ return chart.xScale(d.scale); });
 
       chart.contextLines.selectAll("text.chart-label")
         .transition().duration(chart.duration)//.ease(chart.easing)
@@ -185,7 +185,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
             }
             label = label + " ("+val+")";
           }
-          return label
+          return label;
         })
         .attr("text-anchor", function(d){
           return chart.get_text_anchor(d, avg);
@@ -193,54 +193,55 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr("x", function(d){
           var plusminus = function(){ //which side of the anchor needs padding
             if(chart.get_text_anchor(d, avg) === "start"){
-              return 1
+              return 1;
             }
-            return -1
+            return -1;
           };
-          return chart.xScale(d.scale)+(10*plusminus())
+          return chart.xScale(d.scale)+(10*plusminus());
         })
         .attr("y", -7);
 
       chart.defs.selectAll("marker")
         .attr('orient', function(d, i){ //which direction should the arrow point
           if(chart.get_text_anchor(d, avg) === "start"){
-            return 90
+            return 90;
           }
-          return 270
+          return 270;
         })
         .attr('refX', function(d){ //this moves it up and down like it's y because of marker orientation
           if( chart.get_text_anchor(d, avg) === "start"){
-            return 0
+            return 0;
           } 
-          return 5
+          return 5;
         })
         .attr('refY', 5)
         .attr('viewBox', "0 0 5 5")
         .select("path")
-          .attr("fill", function(d){ return $("#"+d.id+"Line").css("stroke")});
+          .attr("fill", function(d){ return $("#"+d.id+"Line").css("stroke"); });
     },
 
     get_text_anchor: function(d, avg){
       if(this.options.section === "infections"){
         if(avg < 1){
           if(d.anchorDefault === "start"){
-            return "end"
+            return "end";
           }
-          return "start"
+          return "start";
         } else if(d.anchorDefault === "start"){
-          return "start"
+          return "start";
         }
-        return "end"
+        return "end";
       }
-      return d.anchorDefault
+      return d.anchorDefault;
     },
 
     draw_data: function(data){
       return this;
     },
 
-    onUpdateChart: function(filtered, height){
-      var chart = this;
+    onUpdateChart: function(filtered){
+      var chart = this,
+      height = chart.get_currentHeight(filtered);
 
       //update scales and axes
       chart.xScale.domain([0, chart.get_xMax(filtered)]).nice();
@@ -266,7 +267,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     onSelectHospital: function(label){
       d3.selectAll(".y.axis text").classed("active", function(d){
-        return d === label
+        return d === label;
       });
       this.selected = label; //store it so we can check for it when new labels enter
     },
@@ -338,7 +339,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       section = chart.options.section;
 
       var rangeBars = chart.svg.select("#rangeBars").selectAll(".range.bar")
-        .data(data, function(d){ return d.id });
+        .data(data, function(d){ return d.id; });
 
       rangeBars.exit().transition().duration(chart.duration)
         .ease(chart.easing)
@@ -355,7 +356,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return chart.yScale(d.display_name);
       })
       .attr("width", function(d){
-        return chart.xScale(d[section][measure].upper - d[section][measure].lower)
+        return chart.xScale(d[section][measure].upper - d[section][measure].lower);
       })
       .attr("height", chart.bar_height);
       chart.set_tooltip(chart, rangeBars, measure);
@@ -387,11 +388,11 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       stat = chart.options.stat;
 
       var circles = chart.svg.select("#statCircles").selectAll(".stat-circle")
-        .data(data, function(d){ return d.id });
+        .data(data, function(d){ return d.id; });
 
       circles.exit().transition().duration(chart.duration)
         .ease(chart.easing)
-        .style("opacity", 0).remove();;
+        .style("opacity", 0).remove();
 
       circles.enter().append("circle")
         .style("opacity", 0)
@@ -422,7 +423,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       filtered = chart.filter_data();
 
-      Chart.BarBase.prototype.onUpdateChart.call(this, filtered, chart.get_currentHeight(filtered)); //am I doing this right?
+      Chart.BarBase.prototype.onUpdateChart.call(this, filtered); //am I doing this right?
 
       chart.draw_range_bars(filtered);
       chart.draw_stat_circles(filtered);
@@ -454,14 +455,14 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     get_format: function(measure, isAxis){
       if(measure.indexOf("charge") >= 0){
         if(isAxis){
-          return d3.format("$s")
+          return d3.format("$s");
         }
-        return d3.format("$,")
+        return d3.format("$,");
       } else if (measure.indexOf("pct") >= 0){
-        return function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
+        return function(d){ return d + "%" }; //the normal d3.format("%") will also multiply it by 100
       } else if (measure.indexOf("total") >= 0){
         if(isAxis){
-          return d3.format("s")
+          return d3.format("s");
         }
         return d3.format(",");
       } else {
@@ -476,11 +477,10 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
 
     draw_bars: function(data){
       var chart = this,
-      measure = chart.options.measure,
-      section = chart.options.section;
+      measure = chart.options.measure;
 
       var bars = chart.svg.select("#bars").selectAll(".bar")
-        .data(data, function(d){ return d.id });
+        .data(data, function(d){ return d.id; });
 
       bars.exit().transition().duration(chart.duration)
         .ease(chart.easing)
@@ -495,7 +495,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return chart.yScale(d.display_name);
       })
       .attr("width", function(d){
-        return chart.xScale(d[measure])
+        return chart.xScale(d[measure]);
       })
       .attr("height", chart.bar_height);
       chart.set_tooltip(chart, bars, measure);
@@ -516,11 +516,10 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     onUpdateChart: function(criterion){
       this.options.measure = criterion;
       var chart = this,
-      filtered = chart.filter_data(),
-      height = chart.get_currentHeight(filtered),
-      avg = HospitalCheckup.Entities.averages.get(criterion);
+      filtered = chart.filter_data();
+
       chart.xAxis.tickFormat(chart.get_format(criterion, true));
-      Chart.BarBase.prototype.onUpdateChart.call(chart, filtered, height); //am I doing this right?
+      Chart.BarBase.prototype.onUpdateChart.call(chart, filtered); //am I doing this right?
 
       chart.draw_bars(filtered);
     }
@@ -577,19 +576,19 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       .attr("y", function(){
         //if the lables might overlap, bump up the predicted one
         if(str==="observed" | Math.abs(chart.xScale(num) - chart.xScale(chart.data.observed)) >= 21){
-          return -5
+          return -5;
         }
-        return -18
+        return -18;
       });
 
       //round display text relative to its value
       function rounder(num){
         if (num > .1){
-          return 1
+          return 1;
         } else if (num > .01){
-          return 2
+          return 2;
         } else {
-          return 3
+          return 3;
         }
       }
     }

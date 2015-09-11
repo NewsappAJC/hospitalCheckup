@@ -6,7 +6,6 @@
     "underscore": "latest",
     "d3": "latest",
     "backbone": "latest",
-    "d3bb": "https://jgperryajc@bitbucket.org/jgperryajc/d3bb.git",
     "normalize-css": "~3.0.2",
     "modernizr": "latest",
     "foundation": "latest",
