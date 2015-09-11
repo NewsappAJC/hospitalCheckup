@@ -12,6 +12,12 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //this.bar_height = (this.dimensions.height / this.collection.length) - this.options.bar_padding;
       this.bar_height = 16; //TODO perinatal collection is much smaller and don't have a way to make it consistent right now
       this.$chart_container.attr('id', this.el.id+"-container");
+      //set up axis and label formatters
+      if(options.section === "surgery"){
+        this.formatter = function(){ return function(d){ return d + "%" } };
+      } else if (options.section === "perinatal"){
+        this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis) };
+      }
       return this
     },
     draw: function() {
@@ -97,10 +103,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       section = chart.options.section;
 
-      if(section === "surgery"){
-        chart.xAxis.tickFormat(function(d){ return d + "%" });
-      } else if (section === "perinatal"){
-        chart.xAxis.tickFormat(chart.get_format(chart.options.measure, true));
+      if(chart.formatter){
+        var format = chart.formatter(true);
+        chart.xAxis.tickFormat(function(d){ return format(d) });
       }
 
       //create and set x axis position
@@ -174,11 +179,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
           var label = d.label;
           if(d.id === "average"){
             var val = avg;
-            if(section === "perinatal"){
-              var format = chart.get_format(chart.options.measure);
-              val = format(val);
-            } else if(section === "surgery"){
-              val = val+"%";
+            if(chart.formatter){
+              var format = chart.formatter(false);
+              val = format(avg);
             }
             label = label + " ("+val+")";
           }
