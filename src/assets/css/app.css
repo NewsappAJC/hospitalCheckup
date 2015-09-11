@@ -88,6 +88,7 @@ option {
 }
 #home-icon-row img {
   width: 70px;
+  height: 70px;
 }
 #home-icon-row h3 {
   margin-top: 10px;
