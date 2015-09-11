@@ -112,8 +112,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this;
 
       chart.defs = d3.select(chart.el).select("svg").append('svg:defs');
-      chart.linesToMark = [{ id: "average", label: "State avg.: ", anchorDefault: "start"}];
-      if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "benchmark", scale: 1, label: "Benchmark", anchorDefault: "end" }) };
+      chart.linesToMark = [{ id: "average", label: "State avg. ", anchorDefault: "start"}];
+      if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "benchmark", scale: 1, label: "Benchmark (1)", anchorDefault: "end" }) };
 
       chart.contextLines = chart.svg.select("#contextLines");
 
@@ -164,7 +164,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .text(function(d){
           var label = d.label;
           if(d.id === "average"){
-            label = label + avg;
+            label = label + " ("+avg+")";
           }
           return label
         })
