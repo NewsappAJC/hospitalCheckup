@@ -40,9 +40,15 @@ p strong, li strong {
 }
 .top-bar-section li:not(.has-form) a.header-link {
   background-color: #0e3968;
+  font-family:'Boomer-Book';
+  transition:0.2s all ease;
 }
+.top-bar-section li:not(.has-form) a.header-link:hover, .top-bar-section li.active:not(.has-form) a:not(.button):hover  {
+  background-color:#49709F;
+}
+
 .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background: #008cba none repeat scroll 0 0;
+  background: #49709F none repeat scroll 0 0;
 }
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
