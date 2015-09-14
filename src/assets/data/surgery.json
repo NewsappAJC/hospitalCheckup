@@ -1,12 +1,12 @@
 {
   "averages": {
-    "complications": 2.92, 
+    "complications": 2.9, 
     "id": "hipkneeAverages", 
     "national": {
       "complications": 3.1, 
       "readmissions": 4.8
     }, 
-    "readmissions": 4.63
+    "readmissions": 4.6
   }, 
   "hospitals": [
     {
