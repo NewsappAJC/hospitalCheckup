@@ -7,7 +7,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
 
     listSurgeries: function(id, criterion){
-      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national rate", "rate");
+      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national average", "rate");
     },
 
     listPerinatal: function(id, criterion){

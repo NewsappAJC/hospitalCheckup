@@ -6,15 +6,15 @@
  *
  * Copyright (c) 2010-2013 Christian Johansen
  */
-var sinon = (function () { // eslint-disable-line no-unused-vars
-    "use strict";
+"use strict";
 
-    var sinonModule;
+var sinon = (function () {
+    var sinon;
     var isNode = typeof module !== "undefined" && module.exports && typeof require === "function";
     var isAMD = typeof define === "function" && typeof define.amd === "object" && define.amd;
 
     function loadDependencies(require, exports, module) {
-        sinonModule = module.exports = require("./sinon/util/core");
+        sinon = module.exports = require("./sinon/util/core");
         require("./sinon/extend");
         require("./sinon/typeOf");
         require("./sinon/times_in_words");
@@ -37,10 +37,10 @@ var sinon = (function () { // eslint-disable-line no-unused-vars
         define(loadDependencies);
     } else if (isNode) {
         loadDependencies(require, module.exports, module);
-        sinonModule = module.exports;
+        sinon = module.exports;
     } else {
-        sinonModule = {};
+        sinon = {};
     }
 
-    return sinonModule;
+    return sinon;
 }());
