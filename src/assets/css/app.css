@@ -109,9 +109,9 @@ option {
 }
 .axis path, .axis line {
   fill: none;
-  stroke: lightgrey;
-  stroke-width: 2px;
-  shape-rendering: crispEdgeds;
+  stroke: #bbb;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
 }
 .y.axis text, .bar, .stat-circle {
   cursor: pointer;
@@ -177,7 +177,6 @@ select#js-filter-criterion {
 /*hospital view*/
 .hospital-info h3 {
   font-family: 'Boomer';
-  /*font-weight:normal;*/
   font-size:22px;
   margin-top: 0;
   margin-bottom:5px;
@@ -192,13 +191,15 @@ select#js-filter-criterion {
   text-transform: uppercase;
   letter-spacing:1.5px;
   font-size: 12px;
+  padding-bottom:5px;
 }
 .hospital-list h4 {
-  font-family: BoomerCond;
+  font-family: 'Boomer-Book';
+  font-size:16px;
 }
 .hospital-list p {
-  font-size: .9em;
-  line-height: 1.3em;
+  font-size: 12px;
+  line-height: 1.5em;
   margin-bottom: 0;
 }
 .hospital-list .hospital-list-item hr {
@@ -214,24 +215,33 @@ select#js-filter-criterion {
   margin-top: 10px;
 }
 .hospital-list-item p strong {
-  font-family: BoomerCond;
+  font-size:12px;
+  font-family: 'Boomer';
   font-weight: normal;
 }
 #hospital-region-1 #detail-legend {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom:2px solid #333;
+  border-top:2px solid #333;
+  padding-bottom:10px;
+}
+
+#detail-legend p {
+  font-size:12px;
+  margin-top:10px;
 }
 /*hospital charts*/
 .predicted {
-  stroke: darkgray;
+  stroke: #aaa;
   stroke-width: 3;
 }
 .observed {
-  stroke: black;
+  stroke: #000;
   stroke-width: 3;
 }
 .chart-label.txt { /*labels for the observed and predicted lines*/
   font-size: 12px;
-  stroke-width: 1;
+  stroke-width: 0.5;
 }
 .legend-svg {
   vertical-align: middle;
