@@ -109,13 +109,26 @@ for node in src:
 
     tree.append(hospital)
 
+##### Uses this API endpoint because I couldn't find a current national average in the database http://dev.socrata.com/foundry/#/data.medicare.gov/tiin-ktzr
+import urllib2
+
+endpoints = [{"complications": "https://data.medicare.gov/resource/tiin-ktzr.json?measure_id=COMP_HIP_KNEE"}, {"readmissions": "https://data.medicare.gov/resource/vfqj-duc4.json?measure_id=READM_30_HIP_KNEE"}]
+
+totals = {"id": "hipkneeAverages", "national": {}} #backbone expects an ID and local storage uses it too
+for node in endpoints: #go through each file
+	for key in node.keys(): #use the key as an ID later to match it with state level
+		url = urllib2.Request(node[key])
+		data = json.load(urllib2.urlopen(url))
+		for item in data:
+			totals["national"][key] = float(item["national_rate"])
+
 ft = open( '../src/assets/data/src/hipknee_avgs_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 
-#would be easy to do this in sql but I was the view to be easy to understand
+#would be easy to do this in sql but I want the view to be easy to understand
 hipkneeDict = {"ga_readm_avg" : "readmissions", "ga_comp_avg" : "complications"}
-totals = {"id": "hipkneeStateAverages"} #backbone expects an ID and local storage uses it too
+
 
 for node in src:
     for key in node.keys():
@@ -174,5 +187,4 @@ for node in src:
 f = open( '../src/assets/data/perinatal.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
-
 print "hospital perinatal JSON saved!"
