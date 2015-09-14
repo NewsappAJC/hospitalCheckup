@@ -1,12 +1,13 @@
 #app-container {
-  font-family: Boomer-Light;
+  font-family: 'Boomer-Light';
 }
 h1 {
-  font-family:'Publico-Black';
-  font-size:42px;
+  font-family:'BoomerSlab';
+  font-weight:bold;
+  font-size:36px;
 }
 h3, h4 {
-  font-family: Boomer;
+  font-family: 'Boomer';
   line-height: 1.3em;
   margin-bottom: 0;
   margin-top: 15px;
@@ -15,12 +16,12 @@ h4 {
   font-size: 18px;
 }
 p {
-  font-family: Boomer-Light;
+  font-family: 'Boomer-Light';
   font-size: 16px;
   line-height: 1.6;
 }
 p strong, li strong {
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 /*nav*/
@@ -39,9 +40,15 @@ p strong, li strong {
 }
 .top-bar-section li:not(.has-form) a.header-link {
   background-color: #0e3968;
+  font-family:'Boomer-Book';
+  transition:0.2s all ease;
 }
+.top-bar-section li:not(.has-form) a.header-link:hover, .top-bar-section li.active:not(.has-form) a:not(.button):hover  {
+  background-color:#49709F;
+}
+
 .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background: #008cba none repeat scroll 0 0;
+  background: #49709F none repeat scroll 0 0;
 }
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
@@ -51,7 +58,7 @@ section {/*override fonts.css*/
   padding: 0
 }
 option {
-  font-family: Boomer;
+  font-family: 'Boomer';
 }
 /*homepage*/
 #row-bg {
@@ -92,7 +99,7 @@ option {
 }
 #home-icon-row h3 {
   margin-top: 10px;
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   text-transform: uppercase;
   font-size: 22px;
 }
@@ -101,7 +108,7 @@ option {
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   font-size: 10px;
 }
 .base {
@@ -109,15 +116,15 @@ option {
 }
 .axis path, .axis line {
   fill: none;
-  stroke: lightgrey;
-  stroke-width: 2px;
-  shape-rendering: crispEdgeds;
+  stroke: #bbb;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
 }
 .y.axis text, .bar, .stat-circle {
   cursor: pointer;
 }
 .y.axis text.active {
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 /*charts extended*/
@@ -143,7 +150,7 @@ line#benchmarkLine {
   stroke: #DDDDDD;
 }
 div.ttip {
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   font-size: 12px;
   position: absolute;
   width: 270px;
@@ -155,7 +162,7 @@ div.ttip {
   z-index: 101;
 }
 div.ttip strong {
-  font-family: BoomerCond;
+  font-family: 'Boomer';
 }
 #main-chart-region {
   padding-bottom: 15px;
@@ -176,23 +183,32 @@ select#js-filter-criterion {
 }
 /*hospital view*/
 .hospital-info h3 {
-  font-family: BoomerCondBlack;;
+  font-family: 'BoomerSlab-Book';
+  font-size:22px;
   margin-top: 0;
+  margin-bottom:5px;
 }
 .hospital-info p {
   margin-bottom: 5px;
-  line-height: 1em;
+  line-height: 1.4em;
+  font-size:12px;
 }
 .address {
-  font-family: BoomerSlab-Light;
-  font-size: .9em;
+  font-family: 'Boomer-Light';
+  text-transform: uppercase;
+  letter-spacing:1.5px;
+  font-size: 12px;
+  padding-bottom:10px;
+  border-bottom:2px solid #333;
+  margin-bottom:20px;
 }
 .hospital-list h4 {
-  font-family: BoomerCond;
+  font-family: 'Boomer-Book';
+  font-size:16px;
 }
 .hospital-list p {
-  font-size: .9em;
-  line-height: 1.3em;
+  font-size: 12px;
+  line-height: 1.5em;
   margin-bottom: 0;
 }
 .hospital-list .hospital-list-item hr {
@@ -208,24 +224,34 @@ select#js-filter-criterion {
   margin-top: 10px;
 }
 .hospital-list-item p strong {
-  font-family: BoomerCond;
+  font-size:12px;
+  font-family: 'Boomer';
   font-weight: normal;
 }
 #hospital-region-1 #detail-legend {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  background:#eeeeee;
+  padding:5px 10px;
+  margin-top:10px;
+  padding-bottom:10px;
+}
+
+#detail-legend p {
+  font-size:12px;
+  margin-top:10px;
 }
 /*hospital charts*/
 .predicted {
-  stroke: darkgray;
+  stroke: #aaa;
   stroke-width: 3;
 }
 .observed {
-  stroke: black;
+  stroke: #000;
   stroke-width: 3;
 }
 .chart-label.txt { /*labels for the observed and predicted lines*/
   font-size: 12px;
-  stroke-width: 1;
+  stroke-width: 0.5;
 }
 .legend-svg {
   vertical-align: middle;
@@ -242,7 +268,7 @@ select#js-filter-criterion {
   margin-left: -3px;
 }
 #legend-region .chart-label:not(:last-child){
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 
