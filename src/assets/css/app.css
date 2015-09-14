@@ -139,7 +139,7 @@ rect.range.good, #legend-region li.good, #mobile-list .mobile-rating.good {
 line#averageLine {
   stroke: darkgray;
 }
-line#benchmarkLine {
+line#nationalLine {
   stroke: #DDDDDD;
 }
 div.ttip {

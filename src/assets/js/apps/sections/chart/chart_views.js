@@ -125,8 +125,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this;
 
       chart.defs = d3.select(chart.el).select("svg").append('svg:defs');
-      chart.linesToMark = [{ id: "average", label: "State avg. ", anchorDefault: "start"}];
-      if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "benchmark", scale: 1, label: "Benchmark (1)", anchorDefault: "end" }) };
+      chart.linesToMark = [{ id: "average", scale: function(){ return HospitalCheckup.Entities.averages.get(chart.options.measure) }, label: "State avg.", anchorDefault: "start"}];
+      if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "national", scale: function(){ return 1 }, label: "Benchmark", anchorDefault: "end" }) }
+      else if (chart.options.section === "surgery"){ chart.linesToMark.push({ id: "national", scale: function(){ return HospitalCheckup.Entities.averages.get("national")[chart.options.measure] }, label: "National avg.", anchorDefault: "end" })};
 
       chart.contextLines = chart.svg.select("#contextLines");
 
@@ -162,54 +163,55 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     transition_context_lines: function(data){
       var chart = this,
       height = chart.get_currentHeight(data),
-      avg = HospitalCheckup.Entities.averages.get(chart.options.measure),
       section = chart.options.section;
-
-      chart.linesToMark[0].scale = avg;
+      if(section !== "perinatal"){
+        var state = chart.linesToMark[0].scale(),
+        national = chart.linesToMark[1].scale();
+      }
 
       chart.contextLines.selectAll("line")
         .transition().duration(chart.duration)
         .attr("y2", height)
-        .attr("x1", function(d){ return chart.xScale(d.scale); })
-        .attr("x2", function(d){ return chart.xScale(d.scale); });
+        .attr("x1", function(d){ return chart.xScale(d.scale()); })
+        .attr("x2", function(d){ return chart.xScale(d.scale()); });
 
       chart.contextLines.selectAll("text.chart-label")
         .transition().duration(chart.duration)//.ease(chart.easing)
         .text(function(d){
           var label = d.label;
-          if(d.id === "average"){
-            var val = avg;
+          //if(d.id === "average" || d.id === "national"){
+            var val = d.scale();
             if(chart.formatter){
               var format = chart.formatter(false);
-              val = format(avg);
+              val = format(val);
             }
             label = label + " ("+val+")";
-          }
+            //}
           return label;
         })
         .attr("text-anchor", function(d){
-          return chart.get_text_anchor(d, avg);
+          return get_text_anchor(d);
         })
         .attr("x", function(d){
           var plusminus = function(){ //which side of the anchor needs padding
-            if(chart.get_text_anchor(d, avg) === "start"){
+            if(get_text_anchor(d) === "start"){
               return 1;
             }
             return -1;
           };
-          return chart.xScale(d.scale)+(10*plusminus());
+          return chart.xScale(d.scale())+(10*plusminus());
         })
         .attr("y", -7);
 
       chart.defs.selectAll("marker")
         .attr('orient', function(d, i){ //which direction should the arrow point
-          if(chart.get_text_anchor(d, avg) === "start"){
+          if(get_text_anchor(d) === "start"){
             return 90;
           }
           return 270;
         })
         .attr('refX', function(d){ //this moves it up and down like it's y because of marker orientation
-          if( chart.get_text_anchor(d, avg) === "start"){
+          if( get_text_anchor(d) === "start"){
             return 0;
           } 
           return 5;
@@ -218,21 +220,21 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .attr('viewBox', "0 0 5 5")
         .select("path")
           .attr("fill", function(d){ return $("#"+d.id+"Line").css("stroke"); });
-    },
 
-    get_text_anchor: function(d, avg){
-      if(this.options.section === "infections"){
-        if(avg < 1){
-          if(d.anchorDefault === "start"){
-            return "end";
+      function get_text_anchor(d){
+        if(national){
+          if(state < national){
+            if(d.anchorDefault === "start"){
+              return "end";
+            }
+            return "start";
+          } else if(d.anchorDefault === "start"){
+            return "start";
           }
-          return "start";
-        } else if(d.anchorDefault === "start"){
-          return "start";
+          return "end";
         }
-        return "end";
+        return d.anchorDefault;
       }
-      return d.anchorDefault;
     },
 
     draw_data: function(data){
