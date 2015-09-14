@@ -1,12 +1,13 @@
 #app-container {
-  font-family: Boomer-Light;
+  font-family: 'Boomer-Light';
 }
 h1 {
-  font-family:'Publico-Black';
-  font-size:42px;
+  font-family:'BoomerSlab';
+  font-weight:bold;
+  font-size:36px;
 }
 h3, h4 {
-  font-family: Boomer;
+  font-family: 'Boomer';
   line-height: 1.3em;
   margin-bottom: 0;
   margin-top: 15px;
@@ -15,12 +16,12 @@ h4 {
   font-size: 18px;
 }
 p {
-  font-family: Boomer-Light;
+  font-family: 'Boomer-Light';
   font-size: 16px;
   line-height: 1.6;
 }
 p strong, li strong {
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 /*nav*/
@@ -51,7 +52,7 @@ section {/*override fonts.css*/
   padding: 0
 }
 option {
-  font-family: Boomer;
+  font-family: 'Boomer';
 }
 /*homepage*/
 #row-bg {
@@ -92,7 +93,7 @@ option {
 }
 #home-icon-row h3 {
   margin-top: 10px;
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   text-transform: uppercase;
   font-size: 22px;
 }
@@ -101,7 +102,7 @@ option {
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   font-size: 10px;
 }
 .base {
@@ -117,7 +118,7 @@ option {
   cursor: pointer;
 }
 .y.axis text.active {
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 /*charts extended*/
@@ -143,7 +144,7 @@ line#benchmarkLine {
   stroke: #DDDDDD;
 }
 div.ttip {
-  font-family: Boomer-Book;
+  font-family: 'Boomer-Book';
   font-size: 12px;
   position: absolute;
   width: 270px;
@@ -155,7 +156,7 @@ div.ttip {
   z-index: 101;
 }
 div.ttip strong {
-  font-family: BoomerCond;
+  font-family: 'Boomer';
 }
 #main-chart-region {
   padding-bottom: 15px;
@@ -176,7 +177,7 @@ select#js-filter-criterion {
 }
 /*hospital view*/
 .hospital-info h3 {
-  font-family: 'Boomer';
+  font-family: 'BoomerSlab-Book';
   font-size:22px;
   margin-top: 0;
   margin-bottom:5px;
@@ -187,11 +188,13 @@ select#js-filter-criterion {
   font-size:12px;
 }
 .address {
-  font-family: Boomer-Light;
+  font-family: 'Boomer-Light';
   text-transform: uppercase;
   letter-spacing:1.5px;
   font-size: 12px;
-  padding-bottom:5px;
+  padding-bottom:10px;
+  border-bottom:2px solid #333;
+  margin-bottom:20px;
 }
 .hospital-list h4 {
   font-family: 'Boomer-Book';
@@ -221,8 +224,9 @@ select#js-filter-criterion {
 }
 #hospital-region-1 #detail-legend {
   margin-bottom: 10px;
-  border-bottom:2px solid #333;
-  border-top:2px solid #333;
+  background:#eeeeee;
+  padding:5px 10px;
+  margin-top:10px;
   padding-bottom:10px;
 }
 
@@ -258,7 +262,7 @@ select#js-filter-criterion {
   margin-left: -3px;
 }
 #legend-region .chart-label:not(:last-child){
-  font-family: Boomer;
+  font-family: 'Boomer';
   font-weight: bold;
 }
 
