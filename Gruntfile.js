@@ -247,8 +247,7 @@ module.exports = function(grunt) {
       },
       build: {
         cwd: "build/",
-        src: "**",
-        dest:"2015/staging/hospital-checkup/"
+        src: "**"
       }
     },
 
