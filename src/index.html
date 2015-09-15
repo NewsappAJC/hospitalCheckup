@@ -41,11 +41,11 @@
   <link rel="stylesheet" href="assets/css/vendor/foundation.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/styles.css" type="text/css"> <!-- AJC metering modals css -->
   <script src="assets/js/vendor/modernizr.js"></script>
-
 </head>
 <body>
-
+  <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/wrap.js"></script> <!-- AJC metering modals js -->
   <div id="app-container">
     <div id="header-region"></div>
     <div id="main-region" class="container"></div>
@@ -276,6 +276,104 @@
     <div id="spinner"></div>
   </script>
 
+  <!-- AJC METERING MODALS -->
+  <div id="pq-passage-quota-block" class="pq-modal-content pq-master-inherit" >
+      <div class="pq-modal-screen"></div>
+      <div class="pq-modal-wrap-container pq-modal-roadblock-container">
+          <div class="pq-access-meter-modal pq-access-meter-modal-limit">
+              <header class="pq-access-limit-header">
+                  <p>You have reached your limit of <span class="pq-passage-quota-max"></span> free articles this month.</p>
+                  <h2>Enjoy unlimited access to myAJC.com.</h2>
+                  <h5>Starting at just 99¢ for 8 weeks.</h5>
+              </header>
+              <div class="pq-access-limit-body">
+                  <p class="pq-access-limit-hero-head">GREAT REASONS TO SUBSCRIBE TODAY!</p>
+
+                  <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-limit-hero-ajc.png" class="pq-access-limit-hero">
+
+                  <ul class="pq-access-limit-reasons">
+                      <li>IN-DEPTH REPORTING</li>
+                      <li>INTERACTIVE STORYTELLING</li>
+                      <li>NEW TOPICS & COVERAGE</li>
+                      <li>ePAPER</li>
+                  </ul>
+              </div>
+              <footer class="pq-access-limit-footer">
+                 <div class="pq-limit-footer-container">
+                      <p>Already a Paid Subscriber?</p>
+                      <a href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
+                      <a href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
+                  </div>
+                  <a href="https://myaccount.ajc.com/dsssubscribe.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="pq-access-meter-btn pq-passage-quota-view-offers">
+                      VIEW ALL OFFERS
+                  </a>
+              </footer>
+          </div>
+      </div>
+  </div>
+
+  <div id="pq-passage-quota-sticky" class="pq-modal-sticky pq-master-inherit" >
+      <div class="pq-access-meter-modal pq-access-meter-modal-count">
+          <header class="pq-access-welcome-header">
+              <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-ajc.png" class="pq-access-welcome-logo">
+              <a href="#" class="pq-access-meter-close pq-close-modal">X</a>
+          </header>
+          <div class="pq-access-body">
+              <h1>You have read <span class="pq-passage-quota-count"></span> of <span class="pq-passage-quota-max"></span> free premium articles.</h1>
+              <p>Get unlimited access to all of our breaking news, in-depth coverage and bonus content- exclusively for subscribers. Starting at just 99¢ for 8 weeks.</p>
+
+              <footer class="pq-access-footer">
+                  <a href="https://myaccount.ajc.com/dsssubscribe.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="pq-access-meter-btn pq-passage-quota-view-offers">
+                      VIEW ALL OFFERS
+                  </a>
+                  <div>
+                      <p>Already a Paid Subscriber?</p>
+                      <a href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
+                      <a href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
+                  </div>
+              </footer>
+          </div>
+      </div>
+  </div>
+
+  <div id="pq-passage-quota-welcome" class="pq-modal-content pq-master-inherit" >
+      <div class="pq-modal-screen"></div>
+      <div class="pq-modal-wrap-container pq-modal-welcome-container">
+          <div class="pq-access-meter-modal pq-access-meter-modal-welcome">
+              <header class="pq-access-welcome-header">
+                  <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-ajc.png" class="pq-access-welcome-logo">
+              </header>
+              <div class="pq-access-body">
+                  <a href="#" class="pq-access-meter-close pq-close-modal">X</a>
+
+                  <h1>
+                      Welcome to myAJC.com
+                  </h1>
+
+                  <p>This subscriber-only site gives you exclusive access to breaking news, in-depth coverage, exclusive interactives and bonus content.</p>
+                  <p>
+                      You can read <span class="pq-passage-quota-max"></span> free articles of your choice a month that are only available on myAJC.com.
+                  </p>
+
+                  <footer class="pq-access-footer">
+                      <div class="pq-welcome-links">
+                          <p>Already a Paid Subscriber?</p>
+                          <a id="pq-welcome-signin" href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
+                          <a id="pq-welcome-create-login" href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
+                      </div>
+                      <a id="pq-welcome-continue" href="#" class="pq-access-meter-btn pq-close-modal">
+                          CONTINUE TO YOUR 1<sup>ST</sup> FREE ARTICLE
+                      </a>
+                  </footer>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="authentication-change">
+    <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
+    <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
+  </div>
+
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/underscore.js"></script>
   <script src="assets/js/vendor/backbone.js"></script>
@@ -310,12 +408,12 @@
   <script src="assets/js/common/behaviors.js"></script>
   <script src="assets/js/common/views.js"></script>
   <script src="assets/js/entities/text.js"></script>
+  <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();
 
     HospitalCheckup.start();
   </script>
-
 </body>
 </html>
