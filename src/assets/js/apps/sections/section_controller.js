@@ -3,18 +3,18 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.Controller = {
 
     listInfections: function(id, criterion){
-      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "BarRangeDot", "than national benchmark", "ratio");
+      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "BarRangeDot", "than national benchmark", "SIR", "ratio");
     },
 
     listSurgeries: function(id, criterion){
-      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national average", "rate");
+      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national average", "Rate", "rate");
     },
 
     listPerinatal: function(id, criterion){
       this.buildLayout(id, criterion, "csect_pct", "Perinatal", "perinatal", "BarLeft");
     },
 
-    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, stat){
+    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, dotLabel, stat){
       var isMobile = document.body.clientWidth < 405;
       var loadingView = new HospitalCheckup.Common.Views.Loading();
       HospitalCheckup.regions.main.show(loadingView);
@@ -34,7 +34,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
       }
       if (sectionID !== "perinatal"){
-        var legendView = new Section.Legend({label: legendLabel});
+        var legendView = new Section.Legend({label: legendLabel, dot: dotLabel});
         hospitalMeasuresView.collection = new Backbone.Collection();
       }
 
@@ -74,7 +74,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
             Section.chartView = new HospitalCheckup.Common.Chart[chartType]({ //adding it to Section module so we can target it later
               el: "#main-chart",
               collection: collection,
-              base_height: 705,
+              base_height: 745,
               bar_padding: 4,
               margin: {left: 195, right: 15, bottom: 20, top: 25}, //right padding needed to protect chart labels that extend past axis
               measure: criterion || defaultMeasure,

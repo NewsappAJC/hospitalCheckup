@@ -178,15 +178,13 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.contextLines.selectAll("text.chart-label")
         .transition().duration(chart.duration)//.ease(chart.easing)
         .text(function(d){
-          var label = d.label;
-          //if(d.id === "average" || d.id === "national"){
-            var val = d.scale();
-            if(chart.formatter){
-              var format = chart.formatter(false);
-              val = format(val);
-            }
-            label = label + " ("+val+")";
-            //}
+          var label = d.label,
+          val = d.scale();
+          if(chart.formatter){
+            var format = chart.formatter(false);
+            val = format(val);
+          }
+          label = label + " ("+val+")";
           return label;
         })
         .attr("text-anchor", function(d){
