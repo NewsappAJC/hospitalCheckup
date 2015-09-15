@@ -8,16 +8,25 @@
   ================================================== -->
   <meta charset="utf-8">
   <title>AJC Hospital Checkup</title>
-  <meta name="description" content="Explore hospital quality data for Atlanta area hospitals.">
-  <meta name="author" content="Emily Merwin">
+  <meta name="description" content="Compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months.">
+  <meta name="article:author" content="Emily Merwin">
+  <meta name="article:publisher" content="The Atlanta Journal-Constitution">
+  <meta name="keywords" content="hospital quality, altanta hospitals, hospital acquired infections, hip and knee surgery complications, maternity services, ajc, myajc, atlanta journal-constitution, data visualization, data viz, d3">
 
   <!-- Social Open Graph Metas: fill these out to make your fb sharing post
   ================================================== -->
-  <meta property="og:url" content="" />
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:url" content="http://hospitals.myajc.com/" />
+  <meta property="og:title" content="AJC Hospital Checkup" />
+  <meta property="og:site_name" content="myAJC.com"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://hospitals.myajc.com/assets/img/fb.png" />
+  <meta property="og:description" content="Compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months." />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ajc">
+  <meta name="twitter:title" content="AJC Hospital Checkup">
+  <meta name="twitter:description" content="Compare the records of Atlanta hospitals when it comes to patient safety, hip and knee surgeries and maternity services.">
+  <meta name="twitter:image" content="http://hospitals.myajc.com/assets/img/twitter.png">
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -82,7 +91,7 @@
         </div>
         <div class="row">
           <div class="small-12 small-centered columns">
-            <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
+            <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta and North Georgia’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
           </div>
         </div>
       </div>
@@ -142,8 +151,7 @@
 
   <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
-    <p class="address"><%- address %></p>
-    <hr>
+    <p class="address"><%- address %>, <%- city %></p>
   </script>
 
   <script type="text/template" id="hospital-infection-item-template">
@@ -233,8 +241,8 @@
   </script>
 
   <script type="text/template" id="hospital-legend-template">
-    <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
     <div id="detail-legend">
+      <p>The detailed information about individual hospitals shows the actual numbers of infections and the CDC predicted number of infections for similar hospitals.</p>
       <svg class="legend-svg"><line class="predicted" y1="0" y2="15" x1="0"></line></svg>
       <span class="chart-label">Predicted</span>
       <span class="legend-margin">
@@ -245,11 +253,14 @@
   </script>
 
   <script type="text/template" id="main-legend">
-    <ul>
+    <ul class="left">
       <li class="good chart-label">Better</li>
       <li class="normal chart-label">No Different</li>
       <li class="bad chart-label">Worse</li>
       <li class="chart-label"><%- label %></li>
+    </ul>
+    <ul class="right">
+      <li class="chart-label"><svg class="legend-circle"><circle cx="4" cy="4" r="4"></circle></svg><span class="dot-label"><%- dot_label %></li>
     </ul>
   </script>
 
@@ -266,24 +277,21 @@
   </script>
 
   <script src="assets/js/vendor/jquery.js"></script>
-  <script src="assets/js/vendor/fastclick.js"></script>
   <script src="assets/js/vendor/underscore.js"></script>
   <script src="assets/js/vendor/backbone.js"></script>
   <script src="assets/js/vendor/backbone.localstorage.js"></script>
   <script src="assets/js/vendor/backbone.marionette.js"></script>
   <script src="assets/js/vendor/d3.js"></script>
-  <script src="assets/js/vendor/d3bb.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/vendor/foundation.topbar.js"></script>
   <script src="assets/js/vendor/spin.js"></script>
   <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
-  <script src="assets/js/vendor/flatpage_stubs.js"></script><!-- TODO add script -->
+  <!--<script src="assets/js/vendor/flatpage_stubs.js"></script><!-- TODO add script -->
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/apps/config/storage/localstorage.js"></script>
-  <script src="assets/js/entities/common.js"></script><!--currently empty-->
   <script src="assets/js/entities/header.js"></script>
   <script src="assets/js/apps/header/list/list_controller.js"></script>
   <script src="assets/js/apps/header/list/list_view.js"></script>

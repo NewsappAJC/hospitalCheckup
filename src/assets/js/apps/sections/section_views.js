@@ -60,11 +60,13 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     initialize: function(options){
       var options = options || {};
       this.label = options.label;
+      this.dot_label = options.dot;
     },
 
     serializeData: function(){
       return {
-        label: this.label
+        label: this.label,
+        dot_label: this.dot_label
       }
     }
   });

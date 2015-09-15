@@ -17,8 +17,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     Entities.headers = new Entities.HeaderCollection([
       {name: "Home", url: "", navigationTrigger: "home:show"},
       {name: "Infections", url: "infections", navigationTrigger: "infections:list", icon: "infection"},
-      {name: "Surgery", url: "surgery", navigationTrigger: "surgeries:list", icon: "surgery"},
-      {name: "Labor and Delivery", url: "perinatal", navigationTrigger: "perinatal:list", icon: "perinatal"}
+      {name: "Hip & Knee Surgery", url: "surgery", navigationTrigger: "surgeries:list", icon: "surgery"},
+      {name: "Labor & Delivery", url: "perinatal", navigationTrigger: "perinatal:list", icon: "perinatal"}
     ]);
   };
 

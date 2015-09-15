@@ -48,14 +48,6 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
-            src: ['bower/d3bb/build/d3bb.min.js'],
-            dest: 'build/assets/js/vendor/',
-            rename: function (dest, src) {
-              return dest + src.substring(src.lastIndexOf('/')).replace('.min','');
-            }
-          },
-          {
-            expand: true,
             src: ['bower/foundation/js/foundation.min.js'],
             dest: 'build/assets/js/vendor/',
             rename: function (dest, src) {
@@ -70,7 +62,7 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/flatpage_stubs.js',
               'src/assets/js/vendor/modernizr.js',
-              'src/assets/js/vendor/fastclick.js',
+              //'src/assets/js/vendor/fastclick.js',
               'src/assets/js/vendor/backbone.localstorage.js',
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
@@ -291,9 +283,8 @@ module.exports = function(grunt) {
           "backbone.js": "backbone/backbone.js",
           "backbone.marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.js",
-          "d3bb.js": "d3bb/build/d3bb.js", //John Perry's backbone wrapper for d3
           "modernizr.js": "foundation/js/vendor/modernizr.js",
-          "fastclick.js": "foundation/js/vendor/fastclick.js",
+          //"fastclick.js": "foundation/js/vendor/fastclick.js", //makes clicks happen faster on touch devices but also breaks tooltips
           "foundation.js": "foundation/js/foundation.js",
           "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
           "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter

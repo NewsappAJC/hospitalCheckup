@@ -16,8 +16,8 @@ WHERE state = "GA" AND measure LIKE "HAI_%_SIR"
 /*found the index of medicare measures here: https://www.medicare.gov/hospitalcompare/Data/Measures-Displayed.html*/
 /*Can't find national average for COMP-HIP-KNEE in the HQI_HOSP_AHRQ_NATIONAL table which would seem to be the appropriate measure*/
 ALTER VIEW hipknee_avgs_web AS
-SELECT round(SUM(b.score*b.denominator)/SUM(b.denominator), 2) as ga_readm_avg,
-       round(SUM(c.score*c.denominator)/SUM(c.denominator), 2) as ga_comp_avg
+SELECT round(SUM(b.score*b.denominator)/SUM(b.denominator), 1) as ga_readm_avg,
+       round(SUM(c.score*c.denominator)/SUM(c.denominator), 1) as ga_comp_avg
 FROM hospital_compare.hospital_names a
 
 LEFT JOIN hospital_compare.readmissions_deaths_hosp b

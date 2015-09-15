@@ -32,4 +32,10 @@ HospitalCheckup.on("start", function(){
       HospitalCheckup.trigger("infections:list");
     }*/
   }
+
+  $(document).on('click', 'a[href^="#benchmark"]', function (e) { //TODO this doesn't belong here
+    e.preventDefault();
+    element = document.getElementById("benchmark")
+    element.scrollIntoView(true); //parameter = "alignToTop"
+  });
 });

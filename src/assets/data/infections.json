@@ -11,6 +11,7 @@
   "hospitals": [
     {
       "address": "1200 NORTHSIDE FORSYTH DRIVE", 
+      "city": "CUMMING", 
       "display_name": "Northside Hospital Forsyth", 
       "id": "110005", 
       "infections": {
@@ -96,6 +97,7 @@
     }, 
     {
       "address": "1230 BAXTER STREET", 
+      "city": "ATHENS", 
       "display_name": "Saint Mary's Hospital", 
       "id": "110006", 
       "infections": {
@@ -181,6 +183,7 @@
     }, 
     {
       "address": "201 HOSPITAL ROAD", 
+      "city": "CANTON", 
       "display_name": "Northside Hospital Cherokee", 
       "id": "110008", 
       "infections": {
@@ -266,6 +269,7 @@
     }, 
     {
       "address": "1364 CLIFTON ROAD, NE", 
+      "city": "ATLANTA", 
       "display_name": "Emory University Hospital", 
       "id": "110010", 
       "infections": {
@@ -351,6 +355,7 @@
     }, 
     {
       "address": "705 DIXIE STREET", 
+      "city": "CARROLLTON", 
       "display_name": "Tanner Medical Center Carrollton", 
       "id": "110011", 
       "infections": {
@@ -436,6 +441,7 @@
     }, 
     {
       "address": "5126 HOSPITAL DRIVE NE", 
+      "city": "COVINGTON", 
       "display_name": "Newton Medical Center", 
       "id": "110018", 
       "infections": {
@@ -521,6 +527,7 @@
     }, 
     {
       "address": "743 SPRING STREET", 
+      "city": "GAINESVILLE", 
       "display_name": "Northeast Georgia Medical Center", 
       "id": "110029", 
       "infections": {
@@ -606,6 +613,7 @@
     }, 
     {
       "address": "960 JOE FRANK HARRIS PARKWAY", 
+      "city": "CARTERSVILLE", 
       "display_name": "Cartersville Medical Center", 
       "id": "110030", 
       "infections": {
@@ -691,6 +699,7 @@
     }, 
     {
       "address": "601 SOUTH 8TH STREET", 
+      "city": "GRIFFIN", 
       "display_name": "Spalding Regional Hospital", 
       "id": "110031", 
       "infections": {
@@ -776,6 +785,7 @@
     }, 
     {
       "address": "677 CHURCH STREET", 
+      "city": "MARIETTA", 
       "display_name": "Wellstar Kennestone Hospital", 
       "id": "110035", 
       "infections": {
@@ -861,6 +871,7 @@
     }, 
     {
       "address": "2518 JIMMY LEE SMITH PARKWAY", 
+      "city": "HIRAM", 
       "display_name": "Wellstar Paulding Hospital", 
       "id": "110042", 
       "infections": {
@@ -946,6 +957,7 @@
     }, 
     {
       "address": "304 TURNER MCCALL BLVD P O BOX 233", 
+      "city": "ROME", 
       "display_name": "Floyd Medical Center", 
       "id": "110054", 
       "infections": {
@@ -1031,6 +1043,7 @@
     }, 
     {
       "address": "1199 PRINCE AVENUE", 
+      "city": "ATHENS", 
       "display_name": "Athens Regional Medical Center", 
       "id": "110074", 
       "infections": {
@@ -1116,6 +1129,7 @@
     }, 
     {
       "address": "2701 N DECATUR ROAD", 
+      "city": "DECATUR", 
       "display_name": "Dekalb Medical Center", 
       "id": "110076", 
       "infections": {
@@ -1201,6 +1215,7 @@
     }, 
     {
       "address": "550 PEACHTREE ST NE", 
+      "city": "ATLANTA", 
       "display_name": "Emory University Hospital Midtown", 
       "id": "110078", 
       "infections": {
@@ -1286,6 +1301,7 @@
     }, 
     {
       "address": "80 JESSE HILL, JR DRIVE SE", 
+      "city": "ATLANTA", 
       "display_name": "Grady Memorial Hospital", 
       "id": "110079", 
       "infections": {
@@ -1371,6 +1387,7 @@
     }, 
     {
       "address": "5665 PEACHTREE DUNWOODY ROAD", 
+      "city": "ATLANTA", 
       "display_name": "Emory Saint Joseph's Hospital", 
       "id": "110082", 
       "infections": {
@@ -1456,6 +1473,7 @@
     }, 
     {
       "address": "1968 PEACHTREE RD NW", 
+      "city": "ATLANTA", 
       "display_name": "Piedmont Hospital", 
       "id": "110083", 
       "infections": {
@@ -1541,6 +1559,7 @@
     }, 
     {
       "address": "1000 MEDICAL CENTER BOULEVARD", 
+      "city": "LAWRENCEVILLE", 
       "display_name": "Gwinnett Medical Center", 
       "id": "110087", 
       "infections": {
@@ -1626,6 +1645,7 @@
     }, 
     {
       "address": "1412 MILSTEAD AVENUE, NE", 
+      "city": "CONYERS", 
       "display_name": "Rockdale Medical Center", 
       "id": "110091", 
       "infections": {
@@ -1711,6 +1731,7 @@
     }, 
     {
       "address": "303 PARKWAY DR NE", 
+      "city": "ATLANTA", 
       "display_name": "Atlanta Medical Center", 
       "id": "110115", 
       "infections": {
@@ -1796,6 +1817,7 @@
     }, 
     {
       "address": "3950 AUSTELL RD", 
+      "city": "AUSTELL", 
       "display_name": "Wellstar Cobb Hospital", 
       "id": "110143", 
       "infections": {
@@ -1881,6 +1903,7 @@
     }, 
     {
       "address": "1000 JOHNSON FERRY ROAD, NE", 
+      "city": "ATLANTA", 
       "display_name": "Northside Hospital", 
       "id": "110161", 
       "infections": {
@@ -1966,6 +1989,7 @@
     }, 
     {
       "address": "11 UPPER RIVERDALE ROAD, SW", 
+      "city": "RIVERDALE", 
       "display_name": "Southern Regional Medical Center", 
       "id": "110165", 
       "infections": {
@@ -2051,6 +2075,7 @@
     }, 
     {
       "address": "501 REDMOND ROAD", 
+      "city": "ROME", 
       "display_name": "Redmond Regional Medical Center", 
       "id": "110168", 
       "infections": {
@@ -2136,6 +2161,7 @@
     }, 
     {
       "address": "8954 HOSPITAL DRIVE", 
+      "city": "DOUGLASVILLE", 
       "display_name": "Wellstar Douglas Hospital", 
       "id": "110184", 
       "infections": {
@@ -2221,6 +2247,7 @@
     }, 
     {
       "address": "1133 EAGLE'S LANDING PARKWAY", 
+      "city": "STOCKBRIDGE", 
       "display_name": "Piedmont Henry Hospital", 
       "id": "110191", 
       "infections": {
@@ -2306,6 +2333,7 @@
     }, 
     {
       "address": "1700 MEDICAL WAY", 
+      "city": "SNELLVILLE", 
       "display_name": "Eastside Medical Center", 
       "id": "110192", 
       "infections": {
@@ -2391,6 +2419,7 @@
     }, 
     {
       "address": "3000 HOSPITAL BOULEVARD", 
+      "city": "ROSWELL", 
       "display_name": "North Fulton Hospital", 
       "id": "110198", 
       "infections": {
@@ -2476,6 +2505,7 @@
     }, 
     {
       "address": "1255 HIGHWAY 54 WEST", 
+      "city": "FAYETTEVILLE", 
       "display_name": "Piedmont Fayette Hospital", 
       "id": "110215", 
       "infections": {
@@ -2561,6 +2591,7 @@
     }, 
     {
       "address": "1266 HIGHWAY 515 SOUTH", 
+      "city": "JASPER", 
       "display_name": "Piedmont Mountainside Hospital", 
       "id": "110225", 
       "infections": {
@@ -2646,6 +2677,7 @@
     }, 
     {
       "address": "745 POPLAR ROAD", 
+      "city": "NEWNAN", 
       "display_name": "Piedmont Newnan Hospital", 
       "id": "110229", 
       "infections": {
@@ -2731,6 +2763,7 @@
     }, 
     {
       "address": "6325 HOSPITAL PARKWAY", 
+      "city": "JOHNS CREEK", 
       "display_name": "Emory Johns Creek Hospital", 
       "id": "110230", 
       "infections": {

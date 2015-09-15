@@ -1,12 +1,17 @@
 {
   "averages": {
-    "complications": 2.92, 
-    "id": "hipkneeStateAverages", 
-    "readmissions": 4.63
+    "complications": 2.9, 
+    "id": "hipkneeAverages", 
+    "national": {
+      "complications": 3.1, 
+      "readmissions": 4.8
+    }, 
+    "readmissions": 4.6
   }, 
   "hospitals": [
     {
       "address": "1200 NORTHSIDE FORSYTH DRIVE", 
+      "city": "CUMMING", 
       "display_name": "Northside Hospital Forsyth", 
       "id": "110005", 
       "surgery": {
@@ -32,6 +37,7 @@
     }, 
     {
       "address": "1230 BAXTER STREET", 
+      "city": "ATHENS", 
       "display_name": "Saint Mary's Hospital", 
       "id": "110006", 
       "surgery": {
@@ -57,6 +63,7 @@
     }, 
     {
       "address": "201 HOSPITAL ROAD", 
+      "city": "CANTON", 
       "display_name": "Northside Hospital Cherokee", 
       "id": "110008", 
       "surgery": {
@@ -82,6 +89,7 @@
     }, 
     {
       "address": "1364 CLIFTON ROAD, NE", 
+      "city": "ATLANTA", 
       "display_name": "Emory University Hospital", 
       "id": "110010", 
       "surgery": {
@@ -107,6 +115,7 @@
     }, 
     {
       "address": "705 DIXIE STREET", 
+      "city": "CARROLLTON", 
       "display_name": "Tanner Medical Center Carrollton", 
       "id": "110011", 
       "surgery": {
@@ -132,6 +141,7 @@
     }, 
     {
       "address": "5126 HOSPITAL DRIVE NE", 
+      "city": "COVINGTON", 
       "display_name": "Newton Medical Center", 
       "id": "110018", 
       "surgery": {
@@ -157,6 +167,7 @@
     }, 
     {
       "address": "743 SPRING STREET", 
+      "city": "GAINESVILLE", 
       "display_name": "Northeast Georgia Medical Center", 
       "id": "110029", 
       "surgery": {
@@ -182,6 +193,7 @@
     }, 
     {
       "address": "960 JOE FRANK HARRIS PARKWAY", 
+      "city": "CARTERSVILLE", 
       "display_name": "Cartersville Medical Center", 
       "id": "110030", 
       "surgery": {
@@ -207,6 +219,7 @@
     }, 
     {
       "address": "601 SOUTH 8TH STREET", 
+      "city": "GRIFFIN", 
       "display_name": "Spalding Regional Hospital", 
       "id": "110031", 
       "surgery": {
@@ -232,6 +245,7 @@
     }, 
     {
       "address": "677 CHURCH STREET", 
+      "city": "MARIETTA", 
       "display_name": "Wellstar Kennestone Hospital", 
       "id": "110035", 
       "surgery": {
@@ -257,6 +271,7 @@
     }, 
     {
       "address": "2518 JIMMY LEE SMITH PARKWAY", 
+      "city": "HIRAM", 
       "display_name": "Wellstar Paulding Hospital", 
       "id": "110042", 
       "surgery": {
@@ -282,6 +297,7 @@
     }, 
     {
       "address": "304 TURNER MCCALL BLVD P O BOX 233", 
+      "city": "ROME", 
       "display_name": "Floyd Medical Center", 
       "id": "110054", 
       "surgery": {
@@ -307,6 +323,7 @@
     }, 
     {
       "address": "1199 PRINCE AVENUE", 
+      "city": "ATHENS", 
       "display_name": "Athens Regional Medical Center", 
       "id": "110074", 
       "surgery": {
@@ -332,6 +349,7 @@
     }, 
     {
       "address": "2701 N DECATUR ROAD", 
+      "city": "DECATUR", 
       "display_name": "Dekalb Medical Center", 
       "id": "110076", 
       "surgery": {
@@ -357,6 +375,7 @@
     }, 
     {
       "address": "550 PEACHTREE ST NE", 
+      "city": "ATLANTA", 
       "display_name": "Emory University Hospital Midtown", 
       "id": "110078", 
       "surgery": {
@@ -382,6 +401,7 @@
     }, 
     {
       "address": "80 JESSE HILL, JR DRIVE SE", 
+      "city": "ATLANTA", 
       "display_name": "Grady Memorial Hospital", 
       "id": "110079", 
       "surgery": {
@@ -407,6 +427,7 @@
     }, 
     {
       "address": "5665 PEACHTREE DUNWOODY ROAD", 
+      "city": "ATLANTA", 
       "display_name": "Emory Saint Joseph's Hospital", 
       "id": "110082", 
       "surgery": {
@@ -432,6 +453,7 @@
     }, 
     {
       "address": "1968 PEACHTREE RD NW", 
+      "city": "ATLANTA", 
       "display_name": "Piedmont Hospital", 
       "id": "110083", 
       "surgery": {
@@ -457,6 +479,7 @@
     }, 
     {
       "address": "1000 MEDICAL CENTER BOULEVARD", 
+      "city": "LAWRENCEVILLE", 
       "display_name": "Gwinnett Medical Center", 
       "id": "110087", 
       "surgery": {
@@ -482,6 +505,7 @@
     }, 
     {
       "address": "1412 MILSTEAD AVENUE, NE", 
+      "city": "CONYERS", 
       "display_name": "Rockdale Medical Center", 
       "id": "110091", 
       "surgery": {
@@ -507,6 +531,7 @@
     }, 
     {
       "address": "303 PARKWAY DR NE", 
+      "city": "ATLANTA", 
       "display_name": "Atlanta Medical Center", 
       "id": "110115", 
       "surgery": {
@@ -532,6 +557,7 @@
     }, 
     {
       "address": "3950 AUSTELL RD", 
+      "city": "AUSTELL", 
       "display_name": "Wellstar Cobb Hospital", 
       "id": "110143", 
       "surgery": {
@@ -557,6 +583,7 @@
     }, 
     {
       "address": "1000 JOHNSON FERRY ROAD, NE", 
+      "city": "ATLANTA", 
       "display_name": "Northside Hospital", 
       "id": "110161", 
       "surgery": {
@@ -582,6 +609,7 @@
     }, 
     {
       "address": "11 UPPER RIVERDALE ROAD, SW", 
+      "city": "RIVERDALE", 
       "display_name": "Southern Regional Medical Center", 
       "id": "110165", 
       "surgery": {
@@ -607,6 +635,7 @@
     }, 
     {
       "address": "501 REDMOND ROAD", 
+      "city": "ROME", 
       "display_name": "Redmond Regional Medical Center", 
       "id": "110168", 
       "surgery": {
@@ -632,6 +661,7 @@
     }, 
     {
       "address": "8954 HOSPITAL DRIVE", 
+      "city": "DOUGLASVILLE", 
       "display_name": "Wellstar Douglas Hospital", 
       "id": "110184", 
       "surgery": {
@@ -657,6 +687,7 @@
     }, 
     {
       "address": "1133 EAGLE'S LANDING PARKWAY", 
+      "city": "STOCKBRIDGE", 
       "display_name": "Piedmont Henry Hospital", 
       "id": "110191", 
       "surgery": {
@@ -682,6 +713,7 @@
     }, 
     {
       "address": "1700 MEDICAL WAY", 
+      "city": "SNELLVILLE", 
       "display_name": "Eastside Medical Center", 
       "id": "110192", 
       "surgery": {
@@ -707,6 +739,7 @@
     }, 
     {
       "address": "3000 HOSPITAL BOULEVARD", 
+      "city": "ROSWELL", 
       "display_name": "North Fulton Hospital", 
       "id": "110198", 
       "surgery": {
@@ -732,6 +765,7 @@
     }, 
     {
       "address": "1255 HIGHWAY 54 WEST", 
+      "city": "FAYETTEVILLE", 
       "display_name": "Piedmont Fayette Hospital", 
       "id": "110215", 
       "surgery": {
@@ -757,6 +791,7 @@
     }, 
     {
       "address": "1266 HIGHWAY 515 SOUTH", 
+      "city": "JASPER", 
       "display_name": "Piedmont Mountainside Hospital", 
       "id": "110225", 
       "surgery": {
@@ -782,6 +817,7 @@
     }, 
     {
       "address": "745 POPLAR ROAD", 
+      "city": "NEWNAN", 
       "display_name": "Piedmont Newnan Hospital", 
       "id": "110229", 
       "surgery": {
@@ -807,6 +843,7 @@
     }, 
     {
       "address": "6325 HOSPITAL PARKWAY", 
+      "city": "JOHNS CREEK", 
       "display_name": "Emory Johns Creek Hospital", 
       "id": "110230", 
       "surgery": {
