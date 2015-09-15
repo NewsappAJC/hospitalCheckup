@@ -28,12 +28,20 @@ HospitalCheckup.module("HomeApp.Home", function(Home, HospitalCheckup, Backbone,
     template: "#homepage-icon-link",
     className: "small-4 columns",
     events: {
-      "click a": "navigate" 
+      "click a": "navigate",
+      "mouseover a": "hover", /*can't do this in css bc need to target both svg and text mouseovers*/
+      "mouseout a": "unhover"
     },
 
     navigate: function(e){
       e.preventDefault();
       Marionette.triggerMethodOn(HospitalCheckup.module("HeaderApp.List.headers").children.findByModel(this.model), "navigate", this.model);
+    },
+    hover: function(e){
+      this.$el.find("h3 a").addClass("hover");
+    },
+    unhover: function(e){
+      this.$el.find("h3 a").removeClass("hover");
     }
   });
 
