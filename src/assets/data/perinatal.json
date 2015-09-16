@@ -487,6 +487,26 @@
       "early_births_pct": 0, 
       "id": "110230", 
       "total_births": 1045
+    }, 
+    {
+      "Beds_Intensive": 16, 
+      "Beds_Intermediate": 8, 
+      "Beds_New_Born": 40, 
+      "Birthing_Rms": 0, 
+      "C_Sect": 1584, 
+      "Delivery_Rms": 0, 
+      "LDRP_Rms": 0, 
+      "LDR_Rms": 19, 
+      "Live_Births": 4953, 
+      "address": "1000 Medical Center Boulevard", 
+      "avg_delivery_charge": 7298, 
+      "avg_premature_charge": 37635, 
+      "city": "Lawrenceville", 
+      "csect_pct": 36, 
+      "display_name": "Gwinnett Medical Center", 
+      "early_births_pct": 3, 
+      "id": "110087", 
+      "total_births": 4989
     }
   ]
 }
