@@ -37,9 +37,13 @@ a:hover {
   width: 175px;
 }
 .top-bar {
+  background-color: #0e3968; /*override foundation default*/
+  padding-left: .9375rem;
+  padding-right: .9375rem; /*to match row padding inherited by everything else*/
+}
+#header-region .contain-to-grid {
   background-color: #0e3968;
   border-bottom: 4px solid #fff;
-  height: 50px;
 }
 .top-bar-section ul li, .top-bar.expanded .title-area, .top-bar.expanded {
   background-color: #0e3968;
