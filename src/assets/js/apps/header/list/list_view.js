@@ -22,7 +22,7 @@ HospitalCheckup.module("HeaderApp.List", function(List, HospitalCheckup, Backbon
 
   List.Headers = Marionette.CompositeView.extend({
     template: "#header-template",
-    //className: "",
+    className: "contain-to-grid",
     childView: List.Header,
     childViewContainer: "ul#nav"
   });

@@ -161,16 +161,14 @@ for node in src:
     for key in node.keys():
         if key in names:
             val = node[key]
-            # if(key == "C_Sect_pct" or key == "early_births_pct"):
-            #     val = str(val)+"%"
-            # elif(val):
-            #     val = "{:,d}".format(val)
-            #     if(key == "Avg_Delivery_Charge" or key == "Avg_Premature_Delivery_Charge"):
-            #         val = "$"+str(val)
-
             hospital[key] = val
 
     tree.append(hospital)
+
+#Gwinnett Medical didn't file their survey until after the data was prepared for download and they are a major player so adding them manually for now
+#data from http://www.georgiahealthdata.info/CCSS/AHQPDF2014.php?uid=HOSP366
+tree.append({ "Beds_Intensive": 16, "Beds_Intermediate": 8, "Beds_New_Born": 40, "Birthing_Rms": 0, "C_Sect": 1584, "Delivery_Rms": 0, "LDRP_Rms": 0, "LDR_Rms": 19, "Live_Births": 4953, "address": "1000 Medical Center Boulevard", "avg_delivery_charge": 7298, "avg_premature_charge": 37635, "city": "Lawrenceville", "csect_pct": 36, "display_name": "Gwinnett Medical Center", "early_births_pct": 3, "id": "110087", "total_births": 4989})
+print "**** MANUALLY ADDED GWINNETT MEDICAL TO PERINATAL DATA -- REMOVE BEFORE UPDATING WITH 2015 DATA ****"
 
 ft = open( '../src/assets/data/src/perinatal_avgs_web.json', 'rU')
 src = json.load(ft)

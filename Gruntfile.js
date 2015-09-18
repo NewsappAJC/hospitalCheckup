@@ -71,6 +71,7 @@ module.exports = function(grunt) {
             ],
             dest: 'build/assets/js/vendor/'
           },
+          { expand: true, flatten: true, src: ['src/favicon.ico'], dest: 'build/' },
           { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
@@ -246,8 +247,7 @@ module.exports = function(grunt) {
       },
       build: {
         cwd: "build/",
-        src: "**",
-        dest:"2015/staging/hospital-checkup/"
+        src: "**"
       }
     },
 

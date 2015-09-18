@@ -24,6 +24,12 @@ p strong, li strong {
   font-family: 'Boomer';
   font-weight: bold;
 }
+a {
+  color: #49709F;
+}
+a:hover {
+  color: #6F92BC;
+}
 /*nav*/
 .name {
   padding-top: 5px;
@@ -31,9 +37,13 @@ p strong, li strong {
   width: 175px;
 }
 .top-bar {
+  background-color: #0e3968; /*override foundation default*/
+  padding-left: .9375rem;
+  padding-right: .9375rem; /*to match row padding inherited by everything else*/
+}
+#header-region .contain-to-grid {
   background-color: #0e3968;
   border-bottom: 4px solid #fff;
-  height: 50px;
 }
 .top-bar-section ul li, .top-bar.expanded .title-area, .top-bar.expanded {
   background-color: #0e3968;
@@ -43,12 +53,15 @@ p strong, li strong {
   font-family:'Boomer-Book';
   transition:0.2s all ease;
 }
-.top-bar-section li:not(.has-form) a.header-link:hover, .top-bar-section li.active:not(.has-form) a:not(.button):hover  {
-  background-color:#49709F;
+.top-bar-section li:not(.has-form) a.header-link:hover {
+  background-color: #49709F;
+/*  background-color: #305A8C;*/ /*darker*/
+/*  background-color: #1C4A7D;*/ /*lighter*/
 }
-
-.top-bar-section li.active:not(.has-form) a:not(.button) {
+.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  /*color palette: http://paletton.com/palette.php?uid=13C0u0kiRuv8YNXehCCmMqNqxmc*/
   background: #49709F none repeat scroll 0 0;
+  /*background: #35608F none repeat scroll 0 0;*/
 }
 .top-bar-section ul li > a, .top-bar-section li:not(.has-form) a:not(.button) {
   text-transform: uppercase;
@@ -56,6 +69,16 @@ p strong, li strong {
 section {/*override fonts.css*/
   border-bottom: none;
   padding: 0
+}
+.authentication-change { /*log in/out*/
+  font-size: 11px;
+  margin-right: 5px;
+}
+.authentication-change.homepage a{
+  color: #fff;
+}
+.authentication-change .cmUserAnonymous, .authentication-change .cmUserAuthed { /*hide log in/log out until auth decides which one to display*/
+  display: none;
 }
 option {
   font-family: 'Boomer';
@@ -99,12 +122,15 @@ option {
 }
 #home-icon-row h3 {
   margin-top: 10px;
-  font-family: 'Boomer-Book';
+/*  font-family: 'Boomer-Book';*/
   text-transform: uppercase;
   font-size: 22px;
 }
 #home-icon-row h3 a {
   color: white;
+}
+#home-icon-row h3 a.hover {
+  color: #A3BCDB;
 }
 /*Charts.BarBase*/
 .axis text, .chart-label {
@@ -319,6 +345,9 @@ select#js-filter-criterion {
   }
   #home-icon-row h3 {
     font-size: 14px;
+  }
+  #dot-legend {
+    display: none;
   }
 }
 @media (max-width: 998px) and (min-width: 406px){
