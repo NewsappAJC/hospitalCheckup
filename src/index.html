@@ -50,6 +50,10 @@
   <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/wrap.js"></script> <!-- AJC metering modals js -->
   <div id="app-container">
     <div id="header-region"></div>
+    <div class="authentication-change right">
+      <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
+      <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
+    </div>
     <div id="main-region" class="container"></div>
   </div>
 
@@ -371,10 +375,7 @@
           </div>
       </div>
   </div>
-  <div class="authentication-change">
-    <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
-    <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
-  </div>
+
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/underscore.js"></script>

@@ -4,7 +4,9 @@ HospitalCheckup.module("HomeApp.Home", function(Home, HospitalCheckup, Backbone,
     initialize: function(){
       $(window).on("resize", this.fix_gap);
     },
-
+    onShow: function(){
+      $(".authentication-change").toggleClass("homepage", true); //css class to make it white on homepage
+    },
     remove: function() {
       $(window).off("resize",this.fix_gap);
       //call the superclass remove method

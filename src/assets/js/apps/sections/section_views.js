@@ -12,8 +12,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       hospitalRegion: "#hospital-show-region",
       bottomRegion: "#bottom-region"
     },
-    onRender: function(){
-      console.log("RENDER LAYOUT");
+    onShow: function(){
+      $(".authentication-change").toggleClass("homepage", false); //css class to make it white on homepage
     }
   });
 
