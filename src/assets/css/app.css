@@ -350,6 +350,10 @@ select#js-filter-criterion {
   #dot-legend {
     display: none;
   }
+  .top-bar {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media (max-width: 998px) and (min-width: 406px){
   #bg-img {
