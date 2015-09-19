@@ -186,6 +186,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/assets/css/app.css'       : ['src/assets/css/app.css'],
+          'build/assets/css/janrain.css'   : ['src/assets/css/janrain.css'],
           'build/assets/css/fonts.css'     : ['src/assets/css/fonts.css'],
           'build/assets/css/vendor/normalize.css' : ['src/assets/css/vendor/normalize.css'],
           'build/assets/css/vendor/foundation.css': ['src/assets/css/vendor/foundation.css']

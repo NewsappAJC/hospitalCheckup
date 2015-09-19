@@ -70,6 +70,7 @@ section {/*override fonts.css*/
   border-bottom: none;
   padding: 0
 }
+/* ----- CMG WRAP OVERRIDES ----- */
 .authentication-change { /*log in/out*/
   font-size: 11px;
   margin-right: 5px;
