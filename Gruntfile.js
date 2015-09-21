@@ -128,7 +128,6 @@ module.exports = function(grunt) {
           'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
           'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js'],
           'build/assets/js/common/views.js': ['src/assets/js/common/views.js'],
-          'build/assets/js/entities/common.js': ['src/assets/js/entities/common.js'],
           'build/assets/js/entities/header.js': ['src/assets/js/entities/header.js'],
           'build/assets/js/apps/header/list/list_controller.js': ['src/assets/js/apps/header/list/list_controller.js'],
           'build/assets/js/apps/header/list/list_view.js': ['src/assets/js/apps/header/list/list_view.js'],
@@ -187,6 +186,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/assets/css/app.css'       : ['src/assets/css/app.css'],
+          'build/assets/css/janrain.css'   : ['src/assets/css/janrain.css'],
           'build/assets/css/fonts.css'     : ['src/assets/css/fonts.css'],
           'build/assets/css/vendor/normalize.css' : ['src/assets/css/vendor/normalize.css'],
           'build/assets/css/vendor/foundation.css': ['src/assets/css/vendor/foundation.css']

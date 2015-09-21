@@ -70,6 +70,7 @@ section {/*override fonts.css*/
   border-bottom: none;
   padding: 0
 }
+/* ----- CMG WRAP OVERRIDES ----- */
 .authentication-change { /*log in/out*/
   font-size: 11px;
   margin-right: 5px;
@@ -348,6 +349,10 @@ select#js-filter-criterion {
   }
   #dot-legend {
     display: none;
+  }
+  .top-bar {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (max-width: 998px) and (min-width: 406px){
