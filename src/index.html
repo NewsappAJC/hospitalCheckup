@@ -57,6 +57,8 @@
     ga('send', 'pageview');
 
   </script>
+  <!-- AJC metrics -->
+  <script src="//assets.adobedtm.com/20d5deb47c9e7fe47a9f969db01578a739d7179d/satelliteLib-d8b1205ad588334c74c32ff9eddee3d739886729.js"></script>
 </head>
 <body>
   <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/wrap.js"></script> <!-- AJC metering modals js -->
@@ -400,7 +402,6 @@
   <script src="assets/js/vendor/spin.js"></script>
   <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
-  <script src="assets/js/vendor/flatpage_stubs.js"></script>
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
@@ -429,20 +430,7 @@
     $(document).foundation();
 
     HospitalCheckup.start();
-
-    //Add flatpage interaction tracking script
-    // Have to add flatpage_stubs.js above this script
-    var i = 0;
-    document.body.onclick = function(e){
-      i += 1;
-      // Track in metrics
-      cmg.s_coxnews.utilities.track_event(42, null, ["eVar40", "hospital_checkup"], ["prop42", "eVar42", "ajc"], "Interaction in AJC Hospital Checkup app");
-      if(i === 3){
-        i = 0;
-        // Refresh ads
-        Adgeletti.refresh();
-      }
-    }
   </script>
+  <script type="text/javascript">_satellite.pageBottom();</script> 
 </body>
 </html>
