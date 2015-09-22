@@ -314,6 +314,13 @@ select#js-filter-criterion {
   .name {
     padding-bottom: 5px;
   }
+  .top-bar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #home-icon-row {
+    padding: 10px 0;
+  }
   .mobile-rating {
     display: block;
     width: 20px;
@@ -347,12 +354,11 @@ select#js-filter-criterion {
   #home-icon-row h3 {
     font-size: 14px;
   }
+  .pq-modal-content .pq-modal-wrap-container.pq-modal-welcome-container {
+    top: 10%;
+  }
   #dot-legend {
     display: none;
-  }
-  .top-bar {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 @media (max-width: 998px) and (min-width: 406px){
