@@ -62,7 +62,8 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/modernizr.js',
               //'src/assets/js/vendor/fastclick.js',
-              'src/assets/js/vendor/backbone.localstorage.js',
+              //'src/assets/js/vendor/backbone.localstorage.js',
+              'src/assets/js/vendor/backbone.sessionStorage.js',
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
               'src/assets/js/vendor/backbone.select.js',
@@ -286,7 +287,8 @@ module.exports = function(grunt) {
           //"fastclick.js": "foundation/js/vendor/fastclick.js", //makes clicks happen faster on touch devices but also breaks tooltips
           "foundation.js": "foundation/js/foundation.js",
           "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
-          "backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
+          //"backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
+          "backbone.sessionStorage.js": "backbone.sessionStorage/backbone.sessionStorage.js", //session storage adapter
           "spin.js": "spin.js/spin.js", //for page loading spinner
           "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
           "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options,
