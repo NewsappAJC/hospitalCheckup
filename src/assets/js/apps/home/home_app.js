@@ -10,6 +10,11 @@ HospitalCheckup.module("HomeApp", function(HomeApp, HospitalCheckup, Backbone, M
     showHome: function() {
       HomeApp.Controller.showHome();
       HospitalCheckup.execute("set:active:header", "");
+      ga('set', {
+        page: '/',
+        title: "Home"
+      });
+      ga('send', 'pageview');
     }
   };
 
