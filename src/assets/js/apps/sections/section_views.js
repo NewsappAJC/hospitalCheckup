@@ -2,7 +2,6 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
 
   Section.Layout = Marionette.LayoutView.extend({
     template: "#section-layout",
-    className: "large-12 columns",
     regions: {
       headlineRegion: "#section-headline-region",
       introRegion: "#section-intro-region",

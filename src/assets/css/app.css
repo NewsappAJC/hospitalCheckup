@@ -93,7 +93,6 @@ option {
 /*homepage*/
 #row-bg {
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 40px;
   padding-top: 70px;
   color: #fff;
 }
@@ -361,7 +360,7 @@ select#js-filter-criterion {
     font-size: 14px;
   }
   .pq-modal-content .pq-modal-wrap-container.pq-modal-welcome-container {
-    top: 10%;
+    top: 5%;
   }
   #dot-legend {
     display: none;
