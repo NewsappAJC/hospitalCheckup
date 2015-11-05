@@ -18,14 +18,14 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     if(storage){
       return storage;
     }
-    var newStorage = new Backbone.LocalStorage(key);
+    var newStorage = new Backbone.SessionStorage(key);
     storageCache[key] = newStorage;
     return newStorage;
   }
 
   var StorageMixin = function(entityPrototype){
     var storageKey = findStorageKey(entityPrototype);
-    return { localStorage: getStorage(storageKey) };
+    return { sessionStorage: getStorage(storageKey) };
   };
 
   var getEntity = function(constructorString){

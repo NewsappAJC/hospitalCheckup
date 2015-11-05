@@ -55,18 +55,29 @@ for node in src:
 
     tree.append(hospital)
 
+# ft = open( '../src/assets/data/src/infection_avgs_web.json', 'rU')
+# src = json.load(ft)
+# ft.close()
+#
+# infDict = {"HAI_1_SIR" : "clabsi", "HAI_2_SIR" : "cauti", "HAI_3_SIR" : "ssicolon", "HAI_4_SIR" : "ssihyst", "HAI_5_SIR" : "mrsa", "HAI_6_SIR" : "cdiff"}
+# totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
+#
+# for node in src:
+#     totals[infDict[node["measure"]]] = node["score"]
 
-##### HIP/KNEE SURGERIES #####
-#rename unintuitive ratio keys and round the averages
-ft = open( '../src/assets/data/src/infection_avgs_web.json', 'rU')
-src = json.load(ft)
-ft.close()
+import urllib2
 
-infDict = {"HAI_1_SIR" : "clabsi", "HAI_2_SIR" : "cauti", "HAI_3_SIR" : "ssicolon", "HAI_4_SIR" : "ssihyst", "HAI_5_SIR" : "mrsa", "HAI_6_SIR" : "cdiff"}
+endpoints = [{"cabsi": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_1_SIR&state=GA"}, {"cauti": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_2_SIR&state=GA"}, {"ssicolon": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_3_SIR&state=GA"}, {"ssihyst": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_4_SIR&state=GA"}, {"mrsa": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_5_SIR&state=GA"}, {"cdiff": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_6_SIR&state=GA"}]
+
 totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
+for node in endpoints: #go through each enpoint
+    for key in node.keys(): #use the key as an ID later
+        url = urllib2.Request(node[key])
+        data = json.load(urllib2.urlopen(url))
 
-for node in src:
-    totals[infDict[node["measure"]]] = node["score"]
+        for item in data:
+            totals[key] = float(item["score"])
+
 
 f = open( '../src/assets/data/infections.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
@@ -74,6 +85,9 @@ f.close()
 
 print "hospital infections JSON saved!"
 
+
+##### HIP/KNEE SURGERIES #####
+#rename unintuitive ratio keys and round the averages
 f = open( '../src/assets/data/src/hip_knee.json', 'rU' )
 src = json.load(f)
 f.close()
@@ -110,17 +124,16 @@ for node in src:
     tree.append(hospital)
 
 ##### Uses this API endpoint because I couldn't find a current national average in the database http://dev.socrata.com/foundry/#/data.medicare.gov/tiin-ktzr
-import urllib2
-
+#already imported urllib2 earlier
 endpoints = [{"complications": "https://data.medicare.gov/resource/tiin-ktzr.json?measure_id=COMP_HIP_KNEE"}, {"readmissions": "https://data.medicare.gov/resource/vfqj-duc4.json?measure_id=READM_30_HIP_KNEE"}]
 
 totals = {"id": "hipkneeAverages", "national": {}} #backbone expects an ID and local storage uses it too
-for node in endpoints: #go through each file
-	for key in node.keys(): #use the key as an ID later to match it with state level
-		url = urllib2.Request(node[key])
-		data = json.load(urllib2.urlopen(url))
-		for item in data:
-			totals["national"][key] = float(item["national_rate"])
+for node in endpoints: #go through each endpoint
+    for key in node.keys(): #use the key as an ID later to match it with state level
+        url = urllib2.Request(node[key])
+        data = json.load(urllib2.urlopen(url))
+        for item in data:
+            totals["national"][key] = float(item["national_rate"])
 
 ft = open( '../src/assets/data/src/hipknee_avgs_web.json', 'rU')
 src = json.load(ft)
@@ -174,7 +187,7 @@ ft = open( '../src/assets/data/src/perinatal_avgs_web.json', 'rU')
 src = json.load(ft)
 ft.close()
 
-#would be easy to do this in sql but I was the view to be easy to understand
+#would be easy to do this in sql but I want the view to be easy to understand
 perinatalDict = {"avgC_SectPct" : "csect_pct", "avgDeliveryCharge" : "avg_delivery_charge", "avgPrematureCharge": "avg_premature_charge", "avgBirths": "total_births", "earlyPct": "early_births_pct"}
 totals = {"id": "perinatalStateAverages"} #backbone expects an ID and local storage uses it too
 

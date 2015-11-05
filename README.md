@@ -4,6 +4,11 @@ Explore hospital quality data for Atlanta area hospitals.
 - Published: by Sept. 15!
 - Lives here: http://hospitals.myajc.com/
 - Hosted here:
+- Data covers period through:
+  - Infections: 12/31/2014
+  - Complications: 3/31/2014
+  - Readmissions: 6/30/2014
+  - Perinatal early births: 12/31/14
 
 ## Dependencies
 
@@ -19,6 +24,17 @@ Explore hospital quality data for Atlanta area hospitals.
  - [backbone.select](https://github.com/hashchange/backbone.select) for keeping the nav selections updated
  - [backbone.localstorage](https://github.com/jeromegn/Backbone.localStorage) to utilize local storage
  - [spin.js](http://spin.js.org/) for loading spinner
+
+##Helpful links 
+ - [Hospital Compare data set homepage](https://data.medicare.gov/data/hospital-compare)
+ - [Complications data set](https://data.medicare.gov/Hospital-Compare/Complications-National/cvcs-xecj)
+ - [Complications API docs](https://dev.socrata.com/foundry/#/data.medicare.gov/tiin-ktzr)
+ - [Readmissions and Deaths data set](https://data.medicare.gov/Hospital-Compare/Readmissions-and-Deaths-National/qqw3-t4ie)
+ - [Readmissions and Deaths API docs](https://dev.socrata.com/foundry/#/data.medicare.gov/vfqj-duc4)
+ - [Data updates](https://data.medicare.gov/Hospital-Compare/Data-Updates/bzsr-4my4)
+ - [Hospital acquired infections hospitals data set](https://data.medicare.gov/Hospital-Compare/Healthcare-Associated-Infections-Hospital/77hc-ibv8)
+ - [Hospital acquired infections national data set](https://data.medicare.gov/Hospital-Compare/Healthcare-Associated-Infections-National/yd3s-jyhd)
+ - [Hospital acquired infections state data set](https://data.medicare.gov/Hospital-Compare/Healthcare-Associated-Infections-State/k2ze-bqvw)
 
 ## Notes
 - Rate = Ratio

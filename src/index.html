@@ -21,6 +21,8 @@
   <meta property="og:type" content="article" />
   <meta property="og:image" content="http://hospitals.myajc.com/assets/img/fb.png" />
   <meta property="og:description" content="Compare the records of Metro Atlanta’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months." />
+  <meta property="fb:admins" content="https://www.facebook.com/emily.merwin" />
+  <meta property="fb:app_id" content="366816260017522" />
   <meta property="article:author" content="https://www.facebook.com/emily.merwin" />
   <meta property="article:publisher" content="https://www.facebook.com/ajc" />
 
@@ -42,9 +44,9 @@
   <link rel="stylesheet" href="assets/css/vendor/normalize.css">
   <link rel="stylesheet" href="assets/css/vendor/foundation.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/styles.css" type="text/css"> <!-- AJC metering modals css -->
-  <link rel="stylesheet" href="assets/css/janrain.css"> <!-- just the ENTIRE 4k line myajc master.css file bc the login screen css was messed up, fix it -->
+  <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/janrainModals.css"> <!-- just the ENTIRE 4k line myajc master.css file bc the login screen css was messed up, fix it -->
+  <link rel="stylesheet" href="assets/css/app.css">
   <script src="assets/js/vendor/modernizr.js"></script>
   <!-- Google Analytics -->
   <script>
@@ -54,8 +56,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-47044560-5', 'auto');
-    ga('send', 'pageview');
-
+    //ga('send', 'pageview');
   </script>
 </head>
 <body>
@@ -110,6 +111,7 @@
         <div class="row">
           <div class="small-12 small-centered columns">
             <p>For consumers who want to make smart health care choices, the AJC is dedicated to being the go-to source for information. This website allows you to compare the records of Metro Atlanta and North Georgia’s hospitals when it comes to patient safety, surgeries and maternity services. Not only do these reports help inform consumers, they also hold hospitals accountable for the quality of services they deliver. Plan to visit this site frequently, as the AJC’s experts will be adding more information in the coming months. We’re looking for your input too. If you’ve had an experience at a local hospital that you’d like to share with us, please <a href="mailto:cteegardin@ajc.com" target="_blank">send us an email.</a> We’d love to hear what you’re experiencing when you entrust your health to the hospitals in our community.</p>
+            <p><small>Application by Emily Merwin, reporting by Carrie Teegardin</small></p>
           </div>
         </div>
       </div>
@@ -192,7 +194,7 @@
     <p>
       <strong>Patients included:</strong> <%= patients %><br>
       <strong>Rate:</strong> <%= rate %>%<br>
-      <strong>Rate range:</strong> <%= upper %>% <strong>to</strong> <%= lower %>%<br>
+      <strong>Rate range:</strong> <%= lower %>% <strong>to</strong> <%= upper %>%<br>
       <strong>Rating:</strong> <%= category %>
     </p>
     <hr>
@@ -295,104 +297,16 @@
   </script>
 
   <!-- AJC METERING MODALS -->
-  <div id="pq-passage-quota-block" class="pq-modal-content pq-master-inherit" >
-      <div class="pq-modal-screen"></div>
-      <div class="pq-modal-wrap-container pq-modal-roadblock-container">
-          <div class="pq-access-meter-modal pq-access-meter-modal-limit">
-              <header class="pq-access-limit-header">
-                  <p>You have reached your limit of <span class="pq-passage-quota-max"></span> free articles this month.</p>
-                  <h2>Enjoy unlimited access to myAJC.com.</h2>
-                  <h5>Starting at just 99¢ for 8 weeks.</h5>
-              </header>
-              <div class="pq-access-limit-body">
-                  <p class="pq-access-limit-hero-head">GREAT REASONS TO SUBSCRIBE TODAY!</p>
-
-                  <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-limit-hero-ajc.png" class="pq-access-limit-hero">
-
-                  <ul class="pq-access-limit-reasons">
-                      <li>IN-DEPTH REPORTING</li>
-                      <li>INTERACTIVE STORYTELLING</li>
-                      <li>NEW TOPICS & COVERAGE</li>
-                      <li>ePAPER</li>
-                  </ul>
-              </div>
-              <footer class="pq-access-limit-footer">
-                 <div class="pq-limit-footer-container">
-                      <p>Already a Paid Subscriber?</p>
-                      <a href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
-                      <a href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
-                  </div>
-                  <a href="https://myaccount.ajc.com/dsssubscribe.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="pq-access-meter-btn pq-passage-quota-view-offers">
-                      VIEW ALL OFFERS
-                  </a>
-              </footer>
-          </div>
-      </div>
-  </div>
-
-  <div id="pq-passage-quota-sticky" class="pq-modal-sticky pq-master-inherit" >
-      <div class="pq-access-meter-modal pq-access-meter-modal-count">
-          <header class="pq-access-welcome-header">
-              <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-ajc.png" class="pq-access-welcome-logo">
-              <a href="#" class="pq-access-meter-close pq-close-modal">X</a>
-          </header>
-          <div class="pq-access-body">
-              <h1>You have read <span class="pq-passage-quota-count"></span> of <span class="pq-passage-quota-max"></span> free premium articles.</h1>
-              <p>Get unlimited access to all of our breaking news, in-depth coverage and bonus content- exclusively for subscribers. Starting at just 99¢ for 8 weeks.</p>
-
-              <footer class="pq-access-footer">
-                  <a href="https://myaccount.ajc.com/dsssubscribe.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="pq-access-meter-btn pq-passage-quota-view-offers">
-                      VIEW ALL OFFERS
-                  </a>
-                  <div>
-                      <p>Already a Paid Subscriber?</p>
-                      <a href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
-                      <a href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
-                  </div>
-              </footer>
-          </div>
-      </div>
-  </div>
-
-  <div id="pq-passage-quota-welcome" class="pq-modal-content pq-master-inherit" >
-      <div class="pq-modal-screen"></div>
-      <div class="pq-modal-wrap-container pq-modal-welcome-container">
-          <div class="pq-access-meter-modal pq-access-meter-modal-welcome">
-              <header class="pq-access-welcome-header">
-                  <img src="http://media.cmgdigital.com/shared/media/2015-09-11-08-54-21/web/common/premium/images/modal-access-ajc.png" class="pq-access-welcome-logo">
-              </header>
-              <div class="pq-access-body">
-                  <a href="#" class="pq-access-meter-close pq-close-modal">X</a>
-
-                  <h1>
-                      Welcome to myAJC.com
-                  </h1>
-
-                  <p>This subscriber-only site gives you exclusive access to breaking news, in-depth coverage, exclusive interactives and bonus content.</p>
-                  <p>
-                      You can read <span class="pq-passage-quota-max"></span> free articles of your choice a month that are only available on myAJC.com.
-                  </p>
-
-                  <footer class="pq-access-footer">
-                      <div class="pq-welcome-links">
-                          <p>Already a Paid Subscriber?</p>
-                          <a id="pq-welcome-signin" href="#" class="pq-access-meter-link cmOpenJanrainModal pq-modal-subscriber-link">I have a log in for digital access</a>
-                          <a id="pq-welcome-create-login" href="https://myaccount.ajc.com/dssMatch.aspx?premium=y&product=desktop&icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers&return=http://www.myajc.com?icid=ajc_internallink_myajcinvitationbox_feb2014_viewoffers_post-purchase" class="dss-match-em pq-access-meter-link">I need to create a login for digital access</a>
-                      </div>
-                      <a id="pq-welcome-continue" href="#" class="pq-access-meter-btn pq-close-modal">
-                          CONTINUE TO YOUR 1<sup>ST</sup> FREE ARTICLE
-                      </a>
-                  </footer>
-              </div>
-          </div>
-      </div>
-  </div>
-
+  <div id="ajc-meter-modals"></div>
 
   <script src="assets/js/vendor/jquery.js"></script>
+  <script type="text/javascript">
+  //load the HTML for the metering modals
+  $( "#ajc-meter-modals" ).load( "http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/modals.html" );
+  </script>
   <script src="assets/js/vendor/underscore.js"></script>
   <script src="assets/js/vendor/backbone.js"></script>
-  <script src="assets/js/vendor/backbone.localstorage.js"></script>
+  <script src="assets/js/vendor/backbone.sessionStorage.js"></script>
   <script src="assets/js/vendor/backbone.marionette.js"></script>
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
@@ -400,7 +314,6 @@
   <script src="assets/js/vendor/spin.js"></script>
   <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
-  <script src="assets/js/vendor/flatpage_stubs.js"></script>
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
@@ -429,20 +342,6 @@
     $(document).foundation();
 
     HospitalCheckup.start();
-
-    //Add flatpage interaction tracking script
-    // Have to add flatpage_stubs.js above this script
-    var i = 0;
-    document.body.onclick = function(e){
-      i += 1;
-      // Track in metrics
-      cmg.s_coxnews.utilities.track_event(42, null, ["eVar40", "hospital_checkup"], ["prop42", "eVar42", "ajc"], "Interaction in AJC Hospital Checkup app");
-      if(i === 3){
-        i = 0;
-        // Refresh ads
-        Adgeletti.refresh();
-      }
-    }
   </script>
 </body>
 </html>

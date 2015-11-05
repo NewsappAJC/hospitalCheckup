@@ -4,7 +4,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   var API = {
     getChartEntities: function(entityID, sectionID){
       Entities.StateAverages = Backbone.Model.extend({
-        localStorage: new Backbone.LocalStorage(sectionID+"-state-avg") //using this instead of a URL!
+        sessionStorage: new Backbone.SessionStorage(sectionID+"-state-avg") //using this instead of a URL!
       });
 
       Entities.Hospital = Backbone.Model.extend({

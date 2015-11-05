@@ -12,16 +12,19 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     listInfections: function(id, criterion){
       SectionsApp.Section.Controller.listInfections(id, criterion);
       HospitalCheckup.execute("set:active:header", "infections"); //update navigation toolbar
+      updateAnalytics("infections", criterion);
     },
 
     listSurgeries: function(id, criterion){
       SectionsApp.Section.Controller.listSurgeries(id, criterion);
       HospitalCheckup.execute("set:active:header", "surgery"); //update navigation toolbar
+      updateAnalytics("surgery", criterion);
     },
 
     listPerinatal: function(id, criterion){
       SectionsApp.Section.Controller.listPerinatal(id, criterion);
       HospitalCheckup.execute("set:active:header", "perinatal"); //update navigation toolbar
+      updateAnalytics("perinatal", criterion);
     },
 
     showHospital: function(id, aboutView, measuresView, defaultModel){  //received URL with ID parameter
@@ -29,17 +32,17 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
     }
   };
 
-  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav or click on viz
+  HospitalCheckup.on("infections:list", function(){ //list infections, triggered from nav
     HospitalCheckup.navigate("infections");
     API.listInfections();
   });
 
-  HospitalCheckup.on("surgeries:list", function(){ //list infections, triggered from nav or click on viz
+  HospitalCheckup.on("surgeries:list", function(){ //list surgeries, triggered from nav
     HospitalCheckup.navigate("surgery");
     API.listSurgeries();
   });
 
-  HospitalCheckup.on("perinatal:list", function(){ //list infections, triggered from nav or click on viz
+  HospitalCheckup.on("perinatal:list", function(){ //list perinatal, triggered from nav
     HospitalCheckup.navigate("perinatal");
     API.listPerinatal();
   });
@@ -64,6 +67,14 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
   HospitalCheckup.on("perinatal:filter", function(criterion){ //filter menu changed
     HospitalCheckup.navigate("perinatal/filter/" + criterion);
   });
+
+  function updateAnalytics(page, filter){
+    ga('set', {
+      page: '/#'+page,
+      title: page.charAt(0).toUpperCase() + page.substring(1).toLowerCase()
+    });
+    ga('send', 'pageview');
+  }
 
   SectionsApp.on("start", function(){
     new SectionsApp.Router({

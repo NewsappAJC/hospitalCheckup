@@ -1,5 +1,5 @@
 {
-  "name": "my project",
+  "name": "AJC Hospital Checkup",
   "dependencies": {
     "jquery": "2.1.3",
     "json2": "latest",
@@ -10,11 +10,11 @@
     "modernizr": "latest",
     "foundation": "latest",
     "chroma-js": "latest",
-    "backbone.localstorage": "v1.1.16",
     "spin.js": "~2.3.2",
     "backbone.select": "~1.3.1",
     "marionette": "~2.4.3",
-    "ajc-design": "https://github.com/NewsappAJC/digital-design-guide.git"
+    "ajc-design": "https://github.com/NewsappAJC/digital-design-guide.git",
+		"backbone.sessionStorage": "https://gist.github.com/3875274.git"
   },
   "devDependencies": {
     "jasmine": "latest",
