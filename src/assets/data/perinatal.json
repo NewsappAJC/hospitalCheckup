@@ -3,7 +3,7 @@
     "avg_delivery_charge": 11253, 
     "avg_premature_charge": 21199, 
     "csect_pct": 33, 
-    "early_births_pct": "3", 
+    "early_births_pct": 3, 
     "id": "perinatalStateAverages", 
     "total_births": 1652
   }, 
@@ -24,7 +24,7 @@
       "city": "CUMMING", 
       "csect_pct": 36, 
       "display_name": "Northside Hospital Forsyth", 
-      "early_births_pct": 2, 
+      "early_births_pct": 3, 
       "id": "110005", 
       "total_births": 2917
     }, 
@@ -44,7 +44,7 @@
       "city": "ATHENS", 
       "csect_pct": 32, 
       "display_name": "Saint Mary's Hospital", 
-      "early_births_pct": 1, 
+      "early_births_pct": 2, 
       "id": "110006", 
       "total_births": 1413
     }, 
@@ -64,7 +64,7 @@
       "city": "CANTON", 
       "csect_pct": 34, 
       "display_name": "Northside Hospital Cherokee", 
-      "early_births_pct": 1, 
+      "early_births_pct": 2, 
       "id": "110008", 
       "total_births": 1197
     }, 
@@ -144,7 +144,7 @@
       "city": "MARIETTA", 
       "csect_pct": 35, 
       "display_name": "Wellstar Kennestone Hospital", 
-      "early_births_pct": 3, 
+      "early_births_pct": 5, 
       "id": "110035", 
       "total_births": 5456
     }, 
@@ -204,7 +204,7 @@
       "city": "ATLANTA", 
       "csect_pct": 28, 
       "display_name": "Emory University Hospital Midtown", 
-      "early_births_pct": 1, 
+      "early_births_pct": 0, 
       "id": "110078", 
       "total_births": 3945
     }, 
@@ -244,7 +244,7 @@
       "city": "ATLANTA", 
       "csect_pct": 34, 
       "display_name": "Piedmont Hospital", 
-      "early_births_pct": 9, 
+      "early_births_pct": 7, 
       "id": "110083", 
       "total_births": 3495
     }, 
@@ -304,7 +304,7 @@
       "city": "AUSTELL", 
       "csect_pct": 33, 
       "display_name": "Wellstar Cobb Hospital", 
-      "early_births_pct": 3, 
+      "early_births_pct": 2, 
       "id": "110143", 
       "total_births": 3557
     }, 
@@ -344,7 +344,7 @@
       "city": "DOUGLASVILLE", 
       "csect_pct": 29, 
       "display_name": "Wellstar Douglas Hospital", 
-      "early_births_pct": 5, 
+      "early_births_pct": 9, 
       "id": "110184", 
       "total_births": 454
     }, 
@@ -364,7 +364,7 @@
       "city": "STOCKBRIDGE", 
       "csect_pct": 27, 
       "display_name": "Piedmont Henry Hospital", 
-      "early_births_pct": 4, 
+      "early_births_pct": 12, 
       "id": "110191", 
       "total_births": 2416
     }, 
@@ -444,7 +444,7 @@
       "city": "JASPER", 
       "csect_pct": 30, 
       "display_name": "Piedmont Mountainside Hospital", 
-      "early_births_pct": 3, 
+      "early_births_pct": 2, 
       "id": "110225", 
       "total_births": 341
     }, 
