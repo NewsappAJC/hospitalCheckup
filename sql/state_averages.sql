@@ -36,7 +36,7 @@ SELECT round(AVG(C_Sect / Total_Births)*100,0) as avgC_SectPct,
        round(SUM(Avg_Premature_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgPrematureCharge,
        round(AVG(Total_Births), 0) as avgBirths,
        score as earlyPct
-FROM ahq.perinatal, hospital_compare.State_TimelyEffectiveCare
+FROM ahq.perinatal, hospital_compare.HQI_STATE_TimelyEffectiveCare
 WHERE Year = 2014 AND Total_Births > 0 AND (C_Sect / Total_Births) < 1 AND measure_id = "PC_01" AND state = "GA"
 
 
