@@ -43,7 +43,10 @@ for node in src:
                     hospital["infections"][inf]["incidents_label"] = "Central line days"
                 elif(inf == "mrsa" or inf == "cdiff"):
                     hospital["infections"][inf]["incidents_label"] = "Patient days"
-                hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
+                try:
+                    hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
+                except:
+                    hospital["infections"][inf]["incidents"] = 0 #sometimes there are strings in the null data fields
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"

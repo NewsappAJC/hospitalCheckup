@@ -46,8 +46,8 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 
           $.ajax({
             dataType: "json",
-            url: "/assets/data/"+sectionID+".json",
-            //url: "//hospitals.myajc.com/assets/data/"+sectionID+".json",
+            //url: "/assets/data/"+sectionID+".json",
+            url: "//hospitals.myajc.com/assets/data/"+sectionID+".json",
             type: "GET",
             success: resetModels
           });
