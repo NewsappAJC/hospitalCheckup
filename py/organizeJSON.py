@@ -69,8 +69,8 @@ for node in src:
 #     totals[infDict[node["measure"]]] = node["score"]
 
 import urllib2
-
-endpoints = [{"clabsi": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_1_SIR&state=GA"}, {"cauti": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_2_SIR&state=GA"}, {"ssicolon": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_3_SIR&state=GA"}, {"ssihyst": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_4_SIR&state=GA"}, {"mrsa": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_5_SIR&state=GA"}, {"cdiff": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_6_SIR&state=GA"}]
+print "***NOTE: Using ICU only data for CLABSI and CAUTI, revisit in future***"
+endpoints = [{"clabsi": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_1a_SIR&state=GA"}, {"cauti": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_2a_SIR&state=GA"}, {"ssicolon": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_3_SIR&state=GA"}, {"ssihyst": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_4_SIR&state=GA"}, {"mrsa": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_5_SIR&state=GA"}, {"cdiff": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_6_SIR&state=GA"}]
 
 totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
 for node in endpoints: #go through each enpoint
