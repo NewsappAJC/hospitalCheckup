@@ -16,17 +16,17 @@
       "id": "110005", 
       "infections": {
         "cauti": {
-          "category": "Better than the National Benchmark", 
-          "incidents": "2,660", 
+          "category": "No Different than National Benchmark", 
+          "incidents": "3,818", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 0.167, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 3.942, 
-          "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.76
+          "note": null, 
+          "observed": 3, 
+          "predicted": 4.581, 
+          "ratingClass": "normal", 
+          "ratio": 0.655, 
+          "upper": 1.782
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -42,17 +42,17 @@
           "upper": 1.116
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "3,178", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "4,846", 
           "incidents_label": "Central line days", 
-          "lower": 0.011, 
+          "lower": 0.006, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
-          "predicted": 4.452, 
-          "ratingClass": "normal", 
-          "ratio": 0.225, 
-          "upper": 1.108
+          "predicted": 7.939, 
+          "ratingClass": "good", 
+          "ratio": 0.126, 
+          "upper": 0.621
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
@@ -103,16 +103,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "672", 
+          "incidents": "1,703", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.033, 
+          "lower": 0.168, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 1.532, 
+          "observed": 3, 
+          "predicted": 4.531, 
           "ratingClass": "normal", 
-          "ratio": 0.653, 
-          "upper": 3.219
+          "ratio": 0.662, 
+          "upper": 1.802
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -129,16 +129,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "723", 
+          "incidents": "1,188", 
           "incidents_label": "Central line days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 1.255, 
+          "predicted": 2.41, 
           "ratingClass": "normal", 
           "ratio": 0, 
-          "upper": 2.387
+          "upper": 1.243
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -188,17 +188,17 @@
       "id": "110008", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,737", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,341", 
           "incidents_label": "Urinary catheter days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 2.737, 
-          "ratingClass": "normal", 
+          "predicted": 3.044, 
+          "ratingClass": "good", 
           "ratio": 0, 
-          "upper": 1.095
+          "upper": 0.984
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -215,16 +215,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,279", 
+          "incidents": "1,791", 
           "incidents_label": "Central line days", 
-          "lower": 0.028, 
+          "lower": 0.019, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
-          "predicted": 1.796, 
+          "predicted": 2.687, 
           "ratingClass": "normal", 
-          "ratio": 0.557, 
-          "upper": 2.746
+          "ratio": 0.372, 
+          "upper": 1.835
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -275,16 +275,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "6,141", 
+          "incidents": "17,456", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.558, 
+          "lower": 0.855, 
           "na": 0, 
           "note": null, 
-          "observed": 16, 
-          "predicted": 16.974, 
+          "observed": 57, 
+          "predicted": 50.968, 
           "ratingClass": "normal", 
-          "ratio": 0.943, 
-          "upper": 1.498
+          "ratio": 1.118, 
+          "upper": 1.439
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
@@ -301,16 +301,16 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": "8,799", 
+          "incidents": "19,731", 
           "incidents_label": "Central line days", 
-          "lower": 0.078, 
+          "lower": 0.104, 
           "na": 0, 
           "note": null, 
-          "observed": 4, 
-          "predicted": 16.365, 
+          "observed": 9, 
+          "predicted": 42.084, 
           "ratingClass": "good", 
-          "ratio": 0.244, 
-          "upper": 0.59
+          "ratio": 0.214, 
+          "upper": 0.392
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -361,16 +361,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "2,286", 
+          "incidents": "1,883", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.086, 
+          "lower": 0.02, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 3.907, 
+          "observed": 1, 
+          "predicted": 2.447, 
           "ratingClass": "normal", 
-          "ratio": 0.512, 
-          "upper": 1.691
+          "ratio": 0.409, 
+          "upper": 2.015
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -387,16 +387,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,074", 
+          "incidents": "1,010", 
           "incidents_label": "Central line days", 
-          "lower": 0.03, 
+          "lower": 0, 
           "na": 0, 
-          "note": null, 
-          "observed": 1, 
-          "predicted": 1.649, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.517, 
           "ratingClass": "normal", 
-          "ratio": 0.606, 
-          "upper": 2.991
+          "ratio": 0, 
+          "upper": 1.975
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -446,17 +446,17 @@
       "id": "110018", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "674", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "834", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.326, 
+          "lower": 1.174, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 1.029, 
-          "ratingClass": "normal", 
-          "ratio": 1.944, 
-          "upper": 6.422
+          "observed": 4, 
+          "predicted": 1.083, 
+          "ratingClass": "bad", 
+          "ratio": 3.693, 
+          "upper": 8.909
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -532,17 +532,17 @@
       "id": "110029", 
       "infections": {
         "cauti": {
-          "category": "Better than the National Benchmark", 
-          "incidents": "8,700", 
+          "category": "No Different than National Benchmark", 
+          "incidents": "14,311", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.085, 
+          "lower": 0.495, 
           "na": 0, 
           "note": null, 
-          "observed": 4, 
-          "predicted": 14.891, 
-          "ratingClass": "good", 
-          "ratio": 0.269, 
-          "upper": 0.648
+          "observed": 18, 
+          "predicted": 22.25, 
+          "ratingClass": "normal", 
+          "ratio": 0.809, 
+          "upper": 1.254
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -559,16 +559,16 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": "6,449", 
+          "incidents": "10,674", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
+          "lower": 0.019, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 9.819, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 18.002, 
           "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.305
+          "ratio": 0.111, 
+          "upper": 0.367
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -619,16 +619,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,049", 
+          "incidents": "2,515", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 0.233, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 1.596, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 3.269, 
           "ratingClass": "normal", 
-          "ratio": 0, 
-          "upper": 1.877
+          "ratio": 0.918, 
+          "upper": 2.498
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -645,16 +645,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,065", 
+          "incidents": "1,798", 
           "incidents_label": "Central line days", 
-          "lower": 0.212, 
+          "lower": 0.124, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
-          "predicted": 1.578, 
+          "predicted": 2.698, 
           "ratingClass": "normal", 
-          "ratio": 1.267, 
-          "upper": 4.187
+          "ratio": 0.741, 
+          "upper": 2.449
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -704,17 +704,17 @@
       "id": "110031", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,863", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "3,047", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.476, 
+          "lower": 1.778, 
           "na": 0, 
           "note": null, 
-          "observed": 4, 
-          "predicted": 2.671, 
-          "ratingClass": "normal", 
-          "ratio": 1.498, 
-          "upper": 3.612
+          "observed": 12, 
+          "predicted": 3.657, 
+          "ratingClass": "bad", 
+          "ratio": 3.281, 
+          "upper": 5.579
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -731,16 +731,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,265", 
+          "incidents": "1,634", 
           "incidents_label": "Central line days", 
-          "lower": 0.204, 
+          "lower": 0.747, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 1.64, 
+          "observed": 5, 
+          "predicted": 2.452, 
           "ratingClass": "normal", 
-          "ratio": 1.22, 
-          "upper": 4.029
+          "ratio": 2.039, 
+          "upper": 4.52
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -790,17 +790,17 @@
       "id": "110035", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "5,823", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "14,061", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.26, 
+          "lower": 1.048, 
           "na": 0, 
           "note": null, 
-          "observed": 7, 
-          "predicted": 11.767, 
-          "ratingClass": "normal", 
-          "ratio": 0.595, 
-          "upper": 1.177
+          "observed": 43, 
+          "predicted": 30.071, 
+          "ratingClass": "bad", 
+          "ratio": 1.43, 
+          "upper": 1.908
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
@@ -816,17 +816,17 @@
           "upper": 1.475
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "6,265", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "13,126", 
           "incidents_label": "Central line days", 
-          "lower": 0.291, 
+          "lower": 0.238, 
           "na": 0, 
           "note": null, 
-          "observed": 7, 
-          "predicted": 10.515, 
-          "ratingClass": "normal", 
-          "ratio": 0.666, 
-          "upper": 1.317
+          "observed": 11, 
+          "predicted": 24.257, 
+          "ratingClass": "good", 
+          "ratio": 0.453, 
+          "upper": 0.788
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -876,17 +876,17 @@
       "id": "110042", 
       "infections": {
         "cauti": {
-          "category": "Not Available", 
-          "incidents": 0, 
+          "category": "No Different than National Benchmark", 
+          "incidents": "822", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
-          "na": 1, 
-          "note": "13 - Results cannot be calculated for this reporting period.", 
-          "observed": null, 
-          "predicted": null, 
-          "ratingClass": "", 
-          "ratio": null, 
-          "upper": null
+          "lower": 0.047, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.069, 
+          "ratingClass": "normal", 
+          "ratio": 0.935, 
+          "upper": 4.614
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -902,17 +902,17 @@
           "upper": 2.474
         }, 
         "clabsi": {
-          "category": "Not Available", 
-          "incidents": 0, 
+          "category": "No Different than National Benchmark", 
+          "incidents": "717", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
-          "na": 1, 
-          "note": "13 - Results cannot be calculated for this reporting period.", 
-          "observed": null, 
-          "predicted": null, 
-          "ratingClass": "", 
-          "ratio": null, 
-          "upper": null
+          "lower": 0.046, 
+          "na": 0, 
+          "note": null, 
+          "observed": 1, 
+          "predicted": 1.077, 
+          "ratingClass": "normal", 
+          "ratio": 0.929, 
+          "upper": 4.579
         }, 
         "mrsa": {
           "category": "Not Available", 
@@ -963,16 +963,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "2,583", 
+          "incidents": "4,547", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.064, 
+          "lower": 0.198, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 5.21, 
+          "observed": 5, 
+          "predicted": 9.241, 
           "ratingClass": "normal", 
-          "ratio": 0.384, 
-          "upper": 1.268
+          "ratio": 0.541, 
+          "upper": 1.199
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -989,16 +989,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "2,217", 
+          "incidents": "3,484", 
           "incidents_label": "Central line days", 
-          "lower": 0.086, 
+          "lower": 0.601, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 3.902, 
+          "observed": 9, 
+          "predicted": 7.306, 
           "ratingClass": "normal", 
-          "ratio": 0.513, 
-          "upper": 1.693
+          "ratio": 1.232, 
+          "upper": 2.261
         }, 
         "mrsa": {
           "category": "Worse than the National Benchmark", 
@@ -1048,17 +1048,17 @@
       "id": "110074", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "2,314", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "5,865", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.092, 
+          "lower": 2.124, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 3.653, 
-          "ratingClass": "normal", 
-          "ratio": 0.547, 
-          "upper": 1.809
+          "observed": 24, 
+          "predicted": 7.406, 
+          "ratingClass": "bad", 
+          "ratio": 3.241, 
+          "upper": 4.748
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1074,17 +1074,17 @@
           "upper": 1.073
         }, 
         "clabsi": {
-          "category": "Better than the National Benchmark", 
-          "incidents": "2,646", 
+          "category": "No Different than National Benchmark", 
+          "incidents": "4,030", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
+          "lower": 0.293, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 4.014, 
-          "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.746
+          "note": null, 
+          "observed": 5, 
+          "predicted": 6.242, 
+          "ratingClass": "normal", 
+          "ratio": 0.801, 
+          "upper": 1.775
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1134,17 +1134,17 @@
       "id": "110076", 
       "infections": {
         "cauti": {
-          "category": "Better than the National Benchmark", 
-          "incidents": "2,083", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "5,577", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 1.08, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 3.055, 
-          "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.981
+          "note": null, 
+          "observed": 13, 
+          "predicted": 6.692, 
+          "ratingClass": "bad", 
+          "ratio": 1.943, 
+          "upper": 3.239
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1161,16 +1161,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,951", 
+          "incidents": "4,872", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
+          "lower": 0.174, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 2.895, 
+          "note": null, 
+          "observed": 4, 
+          "predicted": 7.309, 
           "ratingClass": "normal", 
-          "ratio": 0, 
-          "upper": 1.035
+          "ratio": 0.547, 
+          "upper": 1.32
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1221,16 +1221,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "5,290", 
+          "incidents": "9,564", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.386, 
+          "lower": 0.755, 
           "na": 0, 
           "note": null, 
-          "observed": 9, 
-          "predicted": 11.371, 
+          "observed": 27, 
+          "predicted": 24.037, 
           "ratingClass": "normal", 
-          "ratio": 0.791, 
-          "upper": 1.452
+          "ratio": 1.123, 
+          "upper": 1.612
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1247,16 +1247,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "6,178", 
+          "incidents": "11,393", 
           "incidents_label": "Central line days", 
-          "lower": 0.443, 
+          "lower": 0.595, 
           "na": 0, 
           "note": null, 
-          "observed": 10, 
-          "predicted": 11.462, 
+          "observed": 23, 
+          "predicted": 25.11, 
           "ratingClass": "normal", 
-          "ratio": 0.872, 
-          "upper": 1.555
+          "ratio": 0.916, 
+          "upper": 1.353
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1307,16 +1307,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "8,691", 
+          "incidents": "20,764", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.458, 
+          "lower": 0.625, 
           "na": 0, 
           "note": null, 
-          "observed": 18, 
-          "predicted": 24.031, 
+          "observed": 56, 
+          "predicted": 68.293, 
           "ratingClass": "normal", 
-          "ratio": 0.749, 
-          "upper": 1.161
+          "ratio": 0.82, 
+          "upper": 1.057
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1333,16 +1333,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "5,641", 
+          "incidents": "14,445", 
           "incidents_label": "Central line days", 
-          "lower": 0.58, 
+          "lower": 0.694, 
           "na": 0, 
           "note": null, 
-          "observed": 14, 
-          "predicted": 13.751, 
+          "observed": 42, 
+          "predicted": 44.203, 
           "ratingClass": "normal", 
-          "ratio": 1.018, 
-          "upper": 1.668
+          "ratio": 0.95, 
+          "upper": 1.272
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1393,16 +1393,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "2,234", 
+          "incidents": "7,337", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.349, 
+          "lower": 0.689, 
           "na": 0, 
           "note": null, 
-          "observed": 4, 
-          "predicted": 3.644, 
+          "observed": 14, 
+          "predicted": 11.558, 
           "ratingClass": "normal", 
-          "ratio": 1.098, 
-          "upper": 2.648
+          "ratio": 1.211, 
+          "upper": 1.984
         }, 
         "cdiff": {
           "category": "Worse than the National Benchmark", 
@@ -1419,16 +1419,16 @@
         }, 
         "clabsi": {
           "category": "Better than the National Benchmark", 
-          "incidents": "2,186", 
+          "incidents": "6,528", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
+          "lower": 0.033, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 3.31, 
+          "note": null, 
+          "observed": 2, 
+          "predicted": 10.181, 
           "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.905
+          "ratio": 0.196, 
+          "upper": 0.649
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1478,17 +1478,17 @@
       "id": "110083", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "3,063", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "10,140", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.158, 
+          "lower": 1.443, 
           "na": 0, 
           "note": null, 
-          "observed": 3, 
-          "predicted": 4.829, 
-          "ratingClass": "normal", 
-          "ratio": 0.621, 
-          "upper": 1.691
+          "observed": 33, 
+          "predicted": 16.007, 
+          "ratingClass": "bad", 
+          "ratio": 2.062, 
+          "upper": 2.862
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1505,16 +1505,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "5,982", 
+          "incidents": "15,255", 
           "incidents_label": "Central line days", 
-          "lower": 0.888, 
+          "lower": 0.499, 
           "na": 0, 
           "note": null, 
-          "observed": 14, 
-          "predicted": 8.976, 
+          "observed": 20, 
+          "predicted": 25.194, 
           "ratingClass": "normal", 
-          "ratio": 1.56, 
-          "upper": 2.555
+          "ratio": 0.794, 
+          "upper": 1.204
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1565,16 +1565,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "3,965", 
+          "incidents": "6,998", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.056, 
+          "lower": 0.515, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 5.996, 
+          "observed": 9, 
+          "predicted": 8.515, 
           "ratingClass": "normal", 
-          "ratio": 0.334, 
-          "upper": 1.102
+          "ratio": 1.057, 
+          "upper": 1.94
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1590,17 +1590,17 @@
           "upper": 1.169
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "5,229", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "9,937", 
           "incidents_label": "Central line days", 
-          "lower": 0.094, 
+          "lower": 0.251, 
           "na": 0, 
           "note": null, 
-          "observed": 3, 
-          "predicted": 8.092, 
-          "ratingClass": "normal", 
-          "ratio": 0.371, 
-          "upper": 1.009
+          "observed": 9, 
+          "predicted": 17.49, 
+          "ratingClass": "good", 
+          "ratio": 0.515, 
+          "upper": 0.944
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1651,16 +1651,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,108", 
+          "incidents": "2,279", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.203, 
+          "lower": 0.889, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 1.65, 
+          "observed": 6, 
+          "predicted": 2.736, 
           "ratingClass": "normal", 
-          "ratio": 1.212, 
-          "upper": 4.005
+          "ratio": 2.193, 
+          "upper": 4.561
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1677,16 +1677,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,432", 
+          "incidents": "2,760", 
           "incidents_label": "Central line days", 
-          "lower": 0.022, 
+          "lower": 0.437, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 2.319, 
+          "observed": 6, 
+          "predicted": 5.567, 
           "ratingClass": "normal", 
-          "ratio": 0.431, 
-          "upper": 2.127
+          "ratio": 1.078, 
+          "upper": 2.242
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1736,17 +1736,17 @@
       "id": "110115", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "3,890", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "14,640", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.75, 
+          "lower": 1.916, 
           "na": 0, 
           "note": null, 
-          "observed": 8, 
-          "predicted": 4.953, 
-          "ratingClass": "normal", 
-          "ratio": 1.615, 
-          "upper": 3.067
+          "observed": 47, 
+          "predicted": 18.234, 
+          "ratingClass": "bad", 
+          "ratio": 2.578, 
+          "upper": 3.398
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1763,16 +1763,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "3,766", 
+          "incidents": "13,343", 
           "incidents_label": "Central line days", 
-          "lower": 0.543, 
+          "lower": 0.537, 
           "na": 0, 
           "note": null, 
-          "observed": 7, 
-          "predicted": 5.637, 
+          "observed": 18, 
+          "predicted": 20.493, 
           "ratingClass": "normal", 
-          "ratio": 1.242, 
-          "upper": 2.456
+          "ratio": 0.878, 
+          "upper": 1.361
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1822,17 +1822,17 @@
       "id": "110143", 
       "infections": {
         "cauti": {
-          "category": "Better than the National Benchmark", 
-          "incidents": "2,486", 
+          "category": "No Different than National Benchmark", 
+          "incidents": "5,506", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 0.675, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 4.103, 
-          "ratingClass": "good", 
-          "ratio": 0, 
-          "upper": 0.73
+          "note": null, 
+          "observed": 11, 
+          "predicted": 8.565, 
+          "ratingClass": "normal", 
+          "ratio": 1.284, 
+          "upper": 2.232
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1848,17 +1848,17 @@
           "upper": 1.178
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "2,789", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "5,126", 
           "incidents_label": "Central line days", 
-          "lower": 0.074, 
+          "lower": 0.036, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
-          "predicted": 4.556, 
-          "ratingClass": "normal", 
-          "ratio": 0.439, 
-          "upper": 1.45
+          "predicted": 9.234, 
+          "ratingClass": "good", 
+          "ratio": 0.217, 
+          "upper": 0.716
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -1909,16 +1909,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "3,591", 
+          "incidents": "4,605", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.228, 
+          "lower": 0.23, 
           "na": 0, 
           "note": null, 
           "observed": 4, 
-          "predicted": 5.584, 
+          "predicted": 5.526, 
           "ratingClass": "normal", 
-          "ratio": 0.716, 
-          "upper": 1.728
+          "ratio": 0.724, 
+          "upper": 1.746
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -1934,17 +1934,17 @@
           "upper": 1.011
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "4,005", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "7,555", 
           "incidents_label": "Central line days", 
-          "lower": 0.053, 
+          "lower": 0.089, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 6.362, 
-          "ratingClass": "normal", 
-          "ratio": 0.314, 
-          "upper": 1.039
+          "observed": 4, 
+          "predicted": 14.314, 
+          "ratingClass": "good", 
+          "ratio": 0.279, 
+          "upper": 0.674
         }, 
         "mrsa": {
           "category": "Better than the National Benchmark", 
@@ -1995,16 +1995,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,370", 
+          "incidents": "2,865", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 0.222, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 2.123, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 3.438, 
           "ratingClass": "normal", 
-          "ratio": 0, 
-          "upper": 1.411
+          "ratio": 0.873, 
+          "upper": 2.375
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -2021,16 +2021,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,138", 
+          "incidents": "1,968", 
           "incidents_label": "Central line days", 
-          "lower": 0.028, 
+          "lower": 0.247, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 1.819, 
+          "observed": 3, 
+          "predicted": 3.094, 
           "ratingClass": "normal", 
-          "ratio": 0.55, 
-          "upper": 2.711
+          "ratio": 0.97, 
+          "upper": 2.639
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2081,16 +2081,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "2,843", 
+          "incidents": "5,718", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.012, 
+          "lower": 0.42, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 4.093, 
+          "observed": 7, 
+          "predicted": 7.29, 
           "ratingClass": "normal", 
-          "ratio": 0.244, 
-          "upper": 1.205
+          "ratio": 0.96, 
+          "upper": 1.899
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -2106,17 +2106,17 @@
           "upper": 0.846
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "2,035", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "4,751", 
           "incidents_label": "Central line days", 
-          "lower": 0, 
+          "lower": 0.046, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 2.918, 
-          "ratingClass": "normal", 
-          "ratio": 0, 
-          "upper": 1.027
+          "note": null, 
+          "observed": 2, 
+          "predicted": 7.232, 
+          "ratingClass": "good", 
+          "ratio": 0.277, 
+          "upper": 0.914
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2167,16 +2167,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,235", 
+          "incidents": "1,924", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.028, 
+          "lower": 0.551, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 1.797, 
+          "observed": 4, 
+          "predicted": 2.308, 
           "ratingClass": "normal", 
-          "ratio": 0.556, 
-          "upper": 2.745
+          "ratio": 1.733, 
+          "upper": 4.18
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2193,16 +2193,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,217", 
+          "incidents": "1,750", 
           "incidents_label": "Central line days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 1.635, 
+          "predicted": 2.626, 
           "ratingClass": "normal", 
           "ratio": 0, 
-          "upper": 1.832
+          "upper": 1.141
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2252,17 +2252,17 @@
       "id": "110191", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,580", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,908", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.022, 
+          "lower": 0, 
           "na": 0, 
-          "note": null, 
-          "observed": 1, 
-          "predicted": 2.239, 
-          "ratingClass": "normal", 
-          "ratio": 0.447, 
-          "upper": 2.203
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.489, 
+          "ratingClass": "good", 
+          "ratio": 0, 
+          "upper": 0.859
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -2279,16 +2279,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,500", 
+          "incidents": "2,981", 
           "incidents_label": "Central line days", 
-          "lower": 0.362, 
+          "lower": 0.138, 
           "na": 0, 
           "note": null, 
           "observed": 3, 
-          "predicted": 2.109, 
+          "predicted": 5.518, 
           "ratingClass": "normal", 
-          "ratio": 1.422, 
-          "upper": 3.871
+          "ratio": 0.544, 
+          "upper": 1.48
         }, 
         "mrsa": {
           "category": "Worse than the National Benchmark", 
@@ -2338,17 +2338,17 @@
       "id": "110192", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,906", 
+          "category": "Worse than the National Benchmark", 
+          "incidents": "2,487", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.108, 
+          "lower": 1.47, 
           "na": 0, 
           "note": null, 
-          "observed": 2, 
-          "predicted": 3.097, 
-          "ratingClass": "normal", 
-          "ratio": 0.646, 
-          "upper": 2.134
+          "observed": 9, 
+          "predicted": 2.985, 
+          "ratingClass": "bad", 
+          "ratio": 3.015, 
+          "upper": 5.533
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2365,16 +2365,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,511", 
+          "incidents": "3,234", 
           "incidents_label": "Central line days", 
-          "lower": 0.139, 
+          "lower": 0.063, 
           "na": 0, 
           "note": null, 
           "observed": 2, 
-          "predicted": 2.411, 
+          "predicted": 5.301, 
           "ratingClass": "normal", 
-          "ratio": 0.83, 
-          "upper": 2.741
+          "ratio": 0.377, 
+          "upper": 1.247
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2424,17 +2424,17 @@
       "id": "110198", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,261", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,824", 
           "incidents_label": "Urinary catheter days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 1.851, 
-          "ratingClass": "normal", 
+          "predicted": 3.388, 
+          "ratingClass": "good", 
           "ratio": 0, 
-          "upper": 1.618
+          "upper": 0.884
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2450,17 +2450,17 @@
           "upper": 1.246
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,297", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,420", 
           "incidents_label": "Central line days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 1.911, 
-          "ratingClass": "normal", 
+          "predicted": 3.63, 
+          "ratingClass": "good", 
           "ratio": 0, 
-          "upper": 1.568
+          "upper": 0.825
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2510,17 +2510,17 @@
       "id": "110215", 
       "infections": {
         "cauti": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "1,825", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "2,548", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.017, 
+          "lower": 0, 
           "na": 0, 
-          "note": null, 
-          "observed": 1, 
-          "predicted": 2.979, 
-          "ratingClass": "normal", 
-          "ratio": 0.336, 
-          "upper": 1.656
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 3.313, 
+          "ratingClass": "good", 
+          "ratio": 0, 
+          "upper": 0.904
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2536,17 +2536,17 @@
           "upper": 1.512
         }, 
         "clabsi": {
-          "category": "No Different than National Benchmark", 
-          "incidents": "2,627", 
+          "category": "Better than the National Benchmark", 
+          "incidents": "3,131", 
           "incidents_label": "Central line days", 
-          "lower": 0.08, 
+          "lower": 0, 
           "na": 0, 
-          "note": null, 
-          "observed": 2, 
-          "predicted": 4.185, 
-          "ratingClass": "normal", 
-          "ratio": 0.478, 
-          "upper": 1.579
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 5.719, 
+          "ratingClass": "good", 
+          "ratio": 0, 
+          "upper": 0.524
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2597,16 +2597,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "829", 
+          "incidents": "1,267", 
           "incidents_label": "Urinary catheter days", 
           "lower": 0, 
           "na": 0, 
           "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
           "observed": 0, 
-          "predicted": 1.45, 
+          "predicted": 2.534, 
           "ratingClass": "normal", 
           "ratio": 0, 
-          "upper": 2.066
+          "upper": 1.182
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2622,17 +2622,17 @@
           "upper": 1.47
         }, 
         "clabsi": {
-          "category": "Not Available", 
-          "incidents": 0, 
+          "category": "No Different than National Benchmark", 
+          "incidents": "670", 
           "incidents_label": "Central line days", 
           "lower": 0, 
-          "na": 1, 
-          "note": "13 - Results cannot be calculated for this reporting period.", 
-          "observed": null, 
-          "predicted": null, 
-          "ratingClass": "", 
-          "ratio": null, 
-          "upper": null
+          "na": 0, 
+          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
+          "observed": 0, 
+          "predicted": 1.274, 
+          "ratingClass": "normal", 
+          "ratio": 0, 
+          "upper": 2.351
         }, 
         "mrsa": {
           "category": "Not Available", 
@@ -2683,16 +2683,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,048", 
+          "incidents": "2,086", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0.031, 
+          "lower": 0.305, 
           "na": 0, 
           "note": null, 
-          "observed": 1, 
-          "predicted": 1.616, 
+          "observed": 3, 
+          "predicted": 2.503, 
           "ratingClass": "normal", 
-          "ratio": 0.619, 
-          "upper": 3.052
+          "ratio": 1.199, 
+          "upper": 3.262
         }, 
         "cdiff": {
           "category": "Better than the National Benchmark", 
@@ -2709,16 +2709,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,068", 
+          "incidents": "1,682", 
           "incidents_label": "Central line days", 
-          "lower": 0.033, 
+          "lower": 0.02, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
-          "predicted": 1.539, 
+          "predicted": 2.524, 
           "ratingClass": "normal", 
-          "ratio": 0.65, 
-          "upper": 3.205
+          "ratio": 0.396, 
+          "upper": 1.954
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
@@ -2769,16 +2769,16 @@
       "infections": {
         "cauti": {
           "category": "No Different than National Benchmark", 
-          "incidents": "625", 
+          "incidents": "1,159", 
           "incidents_label": "Urinary catheter days", 
-          "lower": 0, 
+          "lower": 0.506, 
           "na": 0, 
-          "note": "8 - The lower limit of the confidence interval cannot be calculated if the number of observed infections equals zero.", 
-          "observed": 0, 
-          "predicted": 1.014, 
+          "note": null, 
+          "observed": 3, 
+          "predicted": 1.508, 
           "ratingClass": "normal", 
-          "ratio": 0, 
-          "upper": 2.954
+          "ratio": 1.989, 
+          "upper": 5.414
         }, 
         "cdiff": {
           "category": "No Different than National Benchmark", 
@@ -2795,16 +2795,16 @@
         }, 
         "clabsi": {
           "category": "No Different than National Benchmark", 
-          "incidents": "1,083", 
+          "incidents": "1,128", 
           "incidents_label": "Central line days", 
-          "lower": 0.03, 
+          "lower": 0.027, 
           "na": 0, 
           "note": null, 
           "observed": 1, 
-          "predicted": 1.69, 
+          "predicted": 1.831, 
           "ratingClass": "normal", 
-          "ratio": 0.592, 
-          "upper": 2.918
+          "ratio": 0.546, 
+          "upper": 2.694
         }, 
         "mrsa": {
           "category": "No Different than National Benchmark", 
