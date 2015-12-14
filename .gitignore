@@ -20,4 +20,5 @@ node_modules
 aws.json
 sql.json
 fonts
+build
 .DS_Store
