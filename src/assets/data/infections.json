@@ -1,8 +1,8 @@
 {
   "averages": {
-    "cabsi": 0.657, 
     "cauti": 0.658, 
     "cdiff": 0.894, 
+    "clabsi": 0.657, 
     "id": "infectionsStateAverages", 
     "mrsa": 1.091, 
     "ssicolon": 0.893, 
