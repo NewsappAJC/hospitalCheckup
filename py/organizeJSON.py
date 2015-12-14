@@ -43,7 +43,10 @@ for node in src:
                     hospital["infections"][inf]["incidents_label"] = "Central line days"
                 elif(inf == "mrsa" or inf == "cdiff"):
                     hospital["infections"][inf]["incidents_label"] = "Patient days"
-                hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
+                try:
+                    hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
+                except:
+                    hospital["infections"][inf]["incidents"] = 0 #sometimes there are strings in the null data fields
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"
@@ -67,7 +70,7 @@ for node in src:
 
 import urllib2
 
-endpoints = [{"cabsi": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_1_SIR&state=GA"}, {"cauti": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_2_SIR&state=GA"}, {"ssicolon": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_3_SIR&state=GA"}, {"ssihyst": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_4_SIR&state=GA"}, {"mrsa": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_5_SIR&state=GA"}, {"cdiff": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_6_SIR&state=GA"}]
+endpoints = [{"clabsi": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_1_SIR&state=GA"}, {"cauti": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_2_SIR&state=GA"}, {"ssicolon": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_3_SIR&state=GA"}, {"ssihyst": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_4_SIR&state=GA"}, {"mrsa": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_5_SIR&state=GA"}, {"cdiff": "https://data.medicare.gov/resource/qfdj-8fa5.json?measure_id=HAI_6_SIR&state=GA"}]
 
 totals = {"id": "infectionsStateAverages"} #backbone expects an ID and local storage uses it too
 for node in endpoints: #go through each enpoint

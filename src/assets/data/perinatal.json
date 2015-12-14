@@ -24,7 +24,7 @@
       "city": "CUMMING", 
       "csect_pct": 36, 
       "display_name": "Northside Hospital Forsyth", 
-      "early_births_pct": 3, 
+      "early_births_pct": 2, 
       "id": "110005", 
       "total_births": 2917
     }, 
@@ -124,7 +124,7 @@
       "city": "GRIFFIN", 
       "csect_pct": 33, 
       "display_name": "Spalding Regional Hospital", 
-      "early_births_pct": 2, 
+      "early_births_pct": 4, 
       "id": "110031", 
       "total_births": 966
     }, 
@@ -144,7 +144,7 @@
       "city": "MARIETTA", 
       "csect_pct": 35, 
       "display_name": "Wellstar Kennestone Hospital", 
-      "early_births_pct": 5, 
+      "early_births_pct": 6, 
       "id": "110035", 
       "total_births": 5456
     }, 
@@ -164,7 +164,7 @@
       "city": "ROME", 
       "csect_pct": 32, 
       "display_name": "Floyd Medical Center", 
-      "early_births_pct": 2, 
+      "early_births_pct": 4, 
       "id": "110054", 
       "total_births": 2207
     }, 
@@ -284,7 +284,7 @@
       "city": "ATLANTA", 
       "csect_pct": 25, 
       "display_name": "Atlanta Medical Center", 
-      "early_births_pct": 1, 
+      "early_births_pct": 0, 
       "id": "110115", 
       "total_births": 3110
     }, 
@@ -304,7 +304,7 @@
       "city": "AUSTELL", 
       "csect_pct": 33, 
       "display_name": "Wellstar Cobb Hospital", 
-      "early_births_pct": 2, 
+      "early_births_pct": 1, 
       "id": "110143", 
       "total_births": 3557
     }, 
@@ -344,7 +344,7 @@
       "city": "DOUGLASVILLE", 
       "csect_pct": 29, 
       "display_name": "Wellstar Douglas Hospital", 
-      "early_births_pct": 9, 
+      "early_births_pct": 8, 
       "id": "110184", 
       "total_births": 454
     }, 
@@ -364,7 +364,7 @@
       "city": "STOCKBRIDGE", 
       "csect_pct": 27, 
       "display_name": "Piedmont Henry Hospital", 
-      "early_births_pct": 12, 
+      "early_births_pct": 9, 
       "id": "110191", 
       "total_births": 2416
     }, 
@@ -424,7 +424,7 @@
       "city": "FAYETTEVILLE", 
       "csect_pct": 33, 
       "display_name": "Piedmont Fayette Hospital", 
-      "early_births_pct": 6, 
+      "early_births_pct": 5, 
       "id": "110215", 
       "total_births": 2566
     }, 
@@ -444,7 +444,7 @@
       "city": "JASPER", 
       "csect_pct": 30, 
       "display_name": "Piedmont Mountainside Hospital", 
-      "early_births_pct": 2, 
+      "early_births_pct": 0, 
       "id": "110225", 
       "total_births": 341
     }, 

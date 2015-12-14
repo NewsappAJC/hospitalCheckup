@@ -5,10 +5,10 @@ Explore hospital quality data for Atlanta area hospitals.
 - Lives here: http://hospitals.myajc.com/
 - Hosted here:
 - Data covers period through:
-  - Infections: 12/31/2014
+  - Infections: 3/31/2015
   - Complications: 3/31/2014
   - Readmissions: 6/30/2014
-  - Perinatal early births: 12/31/14
+  - Perinatal early births: 4/1/14 - 3/31/15
 
 ## Dependencies
 
