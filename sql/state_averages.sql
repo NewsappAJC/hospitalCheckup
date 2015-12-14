@@ -1,7 +1,7 @@
 /*
   Find state average in the state table. Creates hospital_totals_web view to be digested by python infections parser script. The date on the end of the filename will need to be changed when new data arrives
 */
-
+/*These now use the API*/
 /*INFECTIONS STATE AVERAGES*/
 ALTER VIEW infection_avgs_web AS
 SELECT state,
@@ -29,7 +29,7 @@ LEFT JOIN hospital_compare.complications_hosp c
    AND c.measure_id  = 'COMP_HIP_KNEE';
 
 
-/*PERINATAL STATE AVERAGES*/
+/*PERINATAL STATE AVERAGES*/ /*not using API for earlyPct bc it makes sense to merge the tables, right?*/
 ALTER VIEW perinatal_avgs_web AS
 SELECT round(AVG(C_Sect / Total_Births)*100,0) as avgC_SectPct,
        round(SUM(Avg_Delivery_Charge*Total_Births)/SUM(Total_Births), 0) as avgDeliveryCharge,
