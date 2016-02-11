@@ -208,7 +208,20 @@ f = open( '../src/assets/data/src/ER_waits.json', 'rU' )
 src = json.load(f)
 f.close()
 
+###State averages###
+#er_volume (EDV) not included in state and national bc it is categorical so you can't average it
+endpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_1b&state=GA"}, {"er_inpatient_2": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_2b&state=GA"}, {"er_total_time_avg": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_18b&state=GA"}, {"er_time_to_eval": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_20&state=GA"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_21&state=GA"}, {"er_left_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_22&state=GA"}, {"er_time_to_ctresults": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_23&state=GA"}]
+
+totals = {"id": "erStateAverages"} #backbone expects an ID and local storage uses it too
+for node in endpoints: #go through each enpoint
+    for key in node.keys(): #use the key as an ID later
+        url = urllib2.Request(node[key])
+        data = json.load(urllib2.urlopen(url))
+
+        for item in data:
+            totals[key] = int(item["score"])
+
 f = open( '../src/assets/data/er.json', 'w')
-f.write(json.dumps({"hospitals": src, "averages": "TBD"}, indent=2, sort_keys=True))
+f.write(json.dumps({"hospitals": src, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 print "hospital ER waits JSON saved!"

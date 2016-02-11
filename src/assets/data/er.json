@@ -1,5 +1,14 @@
 {
-  "averages": "TBD", 
+  "averages": {
+    "er_inpatient_1": 290, 
+    "er_inpatient_2": 96, 
+    "er_left_pct": 3, 
+    "er_time_to_ctresults": 59, 
+    "er_time_to_eval": 31, 
+    "er_time_to_painmed": 60, 
+    "er_total_time_avg": 146, 
+    "id": "erStateAverages"
+  }, 
   "hospitals": [
     {
       "address": "1200 NORTHSIDE FORSYTH DRIVE", 
