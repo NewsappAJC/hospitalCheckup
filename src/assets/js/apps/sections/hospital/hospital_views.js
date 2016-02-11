@@ -91,6 +91,16 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
 
   Hospital.ER = Marionette.ItemView.extend({
     template: "#hospital-er-template",
-    className: "hospital-list hospital-list-item"
+    className: "hospital-list hospital-list-item",
+    templateHelpers: function(){
+      return {
+        checkNaN: function(val, label){
+          if(isNaN(val)){
+            return val
+          }
+          return val + label
+        }
+      }
+    }
   });
 });

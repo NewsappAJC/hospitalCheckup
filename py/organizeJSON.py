@@ -46,7 +46,7 @@ for node in src:
                 try:
                     hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
                 except:
-                    hospital["infections"][inf]["incidents"] = val #We'll filter out NaN data points later, usually variation of of "Not enough data"
+                    hospital["infections"][inf]["incidents"] = "Not available" #We'll filter out NaN data points later, but this is displayed and these said "null"
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"

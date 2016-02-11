@@ -238,13 +238,13 @@
     <h4>Stats</h4>
     <p>
       <strong>Emergency department volume:</strong> <%= er_volume %><br>
-      <strong>Time patients spent in ER before they were admited as inpatient:</strong> <%= er_inpatient_1 %> minutes<br>
-      <strong>Time patients spent in ER after doctor decided to admint them before leaving ER for room:</strong> <%= er_inpatient_1 %> minutes<br>
-      <strong>Average total time in ER:</strong> <%= er_total_time_avg %> minutes<br>
-      <strong>Door to diagnostic eval:</strong> <%= er_time_to_eval %> minutes<br>
-      <strong>Median time to pain med:</strong> <%= er_time_to_painmed %> minutes<br>
-      <strong>Left before being seen:</strong> <%= er_left_pct %>%<br>
-      <strong>Head CT results:</strong> <%= er_time_to_ctresults %> minutes
+      <strong>Time patients spent in ER before they were admited as inpatient:</strong> <%= checkNaN(er_inpatient_1, " minutes") %><br>
+      <strong>Time patients spent in ER after doctor decided to admint them before leaving ER for room:</strong> <%= checkNaN(er_inpatient_2, " minutes") %><br>
+      <strong>Average total time in ER:</strong> <%= checkNaN(er_total_time_avg, " minutes") %><br>
+      <strong>Door to diagnostic eval:</strong> <%= checkNaN(er_time_to_eval, " minutes") %><br>
+      <strong>Median time to pain med:</strong> <%= checkNaN(er_time_to_painmed, " minutes") %><br>
+      <strong>Left before being seen:</strong> <%= checkNaN(er_left_pct, "%") %><br>
+      <strong>Head CT results:</strong> <%= checkNaN(er_time_to_ctresults, " minutes") %>
     </p>
     <hr>
   </script>
