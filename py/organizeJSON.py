@@ -46,7 +46,7 @@ for node in src:
                 try:
                     hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
                 except:
-                    hospital["infections"][inf]["incidents"] = 0 #sometimes there are strings in the null data fields
+                    hospital["infections"][inf]["incidents"] = val #We'll filter out NaN data points later, usually variation of of "Not enough data"
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"
@@ -207,6 +207,17 @@ print "hospital perinatal JSON saved!"
 f = open( '../src/assets/data/src/ER_waits.json', 'rU' )
 src = json.load(f)
 f.close()
+
+nums = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_time_to_ctresults"]
+
+for node in src:
+    hospital = node
+    for key in node.keys():
+        if key in nums:
+            try:
+                node[key] = int(node[key])
+            except:
+                node[key] = node[key] #we'll check for NaN in app to filter these out, usually some string indicating not enough data
 
 ###State averages###
 #er_volume (EDV) not included in state and national bc it is categorical so you can't average it

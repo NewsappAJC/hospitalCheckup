@@ -473,7 +473,7 @@
         }, 
         "clabsi": {
           "category": "Not Available", 
-          "incidents": 0, 
+          "incidents": null, 
           "incidents_label": "Central line days", 
           "lower": 0, 
           "na": 1, 
@@ -486,7 +486,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 0, 
+          "incidents": null, 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -916,7 +916,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 0, 
+          "incidents": null, 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 
@@ -2636,7 +2636,7 @@
         }, 
         "mrsa": {
           "category": "Not Available", 
-          "incidents": 0, 
+          "incidents": null, 
           "incidents_label": "Patient days", 
           "lower": 0, 
           "na": 1, 

@@ -15,7 +15,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //set up axis and label formatters
       if(options.section === "surgery"){
         this.formatter = function(){ return function(d){ return d + "%" }; };
-      } else if (options.chartType = "BarLeft"){
+      } else if (options.chartType === "BarLeft"){
         this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis); };
       }
       return this;
@@ -32,9 +32,27 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.draw_axes(data); //needs to be on top of bars
     },
 
-    filter_data: function(data){
-      //meant to be extended
-      return data;
+    //remove items with no data and sort by stat
+    filter_data: function(){
+      var chart = this,
+      section = chart.options.section,
+      measure = chart.options.measure,
+      chartType = chart.options.chartType,
+      stat = chart.options.stat;
+
+      var filtered = chart.data.filter(function(d){
+        if(chartType === "BarRangeDot"){
+          return d[section][measure].na != 1;
+        }
+        return !isNaN(d[measure]);
+      });
+      filtered.sort(function(a,b){
+        if(chartType === "BarRangeDot"){
+          return d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        }
+        return d3.ascending(a[measure], b[measure]);
+      });
+      return filtered;
     },
 
     get_xMax: function(data){
@@ -312,21 +330,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       Chart.BarBase.prototype.create_svg_containers.call(this, ids);
     },
 
-    //remove items with no data and sort by stat
-    filter_data: function(){
-      var chart = this,
-      section = chart.options.section,
-      stat = chart.options.stat;
-
-      var filtered = chart.data.filter(function(d){
-        return d[section][chart.options.measure].na != 1;
-      });
-      filtered.sort(function(a,b){
-        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
-      });
-      return filtered;
-    },
-
     draw_data: function(data){
       this.draw_range_bars(data);
       this.draw_context_lines(data);
@@ -440,16 +443,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var ids = ["baseBars", "bars", "axes", "contextLines"]
 
       Chart.BarBase.prototype.create_svg_containers.call(this, ids);
-    },
-
-    filter_data: function(){
-      var chart = this,
-      measure = chart.options.measure;
-
-      var filtered = chart.data.sort(function(a,b){
-        return d3.ascending(a[measure], b[measure]);
-      });
-      return filtered;
     },
 
     get_format: function(measure, isAxis){
