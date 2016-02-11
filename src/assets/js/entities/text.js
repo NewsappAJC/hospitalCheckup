@@ -53,11 +53,12 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   };
 
   Entities.ERLabels = new Backbone.Collection([
-    {label: "Emergency department volume", key: "er_volume"},
-    {label: "ED1", key: "ED_1"},
-    {label: "ED2", key: "ED_2"},
-    {label: "OP 18", key: "OP_18"},
     {label: "Door to diagnostic eval", key: "er_time_to_eval"},
+    {label: "Emergency department volume", key: "er_volume"},
+    {label: "Time patients spent in ER before they were admited as inpatient", key: "er_inpatient_1"},
+    {label: "Time patients spent in ER after doctor decided to admint them before leaving ER for room", key: "er_inpatient_2"},
+    {label: "Average total time in ER", key: "er_total_time_avg"},
+
     {label: "Median time to pain med", key: "er_time_to_painmed"},
     {label: "Left before being seen", key: "er_left_pct"},
     {label: "Head CT results", key: "er_time_to_ctresults"}

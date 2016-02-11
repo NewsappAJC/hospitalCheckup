@@ -3,7 +3,7 @@
     "avg_delivery_charge": 11253, 
     "avg_premature_charge": 21199, 
     "csect_pct": 33, 
-    "early_births_pct": 3, 
+    "early_births_pct": "3", 
     "id": "perinatalStateAverages", 
     "total_births": 1652
   }, 
