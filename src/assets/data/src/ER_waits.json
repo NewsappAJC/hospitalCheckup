@@ -14,7 +14,7 @@
         "OP_18": 148,
         "er_time_to_eval": 22,
         "er_time_to_painmed": 55,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 73
     },
     {
@@ -32,7 +32,7 @@
         "OP_18": 125,
         "er_time_to_eval": 23,
         "er_time_to_painmed": 61,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -50,7 +50,7 @@
         "OP_18": 176,
         "er_time_to_eval": 28,
         "er_time_to_painmed": 52,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -68,7 +68,7 @@
         "OP_18": 286,
         "er_time_to_eval": 68,
         "er_time_to_painmed": 85,
-        "er_left": 3,
+        "er_left_pct": 3,
         "er_time_to_ctresults": 0
     },
     {
@@ -86,7 +86,7 @@
         "OP_18": 163,
         "er_time_to_eval": 55,
         "er_time_to_painmed": 15,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -104,7 +104,7 @@
         "OP_18": 197,
         "er_time_to_eval": 54,
         "er_time_to_painmed": 68,
-        "er_left": 5,
+        "er_left_pct": 5,
         "er_time_to_ctresults": 73
     },
     {
@@ -122,7 +122,7 @@
         "OP_18": 174,
         "er_time_to_eval": 38,
         "er_time_to_painmed": 81,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 73
     },
     {
@@ -140,7 +140,7 @@
         "OP_18": 154,
         "er_time_to_eval": 5,
         "er_time_to_painmed": 42,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -158,7 +158,7 @@
         "OP_18": 144,
         "er_time_to_eval": 22,
         "er_time_to_painmed": 66,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 88
     },
     {
@@ -176,7 +176,7 @@
         "OP_18": 206,
         "er_time_to_eval": 32,
         "er_time_to_painmed": 58,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -194,7 +194,7 @@
         "OP_18": 141,
         "er_time_to_eval": 29,
         "er_time_to_painmed": 42,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 45
     },
     {
@@ -212,7 +212,7 @@
         "OP_18": 152,
         "er_time_to_eval": 50,
         "er_time_to_painmed": 66,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -230,7 +230,7 @@
         "OP_18": 206,
         "er_time_to_eval": 59,
         "er_time_to_painmed": 54,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 84
     },
     {
@@ -248,7 +248,7 @@
         "OP_18": 197,
         "er_time_to_eval": 37,
         "er_time_to_painmed": 76,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -266,7 +266,7 @@
         "OP_18": 273,
         "er_time_to_eval": 53,
         "er_time_to_painmed": 77,
-        "er_left": 5,
+        "er_left_pct": 5,
         "er_time_to_ctresults": 0
     },
     {
@@ -284,7 +284,7 @@
         "OP_18": 418,
         "er_time_to_eval": 110,
         "er_time_to_painmed": 61,
-        "er_left": 22,
+        "er_left_pct": 22,
         "er_time_to_ctresults": 0
     },
     {
@@ -302,7 +302,7 @@
         "OP_18": 218,
         "er_time_to_eval": 50,
         "er_time_to_painmed": 84,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 53
     },
     {
@@ -320,7 +320,7 @@
         "OP_18": 184,
         "er_time_to_eval": 24,
         "er_time_to_painmed": 77,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 36
     },
     {
@@ -338,7 +338,7 @@
         "OP_18": 175,
         "er_time_to_eval": 50,
         "er_time_to_painmed": 44,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 51
     },
     {
@@ -356,7 +356,7 @@
         "OP_18": 180,
         "er_time_to_eval": 34,
         "er_time_to_painmed": 55,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -374,7 +374,7 @@
         "OP_18": 165,
         "er_time_to_eval": 30,
         "er_time_to_painmed": 59,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -392,7 +392,7 @@
         "OP_18": 163,
         "er_time_to_eval": 34,
         "er_time_to_painmed": 68,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 88
     },
     {
@@ -410,7 +410,7 @@
         "OP_18": 180,
         "er_time_to_eval": 32,
         "er_time_to_painmed": 44,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     },
     {
@@ -428,7 +428,7 @@
         "OP_18": 259,
         "er_time_to_eval": 129,
         "er_time_to_painmed": 138,
-        "er_left": 6,
+        "er_left_pct": 6,
         "er_time_to_ctresults": 73
     },
     {
@@ -446,7 +446,7 @@
         "OP_18": 132,
         "er_time_to_eval": 8,
         "er_time_to_painmed": 64,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 100
     },
     {
@@ -464,7 +464,7 @@
         "OP_18": 148,
         "er_time_to_eval": 26,
         "er_time_to_painmed": 70,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 73
     },
     {
@@ -482,7 +482,7 @@
         "OP_18": 183,
         "er_time_to_eval": 98,
         "er_time_to_painmed": 95,
-        "er_left": 3,
+        "er_left_pct": 3,
         "er_time_to_ctresults": 62
     },
     {
@@ -500,7 +500,7 @@
         "OP_18": 187,
         "er_time_to_eval": 3,
         "er_time_to_painmed": 42,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -518,7 +518,7 @@
         "OP_18": 169,
         "er_time_to_eval": 37,
         "er_time_to_painmed": 62,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -536,7 +536,7 @@
         "OP_18": 200,
         "er_time_to_eval": 48,
         "er_time_to_painmed": 83,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 50
     },
     {
@@ -554,7 +554,7 @@
         "OP_18": 145,
         "er_time_to_eval": 28,
         "er_time_to_painmed": 60,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 47
     },
     {
@@ -572,7 +572,7 @@
         "OP_18": 167,
         "er_time_to_eval": 34,
         "er_time_to_painmed": 61,
-        "er_left": 2,
+        "er_left_pct": 2,
         "er_time_to_ctresults": 0
     },
     {
@@ -590,7 +590,7 @@
         "OP_18": 176,
         "er_time_to_eval": 30,
         "er_time_to_painmed": 66,
-        "er_left": 1,
+        "er_left_pct": 1,
         "er_time_to_ctresults": 0
     }
 ]

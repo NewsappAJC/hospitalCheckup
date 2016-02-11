@@ -15,7 +15,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //set up axis and label formatters
       if(options.section === "surgery"){
         this.formatter = function(){ return function(d){ return d + "%" }; };
-      } else if (options.section === "perinatal"){
+      } else if (options.section === "perinatal" || options.section === "er"){
         this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis); };
       }
       return this;
@@ -466,6 +466,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         }
         return d3.format(",");
       } else {
+        return function(string){ return string }
         console.log("no matching format");
       }
     },

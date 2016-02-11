@@ -59,7 +59,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     {label: "OP 18", key: "OP_18"},
     {label: "Door to diagnostic eval", key: "er_time_to_eval"},
     {label: "Median time to pain med", key: "er_time_to_painmed"},
-    {label: "Left before being seen", key: "er_left"},
+    {label: "Left before being seen", key: "er_left_pct"},
     {label: "Head CT results", key: "er_time_to_ctresults"}
   ]);
 });
