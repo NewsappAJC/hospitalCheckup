@@ -83,7 +83,9 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
               margin: {left: 195, right: 15, bottom: 20, top: 25}, //right padding needed to protect chart labels that extend past axis
               measure: criterion || defaultMeasure,
               section: sectionID,
-              stat: stat
+              entityID: entityID,
+              stat: stat,
+              chartType: chartType
             });
             Section.chartView.render(); //for some reason this breaks filtering when chained with initialization above
           }

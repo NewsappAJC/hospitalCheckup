@@ -15,7 +15,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //set up axis and label formatters
       if(options.section === "surgery"){
         this.formatter = function(){ return function(d){ return d + "%" }; };
-      } else if (options.section === "perinatal" || options.section === "er"){
+      } else if (options.chartType = "BarLeft"){
         this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis); };
       }
       return this;
@@ -163,8 +163,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     transition_context_lines: function(data){
       var chart = this,
       height = chart.get_currentHeight(data),
-      section = chart.options.section;
-      if(section !== "perinatal" && section !== "er"){
+      chartType = chart.options.chartType;
+      if(chartType === "BarRangeDot"){
         var state = chart.linesToMark[0].scale(),
         national = chart.linesToMark[1].scale();
       }
@@ -282,9 +282,9 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     attach_tooltip: function(data, measure) {
-      if(this.options.section === "perinatal"){
+      if(this.options.chartType === "BarLeft"){
         if(data.measure !== measure){ //don't re-process it on subsequent hovers
-          data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
+          data.label = HospitalCheckup.Entities[this.options.entityID+"Labels"].findWhere({ key: measure }).get("label");
           var format = this.get_format(measure);
           data.formatted = format(data[measure]);
         }
