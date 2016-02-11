@@ -164,7 +164,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       height = chart.get_currentHeight(data),
       section = chart.options.section;
-      if(section !== "perinatal"){
+      if(section !== "perinatal" && section !== "er"){
         var state = chart.linesToMark[0].scale(),
         national = chart.linesToMark[1].scale();
       }

@@ -87,5 +87,10 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
         }
       };
     }
-  })
+  });
+
+  Hospital.ER = Marionette.ItemView.extend({
+    template: "#hospital-er-template",
+    className: "hospital-list hospital-list-item"
+  });
 });

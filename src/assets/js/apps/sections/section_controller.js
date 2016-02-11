@@ -14,6 +14,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       this.buildLayout(id, criterion, "csect_pct", "Perinatal", "perinatal", "BarLeft");
     },
 
+    listER: function(id, criterion){
+      this.buildLayout(id, criterion, "er_time_to_eval", "ER", "er", "BarLeft");
+    },
+
     buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, dotLabel, stat){
       var isMobile = document.body.clientWidth < 405;
       var loadingView = new HospitalCheckup.Common.Views.Loading();
@@ -33,7 +37,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
       }
-      if (sectionID !== "perinatal"){
+      if (sectionID !== "perinatal" & sectionID !== "er"){
         var legendView = new Section.Legend({label: legendLabel, dot: dotLabel});
         hospitalMeasuresView.collection = new Backbone.Collection();
       }

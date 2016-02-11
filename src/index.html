@@ -169,6 +169,12 @@
     </div>
   </script>
 
+  <script type="text/template" id="er-tooltip-template">
+    <div id="ttip" class="ttip container">
+        <strong><%= label %></strong>: <%= formatted %>
+    </div>
+  </script>
+
   <script type="text/template" id="hospital-info-view">
     <h3><%- display_name %></h3>
     <p class="address"><%- address %>, <%- city %></p>
@@ -224,6 +230,21 @@
       <strong>Live births:</strong> <%= formatCommas(Live_Births) %><br>
       <strong>C-Sections:</strong> <%= formatCommas(C_Sect) %><br>
       <strong>Early elective delivery rate:</strong> <%= early_births_pct %>%
+    </p>
+    <hr>
+  </script>
+
+  <script type="text/template" id="hospital-er-template">
+    <h4>Stats</h4>
+    <p>
+      <strong>Emergency department volume:</strong> <%= er_volume %><br>
+      <strong>ED1:</strong> <%= ED_1 %> ?<br>
+      <strong>ED2:</strong> <%= ED_2 %> ?<br>
+      <strong>OP 18:</strong> <%= OP_18 %> ?<br>
+      <strong>Door to diagnostic eval:</strong> <%= er_time_to_eval %> minutes<br>
+      <strong>Median time to pain med:</strong> <%= er_time_to_painmed %> minutes<br>
+      <strong>Left before being seen:</strong> <%= er_left %>%<br>
+      <strong>Head CT results:</strong> <%= er_time_to_ctresults %> minutes
     </p>
     <hr>
   </script>

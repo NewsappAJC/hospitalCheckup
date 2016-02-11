@@ -44,4 +44,22 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
     {label: "Average premature delivery charge", key: "avg_premature_charge"},
     {label: "Total number of births in 2014", key: "total_births"}
   ]);
+
+/* ----- ER ----- */
+  Entities.ERIntroTxt = {
+    headline: "<h1>ER wait times</h1>",
+    intro_text: "<p>intro text</p>",
+    bottom_text: ""
+  };
+
+  Entities.ERLabels = new Backbone.Collection([
+    {label: "Emergency department volume", key: "er_volume"},
+    {label: "ED1", key: "ED_1"},
+    {label: "ED2", key: "ED_2"},
+    {label: "OP 18", key: "OP_18"},
+    {label: "Door to diagnostic eval", key: "er_time_to_eval"},
+    {label: "Median time to pain med", key: "er_time_to_painmed"},
+    {label: "Left before being seen", key: "er_left"},
+    {label: "Head CT results", key: "er_time_to_ctresults"}
+  ]);
 });
