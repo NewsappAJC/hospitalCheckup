@@ -202,3 +202,13 @@ f = open( '../src/assets/data/perinatal.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 print "hospital perinatal JSON saved!"
+
+#####ER Waits#####
+f = open( '../src/assets/data/src/ER_waits.json', 'rU' )
+src = json.load(f)
+f.close()
+
+f = open( '../src/assets/data/er.json', 'w')
+f.write(json.dumps({"hospitals": src, "averages": "TBD"}, indent=2, sort_keys=True))
+f.close()
+print "hospital ER waits JSON saved!"
