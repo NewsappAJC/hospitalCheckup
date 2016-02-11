@@ -238,10 +238,10 @@
     <h4>Stats</h4>
     <p>
       <strong>Emergency department volume:</strong> <%= er_volume %><br>
-      <strong>Time patients spent in ER before they were admited as inpatient:</strong> <%= checkNaN(er_inpatient_1, " minutes") %><br>
-      <strong>Time patients spent in ER after doctor decided to admint them before leaving ER for room:</strong> <%= checkNaN(er_inpatient_2, " minutes") %><br>
-      <strong>Average total time in ER:</strong> <%= checkNaN(er_total_time_avg, " minutes") %><br>
       <strong>Door to diagnostic eval:</strong> <%= checkNaN(er_time_to_eval, " minutes") %><br>
+      <strong>Total time in ER:</strong> <%= checkNaN(er_total_time_avg, " minutes") %><br>
+      <strong>Time spent in ER before being admitted:</strong> <%= checkNaN(er_inpatient_1, " minutes") %><br>
+      <strong>Time after doctor decided to admit patient before leaving ER for room:</strong> <%= checkNaN(er_inpatient_2, " minutes") %><br>
       <strong>Median time to pain med:</strong> <%= checkNaN(er_time_to_painmed, " minutes") %><br>
       <strong>Left before being seen:</strong> <%= checkNaN(er_left_pct, "%") %><br>
       <strong>Head CT results:</strong> <%= checkNaN(er_time_to_ctresults, " minutes") %>
