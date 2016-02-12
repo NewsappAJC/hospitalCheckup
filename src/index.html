@@ -235,9 +235,9 @@
   </script>
 
   <script type="text/template" id="hospital-er-template">
-    <h4>Stats</h4>
     <p>
       <strong>Emergency department volume:</strong> <%= er_volume %><br>
+      <br>
       <strong>Door to diagnostic eval:</strong> <%= checkNaN(er_time_to_eval, " minutes") %><br>
       <strong>Total time in ER:</strong> <%= checkNaN(er_total_time_avg, " minutes") %><br>
       <strong>Time spent in ER before being admitted:</strong> <%= checkNaN(er_inpatient_1, " minutes") %><br>

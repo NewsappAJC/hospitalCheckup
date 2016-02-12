@@ -145,7 +145,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.defs = d3.select(chart.el).select("svg").append('svg:defs');
       chart.linesToMark = [{ id: "average", scale: function(){ return HospitalCheckup.Entities.averages.get(chart.options.measure) }, label: "State avg.", anchorDefault: "start"}];
       if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "national", scale: function(){ return 1 }, label: "Benchmark", anchorDefault: "end" }) }
-      else if (chart.options.section === "surgery"){ chart.linesToMark.push({ id: "national", scale: function(){ return HospitalCheckup.Entities.averages.get("national")[chart.options.measure] }, label: "National avg.", anchorDefault: "end" })};
+      else if (chart.options.section === "surgery" || chart.options.section === "er"){ chart.linesToMark.push({ id: "national", scale: function(){ return HospitalCheckup.Entities.averages.get("national")[chart.options.measure] }, label: "National avg.", anchorDefault: "end" })};
 
       chart.contextLines = chart.svg.select("#contextLines");
 
@@ -182,7 +182,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var chart = this,
       height = chart.get_currentHeight(data),
       chartType = chart.options.chartType;
-      if(chartType === "BarRangeDot"){
+      if(chartType === "BarRangeDot" || chart.options.section === "er"){
         var state = chart.linesToMark[0].scale(),
         national = chart.linesToMark[1].scale();
       }
