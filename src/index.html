@@ -43,6 +43,7 @@
   ================================================== -->
   <link rel="stylesheet" href="assets/css/vendor/normalize.css">
   <link rel="stylesheet" href="assets/css/vendor/foundation.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/styles.css" type="text/css"> <!-- AJC metering modals css -->
   <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/janrainModals.css"> <!-- just the ENTIRE 4k line myajc master.css file bc the login screen css was messed up, fix it -->
@@ -67,6 +68,7 @@
       <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
       <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
     </div>
+    <div id="loading-region"></div>
     <div id="main-region" class="container"></div>
   </div>
 
@@ -90,6 +92,10 @@
 
   <script type="text/template" id="header-link">
     <a class="header-link" href="#<%- url %>"><%- name %></a>
+  </script>
+
+  <script type="text/template" id="loading-template">
+    <i class="fa fa-spinner fa-spin"></i>
   </script>
 
   <script type="text/template" id="homepage-icon-link">
@@ -292,10 +298,6 @@
   <!-- END INFECTIONS
   ================================================== -->
 
-  <script type="text/template" id="loading-view">
-    <div id="spinner"></div>
-  </script>
-
   <!-- AJC METERING MODALS -->
   <div id="ajc-meter-modals"></div>
 
@@ -311,8 +313,6 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/vendor/foundation.topbar.js"></script>
-  <script src="assets/js/vendor/spin.js"></script>
-  <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
 
   <!-- build:js assets/js/app.js -->
@@ -328,13 +328,15 @@
   <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
   <script src="assets/js/apps/sections/section_app.js"></script>
+  <script src="assets/js/apps/loading/loading_app.js"></script>
+  <script src="assets/js/apps/loading/loading_controller.js"></script>
+  <script src="assets/js/apps/loading/loading_view.js"></script>
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
   <script src="assets/js/apps/sections/chart/chart_base_view.js"></script>
   <script src="assets/js/apps/sections/chart/chart_views.js"></script>
   <script src="assets/js/common/behaviors.js"></script>
-  <script src="assets/js/common/views.js"></script>
   <script src="assets/js/entities/text.js"></script>
   <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
   <!-- /build -->

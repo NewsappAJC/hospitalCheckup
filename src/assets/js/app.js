@@ -16,6 +16,7 @@ HospitalCheckup.on("before:start", function(){
 
     regions: {
       header: "#header-region",
+      loadingRegion: "#loading-region",
       main: "#main-region"
     }
   });
@@ -24,7 +25,6 @@ HospitalCheckup.on("before:start", function(){
 });
 
 HospitalCheckup.on("start", function(){
-
   if(Backbone.history){
     Backbone.history.start();
 
