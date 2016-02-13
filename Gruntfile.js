@@ -81,6 +81,8 @@ module.exports = function(grunt) {
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond*'], dest: 'build/assets/css/fonts/boomerslab_cond' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_extracond/*'], dest: 'build/assets/css/fonts/boomerslab_extracond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/publico/*'], dest: 'build/assets/css/fonts/publico/' },
+          { expand: true, flatten: true, src: ['src/style/lib/fontawesome/css/*'], dest: 'build/style/lib/fontawesome/css' },
+          { expand: true, flatten: true, src: ['src/style/lib/fontawesome/fonts/*'], dest: 'build/style/lib/fontawesome/fonts' },
           { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'build/' }
         ]
       }
@@ -300,7 +302,8 @@ module.exports = function(grunt) {
         },
         files: {
           "normalize.css": "normalize-css/normalize.css",
-          "foundation.css": "foundation/css/foundation.min.css"
+          "foundation.css": "foundation/css/foundation.min.css",
+          "fontawesome": "fontawesome",
         }
       },
       fonts: {

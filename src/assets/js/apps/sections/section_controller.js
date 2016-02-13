@@ -19,9 +19,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
 
     buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, dotLabel, stat){
+      HospitalCheckup.vent.trigger("loading:show");
       var isMobile = document.body.clientWidth < 405;
-      var loadingView = new HospitalCheckup.Common.Views.Loading();
-      HospitalCheckup.regions.main.show(loadingView);
 
       var fetchingData = HospitalCheckup.request("chart:entities", entityID, sectionID);
 
@@ -111,6 +110,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         });
 
         HospitalCheckup.regions.main.show(listLayout);
+        HospitalCheckup.vent.trigger("loading:hide");
       });
     }
   }
