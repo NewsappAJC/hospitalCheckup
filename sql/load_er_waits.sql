@@ -17,7 +17,7 @@ SELECT DISTINCT a.provider_id,
                 MAX(CASE WHEN a.measure_id = 'OP_20' THEN a.score END) AS er_time_to_eval,
                 MAX(CASE WHEN a.measure_id = 'OP_21' THEN a.score END) AS er_time_to_painmed,
                 MAX(CASE WHEN a.measure_id = 'OP_22' THEN a.score END) AS er_left_pct,
-                MAX(CASE WHEN a.measure_id = 'OP_23' THEN a.score END) AS er_time_to_ctresults
+                MAX(CASE WHEN a.measure_id = 'OP_23' THEN a.score END) AS er_ctresults_pct
 FROM hospital_compare.HQI_HOSP_TimelyEffectiveCare a
 JOIN hospital_names b ON a.provider_ID = b.ProviderNumber
 WHERE condition_name = "Emergency Department"
