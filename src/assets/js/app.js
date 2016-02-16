@@ -1,5 +1,20 @@
 //general ContactManager app code (defining regions, the start handler, etc.):
-var HospitalCheckup = new Marionette.Application();
+var MainRegion = Marionette.Region.extend({
+  el: "#main-region",
+  onShow: function(view, region, options){
+    //every time a new view is shown in the main region, check for .tipped class and add tooltips
+    view.on("show", function(){
+      HospitalCheckup.$tooltip.hide(); //make sure there aren't any hanging around
+      HospitalCheckup.addTips();
+    });
+  }
+});
+
+var HospitalCheckup = new Marionette.Application({
+  initialize: function(){
+    this.$tooltip = $("#tooltip");
+  }
+});
 
 HospitalCheckup.navigate = function(route, options){
   options || (options = {});
@@ -17,12 +32,44 @@ HospitalCheckup.on("before:start", function(){
     regions: {
       header: "#header-region",
       loadingRegion: "#loading-region",
-      main: "#main-region"
+      main: MainRegion
     }
   });
 
   HospitalCheckup.regions = new RegionContainer();
 });
+
+HospitalCheckup.addTips = function(){ //currently only used on measure labels on ER waits page
+  $(".tipped").on("mouseover", function(e){
+    var that = e.target;
+    //store title info in data
+    if(!that.data){
+      that.data = that.title;
+      that.title = ""; //clear title attribute to prevent browser default tooltips
+      that.x = e.clientX,
+      that.y = e.clientY;
+    }
+  });
+  $(".tipped").on("click", function(e){
+    var that = e.target;
+    HospitalCheckup.$tooltip
+      .show()
+      .html(that.data)
+      .css("top", that.y + "px")
+      .css("left", that.x + "px");
+
+      //calculate tooltip width for placement
+      function textWidth (){
+        var sensor = $('<div />').css({margin: 0, padding: 0});
+        HospitalCheckup.$tooltip.append(sensor);
+        var width = sensor.width();
+        sensor.remove();
+        return width;
+      };
+  }).on("mouseout", function(){
+    HospitalCheckup.$tooltip.hide();
+  });
+}
 
 HospitalCheckup.on("start", function(){
   if(Backbone.history){

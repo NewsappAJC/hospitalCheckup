@@ -53,12 +53,12 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   };
 
   Entities.ERLabels = new Backbone.Collection([
-    {label: "Door to diagnostic eval", key: "er_time_to_eval"},
-    {label: "Total time in ER", key: "er_total_time_avg"},
-    {label: "Time spent in ER before being admitted", key: "er_inpatient_1"},
-    {label: "Time after doctor decided to admit patient before leaving ER for room", key: "er_inpatient_2"},
-    {label: "Median time to pain med", key: "er_time_to_painmed"},
-    {label: "Left before being seen", key: "er_left_pct"},
-    {label: "Head CT results", key: "er_ctresults_pct"}
+    {label: "Door to diagnostic eval", full: "Average time patients spent in the emergency department before they were seen by a healthcare professional", units: " minutes", key: "er_time_to_eval"},
+    {label: "Total time in ER", full: "Average time patients spent in the emergency department before leaving from the visit", units: " minutes", key: "er_total_time_avg"},
+    {label: "Time spent in ER before being admitted", full: "Average (median) time patients spent in the emergency department, before they were admitted to the hospital as an inpatient", units: " minutes", key: "er_inpatient_1"},
+    {label: "Time after doctor decided to admit patient before leaving ER for room", full: "Average (median) time patients spent in the emergency department, after the doctor decided to admit them as an inpatient before leaving the emergency department for their inpatient room", units: " minutes", key: "er_inpatient_2"},
+    {label: "Median time to pain med", full: "Average time patients who came to the emergency department with broken bones had to wait before getting pain medication", units: " minutes", key: "er_time_to_painmed"},
+    {label: "Left before being seen", full: "Percentage of patients who left the emergency department before being seen", units: "%", key: "er_left_pct"},
+    {label: "Head CT results", full: "Percentage of patients who came to the emergency department with stroke symptoms who received brain scan results within 45 minutes of arrival", units: "%", key: "er_ctresults_pct"}
   ]);
 });

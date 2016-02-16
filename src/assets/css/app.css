@@ -51,6 +51,29 @@ a:hover {
 	text-align:center;
 	font-size:200px;
 }
+#tooltip, div.ttip {
+	max-width: 300px;
+	position: absolute;
+	padding: 8px;
+	background-color: white;
+	border: 1px solid darkgray;
+	pointer-events: none; /*this prevents triggering mouseout if tip gets in way of cursor*/
+	z-index: 101;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+	font-family: 'Boomer-Light';
+	font-size: 12px;
+}
+#tooltip {
+	display: none;
+}
+#tooltip strong, div.ttip strong {
+	font-family: 'Boomer';
+	font-weight: normal;
+}
+.dotted {
+	cursor: help;
+	border-bottom: 1px darkgray dotted;
+}
 /*nav*/
 .name {
   padding-top: 5px;
@@ -196,21 +219,7 @@ line#averageLine {
 line#nationalLine {
   stroke: #DDDDDD;
 }
-div.ttip {
-  font-family: 'Boomer-Book';
-  font-size: 12px;
-  position: absolute;
-  width: 270px;
-  padding: 5px;
-  margin: 0px;
-  background-color: white;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
-  pointer-events: none;
-  z-index: 101;
-}
-div.ttip strong {
-  font-family: 'Boomer';
-}
+
 #main-chart-region {
   padding-bottom: 15px;
 }

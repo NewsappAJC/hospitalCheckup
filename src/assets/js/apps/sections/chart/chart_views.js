@@ -290,7 +290,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.selected = label; //store it so we can check for it when new labels enter
     },
 
-    set_tooltip: function(chart, obj, measure){
+    set_tooltip: function(chart, obj, measure){ //TODO use the app level #tooltip now and just move it around like the measure labels, right?
       obj.on("mouseover", function(d) {
         chart.attach_tooltip(d, measure);
       })

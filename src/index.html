@@ -68,6 +68,7 @@
       <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
       <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
     </div>
+    <div id="tooltip"></div>
     <div id="loading-region"></div>
     <div id="main-region" class="container"></div>
   </div>
@@ -244,13 +245,10 @@
     <p>
       <strong>Emergency department volume:</strong> <%= er_volume %><br>
       <br>
-      <strong>Door to diagnostic eval:</strong> <%= checkNaN(er_time_to_eval, " minutes") %><br>
-      <strong>Total time in ER:</strong> <%= checkNaN(er_total_time_avg, " minutes") %><br>
-      <strong>Time spent in ER before being admitted:</strong> <%= checkNaN(er_inpatient_1, " minutes") %><br>
-      <strong>Time after doctor decided to admit patient before leaving ER for room:</strong> <%= checkNaN(er_inpatient_2, " minutes") %><br>
-      <strong>Median time to pain med:</strong> <%= checkNaN(er_time_to_painmed, " minutes") %><br>
-      <strong>Left before being seen:</strong> <%= checkNaN(er_left_pct, "%") %><br>
-      <strong>Head CT results:</strong> <%= checkNaN(er_ctresults_pct, "%") %>
+      <% var labels = getLabels() %>
+      <% labels.each(function(label){ %>
+          <strong class="tipped dotted" title="<%= label.get('full') %>"><%= label.get('label') %>:</strong> <%= checkNaN(obj[label.get('key')], label.get('units')) %><br>
+      <% }) %>
     </p>
     <hr>
   </script>
