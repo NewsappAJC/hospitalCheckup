@@ -221,27 +221,34 @@ for node in src:
 
 ###State averages###
 #er_volume (EDV) not included in state and national bc it is categorical so you can't average it
-endpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_1b&state=GA"}, {"er_inpatient_2": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_2b&state=GA"}, {"er_total_time_avg": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_18b&state=GA"}, {"er_time_to_eval": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_20&state=GA"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_21&state=GA"}, {"er_left_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_22&state=GA"}, {"er_ctresults_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_23&state=GA"}]
+endpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_1b"}, {"er_inpatient_2": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_2b"}, {"er_total_time_avg": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_18b"}, {"er_time_to_eval": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_20"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_21"}, {"er_left_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_22"}, {"er_ctresults_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_23"}]
 
-totalsGA = {"id": "erStateAverages", "national": {}} #backbone expects an ID and local storage uses it too
-for node in endpoints: #go through each enpoint
-    for key in node.keys(): #use the key as an ID later
-        url = urllib2.Request(node[key])
-        data = json.load(urllib2.urlopen(url))
+strings = ["", "_LOW_MIN", "_MEDIUM_MIN", "_HIGH_MIN", "_VERY_HIGH_MIN"]
+param = "&state=GA"
+totalsGA = {"id": "erStateAverages", "national": {} } #backbone expects an ID and local storage uses it too
+for string in strings:
+    for node in endpoints: #go through each enpoint
+        for key in node.keys(): #use the key as an ID later
+            url = urllib2.Request(node[key]+string+param)
+            data = json.load(urllib2.urlopen(url))
 
-        for item in data:
-            totalsGA[key] = int(item["score"])
+            for item in data:
+                totalsGA[key+string] = int(item["score"])
 
 ###National averages###
 natEndpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=ED_1b"}, {"er_inpatient_2": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=ED_2b"}, {"er_total_time_avg": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_18b"}, {"er_time_to_eval": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_20"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_21"}, {"er_left_pct": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_22"}, {"er_ctresults_pct": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_23"}]
 
-for node in natEndpoints: #go through each enpoint
-    for key in node.keys(): #use the key as an ID later
-        url = urllib2.Request(node[key])
-        data = json.load(urllib2.urlopen(url))
 
-        for item in data:
-            totalsGA["national"][key] = int(item["score"])
+
+for string in strings:
+    for node in natEndpoints: #go through each enpoint
+        for key in node.keys(): #use the key as an ID later
+            url = urllib2.Request(node[key]+string)
+            data = json.load(urllib2.urlopen(url))
+
+            for item in data:
+                totalsGA["national"][key+string] = int(item["score"])
+
 
 f = open( '../src/assets/data/er.json', 'w')
 f.write(json.dumps({"hospitals": src, "averages": totalsGA}, indent=2, sort_keys=True))
