@@ -221,34 +221,28 @@ for node in src:
 
 ###State averages###
 #er_volume (EDV) not included in state and national bc it is categorical so you can't average it
-endpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_1b"}, {"er_inpatient_2": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=ED_2b"}, {"er_total_time_avg": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_18b"}, {"er_time_to_eval": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_20"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_21"}, {"er_left_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_22"}, {"er_ctresults_pct": "https://data.medicare.gov/resource/apyc-v239.json?measure_id=OP_23"}]
+labels = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
+endpoints = ["https://data.medicare.gov/resource/apyc-v239.json?measure_id=", "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id="]
+keys = ["ED_1b", "ED_2b", "OP_18b", "OP_20", "OP_21", "OP_22", "OP_23"]
 
-strings = ["", "_LOW_MIN", "_MEDIUM_MIN", "_HIGH_MIN", "_VERY_HIGH_MIN"]
+volumes = ["", "_LOW_MIN", "_MEDIUM_MIN", "_HIGH_MIN", "_VERY_HIGH_MIN"]
 param = "&state=GA"
 totalsGA = {"id": "erStateAverages", "national": {} } #backbone expects an ID and local storage uses it too
-for string in strings:
-    for node in endpoints: #go through each enpoint
-        for key in node.keys(): #use the key as an ID later
-            url = urllib2.Request(node[key]+string+param)
+
+for index, endpoint in enumerate(endpoints, start=0):
+    for volume in volumes:
+        for label in labels: #use the key as an ID later
+            urlStr = endpoint+keys[index]+volume
+            if index==0:
+                urlStr = urlStr+param
+            url = urllib2.Request(urlStr)
             data = json.load(urllib2.urlopen(url))
 
             for item in data:
-                totalsGA[key+string] = int(item["score"])
-
-###National averages###
-natEndpoints = [{"er_inpatient_1": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=ED_1b"}, {"er_inpatient_2": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=ED_2b"}, {"er_total_time_avg": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_18b"}, {"er_time_to_eval": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_20"}, {"er_time_to_painmed": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_21"}, {"er_left_pct": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_22"}, {"er_ctresults_pct": "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id=OP_23"}]
-
-
-
-for string in strings:
-    for node in natEndpoints: #go through each enpoint
-        for key in node.keys(): #use the key as an ID later
-            url = urllib2.Request(node[key]+string)
-            data = json.load(urllib2.urlopen(url))
-
-            for item in data:
-                totalsGA["national"][key+string] = int(item["score"])
-
+                if index==0:
+                    totalsGA[label+volume] = int(item["score"])
+                else:
+                    totalsGA["national"][label+volume] = int(item["score"])
 
 f = open( '../src/assets/data/er.json', 'w')
 f.write(json.dumps({"hospitals": src, "averages": totalsGA}, indent=2, sort_keys=True))
