@@ -225,24 +225,22 @@ labels = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_e
 endpoints = ["https://data.medicare.gov/resource/apyc-v239.json?measure_id=", "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id="]
 keys = ["ED_1b", "ED_2b", "OP_18b", "OP_20", "OP_21", "OP_22", "OP_23"]
 
-volumes = ["", "_LOW_MIN", "_MEDIUM_MIN", "_HIGH_MIN", "_VERY_HIGH_MIN"]
 param = "&state=GA"
 totalsGA = {"id": "erStateAverages", "national": {} } #backbone expects an ID and local storage uses it too
 
 for index, endpoint in enumerate(endpoints, start=0):
-    for volume in volumes:
-        for label in labels: #use the key as an ID later
-            urlStr = endpoint+keys[index]+volume
-            if index==0:
-                urlStr = urlStr+param
-            url = urllib2.Request(urlStr)
-            data = json.load(urllib2.urlopen(url))
+    for label in labels: #use the key as an ID later
+        urlStr = endpoint+keys[index]
+        if index==0:
+            urlStr = urlStr+param
+        url = urllib2.Request(urlStr)
+        data = json.load(urllib2.urlopen(url))
 
-            for item in data:
-                if index==0:
-                    totalsGA[label+volume] = int(item["score"])
-                else:
-                    totalsGA["national"][label+volume] = int(item["score"])
+        for item in data:
+            if index==0:
+                totalsGA[label] = int(item["score"])
+            else:
+                totalsGA["national"][label] = int(item["score"])
 
 f = open( '../src/assets/data/er.json', 'w')
 f.write(json.dumps({"hospitals": src, "averages": totalsGA}, indent=2, sort_keys=True))
