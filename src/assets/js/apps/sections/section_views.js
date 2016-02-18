@@ -90,7 +90,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
     templateHelpers: function () {
       return {
-        clip: function(num){
+        format: function(num, stat){
+          if(stat === "rate"){
+            return d3.round(num, 2)+"%";
+          }
           return d3.round(num, 2);
         }
       };
@@ -126,6 +129,11 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         view.model.set("measure", criterion);
       });
       this.render();
+    },
+    templateHelpers: function () {
+      return {
+        "stat": this.stat
+      };
     }
   });
 

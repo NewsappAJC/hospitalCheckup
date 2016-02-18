@@ -136,11 +136,11 @@
     <div id="main-chart"></div>
   </script>
 
-    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- clip(obj[section][measure][stat]) %></td>
   <script type="text/template" id="mobile-rangedot-tr-template">
+    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- format(obj[section][measure][stat], stat) %></td>
   </script>
-    <thead><tr><th>Hospital</th><th>Rating</th><th>Rate</th></tr></thead>
   <script type="text/template" id="mobile-rangedot-table-template">
+    <thead><tr><th>Hospital</th><th>Rating</th><th><%- stat.charAt(0).toUpperCase() + stat.substring(1).toLowerCase() %></th></tr></thead>
     <tbody></tbody>
   </script>
 
