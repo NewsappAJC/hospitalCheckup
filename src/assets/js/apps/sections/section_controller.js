@@ -46,10 +46,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         if(!isMobile){
           listView = new Section.MainChart();
         } else {
-          if(sectionID !== "perinatal"){
-            listView = new Section.MobileList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
+          if(chartType === "BarRangeDot"){
+            listView = new Section.MobileRangeDotList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
           } else {
-            listView = new Section.MobilePerinatalList({collection: collection, measure: criterion || defaultMeasure });
+            listView = new Section.MobileBarList({collection: collection, measure: criterion || defaultMeasure });
           }
           
           listView.listenTo(menuView, sectionID+":filter", listView.onFilter);

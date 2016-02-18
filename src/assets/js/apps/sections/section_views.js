@@ -79,9 +79,9 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     }
   });
 
-  Section.MobileRow = Marionette.ItemView.extend({
+  Section.MobileRangeDotRow = Marionette.ItemView.extend({
     tagName: "tr",
-    template: "#mobile-tr-template",
+    template: "#mobile-rangedot-tr-template",
     initialize: function(options){
       //recieved from childViewOptions, template needs it
       this.model.set("measure", options.measure);
@@ -97,12 +97,12 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     }
   });
 
-  Section.MobileList = Marionette.CompositeView.extend({
+  Section.MobileRangeDotList = Marionette.CompositeView.extend({
     tagName: "table",
     className: "columns",
     id: "mobile-list",
-    template: "#mobile-table-template",
-    childView: Section.MobileRow,
+    template: "#mobile-rangedot-table-template",
+    childView: Section.MobileRangeDotRow,
     childViewContainer: "tbody",
     initialize: function(options){
       this.measure = options.measure;
@@ -110,11 +110,15 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       this.stat = options.stat;
     },
     childViewOptions: function(model, index) {
+      //only the BarRangeDot charts actually need or know section and stat
       return { measure: this.measure, section: this.section, stat: this.stat }
     },
     filter: function(child, index, collection){
       //don't show items with null ratios
-      return !child.get(this.section)[this.measure].na
+      if(this.section){ //only BarRangeDot charts pass section option to mobile view
+        return !child.get(this.section)[this.measure].na
+      }
+      return !isNaN(child.get(this.measure));
     },
     onFilter: function(criterion){
       this.measure = criterion;
@@ -125,9 +129,9 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     }
   });
 
-  Section.MobilePerinatalRow = Marionette.ItemView.extend({
+  Section.MobileBarRow = Marionette.ItemView.extend({
     tagName: "tr",
-    template: "#mobile-tr-perinatal-template",
+    template: "#mobile-bar-tr-template",
     initialize: function(options){
       //recieved from childViewOptions, template needs it
       this.model.set("measure", options.measure);
@@ -142,6 +146,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
             formatter = function(d){ return d + "%" } //the normal d3.format("%") will also multiply it by 100
           } else if (measure.indexOf("total") >= 0){
             formatter = d3.format(",");
+          } else {
+            formatter = function(string){ return string };
           }
           return formatter(num);
         }
@@ -149,26 +155,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     }
   });
 
-  Section.MobilePerinatalList = Marionette.CompositeView.extend({
-    tagName: "table",
-    className: "columns",
-    id: "mobile-list",
-    template: "#mobile-perinatal-table-template",
-    childView: Section.MobilePerinatalRow,
-    childViewContainer: "tbody",
-    initialize: function(options){
-      this.measure = options.measure;
-    },
-    childViewOptions: function(model, index) {
-      return { measure: this.measure }
-    },
-    onFilter: function(criterion){
-      this.measure = criterion;
-      this.children.each(function(view){
-        view.model.set("measure", criterion);
-      });
-      this.render();
-    }
+  Section.MobileBarList = Section.MobileRangeDotList.extend({
+    template: "#mobile-bar-table-template",
+    childView: Section.MobileBarRow
   });
-
 });

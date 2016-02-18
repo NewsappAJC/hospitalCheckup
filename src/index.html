@@ -128,29 +128,29 @@
     </div>
   </script>
 
+  <script type="text/template" id="empty-template"></script>
+
   <!-- INFECTIONS
   ================================================== -->
   <script type="text/template" id="main-chart-template">
     <div id="main-chart"></div>
   </script>
 
-  <script type="text/template" id="mobile-tr-template">
     <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- clip(obj[section][measure][stat]) %></td>
+  <script type="text/template" id="mobile-rangedot-tr-template">
   </script>
-  <script type="text/template" id="mobile-table-template">
     <thead><tr><th>Hospital</th><th>Rating</th><th>Rate</th></tr></thead>
+  <script type="text/template" id="mobile-rangedot-table-template">
     <tbody></tbody>
   </script>
 
-  <script type="text/template" id="mobile-tr-perinatal-template">
+  <script type="text/template" id="mobile-bar-tr-template">
     <td><%- display_name %></td><td><%- format(obj[measure], measure) %></td>
   </script>
-  <script type="text/template" id="mobile-perinatal-table-template">
+  <script type="text/template" id="mobile-bar-table-template">
     <thead><tr><th>Hospital</th><th>Value</th></tr></thead>
     <tbody></tbody>
   </script>
-
-  <script type="text/template" id="empty-template"></script>
 
   <script type="text/template" id="infections-tooltip-template">
     <div id="ttip" class="ttip container">
