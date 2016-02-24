@@ -1,21 +1,21 @@
 {
   "averages": {
-    "er_ctresults_pct": 290, 
+    "er_ctresults_pct": 59, 
     "er_inpatient_1": 290, 
-    "er_inpatient_2": 290, 
-    "er_left_pct": 290, 
-    "er_time_to_eval": 290, 
-    "er_time_to_painmed": 290, 
-    "er_total_time_avg": 290, 
+    "er_inpatient_2": 96, 
+    "er_left_pct": 3, 
+    "er_time_to_eval": 31, 
+    "er_time_to_painmed": 60, 
+    "er_total_time_avg": 146, 
     "id": "erStateAverages", 
     "national": {
-      "er_ctresults_pct": 98, 
-      "er_inpatient_1": 98, 
+      "er_ctresults_pct": 66, 
+      "er_inpatient_1": 278, 
       "er_inpatient_2": 98, 
-      "er_left_pct": 98, 
-      "er_time_to_eval": 98, 
-      "er_time_to_painmed": 98, 
-      "er_total_time_avg": 98
+      "er_left_pct": 2, 
+      "er_time_to_eval": 24, 
+      "er_time_to_painmed": 54, 
+      "er_total_time_avg": 141
     }
   }, 
   "hospitals": [

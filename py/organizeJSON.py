@@ -228,16 +228,16 @@ keys = ["ED_1b", "ED_2b", "OP_18b", "OP_20", "OP_21", "OP_22", "OP_23"]
 param = "&state=GA"
 totalsGA = {"id": "erStateAverages", "national": {} } #backbone expects an ID and local storage uses it too
 
-for index, endpoint in enumerate(endpoints, start=0):
-    for label in labels: #use the key as an ID later
-        urlStr = endpoint+keys[index]
-        if index==0:
+for i, endpoint in enumerate(endpoints, start=0):
+    for j, label in enumerate(labels): #use the key as an ID later
+        urlStr = endpoint+keys[j]
+        if i==0:
             urlStr = urlStr+param
         url = urllib2.Request(urlStr)
         data = json.load(urllib2.urlopen(url))
 
         for item in data:
-            if index==0:
+            if i==0:
                 totalsGA[label] = int(item["score"])
             else:
                 totalsGA["national"][label] = int(item["score"])
