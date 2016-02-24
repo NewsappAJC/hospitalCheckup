@@ -46,7 +46,7 @@ for node in src:
                 try:
                     hospital["infections"][inf]["incidents"] = "{:,d}".format(val)
                 except:
-                    hospital["infections"][inf]["incidents"] = 0 #sometimes there are strings in the null data fields
+                    hospital["infections"][inf]["incidents"] = "Not available" #We'll filter out NaN data points later, but this is displayed and these said "null"
                 del hospital["infections"][inf][param] #just added this above but whatever
             elif(param == "procedures"):
                 hospital["infections"][inf]["incidents_label"] = "Procedures"
@@ -202,3 +202,47 @@ f = open( '../src/assets/data/perinatal.json', 'w')
 f.write(json.dumps({"hospitals": tree, "averages": totals}, indent=2, sort_keys=True))
 f.close()
 print "hospital perinatal JSON saved!"
+
+#####ER Waits#####
+f = open( '../src/assets/data/src/ER_waits.json', 'rU' )
+src = json.load(f)
+f.close()
+
+nums = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
+
+for node in src:
+    hospital = node
+    for key in node.keys():
+        if key in nums:
+            try:
+                node[key] = int(node[key])
+            except:
+                node[key] = node[key] #we'll check for NaN in app to filter these out, usually some string indicating not enough data
+
+###State averages###
+#er_volume (EDV) not included in state and national bc it is categorical so you can't average it
+labels = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
+endpoints = ["https://data.medicare.gov/resource/apyc-v239.json?measure_id=", "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id="]
+keys = ["ED_1b", "ED_2b", "OP_18b", "OP_20", "OP_21", "OP_22", "OP_23"]
+
+param = "&state=GA"
+totalsGA = {"id": "erStateAverages", "national": {} } #backbone expects an ID and local storage uses it too
+
+for i, endpoint in enumerate(endpoints, start=0):
+    for j, label in enumerate(labels): #use the key as an ID later
+        urlStr = endpoint+keys[j]
+        if i==0:
+            urlStr = urlStr+param
+        url = urllib2.Request(urlStr)
+        data = json.load(urllib2.urlopen(url))
+
+        for item in data:
+            if i==0:
+                totalsGA[label] = int(item["score"])
+            else:
+                totalsGA["national"][label] = int(item["score"])
+
+f = open( '../src/assets/data/er.json', 'w')
+f.write(json.dumps({"hospitals": src, "averages": totalsGA}, indent=2, sort_keys=True))
+f.close()
+print "hospital ER waits JSON saved!"

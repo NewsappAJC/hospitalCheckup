@@ -87,5 +87,28 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
         }
       };
     }
-  })
+  });
+
+  Hospital.ER = Marionette.ItemView.extend({
+    template: "#hospital-er-template",
+    className: "hospital-list hospital-list-item",
+    onRender: function(){
+      //when new hospital is selected the view resets and needs tooltips re-added
+      HospitalCheckup.addTips();
+    },
+    templateHelpers: function(){
+      return {
+        //don't label string values with units (i.e. avoid "Not Available minutes")
+        checkNaN: function(val, label){
+          if(isNaN(val)){
+            return val
+          }
+          return val + label
+        },
+        getLabels: function(){
+          return HospitalCheckup.Entities["ERLabels"];
+        }
+      }
+    }
+  });
 });

@@ -78,11 +78,11 @@ module.exports = function(grunt) {
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_cond/*'], dest: 'build/assets/css/fonts/boomer_cond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_extracond/*'], dest: 'build/assets/css/fonts/boomer_extracond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab/*'], dest: 'build/assets/css/fonts/boomerslab/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond*'], dest: 'build/assets/css/fonts/boomerslab_cond' },
+          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond/*'], dest: 'build/assets/css/fonts/boomerslab_cond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_extracond/*'], dest: 'build/assets/css/fonts/boomerslab_extracond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/publico/*'], dest: 'build/assets/css/fonts/publico/' },
-          { expand: true, flatten: true, src: ['src/style/lib/fontawesome/css/*'], dest: 'build/style/lib/fontawesome/css' },
-          { expand: true, flatten: true, src: ['src/style/lib/fontawesome/fonts/*'], dest: 'build/style/lib/fontawesome/fonts' },
+          { expand: true, flatten: true, src: ['src/assets/css/vendor/fontawesome/css/*'], dest: 'build/assets/css/vendor/fontawesome/css/' },
+          { expand: true, flatten: true, src: ['src/assets/css/vendor/fontawesome/fonts/*'], dest: 'build/assets/css/vendor/fontawesome/fonts/' },
           { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'build/' }
         ]
       }
@@ -291,8 +291,6 @@ module.exports = function(grunt) {
           "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
           //"backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "backbone.sessionStorage.js": "backbone.sessionStorage/backbone.sessionStorage.js", //session storage adapter
-          "spin.js": "spin.js/spin.js", //for page loading spinner
-          "jquery.spin.js": "spin.js/jquery.spin.js", //for using ^ with jquery,
           "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options,
         }
       },
@@ -312,7 +310,7 @@ module.exports = function(grunt) {
         },
         files: {
           "fonts.css": "ajc-design/build/style/fonts.css",
-          "fonts": "ajc-design/build/style/fonts"
+          "fonts": "ajc-design/build/style/fonts/"
         }
       }
     },
@@ -349,7 +347,7 @@ module.exports = function(grunt) {
 
     watch: {
       dev: {
-        files: ['src/index.html','src/assets/js/*.js','src/assets/css/**/*.css'],
+        files: ['src/index.html','src/assets/js/*.js','src/assets/js/**/*.js', 'src/assets/css/**/*.css'],
         options: {
           livereload: true
         }

@@ -15,7 +15,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       //set up axis and label formatters
       if(options.section === "surgery"){
         this.formatter = function(){ return function(d){ return d + "%" }; };
-      } else if (options.section === "perinatal"){
+      } else if (options.chartType === "BarLeft"){
         this.formatter = function(isAxis){ return this.get_format(this.options.measure, isAxis); };
       }
       return this;
@@ -32,9 +32,27 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.draw_axes(data); //needs to be on top of bars
     },
 
-    filter_data: function(data){
-      //meant to be extended
-      return data;
+    //remove items with no data and sort by stat
+    filter_data: function(){
+      var chart = this,
+      section = chart.options.section,
+      measure = chart.options.measure,
+      chartType = chart.options.chartType,
+      stat = chart.options.stat;
+
+      var filtered = chart.data.filter(function(d){
+        if(chartType === "BarRangeDot"){
+          return d[section][measure].na != 1;
+        }
+        return !isNaN(d[measure]);
+      });
+      filtered.sort(function(a,b){
+        if(chartType === "BarRangeDot"){
+          return d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        }
+        return d3.ascending(a[measure], b[measure]);
+      });
+      return filtered;
     },
 
     get_xMax: function(data){
@@ -127,7 +145,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       chart.defs = d3.select(chart.el).select("svg").append('svg:defs');
       chart.linesToMark = [{ id: "average", scale: function(){ return HospitalCheckup.Entities.averages.get(chart.options.measure) }, label: "State avg.", anchorDefault: "start"}];
       if(chart.options.section === "infections"){ chart.linesToMark.push({ id: "national", scale: function(){ return 1 }, label: "Benchmark", anchorDefault: "end" }) }
-      else if (chart.options.section === "surgery"){ chart.linesToMark.push({ id: "national", scale: function(){ return HospitalCheckup.Entities.averages.get("national")[chart.options.measure] }, label: "National avg.", anchorDefault: "end" })};
+      else if (chart.options.section === "surgery" || chart.options.section === "er"){ chart.linesToMark.push({ id: "national", scale: function(){ return HospitalCheckup.Entities.averages.get("national")[chart.options.measure] }, label: "National avg.", anchorDefault: "end" })};
 
       chart.contextLines = chart.svg.select("#contextLines");
 
@@ -163,8 +181,8 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     transition_context_lines: function(data){
       var chart = this,
       height = chart.get_currentHeight(data),
-      section = chart.options.section;
-      if(section !== "perinatal"){
+      chartType = chart.options.chartType;
+      if(chartType === "BarRangeDot" || chart.options.section === "er"){
         var state = chart.linesToMark[0].scale(),
         national = chart.linesToMark[1].scale();
       }
@@ -272,7 +290,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       this.selected = label; //store it so we can check for it when new labels enter
     },
 
-    set_tooltip: function(chart, obj, measure){
+    set_tooltip: function(chart, obj, measure){ //TODO use the app level #tooltip now and just move it around like the measure labels, right?
       obj.on("mouseover", function(d) {
         chart.attach_tooltip(d, measure);
       })
@@ -282,19 +300,32 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     attach_tooltip: function(data, measure) {
-      if(this.options.section === "perinatal"){
+      var chart = this,
+      entity = chart.options.entityID;
+
+      if(chart.options.chartType === "BarLeft"){
         if(data.measure !== measure){ //don't re-process it on subsequent hovers
-          data.label = HospitalCheckup.Entities.PerinatalLabels.findWhere({ key: measure }).get("label");
-          var format = this.get_format(measure);
-          data.formatted = format(data[measure]);
+          data.label = HospitalCheckup.Entities[entity+"Labels"].findWhere({ key: measure }).get("label");
+          var format = chart.get_format(measure);
+          data.formatted = format(data[measure]) + get_unit_label();
         }
       }
       data.measure = measure; //template needs access
-      var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
+      var tmpl = _.template($("#"+chart.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));
       tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
       tt.css("left", (parseFloat(d3.event.layerX + 25)) + "px");
-      this.$el.append(tt);
+      chart.$el.append(tt);
+
+      function get_unit_label(){
+        if(entity === "ER"){
+          var units = HospitalCheckup.Entities[entity+"Labels"].findWhere({ key: measure }).get("units");
+          if(units !== "%"){
+            return units
+          }
+        }
+        return "";
+      }
     }
   });
 
@@ -310,21 +341,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       var ids = ["baseBars", "rangeBars", "axes", "contextLines", "statCircles"];
 
       Chart.BarBase.prototype.create_svg_containers.call(this, ids);
-    },
-
-    //remove items with no data and sort by stat
-    filter_data: function(){
-      var chart = this,
-      section = chart.options.section,
-      stat = chart.options.stat;
-
-      var filtered = chart.data.filter(function(d){
-        return d[section][chart.options.measure].na != 1;
-      });
-      filtered.sort(function(a,b){
-        return d3.ascending(a[section][chart.options.measure][stat], b[section][chart.options.measure][stat]);
-      });
-      return filtered;
     },
 
     draw_data: function(data){
@@ -442,16 +458,6 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
       Chart.BarBase.prototype.create_svg_containers.call(this, ids);
     },
 
-    filter_data: function(){
-      var chart = this,
-      measure = chart.options.measure;
-
-      var filtered = chart.data.sort(function(a,b){
-        return d3.ascending(a[measure], b[measure]);
-      });
-      return filtered;
-    },
-
     get_format: function(measure, isAxis){
       if(measure.indexOf("charge") >= 0){
         if(isAxis){
@@ -466,6 +472,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         }
         return d3.format(",");
       } else {
+        return function(string){ return string }
         console.log("no matching format");
       }
     },
