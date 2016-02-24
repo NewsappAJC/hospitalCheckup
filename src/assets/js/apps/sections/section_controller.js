@@ -14,10 +14,13 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       this.buildLayout(id, criterion, "csect_pct", "Perinatal", "perinatal", "BarLeft");
     },
 
+    listER: function(id, criterion){
+      this.buildLayout(id, criterion, "er_time_to_eval", "ER", "er", "BarLeft");
+    },
+
     buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, dotLabel, stat){
+      HospitalCheckup.vent.trigger("loading:show");
       var isMobile = document.body.clientWidth < 405;
-      var loadingView = new HospitalCheckup.Common.Views.Loading();
-      HospitalCheckup.regions.main.show(loadingView);
 
       var fetchingData = HospitalCheckup.request("chart:entities", entityID, sectionID);
 
@@ -33,7 +36,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
         var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
       }
-      if (sectionID !== "perinatal"){
+      if (sectionID !== "perinatal" & sectionID !== "er"){
         var legendView = new Section.Legend({label: legendLabel, dot: dotLabel});
         hospitalMeasuresView.collection = new Backbone.Collection();
       }
@@ -43,10 +46,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         if(!isMobile){
           listView = new Section.MainChart();
         } else {
-          if(sectionID !== "perinatal"){
-            listView = new Section.MobileList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
+          if(chartType === "BarRangeDot"){
+            listView = new Section.MobileRangeDotList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
           } else {
-            listView = new Section.MobilePerinatalList({collection: collection, measure: criterion || defaultMeasure });
+            listView = new Section.MobileBarList({collection: collection, measure: criterion || defaultMeasure });
           }
           
           listView.listenTo(menuView, sectionID+":filter", listView.onFilter);
@@ -79,7 +82,9 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
               margin: {left: 195, right: 15, bottom: 20, top: 25}, //right padding needed to protect chart labels that extend past axis
               measure: criterion || defaultMeasure,
               section: sectionID,
-              stat: stat
+              entityID: entityID,
+              stat: stat,
+              chartType: chartType
             });
             Section.chartView.render(); //for some reason this breaks filtering when chained with initialization above
           }
@@ -105,6 +110,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
         });
 
         HospitalCheckup.regions.main.show(listLayout);
+        HospitalCheckup.vent.trigger("loading:hide");
       });
     }
   }

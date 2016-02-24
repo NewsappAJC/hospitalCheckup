@@ -43,9 +43,10 @@
   ================================================== -->
   <link rel="stylesheet" href="assets/css/vendor/normalize.css">
   <link rel="stylesheet" href="assets/css/vendor/foundation.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/styles.css" type="text/css"> <!-- AJC metering modals css -->
-  <link rel="stylesheet" href="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/janrainModals.css"> <!-- just the ENTIRE 4k line myajc master.css file bc the login screen css was messed up, fix it -->
+  <link rel="stylesheet" href="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/styles.css" type="text/css"> <!-- AJC metering modals css -->
+  <link rel="stylesheet" href="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/css/janrainModals.css"> <!-- just the ENTIRE 4k line myajc master.css file bc the login screen css was messed up, fix it -->
   <link rel="stylesheet" href="assets/css/app.css">
   <script src="assets/js/vendor/modernizr.js"></script>
   <!-- Google Analytics -->
@@ -60,13 +61,15 @@
   </script>
 </head>
 <body>
-  <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/wrap.js"></script> <!-- AJC metering modals js -->
+  <script src="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/wrap.js"></script> <!-- AJC metering modals js -->
   <div id="app-container">
     <div id="header-region"></div>
     <div class="authentication-change right">
       <a class="header-text cmOpenJanrainModal cmUserAnonymous" href="#">LOG IN</a>
       <a class="prepend-site header-text cmUserAuthed cmLogout" data-href="auth/logout" href="http://www.myajc.com/auth/logout">LOG OUT</a>
     </div>
+    <div id="tooltip"></div>
+    <div id="loading-region"></div>
     <div id="main-region" class="container"></div>
   </div>
 
@@ -90,6 +93,10 @@
 
   <script type="text/template" id="header-link">
     <a class="header-link" href="#<%- url %>"><%- name %></a>
+  </script>
+
+  <script type="text/template" id="loading-template">
+    <i class="fa fa-spinner fa-spin"></i>
   </script>
 
   <script type="text/template" id="homepage-icon-link">
@@ -121,29 +128,29 @@
     </div>
   </script>
 
+  <script type="text/template" id="empty-template"></script>
+
   <!-- INFECTIONS
   ================================================== -->
   <script type="text/template" id="main-chart-template">
     <div id="main-chart"></div>
   </script>
 
-  <script type="text/template" id="mobile-tr-template">
-    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- clip(obj[section][measure][stat]) %></td>
+  <script type="text/template" id="mobile-rangedot-tr-template">
+    <td><%- display_name %></td><td><span class="mobile-rating <%- obj[section][measure].ratingClass %>"></span></td><td><%- format(obj[section][measure][stat], stat) %></td>
   </script>
-  <script type="text/template" id="mobile-table-template">
-    <thead><tr><th>Hospital</th><th>Rating</th><th>Rate</th></tr></thead>
+  <script type="text/template" id="mobile-rangedot-table-template">
+    <thead><tr><th>Hospital</th><th>Rating</th><th><%- stat.charAt(0).toUpperCase() + stat.substring(1).toLowerCase() %></th></tr></thead>
     <tbody></tbody>
   </script>
 
-  <script type="text/template" id="mobile-tr-perinatal-template">
+  <script type="text/template" id="mobile-bar-tr-template">
     <td><%- display_name %></td><td><%- format(obj[measure], measure) %></td>
   </script>
-  <script type="text/template" id="mobile-perinatal-table-template">
+  <script type="text/template" id="mobile-bar-table-template">
     <thead><tr><th>Hospital</th><th>Value</th></tr></thead>
     <tbody></tbody>
   </script>
-
-  <script type="text/template" id="empty-template"></script>
 
   <script type="text/template" id="infections-tooltip-template">
     <div id="ttip" class="ttip container">
@@ -164,6 +171,12 @@
   </script>
 
   <script type="text/template" id="perinatal-tooltip-template">
+    <div id="ttip" class="ttip container">
+        <strong><%= label %></strong>: <%= formatted %>
+    </div>
+  </script>
+
+  <script type="text/template" id="er-tooltip-template">
     <div id="ttip" class="ttip container">
         <strong><%= label %></strong>: <%= formatted %>
     </div>
@@ -224,6 +237,18 @@
       <strong>Live births:</strong> <%= formatCommas(Live_Births) %><br>
       <strong>C-Sections:</strong> <%= formatCommas(C_Sect) %><br>
       <strong>Early elective delivery rate:</strong> <%= early_births_pct %>%
+    </p>
+    <hr>
+  </script>
+
+  <script type="text/template" id="hospital-er-template">
+    <p>
+      <strong>Emergency department volume:</strong> <%= er_volume %><br>
+      <br>
+      <% var labels = getLabels() %>
+      <% labels.each(function(label){ %>
+          <strong class="tipped dotted" title="<%= label.get('full') %>"><%= label.get('label') %>:</strong> <%= checkNaN(obj[label.get('key')], label.get('units')) %><br>
+      <% }) %>
     </p>
     <hr>
   </script>
@@ -292,17 +317,13 @@
   <!-- END INFECTIONS
   ================================================== -->
 
-  <script type="text/template" id="loading-view">
-    <div id="spinner"></div>
-  </script>
-
   <!-- AJC METERING MODALS -->
   <div id="ajc-meter-modals"></div>
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script type="text/javascript">
   //load the HTML for the metering modals
-  $( "#ajc-meter-modals" ).load( "http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/modals.html" );
+  $( "#ajc-meter-modals" ).load( "//ajcdatawrap.s3-website-us-east-1.amazonaws.com/modals.html" );
   </script>
   <script src="assets/js/vendor/underscore.js"></script>
   <script src="assets/js/vendor/backbone.js"></script>
@@ -311,8 +332,6 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/vendor/foundation.topbar.js"></script>
-  <script src="assets/js/vendor/spin.js"></script>
-  <script src="assets/js/vendor/jquery.spin.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
 
   <!-- build:js assets/js/app.js -->
@@ -328,15 +347,17 @@
   <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
   <script src="assets/js/apps/sections/section_app.js"></script>
+  <script src="assets/js/apps/loading/loading_app.js"></script>
+  <script src="assets/js/apps/loading/loading_controller.js"></script>
+  <script src="assets/js/apps/loading/loading_view.js"></script>
   <script src="assets/js/apps/home/home_app.js"></script>
   <script src="assets/js/apps/home/home_controller.js"></script>
   <script src="assets/js/apps/home/home_view.js"></script>
   <script src="assets/js/apps/sections/chart/chart_base_view.js"></script>
   <script src="assets/js/apps/sections/chart/chart_views.js"></script>
   <script src="assets/js/common/behaviors.js"></script>
-  <script src="assets/js/common/views.js"></script>
   <script src="assets/js/entities/text.js"></script>
-  <script src="http://ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
+  <script src="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
   <!-- /build -->
   <script type="text/javascript">
     $(document).foundation();

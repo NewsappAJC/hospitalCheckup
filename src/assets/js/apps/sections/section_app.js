@@ -4,7 +4,8 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
       //"infections(/)": "listInfections",
       "infections(/:id)(/filter/:criterion)": "listInfections", //hospital selection IDs and dropdown infections filters
       "surgery(/:id)(/filter/:criterion)": "listSurgeries",
-      "perinatal(/:id)(/filter/:criterion)": "listPerinatal"
+      "perinatal(/:id)(/filter/:criterion)": "listPerinatal",
+      "er(/:id)(/filter/:criterion)": "listER"
     }
   });
 
@@ -27,6 +28,12 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
       updateAnalytics("perinatal", criterion);
     },
 
+    listER: function(id, criterion){
+      SectionsApp.Section.Controller.listER(id, criterion);
+      HospitalCheckup.execute("set:active:header", "er"); //update navigation toolbar
+      updateAnalytics("ER", criterion);
+    },
+
     showHospital: function(id, aboutView, measuresView, defaultModel){  //received URL with ID parameter
       SectionsApp.Hospital.Controller.showHospital(id, aboutView, measuresView, defaultModel);
     }
@@ -45,6 +52,11 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
   HospitalCheckup.on("perinatal:list", function(){ //list perinatal, triggered from nav
     HospitalCheckup.navigate("perinatal");
     API.listPerinatal();
+  });
+
+  HospitalCheckup.on("er:list", function(){ //list perinatal, triggered from nav
+    HospitalCheckup.navigate("er");
+    API.listER();
   });
 
   HospitalCheckup.on("hospital:show", function(id, aboutView, measuresView, defaultModel){ //received URL with ID parameter
@@ -66,6 +78,10 @@ HospitalCheckup.module("SectionsApp", function(SectionsApp, HospitalCheckup, Bac
 
   HospitalCheckup.on("perinatal:filter", function(criterion){ //filter menu changed
     HospitalCheckup.navigate("perinatal/filter/" + criterion);
+  });
+
+  HospitalCheckup.on("er:filter", function(criterion){ //filter menu changed
+    HospitalCheckup.navigate("er/filter/" + criterion);
   });
 
   function updateAnalytics(page, filter){

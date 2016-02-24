@@ -22,10 +22,12 @@ Explore hospital quality data for Atlanta area hospitals.
  - [backbone]()
  - [backbone.marionette]()
  - [backbone.select](https://github.com/hashchange/backbone.select) for keeping the nav selections updated
- - [backbone.localstorage](https://github.com/jeromegn/Backbone.localStorage) to utilize local storage
- - [spin.js](http://spin.js.org/) for loading spinner
+ - [backbone.localstorage](https://github.com/jeromegn/Backbone.localStorage) to utilize session storage
+ - [font-awesome](https://fortawesome.github.io/Font-Awesome/) to loading spinner
 
 ##Helpful links 
+ - [Main hospital compare site](https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/hospitalqualityinits/hospitalcompare.html)
+ - [Hospital Compare measure definitions](https://www.medicare.gov/hospitalcompare/Data/Measures-Displayed.html#)
  - [Hospital Compare data set homepage](https://data.medicare.gov/data/hospital-compare)
  - [Complications data set](https://data.medicare.gov/Hospital-Compare/Complications-National/cvcs-xecj)
  - [Complications API docs](https://dev.socrata.com/foundry/#/data.medicare.gov/tiin-ktzr)
@@ -57,8 +59,6 @@ Explore hospital quality data for Atlanta area hospitals.
  
 ## Todo
 - [ ] Use the Hospital Compare API to find the state and national averages
-- [ ] Any way to get more consistency between the explanations of the range/confidence interval between the infections and surgery sections?
-- [ ] Surgeries rate - percentage?
 - [ ] Sources for perinatal - "public reports" is probably not sufficient
 - [ ] "Percent of births performed by C-Section"/"Rate of early elective deliveries" - Can we call rate percent?
 - [ ] Spell out infection names in infection bottom text
@@ -73,7 +73,7 @@ Explore hospital quality data for Atlanta area hospitals.
 - open the "hospital_compare" table on the interanet data server (add new data if necessary)
 - To update:
   - upload new data to the database (Carrie or John usually does this)
-  - make sure all views/tables specified in config/sql.json (should be "hospital_totals_web", "HAI_transposed", "hip_knee", "perinatal") are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string, year string needs to be change in perinatal.sql) and queries referencing dates/years have been updated
+  - make sure all views/tables specified in config/sql.json (should be "hospital_totals_web", "HAI_transposed", "hip_knee", "perinatal", "ER_waits") are pointing to the updated dataset (parent table for hospital_totals_web definitely needs to be changed to reflect new date string, year string needs to be change in perinatal.sql) and queries referencing dates/years have been updated
   - run `grunt sql_bakery`
   - run py/organizeJSON.py to create the restructured JSON files
 
