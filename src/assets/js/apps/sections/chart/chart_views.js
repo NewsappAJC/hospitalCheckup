@@ -300,19 +300,32 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     attach_tooltip: function(data, measure) {
-      if(this.options.chartType === "BarLeft"){
+      var chart = this,
+      entity = chart.options.entityID;
+
+      if(chart.options.chartType === "BarLeft"){
         if(data.measure !== measure){ //don't re-process it on subsequent hovers
-          data.label = HospitalCheckup.Entities[this.options.entityID+"Labels"].findWhere({ key: measure }).get("label");
-          var format = this.get_format(measure);
-          data.formatted = format(data[measure]);
+          data.label = HospitalCheckup.Entities[entity+"Labels"].findWhere({ key: measure }).get("label");
+          var format = chart.get_format(measure);
+          data.formatted = format(data[measure]) + get_unit_label();
         }
       }
       data.measure = measure; //template needs access
-      var tmpl = _.template($("#"+this.options.section+"-tooltip-template").html());
+      var tmpl = _.template($("#"+chart.options.section+"-tooltip-template").html());
       var tt = $(tmpl(data));
       tt.css("top", (parseFloat(d3.event.layerY - 15)) + "px");
       tt.css("left", (parseFloat(d3.event.layerX + 25)) + "px");
-      this.$el.append(tt);
+      chart.$el.append(tt);
+
+      function get_unit_label(){
+        if(entity === "ER"){
+          var units = HospitalCheckup.Entities[entity+"Labels"].findWhere({ key: measure }).get("units");
+          if(units !== "%"){
+            return units
+          }
+        }
+        return "";
+      }
     }
   });
 
