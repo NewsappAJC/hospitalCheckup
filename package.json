@@ -23,5 +23,9 @@
     "selenium-chromedriver": "0.0.1",
     "selenium-webdriver": "^2.42.1",
     "grunt-sql-bakery": "0.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ajcnewsapp/hospitalcheckup.git"
   }
 }
