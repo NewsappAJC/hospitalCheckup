@@ -176,6 +176,19 @@ option {
 #home-icon-row h3 a.hover {
   color: #A3BCDB;
 }
+/*ER section*/
+.small-card {
+  border: 1px solid #eee;
+  padding: 10px 10px 5px 10px;
+}
+.small-card p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.small-card img {
+  padding: 0 70px;
+  margin-bottom: 10px;
+}
 /*Charts.BarBase*/
 .axis text, .chart-label {
   font-family: 'Boomer-Book';

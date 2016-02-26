@@ -67,13 +67,15 @@ module.exports = function(grunt) {
               'src/assets/js/vendor/jquery.spin.js',
               'src/assets/js/vendor/spin.js',
               'src/assets/js/vendor/backbone.select.js',
-              'src/assets/js/vendor/foundation.topbar.js'
+              'src/assets/js/vendor/foundation.topbar.js',
+              'src/assets/js/vendor/foundation.equalizer.js',
             ],
             dest: 'build/assets/js/vendor/'
           },
           { expand: true, flatten: true, src: ['src/favicon.ico'], dest: 'build/' },
           { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
+          { expand: true, flatten: true, src: ['src/assets/img/er_icons/*'], dest: 'build/assets/img/er_icons/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_cond/*'], dest: 'build/assets/css/fonts/boomer_cond/' },
           { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_extracond/*'], dest: 'build/assets/css/fonts/boomer_extracond/' },
@@ -289,6 +291,7 @@ module.exports = function(grunt) {
           //"fastclick.js": "foundation/js/vendor/fastclick.js", //makes clicks happen faster on touch devices but also breaks tooltips
           "foundation.js": "foundation/js/foundation.js",
           "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
+          "foundation.equalizer.js": "foundation/js/foundation/foundation.equalizer.js",
           //"backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
           "backbone.sessionStorage.js": "backbone.sessionStorage/backbone.sessionStorage.js", //session storage adapter
           "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options,

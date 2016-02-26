@@ -332,6 +332,7 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/vendor/foundation.topbar.js"></script>
+  <script src="assets/js/vendor/foundation.equalizer.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
 
   <!-- build:js assets/js/app.js -->
@@ -360,7 +361,12 @@
   <script src="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
   <!-- /build -->
   <script type="text/javascript">
-    $(document).foundation();
+    $(document).foundation({
+      equalizer : {
+      // Specify if Equalizer should make elements equal height once they become stacked.
+      equalize_on_stack: true
+      }
+    });
 
     HospitalCheckup.start();
   </script>

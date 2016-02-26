@@ -19,10 +19,21 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.TextBlock = Marionette.ItemView.extend({
     template: "#text-block-template",
     initialize: function(options){
-      var options = options || {};
-      this.text = options.text
+      this.text = this.buildHTML();
     },
-
+    buildHTML: function(){
+      var options = this.options;
+      if(options.entityID === "ER"){
+        var labels = HospitalCheckup.Entities[options.entityID + "Labels"],
+        card_html = "<ul class='small-block-grid-2 medium-block-grid-3 large-block-grid-4' data-equalizer>";
+        labels.each(function(label){
+          card_html += "<li><div class='small-card' data-equalizer-watch><img src='assets/img/er_icons/" + label.get("key") + ".png' class='thumbnail' alt=''><p><strong>" + label.get("label") + "</strong>: " + label.get("full") + "</p></div></li>";
+        })
+        card_html += "</ul>";
+        return options.text + card_html;
+      }
+      return options.text;
+    },
     serializeData: function(){
       return {
         text: this.text

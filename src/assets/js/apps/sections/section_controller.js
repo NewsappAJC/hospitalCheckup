@@ -27,18 +27,21 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       var listLayout = new Section.Layout(),
       hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.Layout(),
       headlineView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["headline"]}),
-      introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"]}),
+      introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"], entityID: entityID}),
       menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
       bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.Info(),
       hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID](),
       listView;
-      if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
-        var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
-      }
-      if (sectionID !== "perinatal" & sectionID !== "er"){
+
+      if (sectionID === "er"){
+        introView.on("show", function(){$(document).foundation('equalizer', 'reflow')});
+      } else if (sectionID !== "perinatal"){ //also excluding er section on purpose
         var legendView = new Section.Legend({label: legendLabel, dot: dotLabel});
         hospitalMeasuresView.collection = new Backbone.Collection();
+        if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
+          var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
+        }
       }
 
       $.when(fetchingData).done(function(collection){
