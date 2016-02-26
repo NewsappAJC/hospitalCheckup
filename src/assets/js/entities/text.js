@@ -48,17 +48,17 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 /* ----- ER ----- */
   Entities.ERIntroTxt = {
     headline: "<h1>Emergency rooms: Rating the waiting</h1>",
-    intro_text: "<p>Thousands of U.S. hospitals are required to report their emergency room wait times to the federal government every quarter. It’s actually seven different measures, including time elapsed before the patient sees a doctor or nurse in the ER; how long it takes for a patient with a broken bone to get pain medication; and other measures.</p><p>The numbers do not reflect improvements a hospital may have made since the data was gathered. The information here was released by the government in December, but the statistics cover a year of patient visits that ended March 31, 2015.</p>",
+    intro_text: "<p>Thousands of U.S. hospitals are required to report their emergency room wait times to the federal government every quarter. It’s actually seven different measures, such as time elapsed before the patient sees a doctor or nurse in the ER; or how long it takes for a patient with a broken bone to get pain medication.</p><p>The numbers do not reflect improvements a hospital may have made since the data was gathered. The information here was released by the government in December, but the statistics cover a year of patient visits that ended March 31, 2015.</p>",
     bottom_text: ""
   };
 
   Entities.ERLabels = new Backbone.Collection([
-    {label: "Door to medical professional", full: "The median time patients spent in the emergency room before they were seen by a healthcare professional.", units: " minutes", key: "er_time_to_eval"},
-    {label: "ER time for outpatients", full: "The median time patients spent in the emergency room before being treated and sent home.", units: " minutes", key: "er_total_time_avg"},
-    {label: "ER time for inpatients", full: "The median time patients spent in the emergency room, before they were admitted to the hospital as an inpatient.", units: " minutes", key: "er_inpatient_1"},
-    {label: "Wait for hospital room", full: "The median time patients spent in the emergency room, after the doctor decided to admit them as an inpatient before leaving the ER for their inpatient room.", units: " minutes", key: "er_inpatient_2"},
+    {label: "Wait time until seen by medical professional", full: "The median time patients spent in the emergency room before they were seen by a healthcare professional.", units: " minutes", key: "er_time_to_eval"},
+    {label: "Wait time for outpatients", full: "The median time patients spent in the emergency room before being treated and sent home.", units: " minutes", key: "er_total_time_avg"},
+    {label: "Wait time for inpatients", full: "The median time patients spent in the emergency room, before they were admitted to the hospital as an inpatient.", units: " minutes", key: "er_inpatient_1"},
+    {label: "Wait time for hospital room", full: "The median time patients spent in the emergency room, after the doctor decided to admit them as an inpatient before leaving the ER for their inpatient room.", units: " minutes", key: "er_inpatient_2"},
     {label: "Pain meds", full: "The median time patients who came to the emergency room with broken bones had to wait before receiving pain medication.", units: " minutes", key: "er_time_to_painmed"},
     {label: "Left before treatment", full: "Percentage of patients who left the emergency room before being seen.", units: "%", key: "er_left_pct"},
-    {label: "Brain check", full: "Percentage of patients who came to the emergency department with stroke symptoms who received brain scan results within 45 minutes of arrival. (Higher percentages are better)", units: "%", key: "er_ctresults_pct"}
+    {label: "Brain check", full: "Percentage of patients who came to the emergency room with stroke symptoms who received brain scan results within 45 minutes of arrival. (Higher percentages are better)", units: "%", key: "er_ctresults_pct"}
   ]);
 });
