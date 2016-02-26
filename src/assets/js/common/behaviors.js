@@ -8,7 +8,7 @@ HospitalCheckup.Behaviors = {
     },
 
     displayHospital: function(e){
-      var data = d3.selectAll(e.currentTarget)[0].__data__;
+      var data = d3.select(e.currentTarget)[0][0].__data__;
       if(!data.id){ //clicks on hospital label text won't register ID, tried everything to attach it to DOM but failed
         data = HospitalCheckup.SectionsApp.Section.chartView.collection.findWhere({ display_name: data }).get("id");
       } else {
