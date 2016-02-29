@@ -47,10 +47,16 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return !isNaN(d[measure]);
       });
       filtered.sort(function(a,b){
-        if(chartType === "BarRangeDot"){
-          return d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        //in case higher numbers are better and we want to show that by sorting descending
+        var order = 1;
+        if(chart.options.customSort === "true"){ //for some reason just checking `chart.options.customSort` returns true?
+          order = HospitalCheckup.Entities[chart.options.entityID+"Labels"].findWhere({ key: measure }).get("sort");
         }
-        return d3.ascending(a[measure], b[measure]);
+
+        if(chartType === "BarRangeDot"){
+          return order * d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        }
+        return order * d3.ascending(a[measure], b[measure]);
       });
       return filtered;
     },
