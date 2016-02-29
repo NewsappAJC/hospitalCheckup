@@ -1,6 +1,6 @@
 [
     {
-        "provider_id": "110005",
+        "id": "110005",
         "hospital_name": "NORTHSIDE HOSPITAL FORSYTH",
         "display_name": "Northside Hospital Forsyth",
         "address": "1200 NORTHSIDE FORSYTH DRIVE",
@@ -18,7 +18,7 @@
         "er_ctresults_pct": "73"
     },
     {
-        "provider_id": "110006",
+        "id": "110006",
         "hospital_name": "ST MARY'S HOSPITAL",
         "display_name": "Saint Mary's Hospital",
         "address": "1230 BAXTER STREET",
@@ -36,7 +36,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110008",
+        "id": "110008",
         "hospital_name": "NORTHSIDE HOSPITAL CHEROKEE",
         "display_name": "Northside Hospital Cherokee",
         "address": "201 HOSPITAL ROAD",
@@ -54,7 +54,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110010",
+        "id": "110010",
         "hospital_name": "EMORY UNIVERSITY HOSPITAL",
         "display_name": "Emory University Hospital",
         "address": "1364 CLIFTON ROAD, NE",
@@ -72,7 +72,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110011",
+        "id": "110011",
         "hospital_name": "TANNER MEDICAL CENTER - CARROLLTON",
         "display_name": "Tanner Medical Center Carrollton",
         "address": "705 DIXIE STREET",
@@ -90,7 +90,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110018",
+        "id": "110018",
         "hospital_name": "NEWTON MEDICAL CENTER",
         "display_name": "Newton Medical Center",
         "address": "5126 HOSPITAL DRIVE NE",
@@ -108,7 +108,7 @@
         "er_ctresults_pct": "73"
     },
     {
-        "provider_id": "110029",
+        "id": "110029",
         "hospital_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC",
         "display_name": "Northeast Georgia Medical Center",
         "address": "743 SPRING STREET",
@@ -126,7 +126,7 @@
         "er_ctresults_pct": "73"
     },
     {
-        "provider_id": "110030",
+        "id": "110030",
         "hospital_name": "CARTERSVILLE MEDICAL CENTER",
         "display_name": "Cartersville Medical Center",
         "address": "960 JOE FRANK HARRIS PARKWAY",
@@ -144,7 +144,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110031",
+        "id": "110031",
         "hospital_name": "SPALDING REGIONAL HOSPITAL",
         "display_name": "Spalding Regional Hospital",
         "address": "601 SOUTH 8TH STREET",
@@ -162,7 +162,7 @@
         "er_ctresults_pct": "88"
     },
     {
-        "provider_id": "110035",
+        "id": "110035",
         "hospital_name": "WELLSTAR KENNESTONE HOSPITAL",
         "display_name": "Wellstar Kennestone Hospital",
         "address": "677 CHURCH STREET",
@@ -180,7 +180,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110042",
+        "id": "110042",
         "hospital_name": "WELLSTAR PAULDING HOSPITAL",
         "display_name": "Wellstar Paulding Hospital",
         "address": "2518 JIMMY LEE SMITH PARKWAY",
@@ -198,7 +198,7 @@
         "er_ctresults_pct": "45"
     },
     {
-        "provider_id": "110054",
+        "id": "110054",
         "hospital_name": "FLOYD MEDICAL CENTER",
         "display_name": "Floyd Medical Center",
         "address": "304 TURNER MCCALL BLVD P O BOX 233",
@@ -216,7 +216,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110074",
+        "id": "110074",
         "hospital_name": "ATHENS REGIONAL MEDICAL CENTER",
         "display_name": "Athens Regional Medical Center",
         "address": "1199 PRINCE AVENUE",
@@ -234,7 +234,7 @@
         "er_ctresults_pct": "84"
     },
     {
-        "provider_id": "110076",
+        "id": "110076",
         "hospital_name": "DEKALB MEDICAL CENTER",
         "display_name": "Dekalb Medical Center",
         "address": "2701 N DECATUR ROAD",
@@ -252,7 +252,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110078",
+        "id": "110078",
         "hospital_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN",
         "display_name": "Emory University Hospital Midtown",
         "address": "550 PEACHTREE ST NE",
@@ -270,7 +270,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110079",
+        "id": "110079",
         "hospital_name": "GRADY MEMORIAL HOSPITAL",
         "display_name": "Grady Memorial Hospital",
         "address": "80 JESSE HILL, JR DRIVE SE",
@@ -288,7 +288,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110082",
+        "id": "110082",
         "hospital_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC",
         "display_name": "Emory Saint Joseph's Hospital",
         "address": "5665 PEACHTREE DUNWOODY ROAD",
@@ -306,7 +306,7 @@
         "er_ctresults_pct": "53"
     },
     {
-        "provider_id": "110083",
+        "id": "110083",
         "hospital_name": "PIEDMONT HOSPITAL",
         "display_name": "Piedmont Hospital",
         "address": "1968 PEACHTREE RD NW",
@@ -324,7 +324,7 @@
         "er_ctresults_pct": "36"
     },
     {
-        "provider_id": "110087",
+        "id": "110087",
         "hospital_name": "GWINNETT MEDICAL CENTER",
         "display_name": "Gwinnett Medical Center",
         "address": "1000 MEDICAL CENTER BOULEVARD",
@@ -342,7 +342,7 @@
         "er_ctresults_pct": "51"
     },
     {
-        "provider_id": "110091",
+        "id": "110091",
         "hospital_name": "LIFEPOINT HOSPITALS, INC",
         "display_name": "Rockdale Medical Center",
         "address": "1412 MILSTEAD AVENUE, NE",
@@ -360,7 +360,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110115",
+        "id": "110115",
         "hospital_name": "ATLANTA MEDICAL CENTER - ATL CAMPUS & SOUTH CAMPUS",
         "display_name": "Atlanta Medical Center",
         "address": "303 PARKWAY DR NE",
@@ -378,7 +378,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110143",
+        "id": "110143",
         "hospital_name": "WELLSTAR COBB HOSPITAL",
         "display_name": "Wellstar Cobb Hospital",
         "address": "3950 AUSTELL RD",
@@ -396,7 +396,7 @@
         "er_ctresults_pct": "88"
     },
     {
-        "provider_id": "110161",
+        "id": "110161",
         "hospital_name": "NORTHSIDE HOSPITAL",
         "display_name": "Northside Hospital",
         "address": "1000 JOHNSON FERRY ROAD, NE",
@@ -414,7 +414,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110165",
+        "id": "110165",
         "hospital_name": "SOUTHERN REGIONAL MEDICAL CENTER",
         "display_name": "Southern Regional Medical Center",
         "address": "11 UPPER RIVERDALE ROAD, SW",
@@ -432,7 +432,7 @@
         "er_ctresults_pct": "73"
     },
     {
-        "provider_id": "110168",
+        "id": "110168",
         "hospital_name": "REDMOND REGIONAL MEDICAL CENTER",
         "display_name": "Redmond Regional Medical Center",
         "address": "501 REDMOND ROAD",
@@ -450,7 +450,7 @@
         "er_ctresults_pct": "100"
     },
     {
-        "provider_id": "110184",
+        "id": "110184",
         "hospital_name": "WELLSTAR DOUGLAS HOSPITAL",
         "display_name": "Wellstar Douglas Hospital",
         "address": "8954 HOSPITAL DRIVE",
@@ -468,7 +468,7 @@
         "er_ctresults_pct": "73"
     },
     {
-        "provider_id": "110191",
+        "id": "110191",
         "hospital_name": "PIEDMONT HENRY HOSPITAL",
         "display_name": "Piedmont Henry Hospital",
         "address": "1133 EAGLE'S LANDING PARKWAY",
@@ -486,7 +486,7 @@
         "er_ctresults_pct": "62"
     },
     {
-        "provider_id": "110192",
+        "id": "110192",
         "hospital_name": "EASTSIDE MEDICAL CENTER",
         "display_name": "Eastside Medical Center",
         "address": "1700 MEDICAL WAY",
@@ -504,7 +504,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110198",
+        "id": "110198",
         "hospital_name": "NORTH FULTON HOSPITAL",
         "display_name": "North Fulton Hospital",
         "address": "3000 HOSPITAL BOULEVARD",
@@ -522,7 +522,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110215",
+        "id": "110215",
         "hospital_name": "PIEDMONT FAYETTE HOSPITAL",
         "display_name": "Piedmont Fayette Hospital",
         "address": "1255 HIGHWAY 54 WEST",
@@ -540,7 +540,7 @@
         "er_ctresults_pct": "50"
     },
     {
-        "provider_id": "110225",
+        "id": "110225",
         "hospital_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC",
         "display_name": "Piedmont Mountainside Hospital",
         "address": "1266 HIGHWAY 515 SOUTH",
@@ -558,7 +558,7 @@
         "er_ctresults_pct": "47"
     },
     {
-        "provider_id": "110229",
+        "id": "110229",
         "hospital_name": "PIEDMONT NEWNAN HOSPITAL, INC",
         "display_name": "Piedmont Newnan Hospital",
         "address": "745 POPLAR ROAD",
@@ -576,7 +576,7 @@
         "er_ctresults_pct": "Not Available"
     },
     {
-        "provider_id": "110230",
+        "id": "110230",
         "hospital_name": "EMORY JOHNS CREEK HOSPITAL",
         "display_name": "Emory Johns Creek Hospital",
         "address": "6325 HOSPITAL PARKWAY",
