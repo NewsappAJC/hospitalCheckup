@@ -35,7 +35,7 @@ update HAI_transposed a, (
          compared_to_national,
          footnote
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_SIR' ) t
+  WHERE measure_id = 'HAI_2a_SIR' ) t
 SET a.CAUTI_ratio = t.score,
     a.CAUTI_category = t.compared_to_national,
     a.CAUTI_note = t.footnote,
@@ -45,35 +45,35 @@ WHERE a.provider_id = t.provider_id;
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_CI_LOWER' ) t
+  WHERE measure_id = 'HAI_2a_CI_LOWER' ) t
 SET a.CAUTI_lower = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_NUMERATOR' ) t
+  WHERE measure_id = 'HAI_2a_NUMERATOR' ) t
 SET a.CAUTI_observed = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_ELIGCASES' ) t
+  WHERE measure_id = 'HAI_2a_ELIGCASES' ) t
 SET a.CAUTI_predicted = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_CI_UPPER' ) t
+  WHERE measure_id = 'HAI_2a_CI_UPPER' ) t
 SET a.CAUTI_upper = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_2_DOPC_DAYS' ) t
+  WHERE measure_id = 'HAI_2a_DOPC_DAYS' ) t
 SET a.CAUTI_days = t.score
 WHERE a.provider_id = t.provider_id;
 
@@ -94,7 +94,7 @@ update HAI_transposed a, (
          compared_to_national,
          footnote
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_SIR' ) t
+  WHERE measure_id = 'HAI_1a_SIR' ) t
 SET a.CLABSI_ratio = t.score,
     a.CLABSI_category = t.compared_to_national,
     a.CLABSI_note = t.footnote,
@@ -104,35 +104,35 @@ WHERE a.provider_id = t.provider_id;
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_CI_LOWER' ) t
+  WHERE measure_id = 'HAI_1a_CI_LOWER' ) t
 SET a.CLABSI_lower = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_NUMERATOR' ) t
+  WHERE measure_id = 'HAI_1a_NUMERATOR' ) t
 SET a.CLABSI_observed = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_ELIGCASES' ) t
+  WHERE measure_id = 'HAI_1a_ELIGCASES' ) t
 SET a.CLABSI_predicted = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_CI_UPPER' ) t
+  WHERE measure_id = 'HAI_1a_CI_UPPER' ) t
 SET a.CLABSI_upper = t.score
 WHERE a.provider_id = t.provider_id;
 
 update HAI_transposed a, (
   SELECT provider_id, score
   FROM hc_assoc_infect
-  WHERE measure_id = 'HAI_1_DOPC_DAYS' ) t
+  WHERE measure_id = 'HAI_1a_DOPC_DAYS' ) t
 SET a.CLABSI_days = t.score
 WHERE a.provider_id = t.provider_id;
 
