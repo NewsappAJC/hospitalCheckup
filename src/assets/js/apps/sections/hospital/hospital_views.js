@@ -25,7 +25,7 @@ HospitalCheckup.module("SectionsApp.Hospital", function(Hospital, HospitalChecku
     className: "hospital-list-item",
     onShow: function(){
       if(!this.model.get("na")){
-        var detail = new HospitalCheckup.Common.Chart.HospitalDetail({
+        new HospitalCheckup.Common.Chart.HospitalDetail({
           el: "#"+this.model.get("measure")+"-chart",
           data: this.model.toJSON(),
           margin: {left: 15, right: 15, bottom: 25, top: 30},

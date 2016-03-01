@@ -124,8 +124,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_axes: function(data) {
-      var chart = this,
-      section = chart.options.section;
+      var chart = this;
 
       if(chart.formatter){
         var format = chart.formatter(true);
@@ -139,7 +138,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.xAxis);
 
       //create and set y axis positions
-      var gy = chart.svg.select("#axes").append("g")
+      chart.svg.select("#axes").append("g")
         .attr("class", "y axis")
         .attr("y", 6)
         .call(chart.yAxis);
