@@ -578,7 +578,7 @@
     {
         "provider_id": "110035",
         "hospital_name": "WELLSTAR KENNESTONE HOSPITAL",
-        "ajc_hospital_name": "Wellstar Kennestone Hospital",
+        "ajc_hospital_name": "WellStar Kennestone Hospital",
         "address": "677 CHURCH STREET",
         "city": "MARIETTA",
         "state": "GA",
@@ -642,7 +642,7 @@
     {
         "provider_id": "110042",
         "hospital_name": "WELLSTAR PAULDING HOSPITAL",
-        "ajc_hospital_name": "Wellstar Paulding Hospital",
+        "ajc_hospital_name": "WellStar Paulding Hospital",
         "address": "2518 JIMMY LEE SMITH PARKWAY",
         "city": "HIRAM",
         "state": "GA",
@@ -1346,7 +1346,7 @@
     {
         "provider_id": "110143",
         "hospital_name": "WELLSTAR COBB HOSPITAL",
-        "ajc_hospital_name": "Wellstar Cobb Hospital",
+        "ajc_hospital_name": "WellStar Cobb Hospital",
         "address": "3950 AUSTELL RD",
         "city": "AUSTELL",
         "state": "GA",
@@ -1602,7 +1602,7 @@
     {
         "provider_id": "110184",
         "hospital_name": "WELLSTAR DOUGLAS HOSPITAL",
-        "ajc_hospital_name": "Wellstar Douglas Hospital",
+        "ajc_hospital_name": "WellStar Douglas Hospital",
         "address": "8954 HOSPITAL DRIVE",
         "city": "DOUGLASVILLE",
         "state": "GA",

@@ -246,7 +246,7 @@
     {
       "address": "677 CHURCH STREET", 
       "city": "MARIETTA", 
-      "display_name": "Wellstar Kennestone Hospital", 
+      "display_name": "WellStar Kennestone Hospital", 
       "id": "110035", 
       "surgery": {
         "complications": {
@@ -272,7 +272,7 @@
     {
       "address": "2518 JIMMY LEE SMITH PARKWAY", 
       "city": "HIRAM", 
-      "display_name": "Wellstar Paulding Hospital", 
+      "display_name": "WellStar Paulding Hospital", 
       "id": "110042", 
       "surgery": {
         "complications": {
@@ -558,7 +558,7 @@
     {
       "address": "3950 AUSTELL RD", 
       "city": "AUSTELL", 
-      "display_name": "Wellstar Cobb Hospital", 
+      "display_name": "WellStar Cobb Hospital", 
       "id": "110143", 
       "surgery": {
         "complications": {
@@ -662,7 +662,7 @@
     {
       "address": "8954 HOSPITAL DRIVE", 
       "city": "DOUGLASVILLE", 
-      "display_name": "Wellstar Douglas Hospital", 
+      "display_name": "WellStar Douglas Hospital", 
       "id": "110184", 
       "surgery": {
         "complications": {
