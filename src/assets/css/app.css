@@ -402,6 +402,9 @@ select#js-filter-criterion {
   #dot-legend {
     display: none;
   }
+  #home-icon-row img {
+    height: auto;
+  }
 }
 @media (max-width: 998px) and (min-width: 406px){
   #bg-img {

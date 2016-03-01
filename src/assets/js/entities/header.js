@@ -16,10 +16,10 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
   var initializeHeaders = function(){
     Entities.headers = new Entities.HeaderCollection([
       {name: "Home", url: "", navigationTrigger: "home:show"},
-      {name: "Infections", url: "infections", navigationTrigger: "infections:list", icon: "infection"},
-      {name: "Hip & Knee Surgery", url: "surgery", navigationTrigger: "surgeries:list", icon: "surgery"},
-      {name: "Labor & Delivery", url: "perinatal", navigationTrigger: "perinatal:list", icon: "perinatal"},
-      {name: "ER wait times", url: "er", navigationTrigger: "er:list"}
+      {name: "Infections", url: "infections", navigationTrigger: "infections:list", icon: "infection.svg"},
+      {name: "Hip & Knee Surgery", url: "surgery", navigationTrigger: "surgeries:list", icon: "surgery.svg"},
+      {name: "Labor & Delivery", url: "perinatal", navigationTrigger: "perinatal:list", icon: "perinatal.svg"},
+      {name: "ER wait times", url: "er", navigationTrigger: "er:list", icon: "er.png"}
     ]);
   };
 
