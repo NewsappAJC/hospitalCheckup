@@ -69,7 +69,7 @@ module.exports = function(grunt) {
             dest: 'build/assets/js/vendor/'
           },
           { expand: true, flatten: true, src: ['src/favicon.ico'], dest: 'build/' },
-          { expand: true, flatten: true, src: ['src/assets/data/*.json'], dest: 'build/assets/data/' },
+          { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/', filter: 'isFile' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
           { expand: true, flatten: true, src: ['src/assets/img/er_icons/*'], dest: 'build/assets/img/er_icons/' },
           { expand: true, cwd: 'src/assets/css/fonts/', src: '**/*', dest: 'build/assets/css/fonts/' },
