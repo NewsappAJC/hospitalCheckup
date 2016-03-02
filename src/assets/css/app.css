@@ -181,6 +181,12 @@ option {
   border: 1px solid #eee;
   padding: 10px 10px 5px 10px;
 }
+.small-card.row {
+  margin: 0;
+}
+.small-card.row .columns{
+  padding: 0;
+}
 .small-card p {
   font-size: 12px;
   margin-bottom: 5px;
@@ -404,6 +410,22 @@ select#js-filter-criterion {
   }
   #home-icon-row img {
     height: auto;
+  }
+  /*er cards*/
+  .small-card img {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  .small-card {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  [class*=block-grid-]>li {
+    padding: 0 .625rem 5px;
+  }
+  [class*=block-grid-]>li:last-of-type .small-card {
+    border: none;
   }
 }
 @media (max-width: 998px) and (min-width: 406px){
