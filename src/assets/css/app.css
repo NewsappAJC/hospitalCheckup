@@ -356,7 +356,34 @@ select#js-filter-criterion {
 #legend-region ul {
   margin-bottom: 15px;
 }
-
+/*medium and below*/
+@media (max-width: 998px){
+  #row-bg h1, h1 {
+    font-size: 20px;
+  }
+  #homepage-content p, #section-intro-region p {
+    font-size: 14px;
+  }
+  #section-intro-region .small-card p, #home-icon-row h3 {
+    font-size: 12px;
+  }
+  /*er cards*/
+  .small-card img {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  .small-card {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  #section-intro-region [class*=block-grid-]>li {
+    padding: 0 .625rem 5px;
+  }
+  #section-intro-region [class*=block-grid-]>li:last-of-type .small-card {
+    border: none;
+  }
+}
 /*mobile*/
 @media (max-width: 405px){
   .name {
@@ -378,9 +405,6 @@ select#js-filter-criterion {
   #hospital-show-region {
     display: none;
   }
-  #homepage-content p {
-    font-size: 14px;
-  }
   #bg-img {
     top: 0px;
     left: -400px;
@@ -393,14 +417,11 @@ select#js-filter-criterion {
     padding-bottom: 15px;
     padding-top: 15px;
   }
-  #row-bg h1, h1 {
-    font-size: 30px;
-  }
   #home-icon-row img {
     width: 40px;
   }
   #home-icon-row h3 {
-    font-size: 14px;
+    font-size: 11px;
   }
   .pq-modal-content .pq-modal-wrap-container.pq-modal-welcome-container {
     top: 5%;
@@ -411,23 +432,8 @@ select#js-filter-criterion {
   #home-icon-row img {
     height: auto;
   }
-  /*er cards*/
-  .small-card img {
-    padding-left: 0;
-    padding-right: 15px;
-  }
-  .small-card {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-  [class*=block-grid-]>li {
-    padding: 0 .625rem 5px;
-  }
-  [class*=block-grid-]>li:last-of-type .small-card {
-    border: none;
-  }
 }
+/*tablet/mid-size only*/
 @media (max-width: 998px) and (min-width: 406px){
   #bg-img {
     top: -200px;
@@ -439,5 +445,30 @@ select#js-filter-criterion {
   }
   #row-bg {
     padding: 20px 15px 20px 15px;
+  }
+  .top-bar-section ul li>a {
+    font-size: 11px;
+  }
+  .top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button) {
+    padding: 0 10px;
+  }
+  .top-bar {
+    padding-right: 0;
+  }
+}
+@media (max-width: 720px) and (min-width: 641px){
+  .top-bar-section ul li>a {
+    font-size: 10px;
+    font-family: 'Boomer-Book';
+  }
+  .top-bar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  section.columns {
+    padding: 0;
+  }
+  #header-region [class*=block-grid-]>li {
+    padding: 0;
   }
 }
