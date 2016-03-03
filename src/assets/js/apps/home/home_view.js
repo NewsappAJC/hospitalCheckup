@@ -52,7 +52,7 @@ HospitalCheckup.module("HomeApp.Home", function(Home, HospitalCheckup, Backbone,
     el: "#home-icon-row",
     childView: Home.IconView,
     filter: function(child, index, collection){ //don't use the "home" nav item
-      return child.has("icon")
+      return child.has("icon");
     }
   });
 });
