@@ -160,6 +160,17 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     childView: Section.MobileBarRow,
     templateHelpers: function () {
       return {
+        stat: function(measure, entityID){
+          if(entityID === "ER"){
+            var label = HospitalCheckup.Entities[entityID + "Labels"].findWhere({ key: measure }).get("units");
+            if(label === "%"){
+              return label;
+            }
+            //start at 1 instead of 0 because the labels start with a space
+            return label.charAt(1).toUpperCase() + label.substring(2).toLowerCase();
+          }
+          return "Values";
+        },
         measure: this.options.measure,
         entityID: this.options.entityID
       };

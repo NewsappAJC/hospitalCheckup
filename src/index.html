@@ -145,10 +145,10 @@
   </script>
 
   <script type="text/template" id="mobile-bar-tr-template">
-    <td><%- display_name %></td><td><%- format(obj[measure], measure) %></td>
+    <td><%- display_name %></td><td class="text-right"><%- format(obj[measure], measure) %></td>
   </script>
   <script type="text/template" id="mobile-bar-table-template">
-    <thead><tr><th>Hospital</th><th>Value</th></tr></thead>
+    <thead><tr><th>Hospital</th><th class="text-right"><%- stat(measure, entityID) %></th></tr></thead>
     <tbody></tbody>
   </script>
 
