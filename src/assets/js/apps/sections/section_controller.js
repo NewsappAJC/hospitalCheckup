@@ -3,11 +3,11 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.Controller = {
 
     listInfections: function(id, criterion){
-      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "BarRangeDot", "than national benchmark", "SIR", "ratio");
+      this.buildLayout(id, criterion, "cdiff", "Infection", "infections", "BarRangeDot", "false", "than national benchmark", "SIR", "ratio");
     },
 
     listSurgeries: function(id, criterion){
-      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "than national average", "Rate", "rate");
+      this.buildLayout(id, criterion, "complications", "Surgery", "surgery", "BarRangeDot", "false", "than national average", "Rate", "rate");
     },
 
     listPerinatal: function(id, criterion){
@@ -15,10 +15,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
 
     listER: function(id, criterion){
-      this.buildLayout(id, criterion, "er_time_to_eval", "ER", "er", "BarLeft");
+      this.buildLayout(id, criterion, "er_time_to_eval", "ER", "er", "BarLeft", "true");
     },
 
-    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, legendLabel, dotLabel, stat){
+    buildLayout: function(id, criterion, defaultMeasure, entityID, sectionID, chartType, customSort, legendLabel, dotLabel, stat){
       HospitalCheckup.vent.trigger("loading:show");
       var isMobile = document.body.clientWidth < 405;
 
@@ -27,18 +27,21 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
       var listLayout = new Section.Layout(),
       hospitalLayout = new HospitalCheckup.SectionsApp.Hospital.Layout(),
       headlineView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["headline"]}),
-      introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"]}),
+      introView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["intro_text"], entityID: entityID}),
       menuView = new Section.Menu({collection: HospitalCheckup.Entities[entityID+"Labels"], section: sectionID}),
       bottomView = new Section.TextBlock({text: HospitalCheckup.Entities[entityID+"IntroTxt"]["bottom_text"]}),
       hospitalInfoView = new HospitalCheckup.SectionsApp.Hospital.Info(),
       hospitalMeasuresView = new HospitalCheckup.SectionsApp.Hospital[entityID](),
       listView;
-      if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
-        var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
-      }
-      if (sectionID !== "perinatal" & sectionID !== "er"){
+
+      if (sectionID === "er"){
+        introView.on("show", function(){$(document).foundation('equalizer', 'reflow')});
+      } else if (sectionID !== "perinatal"){ //also excluding er section on purpose
         var legendView = new Section.Legend({label: legendLabel, dot: dotLabel});
         hospitalMeasuresView.collection = new Backbone.Collection();
+        if(sectionID === "infections"){ //TODO tie this into the infection measures view instead somehow?
+          var hospitalLegendView = new HospitalCheckup.SectionsApp.Hospital.InfectionLegend();
+        }
       }
 
       $.when(fetchingData).done(function(collection){
@@ -49,7 +52,7 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
           if(chartType === "BarRangeDot"){
             listView = new Section.MobileRangeDotList({collection: collection, measure: criterion || defaultMeasure, section: sectionID, stat: stat });
           } else {
-            listView = new Section.MobileBarList({collection: collection, measure: criterion || defaultMeasure });
+            listView = new Section.MobileBarList({collection: collection, measure: criterion || defaultMeasure, entityID: entityID });
           }
           
           listView.listenTo(menuView, sectionID+":filter", listView.onFilter);
@@ -84,7 +87,8 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
               section: sectionID,
               entityID: entityID,
               stat: stat,
-              chartType: chartType
+              chartType: chartType,
+              customSort: customSort
             });
             Section.chartView.render(); //for some reason this breaks filtering when chained with initialization above
           }

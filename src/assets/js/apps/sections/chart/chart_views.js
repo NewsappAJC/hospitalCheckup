@@ -47,10 +47,16 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         return !isNaN(d[measure]);
       });
       filtered.sort(function(a,b){
-        if(chartType === "BarRangeDot"){
-          return d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        //in case higher numbers are better and we want to show that by sorting descending
+        var order = 1;
+        if(chart.options.customSort === "true"){ //for some reason just checking `chart.options.customSort` returns true?
+          order = HospitalCheckup.Entities[chart.options.entityID+"Labels"].findWhere({ key: measure }).get("sort");
         }
-        return d3.ascending(a[measure], b[measure]);
+
+        if(chartType === "BarRangeDot"){
+          return order * d3.ascending(a[section][measure][stat], b[section][measure][stat]);
+        }
+        return order * d3.ascending(a[measure], b[measure]);
       });
       return filtered;
     },
@@ -118,8 +124,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
     },
 
     draw_axes: function(data) {
-      var chart = this,
-      section = chart.options.section;
+      var chart = this;
 
       if(chart.formatter){
         var format = chart.formatter(true);
@@ -133,7 +138,7 @@ HospitalCheckup.module("Common.Chart", function(Chart, HospitalCheckup, Backbone
         .call(chart.xAxis);
 
       //create and set y axis positions
-      var gy = chart.svg.select("#axes").append("g")
+      chart.svg.select("#axes").append("g")
         .attr("class", "y axis")
         .attr("y", 6)
         .call(chart.yAxis);

@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS ER_waits;
 
 
-CREATE TABLE ER_waits (PRIMARY KEY (provider_id))
-SELECT DISTINCT a.provider_id,
+CREATE TABLE ER_waits (PRIMARY KEY (id))
+SELECT DISTINCT a.provider_id AS id,
                 a.hospital_name,
                 b.HospitalName AS display_name,
                 a.address,

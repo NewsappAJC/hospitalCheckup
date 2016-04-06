@@ -33,7 +33,7 @@
       "er_total_time_avg": 148, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "NORTHSIDE HOSPITAL FORSYTH", 
-      "provider_id": "110005", 
+      "id": "110005", 
       "state": "GA", 
       "zip_code": "30041"
     }, 
@@ -51,7 +51,7 @@
       "er_total_time_avg": 125, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "ST MARY'S HOSPITAL", 
-      "provider_id": "110006", 
+      "id": "110006", 
       "state": "GA", 
       "zip_code": "30606"
     }, 
@@ -69,7 +69,7 @@
       "er_total_time_avg": 176, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "NORTHSIDE HOSPITAL CHEROKEE", 
-      "provider_id": "110008", 
+      "id": "110008", 
       "state": "GA", 
       "zip_code": "30114"
     }, 
@@ -87,7 +87,7 @@
       "er_total_time_avg": 286, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "EMORY UNIVERSITY HOSPITAL", 
-      "provider_id": "110010", 
+      "id": "110010", 
       "state": "GA", 
       "zip_code": "30322"
     }, 
@@ -105,7 +105,7 @@
       "er_total_time_avg": 163, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "TANNER MEDICAL CENTER - CARROLLTON", 
-      "provider_id": "110011", 
+      "id": "110011", 
       "state": "GA", 
       "zip_code": "30117"
     }, 
@@ -123,7 +123,7 @@
       "er_total_time_avg": 197, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "NEWTON MEDICAL CENTER", 
-      "provider_id": "110018", 
+      "id": "110018", 
       "state": "GA", 
       "zip_code": "30014"
     }, 
@@ -141,7 +141,7 @@
       "er_total_time_avg": 174, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "NORTHEAST GEORGIA MEDICAL CENTER, INC", 
-      "provider_id": "110029", 
+      "id": "110029", 
       "state": "GA", 
       "zip_code": "30501"
     }, 
@@ -159,7 +159,7 @@
       "er_total_time_avg": 154, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "CARTERSVILLE MEDICAL CENTER", 
-      "provider_id": "110030", 
+      "id": "110030", 
       "state": "GA", 
       "zip_code": "30120"
     }, 
@@ -177,7 +177,7 @@
       "er_total_time_avg": 144, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "SPALDING REGIONAL HOSPITAL", 
-      "provider_id": "110031", 
+      "id": "110031", 
       "state": "GA", 
       "zip_code": "30223"
     }, 
@@ -185,7 +185,7 @@
       "address": "677 CHURCH STREET", 
       "city": "MARIETTA", 
       "county_name": "COBB", 
-      "display_name": "Wellstar Kennestone Hospital", 
+      "display_name": "WellStar Kennestone Hospital", 
       "er_ctresults_pct": "Not Available", 
       "er_inpatient_1": 318, 
       "er_inpatient_2": 129, 
@@ -195,7 +195,7 @@
       "er_total_time_avg": 206, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "WELLSTAR KENNESTONE HOSPITAL", 
-      "provider_id": "110035", 
+      "id": "110035", 
       "state": "GA", 
       "zip_code": "30060"
     }, 
@@ -203,7 +203,7 @@
       "address": "2518 JIMMY LEE SMITH PARKWAY", 
       "city": "HIRAM", 
       "county_name": "PAULDING", 
-      "display_name": "Wellstar Paulding Hospital", 
+      "display_name": "WellStar Paulding Hospital", 
       "er_ctresults_pct": 45, 
       "er_inpatient_1": 349, 
       "er_inpatient_2": 132, 
@@ -213,7 +213,7 @@
       "er_total_time_avg": 141, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "WELLSTAR PAULDING HOSPITAL", 
-      "provider_id": "110042", 
+      "id": "110042", 
       "state": "GA", 
       "zip_code": "30141"
     }, 
@@ -231,7 +231,7 @@
       "er_total_time_avg": 152, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "FLOYD MEDICAL CENTER", 
-      "provider_id": "110054", 
+      "id": "110054", 
       "state": "GA", 
       "zip_code": "30162"
     }, 
@@ -249,7 +249,7 @@
       "er_total_time_avg": 206, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "ATHENS REGIONAL MEDICAL CENTER", 
-      "provider_id": "110074", 
+      "id": "110074", 
       "state": "GA", 
       "zip_code": "30606"
     }, 
@@ -267,7 +267,7 @@
       "er_total_time_avg": 197, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "DEKALB MEDICAL CENTER", 
-      "provider_id": "110076", 
+      "id": "110076", 
       "state": "GA", 
       "zip_code": "30033"
     }, 
@@ -285,7 +285,7 @@
       "er_total_time_avg": 273, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN", 
-      "provider_id": "110078", 
+      "id": "110078", 
       "state": "GA", 
       "zip_code": "30308"
     }, 
@@ -303,7 +303,7 @@
       "er_total_time_avg": 418, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "GRADY MEMORIAL HOSPITAL", 
-      "provider_id": "110079", 
+      "id": "110079", 
       "state": "GA", 
       "zip_code": "30303"
     }, 
@@ -321,7 +321,7 @@
       "er_total_time_avg": 218, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "SAINT JOSEPH'S HOSPITAL OF ATLANTA, INC", 
-      "provider_id": "110082", 
+      "id": "110082", 
       "state": "GA", 
       "zip_code": "30342"
     }, 
@@ -339,7 +339,7 @@
       "er_total_time_avg": 184, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "PIEDMONT HOSPITAL", 
-      "provider_id": "110083", 
+      "id": "110083", 
       "state": "GA", 
       "zip_code": "30309"
     }, 
@@ -357,7 +357,7 @@
       "er_total_time_avg": 175, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "GWINNETT MEDICAL CENTER", 
-      "provider_id": "110087", 
+      "id": "110087", 
       "state": "GA", 
       "zip_code": "30045"
     }, 
@@ -375,7 +375,7 @@
       "er_total_time_avg": 180, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "LIFEPOINT HOSPITALS, INC", 
-      "provider_id": "110091", 
+      "id": "110091", 
       "state": "GA", 
       "zip_code": "30012"
     }, 
@@ -393,7 +393,7 @@
       "er_total_time_avg": 165, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "ATLANTA MEDICAL CENTER - ATL CAMPUS & SOUTH CAMPUS", 
-      "provider_id": "110115", 
+      "id": "110115", 
       "state": "GA", 
       "zip_code": "30312"
     }, 
@@ -401,7 +401,7 @@
       "address": "3950 AUSTELL RD", 
       "city": "AUSTELL", 
       "county_name": "COBB", 
-      "display_name": "Wellstar Cobb Hospital", 
+      "display_name": "WellStar Cobb Hospital", 
       "er_ctresults_pct": 88, 
       "er_inpatient_1": 370, 
       "er_inpatient_2": 145, 
@@ -411,7 +411,7 @@
       "er_total_time_avg": 163, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "WELLSTAR COBB HOSPITAL", 
-      "provider_id": "110143", 
+      "id": "110143", 
       "state": "GA", 
       "zip_code": "30106"
     }, 
@@ -429,7 +429,7 @@
       "er_total_time_avg": 180, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "NORTHSIDE HOSPITAL", 
-      "provider_id": "110161", 
+      "id": "110161", 
       "state": "GA", 
       "zip_code": "30342"
     }, 
@@ -447,7 +447,7 @@
       "er_total_time_avg": 259, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "SOUTHERN REGIONAL MEDICAL CENTER", 
-      "provider_id": "110165", 
+      "id": "110165", 
       "state": "GA", 
       "zip_code": "30274"
     }, 
@@ -465,7 +465,7 @@
       "er_total_time_avg": 132, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "REDMOND REGIONAL MEDICAL CENTER", 
-      "provider_id": "110168", 
+      "id": "110168", 
       "state": "GA", 
       "zip_code": "30165"
     }, 
@@ -473,7 +473,7 @@
       "address": "8954 HOSPITAL DRIVE", 
       "city": "DOUGLASVILLE", 
       "county_name": "DOUGLAS", 
-      "display_name": "Wellstar Douglas Hospital", 
+      "display_name": "WellStar Douglas Hospital", 
       "er_ctresults_pct": 73, 
       "er_inpatient_1": 310, 
       "er_inpatient_2": 104, 
@@ -483,7 +483,7 @@
       "er_total_time_avg": 148, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "WELLSTAR DOUGLAS HOSPITAL", 
-      "provider_id": "110184", 
+      "id": "110184", 
       "state": "GA", 
       "zip_code": "30134"
     }, 
@@ -501,7 +501,7 @@
       "er_total_time_avg": 183, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "PIEDMONT HENRY HOSPITAL", 
-      "provider_id": "110191", 
+      "id": "110191", 
       "state": "GA", 
       "zip_code": "30281"
     }, 
@@ -519,7 +519,7 @@
       "er_total_time_avg": 187, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "EASTSIDE MEDICAL CENTER", 
-      "provider_id": "110192", 
+      "id": "110192", 
       "state": "GA", 
       "zip_code": "30078"
     }, 
@@ -537,7 +537,7 @@
       "er_total_time_avg": 169, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "NORTH FULTON HOSPITAL", 
-      "provider_id": "110198", 
+      "id": "110198", 
       "state": "GA", 
       "zip_code": "30076"
     }, 
@@ -555,7 +555,7 @@
       "er_total_time_avg": 200, 
       "er_volume": "Very High (60,000+ patients annually)", 
       "hospital_name": "PIEDMONT FAYETTE HOSPITAL", 
-      "provider_id": "110215", 
+      "id": "110215", 
       "state": "GA", 
       "zip_code": "30214"
     }, 
@@ -573,7 +573,7 @@
       "er_total_time_avg": 145, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "PIEDMONT MOUNTAINSIDE HOSPITAL INC", 
-      "provider_id": "110225", 
+      "id": "110225", 
       "state": "GA", 
       "zip_code": "30143"
     }, 
@@ -591,7 +591,7 @@
       "er_total_time_avg": 167, 
       "er_volume": "High (40,000 - 59,999 patients annually)", 
       "hospital_name": "PIEDMONT NEWNAN HOSPITAL, INC", 
-      "provider_id": "110229", 
+      "id": "110229", 
       "state": "GA", 
       "zip_code": "30265"
     }, 
@@ -609,7 +609,7 @@
       "er_total_time_avg": 176, 
       "er_volume": "Medium (20,000 - 39,999 patients annually)", 
       "hospital_name": "EMORY JOHNS CREEK HOSPITAL", 
-      "provider_id": "110230", 
+      "id": "110230", 
       "state": "GA", 
       "zip_code": "30097"
     }

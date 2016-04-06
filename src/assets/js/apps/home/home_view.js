@@ -28,7 +28,7 @@ HospitalCheckup.module("HomeApp.Home", function(Home, HospitalCheckup, Backbone,
   //using the main navigation header.js entity to build these and its corresponding controller to handle the routing and triggers
   Home.IconView = Marionette.ItemView.extend({
     template: "#homepage-icon-link",
-    className: "small-4 columns",
+    className: "small-3 columns",
     events: {
       "click a": "navigate",
       "mouseover a": "hover", /*can't do this in css bc need to target both svg and text mouseovers*/
@@ -52,7 +52,7 @@ HospitalCheckup.module("HomeApp.Home", function(Home, HospitalCheckup, Backbone,
     el: "#home-icon-row",
     childView: Home.IconView,
     filter: function(child, index, collection){ //don't use the "home" nav item
-      return child.has("icon")
+      return child.has("icon");
     }
   });
 });

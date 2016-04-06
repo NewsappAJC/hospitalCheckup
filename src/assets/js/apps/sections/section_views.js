@@ -19,11 +19,22 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.TextBlock = Marionette.ItemView.extend({
     template: "#text-block-template",
     initialize: function(options){
-      var options = options || {};
-      this.text = options.text
+      this.text = this.buildHTML();
     },
-
-    serializeData: function(){
+    buildHTML: function(){
+      var options = this.options;
+      if(options.entityID === "ER"){
+        var labels = HospitalCheckup.Entities[options.entityID + "Labels"],
+        card_html = "<ul class='small-block-grid-1 medium-block-grid-1 large-block-grid-4' data-equalizer data-equalizer-mq='medium-up'>";
+        labels.each(function(label){
+          card_html += "<li><div class='small-card row' data-equalizer-watch><div class='small-2 medium-1 large-12 columns'><img src='assets/img/er_icons/" + label.get("key") + ".png' class='thumbnail' alt=''></div><div class='small-10 medium-11 large-12 columns'><p><strong>" + label.get("label") + "</strong>: " + label.get("full") + "</p></div></div></li>";
+        })
+        card_html += "</ul>";
+        return options.text + card_html;
+      }
+      return options.text;
+    },
+    templateHelpers: function(){
       return {
         text: this.text
       }
@@ -33,9 +44,6 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.Menu = Marionette.ItemView.extend({
     template: "#filter-menu-template",
     tagName: "select",
-    initialize: function(options){
-      this.options = options; //expecting `section`
-    },
     id: "js-filter-criterion",
 
     events: {
@@ -56,16 +64,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
 
   Section.Legend = Marionette.ItemView.extend({
     template: "#main-legend",
-    initialize: function(options){
-      var options = options || {};
-      this.label = options.label;
-      this.dot_label = options.dot;
-    },
-
-    serializeData: function(){
+    templateHelpers: function(){
       return {
-        label: this.label,
-        dot_label: this.dot_label
+        label: this.options.label,
+        dot_label: this.options.dot
       }
     }
   });
@@ -82,12 +84,6 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
   Section.MobileRangeDotRow = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#mobile-rangedot-tr-template",
-    initialize: function(options){
-      //recieved from childViewOptions, template needs it
-      this.model.set("measure", options.measure);
-      this.model.set("section", options.section);
-      this.model.set("stat", options.stat);
-    },
     templateHelpers: function () {
       return {
         format: function(num, stat){
@@ -95,7 +91,10 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
             return d3.round(num, 2)+"%";
           }
           return d3.round(num, 2);
-        }
+        },
+        measure: this.options.measure,
+        section: this.options.section,
+        stat: this.options.stat
       };
     }
   });
@@ -107,24 +106,19 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     template: "#mobile-rangedot-table-template",
     childView: Section.MobileRangeDotRow,
     childViewContainer: "tbody",
-    initialize: function(options){
-      this.measure = options.measure;
-      this.section = options.section;
-      this.stat = options.stat;
-    },
     childViewOptions: function(model, index) {
       //only the BarRangeDot charts actually need or know section and stat
-      return { measure: this.measure, section: this.section, stat: this.stat }
+      return { measure: this.options.measure, section: this.options.section, stat: this.options.stat }
     },
     filter: function(child, index, collection){
       //don't show items with null ratios
-      if(this.section){ //only BarRangeDot charts pass section option to mobile view
-        return !child.get(this.section)[this.measure].na
+      if(this.options.section === "infections" || this.options.section === "surgery"){
+        return !child.get(this.options.section)[this.options.measure].na
       }
-      return !isNaN(child.get(this.measure));
+      return !isNaN(child.get(this.options.measure));
     },
     onFilter: function(criterion){
-      this.measure = criterion;
+      this.options.measure = criterion;
       this.children.each(function(view){
         view.model.set("measure", criterion);
       });
@@ -132,18 +126,14 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
     },
     templateHelpers: function () {
       return {
-        "stat": this.stat
-      };
+        stat: this.options.stat
+      }
     }
   });
 
   Section.MobileBarRow = Marionette.ItemView.extend({
     tagName: "tr",
     template: "#mobile-bar-tr-template",
-    initialize: function(options){
-      //recieved from childViewOptions, template needs it
-      this.model.set("measure", options.measure);
-    },
     templateHelpers: function(){
       return {
         format: function(num, measure){ //TODO make a behavior out of this, using it in chart too
@@ -158,13 +148,32 @@ HospitalCheckup.module("SectionsApp.Section", function(Section, HospitalCheckup,
             formatter = function(string){ return string };
           }
           return formatter(num);
-        }
+        },
+        //recieved from childViewOptions, template needs it
+        measure: this.options.measure
       }
     }
   });
 
   Section.MobileBarList = Section.MobileRangeDotList.extend({
     template: "#mobile-bar-table-template",
-    childView: Section.MobileBarRow
+    childView: Section.MobileBarRow,
+    templateHelpers: function () {
+      return {
+        stat: function(measure, entityID){
+          if(entityID === "ER"){
+            var label = HospitalCheckup.Entities[entityID + "Labels"].findWhere({ key: measure }).get("units");
+            if(label === "%"){
+              return label;
+            }
+            //start at 1 instead of 0 because the labels start with a space
+            return label.charAt(1).toUpperCase() + label.substring(2).toLowerCase();
+          }
+          return "Values";
+        },
+        measure: this.options.measure,
+        entityID: this.options.entityID
+      };
+    }
   });
 });

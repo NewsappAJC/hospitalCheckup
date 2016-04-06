@@ -54,15 +54,6 @@ HospitalCheckup.addTips = function(){ //currently only used on measure labels on
       .html(e.target.data)
       .css("top", e.pageY + "px")
       .css("left", e.pageX + 15 + "px");
-
-      //calculate tooltip width for placement
-      function textWidth (){
-        var sensor = $('<div />').css({margin: 0, padding: 0});
-        HospitalCheckup.$tooltip.append(sensor);
-        var width = sensor.width();
-        sensor.remove();
-        return width;
-      };
   }).on("mouseout", function(){
     HospitalCheckup.$tooltip.hide();
   });

@@ -59,28 +59,20 @@ module.exports = function(grunt) {
             flatten: true,
             src: [
               'src/assets/js/vendor/chroma.js',
-              'src/assets/js/vendor/json2.js',
               'src/assets/js/vendor/modernizr.js',
               //'src/assets/js/vendor/fastclick.js',
-              //'src/assets/js/vendor/backbone.localstorage.js',
               'src/assets/js/vendor/backbone.sessionStorage.js',
-              'src/assets/js/vendor/jquery.spin.js',
-              'src/assets/js/vendor/spin.js',
               'src/assets/js/vendor/backbone.select.js',
-              'src/assets/js/vendor/foundation.topbar.js'
+              'src/assets/js/vendor/foundation.topbar.js',
+              'src/assets/js/vendor/foundation.equalizer.js',
             ],
             dest: 'build/assets/js/vendor/'
           },
           { expand: true, flatten: true, src: ['src/favicon.ico'], dest: 'build/' },
-          { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/' },
+          { expand: true, flatten: true, src: ['src/assets/data/*'], dest: 'build/assets/data/', filter: 'isFile' },
           { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'build/assets/img/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer/*'], dest: 'build/assets/css/fonts/boomer/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_cond/*'], dest: 'build/assets/css/fonts/boomer_cond/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomer_extracond/*'], dest: 'build/assets/css/fonts/boomer_extracond/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab/*'], dest: 'build/assets/css/fonts/boomerslab/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_cond/*'], dest: 'build/assets/css/fonts/boomerslab_cond/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/boomerslab_extracond/*'], dest: 'build/assets/css/fonts/boomerslab_extracond/' },
-          { expand: true, flatten: true, src: ['src/assets/css/fonts/publico/*'], dest: 'build/assets/css/fonts/publico/' },
+          { expand: true, flatten: true, src: ['src/assets/img/er_icons/*'], dest: 'build/assets/img/er_icons/' },
+          { expand: true, cwd: 'src/assets/css/fonts/', src: '**/*', dest: 'build/assets/css/fonts/' },
           { expand: true, flatten: true, src: ['src/assets/css/vendor/fontawesome/css/*'], dest: 'build/assets/css/vendor/fontawesome/css/' },
           { expand: true, flatten: true, src: ['src/assets/css/vendor/fontawesome/fonts/*'], dest: 'build/assets/css/vendor/fontawesome/fonts/' },
           { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'build/' }
@@ -90,7 +82,7 @@ module.exports = function(grunt) {
 
     jshint: {
       files: [
-        'src/assets/js/*.js'
+        'src/assets/js/**/*.js'
       ],
       options: {
         browser: true,
@@ -119,17 +111,16 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'build/assets/js/app.js'    : ['src/assets/js/app.js'],
-          'build/assets/js/apps/config/storage/localstorage.js': ['src/assets/js/apps/config/storage/localstorage.js'],
+          'build/assets/js/apps/config/storage/localstorage.js': ['src/assets/js/apps/config/storage/localstorage.js'], //adapter used in conjuction with backbone.sessionStorage library
           'build/assets/js/entities/section.js': ['src/assets/js/entities/section.js'],
+          'build/assets/js/apps/sections/section_app.js': ['src/assets/js/apps/sections/section_app.js'],
           'build/assets/js/apps/sections/section_views.js': ['src/assets/js/apps/sections/section_views.js'],
           'build/assets/js/apps/sections/section_controller.js': ['src/assets/js/apps/sections/section_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_controller.js': ['src/assets/js/apps/sections/hospital/hospital_controller.js'],
           'build/assets/js/apps/sections/hospital/hospital_views.js': ['src/assets/js/apps/sections/hospital/hospital_views.js'],
-          'build/assets/js/apps/sections/section_app.js': ['src/assets/js/apps/sections/section_app.js'],
           'build/assets/js/apps/home/home_app.js': ['src/assets/js/apps/home/home_app.js'],
           'build/assets/js/apps/home/home_controller.js': ['src/assets/js/apps/home/home_controller.js'],
           'build/assets/js/apps/home/home_view.js': ['src/assets/js/apps/home/home_view.js'],
-          'build/assets/js/common/views.js': ['src/assets/js/common/views.js'],
           'build/assets/js/entities/header.js': ['src/assets/js/entities/header.js'],
           'build/assets/js/apps/header/list/list_controller.js': ['src/assets/js/apps/header/list/list_controller.js'],
           'build/assets/js/apps/header/list/list_view.js': ['src/assets/js/apps/header/list/list_view.js'],
@@ -279,9 +270,7 @@ module.exports = function(grunt) {
         },
         files: {
           "jquery.js": "jquery/dist/jquery.js",
-          "chroma.js": "chroma-js/chroma.min.js", //colors
           "underscore.js": "underscore/underscore.js",
-          "json2.js": "json2/json2.js",
           "backbone.js": "backbone/backbone.js",
           "backbone.marionette.js": "marionette/lib/backbone.marionette.js",
           "d3.js": "d3/d3.js",
@@ -289,7 +278,7 @@ module.exports = function(grunt) {
           //"fastclick.js": "foundation/js/vendor/fastclick.js", //makes clicks happen faster on touch devices but also breaks tooltips
           "foundation.js": "foundation/js/foundation.js",
           "foundation.topbar.js": "foundation/js/foundation/foundation.topbar.js",
-          //"backbone.localstorage.js": "backbone.localstorage/backbone.localstorage.js", //local storage adapter
+          "foundation.equalizer.js": "foundation/js/foundation/foundation.equalizer.js",
           "backbone.sessionStorage.js": "backbone.sessionStorage/backbone.sessionStorage.js", //session storage adapter
           "backbone.select.js": "backbone.select/dist/backbone.select.js" //for handling selecting/deselecting menu options,
         }

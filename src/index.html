@@ -100,7 +100,7 @@
   </script>
 
   <script type="text/template" id="homepage-icon-link">
-    <a href="#<%-url %>"><img src="assets/img/<%- icon %>.svg"></a>
+    <a href="#<%-url %>"><img src="assets/img/<%- icon %>"></a>
     <h3><a href="#<%-url %>"><%- name %></a></h3>
   </script>
 
@@ -145,10 +145,10 @@
   </script>
 
   <script type="text/template" id="mobile-bar-tr-template">
-    <td><%- display_name %></td><td><%- format(obj[measure], measure) %></td>
+    <td><%- display_name %></td><td class="text-right"><%- format(obj[measure], measure) %></td>
   </script>
   <script type="text/template" id="mobile-bar-table-template">
-    <thead><tr><th>Hospital</th><th>Value</th></tr></thead>
+    <thead><tr><th>Hospital</th><th class="text-right"><%- stat(measure, entityID) %></th></tr></thead>
     <tbody></tbody>
   </script>
 
@@ -332,21 +332,22 @@
   <script src="assets/js/vendor/d3.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/vendor/foundation.topbar.js"></script>
+  <script src="assets/js/vendor/foundation.equalizer.js"></script>
   <script src="assets/js/vendor/backbone.select.js"></script>
 
   <!-- build:js assets/js/app.js -->
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/apps/config/storage/localstorage.js"></script>
+  <script src="assets/js/apps/config/storage/localstorage.js"></script> <!--adapter used in conjuction with backbone.sessionStorage library-->
   <script src="assets/js/entities/header.js"></script>
   <script src="assets/js/apps/header/list/list_controller.js"></script>
   <script src="assets/js/apps/header/list/list_view.js"></script>
   <script src="assets/js/apps/header/header_app.js"></script>
   <script src="assets/js/entities/section.js"></script>
+  <script src="assets/js/apps/sections/section_app.js"></script>
   <script src="assets/js/apps/sections/section_views.js"></script>
   <script src="assets/js/apps/sections/section_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_controller.js"></script>
   <script src="assets/js/apps/sections/hospital/hospital_views.js"></script>
-  <script src="assets/js/apps/sections/section_app.js"></script>
   <script src="assets/js/apps/loading/loading_app.js"></script>
   <script src="assets/js/apps/loading/loading_controller.js"></script>
   <script src="assets/js/apps/loading/loading_view.js"></script>
@@ -360,7 +361,12 @@
   <script src="//ajcdatawrap.s3-website-us-east-1.amazonaws.com/js/access-meter.js"></script> <!-- AJC METERING -->
   <!-- /build -->
   <script type="text/javascript">
-    $(document).foundation();
+    $(document).foundation({
+      equalizer : {
+      // Specify if Equalizer should make elements equal height once they become stacked.
+      equalize_on_stack: true
+      }
+    });
 
     HospitalCheckup.start();
   </script>

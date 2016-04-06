@@ -24,7 +24,7 @@
       "city": "CUMMING", 
       "csect_pct": 36, 
       "display_name": "Northside Hospital Forsyth", 
-      "early_births_pct": 2, 
+      "early_births_pct": "2", 
       "id": "110005", 
       "total_births": 2917
     }, 
@@ -44,7 +44,7 @@
       "city": "ATHENS", 
       "csect_pct": 32, 
       "display_name": "Saint Mary's Hospital", 
-      "early_births_pct": 2, 
+      "early_births_pct": "2", 
       "id": "110006", 
       "total_births": 1413
     }, 
@@ -64,7 +64,7 @@
       "city": "CANTON", 
       "csect_pct": 34, 
       "display_name": "Northside Hospital Cherokee", 
-      "early_births_pct": 2, 
+      "early_births_pct": "2", 
       "id": "110008", 
       "total_births": 1197
     }, 
@@ -84,7 +84,7 @@
       "city": "COVINGTON", 
       "csect_pct": 29, 
       "display_name": "Newton Medical Center", 
-      "early_births_pct": 1, 
+      "early_births_pct": "1", 
       "id": "110018", 
       "total_births": 842
     }, 
@@ -104,7 +104,7 @@
       "city": "CARTERSVILLE", 
       "csect_pct": 32, 
       "display_name": "Cartersville Medical Center", 
-      "early_births_pct": 2, 
+      "early_births_pct": "2", 
       "id": "110030", 
       "total_births": 974
     }, 
@@ -124,7 +124,7 @@
       "city": "GRIFFIN", 
       "csect_pct": 33, 
       "display_name": "Spalding Regional Hospital", 
-      "early_births_pct": 4, 
+      "early_births_pct": "4", 
       "id": "110031", 
       "total_births": 966
     }, 
@@ -143,8 +143,8 @@
       "avg_premature_charge": 27612, 
       "city": "MARIETTA", 
       "csect_pct": 35, 
-      "display_name": "Wellstar Kennestone Hospital", 
-      "early_births_pct": 6, 
+      "display_name": "WellStar Kennestone Hospital", 
+      "early_births_pct": "6", 
       "id": "110035", 
       "total_births": 5456
     }, 
@@ -164,7 +164,7 @@
       "city": "ROME", 
       "csect_pct": 32, 
       "display_name": "Floyd Medical Center", 
-      "early_births_pct": 4, 
+      "early_births_pct": "4", 
       "id": "110054", 
       "total_births": 2207
     }, 
@@ -184,7 +184,7 @@
       "city": "DECATUR", 
       "csect_pct": 36, 
       "display_name": "Dekalb Medical Center", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110076", 
       "total_births": 4485
     }, 
@@ -204,7 +204,7 @@
       "city": "ATLANTA", 
       "csect_pct": 28, 
       "display_name": "Emory University Hospital Midtown", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110078", 
       "total_births": 3945
     }, 
@@ -224,7 +224,7 @@
       "city": "ATLANTA", 
       "csect_pct": 28, 
       "display_name": "Grady Memorial Hospital", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110079", 
       "total_births": 3113
     }, 
@@ -244,7 +244,7 @@
       "city": "ATLANTA", 
       "csect_pct": 34, 
       "display_name": "Piedmont Hospital", 
-      "early_births_pct": 7, 
+      "early_births_pct": "7", 
       "id": "110083", 
       "total_births": 3495
     }, 
@@ -264,7 +264,7 @@
       "city": "CONYERS", 
       "csect_pct": 31, 
       "display_name": "Rockdale Medical Center", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110091", 
       "total_births": 1793
     }, 
@@ -284,7 +284,7 @@
       "city": "ATLANTA", 
       "csect_pct": 25, 
       "display_name": "Atlanta Medical Center", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110115", 
       "total_births": 3110
     }, 
@@ -303,8 +303,8 @@
       "avg_premature_charge": 29052, 
       "city": "AUSTELL", 
       "csect_pct": 33, 
-      "display_name": "Wellstar Cobb Hospital", 
-      "early_births_pct": 1, 
+      "display_name": "WellStar Cobb Hospital", 
+      "early_births_pct": "1", 
       "id": "110143", 
       "total_births": 3557
     }, 
@@ -324,7 +324,7 @@
       "city": "ATLANTA", 
       "csect_pct": 40, 
       "display_name": "Northside Hospital", 
-      "early_births_pct": 3, 
+      "early_births_pct": "3", 
       "id": "110161", 
       "total_births": 15676
     }, 
@@ -343,8 +343,8 @@
       "avg_premature_charge": 20011, 
       "city": "DOUGLASVILLE", 
       "csect_pct": 29, 
-      "display_name": "Wellstar Douglas Hospital", 
-      "early_births_pct": 8, 
+      "display_name": "WellStar Douglas Hospital", 
+      "early_births_pct": "8", 
       "id": "110184", 
       "total_births": 454
     }, 
@@ -364,7 +364,7 @@
       "city": "STOCKBRIDGE", 
       "csect_pct": 27, 
       "display_name": "Piedmont Henry Hospital", 
-      "early_births_pct": 9, 
+      "early_births_pct": "9", 
       "id": "110191", 
       "total_births": 2416
     }, 
@@ -384,7 +384,7 @@
       "city": "SNELLVILLE", 
       "csect_pct": 37, 
       "display_name": "Eastside Medical Center", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110192", 
       "total_births": 1404
     }, 
@@ -404,7 +404,7 @@
       "city": "ROSWELL", 
       "csect_pct": 18, 
       "display_name": "North Fulton Hospital", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110198", 
       "total_births": 1264
     }, 
@@ -424,7 +424,7 @@
       "city": "FAYETTEVILLE", 
       "csect_pct": 33, 
       "display_name": "Piedmont Fayette Hospital", 
-      "early_births_pct": 5, 
+      "early_births_pct": "5", 
       "id": "110215", 
       "total_births": 2566
     }, 
@@ -444,7 +444,7 @@
       "city": "JASPER", 
       "csect_pct": 30, 
       "display_name": "Piedmont Mountainside Hospital", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110225", 
       "total_births": 341
     }, 
@@ -464,7 +464,7 @@
       "city": "NEWNAN", 
       "csect_pct": 31, 
       "display_name": "Piedmont Newnan Hospital", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110229", 
       "total_births": 1135
     }, 
@@ -484,7 +484,7 @@
       "city": "JOHNS CREEK", 
       "csect_pct": 32, 
       "display_name": "Emory Johns Creek Hospital", 
-      "early_births_pct": 0, 
+      "early_births_pct": "0", 
       "id": "110230", 
       "total_births": 1045
     }, 

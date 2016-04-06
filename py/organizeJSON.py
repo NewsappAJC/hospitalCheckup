@@ -208,12 +208,12 @@ f = open( '../src/assets/data/src/ER_waits.json', 'rU' )
 src = json.load(f)
 f.close()
 
-nums = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
+labels = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
 
 for node in src:
     hospital = node
     for key in node.keys():
-        if key in nums:
+        if key in labels:
             try:
                 node[key] = int(node[key])
             except:
@@ -221,7 +221,6 @@ for node in src:
 
 ###State averages###
 #er_volume (EDV) not included in state and national bc it is categorical so you can't average it
-labels = ["er_inpatient_1", "er_inpatient_2", "er_total_time_avg", "er_time_to_eval", "er_time_to_painmed", "er_left_pct", "er_ctresults_pct"]
 endpoints = ["https://data.medicare.gov/resource/apyc-v239.json?measure_id=", "https://data.medicare.gov/resource/isrn-hqyy.json?measure_id="]
 keys = ["ED_1b", "ED_2b", "OP_18b", "OP_20", "OP_21", "OP_22", "OP_23"]
 
