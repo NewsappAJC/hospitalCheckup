@@ -127,6 +127,9 @@ module.exports = function(grunt) {
           'build/assets/js/apps/header/header_app.js': ['src/assets/js/apps/header/header_app.js'],
           'build/assets/js/apps/sections/chart/chart_base_view.js': ['src/assets/js/apps/sections/chart/chart_base_view.js'],
           'build/assets/js/apps/sections/chart/chart_views.js': ['src/assets/js/apps/sections/chart/chart_views.js'],
+          'build/assets/js/apps/loading/loading_app.js': ['src/assets/js/apps/loading/loading_app.js'],
+          'build/assets/js/apps/loading/loading_controller.js': ['src/assets/js/apps/loading/loading_controller.js'],
+          'build/assets/js/apps/loading/loading_view.js': ['src/assets/js/apps/loading/loading_view.js'],
           'build/assets/js/common/behaviors.js': ['src/assets/js/common/behaviors.js'],
           'build/assets/js/entities/text.js': ['src/assets/js/entities/text.js']
         }
