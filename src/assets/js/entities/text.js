@@ -48,7 +48,7 @@ HospitalCheckup.module("Entities", function(Entities, HospitalCheckup, Backbone,
 /* ----- ER ----- */
   Entities.ERIntroTxt = {
     headline: "<h1>Emergency rooms: Rating the waiting</h1>",
-    intro_text: "<p>Thousands of U.S. hospitals are required to report their emergency room wait times to the federal government every quarter. It’s actually seven different measures, such as time elapsed before the patient sees a doctor or nurse in the ER; or how long it takes for a patient with a broken bone to get pain medication.</p><p>The numbers do not reflect improvements a hospital may have made since the data was gathered. The information here was released by the government in December, but the statistics cover a year of patient visits that ended March 31, 2015.</p>",
+    intro_text: "<p>Thousands of U.S. hospitals are required to report their emergency room wait times to the federal government every quarter. It’s actually seven different measures, such as time elapsed before the patient sees a doctor or nurse in the ER; or how long it takes for a patient with a broken bone to get pain medication.</p><p>The numbers do not reflect improvements a hospital may have made since the data was gathered. The information here was released by the government in December, but the statistics cover a year of patient visits that ended March 31, 2015.</p><p><a href='http://investigations.blog.myajc.com/2016/04/26/metro-atlantas-fastest-emergency-rooms-is-3-minute-wait-for-real/' target='_blank'>Read more on what these metrics really mean</a></p>",
     bottom_text: ""
   };
 
